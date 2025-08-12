@@ -1,0 +1,43 @@
+---
+title: Assessing Streamflow Forecast Over the Hackensack River Watershed Using NGIAB
+source: https://docs.ciroh.org/blog/ismart-ngiab-application
+scraped_date: 2025-01-31
+---
+
+![A poster, titled "Assessing streamflow forecast over the Hackensack River Watershed using physics- and AI-driven weather prediction models".](https://docs.ciroh.org/assets/images/blog_CIROH_DevCon-bd5de4e3ca6192611aadd30bb47b1586.png)
+
+> _A poster presented by the I-SMART team at the CIROH Developers Conference, held at the University of Vermont in Burlington from May 28 to 30, 2025._
+
+The densely populated Hackensack River watershed lies within the New York City Metropolitan Area, which spans northern New Jersey and southern New York.
+Accurate streamflow forecasting within this region is therefore essential to enable effective water resource management, flood prediction, and disaster preparedness.
+
+Precipitation data is critical for effective hydrological modeling, making the identification of reliable data sources a key priority.
+This is why the Integrated Spatial Modeling and Remote Sensing Technologies Laboratory (I-SMART),
+an interdisciplinary research unit within the Davidson Laboratory at Stevens Institute of Technology in Hoboken, New Jersey,
+uses the latest developments in both atmospheric and hydrological modeling to address flood risks in the Hackensack Watershed
+with solutions that could be expanded to the entire New York City Metropolitan Area.
+
+In the past, this work has included key early applications of the Next Generation Water Resources Modeling Framework (NextGen).
+Notably, the I-SMART group was among the first to force the NextGen framework with multiple atmospheric models for comparative analysis during a real-world event:
+the passage of Superstorm Ida over the New York metropolitan area in September 2021.
+The recent advent of NextGen In a Box (NGIAB) has provided an opportunity to accelerate these applications even further
+by taking full advantage of NGIAB's containerized, user-friendly, and easily deployed environment.
+
+Recently, the I-SMART team has been testing various regional atmospheric models grounded in physical equations,
+including traditional models like WRF and next-generation atmospheric models such as MPAS.
+Additionally, given the increasing popularity and adoption of AI/ML-based approaches,
+the team has also begun exploring their potential.
+The goal of this work is to assess the performance of these approaches in the Hackensack Watershed,
+along with investigating the sensitivity of the model to various meteorological forcings, including forcings based on the National Water Model.
+_(The initial and/or boundary conditions for all the models were determined using the Global Forecast System.)_
+
+This investigation required handling a large volume of precipitation data from various models,
+each with different spatial resolutions and in some cases, such as MPAS, using unstructured grids.
+As such, one of the key challenges was finding a hydrological modeling framework flexible enough to accommodate such diversity.
+This made the NextGen framework a natural choice, allowing them to integrate precipitation forcings from various sources
+with the appropriate pre-processing to align them with the model requirements in terms of spatial and temporal scales.
+
+The complex implementation and execution of these models was faciliated by NextGen In A Box (NGIAB),
+which successfully enabled the integration of diverse precipitation sources.
+By simplifying local deployment and providing full control over model inputs, configurations, and runtime operations,
+NGIAB has given the I-SMART team the tools to conduct their groundbreaking research with even greater efficiency.

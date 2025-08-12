@@ -1,0 +1,72 @@
+# What is NGIAB?
+
+[Skip to main content](https://docs.ciroh.org/docs/products/ngiab/intro/what-is/#__docusaurus_skipToContent_fallback)
+
+On this page
+
+## What is the National Water Model? [​](https://docs.ciroh.org/docs/products/ngiab/intro/what-is/\#what-is-the-national-water-model "Direct link to What is the National Water Model?")
+
+The [National Water Model](https://water.noaa.gov/about/nwm) is the United States' core water prediction framework,
+offering predictions for the Continental United States (CONUS), Alaska, Hawaii, Puerto Rico, and the U.S. Virgin Islands.
+
+While the model's core implementation is administered by the NOAA's Office of Water Prediction (NOAA-OWP),
+it is built on free and open-source components, allowing the broader hydrology community to run it
+locally, make adjustments, and propose changes.
+
+## What is the NextGen Framework? [​](https://docs.ciroh.org/docs/products/ngiab/intro/what-is/\#what-is-the-nextgen-framework "Direct link to What is the NextGen Framework?")
+
+The Next Generation Water Resources Modeling Framework, most frequently referred to as NextGen,
+is a hydrologic modeling framework that forms the core for modern versions of the National Water Model.
+
+The NextGen Framework aims to resolve current limitations of the National Water Model by transitioning to a highly modular, model-agnostic framework
+that improves regional interoperability and by making it easier for the hydrology community to append their own models.
+To enable these tenets, NextGen uses the Basic Model Interface (BMI) to standardize the format of each model's
+input, output, and properties, thus allowing for models written in any language to quickly be coupled together
+to create new outputs. These models are combined according to external configuration files, which ensures that all
+model runs are highly portable and reproducible.
+
+As of version 3.0 of the National Water Model, which was adopted in 2024, the NWM represents a specific configuration
+of the NextGen Framework, which is freely available for use by the scientific community.
+
+> _Source: [The National Water Model, NOAA-OWP](https://www.weather.gov/media/owp/oh/docs/2021-OWP-NWM-NextGen-Framework.pdf)_
+
+## What is NGen? [​](https://docs.ciroh.org/docs/products/ngiab/intro/what-is/\#what-is-ngen "Direct link to What is NGen?")
+
+[NGen](https://github.com/NOAA-OWP/ngen/tree/master) is the core implementation of the NextGen framework,
+responsible for administering connections between encapsulated models.
+While NGen is still under development, it's become an incredibly powerful tool for novel approaches to hydrology.
+
+Unfortunately, these advantages are stymied somewhat by the difficulty of installing NGen.
+No standard installation process is currently available,
+instead requiring users to manage a [lengthy chain](https://github.com/NOAA-OWP/ngen/blob/master/INSTALL.md)
+of dependencies, compilers, and environmental conditions.
+This can already be a time-consuming task for experienced programmers,
+so for scientists wanting to apply it in their own research,
+installing and configuring NGen is severely unapproachable.
+These challenges fundamentally undermine the NextGen framework's core objectives regarding community accessibility and contribution.
+
+## What is NextGen In A Box? [​](https://docs.ciroh.org/docs/products/ngiab/intro/what-is/\#what-is-nextgen-in-a-box "Direct link to What is NextGen In A Box?")
+
+Fortunately, there's a solution to this problem!
+[NextGen In A Box](https://ngiab.ciroh.org/) is a _containerized_ distribution of the NextGen framework.
+Containerization is an approach to software distribution and deployment that directly defines
+the host operating system, dependencies, and run conditions for software,
+which allows the software to be run in effectively identical conditions regardless of the host system.
+This means that with NextGen In A Box, anyone can get NextGen up and running in _as few as 30 minutes!_
+
+Additionally, NextGen In A Box acts as the host platform for a full ecosystem of free, open-source
+utilities that allow users to customize, evaluate, and visualize their model runs.
+These tools lower the barrier to entry even further, allowing scientists to seamlessly
+integrate the NextGen framework into their workflows and produce exciting new discoveries.
+
+* * *
+
+If you'd like to get started with NextGen In A Box, check out the [NGIAB 101](https://docs.ciroh.org/training-NGIAB-101/) module,
+which contains everything you'll need to know to get started.
+
+[NGIAB 101 Module](https://docs.ciroh.org/training-NGIAB-101/)
+
+- [What is the National Water Model?](https://docs.ciroh.org/docs/products/ngiab/intro/what-is/#what-is-the-national-water-model)
+- [What is the NextGen Framework?](https://docs.ciroh.org/docs/products/ngiab/intro/what-is/#what-is-the-nextgen-framework)
+- [What is NGen?](https://docs.ciroh.org/docs/products/ngiab/intro/what-is/#what-is-ngen)
+- [What is NextGen In A Box?](https://docs.ciroh.org/docs/products/ngiab/intro/what-is/#what-is-nextgen-in-a-box)

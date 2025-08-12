@@ -1,0 +1,7 @@
+# Community FIM Links
+# Total: 4 links
+
+https://docs.ciroh.org/docs/products/community-fim
+https://docs.ciroh.org/docs/products/community-fim/fim-database
+https://docs.ciroh.org/docs/products/community-fim/fimeval
+https://docs.ciroh.org/docs/products/community-fim/fimserv

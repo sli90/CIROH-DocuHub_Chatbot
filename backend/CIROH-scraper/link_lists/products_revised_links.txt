@@ -1,0 +1,159 @@
+# CIROH Products Documentation Links
+# Total: 114 links
+# Discovered: 2025-01-31
+
+## Main Products Page (1 link)
+# https://docs.ciroh.org/docs/products/intro
+
+## NextGen In A Box (NGIAB) (65 links)
+
+### Main NextGen In A Box Page (3 links)
+# https://docs.ciroh.org/docs/products/ngiab
+# https://docs.ciroh.org/docs/products/ngiab/office-hours
+# https://docs.ciroh.org/docs/products/ngiab/dashboard
+
+### NGIAB 101 Learning Module (37 links)
+https://docs.ciroh.org/training-NGIAB-101
+https://docs.ciroh.org/training-NGIAB-101/evaluation.html
+https://docs.ciroh.org/training-NGIAB-101/model-execution.html
+https://docs.ciroh.org/training-NGIAB-101/key-points.html
+https://docs.ciroh.org/training-NGIAB-101/data-preparation.html
+https://docs.ciroh.org/training-NGIAB-101/LICENSE.html
+https://docs.ciroh.org/training-NGIAB-101/CODE_OF_CONDUCT.html
+https://docs.ciroh.org/training-NGIAB-101/reference.html
+https://docs.ciroh.org/training-NGIAB-101/devcon25js.html
+https://docs.ciroh.org/training-NGIAB-101/profiles.html
+https://docs.ciroh.org/training-NGIAB-101/images.html
+https://docs.ciroh.org/training-NGIAB-101/aio.html
+https://docs.ciroh.org/training-NGIAB-101/troubleshooting.html
+https://docs.ciroh.org/training-NGIAB-101/instructor-notes.html
+https://docs.ciroh.org/training-NGIAB-101/advanced-topics.html
+https://docs.ciroh.org/training-NGIAB-101/visualization.html
+https://docs.ciroh.org/training-NGIAB-101/calibration.html
+https://docs.ciroh.org/training-NGIAB-101/installation.html
+https://docs.ciroh.org/training-NGIAB-101/introduction.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/evaluation.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/model-execution.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/key-points.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/data-preparation.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/LICENSE.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/CODE_OF_CONDUCT.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/reference.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/devcon25js.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/profiles.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/images.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/aio.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/troubleshooting.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/instructor-notes.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/advanced-topics.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/visualization.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/calibration.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/installation.html
+https://docs.ciroh.org/training-NGIAB-101/instructor/introduction.html
+
+### Intro to NGIAB (5 links)
+# https://docs.ciroh.org/docs/products/ngiab/intro/what-is
+# https://docs.ciroh.org/docs/products/ngiab/intro/at-a-glance
+# https://docs.ciroh.org/docs/products/ngiab/intro/install
+# https://docs.ciroh.org/docs/products/ngiab/intro/glossary
+# https://docs.ciroh.org/docs/products/ngiab/intro/directories
+
+### Distributions (14 links)
+# https://docs.ciroh.org/docs/products/ngiab/distributions
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/getting-started
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/install
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/containers
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/run-directories
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/realizations
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/models
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/building
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/contribute
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/contact
+# https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-singularity
+# https://docs.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c
+
+### Components (6 links)
+# https://docs.ciroh.org/docs/products/ngiab/components
+# https://docs.ciroh.org/docs/products/ngiab/components/ngiab-preprocessor
+# https://docs.ciroh.org/docs/products/ngiab/components/ngiab-teehr
+# https://docs.ciroh.org/docs/products/ngiab/components/ngiab-visualizer
+# https://docs.ciroh.org/docs/products/ngiab/components/ngiab-calibration
+# https://docs.ciroh.org/docs/products/ngiab/components/community-hydrofabric
+
+## National Water Model (4 links)
+# https://docs.ciroh.org/docs/products/nextgen-framework
+# https://docs.ciroh.org/docs/products/nextgen-framework/ngen
+# https://docs.ciroh.org/docs/products/nextgen-framework/troute
+# https://docs.ciroh.org/docs/products/nextgen-framework/nextgen
+
+## Hydrofabric (1 link)
+https://docs.ciroh.org/docs/products/Hydrofabric
+
+## Research Datastream (14 links)
+
+### Main Research Datastream Page (2 links)
+# https://docs.ciroh.org/docs/products/research-datastream
+# https://docs.ciroh.org/docs/products/research-datastream/status
+
+### DatastreamCLI (7 links)
+# https://docs.ciroh.org/docs/products/research-datastream/cli
+https://docs.ciroh.org/docs/products/research-datastream/cli/install
+https://docs.ciroh.org/docs/products/research-datastream/cli/usage
+https://docs.ciroh.org/docs/products/research-datastream/cli/models
+https://docs.ciroh.org/docs/products/research-datastream/cli/directories
+https://docs.ciroh.org/docs/products/research-datastream/cli/options
+https://docs.ciroh.org/docs/products/research-datastream/cli/breakdown
+
+### Datastream Components (5 links)
+# https://docs.ciroh.org/docs/products/research-datastream/components
+https://docs.ciroh.org/docs/products/research-datastream/components/python_tools/
+https://docs.ciroh.org/docs/products/research-datastream/components/forcingprocessor/
+https://docs.ciroh.org/docs/products/research-datastream/components/forcingprocessor/forcing_sources
+https://docs.ciroh.org/docs/products/research-datastream/components/research_datastream/
+
+## Evaluation Tools (3 links)
+# https://docs.ciroh.org/docs/products/evaluation
+# https://docs.ciroh.org/docs/products/evaluation/cses
+# https://docs.ciroh.org/docs/products/evaluation/rtiteehr
+
+## Data Management and Access Tools (9 links)
+# https://docs.ciroh.org/docs/products/data-management
+# https://docs.ciroh.org/docs/products/data-management/dataaccess
+# https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library
+# https://docs.ciroh.org/docs/products/data-management/waternode
+# https://docs.ciroh.org/docs/products/data-management/hydroserver
+# https://docs.ciroh.org/docs/products/data-management/netwa
+https://docs.ciroh.org/docs/products/data-management/netwa/gettingstarted
+# https://docs.ciroh.org/docs/products/data-management/hydroshare
+# https://docs.ciroh.org/docs/products/data-management/bigquery-api
+
+## Snow Sensing and Modeling Tools (5 links)
+# https://docs.ciroh.org/docs/products/snow-tools
+# https://docs.ciroh.org/docs/products/snow-tools/snow-intro
+# https://docs.ciroh.org/docs/products/snow-tools/optimize-sensors
+# https://docs.ciroh.org/docs/products/snow-tools/snow-sensing
+# https://docs.ciroh.org/docs/products/snow-tools/sweml-v2-0
+
+## Machine Learning and AI Tools (3 links)
+# https://docs.ciroh.org/docs/products/ml-ai
+# https://docs.ciroh.org/docs/products/ml-ai/sweml
+# https://docs.ciroh.org/docs/products/ml-ai/nwm_ml
+
+## Visualization and Analysis Tools (2 links)
+# https://docs.ciroh.org/docs/products/visualization
+# https://docs.ciroh.org/docs/products/visualization/tethys-cses
+
+## CIROH Research Portal (1 link)
+# https://docs.ciroh.org/docs/products/portal
+
+## Community Flood Inundation Mapping (4 links)
+# https://docs.ciroh.org/docs/products/community-fim
+# https://docs.ciroh.org/docs/products/community-fim/fimserv
+# https://docs.ciroh.org/docs/products/community-fim/fimeval
+# https://docs.ciroh.org/docs/products/community-fim/fim-database
+
+## Mobile Apps (2 links)
+# https://docs.ciroh.org/docs/products/mobile-apps
+# https://docs.ciroh.org/docs/products/mobile-apps/RIVR

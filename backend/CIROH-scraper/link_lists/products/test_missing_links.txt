@@ -1,0 +1,36 @@
+# Links to test with Firecrawl MCP
+
+# Confirmed missing component links:
+https://docs.ciroh.org/docs/products/ngiab/components/ngiab-visualizer
+https://docs.ciroh.org/docs/products/ngiab/components/community-hydrofabric
+
+# Potential deep distribution links to test:
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/containers
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/quickstart
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/installation
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/configuration
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/usage
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/troubleshooting
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-singularity/specifications
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-singularity/specifications/containers
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-singularity/quickstart
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-singularity/installation
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-singularity/configuration
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-singularity/usage
+https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-singularity/troubleshooting
+https://docs.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/specifications
+https://docs.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/quickstart
+https://docs.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/installation
+https://docs.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/configuration
+https://docs.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/usage
+https://docs.ciroh.org/docs/products/ngiab/components/ngiab-calibration/tutorial
+https://docs.ciroh.org/docs/products/ngiab/components/ngiab-calibration/configuration
+https://docs.ciroh.org/docs/products/ngiab/components/ngiab-preprocessor/tutorial
+https://docs.ciroh.org/docs/products/ngiab/components/ngiab-preprocessor/configuration
+https://docs.ciroh.org/docs/products/ngiab/components/ngiab-teehr/tutorial
+https://docs.ciroh.org/docs/products/ngiab/components/ngiab-teehr/configuration
+https://docs.ciroh.org/docs/products/ngiab/components/ngiab-visualizer/tutorial
+https://docs.ciroh.org/docs/products/ngiab/components/ngiab-visualizer/configuration
+https://docs.ciroh.org/docs/products/ngiab/components/community-hydrofabric/tutorial
+https://docs.ciroh.org/docs/products/ngiab/components/community-hydrofabric/configuration
