@@ -1,30 +1,24 @@
-# nwmurl
-
-[Skip to main content](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/#__docusaurus_skipToContent_fallback)
-
-On this page
+# NWMURL Library
 
 nwmurl is a Python library developed by CIROH 2023. It provides utility functions specifically designed to subset and generate National Water Model (NWM) data URLs. This library simplifies the process of accessing NWM data for various purposes such as analysis, modeling, and visualization.
 
 Developed by CIROH 2023
 
-## Installation [​](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/\#installation "Direct link to Installation")
+## Installation
 
 You can install `nwmurl` using pip:
 
-```codeBlockLines_e6Vv
+```bash
 pip install nwmurl
-
 ```
 
-## Usage [​](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/\#usage "Direct link to Usage")
+## Usage
 
 1. In the code, you can modify the input parameters, such as `start_date`, `end_date`, `fcst_cycle`, `lead_time`, `varinput`, `geoinput`, and `runinput`, to customize the NWM data retrieval.
 
 2. The code will generate a list of JSON header URLs tailored to your specified parameters using the `generate_urls` function.
 
-
-## Customize Your Data Retrieval for Operational Dataset [​](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/\#customize-your-data-retrieval-for-operational-dataset "Direct link to Customize Your Data Retrieval for Operational Dataset")
+## Customize Your Data Retrieval for Operational Dataset
 
 - `start_date`: A string representing the starting date in the format "YYYYMMDDHHMM".
 - `end_date`: A string representing the ending date in the same format.
@@ -36,7 +30,7 @@ pip install nwmurl
   - `3` or `"reservoir"` for reservoir data.
   - `4` or `"terrain_rt"` for terrain routing data.
   - `5` or `"forcing"` for forcing data.
-  - `geoinput`: An integer or string specifying the geographic region of interest. Options include:
+- `geoinput`: An integer or string specifying the geographic region of interest. Options include:
   - `1` or `"conus"` for the continental United States.
   - `2` or `"hawaii"` for Hawaii.
   - `3` or `"puertorico"` for Puerto Rico.
@@ -52,45 +46,45 @@ pip install nwmurl
   - `9` or `"analysis_assim_long_no_da"` for long analysis-assimilation runs without data assimilation.
   - `10` or `"analysis_assim_no_da"` for analysis-assimilation runs without data assimilation.
   - `11` or `"short_range_no_da"` for short-range forecasts without data assimilation.
-- `urlbaseinput `: An integer representing the NWM dataset. Available options include:
-  - `1`: " [https://nomads.ncep.noaa.gov/pub/data/nccf/com/nwm/prod/](https://nomads.ncep.noaa.gov/pub/data/nccf/com/nwm/prod/)".
-  - `2`: " [https://nomads.ncep.noaa.gov/pub/data/nccf/com/nwm/post-processed/WMS/](https://nomads.ncep.noaa.gov/pub/data/nccf/com/nwm/post-processed/WMS/)".
-  - `3`: " [https://storage.googleapis.com/national-water-model/](https://storage.googleapis.com/national-water-model/)".
-  - `4`: " [https://storage.cloud.google.com/national-water-model/](https://storage.cloud.google.com/national-water-model/)".
+- `urlbaseinput`: An integer representing the NWM dataset. Available options include:
+  - `1`: "https://nomads.ncep.noaa.gov/pub/data/nccf/com/nwm/prod/".
+  - `2`: "https://nomads.ncep.noaa.gov/pub/data/nccf/com/nwm/post-processed/WMS/".
+  - `3`: "https://storage.googleapis.com/national-water-model/".
+  - `4`: "https://storage.cloud.google.com/national-water-model/".
   - `5`: "gs://national-water-model/".
   - `6`: "gcs://national-water-model/".
-  - `7`: " [https://noaa-nwm-pds.s3.amazonaws.com/](https://noaa-nwm-pds.s3.amazonaws.com/)".
+  - `7`: "https://noaa-nwm-pds.s3.amazonaws.com/".
   - `8`: "s3://noaa-nwm-pds/".
-  - `9`: " [https://ciroh-nwm-zarr-copy.s3.amazonaws.com/national-water-model/](https://ciroh-nwm-zarr-copy.s3.amazonaws.com/national-water-model/)".
-- `meminput `: An integer representing the ensemble member designation ranging from 0 to 7
+  - `9`: "https://ciroh-nwm-zarr-copy.s3.amazonaws.com/national-water-model/".
+- `meminput`: An integer representing the ensemble member designation ranging from 0 to 7
 - `write_to_file`: A Boolean variable that saves the output urls into a .txt file if set 'True'
 
-## Customize Your Data Retrieval for Retrospective Dataset [​](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/\#customize-your-data-retrieval-for-retrospective-dataset "Direct link to Customize Your Data Retrieval for Retrospective Dataset")
+## Customize Your Data Retrieval for Retrospective Dataset
 
 - `start_date`: A string representing the starting date in the format "YYYYMMDDHHMM".
 - `end_date`: A string representing the ending date in the same format.
-- `urlbaseinput `: An integer representing the NWM dataset. Available options include:
-  - `1`: " [https://noaa-nwm-retrospective-2-1-pds.s3.amazonaws.com/](https://noaa-nwm-retrospective-2-1-pds.s3.amazonaws.com/)".
+- `urlbaseinput`: An integer representing the NWM dataset. Available options include:
+  - `1`: "https://noaa-nwm-retrospective-2-1-pds.s3.amazonaws.com/".
   - `2`: "s3://noaa-nwm-retrospective-2-1-pds/model_output/".
-  - `3`: " [https://ciroh-nwm-zarr-retrospective-data-copy.s3.amazonaws.com/noaa-nwm-retrospective-2-1-zarr-pds/](https://ciroh-nwm-zarr-retrospective-data-copy.s3.amazonaws.com/noaa-nwm-retrospective-2-1-zarr-pds/)".
-  - `4`: " [https://noaa-nwm-retrospective-3-0-pds.s3.amazonaws.com/CONUS/netcdf/](https://noaa-nwm-retrospective-3-0-pds.s3.amazonaws.com/CONUS/netcdf/)".
-- `selectet_object_type`: An integer representing the object type. Available options include:
+  - `3`: "https://ciroh-nwm-zarr-retrospective-data-copy.s3.amazonaws.com/noaa-nwm-retrospective-2-1-zarr-pds/".
+  - `4`: "https://noaa-nwm-retrospective-3-0-pds.s3.amazonaws.com/CONUS/netcdf/".
+- `selected_object_type`: An integer representing the object type. Available options include:
   - `1` for forcing data
   - `2` for model_output
-- `Selectet_var_types`: An integer or string representing the variable of interest within the NWM data. Available options include:
+- `selected_var_types`: An integer or string representing the variable of interest within the NWM data. Available options include:
   - `1`: ".CHRTOUT_DOMAIN1.comp"
   - `2`: ".GWOUT_DOMAIN1.comp"
   - `3`: ".LAKEOUT_DOMAIN1.comp"
   - `4`: ".LDASOUT_DOMAIN1.comp"
   - `5`: ".RTOUT_DOMAIN1.comp"
   - `6`: ".LDASIN_DOMAIN1.comp"
-- `write_to_file`: A Boolean A Boolean variable that saves the output urls into a .txt file if set `True`
+- `write_to_file`: A Boolean variable that saves the output urls into a .txt file if set `True`
 
-## Examples of how to use [​](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/\#examples-of-how-to-use "Direct link to Examples of how to use")
+## Examples of how to use
 
 1. For Operational dataset:
 
-```codeBlockLines_e6Vv
+```python
 import nwmurl
 
 start_date = "202201120000"
@@ -114,12 +108,11 @@ file_list = nwmurl.generate_urls_operational(
     meminput,
     write_to_file
 )
-
 ```
 
 2. For Retrospective dataset:
 
-```codeBlockLines_e6Vv
+```python
 import nwmurl
 
 start_date = "200701010000"
@@ -137,20 +130,19 @@ file_list = nwmurl.generate_urls_retro(
     selected_var_types,
     write_to_file
 )
-
 ```
 
-## How to Contribute [​](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/\#how-to-contribute "Direct link to How to Contribute")
+## How to Contribute
 
 We welcome contributions to nwmurl! To contribute to the development of this library, please follow these steps:
 
 1. Fork the repository on GitHub.
 
-2. Clone your fork to your local machine:`
+2. Clone your fork to your local machine:
 
 `git clone https://github.com/CIROH-UA/nwmurl.git`
 
-3. Create a new branch for your contribution:`
+3. Create a new branch for your contribution:
 
 `git checkout -b feature/your-feature-name`
 
@@ -160,16 +152,8 @@ We welcome contributions to nwmurl! To contribute to the development of this lib
 
 6. Commit your changes with descriptive commit messages.
 
-7. Push your changes to your fork:``
+7. Push your changes to your fork.
 
 8. Open a pull request on the main repository, describing your changes and why they should be merged.
 
-
 We appreciate your contributions and will review your pull request as soon as possible. Thank you for helping improve nwmurl!
-
-- [Installation](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/#installation)
-- [Usage](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/#usage)
-- [Customize Your Data Retrieval for Operational Dataset](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/#customize-your-data-retrieval-for-operational-dataset)
-- [Customize Your Data Retrieval for Retrospective Dataset](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/#customize-your-data-retrieval-for-retrospective-dataset)
-- [Examples of how to use](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/#examples-of-how-to-use)
-- [How to Contribute](https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL%20Library/#how-to-contribute)
