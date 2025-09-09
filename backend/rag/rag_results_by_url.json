@@ -1,0 +1,698 @@
+[
+    {
+        "topic": "Getting Started & Navigation",
+        "question": "What is CIROH DocuHub and how can I use it?",
+        "answer": "CIROH DocuHub is CIROH’s central entry point for documentation, services, and community resources supporting hydrologic research and operations. It orients you to CIROH cyberinfrastructure (e.g., CIROH JupyterHub on Google Cloud, AWS, Google Cloud, Pantarhei HPC), product docs (NextGen, Snow model, Tethys, NextGen In A Box), policies, training, blogs, and collaboration tools (CIROH Research Portal).\n\nHow to use it:\n- Discover and follow documentation for models, tools, data processing, and best practices.\n- Access computing resources via linked hubs and platforms.\n- Join office hours and explore tutorials, blogs, and training.\n- Contribute: click “Edit page” on docs.ciroh.org to propose changes via GitHub; submit blog posts and request product pages using the provided GitHub issue templates.\n- Get support via Slack, email, or the site’s contact page.",
+        "sources": [
+            "DocuHub",
+            "DocuHub > Contributing to CIROH DocuHub",
+            "Products > CIROH Research Portal",
+            "Release Notes",
+            "DocuHub > Contributing to CIROH DocuHub > DocuHub technologies"
+        ]
+    },
+    {
+        "topic": "Getting Started & Navigation",
+        "question": "How do I get started with CIROH services?",
+        "answer": "Start at the CIROH DocuHub, which links to all services and guides. To use computing resources:\n- Cloud: Request a CIROH AWS subaccount via the Infrastructure Access page and GitHub issue forms (projects get $500/month across AWS and Google Cloud; request more if needed). You can also use the CIROH-2i2c JupyterHub on Google Cloud.\n- On‑prem HPC (Pantarhei): Complete two steps—your project PI submits the On‑Premises Infrastructure Request (GitHub template), then each user submits the Microsoft Forms On‑Premise Access Request (UA users only submit the latter; external users obtain VPN first).\n\nFor orientation and help, watch the CIROH CyberInfrastructure YouTube overview and join the monthly Cyberinfrastructure and Community NextGen Office Hours (email ciroh-it-admin@ua.edu for the Teams link). Support: ciroh-it-admin@ua.edu and Slack.",
+        "sources": [
+            "Services",
+            "Services > Public Cloud > CIROH AWS Account",
+            "Products > NextGen In A Box > Cyberinfrastructure and Community NextGen Office Hours",
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "DocuHub"
+        ]
+    },
+    {
+        "topic": "Getting Started & Navigation",
+        "question": "Where can I find the getting started guide?",
+        "answer": "See “Intro to NGIAB,” which centralizes entry points and how to get started, and the “Installation and Setup” tutorial for hands-on setup.",
+        "sources": [
+            "Products > NextGen In A Box > Intro to NGIAB > Installing NGIAB Locally",
+            "Products > NGIAB 101 Learning Module > Installation and Setup",
+            "Products > NextGen In A Box > Intro to NGIAB",
+            "Products > Data Management and Access Tools > NETWA > Getting Started",
+            "Products > NGIAB 101 Learning Module > Learner Profiles"
+        ]
+    },
+    {
+        "topic": "Getting Started & Navigation",
+        "question": "How do I become a CIROH consortium member?",
+        "answer": "I can’t answer that with the information given. The provided context covers accessing CIROH computing services and office hours but does not explain how to become a consortium member.",
+        "sources": [
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "Services",
+            "Services > Public Cloud > CIROH AWS Account",
+            "DocuHub",
+            "Products > NextGen In A Box > Cyberinfrastructure and Community NextGen Office Hours"
+        ]
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request access to CIROH infrastructure?",
+        "answer": "- Have your PI/workshop lead open a GitHub On‑Premises/Infrastructure Request issue for your project using the CIROH templates (to specify resources for JupyterHub, cloud, or on‑prem HPC like Pantarhei/Wukong).\n- After PI approval, each individual requests their own access:\n  - For JupyterHub CPU/GPU or custom images, follow the instructions linked from Infrastructure Access.\n  - For on‑prem HPC (Pantarhei or Wukong), submit the Microsoft Forms On‑Premise Access Request. UA users submit only this form; non‑UA users must first obtain VPN access via the same workflow, then submit the form.\n- Default cloud budget is $500/month per project across AWS/Google; request overages via a GitHub issue template.\n- If you can’t access the forms or need help, email ciroh-it-admin@ua.edu.",
+        "sources": [
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "Services > Infrastructure Access",
+            "Services",
+            "Services > Public Cloud > CIROH Google Account",
+            "Services > On-Premises > Wukong > Obtaining an Account"
+        ]
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "What are the requirements for using CIROH resources?",
+        "answer": "I can’t determine the exact “requirements” from the provided excerpts. The context describes services, policies, and access processes (e.g., CIROH AWS subaccounts, cost policy, NOAA-aligned data/code sharing expectations), but it doesn’t list a specific set of requirements for using CIROH resources.",
+        "sources": [
+            "Policies",
+            "Policies > Data and Code Sharing > Policy and Guidance",
+            "Services",
+            "Services > Public Cloud > CIROH AWS Account",
+            "Services > External Resources"
+        ]
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request a new CIROH account?",
+        "answer": "You must follow the “Obtaining an Account” process for the resource you need:\n\n- On‑premises clusters (Pantarhei or Wukong): The PI opens a GitHub On‑Premises Infrastructure Request for the project. Then each individual submits the CIROH On‑Premise Access Request (Microsoft Form). UA users submit only the On‑Premise Access Request; external users must obtain VPN access first via the same form workflow.\n\n- CIROH Cloud (AWS or Google Cloud): Request access through the Infrastructure Access workflow using the referenced GitHub issue forms. CIROH will create a project subaccount and PI identity; the project team manages user access.\n\nIf you can’t access the forms, email ciroh-it-admin@ua.edu.",
+        "sources": [
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "Services > Public Cloud > CIROH AWS Account",
+            "Services > Public Cloud > CIROH Google Account",
+            "Services > On-Premises > Wukong > Obtaining an Account",
+            "Services > CIROH Subdomain Request Form"
+        ]
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I submit a request for new software installation?",
+        "answer": "Export your conda environment to an environment.yml, submit the JupyterHub (2i2c) Software Install Form selecting the CIROH 2i2c installation, then email the environment.yml to CIROH-IT support.",
+        "sources": [
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > Request custom images",
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "Services > CIROH Subdomain Request Form",
+            "Services > On-Premises > Wukong > Obtaining an Account",
+            "Services > On-Premises > Pantarhei > Accessing the System"
+        ]
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request access to JupyterHub?",
+        "answer": "For CIROH JupyterHub: Request access through CIROH’s Infrastructure Access process (then use the production/staging/workshop hubs as appropriate). For help, contact CIROH Cloud support via email or Slack.\n\nFor CUAHSI JupyterHub: Join the CUAHSI JupyterHub Group via your HydroShare account, then launch from the HydroShare Apps library, the “Open with” menu, or directly at jupyterhub.cuahsi.org. For support, email help@cuahsi.org.",
+        "sources": [
+            "Services > Public Cloud > CIROH JupyterHub",
+            "Services > Public Cloud > CUAHSI JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > Request custom images",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial",
+            "Services > On-Premises > Pantarhei > Obtaining an Account"
+        ]
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request GPU access for research?",
+        "answer": "- On-premises HPC (Pantarhei or Wukong): Have your PI submit a project-level On‑Premises Infrastructure Request via the GitHub issue template specifying GPU needs. Then each user submits the On‑Premise Access Request form. External (non‑UA) users must obtain VPN access first via the same workflow.\n- CIROH‑2i2c JupyterHub: Request individual CPU/GPU access (and custom images if needed) per the Infrastructure Access guidance.\n- For help or if forms aren’t accessible: ciroh-it-admin@ua.edu.",
+        "sources": [
+            "Services > On-Premises > Wukong > Obtaining an Account",
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "Services > Infrastructure Access",
+            "Services > External Resources",
+            "Services > On-Premises > Pantarhei > Running Jobs > Accessing the Compute Nodes"
+        ]
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request AWS or Google Cloud access through CIROH?",
+        "answer": "Request access via the CIROH Infrastructure Access workflow. CIROH creates AWS and Google Cloud subaccounts and PI identities; use the referenced GitHub issue templates/forms to submit your project request. For help, contact ciroh-it-admin@ua.edu or the CIROH IT Slack channel.",
+        "sources": [
+            "Services > Public Cloud > CIROH Google Account",
+            "Services > Public Cloud > CIROH AWS Account",
+            "Blog > CIROH Research CyberInfrastructure Update",
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "Services"
+        ]
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request access to the Pantarhei or Wukong HPC clusters?",
+        "answer": "- Pantarhei: Submit a project-level On-Premises Infrastructure Request (via the GitHub issue template, ideally by the PI), then each user submits the Microsoft Forms On-Premise Access Request. UA users only need the On-Premise Access Request; external users must obtain VPN access first, then submit the access request. If you can’t access the forms, email ciroh-it-admin@ua.edu.\n\n- Wukong: The PI opens a GitHub On‑premises Infrastructure Request issue with project details (PI identity, roster with GitHub usernames/emails, resource needs). Each team member must also submit the CIROH On‑Premise Access Form. Non‑UA users without UA credentials must first request VPN access via the same form workflow. Accounts are provisioned per user.",
+        "sources": [
+            "Services > On-Premises > Wukong > Obtaining an Account",
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "Services > On-Premises > Pantarhei > Accessing the System",
+            "Services > On-Premises > Pantarhei > Running Jobs > Accessing the Compute Nodes",
+            "Services > On-Premises > Pantarhei"
+        ]
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request access to the NWM BigQuery API?",
+        "answer": "Submit the NWM BigQuery API Access Form. After approval, you’ll receive an API key to use with https://nwm-api.ciroh.org.",
+        "sources": [
+            "Products > Data Management and Access Tools > NWM BigQuery API",
+            "Blog > Accessing National Water Model (NWM) Data via Google Cloud BigQuery API",
+            "Services > Public Cloud > CIROH Google Account",
+            "Products > Data Management and Access Tools > Data Access > nwmurl",
+            "Services > On-Premises > Pantarhei > Obtaining an Account"
+        ]
+    },
+    {
+        "topic": "Documentation & Training",
+        "question": "Where can I find NextGen framework documentation?",
+        "answer": "The NextGen framework documentation is provided in the NextGen Technical Guidance page, which links to the full guidance PDF and serves as the authoritative integration and design reference.",
+        "sources": [
+            "Policies > NextGen Framework",
+            "Products > National Water Model > NextGen Framework",
+            "Products > NextGen In A Box > Distributions > NGIAB-CloudInfra > Getting Started",
+            "Blog > NextGen Framework Forcings",
+            "Products > NextGen In A Box > Intro to NGIAB > Run Configuration Directory Structure"
+        ]
+    },
+    {
+        "topic": "Documentation & Training",
+        "question": "Where can I find documentation for a specific CIROH tool?",
+        "answer": "Use the CIROH DocuHub. It’s the central entry point that links to product documentation pages (e.g., NextGen, Snow model, Tethys, NextGen In A Box) and domain pages like Snow Sensing. You can also find tool pages via the CIROH Research Portal (portal.ciroh.org) which catalogs apps and links back to documentation.",
+        "sources": [
+            "DocuHub",
+            "Policies",
+            "Products > Snow Sensing and Modeling Tools > Intro to Snow Observations Modeling Analysis",
+            "Products > CIROH Research Portal",
+            "Products > Snow Sensing and Modeling Tools > Snow Sensing"
+        ]
+    },
+    {
+        "topic": "Documentation & Training",
+        "question": "Where can I access tutorials and training materials?",
+        "answer": "- NGIAB 101 training module (episodes from setup to advanced topics), with links to GitHub source, CIROH Docs, quick-starts, Key Points, and Glossary\n- Intro to NGIAB hub (orientation, setup, local installation guidance, glossary, run config structure)\n- Learner Profiles page (routes by audience: general, HPC, DevCon 2025; links to Advanced Topics, Key Points, Glossary)\n- Getting Started with NETWA tutorial (CIROH testbed access, shared storage, Python environments)\n- Instructor Notes (facilitation guidance and links for the DevCon 2025 workshop)",
+        "sources": [
+            "Products > NGIAB 101 Learning Module > Learner Profiles",
+            "Products > Data Management and Access Tools > NETWA > Getting Started",
+            "Products > NGIAB 101 Learning Module",
+            "Products > NGIAB 101 Learning Module > Instructor - Summary and Schedule > Instructor Notes",
+            "Products > NextGen In A Box > Intro to NGIAB"
+        ]
+    },
+    {
+        "topic": "Documentation & Training",
+        "question": "What educational resources are available for CIROH users?",
+        "answer": "- Educational courses via the CIROH Research Portal (portal.ciroh.org), including HydroLearn integrations\n- Product documentation (e.g., NextGen, Snow model, Tethys, NextGen In A Box) on the CIROH DocuHub\n- Training materials and tutorials linked from the DocuHub\n- Monthly NextGen-focused office hours\n- Blogs and community contributions (tutorials, datasets, presentations) via the DocuHub and Portal",
+        "sources": [
+            "Products > CIROH Research Portal",
+            "DocuHub",
+            "Services",
+            "Services > External Resources",
+            "Policies"
+        ]
+    },
+    {
+        "topic": "Contributing Content",
+        "question": "How do I contribute to CIROH DocuHub?",
+        "answer": "You can contribute in several ways:\n\n- Simple doc edits: Click “Edit page” on docs.ciroh.org, make changes, and submit a pull request to the GitHub repo for admin review.\n- Major edits: Fork CIROH-UA/ciroh-ua_website, make commits, open a pull request; GitHub Actions will build and publish. For local dev: install Node.js, run npm install, then npm run start (dev) or npm run build (prod).\n- Blog posts: Must highlight projects using CIROH cyberinfrastructure. Submit via the blog post GitHub issue template for CIROH tech team review.\n- Product pages: Ensure you have a public GitHub project with a clear README, then request via the dedicated product issue template.\n- Developer resources: Use the repository workflows, site technologies, and blog authoring guides linked from DocuHub.\n- Support: Reach out via Slack, email ciroh-it-admin@ua.edu, or the site’s contact page.",
+        "sources": [
+            "DocuHub > Contributing to CIROH DocuHub",
+            "DocuHub > Contributing to CIROH DocuHub > Working with the DocuHub repository",
+            "DocuHub",
+            "DocuHub > Contributing to CIROH DocuHub > DocuHub technologies",
+            "Release Notes"
+        ]
+    },
+    {
+        "topic": "Contributing Content",
+        "question": "How do I add my project documentation?",
+        "answer": "- For simple fixes: click “Edit page” on docs.ciroh.org, make changes, and submit the GitHub pull request.\n- For larger additions: fork CIROH-UA/ciroh-ua_website, add your Markdown docs, commit, open a pull request; GitHub Actions will build and publish. You can test locally with Node.js (npm install; npm run start/build).\n- If you want a Product page for your project: ensure it’s on a public GitHub repo with a clear README, then submit a request via the Product issue template.\n- Need help: contact ciroh-it-admin@ua.edu or use Slack/contact page.",
+        "sources": [
+            "DocuHub > Contributing to CIROH DocuHub",
+            "DocuHub > Contributing to CIROH DocuHub > Working with the DocuHub repository",
+            "DocuHub > Contributing to CIROH DocuHub > DocuHub technologies",
+            "DocuHub > Contributing to CIROH DocuHub > Adding posts to the DocuHub Blog",
+            "Release Notes"
+        ]
+    },
+    {
+        "topic": "Contributing Content",
+        "question": "Where do I submit tutorials or training materials?",
+        "answer": "Use the “Edit page” link on docs.ciroh.org for simple tutorial fixes, or fork the CIROH-UA/ciroh-ua_website repo for larger additions and open a pull request. For help, contact ciroh-it-admin@ua.edu.",
+        "sources": [
+            "DocuHub > Contributing to CIROH DocuHub > Working with the DocuHub repository",
+            "DocuHub > Contributing to CIROH DocuHub",
+            "Products > NGIAB 101 Learning Module > Advanced Topics",
+            "Products > NGIAB 101 Learning Module > Learner Profiles",
+            "DocuHub > Contributing to CIROH DocuHub > Adding posts to the DocuHub Blog"
+        ]
+    },
+    {
+        "topic": "Contributing Content",
+        "question": "How do I publish my research findings on DocuHub?",
+        "answer": "You can publish via a blog post or by contributing docs/product pages:\n\n- Blog post: Must highlight work leveraging CIROH cyberinfrastructure. Submit via the blog post GitHub issue template for review by CIROH’s tech team. Alternatively, add a Markdown post in /blog (date-based filename, YAML front matter, include <!-- truncate -->) and open a pull request.\n- Documentation/tutorials: For simple fixes, use the “Edit page” link on docs.ciroh.org and submit a PR. For major additions, fork CIROH-UA/ciroh-ua_website, commit changes, open a PR; GitHub Actions will build/publish.\n- Product page: Ensure your project has a public GitHub repo with a clear README, then request a page via the product issue template.\n\nFor help, contact ciroh-it-admin@ua.edu or use Slack/contact page.",
+        "sources": [
+            "DocuHub > Contributing to CIROH DocuHub > Working with the DocuHub repository",
+            "DocuHub > Contributing to CIROH DocuHub",
+            "DocuHub",
+            "DocuHub > Contributing to CIROH DocuHub > DocuHub technologies",
+            "DocuHub > Contributing to CIROH DocuHub > Adding posts to the DocuHub Blog"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "How do I access CIROH JupyterHub?",
+        "answer": "Access is granted through CIROH’s Infrastructure Access process. Once you have access, you can choose from the available production, staging, or workshop hubs and start a server (Small–Huge) in the provided Jupyter environment. For details and the access link, see the CIROH JupyterHub page; support: CIROH Cloud email and Slack.",
+        "sources": [
+            "Services > Public Cloud > CIROH JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial",
+            "Services > Public Cloud > HydroShare and CIROH JupyterHub Integration",
+            "Services",
+            "Services > Public Cloud > CUAHSI JupyterHub"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "What’s the difference between Production, Staging, and Workshop JupyterHub?",
+        "answer": "- Production: Main, persistent CIROH JupyterHub for day-to-day research use.\n- Staging: Test/preview hub for trying changes before they reach production.\n- Workshop: Time-limited hub provisioned for events/training sessions.",
+        "sources": [
+            "Services > Public Cloud > CIROH JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > JupyterHub User Directory",
+            "Services > Public Cloud > CUAHSI JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial",
+            "Services > Public Cloud > HydroShare and CIROH JupyterHub Integration"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "What software is pre-installed on JupyterHub?",
+        "answer": "The provided information does not list specific pre-installed software. It notes that CIROH JupyterHub links to the deployed software Dockerfile and a request form for additional packages, and that the 2i2c docs link to the awi-ciroh-image GitHub repository for hub image code. Without those linked details, the exact pre-installed software cannot be determined from the given context.",
+        "sources": [
+            "Services > Public Cloud > CIROH JupyterHub",
+            "Services > Public Cloud > CUAHSI JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > JupyterHub User Directory",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > Request custom images"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "How do I stop my JupyterHub server when I’m not using it?",
+        "answer": "Use the JupyterHub controls to stop your server when idle. In the CIROH 2i2c environment, servers should be stopped when not in use (there’s also an auto-stop after ~1 hour of inactivity). From your JupyterHub interface, choose to shut down/stop your server to free resources. If you’ve enabled a keepalive method for long jobs, disable it before stopping.",
+        "sources": [
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > Prevent Server Timeout",
+            "Services > Public Cloud > CIROH JupyterHub",
+            "Services > Public Cloud > CUAHSI JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > JupyterHub User Directory",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "How do I install custom software on JupyterHub?",
+        "answer": "Use the CIROH custom image request process:\n- Export your conda environment to an environment.yml.\n- Submit the JupyterHub (2i2c) Software Install Form and select the CIROH 2i2c installation.\n- Email the environment.yml to CIROH-IT support.\n\nFor additional packages on existing hubs, use the linked request form; for persistent user-level Conda environments, follow the CIROH 2i2c how-to guides. Support: ciroh-it-admin@ua.edu or CIROH Cloud Slack.",
+        "sources": [
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > Request custom images",
+            "Services > Public Cloud > CIROH JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > Push and Pull to GitHub",
+            "Services > Public Cloud > CUAHSI JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "How do I request AWS cloud credits through CIROH?",
+        "answer": "Use the CIROH Infrastructure Access workflow and the referenced GitHub issue templates. Each project has a default $500/month budget shared across AWS and Google Cloud; if you need more, submit a request for additional funds via the GitHub issue form linked from the CIROH AWS Account page. For help, contact the CIROH IT admin email or Slack channel.",
+        "sources": [
+            "Services > Public Cloud > CIROH AWS Account",
+            "Services > Public Cloud > CIROH Google Account",
+            "Services > Public Cloud > CIROH AWS Account > CIROH AWS Office Hours",
+            "Blog > CIROH Research CyberInfrastructure Update",
+            "Services > Public Cloud > CIROH AWS Account > Documentation and Tutorial"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "What computing resources does CIROH offer?",
+        "answer": "CIROH offers:\n- Multi‑cloud resources: AWS and Google Cloud (Compute Engine VMs, Cloud Storage, BigQuery, Google Earth Engine), with managed JupyterHub (2i2c) and GPU allocations by request.\n- On‑premises HPC: Pantarhei and Wukong clusters operated at the University of Alabama.\n- Data services: Google BigQuery API for National Water Model data.\n- DevOps/JupyterHub environments: preconfigured, scalable compute/storage with hydrologic software pre‑installed.",
+        "sources": [
+            "Services",
+            "Blog > CIROH Research CyberInfrastructure Update",
+            "Services > External Resources",
+            "Services > Public Cloud > CIROH Google Account",
+            "Services > On-Premises"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "How do I use the Pantarhei HPC cluster?",
+        "answer": "- Ensure you have a Pantarhei account and are compliant with UA acceptable use, information classification, and protection policies.\n- Connect to the University of Alabama network via the campus VPN.\n- Open a terminal (macOS/Linux/Windows) and SSH to pantarhei.ua.edu using your Pantarhei username and password. You can also set up SSH public keys as directed.\n- Do not run intensive work on the login node. Submit compute work as Slurm jobs to the appropriate queue (CPU, GPU, or FPGA).\n- Use shared-node jobs when suitable to improve throughput and utilization.\n- Job limits: up to 7 days on as many as six full nodes; standard max job size is 240 cores. Larger requests require a support consultation.\n- Refer to the Running Jobs and Accessing the Compute Nodes guidance for command-line submission and queue options.",
+        "sources": [
+            "Services > On-Premises > Pantarhei > Running Jobs > Accessing the Compute Nodes",
+            "Services > On-Premises > Pantarhei > Accessing the System",
+            "Services > On-Premises > Pantarhei",
+            "Services > On-Premises > Pantarhei > Running Jobs",
+            "Services > On-Premises > Pantarhei > System Architecture"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "How do I access JetStream2?",
+        "answer": "Jetstream2 is available to CIROH members and partners via NSF ACCESS. Request an allocation through CIROH’s Infrastructure Access process, which links to the NSF ACCESS portals and the official Jetstream2 documentation for setup and technical details.",
+        "sources": [
+            "Services > External Resources > NSF Access > JetStream2",
+            "Services > Infrastructure Access",
+            "Services > On-Premises > Pantarhei > Accessing the System",
+            "Products > Data Management and Access Tools > NETWA > Getting Started",
+            "Services > External Resources > NSF Access"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "How do I request compute resources for a workshop or training?",
+        "answer": "- Have the PI or workshop lead open a GitHub On‑Premises/Infrastructure Request for the project, specifying the workshop needs (platforms, resources, roster).\n- Use CIROH’s Infrastructure Access process to select platforms (e.g., CIROH‑2i2c JupyterHub for CPU/GPU, AWS/Google Cloud, JetStream2, on‑prem HPC like Pantarhei/Wukong).\n- For JupyterHub: attendees can request CPU/GPU access; submit custom images via the JupyterHub (2i2c) Software Install Form with an environment.yml if needed.\n- CIROH offers conference/workshop IT support—use the provided forms/contacts on the Infrastructure Access page to coordinate setup.\n- Budget: projects get $500/month in cloud credits by default; request overages if your workshop requires more.",
+        "sources": [
+            "Blog > DevCon 2025: A DevOps and Cyberinfrastructure Success Story",
+            "Services > Infrastructure Access",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > Request custom images",
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "Services > On-Premises > Wukong > Obtaining an Account"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: Data Access",
+        "question": "How do I access the AORC dataset?",
+        "answer": "You can access AORC via:\n- HydroShare/CIROH 2i2c JupyterHub: Use the “AORC Data in Your Hands” Jupyter notebooks (requires a HydroShare account and CIROH-2i2c JupyterHub authorization via GitHub). The notebooks retrieve AORC precipitation/meteorological data from AWS in lat–lon and NWM projections, for point and polygon workflows.\n- NWM Data Access: AORC v1.0 (and forthcoming v1.1) is referenced as forcing; use the Data Access guide to reach NOAA Open Data Dissemination (NODD) cloud endpoints (AWS, Google Cloud, Azure) and CIROH Kerchunk catalogs.",
+        "sources": [
+            "Blog > AORC Data in Your Hands: User-Friendly Jupyter Notebooks for Data Retrieval and Analysis via CIROH JupyterHub Notebooks",
+            "Products > Data Management and Access Tools > Data Access",
+            "Services > External Resources > NSF Access",
+            "Services > External Resources",
+            "Services > Public Cloud > CIROH AWS Account > Documentation and Tutorial > AWS Data Science Tools"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: Data Access",
+        "question": "Where can I find forcing data for hydrological models?",
+        "answer": "- CIROH DataStream portal: Browse daily NextGen forcings and outputs at datastream.ciroh.org (AWS S3-backed).\n- For NWM-based forcings usable with NextGen: Use the ngen-datastream forcing processor with nwmurl-supported endpoints across NOAA NOMADS (HTTPS), Google Cloud Storage (GCS/GS), and AWS S3 for NWM operational v3 and retrospective v2.1/v3.0 datasets.",
+        "sources": [
+            "Products > Research Datastream > Datastream Components > Forcing Processor > Forcing Sources",
+            "Products > Research Datastream",
+            "Products > Research Datastream > Datastream Components > Datastream Configuration",
+            "Blog > NextGen Framework Forcings",
+            "Products > Research Datastream > Datastream Components > Forcing Processor"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: Data Access",
+        "question": "How do I retrieve data for a specific region?",
+        "answer": "Use the “AORC Data in Your Hands” Jupyter notebooks on HydroShare/CIROH 2i2c. They support spatial subsetting for both point and polygon (shapefile) workflows in lat–lon and NWM projections, letting you retrieve AORC/NWM data for your specified region. Access requires a HydroShare account and CIROH-2i2c JupyterHub authorization via GitHub.",
+        "sources": [
+            "Blog > AORC Data in Your Hands: User-Friendly Jupyter Notebooks for Data Retrieval and Analysis via CIROH JupyterHub Notebooks",
+            "Products > Data Management and Access Tools > Data Access",
+            "Blog > Accessing National Water Model (NWM) Data via Google Cloud BigQuery API",
+            "Products > Research Datastream",
+            "Products > Data Management and Access Tools > NETWA"
+        ]
+    },
+    {
+        "topic": "Services & Infrastructure: Data Access",
+        "question": "What data formats are supported by CIROH?",
+        "answer": "I cannot answer with the information given. The provided context does not specify supported data formats.",
+        "sources": [
+            "Policies",
+            "Policies > Data and Code Sharing > Policy and Guidance",
+            "Products > CIROH Research Portal",
+            "Policies > Data and Code Sharing",
+            "Products"
+        ]
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I get started with the NextGen framework?",
+        "answer": "Start with the NGIAB 101 training module and the “Intro to NGIAB” hub. Install NGIAB via Docker (Singularity on HPC), then use the provided installation guidance and run configuration directory docs to set up a standard ngen-run. The framework page offers background on BMI-based modular modeling and links to a CIROH webinar for deeper understanding. If you need technical integration details, consult the NextGen Technical Guidance PDF.",
+        "sources": [
+            "Products > NextGen In A Box > Distributions > NGIAB-CloudInfra > Getting Started",
+            "Products > National Water Model > NextGen Framework",
+            "Products > NextGen In A Box > Intro to NGIAB",
+            "Policies > NextGen Framework",
+            "Products > NGIAB 101 Learning Module > Key Points"
+        ]
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "What is NextGen In A Box (NGIAB)?",
+        "answer": "NextGen In A Box (NGIAB) is an open-source, containerized distribution of the Next Generation Water Resources Modeling Framework (NextGen) that packages BMI-compliant models, hydrofabric data, and the ngen engine to enable rapid, portable, and reproducible hydrologic modeling. It standardizes OS, dependencies, and runtime via Docker/Singularity, integrates tools for data preprocessing, model execution, calibration, evaluation (e.g., KGE, NSE, bias), and visualization, and supports workflows from local to cloud/HPC, including NWM configurations and community models.",
+        "sources": [
+            "Products > NGIAB 101 Learning Module > Introduction",
+            "Products > NextGen In A Box > Intro to NGIAB > NWM, NextGen, and NGIAB",
+            "Products > NGIAB 101 Learning Module > Key Points",
+            "Products > NextGen In A Box",
+            "Blog > NextGen In A Box Updates"
+        ]
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I run NextGen locally?",
+        "answer": "To run NextGen locally with NGIAB:\n\n1) Install prerequisites\n- Install Docker Desktop (Windows via WSL2, macOS, or Linux). Verify with: docker ps -a\n- On Windows, avoid using WSL “Docker-linked” distros for your project files.\n\n2) Set up a project and sample data\n- Create a working directory.\n- Download and extract the Sipsey Fork sample input data into it.\n\n3) Get NGIAB-CloudInfra\n- Clone the NGIAB-CloudInfra repository into your project directory.\n\n4) Validate and run via the interactive guide\n- From the NGIAB-CloudInfra folder, run: ./guide.sh\n- Follow the prompts to validate your local setup and execute a NextGen run.\n- If you need custom inputs, use the Data Preprocess tool (NGIAB-datapreprocessor/ngen-datastream) to build an ngen-run directory, then run via guide.sh.\n\nTroubleshooting: See the NGIAB 101 module for Git line-ending issues (LF vs CRLF) and broader usage.",
+        "sources": [
+            "Products > NextGen In A Box > Intro to NGIAB > Installing NGIAB Locally",
+            "Products > NGIAB 101 Learning Module > DevCon 2025 Jetstream VM Instructions",
+            "Products > NGIAB 101 Learning Module > Key Points",
+            "Products > NextGen In A Box > Distributions > NGIAB-CloudInfra > Getting Started",
+            "Products > NextGen In A Box > Intro to NGIAB > Run Configuration Directory Structure"
+        ]
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I configure NextGen for my basin?",
+        "answer": "Use NGIAB’s guided workflow:\n- Install NGIAB via Docker (or Singularity on HPC) and run guide.sh.\n- Prepare inputs with the Data Preprocess tool: subset the hydrofabric for your basin, generate meteorological forcings, and create a realization file in a standard ngen-run directory.\n- Execute the NextGen run using the generated realization and inputs (either directly after preprocessing or from the ngen-run directory).\n- Optionally calibrate with ngiab-cal (YAML-driven) and evaluate performance with TEEHR; visualize results with the Tethys-based Data Visualizer.",
+        "sources": [
+            "Products > NextGen In A Box > Distributions > NGIAB-CloudInfra > Getting Started",
+            "Products > National Water Model > NextGen Framework",
+            "Products > NGIAB 101 Learning Module > Key Points",
+            "Products > NGIAB 101 Learning Module > Introduction",
+            "Products > NextGen In A Box > Intro to NGIAB > NWM, NextGen, and NGIAB"
+        ]
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I troubleshoot NextGen setup issues?",
+        "answer": "I can’t provide detailed troubleshooting steps beyond what’s in the provided info. The context suggests:\n- Use the NGIAB 101 training module for onboarding and common issues (e.g., Git line endings LF vs CRLF on Windows/WSL).\n- Verify Docker is installed and running (e.g., docker ps -a) and avoid WSL Docker-linked distros as defaults.\n- Run NGIAB-CloudInfra’s guide.sh to validate your setup.\n- For help: open GitHub issues for bugs/feature requests, attend CIROH monthly office hours, or reach out via email/CIROH Slack.",
+        "sources": [
+            "Products > NextGen In A Box > Distributions > NGIAB-CloudInfra > Getting Started",
+            "Products > NextGen In A Box > Distributions > NGIAB-CloudInfra > Contact Us",
+            "Products > NextGen In A Box > Intro to NGIAB > Installing NGIAB Locally",
+            "Products > NGIAB 101 Learning Module > DevCon 2025 Jetstream VM Instructions",
+            "Products > NGIAB 101 Learning Module > Installation and Setup"
+        ]
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "My NextGen model isn’t running—what should I check?",
+        "answer": "- Verify your run directory matches the required NextGen Run Directories structure: ngen-run root with config, forcings, outputs, and metadata; optional lakeout and restart.\n- Confirm the config folder contains your realization file, BMI configs, a single hydrofabric geopackage, and any needed per-catchment configs in cat-config (e.g., PET, CFE, NOAH-OWP-M).\n- Check that forcings exist for all modeled catchments and are correctly referenced by the realization/configs.\n- Ensure module sequence and BMI component references in the realization file are valid and point to available modules.\n- If using NGIAB, rerun the Data Preprocess tool to auto-build the run directory and inputs, and use guide.sh to configure/execute.\n- Confirm container/runtime environment (Docker or Singularity on HPC) is set up and that paths in configs match the container’s filesystem.\n- Review autogenerated metadata and outputs folders for error logs or missing files indicating misconfiguration.",
+        "sources": [
+            "Products > National Water Model > NextGen Framework",
+            "Products > NextGen In A Box > Distributions > NGIAB-CloudInfra > Getting Started",
+            "Products > NextGen In A Box > Intro to NGIAB > Run Configuration Directory Structure",
+            "Policies > NextGen Framework",
+            "Products > NGIAB 101 Learning Module > Key Points"
+        ]
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I resolve dependency conflicts in NextGen?",
+        "answer": "I can’t answer that with the information given. The provided context doesn’t include guidance on resolving dependency conflicts in NextGen.",
+        "sources": [
+            "Products > National Water Model > NextGen Framework",
+            "Policies > NextGen Framework",
+            "Blog > NextGen Framework Forcings",
+            "Products > NextGen In A Box > Distributions > NGIAB-CloudInfra > Getting Started",
+            "Blog > NextGen Monthly News Update - January 2024"
+        ]
+    },
+    {
+        "topic": "Community & Collaboration",
+        "question": "How do I connect with other CIROH researchers?",
+        "answer": "- Join the monthly Cyberinfrastructure and Community NextGen Office Hours (email ciroh-it-admin@ua.edu for the Teams link and calendar invite).\n- Use the CIROH Research Portal (portal.ciroh.org) to engage with apps, datasets, courses, and contribute your own materials.\n- Explore CIROH DocuHub links to collaboration tools, training, blogs, and contribution pathways to share documentation, tutorials, datasets, and presentations.\n- Check CIROH Science Meeting 2024 and AGU 2024 posts for shared slides, photos, and GitHub repositories of presentations to find collaborators and contact points.",
+        "sources": [
+            "Products > NextGen In A Box > Cyberinfrastructure and Community NextGen Office Hours",
+            "Products > CIROH Research Portal",
+            "Blog > CIROH Science Meeting 2024",
+            "Blog > CIROH at AGU 2024",
+            "DocuHub"
+        ]
+    },
+    {
+        "topic": "Community & Collaboration",
+        "question": "How do I join CIROH office hours?",
+        "answer": "- Cyberinfrastructure and Community NextGen Office Hours: Email ciroh-it-admin@ua.edu to request the Microsoft Teams meeting link and calendar invite.\n- AWS Office Hours: Use the contact email provided on the AWS Office Hours page to subscribe and receive session details.",
+        "sources": [
+            "Products > NextGen In A Box > Cyberinfrastructure and Community NextGen Office Hours",
+            "Services > Public Cloud > CIROH AWS Account > CIROH AWS Office Hours",
+            "Blog > CIROH Research CyberInfrastructure Update",
+            "DocuHub",
+            "Services"
+        ]
+    },
+    {
+        "topic": "Community & Collaboration",
+        "question": "How do I provide feedback on CIROH services?",
+        "answer": "Email ciroh-it-admin@ua.edu to connect with the team (as used for Office Hours) and use the DocuHub contact page for support/feedback.",
+        "sources": [
+            "Policies",
+            "DocuHub > Contributing to CIROH DocuHub",
+            "Services",
+            "Products > NextGen In A Box > Cyberinfrastructure and Community NextGen Office Hours",
+            "DocuHub"
+        ]
+    },
+    {
+        "topic": "Technical Support",
+        "question": "I can’t access my JupyterHub environment—what should I do?",
+        "answer": "- For CUAHSI JupyterHub: Make sure you’ve joined the CUAHSI JupyterHub Group via HydroShare. Try launching from the HydroShare Apps library, the HydroShare “Open with” menu, or directly at jupyterhub.cuahsi.org and select a profile. If issues persist, contact help@cuahsi.org.\n\n- For CIROH JupyterHub (2i2c): Verify you have CIROH Infrastructure Access and are using the correct hub (production/staging/workshop). Ensure your server isn’t just stopped; start it, and stop idle servers to avoid quota issues. If you still can’t access, contact CIROH Cloud support via email or Slack, or ciroh-it-admin@ua.edu.",
+        "sources": [
+            "Services > Public Cloud > CUAHSI JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > JupyterHub User Directory",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > Request custom images"
+        ]
+    },
+    {
+        "topic": "Technical Support",
+        "question": "My data processing job failed—how can I troubleshoot?",
+        "answer": "I can’t diagnose specifics from the info given, but here are steps based on CIROH/Pantarhei guidance:\n\n- Don’t run heavy work on login nodes; submit via Slurm. Check your job script and queue/partition selection (CPU/GPU/FPGA), walltime, and core counts within limits (shared-node or up to 240 cores standard; longer runs up to 7 days, ≤6 nodes).\n- Inspect Slurm outputs: .out/.err files and Slurm job status for errors (OOM, walltime exceeded, node preemption).\n- If running ngen-datastream:\n  - Reduce memory pressure: fewer catchments, shorter duration, or fewer variables; or request more RAM/cores.\n  - Control processes: default is nprocs_host − 2; throttle with -n to fit available memory. Rule of thumb RAM per process: ~1 GB (days–weeks), ~4 GB (months–year).\n  - Check that forcing.tar.gz and ngen-bmi-configs.tar.gz are valid if you replaced defaults.\n  - Expect runtime scaling: ~1 minute per 10 hourly steps; adjust walltime accordingly.\n- If using NGIAB:\n  - Re-run via guide.sh and confirm input paths and parallel/serial mode selections; or use Data Preprocess CLI with -a and review its logs.\n- For persistent failures or larger resource needs (>240 cores or special nodes), contact support for consultation.",
+        "sources": [
+            "Services > On-Premises > Pantarhei > Running Jobs",
+            "Products > Research Datastream > DatastreamCLI > Usage Guide",
+            "Services > On-Premises > Pantarhei > Running Jobs > Accessing the Compute Nodes",
+            "Products > NGIAB 101 Learning Module > Model Execution",
+            "Products > Research Datastream"
+        ]
+    },
+    {
+        "topic": "Technical Support",
+        "question": "How do I optimize my computational resources?",
+        "answer": "- Submit intensive work as Slurm jobs, not on login nodes; choose appropriate queues (CPU/GPU/FPGA), shared-node options for small jobs, and request longer walltimes only as needed (up to 7 days; larger-than-standard >240 cores require support).\n- For ngen-datastream:\n  - Match processes to memory: default is nprocs_host − 2; throttle with -n to avoid OOM. Plan ~1 GB RAM per process for days–weeks runs, ~4 GB per process for months–year.\n  - Scale domain/time: memory grows with catchment count, timesteps, and variables; reduce any of these if nearing limits.\n  - Use performance-aware BMI modules (CFE, PET, SLOTH, NOM) based on needs; they affect runtime.\n  - Expect ~1 minute per 10 hourly steps as a rule of thumb; benchmark and adjust processes, duration, or domain.\n  - Example reference: ~11k catchments, 24 hourly steps ran ~5 minutes on 8 processes with 32 GB RAM (t4g.2xlarge).\n- Use shared-node jobs to improve throughput and cluster utilization when full nodes aren’t needed.\n- For NGIAB on HPC, run within Singularity on compute nodes via SLURM, not as root; leverage native scheduler integration and host filesystem access; keep outputs in a dedicated directory.\n- If CIROH resources are constrained, request supplemental HPC via NSF ACCESS to expand capacity.",
+        "sources": [
+            "Services > On-Premises > Pantarhei > Running Jobs > Accessing the Compute Nodes",
+            "Products > Research Datastream > DatastreamCLI > Usage Guide",
+            "Services > External Resources",
+            "Products > NGIAB 101 Learning Module > Advanced Topics",
+            "Services > On-Premises > Pantarhei > Running Jobs"
+        ]
+    },
+    {
+        "topic": "Technical Support",
+        "question": "I need help with processing large datasets—where do I start?",
+        "answer": "You can start with CIROH’s available infrastructure and workflows:\n\n- On the CIROH testbed (NETWA): use remote desktop or SSH to ciroh-testbed.uvm.edu, store large downloads under /netfiles/ciroh/downloadedData/, and manage Python environments with Mamba/Conda (shared envs in /data/condaShared/envs). Forecast and data tools (e.g., nwm_fc.py, gfs_fc_thredds.py) are available to fetch large NWM/GFS datasets efficiently without duplication.\n\n- For cloud-scale hydrologic workflows: use Research DataStream’s open, AWS-based pipeline to automate inputs, run NextGen via DataStreamCLI, and access outputs on S3 (browse at datastream.ciroh.org). You can deploy reference AWS infrastructure and run multi-process NextGen jobs with community configurations.\n\n- For heavy compute/ML modeling: leverage CIROH’s Wukong HPC cluster integrated with Amazon S3 for scalable, multi-node runs and durable, shareable storage.\n\n- If running NextGen locally or in AWS, follow ngen-datastream usage guidance: match memory/processes to domain and duration (rule-of-thumb RAM per process ≈1 GB for days–weeks, ≈4 GB for months–year), throttle processes with -n, and consider model module choices (CFE, PET, SLOTH, NOM) for performance. Example: ~11k catchments, 24 hourly steps ran in ~5 minutes on t4g.2xlarge with 8 procs and 32 GB RAM.\n\nChoose the path that fits your need: testbed + shared data for quick starts, DataStream for cloud automation and S3 access, or Wukong+S3 for large-scale HPC.",
+        "sources": [
+            "Products > Research Datastream > DatastreamCLI > Usage Guide",
+            "Products > Research Datastream",
+            "Products > Research Datastream > Datastream Components > Datastream Configuration",
+            "Blog > Pennsylvania State University Researchers Leverage CIROH Cyberinfrastructure for Advanced Hydrological Modeling",
+            "Products > Data Management and Access Tools > NETWA > Getting Started"
+        ]
+    },
+    {
+        "topic": "Technical Support",
+        "question": "How do I report a bug or issue to CIROH IT support?",
+        "answer": "Use the GitHub issues tracker for the relevant CIROH project (e.g., NGIAB) to report bugs or feature requests. For direct support, you can also reach CIROH IT via email or CIROH Slack.",
+        "sources": [
+            "Products > NextGen In A Box > Distributions > NGIAB-CloudInfra > Contact Us",
+            "DocuHub > Contributing to CIROH DocuHub",
+            "Services > On-Premises > Pantarhei > Obtaining an Account",
+            "Services > CIROH Subdomain Request Form",
+            "Services > Public Cloud > CIROH JupyterHub > Documentation and Tutorial > Request custom images"
+        ]
+    },
+    {
+        "topic": "Data & Workflow Best Practices",
+        "question": "What are the best practices for managing CIROH datasets?",
+        "answer": "- Use HydroShare for small, citable, API-enabled, or spatial datasets; assign a DOI and apply a Creative Commons license.\n- Use CIROH Cloud object storage (AWS S3, Google Cloud Buckets, Azure, or on‑prem) for large or NWM‑linked datasets; optionally cross‑link records from HydroShare.\n- Ensure machine-readable, openly documented access at no or minimal cost; include described quality control methods.\n- Make data publicly available by article publication or within two years of collection or grant end.\n- Include required NOAA disclaimer, proper data citation with DOIs, and funding acknowledgments (including FundRef).\n- Align with NOAA Information Quality Guidelines and CIROH’s Data Management Plan; submit final accepted manuscripts to the NOAA Institutional Repository (one-year embargo).\n- Leverage the Water Prediction Node when appropriate and list datasets in the CIROH Research Portal for discoverability.",
+        "sources": [
+            "Policies",
+            "Policies > Data and Code Sharing",
+            "Policies > Data and Code Sharing > Policy and Guidance",
+            "Policies > Data and Code Sharing > Recommendations",
+            "Products > CIROH Research Portal"
+        ]
+    },
+    {
+        "topic": "Data & Workflow Best Practices",
+        "question": "How do I ensure reproducibility in my CIROH research?",
+        "answer": "- Use CIROH CyberInfrastructure: run work in the managed JupyterHub with preconfigured environments, scalable compute/storage, and pre-installed hydrologic software to reduce setup variability and enable reproducible NextGen experiments.\n- Share data and code per CIROH’s Data and Code Sharing Policy: publish data in HydroShare (small) with DOIs and CC licenses; use CIROH Cloud object storage for large/NWM-linked datasets and cross-link from HydroShare; host code on GitHub (CIROH or institutional) with BSD-3-Clause or MIT licenses and mint DOIs via Zenodo; optionally publish reproducible notebooks in HydroShare and launch via CIROH or CUAHSI JupyterHub.\n- For models and workflows: share source on GitHub, containers via NextGen In A Box, packages/instances in HydroShare, executables through the CIROH Portal; document workflows with GitHub gists, DocuHub pages, or notebooks.\n- Follow policy requirements: provide machine-readable, openly documented data with described QC, include NOAA disclaimer, cite data with DOIs, acknowledge funding (including FundRef), and make outputs public by publication or within two years of collection or grant end. Submit final accepted manuscripts to the NOAA Institutional Repository (up to one-year embargo).\n- Use CIROH recommendations and support: align with the living guidance for consistent data management; leverage HydroShare Help, CUAHSI support, CIROH Cloud team, and Slack channels.",
+        "sources": [
+            "Policies",
+            "Policies > Data and Code Sharing > Policy and Guidance",
+            "Policies > Data and Code Sharing",
+            "Services",
+            "Policies > Data and Code Sharing > Recommendations"
+        ]
+    },
+    {
+        "topic": "Data & Workflow Best Practices",
+        "question": "What tools are available for data visualization in CIROH?",
+        "answer": "- Visualization and Analysis Tools index with links to Tethys-CSES (Community Streamflow Evaluation System)\n- CIROH Research Portal native apps: TethysDash, Water Data Explorer, SWEML, GRACE Groundwater Tool, Snow Inspector, CSES (for NWM evaluation)\n- Proxied/external tools via the portal: FIM Visualization Deck, OWP NWM Map Viewer, CIROH JupyterHub, HydroShare, NFFA APP",
+        "sources": [
+            "Products > Visualization and Analysis Tools",
+            "Products > CIROH Research Portal",
+            "Products > Snow Sensing and Modeling Tools > Intro to Snow Observations Modeling Analysis",
+            "Services",
+            "Community Impact"
+        ]
+    },
+    {
+        "topic": "Data & Workflow Best Practices",
+        "question": "How do I convert between different hydrological data formats?",
+        "answer": "I cannot answer with the information given. The context lists common formats used (GeoPackage, JSON, NetCDF-4, YAML, tar) and related tools (Hydrofabric R package, NGIAB/NextGen utilities), but it does not provide conversion procedures or tools for converting between formats.",
+        "sources": [
+            "Products > Research Datastream",
+            "Products > NextGen In A Box > Intro to NGIAB > Glossary",
+            "Products > Hydrofabric",
+            "Products > NextGen In A Box > Components > NGIAB Data Preprocess",
+            "Products > Data Management and Access Tools > Data Access"
+        ]
+    },
+    {
+        "topic": "Policies & Administration",
+        "question": "What are CIROH’s usage policies?",
+        "answer": "I cannot answer with the information given. The provided context does not define “usage policies” beyond general data/code sharing and cloud account guidance.",
+        "sources": [
+            "Policies",
+            "Policies > Data and Code Sharing > Policy and Guidance",
+            "Policies > Data and Code Sharing",
+            "Policies > Data and Code Sharing > Recommendations",
+            "Services > Public Cloud > CIROH AWS Account"
+        ]
+    },
+    {
+        "topic": "Policies & Administration",
+        "question": "How much compute time am I allocated?",
+        "answer": "I can’t determine your exact compute time allocation from the provided information. The context describes queues, job size/walltime limits (up to seven days per job and up to six full nodes on Pantarhei), default cloud budget ($500/month across AWS and Google Cloud), and NSF ACCESS allocations, but it doesn’t state a total compute time allocation for your account.",
+        "sources": [
+            "Services > On-Premises > Pantarhei > Running Jobs > Accessing the Compute Nodes",
+            "Services > On-Premises > Wukong > System Architecture",
+            "Services > Public Cloud > CIROH Google Account",
+            "Services > On-Premises > Pantarhei > Running Jobs",
+            "Services > External Resources > NSF Access"
+        ]
+    },
+    {
+        "topic": "Policies & Administration",
+        "question": "What are the CIROH data sharing policies?",
+        "answer": "CIROH’s data sharing policies commit to open, machine‑readable, and well‑documented sharing of environmental data and research products in alignment with NOAA’s Data Sharing Directive (v3.0). Key requirements:\n- Make data publicly available at no or minimal cost, with described quality control methods.\n- Release by journal article publication or within two years of collection or grant end, whichever comes first.\n- Include a specific NOAA disclaimer, proper data citation with DOIs, and funding acknowledgments (including FundRef).\n- Submit final accepted manuscripts to the NOAA Institutional Repository with up to a one‑year embargo.\n- Follow NOAA Information Quality Guidelines and NAO 212-15 definitions.\n- Use CIROH’s Data Management Plan as the implementation appendix.\n\nGuidance for where to share:\n- Data: HydroShare for small, citable, API-enabled/spatial datasets with DOIs and CC licenses; CIROH Cloud object storage for large or NWM-linked datasets (optionally cross-link from HydroShare); leverage Water Prediction Node as needed.\n- Code: Host on GitHub (institutional or CIROH org) with BSD-3-Clause or MIT licenses; use CIROH/OWP templates; archive DOIs via Zenodo; Jupyter notebooks can be published in HydroShare and launched via CIROH/CUAHSI JupyterHub.\n- Models/workflows/publications/education: Share via GitHub, HydroShare, CIROH Portal, and HydroLearn per recommendations; avoid preprints before peer review per NOAA.\n\nThese policies are a living document to ensure consistent data management, transparency, and broad reuse across CIROH collaborations.",
+        "sources": [
+            "Policies > Data and Code Sharing",
+            "Policies > Data and Code Sharing > Policy and Guidance",
+            "Policies",
+            "Policies > Data and Code Sharing > Recommendations",
+            "Products > CIROH Research Portal"
+        ]
+    },
+    {
+        "topic": "Policies & Administration",
+        "question": "Are there restrictions on using CIROH resources for commercial work?",
+        "answer": "I cannot answer with the information given. The provided context does not mention restrictions on using CIROH resources for commercial work.",
+        "sources": [
+            "Policies > Data and Code Sharing > Policy and Guidance",
+            "Policies",
+            "Policies > Data and Code Sharing > Recommendations",
+            "Services > Public Cloud > CIROH AWS Account",
+            "Services > External Resources"
+        ]
+    }
+]
