@@ -1,11 +1,11 @@
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 export function usePanelResize() {
   const [dimensions, setDimensions] = useState({ width: 400, height: 500 });
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [isResizing, setIsResizing] = useState(false);
-  
+
   const panelRef = useRef<HTMLDivElement>(null);
 
   const handleMouseDown = (e: React.MouseEvent) => {

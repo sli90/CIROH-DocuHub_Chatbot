@@ -13,16 +13,16 @@ interface AppStore extends AppState {
 
 export const useAppStore = create<AppStore>()(
   devtools(
-    (set) => ({
+    set => ({
       // Initial state
       user: null,
       isLoading: false,
       error: null,
 
       // Actions
-      setUser: (user) => set({ user }),
-      setLoading: (isLoading) => set({ isLoading }),
-      setError: (error) => set({ error }),
+      setUser: user => set({ user }),
+      setLoading: isLoading => set({ isLoading }),
+      setError: error => set({ error }),
       clearError: () => set({ error: null }),
       logout: () => set({ user: null, error: null }),
     }),

@@ -1,27 +1,30 @@
-# CIROH - Business Application
+# CIROH - Frontend Skeleton
 
-A modern, business-level React application built with Vite, TypeScript, and Tailwind CSS.
+A modern React frontend skeleton for a chat application, built with Vite, TypeScript, and Tailwind CSS. This is the frontend foundation that will be connected to a backend API.
 
 ## 🚀 Features
 
 - **Modern Stack**: React 18 + TypeScript + Vite
-- **Styling**: Tailwind CSS with custom design system
+- **Styling**: Tailwind CSS with custom design system and dark mode support
 - **State Management**: Zustand for lightweight state management
-- **Routing**: React Router v6 for navigation
+- **Chat Interface**: Floating chat bubble with resizable panel system
+- **Dark Mode**: Built-in dark/light mode toggle with localStorage persistence
+- **Responsive Design**: Mobile-friendly chat interface with drag-to-resize
 - **Code Quality**: ESLint + Prettier for consistent code
 - **Testing**: Vitest + React Testing Library
-- **Performance**: Optimized build with code splitting
+- **Performance**: Optimized build with code splitting and vendor chunking
 
 ## 📦 Tech Stack
 
 - **Frontend**: React 18, TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **State Management**: Zustand
-- **Routing**: React Router DOM
-- **Icons**: Lucide React
-- **Testing**: Vitest, React Testing Library
-- **Linting**: ESLint, Prettier
+- **Build Tool**: Vite 7.1.4
+- **Styling**: Tailwind CSS 4.1.12 with custom theme
+- **State Management**: Zustand 4.4.7
+- **Icons**: Lucide React 0.294.0
+- **Utilities**: clsx for conditional classes
+- **Testing**: Vitest 0.34.6, React Testing Library 13.4.0
+- **Linting**: ESLint 8.53.0, Prettier 3.1.0
+- **TypeScript**: 5.2.2 with strict configuration
 
 ## 🛠️ Development
 
@@ -39,68 +42,38 @@ npm install
 # Start development server
 npm run dev
 
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 ```
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
-- `npm run format` - Format code with Prettier
-- `npm run test` - Run tests
-- `npm run test:ui` - Run tests with UI
-- `npm run test:coverage` - Run tests with coverage
-- `npm run type-check` - Run TypeScript type checking
 
 ## 📁 Project Structure
 
 ```
 src/
 ├── components/          # Reusable UI components
-├── pages/              # Page components
-├── hooks/              # Custom React hooks
+│   ├── chat/           # Chat-specific components
+│   │   ├── ChatHeader.tsx      # Chat panel header
+│   │   ├── ChatInput.tsx       # Message input component
+│   │   ├── ChatPanel.tsx       # Main chat panel container
+│   │   ├── ExampleQuestions.tsx # Predefined question buttons
+│   │   ├── MessageList.tsx     # Message display component
+│   │   ├── data.ts             # Chat data and constants
+│   │   ├── types.ts            # Chat-specific TypeScript types
+│   │   ├── useChat.ts          # Chat state management hook
+│   │   ├── useDarkMode.tsx     # Dark mode toggle hook
+│   │   ├── usePanelResize.ts   # Panel resizing functionality
+│   │   └── index.ts            # Chat components exports
+│   └── ChatBubble.tsx          # Floating chat bubble component
 ├── store/              # Zustand stores
+│   └── useAppStore.ts  # Main application state
 ├── utils/              # Utility functions
 ├── types/              # TypeScript type definitions
 ├── styles/             # Global styles
+│   └── index.css       # Main stylesheet
 ├── test/               # Test setup and utilities
+│   └── setup.ts        # Test configuration
 └── assets/             # Static assets
 ```
 
-## 🎨 Design System
-
-The application includes a comprehensive design system with:
-
-- **Colors**: Primary and gray color palettes
-- **Typography**: Inter font family
-- **Components**: Button, Card, Input, and more
-- **Spacing**: Consistent spacing scale
-- **Shadows**: Soft shadow system
-
 ## 🔧 Configuration
-
-### Environment Variables
-
-Copy `env.example` to `.env` and configure:
-
-```bash
-cp env.example .env
-```
-
-### Tailwind CSS
-
-Custom configuration in `tailwind.config.js` with:
-
-- Extended color palette
-- Custom font family
-- Soft shadow utilities
 
 ### TypeScript
 
@@ -110,20 +83,22 @@ Strict TypeScript configuration with:
 - Strict type checking
 - Modern ES2020 target
 
-## 🧪 Testing
+## 🚧 Development Status
 
-The project includes comprehensive testing setup:
+This is a **frontend skeleton** that provides:
 
-```bash
-# Run all tests
-npm run test
+- Complete chat UI components
+- State management setup
+- Responsive design with Tailwind CSS
+- TypeScript type definitions
+- Testing infrastructure
 
-# Run tests with UI
-npm run test:ui
+**Next Steps:**
 
-# Run tests with coverage
-npm run test:coverage
-```
+- Connect to backend API
+- Implement real-time messaging
+- Add authentication
+- Deploy to production
 
 ## 📦 Build & Deployment
 
@@ -133,29 +108,10 @@ npm run test:coverage
 npm run build
 ```
 
-The build includes:
+### Available Scripts
 
-- Code splitting for optimal loading
-- Source maps for debugging
-- Optimized assets
-- TypeScript compilation
-
-### Deployment
-
-The built files in the `dist` directory can be deployed to any static hosting service:
-
-- Vercel
-- Netlify
-- AWS S3
-- GitHub Pages
-
-## 🤝 Contributing
-
-1. Follow the established code style (ESLint + Prettier)
-2. Write tests for new features
-3. Update documentation as needed
-4. Use conventional commit messages
-
-## 📄 License
-
-This project is licensed under the ISC License.
+- `npm run dev` - Start development server (http://localhost:3000)
+- `npm run build` - Build for production
+- `npm run test` - Run tests
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier

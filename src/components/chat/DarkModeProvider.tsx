@@ -1,13 +1,19 @@
-import React, { useState, useEffect, createContext, useContext, ReactNode } from 'react';
+import React, { useState, useEffect, createContext, ReactNode } from 'react';
 
 interface DarkModeContextType {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
 }
 
-const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined);
+const DarkModeContext = createContext<DarkModeContextType | undefined>(
+  undefined
+);
 
-export function DarkModeProvider({ children }: { children: ReactNode }): React.ReactElement {
+export function DarkModeProvider({
+  children,
+}: {
+  children: ReactNode;
+}): React.ReactElement {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     // Check localStorage first, then system preference
     const saved = localStorage.getItem('ciroh-dark-mode');
@@ -32,10 +38,4 @@ export function DarkModeProvider({ children }: { children: ReactNode }): React.R
   );
 }
 
-export function useDarkMode() {
-  const context = useContext(DarkModeContext);
-  if (context === undefined) {
-    throw new Error('useDarkMode must be used within a DarkModeProvider');
-  }
-  return context;
-}
+export { DarkModeContext };

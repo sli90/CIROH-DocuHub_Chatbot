@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
-import { ChatPanel, DarkModeProvider } from '@/components/chat';
+import { ChatPanel, DarkModeProvider } from './chat';
 
 export function ChatBubble() {
   const [isOpen, setIsOpen] = useState(false);

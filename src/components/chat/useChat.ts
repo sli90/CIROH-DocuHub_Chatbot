@@ -6,8 +6,10 @@ export function useChat() {
   const [inputValue, setInputValue] = useState('');
   const [isBotResponding, setIsBotResponding] = useState(false);
   const [showExamples, setShowExamples] = useState(true);
-  const [expandedCategories, setExpandedCategories] = useState<Set<number>>(new Set());
-  
+  const [expandedCategories, setExpandedCategories] = useState<Set<number>>(
+    new Set()
+  );
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll to bottom when new messages arrive

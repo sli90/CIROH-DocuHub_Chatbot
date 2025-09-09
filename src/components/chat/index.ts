@@ -5,6 +5,7 @@ export { MessageList } from './MessageList';
 export { ChatInput } from './ChatInput';
 export { useChat } from './useChat';
 export { usePanelResize } from './usePanelResize';
-export { DarkModeProvider, useDarkMode } from './useDarkMode';
+export { DarkModeProvider } from './DarkModeProvider';
+export { useDarkMode } from './useDarkMode';
 export * from './types';
 export { exampleQuestions } from './data';

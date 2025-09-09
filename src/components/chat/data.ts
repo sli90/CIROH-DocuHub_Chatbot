@@ -46,9 +46,9 @@ export const exampleQuestions: ExampleQuestion[] = [
     category: 'Services & Infrastructure',
     questions: [
       'How do I access CIROH JupyterHub?',
-      'What\'s the difference between Production, Staging, and Workshop JupyterHub?',
+      "What's the difference between Production, Staging, and Workshop JupyterHub?",
       'What software is pre-installed on JupyterHub?',
-      'How do I stop my JupyterHub server when I\'m not using it?',
+      "How do I stop my JupyterHub server when I'm not using it?",
       'How do I install custom software on JupyterHub?',
       'How do I request AWS cloud credits through CIROH?',
       'What computing resources does CIROH offer?',
@@ -69,7 +69,7 @@ export const exampleQuestions: ExampleQuestion[] = [
       'How do I run NextGen locally?',
       'How do I configure NextGen for my basin?',
       'How do I troubleshoot NextGen setup issues?',
-      'My NextGen model isn\'t running—what should I check?',
+      "My NextGen model isn't running—what should I check?",
       'How do I resolve dependency conflicts in NextGen?',
     ],
   },
@@ -84,7 +84,7 @@ export const exampleQuestions: ExampleQuestion[] = [
   {
     category: 'Technical Support',
     questions: [
-      'I can\'t access my JupyterHub environment—what should I do?',
+      "I can't access my JupyterHub environment—what should I do?",
       'My data processing job failed—how can I troubleshoot?',
       'How do I optimize my computational resources?',
       'I need help with processing large datasets—where do I start?',
@@ -103,7 +103,7 @@ export const exampleQuestions: ExampleQuestion[] = [
   {
     category: 'Policies & Administration',
     questions: [
-      'What are CIROH\'s usage policies?',
+      "What are CIROH's usage policies?",
       'How much compute time am I allocated?',
       'What are the CIROH data sharing policies?',
       'Are there restrictions on using CIROH resources for commercial work?',
