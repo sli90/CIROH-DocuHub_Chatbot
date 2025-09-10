@@ -13,10 +13,26 @@ export function useChat() {
   const [lastError, setLastError] = useState<string | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const lastBotMessageRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll to bottom when new messages arrive
+  // Auto-scroll to the start of the last bot message when it arrives
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const scrollToLastBotMessage = () => {
+      if (lastBotMessageRef.current) {
+        lastBotMessageRef.current.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      } else if (messagesEndRef.current) {
+        // Fallback to bottom if no bot message ref
+        messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    
+    // Small delay to ensure DOM is updated
+    const timeoutId = setTimeout(scrollToLastBotMessage, 100);
+    
+    return () => clearTimeout(timeoutId);
   }, [messages, isBotResponding]);
 
   // Hide examples when user starts chatting
@@ -105,6 +121,10 @@ export function useChat() {
     setShowExamples(true);
   };
 
+  const handleShowChat = () => {
+    setShowExamples(false);
+  };
+
   return {
     messages,
     inputValue,
@@ -113,11 +133,13 @@ export function useChat() {
     expandedCategories,
     lastError,
     messagesEndRef,
+    lastBotMessageRef,
     setInputValue,
     handleSendMessage,
     handleClearChat,
     handleToggleCategory,
     handleShowExamples,
+    handleShowChat,
     handleRetryLastMessage,
   };
 }

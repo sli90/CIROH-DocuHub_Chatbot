@@ -1,9 +1,18 @@
-import { Bot, RotateCcw, HelpCircle, X, Moon, Sun } from 'lucide-react';
+import {
+  Bot,
+  RotateCcw,
+  HelpCircle,
+  X,
+  Moon,
+  Sun,
+  MessageCircle,
+} from 'lucide-react';
 import { ChatHeaderProps } from './types';
 
 export function ChatHeader({
   showExamples,
   onShowExamples,
+  onShowChat,
   onClearChat,
   onClose,
   isDarkMode,
@@ -53,6 +62,19 @@ export function ChatHeader({
             title="Show example questions"
           >
             <HelpCircle className="h-4 w-4" />
+          </button>
+        )}
+        {showExamples && (
+          <button
+            onClick={onShowChat}
+            className={`p-1 rounded transition-colors ${
+              isDarkMode
+                ? 'hover:bg-gray-700 text-gray-300'
+                : 'hover:bg-gray-200 text-gray-600'
+            }`}
+            title="Back to chat"
+          >
+            <MessageCircle className="h-4 w-4" />
           </button>
         )}
         <button

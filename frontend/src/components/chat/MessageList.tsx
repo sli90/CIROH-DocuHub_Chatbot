@@ -1,77 +1,88 @@
 import { Bot, User } from 'lucide-react';
 import { MessageListProps } from './types';
+import { formatUrls, formatSourcesAsHtml } from '../../utils';
 
 export function MessageList({
   messages,
   isBotResponding,
   isDarkMode,
+  lastBotMessageRef,
 }: MessageListProps) {
   return (
     <div className="space-y-4">
-      {messages.map(message => (
-        <div
-          key={message.id}
-          className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
-        >
+      {messages.map((message, index) => {
+        const isLastBotMessage = message.isBot && index === messages.length - 1;
+        return (
           <div
-            className={`max-w-[80%] p-3 rounded-lg ${
-              message.isBot
-                ? isDarkMode
-                  ? 'text-gray-100'
-                  : 'bg-gray-100 text-gray-900'
-                : 'bg-primary-600 text-white'
-            }`}
-            style={{
-              backgroundColor:
-                message.isBot && isDarkMode ? '#242527' : undefined,
-            }}
+            key={message.id}
+            ref={isLastBotMessage ? lastBotMessageRef : null}
+            className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
           >
-            <div className="flex items-start space-x-2">
-              {message.isBot && (
-                <Bot
-                  className={`h-4 w-4 mt-0.5 flex-shrink-0 ${
-                    isDarkMode ? 'text-gray-300' : 'text-gray-600'
-                  }`}
-                />
-              )}
-              <div>
-                <div className="text-sm whitespace-pre-line">
-                  {message.text}
-                </div>
-                {message.isBot && message.sources && (
-                  <div
-                    className={`text-xs mt-2 p-2 rounded border-l-2 ${
-                      isDarkMode
-                        ? 'bg-gray-700 border-gray-500 text-gray-300'
-                        : 'bg-gray-50 border-gray-300 text-gray-600'
+            <div
+              className={`max-w-[80%] p-3 rounded-lg message-container ${
+                message.isBot
+                  ? isDarkMode
+                    ? 'text-gray-100'
+                    : 'bg-gray-100 text-gray-900'
+                  : 'bg-primary-600 text-white'
+              }`}
+              style={{
+                backgroundColor:
+                  message.isBot && isDarkMode ? '#242527' : undefined,
+              }}
+            >
+              <div className="flex items-start space-x-2">
+                {message.isBot && (
+                  <Bot
+                    className={`h-4 w-4 mt-0.5 flex-shrink-0 ${
+                      isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                    }`}
+                  />
+                )}
+                <div className="w-full">
+                  <div className="text-sm whitespace-pre-line chat-message">
+                    {formatUrls(message.text)}
+                  </div>
+                  {message.isBot && message.sources && (
+                    <div
+                      className={`text-xs mt-2 p-2 rounded border-l-2 w-full message-container ${
+                        isDarkMode
+                          ? 'bg-gray-700 border-gray-500 text-gray-300'
+                          : 'bg-gray-50 border-gray-300 text-gray-600'
+                      }`}
+                    >
+                      <div className="font-medium mb-1">Sources:</div>
+                      <div
+                        className="chat-sources"
+                        dangerouslySetInnerHTML={{
+                          __html: formatSourcesAsHtml(message.sources),
+                        }}
+                      />
+                    </div>
+                  )}
+                  <p
+                    className={`text-xs mt-1 ${
+                      message.isBot
+                        ? isDarkMode
+                          ? 'text-gray-400'
+                          : 'text-gray-500'
+                        : 'text-primary-100'
                     }`}
                   >
-                    <div className="font-medium mb-1">Sources:</div>
-                    <div className="whitespace-pre-line">{message.sources}</div>
-                  </div>
+                    {message.timestamp.toLocaleTimeString([], {
+                      hour: '2-digit',
+                      minute: '2-digit',
+                    })}
+                  </p>
+                </div>
+                {!message.isBot && (
+                  <User className="h-4 w-4 mt-0.5 text-primary-100 flex-shrink-0" />
                 )}
-                <p
-                  className={`text-xs mt-1 ${
-                    message.isBot
-                      ? isDarkMode
-                        ? 'text-gray-400'
-                        : 'text-gray-500'
-                      : 'text-primary-100'
-                  }`}
-                >
-                  {message.timestamp.toLocaleTimeString([], {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                  })}
-                </p>
               </div>
-              {!message.isBot && (
-                <User className="h-4 w-4 mt-0.5 text-primary-100 flex-shrink-0" />
-              )}
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
       {isBotResponding && (
         <div className="flex justify-start">

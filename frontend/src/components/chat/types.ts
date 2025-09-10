@@ -20,6 +20,7 @@ export interface MessageListProps {
   messages: Message[];
   isBotResponding: boolean;
   isDarkMode: boolean;
+  lastBotMessageRef?: React.RefObject<HTMLDivElement>;
 }
 
 export interface ExampleQuestionsProps {
@@ -34,6 +35,7 @@ export interface ExampleQuestionsProps {
 export interface ChatHeaderProps {
   showExamples: boolean;
   onShowExamples: () => void;
+  onShowChat: () => void;
   onClearChat: () => void;
   onClose: () => void;
   isDarkMode: boolean;

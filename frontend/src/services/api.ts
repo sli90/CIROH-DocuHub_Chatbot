@@ -6,14 +6,14 @@ export interface ChatRequest {
 
 export interface ChatResponse {
   answer: string;
-  sources: string;
+  sources: string | string[];
   success: boolean;
   error?: string;
 }
 
 export class ChatAPI {
   constructor() {
-    // No need to store baseUrl since we use getApiUrl function
+    // API client for real API integration
   }
 
   private async makeRequest<T>(url: string, options: RequestInit): Promise<T> {
@@ -73,7 +73,7 @@ export class ChatAPI {
   async sendQuestion(request: ChatRequest): Promise<ChatResponse> {
     try {
       const data = await this.retryRequest(async () => {
-        return await this.makeRequest<{ answer?: string; sources?: string }>(
+        return await this.makeRequest<{ answer?: string; sources?: string | string[] }>(
           getApiUrl(API_CONFIG.ENDPOINTS.CHAT),
           {
             method: 'POST',
@@ -85,9 +85,19 @@ export class ChatAPI {
         );
       });
 
+      // Handle sources as either string or array
+      let formattedSources = '';
+      if (data.sources) {
+        if (Array.isArray(data.sources)) {
+          formattedSources = data.sources.join('\n');
+        } else {
+          formattedSources = data.sources.replace(/",\s*"/g, '"\n"').replace(/^"|"$/g, '');
+        }
+      }
+
       return {
         answer: data.answer || 'No response received',
-        sources: data.sources || '',
+        sources: formattedSources,
         success: true,
       };
     } catch (error) {
@@ -115,7 +125,6 @@ export class ChatAPI {
       };
     }
   }
-
 }
 
 // Create a default instance

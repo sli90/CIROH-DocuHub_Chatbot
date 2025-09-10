@@ -16,11 +16,13 @@ export function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
     showExamples,
     expandedCategories,
     messagesEndRef,
+    lastBotMessageRef,
     setInputValue,
     handleSendMessage,
     handleClearChat,
     handleToggleCategory,
     handleShowExamples,
+    handleShowChat,
   } = useChat();
 
   const {
@@ -54,6 +56,7 @@ export function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
       <ChatHeader
         showExamples={showExamples}
         onShowExamples={handleShowExamples}
+        onShowChat={handleShowChat}
         onClearChat={handleClearChat}
         onClose={onClose}
         isDarkMode={isDarkMode}
@@ -93,6 +96,7 @@ export function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
               messages={messages}
               isBotResponding={isBotResponding}
               isDarkMode={isDarkMode}
+              lastBotMessageRef={lastBotMessageRef}
             />
             <div ref={messagesEndRef} />
           </div>
