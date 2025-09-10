@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Message } from './types';
+import { chatAPI } from '../../services/api';
 
 export function useChat() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -9,6 +10,7 @@ export function useChat() {
   const [expandedCategories, setExpandedCategories] = useState<Set<number>>(
     new Set()
   );
+  const [lastError, setLastError] = useState<string | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -37,23 +39,55 @@ export function useChat() {
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsBotResponding(true);
+    setLastError(null);
 
-    // Simulate bot response
-    setTimeout(() => {
+    try {
+      // Send question to API
+      const response = await chatAPI.sendQuestion({ question: text.trim() });
+      
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: `I understand you're asking about "${text}". Let me help you with that. This is a simulated response from CIROH AI.`,
+        text: response.answer,
         isBot: true,
         timestamp: new Date(),
       };
       setMessages(prev => [...prev, botMessage]);
+      
+      // Clear any previous errors on successful response
+      if (response.success) {
+        setLastError(null);
+      } else {
+        setLastError(response.error || 'Unknown error occurred');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      const errorMessage = 'Sorry, I encountered an error while processing your question. Please try again later.';
+      const errorMsg: Message = {
+        id: (Date.now() + 1).toString(),
+        text: errorMessage,
+        isBot: true,
+        timestamp: new Date(),
+      };
+      setMessages(prev => [...prev, errorMsg]);
+      setLastError(error instanceof Error ? error.message : 'Unknown error');
+    } finally {
       setIsBotResponding(false);
-    }, 1500);
+    }
   };
 
   const handleClearChat = () => {
     setMessages([]);
     setShowExamples(true);
+    setLastError(null);
+  };
+
+  const handleRetryLastMessage = () => {
+    if (messages.length > 0) {
+      const lastUserMessage = [...messages].reverse().find(msg => !msg.isBot);
+      if (lastUserMessage) {
+        handleSendMessage(lastUserMessage.text);
+      }
+    }
   };
 
   const handleToggleCategory = (index: number) => {
@@ -76,11 +110,13 @@ export function useChat() {
     isBotResponding,
     showExamples,
     expandedCategories,
+    lastError,
     messagesEndRef,
     setInputValue,
     handleSendMessage,
     handleClearChat,
     handleToggleCategory,
     handleShowExamples,
+    handleRetryLastMessage,
   };
 }
