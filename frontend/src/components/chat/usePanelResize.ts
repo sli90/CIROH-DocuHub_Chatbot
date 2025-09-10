@@ -17,6 +17,12 @@ export function usePanelResize() {
       const startX = e.clientX - position.x;
       const startY = e.clientY - position.y;
 
+      // Disable pointer events on iframe during drag
+      const iframe = document.querySelector('iframe');
+      if (iframe) {
+        iframe.style.pointerEvents = 'none';
+      }
+
       const handleMouseMove = (e: MouseEvent) => {
         setPosition({
           x: e.clientX - startX,
@@ -26,6 +32,10 @@ export function usePanelResize() {
 
       const handleMouseUp = () => {
         setIsDragging(false);
+        // Re-enable pointer events on iframe
+        if (iframe) {
+          iframe.style.pointerEvents = 'auto';
+        }
         document.removeEventListener('mousemove', handleMouseMove);
         document.removeEventListener('mouseup', handleMouseUp);
       };
@@ -43,6 +53,12 @@ export function usePanelResize() {
     const startWidth = dimensions.width;
     const startHeight = dimensions.height;
 
+    // Disable pointer events on iframe during resize
+    const iframe = document.querySelector('iframe');
+    if (iframe) {
+      iframe.style.pointerEvents = 'none';
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
       const newWidth = Math.max(350, startWidth - (e.clientX - startX));
       const newHeight = Math.max(400, startHeight - (e.clientY - startY));
@@ -51,6 +67,10 @@ export function usePanelResize() {
 
     const handleMouseUp = () => {
       setIsResizing(false);
+      // Re-enable pointer events on iframe
+      if (iframe) {
+        iframe.style.pointerEvents = 'auto';
+      }
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
     };

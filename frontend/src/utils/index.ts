@@ -45,11 +45,20 @@ export function formatUrls(text: string): string {
 }
 
 export function formatUrlsAsHtml(text: string): string {
-  // URL regex pattern
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  // Process both Markdown links and plain URLs in a single pass
+  // This regex matches either [text](url) or plain URLs
+  const combinedRegex = /(\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s<>"']+))/g;
   
-  return text.replace(urlRegex, (url) => {
-    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">${url}</a>`;
+  return text.replace(combinedRegex, (match, fullMatch, linkText, markdownUrl, plainUrl) => {
+    // If it's a Markdown link [text](url)
+    if (linkText && markdownUrl) {
+      return `<a href="${markdownUrl}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">${linkText}</a>`;
+    }
+    // If it's a plain URL
+    else if (plainUrl) {
+      return `<a href="${plainUrl}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">${plainUrl}</a>`;
+    }
+    return match;
   });
 }
 

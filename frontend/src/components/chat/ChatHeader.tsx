@@ -50,10 +50,16 @@ export function ChatHeader({
           </p>
         </div>
       </div>
-      <div className="flex items-center space-x-2">
+      <div
+        className="flex items-center space-x-2"
+        onClick={e => e.stopPropagation()}
+      >
         {!showExamples && (
           <button
-            onClick={onShowExamples}
+            onClick={e => {
+              e.stopPropagation();
+              onShowExamples();
+            }}
             className={`p-1 rounded transition-colors ${
               isDarkMode
                 ? 'hover:bg-gray-700 text-gray-300'
@@ -66,7 +72,10 @@ export function ChatHeader({
         )}
         {showExamples && (
           <button
-            onClick={onShowChat}
+            onClick={e => {
+              e.stopPropagation();
+              onShowChat();
+            }}
             className={`p-1 rounded transition-colors ${
               isDarkMode
                 ? 'hover:bg-gray-700 text-gray-300'
@@ -78,7 +87,10 @@ export function ChatHeader({
           </button>
         )}
         <button
-          onClick={onToggleDarkMode}
+          onClick={e => {
+            e.stopPropagation();
+            onToggleDarkMode();
+          }}
           className={`p-1 rounded transition-colors ${
             isDarkMode
               ? 'hover:bg-gray-700 text-gray-300'
@@ -93,7 +105,10 @@ export function ChatHeader({
           )}
         </button>
         <button
-          onClick={onClearChat}
+          onClick={e => {
+            e.stopPropagation();
+            onClearChat();
+          }}
           className={`p-1 rounded transition-colors ${
             isDarkMode
               ? 'hover:bg-gray-700 text-gray-300'
@@ -104,7 +119,10 @@ export function ChatHeader({
           <RotateCcw className="h-4 w-4" />
         </button>
         <button
-          onClick={onClose}
+          onClick={e => {
+            e.stopPropagation();
+            onClose();
+          }}
           className={`p-1 rounded transition-colors ${
             isDarkMode
               ? 'hover:bg-gray-700 text-gray-300'

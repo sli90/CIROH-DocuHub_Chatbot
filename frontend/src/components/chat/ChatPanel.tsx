@@ -41,7 +41,7 @@ export function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
   return (
     <div
       ref={panelRef}
-      className={`fixed z-40 rounded-lg shadow-2xl border flex flex-col overflow-hidden ${
+      className={`fixed z-50 rounded-lg shadow-2xl border flex flex-col overflow-hidden ${
         isDarkMode ? 'border-gray-600' : 'bg-white border-gray-200'
       } ${isDragging ? 'cursor-grabbing' : 'cursor-default'} ${
         isResizing ? 'select-none' : ''

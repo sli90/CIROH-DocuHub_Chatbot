@@ -22,14 +22,10 @@ export function MessageList({
               className={`max-w-[80%] p-3 rounded-lg message-container ${
                 message.isBot
                   ? isDarkMode
-                    ? 'text-gray-100'
+                    ? 'bg-gray-700 text-gray-100'
                     : 'bg-gray-100 text-gray-900'
                   : 'bg-primary-600 text-white'
               }`}
-              style={{
-                backgroundColor:
-                  message.isBot && isDarkMode ? '#242527' : undefined,
-              }}
             >
               <div className="flex items-start space-x-2">
                 {message.isBot && (
@@ -46,23 +42,29 @@ export function MessageList({
                       __html: formatUrlsAsHtml(message.text),
                     }}
                   />
-                  {message.isBot && message.sources && (
-                    <div
-                      className={`text-xs mt-2 p-2 rounded border-l-2 w-full message-container ${
-                        isDarkMode
-                          ? 'bg-gray-700 border-gray-500 text-gray-300'
-                          : 'bg-gray-50 border-gray-300 text-gray-600'
-                      }`}
-                    >
-                      <div className="font-medium mb-1">Sources:</div>
+                  {message.isBot &&
+                    message.sources &&
+                    !message.text
+                      .toLowerCase()
+                      .includes(
+                        'i cannot answer the question with the information given'
+                      ) && (
                       <div
-                        className="chat-sources"
-                        dangerouslySetInnerHTML={{
-                          __html: formatSourcesAsHtml(message.sources),
-                        }}
-                      />
-                    </div>
-                  )}
+                        className={`text-xs mt-2 p-2 rounded border-l-2 w-full message-container ${
+                          isDarkMode
+                            ? 'bg-gray-700 border-gray-500 text-gray-300'
+                            : 'bg-gray-50 border-gray-300 text-gray-600'
+                        }`}
+                      >
+                        <div className="font-medium mb-1">Sources:</div>
+                        <div
+                          className="chat-sources"
+                          dangerouslySetInnerHTML={{
+                            __html: formatSourcesAsHtml(message.sources),
+                          }}
+                        />
+                      </div>
+                    )}
                   <p
                     className={`text-xs mt-1 ${
                       message.isBot
