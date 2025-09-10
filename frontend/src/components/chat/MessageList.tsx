@@ -1,6 +1,6 @@
 import { Bot, User } from 'lucide-react';
 import { MessageListProps } from './types';
-import { formatUrls, formatSourcesAsHtml } from '../../utils';
+import { formatUrlsAsHtml, formatSourcesAsHtml } from '../../utils';
 
 export function MessageList({
   messages,
@@ -40,9 +40,12 @@ export function MessageList({
                   />
                 )}
                 <div className="w-full">
-                  <div className="text-sm whitespace-pre-line chat-message">
-                    {formatUrls(message.text)}
-                  </div>
+                  <div
+                    className="text-sm whitespace-pre-line chat-message"
+                    dangerouslySetInnerHTML={{
+                      __html: formatUrlsAsHtml(message.text),
+                    }}
+                  />
                   {message.isBot && message.sources && (
                     <div
                       className={`text-xs mt-2 p-2 rounded border-l-2 w-full message-container ${

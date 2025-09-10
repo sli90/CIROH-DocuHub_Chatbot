@@ -44,6 +44,15 @@ export function formatUrls(text: string): string {
   });
 }
 
+export function formatUrlsAsHtml(text: string): string {
+  // URL regex pattern
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  
+  return text.replace(urlRegex, (url) => {
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">${url}</a>`;
+  });
+}
+
 export function formatSources(sources: string): string {
   // Split by newlines and format each source
   return sources

@@ -154,4 +154,27 @@
     hyphens: none;
     white-space: pre-wrap;
   }
+
+  /* Chat message link styles */
+  .chat-message a {
+    color: #2563eb;
+    text-decoration: underline;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    transition: color 0.2s ease;
+  }
+
+  .chat-message a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+  }
+
+  /* Dark mode chat message link styles */
+  .dark .chat-message a {
+    color: #60a5fa;
+  }
+
+  .dark .chat-message a:hover {
+    color: #93c5fd;
+  }
 }
