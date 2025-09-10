@@ -40,8 +40,8 @@ try:
 except Exception as e:
     print(f"❌ Error initializing OpenAI client: {e}")
     client = None
-    
-# --- HELPER FUNCTIONS (copied from your notebook) ---
+
+# --- HELPER FUNCTIONS ---
 
 def execute_query(db_conn, query, params=None, fetch=False):
     """Safely executes a SQL query."""
@@ -76,7 +76,11 @@ def get_breadcrumb(db_conn, url_id):
 def get_embedding(text, dimensions, model=EMBEDDING_MODEL):
     """Gets the embedding for a text using OpenAI."""
     try:
-        response = client.embeddings.create(input=text, model=model, dimensions=dimensions)
+        response = openai.embeddings.create(
+            input=text,
+            model=model,
+            dimensions=dimensions
+        )
         return response.data[0].embedding
     except Exception as e:
         print(f"❌ Error generating embedding: {e}")
@@ -122,12 +126,13 @@ def get_rag_answer(prompt):
     """Calls the LLM to generate the final answer."""
     try:
         response = client.chat.completions.create(
-            model="gpt-5", 
+            model="gpt-4o",
             messages=[
                 {"role": "user", "content": prompt}
             ],
-            reasoning_effort="minimal",
-            verbosity="low"
+            temperature=0.0
+            #reasoning_effort="minimal",
+            #verbosity="low"
         )
         return response.choices[0].message.content
     except Exception as e:
@@ -146,11 +151,11 @@ def generate_answer_from_question(question: str) -> dict:
             "answer": "The service is currently unavailable due to a configuration issue.",
             "sources": []
         }
-        
+
     # Pipeline parameters
     max_relevant_urls = 5
     max_relevant_chunks = 10
-    
+
     # 1. Get the embedding for the question
     question_embedding = get_embedding(question, dimensions=1792)
     if question_embedding is None:
@@ -166,7 +171,7 @@ def generate_answer_from_question(question: str) -> dict:
 
     # 3. Level 2 Search: Find relevant chunks within those pages
     retrieved_chunks = query_chunks(conn, question_embedding, context_ids, max_relevant_chunks)
-    
+
     final_context_list = []
     source_ids = []
 
@@ -177,27 +182,36 @@ def generate_answer_from_question(question: str) -> dict:
     else:
         # Logic to build an enriched context from the chunks
         chunks_by_page = {}
-        for idurl, _, _ in retrieved_chunks:
+        for idurl, order, content in retrieved_chunks:
             if idurl not in chunks_by_page:
                 chunks_by_page[idurl] = []
-        
+            chunks_by_page[idurl].append(order)
+
         # Iterate to group relevant chunks by page and get neighboring content
         for page_id in context_ids:
             if page_id in chunks_by_page:
                 source_ids.append(page_id)
                 page_summary = page_summary_map.get(page_id, "No summary.")
-                
-                # Get relevant chunks and their neighbors for this page
-                relevant_chunk_rows = execute_query(conn, """
-                    SELECT Content FROM TBLContent
-                    WHERE idurl = %s AND "order" IN (
-                        SELECT "order" FROM TBLContent WHERE idurl = %s ORDER BY embedding <=> %s::vector LIMIT %s
-                    )
-                    ORDER BY "order" ASC;
-                """, params=(page_id, page_id, question_embedding, 5), fetch=True) # 5 chunks per page
 
-                if relevant_chunk_rows:
-                    detailed_context = "\n\n".join([row[0] for row in relevant_chunk_rows])
+                # Get the order numbers of relevant chunks for this page
+                relevant_orders = chunks_by_page[page_id]
+
+                # Expand to include neighbors and remove duplicates
+                orders_with_neighbors = set()
+                for order_num in relevant_orders:
+                    orders_with_neighbors.add(order_num - 1)
+                    orders_with_neighbors.add(order_num)
+                    orders_with_neighbors.add(order_num + 1)
+
+                # Fetch all unique chunks (originals + neighbors) in correct document order
+                expanded_chunk_rows = execute_query(conn, """
+                    SELECT Content FROM TBLContent
+                    WHERE idurl = %s AND "order" = ANY(%s)
+                    ORDER BY "order" ASC;
+                """, params=(page_id, list(orders_with_neighbors)), fetch=True)
+
+                if expanded_chunk_rows:
+                    detailed_context = "\n\n".join([row[0] for row in expanded_chunk_rows])
                     page_context = f"Page Summary:\n{page_summary}\n\nDetailed Information from this page:\n{detailed_context}"
                     final_context_list.append(page_context)
 
@@ -209,7 +223,16 @@ def generate_answer_from_question(question: str) -> dict:
     final_answer = get_rag_answer(rag_prompt)
 
     # 5. Get the breadcrumbs for the sources
-    source_breadcrumbs = [breadcrumb for url_id in set(source_ids) if (breadcrumb := get_breadcrumb(conn, url_id))]
+    # source_breadcrumbs = [breadcrumb for url_id in set(source_ids) if (breadcrumb := get_breadcrumb(conn, url_id))]
+
+    source_breadcrumbs = []
+    seen = set()
+
+    for url_id in source_ids:
+        if url_id not in seen:
+            seen.add(url_id)
+            if breadcrumb := get_breadcrumb(conn, url_id):
+                source_breadcrumbs.append(breadcrumb)
     
     return {
         "answer": final_answer,
