@@ -3,6 +3,7 @@ export interface Message {
   text: string;
   isBot: boolean;
   timestamp: Date;
+  sources?: string;
 }
 
 export interface ChatPanelProps {

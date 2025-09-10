@@ -1,11 +1,12 @@
 import { API_CONFIG, getApiUrl } from '../config/api';
 
 export interface ChatRequest {
-  question: string;
+  text: string;
 }
 
 export interface ChatResponse {
   answer: string;
+  sources: string;
   success: boolean;
   error?: string;
 }
@@ -72,7 +73,7 @@ export class ChatAPI {
   async sendQuestion(request: ChatRequest): Promise<ChatResponse> {
     try {
       const data = await this.retryRequest(async () => {
-        return await this.makeRequest<{ answer?: string; message?: string }>(
+        return await this.makeRequest<{ answer?: string; sources?: string }>(
           getApiUrl(API_CONFIG.ENDPOINTS.CHAT),
           {
             method: 'POST',
@@ -85,7 +86,8 @@ export class ChatAPI {
       });
 
       return {
-        answer: data.answer || data.message || 'No response received',
+        answer: data.answer || 'No response received',
+        sources: data.sources || '',
         success: true,
       };
     } catch (error) {
@@ -107,11 +109,13 @@ export class ChatAPI {
 
       return {
         answer: errorMessage,
+        sources: '',
         success: false,
         error: error instanceof Error ? error.message : 'Unknown error',
       };
     }
   }
+
 }
 
 // Create a default instance

@@ -43,13 +43,14 @@ export function useChat() {
 
     try {
       // Send question to API
-      const response = await chatAPI.sendQuestion({ question: text.trim() });
+      const response = await chatAPI.sendQuestion({ text: text.trim() });
       
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: response.answer,
         isBot: true,
         timestamp: new Date(),
+        sources: response.sources,
       };
       setMessages(prev => [...prev, botMessage]);
       

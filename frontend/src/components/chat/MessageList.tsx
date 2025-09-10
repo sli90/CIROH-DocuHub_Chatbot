@@ -35,7 +35,21 @@ export function MessageList({
                 />
               )}
               <div>
-                <p className="text-sm">{message.text}</p>
+                <div className="text-sm whitespace-pre-line">
+                  {message.text}
+                </div>
+                {message.isBot && message.sources && (
+                  <div
+                    className={`text-xs mt-2 p-2 rounded border-l-2 ${
+                      isDarkMode
+                        ? 'bg-gray-700 border-gray-500 text-gray-300'
+                        : 'bg-gray-50 border-gray-300 text-gray-600'
+                    }`}
+                  >
+                    <div className="font-medium mb-1">Sources:</div>
+                    <div className="whitespace-pre-line">{message.sources}</div>
+                  </div>
+                )}
                 <p
                   className={`text-xs mt-1 ${
                     message.isBot
