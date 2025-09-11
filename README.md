@@ -38,6 +38,10 @@ cd backend/rag
 # Install the required Python packages
 pip install -r requirements.txt
 
+### Add `.env` File
+Create a `.env` file in both the `rag/` and `database/` directories.  
+Include the required environment variables as specified in the `database/` folder documentation.
+
 # Start the API server
 uvicorn main:app --reload
 ```
