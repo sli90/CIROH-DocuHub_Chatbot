@@ -71,6 +71,19 @@ def get_breadcrumb(db_conn, url_id):
     result = execute_query(db_conn, query, params=(url_id,), fetch=True)
     return result[0][0] if result and result[0] else None
 
+def get_url_trail(db_conn, url_id):
+    """Generates the URL trail for a given idurl."""
+    query = """
+    WITH RECURSIVE breadcrumb_path AS (
+        SELECT idurl, name, url, idurlparent, 1 AS depth FROM tblurls WHERE idurl = %s
+        UNION ALL
+        SELECT u.idurl, u.name, u.url, u.idurlparent, bp.depth + 1 FROM tblurls u JOIN breadcrumb_path bp ON u.idurl = bp.idurlparent
+    )
+    SELECT string_agg(url, ' > ' ORDER BY depth DESC) AS url_trail FROM breadcrumb_path;
+    """
+    result = execute_query(db_conn, query, params=(url_id,), fetch=True)
+    return result[0][0] if result and result[0] else None
+
 
 def get_embedding(text, dimensions, model=EMBEDDING_MODEL):
     """Gets the embedding for a text using OpenAI."""
@@ -160,6 +173,7 @@ def generate_answer_from_question(question: str) -> dict:
         return {
             "answer": "The service is currently unavailable due to a configuration issue.",
             "sources": [],
+            "links": []
         }
 
 
@@ -171,7 +185,7 @@ def generate_answer_from_question(question: str) -> dict:
     # 1. Get the embedding for the question
     question_embedding = get_embedding(question, dimensions=1792)
     if question_embedding is None:
-        return {"answer": "Could not process the question.", "sources": []}
+        return {"answer": "Could not process the question.", "sources": [], "links": []}
 
     # 2. Level 1 Search: Find relevant pages
     retrieved_pages = query_embedding(conn, question_embedding, max_relevant_urls)
@@ -179,6 +193,7 @@ def generate_answer_from_question(question: str) -> dict:
         return {
             "answer": "No relevant information was found to answer your question.",
             "sources": [],
+            "links": []
         }
 
     page_summary_map = {row[0]: row[1] for row in retrieved_pages}
@@ -234,16 +249,18 @@ def generate_answer_from_question(question: str) -> dict:
         return {
             "answer": "Could not build a context to answer the question.",
             "sources": [],
+            "links": []
         }
 
     # 4. Build the prompt and get the final answer
     rag_prompt = build_rag_prompt(question, final_context_list)
     final_answer = get_rag_answer(rag_prompt)
 
-    # 5. Get the breadcrumbs for the sources
+    # 5. Get the breadcrumbs (sources) and URL trails (links) for the sources
     # source_breadcrumbs = [breadcrumb for url_id in set(source_ids) if (breadcrumb := get_breadcrumb(conn, url_id))]
 
     source_breadcrumbs = []
+    source_links = []
     seen = set()
 
     for url_id in source_ids:
@@ -251,8 +268,11 @@ def generate_answer_from_question(question: str) -> dict:
             seen.add(url_id)
             if breadcrumb := get_breadcrumb(conn, url_id):
                 source_breadcrumbs.append(breadcrumb)
+                url_trail = get_url_trail(conn, url_id)
+                source_links.append(url_trail or "")
     
     return {
         "answer": final_answer,
-        "sources": source_breadcrumbs
+        "sources": source_breadcrumbs,
+        "links": source_links
     }

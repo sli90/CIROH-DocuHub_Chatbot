@@ -1,45 +1,88 @@
-# CIROH AI Bot - RAG Pipeline Test
+# CIROH AI Bot - RAG Pipeline
 
-This repository contains a Jupyter Notebook (`RAG_Pipeline_Test.ipynb`) designed to test the Retrieval-Augmented Generation (RAG) pipeline built upon the PostgreSQL database populated by the `PopulateDB.ipynb` script.
+This document provides instructions for setting up and running the CIROH AI Bot Retrieval-Augmented Generation (RAG) pipeline, a full-stack application designed to answer questions about CIROH documentation.
 
-The primary purpose of this notebook is to:
-1.  Take a list of sample questions.
-2.  Generate a vector embedding for each question.
-3.  Query the database to find the most relevant document summaries based on semantic similarity.
-4.  Construct a prompt that combines the user's question with the retrieved context.
-5.  Send the prompt to an LLM (Large Language Model) to generate a final, context-aware answer.
-6.  Display the retrieved sources (as breadcrumbs) for transparency and verification.
+The RAG pipeline consists of three main components:
 
----
+  * **React Frontend**: A user-friendly chat interface.
+  * **Python FastAPI Backend**: An API that executes the RAG pipeline.
+  * **Azure PostgreSQL Database**: A cloud-hosted database containing the vectorized documentation.
 
-## Prerequisites
+-----
 
-Before running this notebook, you **must** have already:
-1.  Completed all the steps in the database `README.md` file.
-2.  Successfully run the `PopulateDB.ipynb` notebook to populate your PostgreSQL database with summaries and embeddings.
-3.  Ensured your `.env` file is correctly configured with your database and OpenAI API credentials.
+## ⚙️ Configuration and Setup
 
----
+To run the application, you first need to configure the backend's environment variables.
 
-## ▶️ Running the RAG Test
+1.  Navigate to the `backend/rag` directory within the project.
+2.  Create a new file in this directory named `.env`.
+3.  Copy and paste the following content into your new `.env` file. This configuration connects the application to the shared Azure database with a **read-only user**.
 
-1.  Ensure your Anaconda (or other Python) environment is activated.
-2.  Start the Jupyter Notebook server:
-    ```bash
-    jupyter notebook
-    ```
-3.  Open the `RAG_Pipeline_Test.ipynb` file in your browser.
-4.  Run the cells sequentially. The notebook will execute the RAG pipeline for each of the predefined test questions and print the results, including the retrieved context, the final answer, and the sources.
+<!-- end list -->
 
----
+```env
+# backend/rag/.env
 
-## ⚙️ How the RAG Pipeline Works
+# Azure PostgreSQL Database Credentials (Read-Only Access)
+POSTGRES_HOST="c-ciroh-cluster.6cijvkzzmrtw2p.postgres.cosmos.azure.com"
+POSTGRES_DB="ciroh"
+POSTGRES_USER="CIROH_rag_user"
+POSTGRES_PASSWORD="CIROH_0028837733"
+
+# OpenAI API Credentials
+# Replace "sk-..." with your actual OpenAI API key
+OPENAI_API_KEY="sk-..."
+EMBEDDING_MODEL="text-embedding-3-large"
+```
+
+-----
+
+## ▶️ Running the Application
+
+To run the application, you need to start the backend API and the frontend UI in **two separate terminals**.
+
+### 1\. Start the Backend (FastAPI API)
+
+In your first terminal, run the following commands:
+
+```bash
+# Navigate to the RAG application directory
+cd backend/rag
+
+# Install the required Python packages
+pip install -r requirements.txt
+
+# Start the API server from this directory
+uvicorn main:app --reload
+```
+
+The API will now be running at `http://127.0.0.1:8000`.
+
+### 2\. Start the Frontend (React App)
+
+In your second terminal:
+
+```bash
+# Navigate to the frontend directory from the project root
+cd frontend
+
+# Install the required Node.js packages
+npm install
+
+# Start the development server
+npm run dev
+```
+
+The user interface will now be accessible in your browser at `http://localhost:3000`.
+
+-----
+
+## 🧠 How the RAG Pipeline Works
 
 The pipeline follows these key steps for each question:
 
-1.  **Generate Question Embedding**: The user's question is converted into a 1536-dimension vector using the OpenAI embedding model.
-2.  **Retrieve Context**: This vector is used to query the `tblurls` table in the PostgreSQL database. The query uses the cosine similarity operator (`<=>`) on the `embedding` column to find the top 3 most semantically similar document summaries.
+1.  **Generate Question Embedding**: The user's question is converted into a vector using an OpenAI embedding model.
+2.  **Retrieve Context**: This vector is used to query the Azure PostgreSQL database. The query uses vector similarity search to find the most semantically similar document chunks.
 3.  **Build Prompt**: A carefully crafted prompt is constructed, instructing the LLM to answer the original question based *only* on the context retrieved from the database. This prevents the model from using external knowledge and reduces "hallucinations."
-4.  **Generate Final Answer**: The complete prompt is sent to the LLM (e.g., `gpt-5`), which synthesizes the information from the context to generate a direct answer to the user's question.
+4.  **Generate Final Answer**: The complete prompt is sent to the LLM, which synthesizes the information from the context to generate a direct answer.
 5.  **Cite Sources**: To ensure transparency, the system retrieves the breadcrumb trails for the source documents and displays them alongside the final answer.
-
