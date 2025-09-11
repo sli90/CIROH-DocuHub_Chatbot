@@ -1,102 +1,45 @@
-import { clsx, type ClassValue } from 'clsx';
+// Utility functions for formatting sources and links
 
-export function cn(...inputs: ClassValue[]) {
-  return clsx(inputs);
-}
-
-export function formatDate(date: string | Date): string {
-  return new Intl.DateTimeFormat('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  }).format(new Date(date));
-}
-
-export function formatCurrency(amount: number, currency = 'USD'): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency,
-  }).format(amount);
-}
-
-export function debounce<T extends (...args: unknown[]) => unknown>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: ReturnType<typeof setTimeout>;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-}
-
-export function generateId(): string {
-  return Math.random().toString(36).substr(2, 9);
-}
-
-export function formatUrls(text: string): string {
-  // URL regex pattern
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
+export function formatSourcesAsHtml(sources: string | string[], links?: string | string[]): string {
+  if (!sources) return '';
   
-  return text.replace(urlRegex, (url) => {
-    // Don't add line breaks to URLs - let CSS handle the wrapping
-    return url;
-  });
+  // Convert to array if it's a string
+  const sourceLines = Array.isArray(sources) ? sources : sources.split('\n').filter(line => line.trim());
+  const linkLines = links ? (Array.isArray(links) ? links : links.split('\n').filter(line => line.trim())) : [];
+  
+  return sourceLines.map((source, index) => {
+    const link = linkLines[index];
+    if (link) {
+      // Split both source and link by > to create individual clickable parts
+      const sourceParts = source.split(' > ').map(part => part.trim());
+      const linkParts = link.split(' > ').map(part => part.trim());
+      
+      // Create individual links for each part
+      const clickableParts = sourceParts.map((part, partIndex) => {
+        const linkPart = linkParts[partIndex];
+        if (linkPart) {
+          // Use the link part directly as the URL path (no need to join with /)
+          const fullUrl = `https://docs.ciroh.org${linkPart}`;
+          return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-300 underline">${part}</a>`;
+        }
+        return part;
+      });
+      
+      return clickableParts.join(' > ');
+    }
+    return source;
+  }).join('\n');
 }
 
 export function formatUrlsAsHtml(text: string): string {
-  // Process both Markdown links and plain URLs in a single pass
-  // This regex matches either [text](url) or plain URLs
-  const combinedRegex = /(\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s<>"']+))/g;
+  if (!text) return '';
   
-  return text.replace(combinedRegex, (match, fullMatch, linkText, markdownUrl, plainUrl) => {
-    // If it's a Markdown link [text](url)
-    if (linkText && markdownUrl) {
-      return `<a href="${markdownUrl}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">${linkText}</a>`;
-    }
-    // If it's a plain URL
-    else if (plainUrl) {
-      return `<a href="${plainUrl}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">${plainUrl}</a>`;
-    }
-    return match;
+  // Convert markdown-style links [text](url) to HTML links
+  const markdownLinkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  
+  return text.replace(markdownLinkRegex, (_, linkText, url) => {
+    // Ensure URL has protocol
+    const fullUrl = url.startsWith('http') ? url : `https://${url}`;
+    return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">${linkText}</a>`;
   });
-}
-
-export function formatSources(sources: string): string {
-  // Split by newlines and format each source
-  return sources
-    .split('\n')
-    .map(source => {
-      source = source.trim();
-      if (!source) return '';
-      
-      // If it looks like a URL, format it
-      if (source.startsWith('http')) {
-        return formatUrls(source);
-      }
-      
-      return source;
-    })
-    .filter(source => source.length > 0)
-    .join('\n');
-}
-
-export function formatSourcesAsHtml(sources: string): string {
-  // Split by newlines and format each source as HTML
-  return sources
-    .split('\n')
-    .map(source => {
-      source = source.trim();
-      if (!source) return '';
-      
-      // If it looks like a URL, create a clickable link
-      if (source.startsWith('http')) {
-        // Don't truncate URLs - let CSS handle the wrapping
-        return `<a href="${source}" target="_blank" rel="noopener noreferrer" class="source-link">${source}</a>`;
-      }
-      
-      return source;
-    })
-    .filter(source => source.length > 0)
-    .join('<br>');
 }

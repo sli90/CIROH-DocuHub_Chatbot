@@ -60,7 +60,10 @@ export function MessageList({
                         <div
                           className="chat-sources"
                           dangerouslySetInnerHTML={{
-                            __html: formatSourcesAsHtml(message.sources),
+                            __html: formatSourcesAsHtml(
+                              message.sources,
+                              message.links
+                            ),
                           }}
                         />
                       </div>

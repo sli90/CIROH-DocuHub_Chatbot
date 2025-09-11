@@ -7,6 +7,7 @@ export interface ChatRequest {
 export interface ChatResponse {
   answer: string;
   sources: string | string[];
+  links?: string | string[];
   success: boolean;
   error?: string;
 }
@@ -73,7 +74,7 @@ export class ChatAPI {
   async sendQuestion(request: ChatRequest): Promise<ChatResponse> {
     try {
       const data = await this.retryRequest(async () => {
-        return await this.makeRequest<{ answer?: string; sources?: string | string[] }>(
+        return await this.makeRequest<{ answer?: string; sources?: string | string[]; links?: string | string[] }>(
           getApiUrl(API_CONFIG.ENDPOINTS.CHAT),
           {
             method: 'POST',
@@ -95,9 +96,20 @@ export class ChatAPI {
         }
       }
 
+      // Handle links as either string or array
+      let formattedLinks = '';
+      if (data.links) {
+        if (Array.isArray(data.links)) {
+          formattedLinks = data.links.join('\n');
+        } else {
+          formattedLinks = data.links.replace(/",\s*"/g, '"\n"').replace(/^"|"$/g, '');
+        }
+      }
+
       return {
         answer: data.answer || 'No response received',
         sources: formattedSources,
+        links: formattedLinks,
         success: true,
       };
     } catch (error) {

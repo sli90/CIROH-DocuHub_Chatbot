@@ -67,6 +67,7 @@ export function useChat() {
         isBot: true,
         timestamp: new Date(),
         sources: response.sources,
+        links: response.links,
       };
       setMessages(prev => [...prev, botMessage]);
       

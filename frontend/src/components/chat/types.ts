@@ -3,7 +3,8 @@ export interface Message {
   text: string;
   isBot: boolean;
   timestamp: Date;
-  sources?: string;
+  sources?: string | string[];
+  links?: string | string[];
 }
 
 export interface ChatPanelProps {
