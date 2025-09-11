@@ -149,11 +149,12 @@ def get_rag_answer(prompt):
     """Calls the LLM to generate the final answer."""
     try:
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-5",
             messages=[
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.0
+            reasoning_effort="minimal",
+            verbosity="low"
         )
         return response.choices[0].message.content
     except Exception as e:
