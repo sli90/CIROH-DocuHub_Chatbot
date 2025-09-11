@@ -34,12 +34,37 @@ export function formatSourcesAsHtml(sources: string | string[], links?: string |
 export function formatUrlsAsHtml(text: string): string {
   if (!text) return '';
   
-  // Convert markdown-style links [text](url) to HTML links
-  const markdownLinkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  // Skip if text already contains HTML tags (already processed)
+  if (text.includes('<') && text.includes('>')) {
+    return text;
+  }
   
-  return text.replace(markdownLinkRegex, (_, linkText, url) => {
-    // Ensure URL has protocol
-    const fullUrl = url.startsWith('http') ? url : `https://${url}`;
-    return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">${linkText}</a>`;
+  // Skip if text contains any HTML attributes (already processed)
+  if (text.includes('class=') || text.includes('href=') || text.includes('target=') || 
+      text.includes('rel=') || text.includes('mailto:')) {
+    return text;
+  }
+  
+  // Skip if text contains HTML fragments (already processed)
+  if (text.includes('" class=') || text.includes('">') || text.includes('</a>') ||
+      text.includes('target="_blank"') || text.includes('rel="noopener noreferrer"')) {
+    return text;
+  }
+  
+  let formattedText = text;
+  
+  // First, convert email addresses to clickable mailto links
+  const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g;
+  formattedText = formattedText.replace(emailRegex, (email) => {
+    return `<a href="mailto:${email}" class="text-blue-400 hover:text-blue-300 underline">${email}</a>`;
   });
+  
+  // Then, convert https:// URLs to clickable links
+  const httpsUrlRegex = /(https?:\/\/[^\s<>]+)/g;
+  formattedText = formattedText.replace(httpsUrlRegex, (url) => {
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">${url}</a>`;
+  });
+  
+  
+  return formattedText;
 }
