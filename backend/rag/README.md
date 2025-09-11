@@ -26,7 +26,7 @@ To run the application, you first need to configure the backend's environment va
 # Azure PostgreSQL Database Credentials (Read-Only Access)
 POSTGRES_HOST="c-ciroh-cluster.6cijvkzzmrtw2p.postgres.cosmos.azure.com"
 POSTGRES_DB="ciroh"
-POSTGRES_USER="CIROH_rag_user"
+POSTGRES_USER="raguser"
 POSTGRES_PASSWORD="CIROH_0028837733"
 
 # OpenAI API Credentials
