@@ -1,3 +1,5 @@
+// ChatHeader.tsx
+
 import {
   Bot,
   RotateCcw,
@@ -19,39 +21,46 @@ export function ChatHeader({
   onToggleDarkMode,
 }: ChatHeaderProps) {
   return (
+    // --- CHANGED: Removed explicit background color to allow frosted glass effect ---
     <div
       className={`px-4 py-3 border-b flex items-center justify-between drag-handle cursor-grab ${
-        isDarkMode ? 'border-gray-600' : 'bg-gray-50 border-gray-200'
+        isDarkMode ? 'border-white/10' : 'border-black/10'
       }`}
-      style={{
-        backgroundColor: isDarkMode ? '#242527' : undefined,
-      }}
     >
       <div className="flex items-center space-x-3">
         <div
           className={`h-8 w-8 rounded-full flex items-center justify-center ${
-            isDarkMode ? 'bg-gray-700' : 'bg-gray-300'
+            isDarkMode ? 'bg-gray-700' : 'bg-primary-500/20'
           }`}
         >
           <Bot
-            className={`h-4 w-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}
+            className={`h-5 w-5 ${
+              isDarkMode ? 'text-gray-300' : 'text-primary-600'
+            }`}
           />
         </div>
         <div>
           <h3
-            className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}
+            className={`font-semibold ${
+              isDarkMode ? 'text-white' : 'text-gray-900'
+            }`}
           >
             CIROH AI
           </h3>
-          <p
-            className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}
-          >
-            Online
-          </p>
+          <div className="flex items-center space-x-1.5">
+            <div className="h-2 w-2 bg-green-500 rounded-full" />
+            <p
+              className={`text-xs ${
+                isDarkMode ? 'text-gray-400' : 'text-gray-500'
+              }`}
+            >
+              Online
+            </p>
+          </div>
         </div>
       </div>
       <div
-        className="flex items-center space-x-2"
+        className="flex items-center space-x-1 group" // ADDED: group for hover effects
         onClick={e => e.stopPropagation()}
       >
         {!showExamples && (
@@ -60,14 +69,15 @@ export function ChatHeader({
               e.stopPropagation();
               onShowExamples();
             }}
-            className={`p-1 rounded transition-colors ${
+            className={`p-2 rounded-full transition-colors ${
               isDarkMode
-                ? 'hover:bg-gray-700 text-gray-300'
-                : 'hover:bg-gray-200 text-gray-600'
+                ? 'hover:bg-white/10 text-gray-300'
+                : 'hover:bg-black/10 text-gray-600'
             }`}
             title="Show example questions"
           >
-            <HelpCircle className="h-4 w-4" />
+            {/* --- ADDED: Hover scale animation --- */}
+            <HelpCircle className="h-5 w-5 transition-transform duration-200 hover:scale-110" />
           </button>
         )}
         {showExamples && (
@@ -76,14 +86,14 @@ export function ChatHeader({
               e.stopPropagation();
               onShowChat();
             }}
-            className={`p-1 rounded transition-colors ${
+            className={`p-2 rounded-full transition-colors ${
               isDarkMode
-                ? 'hover:bg-gray-700 text-gray-300'
-                : 'hover:bg-gray-200 text-gray-600'
+                ? 'hover:bg-white/10 text-gray-300'
+                : 'hover:bg-black/10 text-gray-600'
             }`}
             title="Back to chat"
           >
-            <MessageCircle className="h-4 w-4" />
+            <MessageCircle className="h-5 w-5 transition-transform duration-200 hover:scale-110" />
           </button>
         )}
         <button
@@ -91,17 +101,17 @@ export function ChatHeader({
             e.stopPropagation();
             onToggleDarkMode();
           }}
-          className={`p-1 rounded transition-colors ${
+          className={`p-2 rounded-full transition-colors ${
             isDarkMode
-              ? 'hover:bg-gray-700 text-gray-300'
-              : 'hover:bg-gray-200 text-gray-600'
+              ? 'hover:bg-white/10 text-gray-300'
+              : 'hover:bg-black/10 text-gray-600'
           }`}
           title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
         >
           {isDarkMode ? (
-            <Sun className="h-4 w-4" />
+            <Sun className="h-5 w-5 transition-transform duration-200 hover:scale-110" />
           ) : (
-            <Moon className="h-4 w-4" />
+            <Moon className="h-5 w-5 transition-transform duration-200 hover:scale-110" />
           )}
         </button>
         <button
@@ -109,28 +119,28 @@ export function ChatHeader({
             e.stopPropagation();
             onClearChat();
           }}
-          className={`p-1 rounded transition-colors ${
+          className={`p-2 rounded-full transition-colors ${
             isDarkMode
-              ? 'hover:bg-gray-700 text-gray-300'
-              : 'hover:bg-gray-200 text-gray-600'
+              ? 'hover:bg-white/10 text-gray-300'
+              : 'hover:bg-black/10 text-gray-600'
           }`}
           title="Clear chat"
         >
-          <RotateCcw className="h-4 w-4" />
+          <RotateCcw className="h-5 w-5 transition-transform duration-200 hover:scale-110" />
         </button>
         <button
           onClick={e => {
             e.stopPropagation();
             onClose();
           }}
-          className={`p-1 rounded transition-colors ${
+          className={`p-2 rounded-full transition-colors ${
             isDarkMode
-              ? 'hover:bg-gray-700 text-gray-300'
-              : 'hover:bg-gray-200 text-gray-600'
+              ? 'hover:bg-white/10 text-gray-300'
+              : 'hover:bg-black/10 text-gray-600'
           }`}
           title="Close chat"
         >
-          <X className="h-4 w-4" />
+          <X className="h-5 w-5 transition-transform duration-200 hover:scale-110" />
         </button>
       </div>
     </div>
