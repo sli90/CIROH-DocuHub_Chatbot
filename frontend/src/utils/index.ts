@@ -18,8 +18,10 @@ export function formatSourcesAsHtml(sources: string | string[], links?: string |
       const clickableParts = sourceParts.map((part, partIndex) => {
         const linkPart = linkParts[partIndex];
         if (linkPart) {
-          // Use the link part directly as the URL path (no need to join with /)
-          const fullUrl = `https://docs.ciroh.org${linkPart}`;
+          // Check if linkPart already contains a full URL (starts with http:// or https://)
+          const fullUrl = linkPart.startsWith('http://') || linkPart.startsWith('https://') 
+            ? linkPart 
+            : `https://docs.ciroh.org${linkPart}`;
           return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-300 underline">${part}</a>`;
         }
         return part;

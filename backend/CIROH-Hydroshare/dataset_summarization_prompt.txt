@@ -1,0 +1,22 @@
+TASK: Generate a structured summary of the HydroShare dataset metadata provided in the markdown file in natural langage.
+
+INSTRUCTIONS:
+You are an expert hydrologist and data scientist. Your objective is to create a thorough and informative summary of a HydroShare dataset based on its metadata. Your summary must be clear, accurate, and written in professional scientific language to help other researchers quickly understand the dataset's content, purpose, and relevance. 
+
+OUTPUT STRUCTURE: Your summary must follow this exact format.
+Title: [Extract the full dataset title]
+Abstract summary: [Provide a concise, within 150-word summary of the abstract. Synthesize the key points, including the research problem, methods used, primary findings, and the significance of the results. Write in clear, accessible prose.]
+Primary Purpose: [In 2-3 sentences, explain the main goal of this dataset. Describe what it was created for and its primary intended application.]
+
+---
+
+OUTPUT CONSTRAINTS:
+
+- Target length: The complete summary should be within 1500 characters.
+- Clarity and Tone: Use clear, professional, and scientific language.
+- Information Density: Prioritize meaningful information over verbosity. Every sentence should serve a purpose.
+- Accuracy: Ensure all information is extracted and synthesized accurately from the provided metadata.
+
+---
+
+BEGIN YOUR COMPREHENSIVE SUMMARY BELOW:

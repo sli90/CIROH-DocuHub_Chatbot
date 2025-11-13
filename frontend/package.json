@@ -43,5 +43,10 @@
     "typescript": "5.9.2",
     "vite": "5.4.20",
     "vitest": "3.2.4"
-  }
+  },
+  "description": "A modern React frontend for the CIROH (Consortium of Universities for the Advancement of Hydrologic Science) chat application. Built with Vite, TypeScript, and Tailwind CSS, this application provides an intelligent chat interface that integrates with a backend API to answer questions about hydrologic science and CIROH resources.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
