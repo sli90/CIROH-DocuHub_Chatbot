@@ -101,6 +101,13 @@ def get_embedding(text, dimensions, model=EMBEDDING_MODEL):
 
 def query_embedding(db_conn, question_embedding, max_relevant_urls=3):
     """Queries the database for the most relevant summaries."""
+    '''
+    query = """
+        SELECT idurl, name || ':\n\n' || (summary_data ->> 'summary_text') as summary
+        FROM tblurls WHERE summary_data IS NOT NULL
+        ORDER BY embedding <=> %s::vector LIMIT %s
+    """
+    '''
     query = """
         SELECT idurl, summary_data ->> 'summary_text' as summary
         FROM tblurls WHERE summary_data IS NOT NULL
@@ -179,7 +186,7 @@ def generate_answer_from_question(question: str) -> dict:
 
 
     # Pipeline parameters
-    max_relevant_urls = 5
+    max_relevant_urls = 7
     max_relevant_chunks = 10
 
 
