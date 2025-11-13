@@ -1,0 +1,86 @@
+[
+  {
+    "metadata": {
+      "idurl": 11,
+      "title": "Community-Streamflow-Evaluation-System (CSES)",
+      "source": "https://github.com/CIROH-UA/Community-Streamflow-Evaluation-System",
+      "section_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "parent_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "order": 1,
+      "current_header": "## Project Objective"
+    },
+    "content": "The **Community-Streamflow-Evaluation-System (CSES)** is a Python-based tool designed to evaluate hydrological model performance using a standardized NHDPlus data model. It enables users to assess modeled streamflow against over 5,000 in situ USGS monitoring sites through interactive visualization and analysis tools."
+  },
+  {
+    "metadata": {
+      "idurl": 11,
+      "title": "Community-Streamflow-Evaluation-System (CSES)",
+      "source": "https://github.com/CIROH-UA/Community-Streamflow-Evaluation-System",
+      "section_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "parent_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "order": 2,
+      "current_header": "## Core Functionalities"
+    },
+    "content": "- Evaluates modeled streamflow performance using NHDPlus data and colocated USGS/NWIS monitoring sites.  \n- Provides three primary analysis methods:  \n  - **State-based LULC (Land Use Land Cover) Evaluation** using StreamStats.  \n  - **HUC-level (Hydrologic Unit Code) Evaluation** for watershed-scale analysis.  \n  - **USGS Station-based (Reach) Evaluation** for site-specific comparisons.  \n- Allows fast access to observed and predicted data from the Alabama Water Institute-hosted AWS S3 datasets.  \n- Supports interactive maps and performance visualizations through the `holoviews` package.  \n- Designed for evaluating National Water Model (NWM) retrospective data (v2.1, with v3.0 coming soon)."
+  },
+  {
+    "metadata": {
+      "idurl": 11,
+      "title": "Community-Streamflow-Evaluation-System (CSES)",
+      "source": "https://github.com/CIROH-UA/Community-Streamflow-Evaluation-System",
+      "section_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "parent_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "order": 3,
+      "current_header": "## Technical Stack"
+    },
+    "content": "- **Language:** Python (Version 3.9.12)  \n- **Dependencies:** Listed in `requirements.txt`  \n- **Visualization Tools:** holoviews  \n- **Data Source:** AWS S3-hosted NWM v2.1 retrospective and USGS/NWIS observations"
+  },
+  {
+    "metadata": {
+      "idurl": 11,
+      "title": "Community-Streamflow-Evaluation-System (CSES)",
+      "source": "https://github.com/CIROH-UA/Community-Streamflow-Evaluation-System",
+      "section_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "parent_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "order": 4,
+      "current_header": "## Setup and Usage"
+    },
+    "content": "1. Create a Python virtual environment.  \n2. Install dependencies using the included `requirements.txt` file.  \n3. Refer to the `Getting Started.md` guide for setup instructions.  \n4. Choose one of the three main evaluation classes for analysis:  \n   - `Eval_State()` for state-level StreamStats-based analysis.  \n   - `HUC_Eval()` for hydrologic unit evaluation.  \n   - `Reach_Eval()` for individual USGS site evaluation.  \n5. Input parameters include start date, end date, and model version (NWM v2.1)."
+  },
+  {
+    "metadata": {
+      "idurl": 11,
+      "title": "Community-Streamflow-Evaluation-System (CSES)",
+      "source": "https://github.com/CIROH-UA/Community-Streamflow-Evaluation-System",
+      "section_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "parent_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "order": 5,
+      "current_header": "## Project Context & Domain"
+    },
+    "content": "- **Domain:** Hydrology / Streamflow Modeling / Data Evaluation  \n- **Affiliation:** Alabama Water Institute, University of Alabama  \n- **Purpose:** Provide a scalable, standardized framework to assess and improve hydrological model performance across diverse watersheds and land use types."
+  },
+  {
+    "metadata": {
+      "idurl": 11,
+      "title": "Community-Streamflow-Evaluation-System (CSES)",
+      "source": "https://github.com/CIROH-UA/Community-Streamflow-Evaluation-System",
+      "section_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "parent_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "order": 6,
+      "current_header": "## Input / Output"
+    },
+    "content": "**Input:**  \n- NWM modeled streamflow data (v2.1 retrospective)  \n- USGS/NWIS in situ streamflow observations  \n- User-defined parameters (start date, end date, HUCs, or USGS site IDs)  \n**Output:**  \n- Statistical performance metrics and comparative plots of modeled vs. observed streamflow.  \n- Interactive maps visualizing spatial distribution of model accuracy and performance."
+  },
+  {
+    "metadata": {
+      "idurl": 11,
+      "title": "Community-Streamflow-Evaluation-System (CSES)",
+      "source": "https://github.com/CIROH-UA/Community-Streamflow-Evaluation-System",
+      "section_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "parent_header": "# Community-Streamflow-Evaluation-System (CSES)",
+      "order": 7,
+      "current_header": "## License"
+    },
+    "content": "Licensed under the GitHub license specified in the repository."
+  }
+]

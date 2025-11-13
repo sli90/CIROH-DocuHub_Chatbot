@@ -1,0 +1,74 @@
+[
+  {
+    "metadata": {
+      "idurl": 1,
+      "title": "ciroh-portal",
+      "source": "https://github.com/CIROH-UA/ciroh-portal",
+      "section_header": "# ciroh-portal",
+      "parent_header": "# ciroh-portal",
+      "order": 1,
+      "current_header": "## Project Objective"
+    },
+    "content": "The **CIROH Portal** is a static website built using **Docusaurus**, designed to serve as a documentation or informational hub. Its main goal is to provide a modern, easily maintainable platform for hosting CIROH-related content and resources. It simplifies content creation, organization, and deployment for developers and contributors maintaining the CIROH ecosystem."
+  },
+  {
+    "metadata": {
+      "idurl": 1,
+      "title": "ciroh-portal",
+      "source": "https://github.com/CIROH-UA/ciroh-portal",
+      "section_header": "# ciroh-portal",
+      "parent_header": "# ciroh-portal",
+      "order": 2,
+      "current_header": "## Core Functionalities"
+    },
+    "content": "- Uses **Docusaurus** for generating a modern, responsive static website.  \n- Provides **live local development** with hot-reloading for rapid content updates.  \n- Supports **automated build and deployment** to GitHub Pages or other static hosting services.  \n- Allows **SSH and non-SSH deployment options** for flexibility in publishing."
+  },
+  {
+    "metadata": {
+      "idurl": 1,
+      "title": "ciroh-portal",
+      "source": "https://github.com/CIROH-UA/ciroh-portal",
+      "section_header": "# ciroh-portal",
+      "parent_header": "# ciroh-portal",
+      "order": 3,
+      "current_header": "## Technical Stack"
+    },
+    "content": "- **Language:** JavaScript  \n- **Framework:** [Docusaurus](https://docusaurus.io/)  \n- **Package Manager:** Yarn  \n- **Deployment Options:** GitHub Pages, SSH-based deployment"
+  },
+  {
+    "metadata": {
+      "idurl": 1,
+      "title": "ciroh-portal",
+      "source": "https://github.com/CIROH-UA/ciroh-portal",
+      "section_header": "# ciroh-portal",
+      "parent_header": "# ciroh-portal",
+      "order": 4,
+      "current_header": "## Setup and Usage"
+    },
+    "content": "1. **Install dependencies:** Run `yarn`.  \n2. **Local development:** Use `yarn start` to launch a development server with live reload.  \n3. **Build static site:** Execute `yarn build` to generate static files in the `build` directory.  \n4. **Deploy:**  \n   - With SSH: `USE_SSH=true yarn deploy`  \n   - Without SSH: `GIT_USER=<Your GitHub username> yarn deploy`"
+  },
+  {
+    "metadata": {
+      "idurl": 1,
+      "title": "ciroh-portal",
+      "source": "https://github.com/CIROH-UA/ciroh-portal",
+      "section_header": "# ciroh-portal",
+      "parent_header": "# ciroh-portal",
+      "order": 5,
+      "current_header": "## Project Context & Domain"
+    },
+    "content": "- **Domain:** Web development / Documentation portal.  \n- **Affiliation:** CIROH (Consortium of Universities for the Advancement of Hydrologic Science, Inc.).  \n- **Purpose:** Serve as a centralized online portal for CIROH’s documentation, community resources, or related content."
+  },
+  {
+    "metadata": {
+      "idurl": 1,
+      "title": "ciroh-portal",
+      "source": "https://github.com/CIROH-UA/ciroh-portal",
+      "section_header": "# ciroh-portal",
+      "parent_header": "# ciroh-portal",
+      "order": 6,
+      "current_header": "## Input / Output"
+    },
+    "content": "**Input:**  \n- Markdown documentation files and Docusaurus configuration settings.  \n**Output:**  \n- A fully built static website generated in the `build` directory, ready for deployment to web hosting platforms."
+  }
+]
