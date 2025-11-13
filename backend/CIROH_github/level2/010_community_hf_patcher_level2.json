@@ -1,0 +1,74 @@
+[
+  {
+    "metadata": {
+      "idurl": 10,
+      "title": "community_hf_patcher",
+      "source": "https://github.com/CIROH-UA/community_hf_patcher",
+      "section_header": "# community_hf_patcher",
+      "parent_header": "# community_hf_patcher",
+      "order": 1,
+      "current_header": "## Project Objective"
+    },
+    "content": "The **community_hf_patcher** repository provides scripts and Docker configurations to apply patches to the **CIROH Community Hydrofabric**, a temporary fork of Lynker Spatial's **NextGen Hydrofabric v2.2**.  \nThese patches improve compatibility with CIROH projects, including the **NextGen In A Box** ecosystem. The repository generates patched hydrofabric datasets that can be published to the **Community Hydrofabric bucket** on AWS S3."
+  },
+  {
+    "metadata": {
+      "idurl": 10,
+      "title": "community_hf_patcher",
+      "source": "https://github.com/CIROH-UA/community_hf_patcher",
+      "section_header": "# community_hf_patcher",
+      "parent_header": "# community_hf_patcher",
+      "order": 2,
+      "current_header": "## Core Functionalities"
+    },
+    "content": "- Applies patches to the CIROH Community Hydrofabric.  \n- Publishes processed hydrofabric data to AWS S3.  \n- Corrects gage-to-flowpath mappings (~4500 gages).  \n- Reformats hydrolocation tables to be GPKG compliant for GIS compatibility.  \n- Adds database indices for faster query performance.  \n- Subsets the hydrofabric into individual VPUs.  \n- Uses Docker for building, processing, and compressing hydrofabric data."
+  },
+  {
+    "metadata": {
+      "idurl": 10,
+      "title": "community_hf_patcher",
+      "source": "https://github.com/CIROH-UA/community_hf_patcher",
+      "section_header": "# community_hf_patcher",
+      "parent_header": "# community_hf_patcher",
+      "order": 3,
+      "current_header": "## Technical Stack"
+    },
+    "content": "- **Languages/Tools:** Python, Shell.  \n- **Containerization:** Docker (multi-stage builds).  \n- **Data Sources:** Lynker Spatial’s NextGen Hydrofabric v2.2 (ODbL licensed).  \n- **Storage:** AWS S3 for output publication.  \n- **Dependencies:** Docker, AWS CLI (for upload)."
+  },
+  {
+    "metadata": {
+      "idurl": 10,
+      "title": "community_hf_patcher",
+      "source": "https://github.com/CIROH-UA/community_hf_patcher",
+      "section_header": "# community_hf_patcher",
+      "parent_header": "# community_hf_patcher",
+      "order": 4,
+      "current_header": "## Setup and Usage"
+    },
+    "content": "### Prerequisites  \n- Docker  \n- AWS CLI (if uploading to S3)\n\n### Running the Patcher  \nRun the build process using:  \n```bash\n./generate_hydrofabric.sh\n```  \nTo upload outputs to an S3 bucket, uncomment AWS commands in the shell scripts.\n\n### Repository Structure  \n- **`generate_hydrofabric.sh`** – Main entrypoint for building and running the Docker container, extracting outputs, and optionally uploading results.  \n- **`generate_vpus.sh`** – Secondary script that subsets the hydrofabric into individual VPUs.  \n- **`Dockerfile`** – Defines stages for downloading, processing, and compressing hydrofabric data.  \n- **`scripts/`** – Contains Python and shell scripts for data processing tasks.  \n  - **`scripts/formatting`** – Handles data formatting and storage structure.  \n  - **`scripts/hydro`** – Modifies hydrologic data affecting simulation outputs.\n\n### Workflow Overview  \n1. **Build and Run the Docker Container:**  \n   - Downloads raw hydrofabric data.  \n   - Adds indices and updates gages.  \n   - Converts hydrolocations and subsets VPUs.  \n   - Compresses processed outputs.  \n2. **Extract Processed Files:**  \n   - `conus_nextgen.gpkg`: Complete patched hydrofabric.  \n   - `conus_nextgen.tar.gz`: Compressed version of the above.  \n   - `gage_replacements.csv`: Catalog of gage corrections.  \n   - `VPU/`: Folder with individual VPU hydrofabrics.  \n   - `VPU/compressed/`: Folder with compressed tarballs of each VPU hydrofabric.  \n3. **Upload to S3 (Optional):**  \n   Uncomment upload commands in the scripts and ensure valid AWS credentials are configured."
+  },
+  {
+    "metadata": {
+      "idurl": 10,
+      "title": "community_hf_patcher",
+      "source": "https://github.com/CIROH-UA/community_hf_patcher",
+      "section_header": "# community_hf_patcher",
+      "parent_header": "# community_hf_patcher",
+      "order": 5,
+      "current_header": "## Project Context & Domain"
+    },
+    "content": "- **Domain:** Hydrology / Geospatial Data Processing.  \n- **Affiliation:** CIROH (Cooperative Institute for Research to Operations in Hydrology).  \n- **Purpose:** Apply compatibility patches to the NextGen Hydrofabric v2.2 for CIROH projects and publish updated versions to AWS S3."
+  },
+  {
+    "metadata": {
+      "idurl": 10,
+      "title": "community_hf_patcher",
+      "source": "https://github.com/CIROH-UA/community_hf_patcher",
+      "section_header": "# community_hf_patcher",
+      "parent_header": "# community_hf_patcher",
+      "order": 6,
+      "current_header": "## Input / Output"
+    },
+    "content": "**Input:**  \n- Lynker Spatial’s NextGen Hydrofabric v2.2 source data.  \n- Configuration and patch scripts.  \n**Output:**  \n- Patched hydrofabric files (`.gpkg`, `.tar.gz`).  \n- Updated gage mapping CSV.  \n- Subset VPU hydrofabric folders (optional).  \n- Uploaded datasets in the Community Hydrofabric S3 bucket (optional)."
+  }
+]

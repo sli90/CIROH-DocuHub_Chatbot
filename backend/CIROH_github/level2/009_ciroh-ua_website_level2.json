@@ -1,0 +1,74 @@
+[
+  {
+    "metadata": {
+      "idurl": 9,
+      "title": "ciroh-ua_website",
+      "source": "https://github.com/CIROH-UA/ciroh-ua_website",
+      "section_header": "# ciroh-ua_website",
+      "parent_header": "# ciroh-ua_website",
+      "order": 1,
+      "current_header": "## Project Objective"
+    },
+    "content": "The **CIROH DocuHub** serves as a centralized documentation and communication portal for CIROH projects, built using [Docusaurus](https://docusaurus.io/).  \nIt provides a structured platform to host technical documentation, blog content, and product information related to CIROH and its NextGen initiatives.  \nThe project aims to enhance collaboration, transparency, and accessibility across CIROH’s distributed teams and contributors."
+  },
+  {
+    "metadata": {
+      "idurl": 9,
+      "title": "ciroh-ua_website",
+      "source": "https://github.com/CIROH-UA/ciroh-ua_website",
+      "section_header": "# ciroh-ua_website",
+      "parent_header": "# ciroh-ua_website",
+      "order": 2,
+      "current_header": "## Core Functionalities"
+    },
+    "content": "- **Static site generation:** Built using Docusaurus for efficient, responsive documentation websites.  \n- **Multi-environment deployment:**  \n  - **Production:** [https://docs.ciroh.org/](https://docs.ciroh.org/)  \n  - **Staging:** [https://docs.ciroh.org/docuhub-staging/](https://docs.ciroh.org/docuhub-staging/) (for testing and validation).  \n- **Contributor workflows:**  \n  - Edit content directly via GitHub (“Edit page” button).  \n  - Submit pull requests for review and merge.  \n  - Contribute to the Products tab by sharing repository links.  \n  - Add blog posts following official guidelines.  \n- **Local development support:** Step-by-step setup guide for cloning, installing dependencies, and running the development server.  \n- **Support channels:** Direct contact via CIROH IT Admin and Arpita Patel for contributor assistance."
+  },
+  {
+    "metadata": {
+      "idurl": 9,
+      "title": "ciroh-ua_website",
+      "source": "https://github.com/CIROH-UA/ciroh-ua_website",
+      "section_header": "# ciroh-ua_website",
+      "parent_header": "# ciroh-ua_website",
+      "order": 3,
+      "current_header": "## Technical Stack"
+    },
+    "content": "- **Framework:** [Docusaurus](https://docusaurus.io/)  \n- **Language:** JavaScript  \n- **Runtime:** Node.js (LTS version)  \n- **Package Manager:** npm  \n- **Hosting:** docs.ciroh.org (production) and docs.ciroh.org/docuhub-staging (staging)  \n- **Version Control:** GitHub  \n- **Continuous Integration:** GitHub Actions (used for PR validation and local build testing)."
+  },
+  {
+    "metadata": {
+      "idurl": 9,
+      "title": "ciroh-ua_website",
+      "source": "https://github.com/CIROH-UA/ciroh-ua_website",
+      "section_header": "# ciroh-ua_website",
+      "parent_header": "# ciroh-ua_website",
+      "order": 4,
+      "current_header": "## Setup and Usage"
+    },
+    "content": "1. **Clone Repository:**  \n   ```bash\n   git clone https://github.com/CIROH-UA/ciroh-ua_website.git\n   cd ciroh-ua_website\n   ```  \n2. **Install Node.js (LTS):** Obtain from [nodejs.org](https://nodejs.org/en).  \n3. **Install Dependencies:**  \n   ```bash\n   npm install\n   ```  \n4. **Run Locally:**  \n   ```bash\n   npm run start\n   ```  \n   Opens the local server at http://localhost:3000  \n5. **Build for Production (optional):**  \n   ```bash\n   npm run build\n   ```  \n   Generates static files in the `build/` directory.  \n6. **Validate PR Locally:**  \n   Download the build folder from GitHub Actions PR validation, unzip, then run:  \n   ```bash\n   npx http-server\n   ```"
+  },
+  {
+    "metadata": {
+      "idurl": 9,
+      "title": "ciroh-ua_website",
+      "source": "https://github.com/CIROH-UA/ciroh-ua_website",
+      "section_header": "# ciroh-ua_website",
+      "parent_header": "# ciroh-ua_website",
+      "order": 5,
+      "current_header": "## Project Context & Domain"
+    },
+    "content": "- **Domain:** Web development / Documentation management.  \n- **Affiliation:** Cooperative Institute for Research to Operations in Hydrology (**CIROH**), hosted by **The University of Alabama**.  \n- **Purpose:** Facilitate the sharing and maintenance of CIROH’s documentation, blogs, and project resources through a unified web portal."
+  },
+  {
+    "metadata": {
+      "idurl": 9,
+      "title": "ciroh-ua_website",
+      "source": "https://github.com/CIROH-UA/ciroh-ua_website",
+      "section_header": "# ciroh-ua_website",
+      "parent_header": "# ciroh-ua_website",
+      "order": 6,
+      "current_header": "## Input / Output"
+    },
+    "content": "**Input:**  \n- Markdown-based documentation files, configuration files, and static assets.  \n**Output:**  \n- A compiled static documentation website served via docs.ciroh.org and its staging environment."
+  }
+]

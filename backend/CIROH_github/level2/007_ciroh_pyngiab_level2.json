@@ -1,0 +1,74 @@
+[
+  {
+    "metadata": {
+      "idurl": 7,
+      "title": "ciroh_pyngiab",
+      "source": "https://github.com/CIROH-UA/ciroh_pyngiab",
+      "section_header": "# ciroh_pyngiab",
+      "parent_header": "# ciroh_pyngiab",
+      "order": 1,
+      "current_header": "## Project Objective"
+    },
+    "content": "The **ciroh_pyngiab** repository provides tools and configurations to run the **NextGen In A Box (NGIAB)** hydrologic modeling workflow entirely within a **Python or Jupyter environment**. It integrates NGIAB capabilities—such as data preprocessing and model execution—into JupyterHub-compatible environments, enabling researchers to perform end-to-end hydrologic simulations using the NextGen framework."
+  },
+  {
+    "metadata": {
+      "idurl": 7,
+      "title": "ciroh_pyngiab",
+      "source": "https://github.com/CIROH-UA/ciroh_pyngiab",
+      "section_header": "# ciroh_pyngiab",
+      "parent_header": "# ciroh_pyngiab",
+      "order": 2,
+      "current_header": "## Core Functionalities"
+    },
+    "content": "- **JupyterHub-compatible NGIAB:**  \n  - Provides a version of NGIAB that can run on JupyterHub platforms (e.g., 2i2c), adapted from the standard NGIAB built on `rockylinux9`.  \n  - Builds upon the `pangeo/pangeo-notebook` image to ensure compatibility with CIROH’s 2i2c infrastructure.  \n  - Includes scripts such as `Dockerfile` and `docker_run.sh` for local image creation and deployment.  \n- **Python Wrapper Libraries:**  \n  - Wraps NGIAB’s data preprocessing and model execution shell scripts for direct use from Python.  \n  - Enables execution of the NextGen model framework directly from a Jupyter Notebook or Python script without terminal commands.  \n- **Integrated Tools:**  \n  - Preinstalled utilities include [`ngiab_data_preprocess`](https://github.com/CIROH-UA/NGIAB_data_preprocess) for data subsetting, forcing generation, and realization creation.  \n  - Contains example tests, unit test files, and CI/CD workflow configurations.  \n- **Sample Data:**  \n  - Example datasets are included under `/tests/` in the container image.  \n  - Users may also follow the NGIAB “Quick Start Guide” to manually download additional data."
+  },
+  {
+    "metadata": {
+      "idurl": 7,
+      "title": "ciroh_pyngiab",
+      "source": "https://github.com/CIROH-UA/ciroh_pyngiab",
+      "section_header": "# ciroh_pyngiab",
+      "parent_header": "# ciroh_pyngiab",
+      "order": 3,
+      "current_header": "## Technical Stack"
+    },
+    "content": "- **Languages:** Python, Shell  \n- **Containerization:** Docker  \n- **Base Image:** `pangeo/pangeo-notebook:2024.04.08`  \n- **Dependencies:** NGIAB, NextGen, ngiab_data_preprocess  \n- **Environment:** Compatible with JupyterHub and local Docker environments  \n- **Installation:** Available via pip using `pip install git+https://github.com/fbaig/ciroh_pyngiab.git`"
+  },
+  {
+    "metadata": {
+      "idurl": 7,
+      "title": "ciroh_pyngiab",
+      "source": "https://github.com/CIROH-UA/ciroh_pyngiab",
+      "section_header": "# ciroh_pyngiab",
+      "parent_header": "# ciroh_pyngiab",
+      "order": 4,
+      "current_header": "## Setup and Usage"
+    },
+    "content": "### 1. Access Preconfigured JupyterHub Environments  \n- **Production:** [CIROH 2i2c JupyterHub](http://staging.ciroh.awi.2i2c.cloud/)  \n- **Staging/Dev:** [CIROH 2i2c JupyterHub (Staging)](http://staging.ciroh.awi.2i2c.cloud/)  \n- **Local Deployment:**  \n  - Build local image with `Dockerfile` or `docker_run.sh`.  \n  - Access via `http://127.0.0.1:8888/` after running:  \n    ```bash\n    docker run -it -v \"${PWD}\":/shared/ -p 8888:8888 quay.io/fbaig25/ngiab-2i2c:latest jupyter lab --ip 0.0.0.0 /shared\n    ```  \n- **Upcoming:** Support for [I-GUIDE JupyterHub](https://jupyter.iguide.illinois.edu/).\n\n### 2. Python Wrapper Example  \nExecute NGIAB via Python:  \n```python\nfrom pyngiab import PyNGIAB\n\ndata_dir = './AWI_16_2863657_007'\ntest_ngiab = PyNGIAB(data_dir)\ntest_ngiab.run()\n```\nFor serial mode:  \n```python\ntest_ngiab_serial = PyNGIAB(data_dir, serial_execution_mode=True)\ntest_ngiab_serial.run()\n```\n\n### 3. Data Preprocessing Example  \nRun data subsetting, forcing generation, and realization creation:  \n```bash\npython -m ngiab_data_cli -i cat-5173 -a --start 2022-01-01 --end 2022-02-28\n```"
+  },
+  {
+    "metadata": {
+      "idurl": 7,
+      "title": "ciroh_pyngiab",
+      "source": "https://github.com/CIROH-UA/ciroh_pyngiab",
+      "section_header": "# ciroh_pyngiab",
+      "parent_header": "# ciroh_pyngiab",
+      "order": 5,
+      "current_header": "## Project Context & Domain"
+    },
+    "content": "- **Domain:** Hydrology / Hydrologic modeling / Computational workflows.  \n- **Affiliation:** Cooperative Institute for Research to Operations in Hydrology (**CIROH**), The University of Alabama.  \n- **Purpose:** Streamline end-to-end hydrologic modeling within Jupyter environments, combining NGIAB and NextGen frameworks for research and development."
+  },
+  {
+    "metadata": {
+      "idurl": 7,
+      "title": "ciroh_pyngiab",
+      "source": "https://github.com/CIROH-UA/ciroh_pyngiab",
+      "section_header": "# ciroh_pyngiab",
+      "parent_header": "# ciroh_pyngiab",
+      "order": 6,
+      "current_header": "## Input / Output"
+    },
+    "content": "**Input:**  \n- Catchment ID, date ranges, configuration files, and hydrologic datasets.  \n- Preprocessing utilities for data subsetting and forcing generation.  \n**Output:**  \n- NextGen model execution results and generated realization files.  \n- Processed hydrologic data and analysis-ready outputs."
+  }
+]
