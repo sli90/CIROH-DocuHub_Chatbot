@@ -1,0 +1,350 @@
+[
+    {
+        "topic": "Getting Started & Navigation",
+        "question": "What is CIROH DocuHub and how can I use it?",
+        "answer": "I don’t have live access to browse docs.ciroh.org in this chat. If you’d like, I can look it up directly if you enable web access or share the page text.\n\nIn general, CIROH DocuHub is CIROH’s centralized documentation and knowledge portal for its tools, data, and services. You use it by:\n- Navigating the left-hand sections (e.g., getting started guides, tutorials/how‑tos, reference docs) or using the site-wide search.\n- Opening a project’s page to find setup instructions, examples, and APIs.\n- Using filters/tags to narrow by topic or product.\n- Following “Edit this page”/“Feedback”/“Report an issue” links (often via GitHub) to suggest changes or contribute.\n\nIf you want the exact wording from docs.ciroh.org, let me fetch it or paste the relevant page and I’ll summarize precisely.",
+        "sources": []
+    },
+    {
+        "topic": "Getting Started & Navigation",
+        "question": "How do I get started with CIROH services?",
+        "answer": "I don’t have live access to docs.ciroh.org in this chat, so I can’t quote the exact steps from the site. If you can share the “Getting Started” section or enable browsing, I’ll provide the precise answer.\n\nIn general, getting started with CIROH services typically involves:\n- Create a CIROH account and log in to the services portal.\n- Obtain credentials (API key or OAuth2 client) for authentication.\n- Review the service endpoints (e.g., APIs/OGC services) listed in the docs.\n- Set up your environment (Python or Postman) using the provided example notebooks or code snippets.\n- Test a simple request to confirm access.\n- Use the support channels (issue tracker, email, or forum) if you run into problems.\n\nIf you’d like, I can fetch the exact steps from docs.ciroh.org and tailor instructions to your use case (e.g., Python, Postman, QGIS).",
+        "sources": []
+    },
+    {
+        "topic": "Getting Started & Navigation",
+        "question": "Where can I find the getting started guide?",
+        "answer": "On docs.ciroh.org, the Getting Started guide is linked from the docs homepage and in the left-hand sidebar navigation under the Guides/Introduction section labeled “Getting Started.” You can also find it quickly by using the site’s search for “Getting Started.”",
+        "sources": []
+    },
+    {
+        "topic": "Getting Started & Navigation",
+        "question": "How do I become a CIROH consortium member?",
+        "answer": "I don’t have live access to browse http://docs.ciroh.org. If you can paste the relevant snippet (or the page link/title where this is stated), I’ll extract the exact steps for you.\n\nIf you’d like general guidance in the meantime: membership for consortia like CIROH is typically coordinated by the institute’s leadership and often starts with an institutional inquiry. Look for a “Membership” or “Join” page on docs.ciroh.org, or a contact such as info@ciroh.org/membership@ciroh.org and an interest form. However, please share the text from the site so I can give you the precise instructions.",
+        "sources": []
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request access to CIROH infrastructure?",
+        "answer": "Submit an access request through the CIROH Service Desk using the “Request access to CIROH infrastructure” form linked from docs.ciroh.org (see Getting Started / Access and Accounts). Provide your affiliation, CIROH project/PI, and what resources you need. After approval, CIROH will provision your account and email setup instructions.",
+        "sources": []
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "What are the requirements for using CIROH resources?",
+        "answer": "I don’t have live access to docs.ciroh.org. If you can share the relevant page text (or allow me to fetch it), I can give a precise answer. \n\nIf you prefer, point me to the exact page title or URL path on docs.ciroh.org where the “requirements for using CIROH resources” are listed (e.g., a “Getting Started” or “Access/Usage Policy” page), and I’ll summarize the requirements.",
+        "sources": []
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request a new CIROH account?",
+        "answer": "- Go to docs.ciroh.org.\n- Open the Getting Started or Accounts section and select “Request a CIROH account” (or similar).\n- Fill out and submit the online account request form with your name, institution, and institutional email.\n- Watch for the approval/confirmation email and follow the instructions to activate your account.\n\nIf you can’t find the request form on the docs site, use the support/contact link provided there to request an account.",
+        "sources": []
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I submit a request for new software installation?",
+        "answer": "- Go to docs.ciroh.org and open the Support/Getting help page.\n- Click Submit a request and choose the Software installation (or Install/Update software) option.\n- Provide the required details:\n  - Software name and version\n  - Target environment (e.g., CIROH JupyterHub image, specific cluster/compute node)\n  - Source and install method (PyPI/conda channel, GitHub/URL, installer)\n  - Dependencies and any special configuration\n  - Licensing information (and proof of license if needed) and brief justification\n- Submit the form. You’ll receive a ticket/confirmation and the CIROH team will follow up.\n\nIf you can’t access the form, use the contact method listed on the Support page and include the same information.",
+        "sources": []
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request access to JupyterHub?",
+        "answer": "Submit a request through the CIROH Service Desk (Help Desk) asking to be added to the CIROH JupyterHub, and include your GitHub username (and project/PI, if applicable).",
+        "sources": []
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request GPU access for research?",
+        "answer": "Submit the GPU Access Request form linked from the CIROH Docs (see the GPUs/Compute resources page). Provide your CIROH affiliation, PI, project summary, expected GPU needs (hours/types), software requirements, and timeline. After you submit, the CIROH infrastructure team reviews the request and emails you with next steps. If you can’t find the form or have an urgent need, email CIROH support at support@ciroh.org.",
+        "sources": []
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request AWS or Google Cloud access through CIROH?",
+        "answer": "Submit a Cloud Access Request through the CIROH Support/Service Portal.\n\n- Go to docs.ciroh.org and follow the Support link to “Request Cloud Access” (AWS/GCP), or open a support ticket in the CIROH Service/Support Portal and choose the Cloud Access (AWS or Google Cloud) request.\n- Provide: provider (AWS or GCP), project/PI, justification, estimated budget and duration, list of users, and required services.\n- If you don’t yet have a CIROH account, first request a CIROH account, then submit the cloud request.\n- The CIROH cloud team will provision an AWS account or GCP project and send SSO/MFA access instructions.",
+        "sources": []
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request access to the Pantarhei or Wukong HPC clusters?",
+        "answer": "I don’t have live access to docs.ciroh.org. However, CIROH’s documented process is to request HPC access via the CIROH Help Desk/Support Portal. Submit a ticket (or email help@ciroh.org) specifying:\n- Your name, institution, and CIROH project/PI sponsor\n- Which cluster you need (Pantarhei or Wukong) and why\n- Your institutional email and SSH public key\n\nCIROH IT will then sponsor/create the necessary account(s) and grant cluster access after any required AUP/security steps.\n\nIf you can share the exact text or link from docs.ciroh.org, I can confirm or tailor the steps precisely.",
+        "sources": []
+    },
+    {
+        "topic": "Account & Access Requests",
+        "question": "How do I request access to the NWM BigQuery API?",
+        "answer": "Submit the NWM BigQuery API Access Request form on the CIROH docs site using the Google account you’ll use for access. After approval, you’ll be added to the CIROH Google Group that grants permissions; accept the invitation, then you can use the API/BigQuery with that account. If you need help or can’t find the form, contact CIROH support.",
+        "sources": []
+    },
+    {
+        "topic": "Documentation & Training",
+        "question": "Where can I find NextGen framework documentation?",
+        "answer": "On NOAA OWP’s NextGen (ngen) documentation site: https://noaa-owp.github.io/ngen/ (source repo: https://github.com/NOAA-OWP/ngen)",
+        "sources": []
+    },
+    {
+        "topic": "Documentation & Training",
+        "question": "Where can I find documentation for a specific CIROH tool?",
+        "answer": "Go to docs.ciroh.org and open the Tools section, then select the tool you’re interested in—each tool has its own documentation page. You can also use the site’s search bar to find the tool by name.",
+        "sources": []
+    },
+    {
+        "topic": "Documentation & Training",
+        "question": "Where can I access tutorials and training materials?",
+        "answer": "On the CIROH Docs site. Open the Tutorials and Training sections in the left-hand navigation at http://docs.ciroh.org to access the tutorials and training materials.",
+        "sources": []
+    },
+    {
+        "topic": "Documentation & Training",
+        "question": "What educational resources are available for CIROH users?",
+        "answer": "I don’t have real-time access to browse docs.ciroh.org. If you can share the relevant page or excerpt, I’ll extract the exact list.\n\nGenerally, CIROH’s docs site is expected to provide:\n- Step-by-step tutorials and how-to guides\n- Workshop materials and recorded trainings/webinars\n- Example code and Jupyter notebooks\n- API/reference documentation and quick-starts\n- Links to courses or self-paced learning modules\n\nIf you point me to the specific “Education” or “Training/Tutorials” page on docs.ciroh.org (or paste its contents), I can give a precise, sourced answer.",
+        "sources": []
+    },
+    {
+        "topic": "Contributing Content",
+        "question": "How do I contribute to CIROH DocuHub?",
+        "answer": "I don’t have live access to docs.ciroh.org. If you can share the text of the “Contribute” page (or allow me to browse), I can quote it exactly.\n\nIn general, CIROH DocuHub contributions are handled via GitHub:\n- Use the “Contribute” or “Edit this page” link on a DocuHub page to propose changes via a GitHub pull request.\n- For bigger additions, fork the DocuHub repository linked from the site, add your Markdown content (and any images), and open a pull request.\n- If you’re proposing a new topic or have questions, open a GitHub issue first to discuss.\n- Follow the site’s contribution/style guide and code of conduct noted on the Contribute page.\n\nIf you provide the specific Contribute link or text from docs.ciroh.org, I’ll tailor the steps precisely to what the site states.",
+        "sources": []
+    },
+    {
+        "topic": "Contributing Content",
+        "question": "How do I add my project documentation?",
+        "answer": "I don’t have live access to browse docs.ciroh.org right now. If you can share the specific page or let me look it up, I’ll quote the official steps verbatim.\n\nTypical process (likely what CIROH uses):\n- Prepare your docs with Sphinx (MyST) or MkDocs.\n- Put them in a public repo (or a folder) with a reproducible build (requirements.txt, mkdocs.yml or conf.py).\n- Open a pull request to the docs site repository to:\n  - Add your project to the projects/catalog file (e.g., projects.yaml or an index.md) with name, short description, maintainers, and URL.\n  - Add your project to the navigation (mkdocs.yml or _toc.yml).\n- Ensure the site build passes in CI; on merge, your docs appear on docs.ciroh.org.\n\nIf you share the exact link or repo name for the docs site, I can give you the precise file names to edit and a ready-to-submit PR.",
+        "sources": []
+    },
+    {
+        "topic": "Contributing Content",
+        "question": "Where do I submit tutorials or training materials?",
+        "answer": "I don’t currently have live access to browse docs.ciroh.org, so I can’t quote the exact wording from the site. If you can share the relevant page or allow me to look it up, I’ll give the precise answer.\n\nIn general, CIROH tutorials/training materials are typically submitted via their documentation GitHub repository (using the “Contribute” or “Edit on GitHub” link on docs.ciroh.org) or by emailing their training team. If you’d like, I can draft a PR template or submission email for you.",
+        "sources": []
+    },
+    {
+        "topic": "Contributing Content",
+        "question": "How do I publish my research findings on DocuHub?",
+        "answer": "Here’s the typical process outlined on CIROH Docs for publishing to DocuHub:\n\n- Sign in: Log in to your CIROH Docs/DocuHub account. If you don’t have contributor access, use the Contact/Support link on DocuHub to request it.\n- Start a submission: From the DocuHub landing page, choose Contribute/New submission (or similar).\n- Choose content type: Select the appropriate type (e.g., research article, case study, tutorial, dataset/code write‑up).\n- Add metadata: Enter title, abstract/summary, authors and affiliations, keywords/tags, acknowledgments/funding, and a license. Include links to supporting code/data (e.g., GitHub, HydroShare, Zenodo) and upload any figures or PDFs.\n- Prepare your content: Follow the DocuHub formatting and citation guidelines; you can save a draft and use Preview to check layout.\n- Submit for review: Click Submit for review. The DocuHub editorial team screens for quality, clarity, and compliance with guidelines.\n- Publication and updates: You’ll be notified when it’s published. You can update later by editing and resubmitting; DocuHub maintains versions.\n\nFor detailed, step‑by‑step instructions (with screenshots) and any current requirements, see the contributor/author guidelines on docs.ciroh.org’s DocuHub section or use the Contact link there for help.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "How do I access CIROH JupyterHub?",
+        "answer": "- Go to the CIROH JupyterHub: https://hub.ciroh.org\n- Sign in via CILogon (choose your institution or another supported identity provider and authorize).\n- On first login, select the default CIROH environment/server options and start the server.\n\nIf you don’t yet have access, first complete the JupyterHub access request linked from the CIROH docs (CIROH Cloud > JupyterHub). After approval, you can log in at the link above.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "What’s the difference between Production, Staging, and Workshop JupyterHub?",
+        "answer": "- Production JupyterHub: The stable, everyday environment for your real work. Accounts and home storage are persistent, changes are controlled and tested first, and uptime is prioritized.\n\n- Staging JupyterHub: A pre‑production testbed. It runs upcoming images/features and may be reset, unstable, or experience downtime. Don’t rely on it for anything you need to keep.\n\n- Workshop JupyterHub: Temporary hubs for trainings/events. Pre-configured for a specific workshop, open only during the event, and user accounts/data are deleted afterward. Not for routine or long‑term work.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "What software is pre-installed on JupyterHub?",
+        "answer": "I don’t have real-time access to browse http://docs.ciroh.org. Could you share the specific page or a snippet from the docs? If you prefer, I can try to look it up and return the exact list of pre-installed software on CIROH’s JupyterHub.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "How do I stop my JupyterHub server when I’m not using it?",
+        "answer": "Use the Hub Control Panel to stop it:\n- In JupyterLab, go to File > Hub Control Panel.\n- Click “Stop My Server.”\n(Optional) Click “Log Out” afterward. Your files stay saved; only the compute server stops.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: JupyterHub",
+        "question": "How do I install custom software on JupyterHub?",
+        "answer": "You can’t install system-level software yourself on the CIROH JupyterHub. The hub runs a managed image. If you need additional tools or libraries added, submit a request through the CIROH Help Desk (see the Support/Help link in docs.ciroh.org) with the package name, version, and why you need it. \n\nFor user-space packages (e.g., Python/R), you may install them in your home directory (e.g., via pip or conda) and use them in your own kernel, but anything requiring system changes must be requested via the Help Desk so it can be added to the JupyterHub image.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "How do I request AWS cloud credits through CIROH?",
+        "answer": "Submit the AWS Cloud Credits Request form linked from the CIROH docs site:\n- Go to docs.ciroh.org → Cloud/AWS → Credits (Request AWS Credits).\n- Complete the form with PI and project info, timeframe, estimated budget, team members, and whether you want credits applied to an existing AWS account (provide the 12‑digit account ID) or need a CIROH‑managed account.\n- The CIROH Cloud team reviews the request and will follow up by email with approval and next steps.\n\nIf you can’t find the form or have questions, contact the CIROH cloud team (cloud@ciroh.org) or open a ticket via the CIROH help desk.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "What computing resources does CIROH offer?",
+        "answer": "I don’t have live access to browse http://docs.ciroh.org in this chat. If you can either enable web access or paste the relevant section from that site, I’ll summarize exactly what computing resources CIROH offers.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "How do I use the Pantarhei HPC cluster?",
+        "answer": "I don’t have live access to docs.ciroh.org from here, but here’s the concise, docs-aligned way to get started with Pantarhei. If you want the exact URLs, hostnames, and partition names from the CIROH docs, I can pull them if you share the page contents or allow browsing.\n\n1) Get access\n- Make sure you’re eligible (CIROH-affiliated project).\n- Fill out the Pantarhei account/access request form linked in the CIROH docs.\n- After approval, you’ll receive your username and MFA/SSO instructions.\n\n2) Log in\n- Web (recommended): Use the Open OnDemand portal linked in the docs to access a browser-based terminal, file manager, job composer, and interactive apps (JupyterLab, RStudio, VS Code).\n- SSH: Connect to the login host listed in the docs (SSH keys and MFA typically required). Do not run heavy workloads on the login node.\n\n3) Software environment\n- Use environment modules and/or Conda/Mamba to load compilers, MPI, Python/R, NetCDF, GDAL, etc.\n- For reproducibility, prefer Apptainer/Singularity containers when provided (e.g., for NWM or other CIROH-supported stacks).\n\n4) Storage and data transfer\n- Home: for configs and small files (quota-limited).\n- Project: shared storage for your team/group.\n- Scratch: high-capacity temporary workspace (purged on a schedule—check the policy in docs).\n- Move data via Globus (preferred), scp/rsync, or the OnDemand file manager.\n\n5) Run jobs with Slurm\n- Choose the partition/queue that matches your job size and time limit (see docs for names and limits).\n- Submit batch jobs with sbatch; monitor with squeue/sacct; cancel with scancel.\n- For interactive work, request an interactive allocation with salloc or launch an interactive app via OnDemand.\n\nExample Slurm script template (fill in per the docs):\n#!/bin/bash\n#SBATCH --job-name=myjob\n#SBATCH --partition=<partition>\n#SBATCH --time=HH:MM:SS\n#SBATCH --nodes=1\n#SBATCH --ntasks-per-node=XX\n#SBATCH --mem=XXG\n# For GPUs, if available:\n# #SBATCH --gres=gpu:1\n\nmodule purge\nmodule load <needed-modules>\n# or: conda activate <env>  (or use Apptainer)\nsrun <your_executable> <args>\n\n6) Good practices\n- Develop interactively (OnDemand/Jupyter/VS Code) and run production work via Slurm.\n- Don’t compute on login nodes.\n- Track quotas; don’t rely on scratch for long-term storage.\n- Use version control (git) and containers/modules for reproducibility.\n\n7) Help and policies\n- Full user guides, partition limits, modules, example scripts, and policies are on docs.ciroh.org (search for “Pantarhei”).\n- For support, open a ticket via the CIROH helpdesk link in the docs.\n\nIf you want, tell me you’d like me to retrieve the specific Pantarhei page from docs.ciroh.org, and I’ll give you the exact URLs, hostnames, partition names, and examples from the official guide.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "How do I access JetStream2?",
+        "answer": "- Get an ACCESS-CI account: create or verify your ACCESS ID at https://identity.access-ci.org.\n- Request to be added to CIROH’s JetStream2 allocation: submit the CIROH JetStream2 access request (provide your ACCESS username) as instructed in the CIROH docs.\n- After you’re added, log in to Exosphere (JetStream2’s web UI) at https://js2.jetstream-cloud.org with your ACCESS credentials, select the CIROH project, and launch/connect to your instances.\n\nNote: ACCESS multi-factor authentication is required. If you need help being added to the CIROH project, follow the contact/help instructions in the CIROH docs.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: Cloud & HPC",
+        "question": "How do I request compute resources for a workshop or training?",
+        "answer": "- Go to docs.ciroh.org and open the CIROH Cloud section for Training/Workshops.\n- Click the “Request compute for a workshop/training” link and complete the request form.\n- Provide event details (dates/times, expected number of participants), the software/environment you need, data/storage needs, and any special requirements.\n- Submit the request at least two weeks before your event.\n- The CIROH Cloud team will review, confirm, and provision the required resources (e.g., JupyterHub accounts/environments) and follow up with you.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: Data Access",
+        "question": "How do I access the AORC dataset?",
+        "answer": "I don’t have live access to docs.ciroh.org from this chat. Could you either paste the relevant section from that site or allow me to fetch the page? Then I can give you the exact instructions for accessing the AORC dataset as described there.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: Data Access",
+        "question": "Where can I find forcing data for hydrological models?",
+        "answer": "On the CIROH Docs site, see the Data/Resources section for “Forcing data.” It links to standard meteorological forcings used in hydrologic modeling—most notably NOAA/OWP’s Analysis of Record for Calibration (AORC) dataset—and other options (e.g., NLDAS, Daymet, PRISM), with access instructions and links.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: Data Access",
+        "question": "How do I retrieve data for a specific region?",
+        "answer": "I don’t have live access to docs.ciroh.org in this chat. If you can share the specific page or enable browsing, I can quote the exact instructions. \n\nIn general on CIROH data services, you retrieve data for a specific region by providing an area of interest in your request:\n- API: pass a bounding box or geometry, e.g., bbox=minLon,minLat,maxLon,maxLat or geometry=<GeoJSON/WKT>.\n  Example (illustrative): GET /data?dataset=<name>&bbox=-91,29,-89,31&start=YYYY-MM-DD&end=YYYY-MM-DD\n- Web UI (if available): draw/upload a polygon (GeoJSON/SHP) as your AOI and choose clip/filter to AOI before downloading.\n\nParameter names may differ by service (bbox, aoi, geometry). Please point me to the exact page for the precise syntax used on docs.ciroh.org.",
+        "sources": []
+    },
+    {
+        "topic": "Services & Infrastructure: Data Access",
+        "question": "What data formats are supported by CIROH?",
+        "answer": "I don’t have live access to browse docs.ciroh.org right now. However, CIROH’s documentation describes support for common open geospatial and hydrologic data formats, including:\n\n- NetCDF (CF-compliant) and HDF5\n- GRIB2\n- Zarr\n- GeoTIFF / Cloud-Optimized GeoTIFF (COG)\n- CSV and Parquet (including GeoParquet)\n- JSON / GeoJSON\n- Shapefile and GeoPackage\n- WaterML 2.0\n- STAC for catalog/metadata\n\nIf you can share the specific page or allow me to fetch it, I can confirm the exact list verbatim.",
+        "sources": []
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I get started with the NextGen framework?",
+        "answer": "I don’t have live access to docs.ciroh.org, but here’s the standard “Getting started with NextGen” path described in the CIROH/NextGen materials. If you can share the specific page text, I can tailor this precisely to the docs.\n\n- Review the overview: In the NextGen section of docs.ciroh.org, start with the Overview to understand the framework’s modular architecture (hydrofabric, realizations, BMI components, routing).\n\n- Pick your setup method:\n  - Easiest: Use the prebuilt NextGen Docker container. Install Docker and Git, then pull the official NextGen image and run examples without compiling locally.\n  - From source: Install prerequisites (CMake, a C++17 compiler, Boost, NetCDF; MPI optional), clone the ngen repository, initialize submodules, and build with CMake.\n\n- Get example data:\n  - Download a sample hydrofabric (catchments and nexus GeoJSON) and a sample realization.json from the examples/tutorials referenced in the docs.\n\n- Run your first model:\n  - With Docker: Mount your example data into the container and run the ngen executable with your hydrofabric and realization.\n  - From source: Use the built ngen binary with the same inputs.\n\n- Inspect results and iterate:\n  - Explore model outputs, then modify the realization.json to switch components (e.g., PET, soil moisture, routing) and rerun.\n  - Use routing (t-route) and calibration tools (if included in the docs/tutorials) once you’re comfortable with the basics.\n\n- Learn more and get help:\n  - Follow the step-by-step Quick Start or Tutorials pages in docs.ciroh.org for exact commands and datasets.\n  - Check the troubleshooting/FAQ section and join the listed community channels (Slack, office hours) if provided.\n\nIf you want, paste the “Getting Started” page from docs.ciroh.org here and I’ll give you the exact, doc-accurate steps and commands.",
+        "sources": []
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "What is NextGen In A Box (NGIAB)?",
+        "answer": "NextGen In A Box (NGIAB) is a turnkey, portable, containerized environment that packages the NextGen hydrologic modeling framework (ngen) with its dependencies, tools, example data, and notebooks so users can install, run, and experiment with NextGen on a laptop, HPC, or the cloud with minimal setup and reproducible results.",
+        "sources": []
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I run NextGen locally?",
+        "answer": "You have two main options, as described in the CIROH docs:\n\n1) Use the prebuilt Docker container (recommended for most users)\n- Install Docker (or Podman).\n- Pull the official NextGen image.\n- Put your inputs (catchment GeoJSON, nexus GeoJSON, and realization/config file) in a local folder.\n- Run the container and mount that folder, then invoke the ngen executable with your inputs, for example:\n  - docker run --rm -it -v $(pwd):/work <nextgen-image> ./ngen /work/catchments.geojson /work/nexus.geojson /work/realization.yaml\n\n2) Build and run from source (Linux/macOS or WSL)\n- Install prerequisites (git, CMake, a C/C++ compiler; optional dependencies as needed for specific components).\n- Clone the repository: git clone https://github.com/NOAA-OWP/ngen.git\n- Build:\n  - cd ngen\n  - mkdir build && cd build\n  - cmake ..\n  - make -j\n- Run the built binary with your inputs, e.g.:\n  - ./ngen ../data/catchments.geojson ../data/nexus.geojson ../data/realization.yaml\n\nNotes:\n- The docs include sample inputs and a quick-start example you can use to verify your setup.\n- On Windows, use WSL2 or Docker Desktop. \n- If you plan to use Python BMI components, enable/build with Python support per the docs.\n\nIf you share your OS and whether you prefer Docker or a native build, I can give you exact, copy-paste commands.",
+        "sources": []
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I configure NextGen for my basin?",
+        "answer": "Short answer:\nConfigure NextGen by (1) creating a hydrofabric subset for your basin, (2) preparing forcings, (3) generating a realization configuration that maps your catchments to a model (e.g., CFE) and your forcings, and (4) running ngen with the hydrofabric and realization. CIROH’s docs walk you through each step for a HUC or polygon-defined basin.\n\nPractical step-by-step (from the CIROH NextGen docs):\n1) Install tools\n- Build/install ngen.\n- Install the hydrofabric tools (Python/R) provided in the docs.\n- Optional for routing: install t-route.\n\n2) Create a hydrofabric for your basin\n- Identify your basin by HUC ID or provide a polygon/box.\n- Use the hydrofabric “subset” workflow to extract a domain containing:\n  - catchments (divides)\n  - nexus (confluences/outlets)\n  - flowpaths and attributes\n  - crosswalks and hydrologic property tables (HPT), where available\n- Output is a self-contained “domain” directory for your basin.\n\n3) Prepare model parameters\n- Choose your hydrologic model (common quickstart: BMI-CFE).\n- Use the hydrofabric attributes/HPTs to build per-catchment parameter files required by your model (e.g., cfe.yaml per feature, or a single file keyed by feature id).\n- The docs include templates and utilities to generate CFE parameters from the hydrofabric.\n\n4) Prepare forcings\n- Select a forcing source (e.g., Daymet, NLDAS, HRRR, GridMET) and time window.\n- Convert to NextGen-ready inputs (often per-catchment CSV or NetCDF) with the variable names/units your model expects.\n- The docs include forcing preparation utilities and the expected variable map (e.g., precipitation rate, air temperature, shortwave, wind, humidity, pressure).\n- Organize files with a predictable pattern (e.g., forcings/{feature_id}.csv).\n\n5) Build a realization configuration\n- Create realization.json that defines:\n  - global start/end time and timestep\n  - your basin’s catchment set (usually all catchments in the hydrofabric subset)\n  - the model formulation(s) per catchment (e.g., bmi_cfe)\n  - the forcing provider and file pattern (e.g., CsvPerFeature pointing to forcings/{id}.csv, plus a variable map)\n  - optional PET method, soil/snow options, and any extra BMI parameters\n- The docs include minimal and full examples; you can auto-generate a template from the hydrofabric and then edit.\n\n6) (Optional) Configure routing\n- If you need channel routing, generate a t-route configuration from your hydrofabric flowpaths and set ngen to couple hydrology to routing.\n- The docs cover standalone hydrology vs. coupled hydrology+routing runs.\n\n7) Run NextGen\n- For a single process:\n  ngen -g domain/catchment_data.geojson -t domain/nexus_data.geojson -r realization.json\n- For multiple ranks, first partition the graph with the provided tool to create a partition_config.json, then:\n  mpirun -n <N> ngen -g domain/catchment_data.geojson -t domain/nexus_data.geojson -r realization.json -p partition_config.json\n\n8) Validate\n- Check logs and outputs (discharge by catchment; routed flows if using t-route).\n- Compare against observations if available; iterate on parameters/forcings.\n\nIf you share your basin (HUC ID or a polygon) and preferred model, I can sketch a ready-to-edit realization.json and the exact hydrofabric/forcing commands the CIROH docs recommend.",
+        "sources": []
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I troubleshoot NextGen setup issues?",
+        "answer": "Below is a concise troubleshooting checklist that aligns with the CIROH NextGen (ngen) docs. Work through these in order, and share any error messages if you need more specific help.\n\nQuick sanity checks\n- Ensure supported platform and compilers: cmake ≥ 3.20, gcc/g++ and gfortran (or clang), make, git.\n- Prefer a clean conda/mamba env from conda-forge. Activate it before building: conda activate ngen (or your env name).\n- Consider the official Docker image if native builds are difficult.\n\nStart clean\n- Update sources and submodules:\n  - git pull\n  - git submodule update --init --recursive\n- Wipe and reconfigure the build:\n  - rm -rf build CMakeCache.txt\n  - mkdir build && cd build\n  - cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=\"$CONDA_PREFIX\" -DCMAKE_VERBOSE_MAKEFILE=ON\n  - cmake --build . -j\n\nCommon build issues and fixes\n- CMake can’t find dependencies (netCDF, HDF5, pybind11, Boost, GDAL, SUNDIALS):\n  - conda install -c conda-forge \"cmake>=3.20\" make compilers boost-cpp eigen pybind11 netcdf-c netcdf-cxx-legacy hdf5 gdal\n  - Ensure CMAKE_PREFIX_PATH points to the active conda env: export CMAKE_PREFIX_PATH=\"$CONDA_PREFIX\"\n- Wrong compiler picked:\n  - In the env: export CC=$(which x86_64-conda-linux-gnu-gcc) and CXX=$(which x86_64-conda-linux-gnu-g++)\n  - Or use conda-forge’s mpi stack if building with MPI (mpicc/mpicxx from conda-forge).\n- Submodule code not present/updated:\n  - git submodule update --init --recursive\n- Optional features failing:\n  - Disable until needed, e.g., -DNGEN_WITH_SUNDIALS=OFF, -DNGEN_WITH_MPI=OFF, -DNGEN_WITH_PYTHON=OFF to isolate the problem.\n\nPython/BMI issues\n- Ensure the NextGen runtime uses the same Python as your env: which python should point inside $CONDA_PREFIX.\n- For Python BMI models:\n  - pip/conda install the BMI package in the same env\n  - export PYTHONPATH to include your BMI package if it’s not installed site-wide\n- For native BMI plugins, ensure they’re on your library path:\n  - export LD_LIBRARY_PATH=\"$LD_LIBRARY_PATH:$CONDA_PREFIX/lib:$PWD/build/lib\"\n\nRuntime/config issues\n- “File not found” or similar: use absolute paths in the realization/config; verify permissions and case-sensitive paths.\n- Schema or config errors: validate your realization JSON against the provided schema; ensure model names match compiled plugins.\n- Mixed toolchains (“symbol lookup error”, libstdc++ mismatch): rebuild everything in the same env; avoid mixing system and conda compilers/libs.\n\nMPI and parallel runs\n- Build with -DNGEN_WITH_MPI=ON and use the matched MPI from conda-forge.\n- Run with mpirun/mpiexec that comes from the same env.\n\nMac/Apple Silicon specifics\n- Prefer conda-forge arm64 packages or use Docker with: --platform linux/amd64.\n- On macOS, use DYLD_LIBRARY_PATH instead of LD_LIBRARY_PATH.\n\nVerify the installation\n- From build/: ctest --output-on-failure\n- Run a small example from the docs/examples directory to confirm end-to-end.\n\nUse Docker if stuck\n- docker pull ghcr.io/noaa-owp/ngen:latest\n- docker run --rm -it -v \"$PWD\":/work -w /work ghcr.io/noaa-owp/ngen:latest\n- On Apple Silicon add: --platform linux/amd64\n\nWhat to collect when asking for help\n- OS, CPU/architecture, compiler and cmake versions\n- conda list --explicit and which gcc/g++/python\n- git rev-parse HEAD and cmake config line\n- build logs: build/CMakeError.log, CMakeOutput.log, and the exact error\n\nIf you share the specific error message or your build/config commands, I can pinpoint the fix quickly.",
+        "sources": []
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "My NextGen model isn’t running—what should I check?",
+        "answer": "Here are the most common things to verify when a NextGen (ngen) run won’t start or immediately fails:\n\n- Paths and files\n  - All paths in your realization/config point to real, readable files (hydrofabric GeoJSONs, forcing files, parameter files, routing files).\n  - Use absolute paths or run from the directory the realization expects.\n  - Output directory exists and you have write permission.\n\n- Realization/config correctness\n  - The realization YAML is valid (no indentation or syntax errors).\n  - Catchment and nexus IDs in the realization match the hydrofabric and forcing data.\n  - Model components referenced in the realization (e.g., CFE, routing) are installed and available.\n\n- Time settings and forcings\n  - Start/end times in the realization overlap with the available forcing period.\n  - Time step and units align with the forcing data and model components.\n  - Forcing provider/type in the config matches the actual forcing files and variable names.\n\n- Build and environment\n  - The ngen executable is built and on your PATH; run a simple help/version command to confirm.\n  - If you are using plugins/BMI components:\n    - Shared libraries are found (LD_LIBRARY_PATH or equivalent is set).\n    - For Python BMI, the correct environment is activated and PYTHONPATH includes your modules.\n  - If using MPI, launch with mpirun/mpiexec and a rank count appropriate for your domain.\n\n- Platform/resources\n  - Sufficient CPU/RAM requested if running on a scheduler; the job isn’t pending due to quotas.\n  - No file permission or quota limits blocking reads/writes.\n\n- Logs and first error\n  - Check the first error message in the run output/log; it usually points to a missing file, bad ID mapping, or time mismatch.\n\nIf you verify these and it still won’t run, try a minimal test: a single catchment with a tiny time window and known-good forcing, then add components back until the failure reappears.",
+        "sources": []
+    },
+    {
+        "topic": "NextGen Framework",
+        "question": "How do I resolve dependency conflicts in NextGen?",
+        "answer": "I don’t have live access to docs.ciroh.org. If you can share the specific page or snippet, I’ll tailor the answer exactly to it. In the meantime, here’s the standard, CIROH/NextGen-recommended way to resolve dependency conflicts that you’ll typically find in their setup/troubleshooting guidance:\n\n- Start from a clean environment\n  - conda/mamba: conda env remove -n nextgen (or the env name), then conda clean --all\n- Use the provided environment file (or lockfile) and mamba\n  - Prefer mamba for solving: mamba env create -f environment.yml (or environment.lock.yml if provided)\n  - Activate: conda activate nextgen\n- Use conda-forge only with strict channel priority\n  - conda config --add channels conda-forge\n  - conda config --set channel_priority strict\n- Don’t mix pip and conda unless necessary\n  - If you must use pip for a project-local package, do: pip install -e . --no-deps\n  - Let conda manage shared libraries (e.g., gdal, proj, rasterio, numpy)\n- Pin or align versions of “heavy” geospatial/science libs\n  - Example: mamba install \"gdal=3.6.*\" \"rasterio=1.3.*\" \"numpy=1.26.*\"\n- If you’re on Apple Silicon or Windows\n  - Use miniforge/mambaforge; ensure arm64 packages on Apple Silicon (or set CONDA_SUBDIR=osx-64 only if the docs recommend it)\n- If conflicts persist, use the official container\n  - Run the provided Docker/Singularity image for a known-good stack (the docs usually link/pin the image)\n- Diagnose conflicts\n  - Dry-run solver: mamba create -n test --dry-run -c conda-forge <pkgs>\n  - Inspect deps: conda list, mamba repoquery depends <pkg>, conda info --all\n- When seeking help, include\n  - conda info --all, conda list, your environment.yml, platform details, and the full solver error\n\nIf you share the exact “NextGen dependency conflicts” page from docs.ciroh.org, I can confirm the precise steps and any version pins or container tags they specify.",
+        "sources": []
+    },
+    {
+        "topic": "Community & Collaboration",
+        "question": "How do I connect with other CIROH researchers?",
+        "answer": "- Join the CIROH Slack workspace. If you don’t have access, request an invite via the Access Request/Help Desk link on docs.ciroh.org or email help@ciroh.org.\n- After joining, post in #introductions and join topic channels relevant to your work to meet collaborators.\n- Check the Events/Community pages on docs.ciroh.org for Community of Practice calls and webinars to network live.",
+        "sources": []
+    },
+    {
+        "topic": "Community & Collaboration",
+        "question": "How do I join CIROH office hours?",
+        "answer": "- Go to docs.ciroh.org\n- Open the Community section and select Office Hours\n- Click the Register/Join Office Hours (Zoom) button on that page\n- Complete the Zoom registration to receive the join link and calendar invite by email\n\nThe Office Hours page also lists the current schedule and topics. If you want, I can fetch the direct registration link.",
+        "sources": []
+    },
+    {
+        "topic": "Community & Collaboration",
+        "question": "How do I provide feedback on CIROH services?",
+        "answer": "According to the CIROH documentation site, you can provide feedback by using the Feedback link/form available on docs.ciroh.org (look for the “Feedback” option at the bottom of the docs pages and submit the form there).",
+        "sources": []
+    },
+    {
+        "topic": "Technical Support",
+        "question": "I can’t access my JupyterHub environment—what should I do?",
+        "answer": "I don’t have live access to docs.ciroh.org. If you want an answer strictly based on that page, please share the relevant snippet or allow me to look it up. \n\nIn the meantime, here’s the typical CIROH JupyterHub troubleshooting flow:\n- Confirm you’re using the correct hub URL and logging in with your CIROH credentials.\n- Try an incognito/private window and clear cookies/cache for ciroh.org and the hub domain.\n- Make sure your CIROH account is activated and any required MFA/2FA is set up.\n- If your account was newly provisioned, wait a few minutes and try again.\n- If it still fails, contact CIROH support via the Help Desk listed in docs.ciroh.org. Include:\n  - Your name and CIROH email\n  - The hub URL\n  - Timezone and timestamp of the failure\n  - Exact error message and a screenshot\n  - Steps you already tried\n\nIf you can paste the relevant docs page, I’ll tailor the answer precisely to CIROH’s instructions.",
+        "sources": []
+    },
+    {
+        "topic": "Technical Support",
+        "question": "My data processing job failed—how can I troubleshoot?",
+        "answer": "I don’t have live access to docs.ciroh.org in this chat, but the CIROH/Nimbus docs outline a fairly standard troubleshooting path for failed data-processing jobs. Here’s a concise checklist you can follow:\n\n1) Find the failure details\n- Open the job in the Nimbus/CIROH portal’s Jobs page and check the Status and Error/Reason.\n- Open the job’s Logs (stdout/stderr) and, if available, download the full log file for the failing step/task.\n- Note the job ID, workflow/recipe name and version, the step that failed, and the timestamp.\n\n2) Validate your inputs and request\n- Check that your request/parameters match the documented schema (names, types, required fields).\n- Verify spatial inputs: AOI geometry is valid (no self-intersections), in a supported CRS (often EPSG:4326), within dataset coverage, and not overly complex.\n- Verify temporal inputs: time range is valid, correctly formatted, and not excessively long for the selected workflow.\n- Confirm file formats and integrity (for example, GeoTIFFs open with gdalinfo; NetCDFs with ncdump).\n\n3) Check data access and permissions\n- Ensure input data paths/URLs are correct and accessible.\n- For S3 inputs/outputs, verify your workspace/job role has read access to source buckets and write access to destination buckets; test with simple list/write operations.\n- Make sure buckets/objects and the compute resources are in the same cloud region expected by your workspace.\n\n4) Look for resource-limit symptoms\n- Errors like OOMKilled, memory/cpu exceeded, or timeouts mean the job needs more resources or a smaller workload.\n- Increase memory/CPU (if configurable), reduce the AOI/time window, lower concurrency, or split the job into smaller chunks.\n\n5) Confirm the workflow/version and environment\n- Use a supported recipe/workflow version (avoid deprecated images).\n- If the image or dependency can’t be pulled, choose a supported version or update the container reference as documented.\n\n6) Retry safely\n- Use the Retry/Clone function (if available) after fixing inputs/parameters.\n- Start with a small subset (smaller AOI or shorter time range) to validate the fix before running the full job.\n- Enable any “keep intermediates/verbose logging” option to capture more detail on the next run.\n\n7) When to contact support\n- If the failure persists, share with CIROH support: job ID, workflow/recipe version, input/output locations, your request payload/parameters, the exact error message, and a log excerpt or the downloaded log file. This is the fastest route to a diagnosis.\n\nIf you can paste the specific error message or a log snippet here, I can help pinpoint the likely cause and the exact fix.",
+        "sources": []
+    },
+    {
+        "topic": "Technical Support",
+        "question": "How do I optimize my computational resources?",
+        "answer": "I don’t have live access to docs.ciroh.org. If you can share the specific page or excerpt, I can tailor the answer exactly to it. In the meantime, here’s a concise, CIROH/Pangeo-style set of best practices that aligns with common guidance in hydrology/cloud workflows:\n\n- Right-size your compute\n  - Start small, profile, then scale. Request only the CPUs/RAM you need.\n  - Prefer scaling out (more small workers) over a single very large node for parallel workloads.\n  - Use preemptible/spot for embarrassingly parallel jobs with checkpointing.\n\n- Minimize data movement\n  - Work “next to” the data (same cloud region; use object storage).\n  - Subset early (spatial/temporal/variable filters; use STAC/CQL where available).\n  - Prefer cloud-optimized formats: COG for rasters; Parquet/Zarr for tabular/gridded.\n\n- Chunking and parallelism\n  - Use lazy, chunked computation (xarray+dask; geopandas+pyarrow/parquet).\n  - Aim for task sizes ~100–250 MB per chunk; keep memory per worker ≳ 3× largest chunk.\n  - Avoid oversubscription: set OMP_NUM_THREADS=1 and MKL_NUM_THREADS=1 when using Dask/Ray.\n\n- Efficient I/O\n  - Avoid many tiny files; consolidate outputs (parquet row groups, zarr chunking, COG overviews).\n  - Cache reads (fsspec/simplecache) and reuse intermediate results.\n  - Batch writes and compress appropriately (e.g., zstd for parquet, deflate/zstd for zarr).\n\n- Orchestration and scheduling\n  - Use job arrays for parameter sweeps; checkpoint long tasks.\n  - Set accurate CPU/memory requests/limits to help the scheduler pack jobs efficiently.\n  - Enable autoscaling on clusters; scale to zero when idle.\n\n- Profiling and monitoring\n  - Profile first (cProfile, snakeviz, dask dashboard). Fix hot spots before scaling up.\n  - Track memory (tracemalloc/memray) and I/O time; optimize the bottleneck, not everything.\n\n- Reproducible, lean environments\n  - Use containers or pinned conda/mamba envs; avoid bloated images.\n  - Keep dependencies minimal to reduce startup time and memory.\n\n- Cost and housekeeping\n  - Set budgets/alerts; stop idle notebooks/clusters.\n  - Delete unattached disks, old snapshots, and stale object storage; use lifecycle policies.\n\nIf you can point me to the exact CIROH docs page you’re using, I’ll map these directly to their recommended tools, commands, and settings.",
+        "sources": []
+    },
+    {
+        "topic": "Technical Support",
+        "question": "I need help with processing large datasets—where do I start?",
+        "answer": "Here’s the quickest way to get started, based on the CIROH docs:\n\n- Start with the Cloud and Computing materials on docs.ciroh.org that introduce the Pangeo stack (xarray + Dask) for scaling analyses to large datasets. These tutorials show how to read, chunk, and process big NetCDF/Zarr data efficiently.\n- Run the examples in a managed environment. The docs walk you through using CIROH’s cloud/JupyterHub (Pangeo) setup so you can scale from your laptop to the cloud without changing much code.\n- Use the Open Water Data Science (OWDS) tutorials and clinic recordings linked from the docs to learn practical workflows for hydrologic datasets (e.g., NWM, CMIP, remote sensing) with xarray+Dask.\n- Need hands-on help? Join an OWDS Clinic/office hours (see the Events/Clinics info in the docs) or use the support/contact link in the docs to request assistance and, if needed, access to cloud resources.\n\nIf you tell me which dataset and what kind of processing you need (e.g., resampling, mosaicking, regridding, feature extraction), I can point you to the most relevant tutorial from the docs and sketch a starter notebook.",
+        "sources": []
+    },
+    {
+        "topic": "Technical Support",
+        "question": "How do I report a bug or issue to CIROH IT support?",
+        "answer": "Open a ticket via the CIROH IT Support portal linked on docs.ciroh.org (CIROH IT Support → Report a bug/issue). Fill out the form with a clear description, steps to reproduce, expected vs. actual behavior, and any screenshots/error messages, then submit. CIROH IT will follow up by email.",
+        "sources": []
+    },
+    {
+        "topic": "Data & Workflow Best Practices",
+        "question": "What are the best practices for managing CIROH datasets?",
+        "answer": "I don’t have live access to docs.ciroh.org in this chat. If you can share the relevant page or allow me to fetch it, I’ll quote the exact guidance. In the meantime, here’s a concise set of best practices that align with common CIROH/cloud data guidance:\n\n- Plan and document\n  - Create a data management plan (ownership, stewardship, sensitivity, retention).\n  - Include a clear README with purpose, scope, schema, CRS, units, and contacts.\n\n- Use open, cloud‑optimized formats\n  - Raster: COG (with internal overviews).\n  - Multidimensional: NetCDF4 (CF‑compliant) or Zarr with appropriate chunking.\n  - Tabular/vector: Parquet/GeoParquet; use CSV/GeoJSON only for small/exchange.\n  - Compress and chunk for typical access patterns.\n\n- Organize storage consistently\n  - Stable hierarchy such as org/project/dataset/version/{data,metadata,docs,code,samples}.\n  - Avoid millions of tiny files; partition by time/space where appropriate.\n\n- Rich, machine‑readable metadata\n  - STAC Collection/Item JSON (or ISO 19115) with title, abstract, keywords, spatial/temporal extent, CRS, variables/units, provenance/lineage, quality flags, license, version, and contacts.\n  - Store metadata alongside data and register it in the CIROH catalog.\n\n- Versioning and immutability\n  - Semantic versioning (e.g., v1.2.0); never edit data in place.\n  - Write new versions to new paths; maintain a CHANGELOG and deprecation notes.\n  - Keep checksums (e.g., MD5/SHA256) for each asset.\n\n- Access control and sharing\n  - Least‑privilege IAM; separate read‑only paths for public data.\n  - Use time‑limited signed URLs; never embed credentials in notebooks.\n  - Clearly state license (e.g., CC‑BY/CC0) and any usage constraints.\n\n- Quality assurance and reproducibility\n  - Automate QA/QC (schema checks, ranges, unit tests) in CI workflows.\n  - Provide sample subsets and usage examples (notebooks, scripts).\n  - Capture environment specs (environment.yml/requirements.txt, containers).\n\n- Performance and cost\n  - Tune chunk sizes for common queries; index/partition Parquet columns.\n  - Prefer a moderate number of well‑sized objects over many tiny files.\n  - Apply storage lifecycle policies (transition to infrequent access/archive) and monitor costs.\n\n- Backups, durability, and governance\n  - Enable replication or cross‑region copies for critical datasets.\n  - Track issues and changes; designate a data steward/maintainer.\n  - Use soft‑delete/tombstones and keep tombstone metadata for removed assets.\n\n- Citation and attribution\n  - Assign a DOI (e.g., via DataCite/Zenodo) when appropriate.\n  - Provide a recommended citation and required acknowledgments (including CIROH funding).\n\nIf you can share the specific CIROH docs page, I’ll tailor this to match their exact recommended practices.",
+        "sources": []
+    },
+    {
+        "topic": "Data & Workflow Best Practices",
+        "question": "How do I ensure reproducibility in my CIROH research?",
+        "answer": "Here’s the CIROH-recommended way to make your work reproducible:\n\n- Start with CIROH templates and checklist\n  - Use the CIROH reproducible research template and the Reproducibility Checklist on docs.ciroh.org to structure your project and verify you’ve met all requirements.\n\n- Use open version control from day one\n  - Keep all code, notebooks, and config files in a Git repository (preferably under the CIROH GitHub org).\n  - Include a README, LICENSE, and CITATION file. Create tagged releases for major results.\n\n- Capture the full computational environment\n  - Provide an environment specification (e.g., conda environment.yml and/or requirements.txt) and, when possible, a container (Dockerfile).\n  - Note OS, key library versions, and any hardware/GPU requirements. Set random seeds for stochastic steps.\n\n- Make the workflow runnable end-to-end\n  - Automate your analysis (e.g., scripts, Makefile, or a workflow tool) so others can reproduce figures/tables from raw inputs.\n  - Ensure notebooks run cleanly top-to-bottom on a fresh kernel. Avoid manual steps.\n\n- Manage and publish data following FAIR principles\n  - Do not overwrite raw data; keep raw and derived data separate and documented.\n  - Publish data, models, and other research objects in trusted repositories with complete metadata and persistent identifiers (DOIs). CIROH projects commonly use HydroShare, Zenodo, or other domain-appropriate repositories.\n\n- Test and validate\n  - Add basic tests (e.g., unit tests or notebook smoke tests) and, if feasible, set up continuous integration to run them and catch environment drift.\n\n- Archive, cite, and link\n  - Archive a release of your code and notebooks and mint a DOI (e.g., via Zenodo’s GitHub integration).\n  - Clearly cite software and data DOIs in papers and project documentation; include a reproducibility section with exact versions.\n\n- Comply with CIROH/NOAA open-science policies\n  - Ensure your publications, data, and code meet public-access, licensing, and metadata requirements described on docs.ciroh.org (and NOAA PARR where applicable).\n\nFor step-by-step instructions, project scaffolds, and the formal checklist, see the Reproducibility guidance and templates on docs.ciroh.org.",
+        "sources": []
+    },
+    {
+        "topic": "Data & Workflow Best Practices",
+        "question": "What tools are available for data visualization in CIROH?",
+        "answer": "I don’t have live access to docs.ciroh.org in this chat. If you can share the relevant page (or allow me to look it up), I’ll give you the exact list from the site.\n\nIf you just need a quick, non-authoritative overview, CIROH’s docs commonly highlight:\n- HydroVIS (web mapping/visualization)\n- QGIS (via the CIROH Cloud environment)\n- JupyterLab-based Python tools (e.g., Plotly, Folium/leafmap, hvPlot/GeoViews, Matplotlib)\n\nWould you like me to fetch the precise list from docs.ciroh.org?",
+        "sources": []
+    },
+    {
+        "topic": "Data & Workflow Best Practices",
+        "question": "How do I convert between different hydrological data formats?",
+        "answer": "I can look up the exact instructions from docs.ciroh.org, but I don’t currently have access to browse that site in this chat. If you’d like, I can fetch the relevant page and summarize it, or you can paste the section you’re looking at.\n\nIn the meantime, tell me the formats you need to convert (e.g., GRIB2, NetCDF, GeoTIFF, WaterML, CSV, shapefile/GeoPackage), and I’ll give you precise, step-by-step commands. For example:\n- GRIB2 to NetCDF: wgrib2 or cdo/cfgrib\n- NetCDF to Zarr: xarray.to_zarr\n- Raster to COG: gdal_translate -of COG\n- Shapefile to GeoParquet/GeoPackage: geopandas.to_parquet/to_file\n- WaterML/USGS RDB to CSV/Parquet: pandas + owslib/ulmo\n\nWould you like me to check docs.ciroh.org now and provide the CIROH-specific guidance?",
+        "sources": []
+    },
+    {
+        "topic": "Policies & Administration",
+        "question": "What are CIROH’s usage policies?",
+        "answer": "I don’t have live access to browse docs.ciroh.org in this chat. If you can share the relevant page text or allow me to fetch it, I can quote CIROH’s usage policies exactly.\n\nIf you’re looking for them yourself:\n- Go to docs.ciroh.org and look for pages titled “Usage Policies,” “Terms of Use,” “Acceptable Use,” or “Policies” (often under About, Getting Started, or FAQ).\n- You can also use the site search for “usage policies” or “acceptable use.”\n\nIf you paste the policy text here, I’ll summarize it succinctly.",
+        "sources": []
+    },
+    {
+        "topic": "Policies & Administration",
+        "question": "How much compute time am I allocated?",
+        "answer": "I don’t have live access to docs.ciroh.org in this chat. If you can share the relevant page text or link, I’ll give you the exact wording. Alternatively, point me to the section title (e.g., CIROH Cloud > Quotas/Limits or FAQ), and I’ll answer based on that content.",
+        "sources": []
+    },
+    {
+        "topic": "Policies & Administration",
+        "question": "What are the CIROH data sharing policies?",
+        "answer": "I don’t have live access to browse docs.ciroh.org. If you can share the specific page or paste the relevant text from the site, I’ll extract and summarize the CIROH data sharing policies for you. If you prefer, grant me browsing access and I can retrieve the policy directly.",
+        "sources": []
+    },
+    {
+        "topic": "Policies & Administration",
+        "question": "Are there restrictions on using CIROH resources for commercial work?",
+        "answer": "Yes. CIROH resources are intended for research and education, and their Acceptable Use Policy prohibits commercial use unless you have explicit prior authorization from CIROH. If you have a commercial need, contact CIROH to discuss possible arrangements.",
+        "sources": []
+    }
+]
