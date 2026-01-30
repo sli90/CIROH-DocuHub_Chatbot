@@ -1,7 +1,0 @@
-CIROH Documentation - NextGen Framework Category Links
-Total Links Found: 4
-
-https://docs.ciroh.org/docs/products/nextgen-framework
-https://docs.ciroh.org/docs/products/nextgen-framework/troute
-https://docs.ciroh.org/docs/products/nextgen-framework/ngen
-https://docs.ciroh.org/docs/products/nextgen-framework/nextgen
