@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/0d0a8d67a7fe4676bc84f6973dde0fc8">
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardNumber></hsterms:awardNumber>
+        <hsterms:awardTitle>CUAHSI HydroShare Modernization</hsterms:awardTitle>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration (NOAA), University of Alabama</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ciroh.ua.edu/research-projects/cuahsi-hydroshare-modernization/"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-04-17T18:52:44.017726+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:language>eng</dc:language>
+    <dc:subject>CIROH DevCon 2024</dc:subject>
+    <dc:subject>Reproducible Science</dc:subject>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-05-30T15:28:16.805360+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dcterms:bibliographicCitation>Garousi-Nejad, I., A. M. Castronova, S. Black (2025). Data and Code for Building and Executing Scientific Workflows in the Cloud, HydroShare, http://www.hydroshare.org/resource/0d0a8d67a7fe4676bc84f6973dde0fc8</dcterms:bibliographicCitation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:email>castronova.anthony@gmail.com</hsterms:email>
+        <hsterms:address>MA, US</hsterms:address>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1341-5681"/>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:hydroshare_user_id>
+        <hsterms:phone>3399334127</hsterms:phone>
+        <hsterms:name>Castronova, Anthony M.</hsterms:name>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=ScWTFoQAAAAJ&amp;hl=en"/>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Anthony_Castronova"/>
+        <hsterms:homepage rdf:resource="http://anthonycastronova.com"/>
+      </rdf:Description>
+    </dc:creator>
+    <dc:title>Data and Code for Building and Executing Scientific Workflows in the Cloud</dc:title>
+    <dc:subject>Cloud Workflows</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:name>Black, Scott</hsterms:name>
+        <hsterms:address>US</hsterms:address>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2351</hsterms:hydroshare_user_id>
+        <hsterms:email>sblack@cuahsi.org</hsterms:email>
+        <hsterms:organization>CUAHSI;Utah State University</hsterms:organization>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2351</hsterms:description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0009-0003-9687-2996"/>
+        <hsterms:phone></hsterms:phone>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>NGEN</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:hydroshare_user_id>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Irene_Garousi-Nejad"/>
+        <hsterms:email>igarousi@cuahsi.org</hsterms:email>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=dKqI7iAAAAAJ&amp;hl=en"/>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:description>
+        <hsterms:name>Garousi-Nejad, Irene</hsterms:name>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-2929-3946"/>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+      </rdf:Description>
+    </dc:creator>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This resource contains data and codes demonstrating how to build and execute scientific workflows in the cloud using cyberinfrastructure developed as part of the “HydroShare Modernization” CIROH research project. The goal is to illustrate how the general-purpose cloud analysis workflows developed to support common data archival operations can also be leveraged for scientific computing. This notebook describes the process for using the outcomes of the aforementioned CIROH project; however, these capabilities are still under active development and are not ready for widespread public use.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>Argo</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/0d0a8d67a7fe4676bc84f6973dde0fc8"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <hsterms:geospatialRelation>
+      <rdf:Description>
+        <dcterms:relation rdf:resource="https://geoconnex.us/ref/hu02/16"/>
+        <hsterms:relation_name>Great Basin Region [hu02/16]</hsterms:relation_name>
+      </rdf:Description>
+    </hsterms:geospatialRelation>
+  </hsterms:CompositeResource>
+</rdf:RDF>

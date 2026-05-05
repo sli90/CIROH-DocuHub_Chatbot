@@ -1,0 +1,41 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "0ef4366e7711478fa2637f5049b4881a",
+    "resource_title": "Demonstration of the National Water Model\u2019s Applicability to Community Resilience Planning: Cincinnati Use Case",
+    "abstract": "This resource provides codes and data to demonstrate a use case for evaluating the National Water Model (NWM) locally and enhancing its accessibility. The objective is to explore how NOAA\u2019s NWM can be utilized by a new audience of potential users. The NWM, managed by NOAA\u2019s National Water Center, is a comprehensive hydrologic model focusing on river and streamflow data. It offers insights into historical water conditions (with a 40-year retrospective capability), current water status, and future projections (ranging from 18 hours to 10-day and 30-day forecasts). Since its initial release in 2016, the NWM has been updated to version 3.0, with several planned enhancements and new services, including the Next Generation Framework and Flood Inundation Mapping, which are expected to be introduced within the next 24 months.\r\n\r\nWorking Group's Project: \u201cEvaluating the NWM as a Data Source for Resilient Transportation Planning\u201d and \u201cBuilding Trust Around Predictive Hydrologic Resources\r\n\r\nFunding for this project was provided by the National Oceanic and Atmospheric Administration (NOAA), awarded to the Cooperative Institute for Research on Hydrology (CIROH) through the NOAA Cooperative Agreement with The University of Alabama, NA22NWS4320003",
+    "authors": [
+        "Garousi-Nejad, Irene",
+        "Castronova, Anthony M.",
+        "Raub, Kristin B."
+    ],
+    "creator": "Garousi-Nejad, Irene",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2024-06-13T12:33:23.709305Z",
+    "date_last_updated": "2024-09-12T19:46:20.846400Z",
+    "bag_last_downloaded": "2025-12-06T10:35:37.417051Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/0ef4366e7711478fa2637f5049b4881a.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "northlimit": 39.15237917255695,
+                "southlimit": 37.43234834841422,
+                "eastlimit": -82.56522874558439,
+                "westlimit": -84.89620968834959,
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/0ef4366e7711478fa2637f5049b4881a/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/0ef4366e7711478fa2637f5049b4881a/map/",
+    "resource_url": "http://www.hydroshare.org/resource/0ef4366e7711478fa2637f5049b4881a/",
+    "content_types": [
+        "Geographic Raster Content"
+    ]
+}

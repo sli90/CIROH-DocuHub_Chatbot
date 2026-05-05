@@ -1,0 +1,52 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "27045581bdea4808a393330f2417379c",
+    "resource_title": "NextGen Water Modeling Workflow for Research-Scale Applications",
+    "abstract": "This HydroShare resource delivers a complete, modular workflow for implementing the Next Generation Water Modeling Framework (NextGen) using cloud-based or containerized computing environments. The workflow guides users through each key component of a research-scale hydrologic modeling application, including model input data preparation, model configuration and execution, calibration, and performance evaluation.\r\n\r\nTo run this workflow, users must launch the resource within an interactive computing environment. From the HydroShare \"Open With\" web app connector, select \"CIROH-2i2c JupyterHub\", then choose the pre-configured \"CIROH Community NextGen Hub\" image. This environment includes all required NextGen tools and dependencies to ensure consistent, reproducible execution.\r\n\r\nThe workflow is organized into five interoperable Jupyter Notebooks that can be executed independently or as a full end-to-end sequence:\r\n\r\n1. NextGen Data Preparation \u2013 Subsets the hydrofabric for a user-defined Area of Interest (AOI), generates meteorological forcing data, and creates model configuration files and realizations for CFE and Noah-OWP model components.\r\n\r\n2. NextGen Run \u2013 Executes the NextGen model using default configurations to establish baseline simulation performance.\r\n\r\n3. NextGen TEEHR Evaluation \u2013 Compares simulated streamflow results with USGS observations and the National Water Model Retrospective Analysis v3.0 using TEEHR (Tools for Exploratory Evaluation in Hydrologic Research).\r\n\r\n4. NextGen Output Analysis \u2013 Visualizes water balance components and other model outputs for interpretation and post-processing.\r\n\r\n5. NextGen Calibration \u2013 Applies SPOTPY-based optimization to improve model performance through automated streamflow calibration.\r\n\r\nA lightweight Python wrapper, pyngiab.py, streamlines interaction with the NextGen model engine by managing configuration loading, model execution, and output organization directly from the notebooks.\r\n\r\nSupplementary Python utility scripts support data subsetting, visualization, calibration, programmatic execution, and reproducible model management. Together, these components establish a transparent, adaptable, and fully traceable workflow to support collaborative hydrologic research, model testing, and community-driven advancement of the NextGen framework.",
+    "authors": [
+        "Nassar, Ayman",
+        "Tarboton, David",
+        "Baig, Furqan",
+        "Patel, Arpita",
+        "Cunningham, Josh",
+        "Salehabadi, Homa"
+    ],
+    "creator": "Nassar, Ayman",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2025-03-24T16:26:57.316808Z",
+    "date_last_updated": "2026-02-26T20:56:31.679792Z",
+    "bag_last_downloaded": "2026-03-31T15:25:25.786545Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/27045581bdea4808a393330f2417379c.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "name": "CONUS",
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 49.804,
+                "eastlimit": -65.4594,
+                "southlimit": 24.639,
+                "westlimit": -124.8739
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "1980-01-01",
+                "end": "2022-12-31"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/27045581bdea4808a393330f2417379c/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/27045581bdea4808a393330f2417379c/map/",
+    "resource_url": "http://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c/",
+    "content_types": [
+        "Single File Content"
+    ]
+}

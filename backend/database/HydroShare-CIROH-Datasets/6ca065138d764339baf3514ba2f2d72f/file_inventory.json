@@ -1,0 +1,32 @@
+[
+    {
+        "file_name": "README.txt",
+        "file_path": "README.txt",
+        "extension": ".txt",
+        "checksum": "f114da897b90c6b32e6a987f64e362d1"
+    },
+    {
+        "file_name": "linked_sites.gpkg",
+        "file_path": "linked_sites.gpkg",
+        "extension": ".gpkg",
+        "checksum": "f4864562a2b73a5e80940c714e933aa5"
+    },
+    {
+        "file_name": "NWM_output_variable_retrieval_with_shapefile.ipynb",
+        "file_path": "NWM_output_variable_retrieval_with_shapefile.ipynb",
+        "extension": ".ipynb",
+        "checksum": "947fb1a66bfabfdf57fa35c93fc0ba48"
+    },
+    {
+        "file_name": "nwm_utils.py",
+        "file_path": "nwm_utils.py",
+        "extension": ".py",
+        "checksum": "0ed810604b75c72cb0711d30d43bb558"
+    },
+    {
+        "file_name": "NWM_output_variable_retrieval_with_FeatureID.ipynb",
+        "file_path": "NWM_output_variable_retrieval_with_FeatureID.ipynb",
+        "extension": ".ipynb",
+        "checksum": "72bcd7e29678bb38398aa1c7d5af91d7"
+    }
+]

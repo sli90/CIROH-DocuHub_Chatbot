@@ -1,0 +1,53 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "72ea9726187e43d7b50a624f2acf591f",
+    "resource_title": "Jupyter Notebooks for the Retrieval of AORC Data for Hydrologic Analysis",
+    "abstract": "This HydroShare resource contains Jupyter Notebooks with instructions and code for accessing and subsetting the NOAA Analysis of Record for Calibration (AORC) dataset. The resource includes four Jupyter Notebooks:\r\n1. AORC_LL_PointRetrieval.ipynb:  Retrieves and aggregates data from the latitude-longitude gridded dataset for a specific point specified using geographic coordinates.\r\n2. AORC_LL_ZoneRetrieval.ipynb:  Retrieves and aggregates data from the latitude-longitude gridded dataset for an area defined by a polygon shapefile.\r\n3. AORC_NWMProj_PointRetrieval.ipynb:  Retrieves and aggregates data from the NWM projected dataset for a specific point specified using geographic coordinates.\r\n4. AORC_NWMProj_ZoneRetrieval.ipynb:  Retrieves and aggregates data from the NWM projected dataset for an area defined by a polygon shapefile.\r\n\r\nThese notebooks programmatically retrieve the data from Amazon Web Services, aggregate it at user-defined time scales (which may differ from NOAA\u2019s original time steps), and, in the case of shapefile-based data retrieval, compute the average over the shapes in the given shapefile.\r\n\r\nThe provided notebooks are coded to retrieve data from AORC version 1.1 in Zarr format, either from the latitude-longitude gridded dataset (https://registry.opendata.aws/noaa-nws-aorc/) or the NWM projected dataset (https://registry.opendata.aws/nwm-archive/).",
+    "authors": [
+        "Salehabadi, Homa",
+        "Tarboton, David",
+        "Nassar, Ayman",
+        "Castronova, Anthony M.",
+        "Dash, Pabitra",
+        "Patel, Arpita",
+        "Baig, Furqan"
+    ],
+    "creator": "Salehabadi, Homa",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2024-03-18T19:24:50.904052Z",
+    "date_last_updated": "2026-02-26T20:41:54.612368Z",
+    "bag_last_downloaded": "2026-03-31T21:33:11.791612Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/72ea9726187e43d7b50a624f2acf591f.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "name": "US",
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 49.1415,
+                "eastlimit": -76.0062,
+                "southlimit": 24.8306,
+                "westlimit": -125.0495
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "1979-02-01",
+                "end": "2023-01-31"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/72ea9726187e43d7b50a624f2acf591f/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/72ea9726187e43d7b50a624f2acf591f/map/",
+    "resource_url": "http://www.hydroshare.org/resource/72ea9726187e43d7b50a624f2acf591f/",
+    "content_types": [
+        "Geographic Feature Content"
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "4d98edaf289942e49ba1e2491d123a32",
+    "resource_title": "High Water Marks July 2024 Vermont Floods - UVM Floodplains",
+    "abstract": "This dataset represents high-water mark observations made following widespread flooding in Vermont on July 10-11, 2024. Sites visited following flood recession are part of a long-term floodplain monitoring and habitat assessment maintained by the University of Vermont.  Immediately after the floods, field teams flagged high water marks, took photos, and marked the locations with smart phone GPS. Subsequently a survey team revisited the sites with an RTK-GPS to more precisely capture the location and elevation and post-processed through NOAA's OPUS.\r\n\r\nData quality is noted based on the following:\r\nField Rating: Based on initial site visits. Field personnel noted their confidence level in the indicators of the high water marks. High confidence are noted as \"Excellent\" or \"Good\", and lower confidence points are noted as \"Fair\" or \"Poor\"\r\nGPS Quality: Based on RTK-GPS survey quality. More information can be found in accompanying txt file.",
+    "authors": [
+        "Kenneth Johnston",
+        "Stewart Kabis",
+        "Elizabeth Doran",
+        "Diehl, Rebecca"
+    ],
+    "creator": "Kenneth Johnston",
+    "doi": "10.4211/hs.4d98edaf289942e49ba1e2491d123a32",
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": true,
+    "published": true,
+    "date_created": "2025-07-22T16:06:52.547506Z",
+    "date_last_updated": "2025-07-28T14:45:06.693956Z",
+    "bag_last_downloaded": "2026-03-15T00:15:13.571279Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/4d98edaf289942e49ba1e2491d123a32.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 44.9863,
+                "eastlimit": -72.3395,
+                "southlimit": 43.2593,
+                "westlimit": -73.3612
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/4d98edaf289942e49ba1e2491d123a32/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/4d98edaf289942e49ba1e2491d123a32/map/",
+    "resource_url": "http://www.hydroshare.org/resource/4d98edaf289942e49ba1e2491d123a32/",
+    "content_types": [
+        "CSV Content"
+    ]
+}

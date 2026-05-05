@@ -1,0 +1,144 @@
+{
+    "title": "Jupyter Notebooks for the Retrieval of AORC Data for Hydrologic Analysis",
+    "abstract": "This HydroShare resource contains Jupyter Notebooks with instructions and code for accessing and subsetting the NOAA Analysis of Record for Calibration (AORC) dataset. The resource includes four Jupyter Notebooks:\r\n1. AORC_LL_PointRetrieval.ipynb:  Retrieves and aggregates data from the latitude-longitude gridded dataset for a specific point specified using geographic coordinates.\r\n2. AORC_LL_ZoneRetrieval.ipynb:  Retrieves and aggregates data from the latitude-longitude gridded dataset for an area defined by a polygon shapefile.\r\n3. AORC_NWMProj_PointRetrieval.ipynb:  Retrieves and aggregates data from the NWM projected dataset for a specific point specified using geographic coordinates.\r\n4. AORC_NWMProj_ZoneRetrieval.ipynb:  Retrieves and aggregates data from the NWM projected dataset for an area defined by a polygon shapefile.\r\n\r\nThese notebooks programmatically retrieve the data from Amazon Web Services, aggregate it at user-defined time scales (which may differ from NOAA\u2019s original time steps), and, in the case of shapefile-based data retrieval, compute the average over the shapes in the given shapefile.\r\n\r\nThe provided notebooks are coded to retrieve data from AORC version 1.1 in Zarr format, either from the latitude-longitude gridded dataset (https://registry.opendata.aws/noaa-nws-aorc/) or the NWM projected dataset (https://registry.opendata.aws/nwm-archive/).",
+    "language": "eng",
+    "subjects": [
+        "Analysis of record for calibration",
+        "AORC",
+        "ciroh_hub_notebook",
+        "ZARR",
+        "National Water Model"
+    ],
+    "creators": [
+        {
+            "name": "Salehabadi, Homa",
+            "address": "Utah, US",
+            "organization": "Utah Sate University",
+            "email": "homa.salehabadi@gmail.com",
+            "creator_order": 1,
+            "hydroshare_user_id": 4484,
+            "identifiers": {}
+        },
+        {
+            "name": "Tarboton, David",
+            "phone": "+1 (435) 797-3172",
+            "address": "UT, US",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "homepage": "http://hydrology.usu.edu/dtarb",
+            "creator_order": 2,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        },
+        {
+            "name": "Nassar, Ayman",
+            "phone": "4358905557",
+            "organization": "Utah State University",
+            "email": "aymnassar@gmail.com",
+            "creator_order": 3,
+            "hydroshare_user_id": 1981,
+            "identifiers": {}
+        },
+        {
+            "name": "Castronova, Anthony M.",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 4,
+            "hydroshare_user_id": 11,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=ScWTFoQAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Anthony_Castronova",
+                "ORCID": "https://orcid.org/0000-0002-1341-5681"
+            }
+        },
+        {
+            "name": "Dash, Pabitra",
+            "address": "VA, US",
+            "organization": "USU",
+            "email": "pabitra.dash@usu.edu",
+            "homepage": "https://usu.edu/pkdash",
+            "creator_order": 5,
+            "hydroshare_user_id": 41,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-5995-9297"
+            }
+        },
+        {
+            "name": "Patel, Arpita",
+            "address": "Alabama, US",
+            "organization": "AWI;UA",
+            "email": "apatel54@ua.edu",
+            "creator_order": 6,
+            "hydroshare_user_id": 16622,
+            "identifiers": {}
+        },
+        {
+            "name": "Baig, Furqan",
+            "address": "Illinois, US",
+            "organization": "University of Illinois at Urbana-Champaign",
+            "email": "fbaig@illinois.edu",
+            "creator_order": 7,
+            "hydroshare_user_id": 16982,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is part of",
+            "value": "Nassar, A., D. Tarboton (2026). Hydrological Data Retrieval Using CIROH JupyterHUB, HydroShare, http://www.hydroshare.org/resource/657ced1716a94ea197d226015136a5db"
+        },
+        {
+            "type": "The content of this resource is similar to",
+            "value": "https://github.com/CUAHSI/notebooks/tree/main/Data%20Access%20Examples/AORC%20-%20Retrieval%20of%20AORC%20Data%20for%20Hydrologic%20Analysis"
+        },
+        {
+            "type": "The content of this resource is part of",
+            "value": "Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Science Foundation",
+            "title": "HDR Institute: Geospatial Understanding through an Integrative Discovery Environment",
+            "number": "2118329",
+            "funding_agency_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2118329"
+        },
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA), University of Alabama",
+            "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+            "number": "NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University",
+            "funding_agency_url": "https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "name": "US",
+        "northlimit": 49.1415,
+        "eastlimit": -76.0062,
+        "southlimit": 24.8306,
+        "westlimit": -125.0495,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1979-02-01 00:00:00",
+        "end": "2023-01-31 00:00:00"
+    },
+    "citation": "Salehabadi, H., D. Tarboton, A. Nassar, A. M. Castronova, P. Dash, A. Patel, F. Baig (2026). Jupyter Notebooks for the Retrieval of AORC Data for Hydrologic Analysis, HydroShare, http://www.hydroshare.org/resource/72ea9726187e43d7b50a624f2acf591f",
+    "url": "http://www.hydroshare.org/resource/72ea9726187e43d7b50a624f2acf591f",
+    "identifier": "http://www.hydroshare.org/resource/72ea9726187e43d7b50a624f2acf591f",
+    "created": "2024-03-18 19:24:50.904052+00:00",
+    "modified": "2026-02-26 20:41:54.612368+00:00",
+    "type": "CompositeResource"
+}

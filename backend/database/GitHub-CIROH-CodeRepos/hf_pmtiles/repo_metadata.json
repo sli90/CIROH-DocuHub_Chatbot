@@ -1,0 +1,41 @@
+{
+    "id": 891156029,
+    "name": "hf_pmtiles",
+    "full_name": "CIROH-UA/hf_pmtiles",
+    "html_url": "https://github.com/CIROH-UA/hf_pmtiles",
+    "description": "Script to convert hydrofabric geopackage to pmtiles + example uses",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2024-11-19T20:34:34Z",
+    "updated_at": "2025-03-04T18:15:18Z",
+    "pushed_at": "2026-04-22T19:14:50Z",
+    "language": "Python",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 34,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 1,
+    "open_issues_count": 0,
+    "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null
+    },
+    "contributors_summary": {
+        "contributors_count": 1,
+        "top_contributors": [
+            {
+                "id": 26720477,
+                "login": "JoshCu",
+                "html_url": "https://github.com/JoshCu",
+                "type": "User",
+                "contributions": 5
+            }
+        ]
+    }
+}

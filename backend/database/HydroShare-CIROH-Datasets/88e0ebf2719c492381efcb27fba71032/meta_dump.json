@@ -1,0 +1,67 @@
+{
+    "title": "Provo River near Woodland (gage-10154200) NGIAB Case Study (calibrated)",
+    "abstract": "The U.S. National Water Model (NWM) provides continental-scale hydrological forecasts, but its complexity makes deployment and customization on researchers' computing resources challenging for local and regional studies. The Next Generation Water Resources Modeling Framework (NextGen) enhances model flexibility and interoperability, yet deploying it independently remains demanding. To address this, we developed the NextGen In A Box (NGIAB) to provide a containerized solution for simplified NextGen deployment on local machines, high-performance computing (HPC) clusters, and cloud environments. NGIAB leverages Docker and Singularity containers, pre-configured with core components expected in forthcoming NWM version 4.0. This integrates input datasets, forcing engines, and necessary libraries, enabling seamless execution. Developed by CIROH and Lynker, NGIAB\u2019s cyberinfrastructure features cloud-based data access, a robust CI/CD pipeline, and streamlined Basic Model Interface (BMI) coupling. By lowering technical barriers, NGIAB enables researchers to efficiently run localized models, promoting community engagement in hydrologic modeling and facilitating research-to-applications pathways.",
+    "language": "eng",
+    "subjects": [
+        "National Water Model (NWM)",
+        "Hydrologic Modeling",
+        "NextGen Framework",
+        "Community Modeling",
+        "DevOps Processes"
+    ],
+    "creators": [
+        {
+            "name": "Patel, Arpita",
+            "organization": "AWI;UA",
+            "email": "apatel54@ua.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 16622,
+            "identifiers": {}
+        },
+        {
+            "name": "Singh, Manjila",
+            "address": "AL, US",
+            "organization": "Alabama Water Institute",
+            "email": "msingh9@crimson.ua.edu",
+            "creator_order": 2,
+            "hydroshare_user_id": 26773,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "NOAA Cooperative Institute Program",
+            "number": "NA22NWS4320003"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "point",
+        "name": "Provo River near Woodland UT",
+        "east": -111.1687838,
+        "north": 40.5577278,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "2017-01-01 00:00:00",
+        "end": "2023-01-02 00:00:00"
+    },
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Patel, A., M. Singh (2025). Provo River near Woodland (gage-10154200) NGIAB Case Study (calibrated), HydroShare, https://doi.org/10.4211/hs.88e0ebf2719c492381efcb27fba71032, DOI for this published resource is pending activation.",
+    "url": "http://www.hydroshare.org/resource/88e0ebf2719c492381efcb27fba71032",
+    "identifier": "http://www.hydroshare.org/resource/88e0ebf2719c492381efcb27fba71032",
+    "created": "2025-03-25 13:54:06.751768+00:00",
+    "modified": "2025-09-24 13:49:07.172861+00:00",
+    "published": "2025-09-24 13:49:07.589547+00:00",
+    "type": "CompositeResource"
+}

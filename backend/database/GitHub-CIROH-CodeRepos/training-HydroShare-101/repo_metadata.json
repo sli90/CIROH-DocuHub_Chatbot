@@ -1,0 +1,41 @@
+{
+    "id": 1004396017,
+    "name": "training-HydroShare-101",
+    "full_name": "CIROH-UA/training-HydroShare-101",
+    "html_url": "https://github.com/CIROH-UA/training-HydroShare-101",
+    "description": "HydroShare 101 training module",
+    "homepage": "http://docs.ciroh.org/training-HydroShare-101/",
+    "default_branch": "main",
+    "created_at": "2025-06-18T14:59:03Z",
+    "updated_at": "2025-06-18T16:06:40Z",
+    "pushed_at": "2026-04-28T00:45:20Z",
+    "language": null,
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 9459,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null
+    },
+    "contributors_summary": {
+        "contributors_count": 1,
+        "top_contributors": [
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

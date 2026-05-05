@@ -1,0 +1,46 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "807458c515eb400dadb9dce5db30399c",
+    "resource_title": "Basin Characteristics and Streamflow Statistics for the USGS Stream Gage Chester C at Arctic Boulevard at Anchorage AK \u2013 15275100 Watershed",
+    "abstract": "This resource contains detailed information about the basin characteristics and streamflow statistics for the USGS stream gage Chester C at Arctic Boulevard in Anchorage, Alaska (Station ID: 15275100). These data have been obtained from the USGS StreamStats web application on June 19, 2024. This resource was created during the demo session of the National Water Center Summer Institute Program and the goal was to access data, share it on HydroShare and describe it.",
+    "authors": [
+        "Garousi-Nejad, Irene"
+    ],
+    "creator": "Garousi-Nejad, Irene",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2024-06-19T15:54:22.076827Z",
+    "date_last_updated": "2024-06-19T16:22:36.465021Z",
+    "bag_last_downloaded": "2025-12-06T10:35:44.432644Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/807458c515eb400dadb9dce5db30399c.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "northlimit": 61.22944095043106,
+                "southlimit": 61.15691356564258,
+                "eastlimit": -149.58936998417602,
+                "westlimit": -149.8979017892175,
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees"
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "1966-06-01",
+                "end": "2024-06-19"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/807458c515eb400dadb9dce5db30399c/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/807458c515eb400dadb9dce5db30399c/map/",
+    "resource_url": "http://www.hydroshare.org/resource/807458c515eb400dadb9dce5db30399c/",
+    "content_types": [
+        "Geographic Feature Content"
+    ]
+}

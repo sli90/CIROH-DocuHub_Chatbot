@@ -1,0 +1,53 @@
+{
+    "title": "David Tarbotons working files from CIROH JupyterHub Tutorial",
+    "abstract": "This resource holds some of the files produced while doing the CIROH HydroShare NextGen Model Tutorial described in\r\n\r\nTarboton, D., H. Salehabadi, A. Nassar, F. Baig, A. M. Castronova, I. Garousi-Nejad, A. Patel, P. Dash (2025). Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial, HydroShare, http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1\r\n\r\nIt serves as a pedagogical example for sharing content with the CIROH HydroShare community and preliminary introduction to NextGen.",
+    "language": "eng",
+    "subjects": [
+        "NextGen",
+        "CIROHDevCon25",
+        "CIROH"
+    ],
+    "creators": [
+        {
+            "name": "Tarboton, David",
+            "phone": "+1 (435) 797-3172",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is derived from",
+            "value": "Tarboton, D., H. Salehabadi, A. Nassar, F. Baig, A. M. Castronova, I. Garousi-Nejad, A. Patel, P. Dash (2025). Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial, HydroShare, http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA), University of Alabama",
+            "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+            "number": "NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University",
+            "funding_agency_url": "https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"
+        }
+    ],
+    "period_coverage": {
+        "start": "2021-10-01 00:00:00",
+        "end": "2022-09-30 00:00:00"
+    },
+    "citation": "Tarboton, D. (2025). David Tarbotons working files from CIROH JupyterHub Tutorial, HydroShare, http://www.hydroshare.org/resource/48b3355015f84e98a2cc6b6d134e77f2",
+    "url": "http://www.hydroshare.org/resource/48b3355015f84e98a2cc6b6d134e77f2",
+    "identifier": "http://www.hydroshare.org/resource/48b3355015f84e98a2cc6b6d134e77f2",
+    "created": "2025-05-26 17:06:35.531413+00:00",
+    "modified": "2025-05-26 21:22:46.271889+00:00",
+    "type": "CompositeResource"
+}

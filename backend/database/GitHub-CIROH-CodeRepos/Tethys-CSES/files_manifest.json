@@ -1,0 +1,514 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 147,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/EE_authenticate.JPG",
+        "file_name": "EE_authenticate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE.png",
+        "file_name": "GEE.png",
+        "extension": ".png",
+        "size_bytes": 173501,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_Jupyter_Kernel.JPG",
+        "file_name": "GEE_Jupyter_Kernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 20495,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_Jupyter_Kernel2.JPG",
+        "file_name": "GEE_Jupyter_Kernel2.JPG",
+        "extension": ".jpg",
+        "size_bytes": 13197,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_Logo.jpg",
+        "file_name": "GEE_Logo.jpg",
+        "extension": ".jpg",
+        "size_bytes": 51336,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_ML_Hydrological_Cycle.jpg",
+        "file_name": "GEE_ML_Hydrological_Cycle.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1820559,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_ML_Hydrological_Cycle.pptx",
+        "file_name": "GEE_ML_Hydrological_Cycle.pptx",
+        "extension": ".pptx",
+        "size_bytes": 1705429,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_imagery.JPG",
+        "file_name": "GEE_imagery.JPG",
+        "extension": ".jpg",
+        "size_bytes": 58478,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_ipkernel.JPG",
+        "file_name": "GEE_ipkernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2333,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_ipkernel_install.JPG",
+        "file_name": "GEE_ipkernel_install.JPG",
+        "extension": ".jpg",
+        "size_bytes": 3839,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/HUCEval.JPG",
+        "file_name": "HUCEval.JPG",
+        "extension": ".jpg",
+        "size_bytes": 205556,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/LandCover.JPG",
+        "file_name": "LandCover.JPG",
+        "extension": ".jpg",
+        "size_bytes": 114392,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/ML_workflow.JPG",
+        "file_name": "ML_workflow.JPG",
+        "extension": ".jpg",
+        "size_bytes": 38953,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/NOAA_HydroCycle.png",
+        "file_name": "NOAA_HydroCycle.png",
+        "extension": ".png",
+        "size_bytes": 639583,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/NWM_ML_Hydrological_Cycle.png",
+        "file_name": "NWM_ML_Hydrological_Cycle.png",
+        "extension": ".png",
+        "size_bytes": 24002256,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/NWM_ML_Hydrological_Cycle.pptx",
+        "file_name": "NWM_ML_Hydrological_Cycle.pptx",
+        "extension": ".pptx",
+        "size_bytes": 1989173,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/NoAAhydro_5cycle.jpg",
+        "file_name": "NoAAhydro_5cycle.jpg",
+        "extension": ".jpg",
+        "size_bytes": 122448,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/ROSET-Kernel.JPG",
+        "file_name": "ROSET-Kernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 25488,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/ReachEval.JPG",
+        "file_name": "ReachEval.JPG",
+        "extension": ".jpg",
+        "size_bytes": 200406,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/StateEval.JPG",
+        "file_name": "StateEval.JPG",
+        "extension": ".jpg",
+        "size_bytes": 265259,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/StreamStats.JPG",
+        "file_name": "StreamStats.JPG",
+        "extension": ".jpg",
+        "size_bytes": 186922,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/SupportLogo.JPG",
+        "file_name": "SupportLogo.JPG",
+        "extension": ".jpg",
+        "size_bytes": 490981,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/Terrain.JPG",
+        "file_name": "Terrain.JPG",
+        "extension": ".jpg",
+        "size_bytes": 173091,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/USGS_1017200_Red_Butte.JPG",
+        "file_name": "USGS_1017200_Red_Butte.JPG",
+        "extension": ".jpg",
+        "size_bytes": 149467,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/USGS_Guage_Locations.JPG",
+        "file_name": "USGS_Guage_Locations.JPG",
+        "extension": ".jpg",
+        "size_bytes": 36473,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/USGS_Sites.jpg",
+        "file_name": "USGS_Sites.jpg",
+        "extension": ".jpg",
+        "size_bytes": 622422,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/USGS_Sites.pptx",
+        "file_name": "USGS_Sites.pptx",
+        "extension": ".pptx",
+        "size_bytes": 78414,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/XGBoost.png",
+        "file_name": "XGBoost.png",
+        "extension": ".png",
+        "size_bytes": 55549,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/climate.JPG",
+        "file_name": "climate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 37977,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/condaActivate.JPG",
+        "file_name": "condaActivate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2006,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/condaEEisntall.JPG",
+        "file_name": "condaEEisntall.JPG",
+        "extension": ".jpg",
+        "size_bytes": 3768,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/condaEnv.JPG",
+        "file_name": "condaEnv.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2892,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/python.png",
+        "file_name": "python.png",
+        "extension": ".png",
+        "size_bytes": 11155,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 8872,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "install.yml",
+        "file_name": "install.yml",
+        "extension": ".yml",
+        "size_bytes": 544,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "setup.py",
+        "file_name": "setup.py",
+        "extension": ".py",
+        "size_bytes": 836,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/HUC_Controller.py",
+        "file_name": "HUC_Controller.py",
+        "extension": ".py",
+        "size_bytes": 21291,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/Reach_Controller.py",
+        "file_name": "Reach_Controller.py",
+        "extension": ".py",
+        "size_bytes": 17305,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/State_Controller.py",
+        "file_name": "State_Controller.py",
+        "extension": ".py",
+        "size_bytes": 20517,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 48,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/app.py",
+        "file_name": "app.py",
+        "extension": ".py",
+        "size_bytes": 699,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/controllers.py",
+        "file_name": "controllers.py",
+        "extension": ".py",
+        "size_bytes": 1990,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/public/css/main.css",
+        "file_name": "main.css",
+        "extension": ".css",
+        "size_bytes": 171,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/public/images/CSES_eval.jpg",
+        "file_name": "CSES_eval.jpg",
+        "extension": ".jpg",
+        "size_bytes": 40730,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/public/images/CSESoverviewImage.JPG",
+        "file_name": "CSESoverviewImage.JPG",
+        "extension": ".jpg",
+        "size_bytes": 217195,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/public/images/icon.gif",
+        "file_name": "icon.gif",
+        "extension": ".gif",
+        "size_bytes": 14125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/public/js/main.js",
+        "file_name": "main.js",
+        "extension": ".js",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/public/js/roset_aws.js",
+        "file_name": "roset_aws.js",
+        "extension": ".js",
+        "size_bytes": 2595,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/templates/community_streamflow_evaluation_system/base.html",
+        "file_name": "base.html",
+        "extension": ".html",
+        "size_bytes": 1010,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/templates/community_streamflow_evaluation_system/home.html",
+        "file_name": "home.html",
+        "extension": ".html",
+        "size_bytes": 2990,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/templates/community_streamflow_evaluation_system/huc_eval.html",
+        "file_name": "huc_eval.html",
+        "extension": ".html",
+        "size_bytes": 1047,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/templates/community_streamflow_evaluation_system/reach_eval.html",
+        "file_name": "reach_eval.html",
+        "extension": ".html",
+        "size_bytes": 981,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/templates/community_streamflow_evaluation_system/state_eval.html",
+        "file_name": "state_eval.html",
+        "extension": ".html",
+        "size_bytes": 1024,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/tests/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/tests/tests.py",
+        "file_name": "tests.py",
+        "extension": ".py",
+        "size_bytes": 7008,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 2332,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/workspaces/app_workspace/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/workspaces/app_workspace/sample_nextgen_data/config/awi_config.ini",
+        "file_name": "awi_config.ini",
+        "extension": ".ini",
+        "size_bytes": 624,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/workspaces/app_workspace/sample_nextgen_data/config/awi_simplified_realization.json",
+        "file_name": "awi_simplified_realization.json",
+        "extension": ".json",
+        "size_bytes": 4167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/workspaces/app_workspace/sample_nextgen_data/config/crosswalk.json",
+        "file_name": "crosswalk.json",
+        "extension": ".json",
+        "size_bytes": 560,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/workspaces/app_workspace/sample_nextgen_data/config/flowpath_edge_list.json",
+        "file_name": "flowpath_edge_list.json",
+        "extension": ".json",
+        "size_bytes": 41527,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/workspaces/app_workspace/sample_nextgen_data/config/ngen.yaml",
+        "file_name": "ngen.yaml",
+        "extension": ".yaml",
+        "size_bytes": 4766,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/community_streamflow_evaluation_system/workspaces/user_workspaces/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

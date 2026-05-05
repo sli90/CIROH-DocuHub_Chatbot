@@ -1,0 +1,146 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 20,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Dockerfile",
+        "file_name": "Dockerfile",
+        "extension": "",
+        "size_bytes": 4929,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 11357,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 4922,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "generate_hydrofabric.sh",
+        "file_name": "generate_hydrofabric.sh",
+        "extension": ".sh",
+        "size_bytes": 1773,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "generate_vpus.sh",
+        "file_name": "generate_vpus.sh",
+        "extension": ".sh",
+        "size_bytes": 346,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/formatting/add_dhbv_attrs.py",
+        "file_name": "add_dhbv_attrs.py",
+        "extension": ".py",
+        "size_bytes": 249,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/formatting/compress_vpus.sh",
+        "file_name": "compress_vpus.sh",
+        "extension": ".sh",
+        "size_bytes": 1467,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/formatting/convert_hydrolocations_to_geom.sql",
+        "file_name": "convert_hydrolocations_to_geom.sql",
+        "extension": ".sql",
+        "size_bytes": 664,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/formatting/hydrolocations_to_geom.py",
+        "file_name": "hydrolocations_to_geom.py",
+        "extension": ".py",
+        "size_bytes": 796,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/formatting/remove_error_table.py",
+        "file_name": "remove_error_table.py",
+        "extension": ".py",
+        "size_bytes": 521,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/formatting/remove_error_table.sql",
+        "file_name": "remove_error_table.sql",
+        "extension": ".sql",
+        "size_bytes": 774,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/formatting/rename_cols.py",
+        "file_name": "rename_cols.py",
+        "extension": ".py",
+        "size_bytes": 1228,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/formatting/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 6927,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/formatting/vpu_subset.py",
+        "file_name": "vpu_subset.py",
+        "extension": ".py",
+        "size_bytes": 964,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/hydro/gages/detect_flowpath_issues.py",
+        "file_name": "detect_flowpath_issues.py",
+        "extension": ".py",
+        "size_bytes": 11536,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/hydro/gages/gage_area.csv",
+        "file_name": "gage_area.csv",
+        "extension": ".csv",
+        "size_bytes": 299529,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/hydro/gages/update_gages.py",
+        "file_name": "update_gages.py",
+        "extension": ".py",
+        "size_bytes": 2832,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

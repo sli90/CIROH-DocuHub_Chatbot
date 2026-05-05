@@ -1,0 +1,84 @@
+{
+    "title": "Curated List of Datasets for the CIROH Portal",
+    "abstract": "This is a curated and managed collection of resources of particular interest or importance to CIROH, NOAA, and/or the U.S. National Weather Service. The resources listed in this collection are scanned and made available for rapid discovery through the CIROH Science Portal at https://portal.ciroh.org/.",
+    "language": "eng",
+    "subjects": [
+        "National Water Model",
+        "NOAA",
+        "NWS",
+        "CIROH"
+    ],
+    "creators": [
+        {
+            "name": "Ames, Dan",
+            "organization": "Brigham Young University",
+            "email": "dan.ames@byu.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 30,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "This resource includes",
+            "value": "Tarboton, D., H. Salehabadi, A. Nassar, F. Baig, A. M. Castronova, I. Garousi-Nejad, A. Patel, P. Dash (2026). Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial, HydroShare, http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Salehabadi, H., D. Tarboton, A. Nassar, A. M. Castronova, P. Dash, A. Patel, F. Baig (2026). Jupyter Notebooks for the Retrieval of AORC Data for Hydrologic Analysis, HydroShare, http://www.hydroshare.org/resource/72ea9726187e43d7b50a624f2acf591f"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Ames, D. (2026). Python Notebook for Retrieving Retrospective National Water Model Forecasts, HydroShare, http://www.hydroshare.org/resource/5caaa9919c2e490eb735aebc5e741c35"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Nassar, A., D. Tarboton, H. Salehabadi (2026). NWM retrospective analysis version 3.0 data retrieval, HydroShare, http://www.hydroshare.org/resource/6ca065138d764339baf3514ba2f2d72f"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Tarboton, D., J. S. Horsburgh, S. Wang, J. S. Read, I. Garousi-Nejad, A. M. Castronova, C. Cogswell (2026). CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare, HydroShare, http://www.hydroshare.org/resource/23b51cb99b5445a1af740a21c5acaecb"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Tarboton, D., A. M. Castronova, I. Garousi-Nejad, F. Baig (2026). Enabling collaboration through data and model sharing with CUAHSI HydroShare: Workshop presented as part of CIROH Developers Conference May 29, 2024, HydroShare, http://www.hydroshare.org/resource/7477452a93e04b1099a3879353c2253a"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Nassar, A., D. Tarboton (2026). HydroFabric Subsetter and Retrieval, HydroShare, http://www.hydroshare.org/resource/631be88704ef4167b12e9ad9d2529ba9"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "NOAA Weather Program Office",
+            "title": "Cooperative Institute for Research to Operations in Hydrology",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ror.org/01q70bz83"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 49.7586,
+        "eastlimit": -48.6914,
+        "southlimit": 23.7728,
+        "westlimit": -137.8125,
+        "units": "['Decimal degrees']",
+        "projection": "WGS84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1979-01-01 00:00:00",
+        "end": "2024-06-01 00:00:00"
+    },
+    "citation": "Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c",
+    "url": "http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c",
+    "identifier": "http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c",
+    "created": "2024-09-23 17:47:21.969325+00:00",
+    "modified": "2026-01-29 05:09:38.102537+00:00",
+    "type": "CollectionResource"
+}

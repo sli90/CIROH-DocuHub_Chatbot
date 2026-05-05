@@ -1,0 +1,27 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "786fbe52dd124c13a319d4bb0c0d9ee4",
+    "resource_title": "Skip the Download: How to Access HydroShare Data Directly from S3 Buckets",
+    "abstract": "This resource provides code examples for working directly with HydroShare S3 buckets (also referred to as HydroShare cloud storage buckets or simply HydroShare buckets) to access and manage resource files, without the need to download them locally first. Working directly with S3 buckets can offer better performance. \r\n\r\nThis resource includes the following notebooks:\r\n1- hydroshare_s3_bucket_access_examples.ipynb:  Examples for working directly with HydroShare S3 buckets to access and manage resource files.\r\n2- hs_bucket_access_gdal_example.ipynb:  Examples for reading raster and shapefile directly from HydroShare S3 buckets using gdal.\r\n3- hs_bucket_access_non_gdal_example.ipynb:  Examples of using h5netcdf and xarray for reading netcdf files, rioxarray for reading raster files, and pandas for reading CSV files, all directly from HydroShare S3 buckets.\r\n\r\nThis research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award NA22NWS4320003 from the NOAA Cooperative Institute Program. The statements, findings, conclusions, and recommendations are those of the author(s) and do not necessarily reflect the opinions of NOAA.",
+    "authors": [
+        "Dash, Pabitra",
+        "Salehabadi, Homa",
+        "Tarboton, David"
+    ],
+    "creator": "Dash, Pabitra",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2025-09-07T17:17:00.640024Z",
+    "date_last_updated": "2026-02-27T14:44:50.284091Z",
+    "bag_last_downloaded": "2026-03-13T21:36:18.538157Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/786fbe52dd124c13a319d4bb0c0d9ee4.zip",
+    "coverages": [],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/786fbe52dd124c13a319d4bb0c0d9ee4/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/786fbe52dd124c13a319d4bb0c0d9ee4/map/",
+    "resource_url": "http://www.hydroshare.org/resource/786fbe52dd124c13a319d4bb0c0d9ee4/",
+    "content_types": []
+}

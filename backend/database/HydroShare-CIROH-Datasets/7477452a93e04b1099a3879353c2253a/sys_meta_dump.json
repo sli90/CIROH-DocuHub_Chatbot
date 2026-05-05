@@ -1,0 +1,48 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "7477452a93e04b1099a3879353c2253a",
+    "resource_title": "Enabling collaboration through data and model sharing with CUAHSI HydroShare: Workshop presented as part of CIROH Developers Conference May 29, 2024",
+    "abstract": "Material for CIROH Developers Conference Workshop, May 29, 2024.\r\n\r\nCIROH research necessitates collaboration, data and model sharing, easy to use, generally accessible, shareable computing, and working together as a team and community. The Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) HydroShare platform enables best (FAIR, Findable, Accessible, Interoperable, and Reusable) practices for data sharing and collaboration and for improving reproducibility and reusability of research outcomes through sharing and publishing both the data and models and analyses that underpin research findings.  This workshop provided information on using HydroShare for collaboration and data and model sharing in CIROH, including links between HydroShare and CIROH computing.",
+    "authors": [
+        "Tarboton, David",
+        "Castronova, Anthony M.",
+        "Garousi-Nejad, Irene",
+        "Baig, Furqan"
+    ],
+    "creator": "Tarboton, David",
+    "doi": "10.4211/hs.7477452a93e04b1099a3879353c2253a",
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": true,
+    "published": true,
+    "date_created": "2024-05-28T17:57:09.847045Z",
+    "date_last_updated": "2026-01-29T04:16:24.405638Z",
+    "bag_last_downloaded": "2025-12-06T10:38:59.577390Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/7477452a93e04b1099a3879353c2253a.zip",
+    "coverages": [
+        {
+            "type": "period",
+            "value": {
+                "start": "2024-05-29",
+                "end": "2024-06-01"
+            }
+        },
+        {
+            "type": "point",
+            "value": {
+                "east": -111.842,
+                "north": 40.762,
+                "units": "Decimal degrees",
+                "projection": "WGS 84 EPSG:4326",
+                "name": "The University of Utah S.J. Quinney College of Law"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/7477452a93e04b1099a3879353c2253a/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/7477452a93e04b1099a3879353c2253a/map/",
+    "resource_url": "http://www.hydroshare.org/resource/7477452a93e04b1099a3879353c2253a/",
+    "content_types": [
+        "Geographic Raster Content"
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "id": 1087282283,
+    "name": "RIVR",
+    "full_name": "CIROH-UA/RIVR",
+    "html_url": "https://github.com/CIROH-UA/RIVR",
+    "description": null,
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2025-10-31T16:49:30Z",
+    "updated_at": "2026-04-16T22:11:38Z",
+    "pushed_at": "2026-04-23T06:06:51Z",
+    "language": "Dart",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 36488,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 1,
+    "open_issues_count": 5,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 2,
+        "top_contributors": [
+            {
+                "id": 115030763,
+                "login": "jersjar7",
+                "html_url": "https://github.com/jersjar7",
+                "type": "User",
+                "contributions": 326
+            },
+            {
+                "id": 3472628,
+                "login": "danames",
+                "html_url": "https://github.com/danames",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

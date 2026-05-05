@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/89baf422eb1b4e22b4b84279b95a20f4">
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:hydroshare_user_id>
+        <hsterms:email>andywood@ucar.edu</hsterms:email>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:organization>NCAR;University of Colorado at Boulder</hsterms:organization>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:name>Wood, Andrew W</hsterms:name>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:description>
+        <hsterms:address>Colorado (CO), US</hsterms:address>
+      </rdf:Description>
+    </dc:creator>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>Since the release of the CAMELS large-sample catchment dataset a decade ago, the CAMELS watershed collection has become a de facto set of minimally impacted headwater basins for hydrologic model benchmarking studies in the continental US (Newman et al., 2015; 2017; see https://ral.ucar.edu/solutions/products/camels). In this dataset, we release the first subset of the Next Generation Water Resources Modeling Framework (Nextgen) Hydrofabric (v2.2; Johnson, 2022; Johnson et al., 2024) that includes the full spatial extent of the CAMELS basin delineations, after revision to correct erroneous boundaries (by using more reliable published Gages-II shapefiles). Our Hydrofabric subsetting workflow includes all Nextgen catchments that are within (with at least 5% area overlap) and/or hydrologically connected to the updated CAMELS basins shapes, thus this catchment boundary dataset enables a wide range of possible use cases, e.g., streamflow routing with alternative river networks. It also ensures improved comparison of hydrologic simulations to other CAMELS model benchmarking studies that do not use the Nextgen Hydrofabric. The layers included in this dataset provide the key geospatial inputs for Nextgen, while the accompanying daily 1979-2023 AORC retrospective forcing dataset (https://www.hydroshare.org/resource/1e934d92acdb42fa8379cd5009371150/; Sturtevant and Wood, 2024) also contributes to the required set of inputs needed for running the Nextgen modeling framework on the Hydrofabric v2.2 spatial units across the 671 CAMELS basins.&#13;
+&#13;
+&#13;
+&#13;
+Acknowledgements:&#13;
+This dataset was supported by a project grant to the Colorado School of Mines from the NOAA Cooperative Institute for Research to Operations in Hydrology (CIROH). CIROH is funded via the NOAA Cooperative Agreement with The University of Alabama (NA22NWS4320003).&#13;
+The revised CAMELS boundary GIS work was supported by the US Army Corps of Engineers Climate Preparedness and Resilience Program via a grant to NSF NCAR.&#13;
+We also acknowledge and thank Mike Johnson and Lynker Spatial for use of and assistance with the Hydrofabric v2.2 dataset&#13;
+&#13;
+References: &#13;
+Newman, A. J., Clark, M. P., Sampson, K., Wood, A., Hay, L. E., Bock, A., Viger, R. J., Blodgett, D., Brekke, L., Arnold, J. R., Hopson, T., and Duan, Q. (2015). Development of a large-sample watershed-scale hydrometeorological data set for the contiguous USA: data set characteristics and assessment of regional variability in hydrologic model performance, Hydrol. Earth Syst. Sci., 19, 209–223, https://doi.org/10.5194/hess-19-209-2015 .&#13;
+Newman, A. J., N. Mizukami, M. P. Clark, A. W. Wood, B. Nijssen, and G. Nearing (2017). Benchmarking of a Physically Based Hydrologic Model. J. Hydrometeor., 18, 2215–2225, https://doi.org/10.1175/JHM-D-16-0284.1.&#13;
+Johnson, J. M. (2022). National Hydrologic Geospatial Fabric (hydrofabric) for the Next Generation (NextGen) Hydrologic Modeling Framework,&#13;
+HydroShare http://www.hydroshare.org/resource/129787b468aa4d55ace7b124ed27dbde&#13;
+Johnson, J. Michael, Arash Modesari Rad, Trey C. Flowers, and Fred L. Ogden. (2024). “The NOAA Next Generation Water Resource Modeling Framework Hydrofabric.” In 104th AMS Annual Meeting. AMS, 2024. https://ams.confex.com/ams/104ANNUAL/meetingapp.cgi/Paper/436827.&#13;
+Sturtevant, J. and Wood, A. (2024). Daily AORC meteorological forcings (1979-2023) for Nextgen-CAMELS-Hydrofabric Catchments (v2.2), HydroShare, http://www.hydroshare.org/resource/1e934d92acdb42fa8379cd5009371150</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>Nextgen</dc:subject>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-01-02T20:33:49.059580+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyURL rdf:resource="https://ror.org/02z5nhe81"/>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration</hsterms:fundingAgencyName>
+        <hsterms:awardTitle>Cooperative Institute for Research to Operations in Hydrology (CIROH)</hsterms:awardTitle>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:language>eng</dc:language>
+    <dc:subject>CAMELS</dc:subject>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-12-06T15:43:09.900180+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27421</hsterms:description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27421</hsterms:hydroshare_user_id>
+        <hsterms:email>sturtevant.josh@gmail.com</hsterms:email>
+        <hsterms:name>Sturtevant, Josh</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:organization>Colorado School of Mines</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+    <dcterms:bibliographicCitation>Sturtevant, J., A. W. Wood (2025). Nextgen-CAMELS-Hydrofabric v2.2: NOAA Next Generation Water Resources Modeling Framework Hydrofabric for the CAMELS Basins, HydroShare, http://www.hydroshare.org/resource/89baf422eb1b4e22b4b84279b95a20f4</dcterms:bibliographicCitation>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:email>andywood@ucar.edu</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:description>
+        <hsterms:organization>NCAR;University of Colorado at Boulder</hsterms:organization>
+        <hsterms:name>Wood, Andrew W</hsterms:name>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:hydroshare_user_id>
+        <hsterms:address>Colorado (CO), US</hsterms:address>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:subject>Hydrofabric</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/89baf422eb1b4e22b4b84279b95a20f4"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:title>Nextgen-CAMELS-Hydrofabric v2.2: NOAA Next Generation Water Resources Modeling Framework Hydrofabric for the CAMELS Basins</dc:title>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=50.0; eastlimit=-65.0; southlimit=24.0; westlimit=-125.0</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:subject>Hydrologic Modeling</dc:subject>
+  </hsterms:CompositeResource>
+</rdf:RDF>

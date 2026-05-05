@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+    <rdfs:label>Composite Resource</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+  </rdf:Description>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/ff4e9c4e87ef4d7d923efe77f5ed2b83">
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:homepage rdf:resource="https://web.stevens.edu/ismart/"/>
+        <hsterms:address>NJ, US</hsterms:address>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7653</hsterms:description>
+        <hsterms:email>mtemimi@stevens.edu</hsterms:email>
+        <hsterms:organization>Stevens Institute of Technology</hsterms:organization>
+        <hsterms:phone>2012165303</hsterms:phone>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:name>Temimi, Marouane</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7653</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:creator>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-09-26T10:35:53.532022+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:date>
+      <hsterms:published>
+        <rdf:value>2025-09-26T10:35:54.287843+00:00</rdf:value>
+      </hsterms:published>
+    </dc:date>
+    <dc:subject>Classification</dc:subject>
+    <dc:subject>Ice Flag</dc:subject>
+    <dc:language>eng</dc:language>
+    <dc:title>RIce-Net dataset: River Ice detection</dc:title>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hsterms:creatorOrder>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:organization>Stevens Institute of Technology</hsterms:organization>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:address>NJ, US</hsterms:address>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26420</hsterms:description>
+        <hsterms:name>Henein, Moheb</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26420</hsterms:hydroshare_user_id>
+        <hsterms:email>mhenein@stevens.edu</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:address>NEW JERSEY, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:organization>Stevens Institute of Technology</hsterms:organization>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10733</hsterms:description>
+        <hsterms:name>Abdelkader, Mohamed</hsterms:name>
+        <hsterms:email>mabdelka@stevens.edu</hsterms:email>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10733</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:creator>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=2023-01-01T00:00:00; end=2024-02-29T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/ff4e9c4e87ef4d7d923efe77f5ed2b83"/>
+      </rdf:Description>
+    </dc:identifier>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardTitle></hsterms:awardTitle>
+        <hsterms:awardNumber></hsterms:awardNumber>
+        <hsterms:fundingAgencyURL></hsterms:fundingAgencyURL>
+        <hsterms:fundingAgencyName>USGS Next Generation Water Observing System (NGWOS) Research and Development Program</hsterms:fundingAgencyName>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:awardTitle></hsterms:awardTitle>
+        <hsterms:fundingAgencyName>NOAA Cooperative Institute Program</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL></hsterms:fundingAgencyURL>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:subject>Image Segmentation</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:doi rdf:resource="https://doi.org/10.4211/hs.ff4e9c4e87ef4d7d923efe77f5ed2b83"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2025-01-26T19:13:42.113908+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:type rdf:resource="http://www.hydroshare.org/terms/CompositeResource"/>
+    <dc:publisher>
+      <rdf:Description>
+        <hsterms:publisherName>Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)</hsterms:publisherName>
+        <hsterms:publisherURL rdf:resource="https://www.cuahsi.org"/>
+      </rdf:Description>
+    </dc:publisher>
+    <dc:subject>River Ice</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>Stevens Institute of Technology</hsterms:organization>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=xXO_CI8AAAAJ&amp;hl=en"/>
+        <hsterms:name>Ayyad, Mahmoud</hsterms:name>
+        <hsterms:phone>+1 (201) 216-3739</hsterms:phone>
+        <hsterms:email>m-mayyad@outlook.com</hsterms:email>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0001-5800-9313"/>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27584</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27584</hsterms:description>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Mahmoud-Ayyad?ev=hdr_xprf"/>
+      </rdf:Description>
+    </dc:creator>
+    <dcterms:bibliographicCitation>Ayyad, M., M. Temimi, M. Abdelkader, M. Henein (2025). RIce-Net dataset: River Ice detection, HydroShare, https://doi.org/10.4211/hs.ff4e9c4e87ef4d7d923efe77f5ed2b83, DOI for this published resource is pending activation.</dcterms:bibliographicCitation>
+    <dc:coverage>
+      <dcterms:point>
+        <rdf:value>projection=WGS 84 EPSG:4326; east=-87.942722; north=43.279846; units=Decimal degrees; name=Milwaukee River near Cedarburg</rdf:value>
+      </dcterms:point>
+    </dc:coverage>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>A computer vision-based framework, River Ice-Network (RIce-Net), uses the USGS nationwide network of ground-based cameras whose images are published through the National Imagery Management System (NIMS), which is available to the public through the Hydrologic Imagery Visualization and Information System (HIVIS; https://apps.usgs.gov/hivis). RIce-Net classifies ice-affected images, segments the ice presence over river surface, calculates the fraction of ice coverage, and automatically generates a near real-time ice flag. The RIce-Net was trained using images from the Milwaukee River near Cedarburg station (https://apps.usgs.gov/hivis/camera/WI_Milwaukee_River_near_Cedarburg) collected in 2023 and tested using images collected in 2024. This repository provides the training data set of the classification and segmentation models.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+  </hsterms:CompositeResource>
+</rdf:RDF>

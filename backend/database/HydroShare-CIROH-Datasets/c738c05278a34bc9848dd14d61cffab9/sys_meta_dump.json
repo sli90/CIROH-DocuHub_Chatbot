@@ -1,0 +1,47 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "c738c05278a34bc9848dd14d61cffab9",
+    "resource_title": "AORC atmospheric forcing data across CAMELS US basins, 1980 - 2024",
+    "abstract": "These data are atmospheric forcings from NOAA's Analysis of Record for Calibration (AORC 2024) summarized over the CAMELS catchments (Addor et al. 2017), however, the delineations over those CAMELS basins were updated by Andy Wood (2024) using the basin boundaries produced for the USGS GagesII effort (Falcone 2011). \r\n\r\nData collected using this repository code: https://github.com/jmframe/CIROH_DL_NextGen/tree/main/forcing_prep, which should be somewhat derivative of this: https://github.com/CIROH-UA/ngen-datastream/tree/main/forcingprocessor.\r\n\r\nThere are eight variables representing the meteorological conditions:\r\nTotal Precipitaion (APCP_surface) - Hourly total precipitation (kgm-2 or mm) for Calibration (AORC) dataset\r\nAir Temperature (TMP_2maboveground) - Temperature (at 2 m above-ground-level (AGL)) (K)\r\nSpecific Humidity (SPFH_2maboveground) - Specific humidity (at 2 m AGL) (g g-1)\r\nDownward Long-Wave Radiation Flux (DLWRF_surface) - longwave (infrared) radiation flux (at the surface) (W m-2)\r\nDownward Short-Wave Radiation Flux (DSWRF_surface) - Downward shortwave (solar) radiation flux (at the surface) (W m-2)\r\nPressure (PRES_surface) - Air pressure (at the surface) (Pa)\r\nU-Component of Wind (UGRD_10maboveground) - (west-east) - components of the wind (at 10 m AGL) (m s-1)\r\nV-Component of Wind (VGRD_10maboveground) - (south-north) - components of the wind (at 10 m AGL) (m s-1)\r\n\r\nThe data include a timestamp from Coordinated Universal Time (UTC; AORC 2021).\r\n\r\nReferences:\r\nAddor, N., Newman, A. J., Mizukami, N., and Clark, M. P.: The CAMELS data set: catchment attributes and meteorology for large-sample studies, Hydrol. Earth Syst. Sci., 21, 5293\u20135313, https://doi.org/10.5194/hess-21-5293-2017, 2017. \r\nAORC. 2021. Analysis of Record for Calibration Version 1.1 - Sources, Methods, and Verification, National Oceanic and Atmospheric Administration (NOAA), National Weather Service (NWS), Office of Water Prediction (OWP), Silver Spring, MD.https://www.weather.gov/media/owp/operations/aorc_v1_1_methods.pd\r\nAORC. 2024. NOAA Analysis of Record for Calibration (AORC) Dataset was accessed July 2024 from https://registry.opendata.aws/noaa-nws-aorc. \r\nFalcone, J., 2011, GAGES-II: Geospatial Attributes of Gages for Evaluating Streamflow: U.S. Geological Survey data release, https://doi.org/10.5066/P96CPHOT. https://www.sciencebase.gov/catalog/item/631405bbd34e36012efa304a\r\nWood. 2024. CAMELS basins delineation.",
+    "authors": [
+        "Frame, Jonathan Martin",
+        "Wood, Andrew W",
+        "Frazier, Nels"
+    ],
+    "creator": "Frame, Jonathan Martin",
+    "doi": "10.4211/hs.c738c05278a34bc9848dd14d61cffab9",
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": true,
+    "published": true,
+    "date_created": "2024-08-07T00:51:08.090757Z",
+    "date_last_updated": "2025-01-06T15:35:48.734696Z",
+    "bag_last_downloaded": "2026-03-23T17:48:58.261395Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/c738c05278a34bc9848dd14d61cffab9.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 50.2107,
+                "eastlimit": -65.7422,
+                "southlimit": 24.255,
+                "westlimit": -126.7383,
+                "name": "CONUS selected basins (CAMELS)"
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "1980-10-01",
+                "end": "2024-04-01"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/c738c05278a34bc9848dd14d61cffab9/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/c738c05278a34bc9848dd14d61cffab9/map/",
+    "resource_url": "http://www.hydroshare.org/resource/c738c05278a34bc9848dd14d61cffab9/",
+    "content_types": []
+}

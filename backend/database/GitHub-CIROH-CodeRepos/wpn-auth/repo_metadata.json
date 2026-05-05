@@ -1,0 +1,36 @@
+{
+    "id": 1141261055,
+    "name": "wpn-auth",
+    "full_name": "CIROH-UA/wpn-auth",
+    "html_url": "https://github.com/CIROH-UA/wpn-auth",
+    "description": null,
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2026-01-24T14:50:12Z",
+    "updated_at": "2026-01-24T14:50:13Z",
+    "pushed_at": "2024-04-17T20:14:26Z",
+    "language": null,
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 25,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 1,
+        "top_contributors": [
+            {
+                "id": 9595390,
+                "login": "dylanlee",
+                "html_url": "https://github.com/dylanlee",
+                "type": "User",
+                "contributions": 13
+            }
+        ]
+    }
+}

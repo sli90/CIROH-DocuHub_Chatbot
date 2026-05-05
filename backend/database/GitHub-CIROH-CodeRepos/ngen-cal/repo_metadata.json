@@ -1,0 +1,104 @@
+{
+    "id": 936861224,
+    "name": "ngen-cal",
+    "full_name": "CIROH-UA/ngen-cal",
+    "html_url": "https://github.com/CIROH-UA/ngen-cal",
+    "description": "Tools for calibrating and configuring NextGen",
+    "homepage": "https://github.com/NOAA-OWP/ngen-cal/wiki",
+    "default_branch": "master",
+    "created_at": "2025-02-21T20:21:33Z",
+    "updated_at": "2025-11-03T17:34:13Z",
+    "pushed_at": "2026-04-22T22:40:17Z",
+    "language": "Python",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 1401,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 4,
+    "open_issues_count": 0,
+    "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "contributors_summary": {
+        "contributors_count": 11,
+        "top_contributors": [
+            {
+                "id": 39420640,
+                "login": "aaraney",
+                "html_url": "https://github.com/aaraney",
+                "type": "User",
+                "contributions": 323
+            },
+            {
+                "id": 5186647,
+                "login": "hellkite500",
+                "html_url": "https://github.com/hellkite500",
+                "type": "User",
+                "contributions": 246
+            },
+            {
+                "id": 37884615,
+                "login": "robertbartel",
+                "html_url": "https://github.com/robertbartel",
+                "type": "User",
+                "contributions": 19
+            },
+            {
+                "id": 7992111,
+                "login": "chp2001",
+                "html_url": "https://github.com/chp2001",
+                "type": "User",
+                "contributions": 6
+            },
+            {
+                "id": 79336055,
+                "login": "JordanLaserGit",
+                "html_url": "https://github.com/JordanLaserGit",
+                "type": "User",
+                "contributions": 5
+            },
+            {
+                "id": 24944644,
+                "login": "donaldwj",
+                "html_url": "https://github.com/donaldwj",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 87771120,
+                "login": "mattw-nws",
+                "html_url": "https://github.com/mattw-nws",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 96442889,
+                "login": "Ben-Choat",
+                "html_url": "https://github.com/Ben-Choat",
+                "type": "User",
+                "contributions": 1
+            },
+            {
+                "id": 131808837,
+                "login": "Brian-Cosgrove",
+                "html_url": "https://github.com/Brian-Cosgrove",
+                "type": "User",
+                "contributions": 1
+            },
+            {
+                "id": 62669859,
+                "login": "frsalas-noaa",
+                "html_url": "https://github.com/frsalas-noaa",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

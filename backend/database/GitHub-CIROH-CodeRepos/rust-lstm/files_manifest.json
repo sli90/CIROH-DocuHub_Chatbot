@@ -1,0 +1,98 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 8,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Cargo.lock",
+        "file_name": "Cargo.lock",
+        "extension": ".lock",
+        "size_bytes": 157758,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Cargo.toml",
+        "file_name": "Cargo.toml",
+        "extension": ".toml",
+        "size_bytes": 913,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE.md",
+        "file_name": "LICENSE.md",
+        "extension": ".md",
+        "size_bytes": 1080,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 4545,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "hardcode_weights/Cargo.toml",
+        "file_name": "Cargo.toml",
+        "extension": ".toml",
+        "size_bytes": 190,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "hardcode_weights/src/lib.rs",
+        "file_name": "lib.rs",
+        "extension": ".rs",
+        "size_bytes": 3112,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/convert.py",
+        "file_name": "convert.py",
+        "extension": ".py",
+        "size_bytes": 9807,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/lib.rs",
+        "file_name": "lib.rs",
+        "extension": ".rs",
+        "size_bytes": 23768,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/nextgen_lstm.rs",
+        "file_name": "nextgen_lstm.rs",
+        "extension": ".rs",
+        "size_bytes": 9539,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/python.rs",
+        "file_name": "python.rs",
+        "extension": ".rs",
+        "size_bytes": 1173,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/weights.rs",
+        "file_name": "weights.rs",
+        "extension": ".rs",
+        "size_bytes": 2296,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

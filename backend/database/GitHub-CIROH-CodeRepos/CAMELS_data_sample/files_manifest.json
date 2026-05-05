@@ -1,0 +1,458 @@
+[
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1066,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "basin_mean_forcing/nldas/01/01013500_lump_nldas_forcing_leap.txt",
+        "file_name": "01013500_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 432356,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/01/01022500_lump_nldas_forcing_leap.txt",
+        "file_name": "01022500_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 753799,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/02/01333000_lump_nldas_forcing_leap.txt",
+        "file_name": "01333000_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 431419,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/03/02046000_lump_nldas_forcing_leap.txt",
+        "file_name": "02046000_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 432508,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/04/04015330_lump_nldas_forcing_leap.txt",
+        "file_name": "04015330_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 432604,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/05/03010655_lump_nldas_forcing_leap.txt",
+        "file_name": "03010655_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 431319,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/06/03439000_lump_nldas_forcing_leap.txt",
+        "file_name": "03439000_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 432061,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/07/05291000_lump_nldas_forcing_leap.txt",
+        "file_name": "05291000_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 433130,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/08/07291000_lump_nldas_forcing_leap.txt",
+        "file_name": "07291000_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 435663,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/09/05057200_lump_nldas_forcing_leap.txt",
+        "file_name": "05057200_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 433453,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/10/06221400_lump_nldas_forcing_leap.txt",
+        "file_name": "06221400_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 430672,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/11/07057500_lump_nldas_forcing_leap.txt",
+        "file_name": "07057500_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 432535,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/12/08023080_lump_nldas_forcing_leap.txt",
+        "file_name": "08023080_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 435217,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/13/08267500_lump_nldas_forcing_leap.txt",
+        "file_name": "08267500_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 428177,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/14/09035900_lump_nldas_forcing_leap.txt",
+        "file_name": "09035900_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 429533,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/15/09386900_lump_nldas_forcing_leap.txt",
+        "file_name": "09386900_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 427199,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/16/10234500_lump_nldas_forcing_leap.txt",
+        "file_name": "10234500_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 428440,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/17/12010000_lump_nldas_forcing_leap.txt",
+        "file_name": "12010000_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 428514,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/18/10259000_lump_nldas_forcing_leap.txt",
+        "file_name": "10259000_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 429091,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "basin_mean_forcing/nldas/clean_forcing_data.py",
+        "file_name": "clean_forcing_data.py",
+        "extension": ".py",
+        "size_bytes": 1355,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_clim.txt",
+        "file_name": "camels_clim.txt",
+        "extension": ".txt",
+        "size_bytes": 2851,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_geol.txt",
+        "file_name": "camels_geol.txt",
+        "extension": ".txt",
+        "size_bytes": 1949,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_hydro.txt",
+        "file_name": "camels_hydro.txt",
+        "extension": ".txt",
+        "size_bytes": 3477,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_hydroatlas.txt",
+        "file_name": "camels_hydroatlas.txt",
+        "extension": ".txt",
+        "size_bytes": 49310,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_hydroatlas_pca.txt",
+        "file_name": "camels_hydroatlas_pca.txt",
+        "extension": ".txt",
+        "size_bytes": 101677,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_name.txt",
+        "file_name": "camels_name.txt",
+        "extension": ".txt",
+        "size_bytes": 830,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_noahmp.txt",
+        "file_name": "camels_noahmp.txt",
+        "extension": ".txt",
+        "size_bytes": 988,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_soil.txt",
+        "file_name": "camels_soil.txt",
+        "extension": ".txt",
+        "size_bytes": 3214,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_topo.txt",
+        "file_name": "camels_topo.txt",
+        "extension": ".txt",
+        "size_bytes": 1125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/camels_vege.txt",
+        "file_name": "camels_vege.txt",
+        "extension": ".txt",
+        "size_bytes": 2945,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "camels_attributes_v2.0/clean_attributes.py",
+        "file_name": "clean_attributes.py",
+        "extension": ".py",
+        "size_bytes": 1155,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "nh_multi_basin_sample.yml",
+        "file_name": "nh_multi_basin_sample.yml",
+        "extension": ".yml",
+        "size_bytes": 3970,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "sample_basins.txt",
+        "file_name": "sample_basins.txt",
+        "extension": ".txt",
+        "size_bytes": 161,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test_basins.txt",
+        "file_name": "test_basins.txt",
+        "extension": ".txt",
+        "size_bytes": 17,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "train_basins.txt",
+        "file_name": "train_basins.txt",
+        "extension": ".txt",
+        "size_bytes": 125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/01/01013500_streamflow_qc.txt",
+        "file_name": "01013500_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 230455,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/01/01022500_streamflow_qc.txt",
+        "file_name": "01022500_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 400012,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/02/01333000_streamflow_qc.txt",
+        "file_name": "01333000_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 228972,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/03/02046000_streamflow_qc.txt",
+        "file_name": "02046000_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 227444,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/04/04015330_streamflow_qc.txt",
+        "file_name": "04015330_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 230798,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/05/03010655_streamflow_qc.txt",
+        "file_name": "03010655_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 228494,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/06/03439000_streamflow_qc.txt",
+        "file_name": "03439000_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 226734,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/07/05291000_streamflow_qc.txt",
+        "file_name": "05291000_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 231308,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/08/07291000_streamflow_qc.txt",
+        "file_name": "07291000_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 226698,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/09/05057200_streamflow_qc.txt",
+        "file_name": "05057200_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 230576,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/10/06221400_streamflow_qc.txt",
+        "file_name": "06221400_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 142904,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/11/07057500_streamflow_qc.txt",
+        "file_name": "07057500_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 226608,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/12/08023080_streamflow_qc.txt",
+        "file_name": "08023080_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 226980,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/13/08267500_streamflow_qc.txt",
+        "file_name": "08267500_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 229534,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/14/09035900_streamflow_qc.txt",
+        "file_name": "09035900_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 232314,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/15/09386900_streamflow_qc.txt",
+        "file_name": "09386900_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 233328,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/16/10234500_streamflow_qc.txt",
+        "file_name": "10234500_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 228698,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/17/12010000_streamflow_qc.txt",
+        "file_name": "12010000_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 226890,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/18/10259000_streamflow_qc.txt",
+        "file_name": "10259000_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 226618,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "usgs_streamflow/clean_streamflow_data.py",
+        "file_name": "clean_streamflow_data.py",
+        "extension": ".py",
+        "size_bytes": 1094,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "valid_basins.txt",
+        "file_name": "valid_basins.txt",
+        "extension": ".txt",
+        "size_bytes": 17,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

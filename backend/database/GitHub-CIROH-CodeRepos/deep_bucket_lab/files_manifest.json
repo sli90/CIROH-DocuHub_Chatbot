@@ -1,0 +1,202 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 1815,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CITATION.md",
+        "file_name": "CITATION.md",
+        "extension": ".md",
+        "size_bytes": 1864,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1085,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 5051,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "configuration/configuration.yml",
+        "file_name": "configuration.yml",
+        "extension": ".yml",
+        "size_bytes": 2190,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "deep_bucket_lab.ipynb",
+        "file_name": "deep_bucket_lab.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 75431,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "environment.yml",
+        "file_name": "environment.yml",
+        "extension": ".yml",
+        "size_bytes": 257,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "experiments/noise_iteration.py",
+        "file_name": "noise_iteration.py",
+        "extension": ".py",
+        "size_bytes": 1639,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "figs/bucket_schematic.png",
+        "file_name": "bucket_schematic.png",
+        "extension": ".png",
+        "size_bytes": 33064,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "figs/bucket_splits.png",
+        "file_name": "bucket_splits.png",
+        "extension": ".png",
+        "size_bytes": 164578,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "report/arxiv.sty",
+        "file_name": "arxiv.sty",
+        "extension": ".sty",
+        "size_bytes": 7641,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "report/deep_bucket_lab.pdf",
+        "file_name": "deep_bucket_lab.pdf",
+        "extension": ".pdf",
+        "size_bytes": 319254,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "report/figures/bucket_schematic.png",
+        "file_name": "bucket_schematic.png",
+        "extension": ".png",
+        "size_bytes": 33064,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "report/figures/bucket_splits.png",
+        "file_name": "bucket_splits.png",
+        "extension": ".png",
+        "size_bytes": 164578,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "report/figures/orcid.png",
+        "file_name": "orcid.png",
+        "extension": ".png",
+        "size_bytes": 218,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "report/main.tex",
+        "file_name": "main.tex",
+        "extension": ".tex",
+        "size_bytes": 33491,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "report/references.bib",
+        "file_name": "references.bib",
+        "extension": ".bib",
+        "size_bytes": 40421,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "report/title_page.png",
+        "file_name": "title_page.png",
+        "extension": ".png",
+        "size_bytes": 162457,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "run/run_deep_bucket_lab.py",
+        "file_name": "run_deep_bucket_lab.py",
+        "extension": ".py",
+        "size_bytes": 1867,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "run/run_deep_bucket_lab_with_graphics.ipynb",
+        "file_name": "run_deep_bucket_lab_with_graphics.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 4377,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/data_generation.py",
+        "file_name": "data_generation.py",
+        "extension": ".py",
+        "size_bytes": 6941,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/lstm.py",
+        "file_name": "lstm.py",
+        "extension": ".py",
+        "size_bytes": 1339,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/model_controller.py",
+        "file_name": "model_controller.py",
+        "extension": ".py",
+        "size_bytes": 4328,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/validation.py",
+        "file_name": "validation.py",
+        "extension": ".py",
+        "size_bytes": 4914,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/vizualization.py",
+        "file_name": "vizualization.py",
+        "extension": ".py",
+        "size_bytes": 6619,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

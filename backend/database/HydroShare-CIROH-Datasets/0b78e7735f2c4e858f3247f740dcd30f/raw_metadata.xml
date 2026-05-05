@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CollectionResource rdf:about="http://www.hydroshare.org/resource/0b78e7735f2c4e858f3247f740dcd30f">
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2023-11-20T12:06:45.295233+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Miller, G. R. (2026). Jupyter Notebook for Pump Test Analysis in Confined Aquifers, HydroShare, http://www.hydroshare.org/resource/de85625a8db04474bb066809ae93521e</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>HydroShare Python Client</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Neupauer, R., C. Turnadge, J. Okkonen (2026). Forward and Adjoint Sensitivity Analysis, HydroShare, http://www.hydroshare.org/resource/030bdfa103b543c28f3ebdf9abb2da6e</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Tarboton, D., I. Garousi-Nejad (2026). Notebook for retrieval of National Water Model Retrospective run results at SNOTEL sites, HydroShare, http://www.hydroshare.org/resource/3d4976bf6eb84dfbbe11446ab0e31a0a</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyName>National Science Foundation</hsterms:fundingAgencyName>
+        <hsterms:awardTitle>Collaborative Research: SI2-SSI: Cyberinfrastructure for Advancing Hydrologic Knowledge through Collaborative Integration of Data Science, Modeling and Analysis</hsterms:awardTitle>
+        <hsterms:awardNumber>1664061</hsterms:awardNumber>
+        <hsterms:fundingAgencyURL rdf:resource="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1664061"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:language>eng</dc:language>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Attallah, N., C. J. Bastidas Pacheco (2026). Supporting data and tools for "An Open-source, Semi-supervised Water End Use Disaggregation and Classification Tool", HydroShare, http://www.hydroshare.org/resource/3143b3b1bdff48e0aaebcb4aedf02feb</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/0b78e7735f2c4e858f3247f740dcd30f"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>RHESSys</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Horsburgh, J. S., S. S. Black, P. Dash (2026). HydroShare Python Client Library (hsclient) Usage Examples, HydroShare, http://www.hydroshare.org/resource/7561aa12fd824ebb8edbee05af19b910</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CollectionResource">
+        <rdfs:label>Collection Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <dc:subject>LandLab</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Garousi-Nejad, I., D. Tarboton (2026). Notebooks for combining the National Water Model results/inputs with observations from SNOTEL and MODIS at SNOTEL sites, HydroShare, http://www.hydroshare.org/resource/493e0ad05c2d45199427cc41a6c76de0</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>eastlimit=-50.2965; westlimit=-131.5075; northlimit=49.8565; southlimit=24.2331; units=['Decimal degrees']; projection=WGS84 EPSG:4326</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dcterms:bibliographicCitation>Tarboton, D. (2026). Collection of resources that illustrate data processing methods and computational and modeling libraries in HydroShare and linked JupyterHub computing platforms, HydroShare, http://www.hydroshare.org/resource/0b78e7735f2c4e858f3247f740dcd30f</dcterms:bibliographicCitation>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This collection of resources is was assembled to illustrate ways to use and work with data in HydroShare through its applications programming interface (API), the web application connector resource type, and web services for some content types. The resources collected here are intended to serve as tutorial examples for others to model in creating scripts and tools that act on HydroShare stored data.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>Tutorial</dc:subject>
+    <dc:title>Collection of resources that illustrate data processing methods and computational and modeling libraries in HydroShare and linked JupyterHub computing platforms</dc:title>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2026-01-29T03:55:25.097225+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Lightbody, A., K. Tamaddun, L. Graup (2026). Modelling Watershed Sensitivity to Drought, HydroShare, http://www.hydroshare.org/resource/011ad5f49dc44e0298651f32034b5c74</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>Web Application Connector</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Gan, T. (2026). PyMT model and data components example, HydroShare, http://www.hydroshare.org/resource/ae3802d04675497b8788e079d58c3cc2</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Tucker, G. (2026). Landlab Jupyter Notebooks, HydroShare, http://www.hydroshare.org/resource/8176ba96e5ca4a2fa2c4588aef4b445f</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=2004-10-01T00:00:00; end=2023-04-05T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:relation>
+      <rdf:Description>
+        <hsterms:isDescribedBy>Tarboton, D. G., D. P. Ames, J. S. Horsburgh, J. L. Goodall, A. Couch, R. Hooper, J. Bales, S. Wang, A. Castronova, M. Seul, R. Idaszak, Z. Li, P. Dash, S. Black, M. Ramirez, H. Yi, C. Calloway and C. Cogswell, (2023), "HydroShare Retrospective: Science and Technology Advances of a Comprehensive Data and Model Publication Environment for the Water Science Domain," Submitted to Environmental Modelling &amp; Software.</hsterms:isDescribedBy>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Ames, D., J. Hunter (2026). National Water Model HydroLearn Python Notebooks, HydroShare, http://www.hydroshare.org/resource/5949aec47b484e689573beeb004a2917</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Abualqumboz, M., D. Tarboton (2026). Watershed delineation using ModelMyWatershed, HydroShare, http://www.hydroshare.org/resource/48dc883d6eaa43a4abef01e0b9e6ce51</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>National Water Model</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Tarboton, D. (2026). Introduction to TauDEM, HydroShare, http://www.hydroshare.org/resource/18984997bf8f44dd99a246d4fbece903</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Garousi-Nejad, I., D. Tarboton, M. Aboutalebi, A. F. Torres-Rua (2026). Data For Terrain Analysis Enhancements to the Height Above Nearest Drainage Flood Inundation Mapping Method, HydroShare, http://www.hydroshare.org/resource/7235a0d6a18343078b2028085b7d8018</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:phone>+1 (435) 797-3172</hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:hydroshare_user_id>
+        <hsterms:name>Tarboton, David</hsterms:name>
+        <hsterms:organization>Utah State University</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:email>dtarb@usu.edu</hsterms:email>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1998-3479"/>
+      </rdf:Description>
+    </dc:creator>
+  </hsterms:CollectionResource>
+</rdf:RDF>

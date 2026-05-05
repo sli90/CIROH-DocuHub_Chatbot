@@ -1,0 +1,570 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 32,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "2d_shallow_water_invers.ipynb",
+        "file_name": "2d_shallow_water_invers.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 58541,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "Channel-FLow-PINN/Channel_Inference.ipynb",
+        "file_name": "Channel_Inference.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 1802683,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Channel-FLow-PINN/Fld-CFD.txt",
+        "file_name": "Fld-CFD.txt",
+        "extension": ".txt",
+        "size_bytes": 417216,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Channel-FLow-PINN/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 83,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "Channel-FLow-PINN/Training_2DCH.ipynb",
+        "file_name": "Training_2DCH.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 14688,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Channel-FLow-PINN/U-CFD.txt",
+        "file_name": "U-CFD.txt",
+        "extension": ".txt",
+        "size_bytes": 1974,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Channel-FLow-PINN/channel_lhs_8l_0.1m_0.001_0.0001.t7",
+        "file_name": "channel_lhs_8l_0.1m_0.001_0.0001.t7",
+        "extension": ".t7",
+        "size_bytes": 10062319,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/PINN_Step_With_Data_Small_Example.ipynb",
+        "file_name": "PINN_Step_With_Data_Small_Example.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 43367,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/PINN_Step_With_Data_Small_Example_RU.ipynb",
+        "file_name": "PINN_Step_With_Data_Small_Example_RU.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 42678,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 2034,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=100_iters=90_000/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=100_iters=90_000/losses_history.pickle",
+        "file_name": "losses_history.pickle",
+        "extension": ".pickle",
+        "size_bytes": 431416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=100_iters=90_000/saved_model.zip",
+        "file_name": "saved_model.zip",
+        "extension": ".zip",
+        "size_bytes": 104435,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=100_iters=90_000/uvp_step.png",
+        "file_name": "uvp_step.png",
+        "extension": ".png",
+        "size_bytes": 703580,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=100_iters=90_000/wall_shear_stress.png",
+        "file_name": "wall_shear_stress.png",
+        "extension": ".png",
+        "size_bytes": 26033,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=100_iters=90_000/wall_shear_stress.txt",
+        "file_name": "wall_shear_stress.txt",
+        "extension": ".txt",
+        "size_bytes": 44050,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=14_Iters=260_000_8_40/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=14_Iters=260_000_8_40/saved_model.zip",
+        "file_name": "saved_model.zip",
+        "extension": ".zip",
+        "size_bytes": 61278,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=14_Iters=260_000_8_40/uvp_step.png",
+        "file_name": "uvp_step.png",
+        "extension": ".png",
+        "size_bytes": 686649,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=14_Iters=260_000_8_40/wall_shear_stress.png",
+        "file_name": "wall_shear_stress.png",
+        "extension": ".png",
+        "size_bytes": 27577,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=14_Iters=260_000_8_40/wall_shear_stress.txt",
+        "file_name": "wall_shear_stress.txt",
+        "extension": ".txt",
+        "size_bytes": 22050,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=500_iters=50_000(bad)/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=500_iters=50_000(bad)/iteration_loss.png",
+        "file_name": "iteration_loss.png",
+        "extension": ".png",
+        "size_bytes": 97508,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=500_iters=50_000(bad)/losses_history.pickle",
+        "file_name": "losses_history.pickle",
+        "extension": ".pickle",
+        "size_bytes": 600277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=500_iters=50_000(bad)/saved_model.zip",
+        "file_name": "saved_model.zip",
+        "extension": ".zip",
+        "size_bytes": 47366,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=500_iters=50_000(bad)/uvp_step.png",
+        "file_name": "uvp_step.png",
+        "extension": ".png",
+        "size_bytes": 734578,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=500_iters=50_000(bad)/wall_shear_stress.png",
+        "file_name": "wall_shear_stress.png",
+        "extension": ".png",
+        "size_bytes": 26480,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/saved_models/Re=500_iters=50_000(bad)/wall_shear_stress.txt",
+        "file_name": "wall_shear_stress.txt",
+        "extension": ".txt",
+        "size_bytes": 22050,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/step/Re=10/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/step/Re=100/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/step/Re=14/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/step/Re=250/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/step/Re=50/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/step/Re=500/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PINNs-Laminar-Flow-Sudden-Construction-Channel/step/Re=75/FluentSolStep.txt",
+        "file_name": "FluentSolStep.txt",
+        "extension": ".txt",
+        "size_bytes": 503520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 3732,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "environment.yml",
+        "file_name": "environment.yml",
+        "extension": ".yml",
+        "size_bytes": 5078,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "heat_equation_pinn.ipynb",
+        "file_name": "heat_equation_pinn.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 11829,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1961,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/figures/adam_20k.png",
+        "file_name": "adam_20k.png",
+        "extension": ".png",
+        "size_bytes": 140780,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/figures/adam_xavier_uniform.png",
+        "file_name": "adam_xavier_uniform.png",
+        "extension": ".png",
+        "size_bytes": 27352,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/figures/adam_xavier_uniform_001_bias.png",
+        "file_name": "adam_xavier_uniform_001_bias.png",
+        "extension": ".png",
+        "size_bytes": 26804,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/figures/lbfgs_xavier_normal_shuffle.png",
+        "file_name": "lbfgs_xavier_normal_shuffle.png",
+        "extension": ".png",
+        "size_bytes": 148432,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/figures/lbfgs_xavier_uniform_no_shuffle.png",
+        "file_name": "lbfgs_xavier_uniform_no_shuffle.png",
+        "extension": ".png",
+        "size_bytes": 148943,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/figures/lbfgs_xavier_uniform_shuffle.png",
+        "file_name": "lbfgs_xavier_uniform_shuffle.png",
+        "extension": ".png",
+        "size_bytes": 150135,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 6123,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/models/model_20k.pt",
+        "file_name": "model_20k.pt",
+        "extension": ".pt",
+        "size_bytes": 19433,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/models/model_LBFGS.pt",
+        "file_name": "model_LBFGS.pt",
+        "extension": ".pt",
+        "size_bytes": 19433,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/models/model_LBFGS_no_shuffle.pt",
+        "file_name": "model_LBFGS_no_shuffle.pt",
+        "extension": ".pt",
+        "size_bytes": 19433,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/models/model_LBFGS_shuffle.pt",
+        "file_name": "model_LBFGS_shuffle.pt",
+        "extension": ".pt",
+        "size_bytes": 19433,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/models/model_LBFGS_shuffle_normal.pt",
+        "file_name": "model_LBFGS_shuffle_normal.pt",
+        "extension": ".pt",
+        "size_bytes": 19433,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Burgers_Equation/plot_results.py",
+        "file_name": "plot_results.py",
+        "extension": ".py",
+        "size_bytes": 1087,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Harmonic_Oscilator/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 676,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "pinn-torch/Harmonic_Oscilator/config.yml",
+        "file_name": "config.yml",
+        "extension": ".yml",
+        "size_bytes": 72,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Harmonic_Oscilator/data/x_data.csv",
+        "file_name": "x_data.csv",
+        "extension": ".csv",
+        "size_bytes": 250,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Harmonic_Oscilator/data/y_data.csv",
+        "file_name": "y_data.csv",
+        "extension": ".csv",
+        "size_bytes": 254,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Harmonic_Oscilator/figures/predicted.png",
+        "file_name": "predicted.png",
+        "extension": ".png",
+        "size_bytes": 25091,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Harmonic_Oscilator/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 4585,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Logistic/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1070,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "pinn-torch/Logistic/config.yml",
+        "file_name": "config.yml",
+        "extension": ".yml",
+        "size_bytes": 90,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Logistic/figures/logistic_pinn.png",
+        "file_name": "logistic_pinn.png",
+        "extension": ".png",
+        "size_bytes": 19476,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Logistic/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 3971,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 615,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "pinn-torch/Schrodingers_Equation/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1048,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "pinn-torch/Schrodingers_Equation/data/NLS.mat",
+        "file_name": "NLS.mat",
+        "extension": ".mat",
+        "size_bytes": 559592,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Schrodingers_Equation/figures/convergence.gif",
+        "file_name": "convergence.gif",
+        "extension": ".gif",
+        "size_bytes": 1143793,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Schrodingers_Equation/figures/model_LBFGS_6960.png",
+        "file_name": "model_LBFGS_6960.png",
+        "extension": ".png",
+        "size_bytes": 25465,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Schrodingers_Equation/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 7374,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pinn-torch/Schrodingers_Equation/plotting.py",
+        "file_name": "plotting.py",
+        "extension": ".py",
+        "size_bytes": 2017,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "setup.sh",
+        "file_name": "setup.sh",
+        "extension": ".sh",
+        "size_bytes": 525,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/5c2380ae118c4f10912d46753ba13393">
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardTitle>Cooperative Institute for Research to Operations in Hydrology (CIROH)</hsterms:awardTitle>
+        <hsterms:fundingAgencyName>National Oceanographic and Atmospheric Administration</hsterms:fundingAgencyName>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyURL rdf:resource="https://noaa.gov"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:name>Clemins, Patrick John</hsterms:name>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6665</hsterms:description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6665</hsterms:hydroshare_user_id>
+        <hsterms:organization>Vermont EPSCoR, University of Vermont</hsterms:organization>
+        <hsterms:email>patrick.clemins@uvm.edu</hsterms:email>
+        <hsterms:phone>4148074064</hsterms:phone>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:name>Oikonomou, Panagiotis</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4717</hsterms:hydroshare_user_id>
+        <hsterms:email>panagiotis.oikonomou@colostate.edu</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4717</hsterms:description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0001-6612-0994"/>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hsterms:creatorOrder>
+        <hsterms:organization>Colorado State University</hsterms:organization>
+        <hsterms:address>Colorado, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:homepage></hsterms:homepage>
+      </rdf:Description>
+    </dc:creator>
+    <dc:language>eng</dc:language>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:subject>Surrogate Models</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <hsterms:isExecutedBy>https://github.com/Vermont-EPSCoR/iam-emulators/releases/tag/Water-2025</hsterms:isExecutedBy>
+      </rdf:Description>
+    </dc:relation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:email></hsterms:email>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hsterms:creatorOrder>
+        <hsterms:organization></hsterms:organization>
+        <hsterms:address></hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:name>Safwan Wshah</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>Nutrient Management</dc:subject>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>Traditional approaches to quantify uncertainty &amp; explore teleconnections in process-based models of coupled natural and human systems (CHANS) range from global sensitivity analysis of model parameters to Monte Carlo simulation experiments, decom-position analyses and propagation of errors analysis. We hypothesize that the application of machine learned emulator models to simulate process-based CHANS enables discovery of teleconnections &amp; quantification of relative importance of natural versus human drivers of change in CHANS. We test this hypothesis by applying machine learning algorithms (Random Forest Models) to the simulation outputs derived from 332 scenarios of an integrated process-based CHANS model that predicts water quality in Missisquoi Bay of Lake Cham-plain under alternate hydro-climatic, and nutrient management scenarios for the 2001-2047 timeframe. Relative importance and partial dependence plots are derived from Random Forest models to quantify relative uncertainty &amp; importance of (external to lake) climatic, hydrological, nutrient management and (internal to lake) P and N sediment re-lease drivers of Harmful Algal Blooms (HABs) in Missisquoi Bay. We discover that predictor variables representing snow, evaporation and transpiration dynamics tele-connect hydro-climatic processes occurring in terrestrial watersheds with the biogeochemical processes occurring in the freshwater lakes. We find that 14 predictors, representing both internal and external to lake processes, successfully predict four alternate trophic states of the Missisquoi Bay with ~93% accuracy rate.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>Coupled Natural and Human Systems</dc:subject>
+    <dc:subject>Global Climate Change</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hsterms:creatorOrder>
+        <hsterms:organization></hsterms:organization>
+        <hsterms:email></hsterms:email>
+        <hsterms:name>Donna RIzzo</hsterms:name>
+        <hsterms:address></hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:homepage></hsterms:homepage>
+      </rdf:Description>
+    </dc:creator>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:source>https://hydroshare.org/resource/a618bcdae0484909bfd03b5fc618eb06/</dcterms:source>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>Uncertainty Quantification</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>University of Vermont</hsterms:organization>
+        <hsterms:email></hsterms:email>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:address></hsterms:address>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:name>Muhammad Adil</hsterms:name>
+        <hsterms:phone></hsterms:phone>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:email></hsterms:email>
+        <hsterms:name>Andrew Schroth</hsterms:name>
+        <hsterms:organization>University of Vermont</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hsterms:creatorOrder>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:address></hsterms:address>
+      </rdf:Description>
+    </dc:creator>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-10-06T17:53:10.451591+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2025-10-03T18:06:11.917207+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <dc:title>Water: Harnessing Machine Learned Emulator Models to Discover Teleconnections and Quantify Uncertainty in Process-Based Models of Coupled Human and Natural Systems</dc:title>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:source>https://hydroshare.org/resource/e0cb889157e44a0ead64e369155dc151/</dcterms:source>
+      </rdf:Description>
+    </dc:relation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>asim.zia@uvm.edu</hsterms:email>
+        <hsterms:name>Zia, Asim</hsterms:name>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:organization>University of Vermont</hsterms:organization>
+        <hsterms:address>Vermont, US</hsterms:address>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11193</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11193</hsterms:description>
+      </rdf:Description>
+    </dc:creator>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/5c2380ae118c4f10912d46753ba13393"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>Teleconnections</dc:subject>
+    <dc:subject>Water Quality</dc:subject>
+    <dc:subject>Harmful Algal Blooms</dc:subject>
+    <dc:subject>Emulator Models</dc:subject>
+    <dcterms:bibliographicCitation>Zia, A., P. J. Clemins, M. Adil, A. Schroth, D. RIzzo, P. Oikonomou, S. Wshah (2025). Water: Harnessing Machine Learned Emulator Models to Discover Teleconnections and Quantify Uncertainty in Process-Based Models of Coupled Human and Natural Systems, HydroShare, http://www.hydroshare.org/resource/5c2380ae118c4f10912d46753ba13393</dcterms:bibliographicCitation>
+    <dc:subject>Machine Learning</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:source>https://hydroshare.org/resource/76b1e433cd2a41a0b50170511fec68ac/</dcterms:source>
+      </rdf:Description>
+    </dc:relation>
+  </hsterms:CompositeResource>
+</rdf:RDF>

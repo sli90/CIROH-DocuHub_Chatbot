@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/5d88721054a5458d93ad837192f38abb">
+    <dc:subject>high water marks</dc:subject>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-09-06T11:56:23.819263+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardTitle></hsterms:awardTitle>
+        <hsterms:awardNumber></hsterms:awardNumber>
+        <hsterms:fundingAgencyName>Lake Champlain Sea Grant</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ror.org/05k70qf45"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:doi rdf:resource="https://doi.org/10.4211/hs.5d88721054a5458d93ad837192f38abb"/>
+      </rdf:Description>
+    </dc:identifier>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ror.org/02z5nhe81"/>
+        <hsterms:awardTitle>Cooperative Institute for Research to Operations in Hydrology (CIROH)</hsterms:awardTitle>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:language>eng</dc:language>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/5d88721054a5458d93ad837192f38abb"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:publisher>
+      <rdf:Description>
+        <hsterms:publisherName>Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)</hsterms:publisherName>
+        <hsterms:publisherURL rdf:resource="https://www.cuahsi.org"/>
+      </rdf:Description>
+    </dc:publisher>
+    <dc:date>
+      <hsterms:published>
+        <rdf:value>2024-09-09T13:01:32.256071+00:00</rdf:value>
+      </hsterms:published>
+    </dc:date>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>Rebecca.Diehl@uvm.edu</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4814</hsterms:description>
+        <hsterms:name>Diehl, Rebecca</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4814</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:organization>University of Vermont</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:organization>Univeristy of Vermont</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:email>Kenneth.Johnston@uvm.edu</hsterms:email>
+        <hsterms:name>Kenneth Johnston</hsterms:name>
+        <hsterms:address></hsterms:address>
+        <hsterms:phone></hsterms:phone>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>flood</dc:subject>
+    <dcterms:bibliographicCitation>Diehl, R., K. Johnston (2024). High Water Marks July and December 2023 Vermont Floods - UVM Floodplains, HydroShare, https://doi.org/10.4211/hs.5d88721054a5458d93ad837192f38abb</dcterms:bibliographicCitation>
+    <dc:title>High Water Marks July and December 2023 Vermont Floods - UVM Floodplains</dc:title>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=45.0134; eastlimit=-72.4054; southlimit=44.0738; westlimit=-73.4052</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2024-09-09T13:01:43.894242+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:subject>Vermont</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:subject>floodplain research</dc:subject>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This dataset represents high-water mark observations made following widespread flooding in Vermont on July 10-11 and December 18, 2023. Sites visited following flood recession are part of a long-term floodplain monitoring network maintained by the University of Vermont. Immediately after the floods, field teams flagged high water marks, took photos, and marked the locations with smart phone GPS. Subsequently a survey team revisited the sites with an RTK-GPS to more precisely capture the location and elevation and post-processed through NOAA's OPUS. &#13;
+&#13;
+Data quality is noted based on the following:&#13;
+Field Rating: Based on initial site visits. Field personnel noted their confidence level in the indicators of the high water marks. High confidence are noted as "Good", and lower confidence points are noted as "Fair" or "Poor"&#13;
+GPS Quality: Based on RTK-GPS survey quality. More information can be found in accompanying txt file.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+  </hsterms:CompositeResource>
+</rdf:RDF>

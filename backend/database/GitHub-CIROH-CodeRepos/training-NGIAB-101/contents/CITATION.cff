@@ -1,0 +1,43 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: NGIAB 101
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Arpita
+    family-names: Patel
+    affiliation: University of Alabama
+  - given-names: Quinn
+    family-names: Lee
+    affiliation: University of Alabama
+  - given-names: Hari Teja
+    family-names: Jajula
+    affiliation: University of Alabama
+  - given-names: Nia 
+    family-names: Minor
+    affiliation: University of Alabama
+repository-code: 'https://github.com/CIROH-UA/training-NGIAB-101'
+url: 'https://docs.ciroh.org/training-NGIAB-101/'
+repository: 'https://github.com/CIROH-UA/NGIAB-CloudInfra'
+abstract: >-
+  The NGIAB 101 training module, developed by the
+  Cooperative Institute for Research to Operations in
+  Hydrology (CIROH), offers an introductory, hands-on
+  learning experience with NextGen In A Box (NGIAB)—a
+  modular, open-source hydrologic modeling framework. This
+  module guides users through the complete modeling
+  workflow, including installation, data preparation, model
+  execution, evaluation, and visualization. It also provides
+  optional advanced topics for high-performance computing
+  (HPC) environments.
+keywords:
+  - NextGen Framework
+  - National Water Model (NWM)
+  - Hydrologic Modeling
+  - Community Modeling
+license: CC-BY-4.0
+date-released: '2025-05-19'

@@ -1,0 +1,46 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "ff4e9c4e87ef4d7d923efe77f5ed2b83",
+    "resource_title": "RIce-Net dataset: River Ice detection",
+    "abstract": "A computer vision-based framework, River Ice-Network (RIce-Net), uses the USGS nationwide network of ground-based cameras whose images are published through the National Imagery Management System (NIMS), which is available to the public through the Hydrologic Imagery Visualization and Information System (HIVIS; https://apps.usgs.gov/hivis). RIce-Net classifies ice-affected images, segments the ice presence over river surface, calculates the fraction of ice coverage, and automatically generates a near real-time ice flag. The RIce-Net was trained using images from the Milwaukee River near Cedarburg station (https://apps.usgs.gov/hivis/camera/WI_Milwaukee_River_near_Cedarburg) collected in 2023 and tested using images collected in 2024. This repository provides the training data set of the classification and segmentation models.",
+    "authors": [
+        "Ayyad, Mahmoud",
+        "Temimi, Marouane",
+        "Abdelkader, Mohamed",
+        "Henein, Moheb"
+    ],
+    "creator": "Ayyad, Mahmoud",
+    "doi": "10.4211/hs.ff4e9c4e87ef4d7d923efe77f5ed2b83",
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": true,
+    "published": true,
+    "date_created": "2025-01-26T19:13:42.113908Z",
+    "date_last_updated": "2025-09-26T10:35:53.532022Z",
+    "bag_last_downloaded": "2026-03-21T19:48:34.558108Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/ff4e9c4e87ef4d7d923efe77f5ed2b83.zip",
+    "coverages": [
+        {
+            "type": "period",
+            "value": {
+                "start": "2023-01-01",
+                "end": "2024-02-29"
+            }
+        },
+        {
+            "type": "point",
+            "value": {
+                "projection": "WGS 84 EPSG:4326",
+                "east": -87.942722,
+                "north": 43.279846,
+                "units": "Decimal degrees",
+                "name": "Milwaukee River near Cedarburg"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/ff4e9c4e87ef4d7d923efe77f5ed2b83/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/ff4e9c4e87ef4d7d923efe77f5ed2b83/map/",
+    "resource_url": "http://www.hydroshare.org/resource/ff4e9c4e87ef4d7d923efe77f5ed2b83/",
+    "content_types": []
+}

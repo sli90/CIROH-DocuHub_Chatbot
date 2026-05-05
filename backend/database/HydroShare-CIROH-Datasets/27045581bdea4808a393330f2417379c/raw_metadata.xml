@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c">
+    <dc:relation>
+      <rdf:Description>
+        <hsterms:isDescribedBy>Tarboton, D., A. Nassar, H. Salehabadi, P. Dash, A. Patel, F. Baig, S. Wang, A. M. Castronova (2026). AMS 2026 Presentation: Enabling Community Collaboration and Open Science in Hydrology through Data and Model Sharing with CUAHSI HydroShare, HydroShare, http://www.hydroshare.org/resource/1bb4f2f28926483884a82d664c651df7</hsterms:isDescribedBy>
+      </rdf:Description>
+    </dc:relation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</hsterms:description>
+        <hsterms:phone>4358905557</hsterms:phone>
+        <hsterms:email>aymnassar@gmail.com</hsterms:email>
+        <hsterms:organization>Utah State University</hsterms:organization>
+        <hsterms:name>Nassar, Ayman</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This HydroShare resource delivers a complete, modular workflow for implementing the Next Generation Water Modeling Framework (NextGen) using cloud-based or containerized computing environments. The workflow guides users through each key component of a research-scale hydrologic modeling application, including model input data preparation, model configuration and execution, calibration, and performance evaluation.&#13;
+&#13;
+To run this workflow, users must launch the resource within an interactive computing environment. From the HydroShare "Open With" web app connector, select "CIROH-2i2c JupyterHub", then choose the pre-configured "CIROH Community NextGen Hub" image. This environment includes all required NextGen tools and dependencies to ensure consistent, reproducible execution.&#13;
+&#13;
+The workflow is organized into five interoperable Jupyter Notebooks that can be executed independently or as a full end-to-end sequence:&#13;
+&#13;
+1. NextGen Data Preparation – Subsets the hydrofabric for a user-defined Area of Interest (AOI), generates meteorological forcing data, and creates model configuration files and realizations for CFE and Noah-OWP model components.&#13;
+&#13;
+2. NextGen Run – Executes the NextGen model using default configurations to establish baseline simulation performance.&#13;
+&#13;
+3. NextGen TEEHR Evaluation – Compares simulated streamflow results with USGS observations and the National Water Model Retrospective Analysis v3.0 using TEEHR (Tools for Exploratory Evaluation in Hydrologic Research).&#13;
+&#13;
+4. NextGen Output Analysis – Visualizes water balance components and other model outputs for interpretation and post-processing.&#13;
+&#13;
+5. NextGen Calibration – Applies SPOTPY-based optimization to improve model performance through automated streamflow calibration.&#13;
+&#13;
+A lightweight Python wrapper, pyngiab.py, streamlines interaction with the NextGen model engine by managing configuration loading, model execution, and output organization directly from the notebooks.&#13;
+&#13;
+Supplementary Python utility scripts support data subsetting, visualization, calibration, programmatic execution, and reproducible model management. Together, these components establish a transparent, adaptable, and fully traceable workflow to support collaborative hydrologic research, model testing, and community-driven advancement of the NextGen framework.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>CIROH</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:homepage rdf:resource="http://hydrology.usu.edu/dtarb"/>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1998-3479"/>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:description>
+        <hsterms:organization>Utah State University</hsterms:organization>
+        <hsterms:name>Tarboton, David</hsterms:name>
+        <hsterms:phone>+1 (435) 797-3172</hsterms:phone>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:hydroshare_user_id>
+        <hsterms:address>UT, US</hsterms:address>
+        <hsterms:email>dtarb@usu.edu</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration (NOAA), University of Alabama</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"/>
+        <hsterms:awardTitle>CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare</hsterms:awardTitle>
+        <hsterms:awardNumber>NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University</hsterms:awardNumber>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:subject>NextGen</dc:subject>
+    <dc:language>eng</dc:language>
+    <dc:subject>cyberinfrastructure</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>cloud computing</dc:subject>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=1980-01-01T00:00:00; end=2022-12-31T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:subject>JupyterHub</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>jcunningham8@ua.edu</hsterms:email>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hsterms:creatorOrder>
+        <hsterms:organization>Alabama State University</hsterms:organization>
+        <hsterms:name>Cunningham, Josh</hsterms:name>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26970</hsterms:description>
+        <hsterms:address>AL, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26970</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>2i2c</dc:subject>
+    <dc:title>NextGen Water Modeling Workflow for Research-Scale Applications</dc:title>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2025-03-24T16:26:57.316808+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:subject>ciroh_hub_notebook</dc:subject>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2026-02-26T20:56:31.679792+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:subject>HydroShare</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:name>Salehabadi, Homa</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4484</hsterms:hydroshare_user_id>
+        <hsterms:email>homa.salehabadi@gmail.com</hsterms:email>
+        <hsterms:address>CA, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4484</hsterms:description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-3516-4462"/>
+        <hsterms:homepage rdf:resource="http://www.linkedin.com/in/homasalehabadi"/>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=LsGbadwAAAAJ&amp;hl=en"/>
+        <hsterms:organization>Utah Sate University</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hsterms:creatorOrder>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16982</hsterms:hydroshare_user_id>
+        <hsterms:organization>University of Illinois at Urbana-Champaign</hsterms:organization>
+        <hsterms:name>Baig, Furqan</hsterms:name>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16982</hsterms:description>
+        <hsterms:email>fbaig@illinois.edu</hsterms:email>
+        <hsterms:address>Illinois, US</hsterms:address>
+      </rdf:Description>
+    </dc:creator>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>name=CONUS; projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=49.804; eastlimit=-65.4594; southlimit=24.639; westlimit=-124.8739</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dcterms:bibliographicCitation>Nassar, A., D. Tarboton, F. Baig, A. Patel, J. Cunningham, H. Salehabadi (2026). NextGen Water Modeling Workflow for Research-Scale Applications, HydroShare, http://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c</dcterms:bibliographicCitation>
+    <dc:subject>CUAHSI</dc:subject>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16622</hsterms:description>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:organization>AWI;UA</hsterms:organization>
+        <hsterms:email>apatel54@ua.edu</hsterms:email>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16622</hsterms:hydroshare_user_id>
+        <hsterms:name>Patel, Arpita</hsterms:name>
+        <hsterms:address>Alabama, US</hsterms:address>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hsterms:creatorOrder>
+      </rdf:Description>
+    </dc:creator>
+  </hsterms:CompositeResource>
+</rdf:RDF>

@@ -1,0 +1,43 @@
+{
+    "id": 1114638059,
+    "name": "nrds-client",
+    "full_name": "CIROH-UA/nrds-client",
+    "html_url": "https://github.com/CIROH-UA/nrds-client",
+    "description": "NRDS visualizer",
+    "homepage": "https://nrds.ciroh.org",
+    "default_branch": "main",
+    "created_at": "2025-12-11T16:57:30Z",
+    "updated_at": "2026-04-20T18:27:18Z",
+    "pushed_at": "2026-04-08T22:21:41Z",
+    "language": "JavaScript",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 8164,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "forks_count": 2,
+    "open_issues_count": 1,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 2,
+        "top_contributors": [
+            {
+                "id": 43544549,
+                "login": "romer8",
+                "html_url": "https://github.com/romer8",
+                "type": "User",
+                "contributions": 88
+            },
+            {
+                "id": 120678271,
+                "login": "manjilasingh",
+                "html_url": "https://github.com/manjilasingh",
+                "type": "User",
+                "contributions": 2
+            }
+        ]
+    }
+}

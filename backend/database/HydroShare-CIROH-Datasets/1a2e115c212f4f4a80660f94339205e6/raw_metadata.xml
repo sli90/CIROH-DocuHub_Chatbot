@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+    <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+    <rdfs:label>Composite Resource</rdfs:label>
+  </rdf:Description>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/1a2e115c212f4f4a80660f94339205e6">
+    <dc:subject>Mean-flow_depth</dc:subject>
+    <dc:title>Bankfull and Mean-flow Channel Geometry Dataset across the CONtiguous United States (CONUS)</dc:title>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>University of Alabama</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hsterms:creatorOrder>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:address>Alabama, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:name>Cohen, Sagy</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</hsterms:hydroshare_user_id>
+        <hsterms:email>sagy.cohen@ua.edu</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</hsterms:description>
+      </rdf:Description>
+    </dc:creator>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2026-03-24T18:45:33.312892+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isVersionOf>Zarrabi, R., R. McDermott, M. Erfani, S. Cohen (2026). Bankfull and Mean-flow Channel Geometry Dataset across the CONtiguous United States (CONUS), HydroShare, http://www.hydroshare.org/resource/63ae139ccd2445959470d0e5a2ebf6a5</dcterms:isVersionOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/1a2e115c212f4f4a80660f94339205e6"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>Bankfull_depth</dc:subject>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2026-03-24T18:38:57.322085+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>remcdermott@crimson.ua.edu</hsterms:email>
+        <hsterms:address>AL, US</hsterms:address>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21254</hsterms:hydroshare_user_id>
+        <hsterms:name>McDermott, Riley</hsterms:name>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21254</hsterms:description>
+        <hsterms:organization>University of Alabama - Tuscaloosa</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:phone></hsterms:phone>
+      </rdf:Description>
+    </dc:creator>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This dataset includes estimated river channel geometry attributes, specifically width and depth, under bankfull and mean-flow conditions across the CONtiguous United States (CONUS). The method utilized for providing these estimations is based on eXtreme Gradient Boosting Regression (XGBR).&#13;
+&#13;
+The dataset can be linked to the National Hydrography Dataset Plus (NHDPlusV2.1) using the common NHD feature identifier, COMID, and to USGS gages using the identifier FLComID.&#13;
+&#13;
+Data for NHDPlusV2.1 stream reaches are available for download in both TXT format (Bankfull_Meanflow_CONUS_Stream_Reaches.txt) and shapefile format (Bankfull_Meanflow_CONUS_Stream_Reaches.zip). Data for USGS gages are available in CSV format (Bankfull_Meanflow_CONUS_USGS_Gages.csv) and shapefile format (Bankfull_Meanflow_CONUS_USGS_Gages.zip).</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14770</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14770</hsterms:description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:name>Erfani, Mohammad</hsterms:name>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:organization>University of South Carolina</hsterms:organization>
+        <hsterms:address>South Carolina, US</hsterms:address>
+        <hsterms:email>serfani@email.sc.edu</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:organization>University of Alabama</hsterms:organization>
+        <hsterms:name>Cohen, Sagy</hsterms:name>
+        <hsterms:address>Alabama, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</hsterms:hydroshare_user_id>
+        <hsterms:email>sagy.cohen@ua.edu</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</hsterms:description>
+        <hsterms:homepage></hsterms:homepage>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=49.0379; eastlimit=-66.4453; southlimit=24.2069; westlimit=-125.1563</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dcterms:bibliographicCitation>Zarrabi, R., R. McDermott, M. Erfani, S. Cohen (2026). Bankfull and Mean-flow Channel Geometry Dataset across the CONtiguous United States (CONUS), HydroShare, http://www.hydroshare.org/resource/1a2e115c212f4f4a80660f94339205e6</dcterms:bibliographicCitation>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14770</hsterms:description>
+        <hsterms:name>Erfani, Mohammad</hsterms:name>
+        <hsterms:organization>University of South Carolina</hsterms:organization>
+        <hsterms:email>serfani@email.sc.edu</hsterms:email>
+        <hsterms:address>South Carolina, US</hsterms:address>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14770</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:name>McDermott, Riley</hsterms:name>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21254</hsterms:description>
+        <hsterms:organization>University of Alabama - Tuscaloosa</hsterms:organization>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:address>AL, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:email>remcdermott@crimson.ua.edu</hsterms:email>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21254</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:language>eng</dc:language>
+    <dc:subject>Mean-flow_width</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22011</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22011</hsterms:description>
+        <hsterms:name>Zarrabi, Reihaneh</hsterms:name>
+        <hsterms:email>rzarrabi@crimson.ua.edu</hsterms:email>
+        <hsterms:organization>University of Alabama</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+    <dc:type rdf:resource="http://www.hydroshare.org/terms/CompositeResource"/>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyURL></hsterms:fundingAgencyURL>
+        <hsterms:fundingAgencyName>National Oceanic &amp; Atmospheric Administration (NOAA)</hsterms:fundingAgencyName>
+        <hsterms:awardTitle>the Cooperative Institute for Research to Operations in Hydrology (CIROH) through the NOAA Cooperative Agreement with The University of Alabama</hsterms:awardTitle>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:subject>Bankfull_width</dc:subject>
+  </hsterms:CompositeResource>
+</rdf:RDF>

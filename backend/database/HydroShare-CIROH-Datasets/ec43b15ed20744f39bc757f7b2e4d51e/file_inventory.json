@@ -1,0 +1,32 @@
+[
+    {
+        "file_name": "ngen-hydrofabric-subset.ipynb",
+        "file_path": "ngen-hydrofabric-subset.ipynb",
+        "extension": ".ipynb",
+        "checksum": "4141ce09417f5c10bac55270d6979c39"
+    },
+    {
+        "file_name": "collect-aorc-v1.1.ipynb",
+        "file_path": "collect-aorc-v1.1.ipynb",
+        "extension": ".ipynb",
+        "checksum": "7e9574ff5c5f4ef87bfb6a41bfb9680b"
+    },
+    {
+        "file_name": "getData.py",
+        "file_path": "getData.py",
+        "extension": ".py",
+        "checksum": "a70fec366bd005aac171a27cad46fb7a"
+    },
+    {
+        "file_name": "readme.md",
+        "file_path": "readme.md",
+        "extension": ".md",
+        "checksum": "c14037e5ccbe0c695ae834f9beeb8a85"
+    },
+    {
+        "file_name": "subset.py",
+        "file_path": "subset.py",
+        "extension": ".py",
+        "checksum": "bc0257a43c7d1745616350ee4d75b3cf"
+    }
+]

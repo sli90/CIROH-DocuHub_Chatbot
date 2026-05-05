@@ -1,0 +1,674 @@
+[
+    {
+        "path": ".gitattributes",
+        "file_name": ".gitattributes",
+        "extension": "",
+        "size_bytes": 26,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE.md",
+        "file_name": "ISSUE_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 186,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "file_name": "PULL_REQUEST_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 1351,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/unit_tests.yml",
+        "file_name": "unit_tests.yml",
+        "extension": ".yml",
+        "size_bytes": 823,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 940,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CHANGELOG.md",
+        "file_name": "CHANGELOG.md",
+        "extension": ".md",
+        "size_bytes": 280,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 1312,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "INSTALL.md",
+        "file_name": "INSTALL.md",
+        "extension": ".md",
+        "size_bytes": 313,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 11358,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "PACKAGE.md",
+        "file_name": "PACKAGE.md",
+        "extension": ".md",
+        "size_bytes": 5560,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 13332,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 3303,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 1516,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "bmi_config_files/02064000_nh_NLDAS_hourly.yml",
+        "file_name": "02064000_nh_NLDAS_hourly.yml",
+        "extension": ".yml",
+        "size_bytes": 323,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "bmi_config_files/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 5489,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "bmi_config_files/make_camels_config_files.py",
+        "file_name": "make_camels_config_files.py",
+        "extension": ".py",
+        "size_bytes": 2763,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/4_basins_test_set.txt",
+        "file_name": "4_basins_test_set.txt",
+        "extension": ".txt",
+        "size_bytes": 36,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/Icon",
+        "file_name": "Icon",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/camels_attributes_v2.0.xlsx",
+        "file_name": "camels_attributes_v2.0.xlsx",
+        "extension": ".xlsx",
+        "size_bytes": 16006,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/camels_clim.txt",
+        "file_name": "camels_clim.txt",
+        "extension": ".txt",
+        "size_bytes": 100673,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/camels_geol.txt",
+        "file_name": "camels_geol.txt",
+        "extension": ".txt",
+        "size_bytes": 71583,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/camels_hydro.txt",
+        "file_name": "camels_hydro.txt",
+        "extension": ".txt",
+        "size_bytes": 122799,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/camels_name.txt",
+        "file_name": "camels_name.txt",
+        "extension": ".txt",
+        "size_bytes": 30417,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/camels_soil.txt",
+        "file_name": "camels_soil.txt",
+        "extension": ".txt",
+        "size_bytes": 109125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/camels_topo.txt",
+        "file_name": "camels_topo.txt",
+        "extension": ".txt",
+        "size_bytes": 38677,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/camels_vege.txt",
+        "file_name": "camels_vege.txt",
+        "extension": ".txt",
+        "size_bytes": 107970,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/camels_attributes_v2.0/readme.txt",
+        "file_name": "readme.txt",
+        "extension": ".txt",
+        "size_bytes": 1704,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "data/camels_basin_list_516.txt",
+        "file_name": "camels_basin_list_516.txt",
+        "extension": ".txt",
+        "size_bytes": 4644,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/usgs-streamflow-nldas_hourly.nc",
+        "file_name": "usgs-streamflow-nldas_hourly.nc",
+        "extension": ".nc",
+        "size_bytes": 13036556,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "doc/Downloading_LSTM_YML_Files_from_AWS_S3.txt",
+        "file_name": "Downloading_LSTM_YML_Files_from_AWS_S3.txt",
+        "extension": ".txt",
+        "size_bytes": 1779,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "doc/How_to_Run_LSTM_in_NextGen.txt",
+        "file_name": "How_to_Run_LSTM_in_NextGen.txt",
+        "extension": ".txt",
+        "size_bytes": 8641,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "doc/Screenshot.png",
+        "file_name": "Screenshot.png",
+        "extension": ".png",
+        "size_bytes": 826051,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 251,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 153,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/base.py",
+        "file_name": "base.py",
+        "extension": ".py",
+        "size_bytes": 2292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/bmi_lstm.py",
+        "file_name": "bmi_lstm.py",
+        "extension": ".py",
+        "size_bytes": 23788,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/logger.py",
+        "file_name": "logger.py",
+        "extension": ".py",
+        "size_bytes": 1336,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/model_state.py",
+        "file_name": "model_state.py",
+        "extension": ".py",
+        "size_bytes": 5165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/nextgen_cuda_lstm.py",
+        "file_name": "nextgen_cuda_lstm.py",
+        "extension": ".py",
+        "size_bytes": 1427,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/run_bmi_unit_test.py",
+        "file_name": "run_bmi_unit_test.py",
+        "extension": ".py",
+        "size_bytes": 14239,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/run_lstm_bmi.py",
+        "file_name": "run_lstm_bmi.py",
+        "extension": ".py",
+        "size_bytes": 2421,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lstm/run_lstm_with_bmi_v2.py",
+        "file_name": "run_lstm_with_bmi_v2.py",
+        "extension": ".py",
+        "size_bytes": 2444,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/README.txt",
+        "file_name": "README.txt",
+        "extension": ".txt",
+        "size_bytes": 909,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "ngen_files/data/forcing/CAMELS-test/cat-1.csv",
+        "file_name": "cat-1.csv",
+        "extension": ".csv",
+        "size_bytes": 9458824,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/forcing/CAMELS-test/cat-7.csv",
+        "file_name": "cat-7.csv",
+        "extension": ".csv",
+        "size_bytes": 9458867,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/forcing/CAMELS-test/cat-8.csv",
+        "file_name": "cat-8.csv",
+        "extension": ".csv",
+        "size_bytes": 9458920,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/forcing/HUC01-test/cat-67.csv",
+        "file_name": "cat-67.csv",
+        "extension": ".csv",
+        "size_bytes": 9458416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/forcing/HUC01-test/cat-67_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "file_name": "cat-67_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "extension": ".csv",
+        "size_bytes": 95697,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/forcing/HUC01-test/cats-27_52_67-2015_12_01-2015_12_30.nc",
+        "file_name": "cats-27_52_67-2015_12_01-2015_12_30.nc",
+        "extension": ".nc",
+        "size_bytes": 334236,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/initial_states.csv",
+        "file_name": "initial_states.csv",
+        "extension": ".csv",
+        "size_bytes": 1504,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/input_scaling.csv",
+        "file_name": "input_scaling.csv",
+        "extension": ".csv",
+        "size_bytes": 520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/lstm_mean_std.csv",
+        "file_name": "lstm_mean_std.csv",
+        "extension": ".csv",
+        "size_bytes": 325,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/rc_files/realization_config_lstm_CAMELS-test.json",
+        "file_name": "realization_config_lstm_CAMELS-test.json",
+        "extension": ".json",
+        "size_bytes": 1115,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/rc_files/realization_config_lstm_HUC01.json",
+        "file_name": "realization_config_lstm_HUC01.json",
+        "extension": ".json",
+        "size_bytes": 1062,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/rc_files/realization_config_lstm_cat67a.json",
+        "file_name": "realization_config_lstm_cat67a.json",
+        "extension": ".json",
+        "size_bytes": 1528,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/rc_files/realization_config_lstm_cat67b.json",
+        "file_name": "realization_config_lstm_cat67b.json",
+        "extension": ".json",
+        "size_bytes": 1531,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/spatial/catchment_data_HUC01.txt",
+        "file_name": "catchment_data_HUC01.txt",
+        "extension": ".txt",
+        "size_bytes": 179,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/spatial/catchment_data_cat67.geojson",
+        "file_name": "catchment_data_cat67.geojson",
+        "extension": ".geojson",
+        "size_bytes": 2808,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/spatial/nexus_data_HUC01.geojson",
+        "file_name": "nexus_data_HUC01.geojson",
+        "extension": ".geojson",
+        "size_bytes": 995518,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/spatial/nexus_data_nex65.geojson",
+        "file_name": "nexus_data_nex65.geojson",
+        "extension": ".geojson",
+        "size_bytes": 334,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/sugar_creek_trained.pt",
+        "file_name": "sugar_creek_trained.pt",
+        "extension": ".pt",
+        "size_bytes": 89921,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/01022500_hourly_all_attributes_forcings.yml",
+        "file_name": "01022500_hourly_all_attributes_forcings.yml",
+        "extension": ".yml",
+        "size_bytes": 839,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/01022500_hourly_forcings_lat_lon_elev.yml",
+        "file_name": "01022500_hourly_forcings_lat_lon_elev.yml",
+        "extension": ".yml",
+        "size_bytes": 849,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/01022500_hourly_slope_mean_precip_temp.yml",
+        "file_name": "01022500_hourly_slope_mean_precip_temp.yml",
+        "extension": ".yml",
+        "size_bytes": 303,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/CAMELS-test/cat-1.yml",
+        "file_name": "cat-1.yml",
+        "extension": ".yml",
+        "size_bytes": 325,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/CAMELS-test/cat-7.yml",
+        "file_name": "cat-7.yml",
+        "extension": ".yml",
+        "size_bytes": 325,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/CAMELS-test/cat-8.yml",
+        "file_name": "cat-8.yml",
+        "extension": ".yml",
+        "size_bytes": 326,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/HUC01/Downloading_LSTM_YML_Files_from_AWS_S3.txt",
+        "file_name": "Downloading_LSTM_YML_Files_from_AWS_S3.txt",
+        "extension": ".txt",
+        "size_bytes": 1779,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/HUC01/cat-67.yml",
+        "file_name": "cat-67.yml",
+        "extension": ".yml",
+        "size_bytes": 392,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 5412,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/fake_hourly_slope_mean_precip_temp.yml",
+        "file_name": "fake_hourly_slope_mean_precip_temp.yml",
+        "extension": ".yml",
+        "size_bytes": 527,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ngen_files/data/lstm/yml_files/make_camels_config_files.py",
+        "file_name": "make_camels_config_files.py",
+        "extension": ".py",
+        "size_bytes": 661,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "paper_results_jawra/HUC01_catchment_outputs.ipynb",
+        "file_name": "HUC01_catchment_outputs.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 128006,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "paper_results_jawra/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 3219,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "paper_results_jawra/flow_duration_curve.png",
+        "file_name": "flow_duration_curve.png",
+        "extension": ".png",
+        "size_bytes": 25298,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "paper_results_jawra/lstm_agu.gif",
+        "file_name": "lstm_agu.gif",
+        "extension": ".gif",
+        "size_bytes": 7045377,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 1342,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "tests/integration_test.py",
+        "file_name": "integration_test.py",
+        "extension": ".py",
+        "size_bytes": 3583,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tests/run_lstm_bmi_AORC.py",
+        "file_name": "run_lstm_bmi_AORC.py",
+        "extension": ".py",
+        "size_bytes": 1756,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tests/test_model_state.py",
+        "file_name": "test_model_state.py",
+        "extension": ".py",
+        "size_bytes": 3113,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "trained_neuralhydrology_models/nh_AORC_hourly_slope_elev_precip_temp_seq999_seed101_2801_191806/config.yml",
+        "file_name": "config.yml",
+        "extension": ".yml",
+        "size_bytes": 1654,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "trained_neuralhydrology_models/nh_AORC_hourly_slope_elev_precip_temp_seq999_seed101_2801_191806/model_epoch009.pt",
+        "file_name": "model_epoch009.pt",
+        "extension": ".pt",
+        "size_bytes": 268933,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "trained_neuralhydrology_models/nh_AORC_hourly_slope_elev_precip_temp_seq999_seed101_2801_191806/optimizer_state_epoch009.pt",
+        "file_name": "optimizer_state_epoch009.pt",
+        "extension": ".pt",
+        "size_bytes": 539286,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "trained_neuralhydrology_models/nh_AORC_hourly_slope_elev_precip_temp_seq999_seed101_2801_191806/train_data/train_data_scaler.yml",
+        "file_name": "train_data_scaler.yml",
+        "extension": ".yml",
+        "size_bytes": 790,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

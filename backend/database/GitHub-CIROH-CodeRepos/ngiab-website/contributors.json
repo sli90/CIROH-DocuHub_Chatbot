@@ -1,0 +1,37 @@
+[
+    {
+        "id": 120678271,
+        "login": "manjilasingh",
+        "html_url": "https://github.com/manjilasingh",
+        "type": "User",
+        "contributions": 131
+    },
+    {
+        "id": 69406976,
+        "login": "Sheargrub",
+        "html_url": "https://github.com/Sheargrub",
+        "type": "User",
+        "contributions": 19
+    },
+    {
+        "id": 65355706,
+        "login": "Prajwal2006",
+        "html_url": "https://github.com/Prajwal2006",
+        "type": "User",
+        "contributions": 15
+    },
+    {
+        "id": 54657,
+        "login": "arpita0911patel",
+        "html_url": "https://github.com/arpita0911patel",
+        "type": "User",
+        "contributions": 2
+    },
+    {
+        "id": 49699333,
+        "login": "dependabot[bot]",
+        "html_url": "https://github.com/apps/dependabot",
+        "type": "Bot",
+        "contributions": 1
+    }
+]

@@ -1,0 +1,106 @@
+[
+    {
+        "path": ".dockerignore",
+        "file_name": ".dockerignore",
+        "extension": "",
+        "size_bytes": 34,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/binder.yaml",
+        "file_name": "binder.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1033,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/build.yaml",
+        "file_name": "build.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1318,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/build_branch.yaml",
+        "file_name": "build_branch.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test.yaml",
+        "file_name": "test.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1280,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 1799,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".vscode/launch.json",
+        "file_name": "launch.json",
+        "extension": ".json",
+        "size_bytes": 495,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Dockerfile",
+        "file_name": "Dockerfile",
+        "extension": "",
+        "size_bytes": 3890,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1516,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 3790,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "images/binder-badge.png",
+        "file_name": "binder-badge.png",
+        "extension": ".png",
+        "size_bytes": 16550,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "images/workflows.png",
+        "file_name": "workflows.png",
+        "extension": ".png",
+        "size_bytes": 98930,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "versions.txt",
+        "file_name": "versions.txt",
+        "extension": ".txt",
+        "size_bytes": 12,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

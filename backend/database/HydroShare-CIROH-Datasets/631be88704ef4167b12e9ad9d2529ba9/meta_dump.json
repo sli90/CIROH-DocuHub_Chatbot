@@ -1,0 +1,70 @@
+{
+    "title": "HydroFabric Subsetter and Retrieval",
+    "abstract": "This HydroShare resource is developed to subset and retrieve the HydroFabric dataset (Johnson, J. M. (2022), https://lynker-spatial.s3-us-west-2.amazonaws.com/copyright.html) needed to execute the NOAA Next Generation (NextGen) Water Resource Modeling framework. The NextGen hydrofabric describes the representation, discretization, and topology of the hydrologic landscape and drainage network as a three-part data product that includes: (1) catchment and flowpath features, (2) their connectivity, and (3) the attribute sets needed to execute models. For more details about the HydroFabric data, please visit this website:  https://noaa-owp.github.io/hydrofabric/",
+    "language": "eng",
+    "subjects": [
+        "NextGEN NWM",
+        "HydroFabric",
+        "Retrieval",
+        "Subsetter"
+    ],
+    "creators": [
+        {
+            "name": "Nassar, Ayman",
+            "phone": "4358905557",
+            "organization": "Utah State University",
+            "email": "aymnassar@gmail.com",
+            "creator_order": 1,
+            "hydroshare_user_id": 1981,
+            "identifiers": {}
+        },
+        {
+            "name": "Tarboton, David",
+            "phone": "+1 (435) 797-3172",
+            "address": "UT, US",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "homepage": "http://hydrology.usu.edu/dtarb",
+            "creator_order": 2,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is part of",
+            "value": "Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA), University of Alabama",
+            "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+            "number": "NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "name": "CONUS",
+        "northlimit": 49.7586,
+        "eastlimit": -64.7562,
+        "southlimit": 24.7349,
+        "westlimit": -126.2801,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "citation": "Nassar, A., D. Tarboton (2026). HydroFabric Subsetter and Retrieval, HydroShare, http://www.hydroshare.org/resource/631be88704ef4167b12e9ad9d2529ba9",
+    "url": "http://www.hydroshare.org/resource/631be88704ef4167b12e9ad9d2529ba9",
+    "identifier": "http://www.hydroshare.org/resource/631be88704ef4167b12e9ad9d2529ba9",
+    "created": "2024-06-24 19:08:23.883926+00:00",
+    "modified": "2026-01-29 04:16:32.820315+00:00",
+    "type": "CompositeResource"
+}

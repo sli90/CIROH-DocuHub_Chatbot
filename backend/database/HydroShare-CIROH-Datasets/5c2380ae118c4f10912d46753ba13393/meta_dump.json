@@ -1,0 +1,108 @@
+{
+    "title": "Water: Harnessing Machine Learned Emulator Models to Discover Teleconnections and Quantify Uncertainty in Process-Based Models of Coupled Human and Natural Systems",
+    "abstract": "Traditional approaches to quantify uncertainty & explore teleconnections in process-based models of coupled natural and human systems (CHANS) range from global sensitivity analysis of model parameters to Monte Carlo simulation experiments, decom-position analyses and propagation of errors analysis. We hypothesize that the application of machine learned emulator models to simulate process-based CHANS enables discovery of teleconnections & quantification of relative importance of natural versus human drivers of change in CHANS. We test this hypothesis by applying machine learning algorithms (Random Forest Models) to the simulation outputs derived from 332 scenarios of an integrated process-based CHANS model that predicts water quality in Missisquoi Bay of Lake Cham-plain under alternate hydro-climatic, and nutrient management scenarios for the 2001-2047 timeframe. Relative importance and partial dependence plots are derived from Random Forest models to quantify relative uncertainty & importance of (external to lake) climatic, hydrological, nutrient management and (internal to lake) P and N sediment re-lease drivers of Harmful Algal Blooms (HABs) in Missisquoi Bay. We discover that predictor variables representing snow, evaporation and transpiration dynamics tele-connect hydro-climatic processes occurring in terrestrial watersheds with the biogeochemical processes occurring in the freshwater lakes. We find that 14 predictors, representing both internal and external to lake processes, successfully predict four alternate trophic states of the Missisquoi Bay with ~93% accuracy rate.",
+    "language": "eng",
+    "subjects": [
+        "Emulator Models",
+        "Uncertainty Quantification",
+        "Harmful Algal Blooms",
+        "Surrogate Models",
+        "Global Climate Change",
+        "Water Quality",
+        "Teleconnections",
+        "Machine Learning",
+        "Nutrient Management",
+        "Coupled Natural and Human Systems"
+    ],
+    "creators": [
+        {
+            "name": "Zia, Asim",
+            "address": "Vermont, US",
+            "organization": "University of Vermont",
+            "email": "asim.zia@uvm.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 11193,
+            "identifiers": {}
+        },
+        {
+            "name": "Clemins, Patrick John",
+            "phone": "4148074064",
+            "organization": "Vermont EPSCoR, University of Vermont",
+            "email": "patrick.clemins@uvm.edu",
+            "creator_order": 2,
+            "hydroshare_user_id": 6665,
+            "identifiers": {}
+        },
+        {
+            "name": "Muhammad Adil",
+            "organization": "University of Vermont",
+            "creator_order": 3,
+            "identifiers": {}
+        },
+        {
+            "name": "Andrew Schroth",
+            "organization": "University of Vermont",
+            "creator_order": 4,
+            "identifiers": {}
+        },
+        {
+            "name": "Donna RIzzo",
+            "creator_order": 5,
+            "identifiers": {}
+        },
+        {
+            "name": "Oikonomou, Panagiotis",
+            "address": "Colorado, US",
+            "organization": "Colorado State University",
+            "email": "panagiotis.oikonomou@colostate.edu",
+            "creator_order": 6,
+            "hydroshare_user_id": 4717,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0001-6612-0994"
+            }
+        },
+        {
+            "name": "Safwan Wshah",
+            "creator_order": 7,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is derived from",
+            "value": "https://hydroshare.org/resource/76b1e433cd2a41a0b50170511fec68ac/"
+        },
+        {
+            "type": "The content of this resource is derived from",
+            "value": "https://hydroshare.org/resource/e0cb889157e44a0ead64e369155dc151/"
+        },
+        {
+            "type": "The content of this resource is derived from",
+            "value": "https://hydroshare.org/resource/a618bcdae0484909bfd03b5fc618eb06/"
+        },
+        {
+            "type": "The content of this resource can be executed by",
+            "value": "https://github.com/Vermont-EPSCoR/iam-emulators/releases/tag/Water-2025"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanographic and Atmospheric Administration",
+            "title": "Cooperative Institute for Research to Operations in Hydrology (CIROH)",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://noaa.gov/"
+        }
+    ],
+    "citation": "Zia, A., P. J. Clemins, M. Adil, A. Schroth, D. RIzzo, P. Oikonomou, S. Wshah (2025). Water: Harnessing Machine Learned Emulator Models to Discover Teleconnections and Quantify Uncertainty in Process-Based Models of Coupled Human and Natural Systems, HydroShare, http://www.hydroshare.org/resource/5c2380ae118c4f10912d46753ba13393",
+    "url": "http://www.hydroshare.org/resource/5c2380ae118c4f10912d46753ba13393",
+    "identifier": "http://www.hydroshare.org/resource/5c2380ae118c4f10912d46753ba13393",
+    "created": "2025-10-03 18:06:11.917207+00:00",
+    "modified": "2025-10-06 17:53:10.451591+00:00",
+    "type": "CompositeResource"
+}

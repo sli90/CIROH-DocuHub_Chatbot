@@ -1,0 +1,74 @@
+[
+    {
+        "file_name": "ExtData.csv",
+        "file_path": "ExtData.csv",
+        "extension": ".csv",
+        "checksum": "e50cb5b7bf251c3aa31440894d0a4595-19"
+    },
+    {
+        "file_name": "model.R",
+        "file_path": "model.R",
+        "extension": ".R",
+        "checksum": "7882476f5b1e82d8ef49785deeae929b"
+    },
+    {
+        "file_name": "validation.Rmd",
+        "file_path": "validation.Rmd",
+        "extension": ".Rmd",
+        "checksum": "fccdd9560ce06d36faffcf0c3057a7b4"
+    },
+    {
+        "file_name": "demo.pdf",
+        "file_path": "demo.pdf",
+        "extension": ".pdf",
+        "checksum": "6c5e9ea5d110226aafab7b35aef5d004"
+    },
+    {
+        "file_name": "AllData.csv",
+        "file_path": "AllData.csv",
+        "extension": ".csv",
+        "checksum": "d734881cacaa02a44db908e14dbc1778-60"
+    },
+    {
+        "file_name": "krigs.rda",
+        "file_path": "krigs.rda",
+        "extension": ".rda",
+        "checksum": "40c5244a557db7051c4ffe643dbb9e72-22"
+    },
+    {
+        "file_name": "valfn.R",
+        "file_path": "valfn.R",
+        "extension": ".R",
+        "checksum": "ef5317a1760e3d7fab59df43b3bfc384"
+    },
+    {
+        "file_name": "Ecoregions.csv",
+        "file_path": "Ecoregions.csv",
+        "extension": ".csv",
+        "checksum": "4aac012b217614c6860f08416fa2ac34"
+    },
+    {
+        "file_name": "eeretrieval.py",
+        "file_path": "eeretrieval.py",
+        "extension": ".py",
+        "checksum": "970e98c41c497ec014a43981b425abb1"
+    },
+    {
+        "file_name": "datapts.py",
+        "file_path": "datapts.py",
+        "extension": ".py",
+        "checksum": "f24dfa77a9f786de383ae960a3324a6b"
+    },
+    {
+        "file_name": "validation.pdf",
+        "file_path": "validation.pdf",
+        "extension": ".pdf",
+        "checksum": "afe923ac701a658cd35e0374267f15eb"
+    },
+    {
+        "file_name": "model.rda",
+        "file_path": "model.rda",
+        "extension": ".rda",
+        "checksum": "548c25ae003fad1d988b5d469faab7a1-12"
+    }
+]

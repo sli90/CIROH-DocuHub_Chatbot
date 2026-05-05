@@ -1,0 +1,107 @@
+{
+    "title": "Bankfull and Mean-flow Channel Geometry Dataset across the CONtiguous United States (CONUS)",
+    "abstract": "This dataset includes estimated river channel geometry attributes, specifically width and depth, under bankfull and mean-flow conditions across the CONtiguous United States (CONUS). The method utilized for providing these estimations is based on eXtreme Gradient Boosting Regression (XGBR).\r\n\r\nThe dataset can be linked to the National Hydrography Dataset Plus (NHDPlusV2.1) using the common NHD feature identifier, COMID, and to USGS gages using the identifier FLComID.\r\n\r\nData for NHDPlusV2.1 stream reaches are available for download in both TXT format (Bankfull_Meanflow_CONUS_Stream_Reaches.txt) and shapefile format (Bankfull_Meanflow_CONUS_Stream_Reaches.zip). Data for USGS gages are available in CSV format (Bankfull_Meanflow_CONUS_USGS_Gages.csv) and shapefile format (Bankfull_Meanflow_CONUS_USGS_Gages.zip).",
+    "language": "eng",
+    "subjects": [
+        "Bankfull_depth",
+        "Mean-flow_depth",
+        "Bankfull_width",
+        "Mean-flow_width"
+    ],
+    "creators": [
+        {
+            "name": "Zarrabi, Reihaneh",
+            "organization": "University of Alabama",
+            "email": "rzarrabi@crimson.ua.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 22011,
+            "identifiers": {}
+        },
+        {
+            "name": "McDermott, Riley",
+            "address": "AL, US",
+            "organization": "University of Alabama - Tuscaloosa",
+            "email": "remcdermott@crimson.ua.edu",
+            "creator_order": 2,
+            "hydroshare_user_id": 21254,
+            "identifiers": {}
+        },
+        {
+            "name": "Erfani, Mohammad",
+            "address": "South Carolina, US",
+            "organization": "University of South Carolina",
+            "email": "serfani@email.sc.edu",
+            "creator_order": 3,
+            "hydroshare_user_id": 14770,
+            "identifiers": {}
+        },
+        {
+            "name": "Cohen, Sagy",
+            "address": "Alabama, US",
+            "organization": "University of Alabama",
+            "email": "sagy.cohen@ua.edu",
+            "creator_order": 4,
+            "hydroshare_user_id": 35,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [
+        {
+            "name": "McDermott, Riley",
+            "address": "AL, US",
+            "organization": "University of Alabama - Tuscaloosa",
+            "email": "remcdermott@crimson.ua.edu",
+            "hydroshare_user_id": 21254,
+            "identifiers": {}
+        },
+        {
+            "name": "Erfani, Mohammad",
+            "address": "South Carolina, US",
+            "organization": "University of South Carolina",
+            "email": "serfani@email.sc.edu",
+            "hydroshare_user_id": 14770,
+            "identifiers": {}
+        },
+        {
+            "name": "Cohen, Sagy",
+            "address": "Alabama, US",
+            "organization": "University of Alabama",
+            "email": "sagy.cohen@ua.edu",
+            "hydroshare_user_id": 35,
+            "identifiers": {}
+        }
+    ],
+    "relations": [
+        {
+            "type": "This resource updates and replaces a previous version",
+            "value": "Zarrabi, R., R. McDermott, M. Erfani, S. Cohen (2026). Bankfull and Mean-flow Channel Geometry Dataset across the CONtiguous United States (CONUS), HydroShare, http://www.hydroshare.org/resource/63ae139ccd2445959470d0e5a2ebf6a5"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic & Atmospheric Administration (NOAA)",
+            "title": "the Cooperative Institute for Research to Operations in Hydrology (CIROH) through the NOAA Cooperative Agreement with The University of Alabama",
+            "number": "NA22NWS4320003"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 49.0379,
+        "eastlimit": -66.4453,
+        "southlimit": 24.2069,
+        "westlimit": -125.1563,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "citation": "Zarrabi, R., R. McDermott, M. Erfani, S. Cohen (2026). Bankfull and Mean-flow Channel Geometry Dataset across the CONtiguous United States (CONUS), HydroShare, http://www.hydroshare.org/resource/1a2e115c212f4f4a80660f94339205e6",
+    "url": "http://www.hydroshare.org/resource/1a2e115c212f4f4a80660f94339205e6",
+    "identifier": "http://www.hydroshare.org/resource/1a2e115c212f4f4a80660f94339205e6",
+    "created": "2026-03-24 18:38:57.322085+00:00",
+    "modified": "2026-03-24 18:45:33.312892+00:00",
+    "type": "CompositeResource"
+}

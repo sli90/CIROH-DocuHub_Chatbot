@@ -1,0 +1,76 @@
+{
+    "id": 516822944,
+    "name": "awi-ciroh-image",
+    "full_name": "CIROH-UA/awi-ciroh-image",
+    "html_url": "https://github.com/CIROH-UA/awi-ciroh-image",
+    "description": "CIROH JupyterHub image repository",
+    "homepage": "https://ciroh.awi.2i2c.cloud/",
+    "default_branch": "main",
+    "created_at": "2022-07-22T16:46:51Z",
+    "updated_at": "2026-02-13T05:25:35Z",
+    "pushed_at": "2026-04-23T02:57:31Z",
+    "language": "Dockerfile",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 33169,
+    "stargazers_count": 2,
+    "watchers_count": 2,
+    "forks_count": 7,
+    "open_issues_count": 6,
+    "license": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause"
+    },
+    "contributors_summary": {
+        "contributors_count": 6,
+        "top_contributors": [
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 45
+            },
+            {
+                "id": 44771837,
+                "login": "sgibson91",
+                "html_url": "https://github.com/sgibson91",
+                "type": "User",
+                "contributions": 31
+            },
+            {
+                "id": 130000039,
+                "login": "benlee0423",
+                "html_url": "https://github.com/benlee0423",
+                "type": "User",
+                "contributions": 28
+            },
+            {
+                "id": 111385246,
+                "login": "arpitapatel09",
+                "html_url": "https://github.com/arpitapatel09",
+                "type": "User",
+                "contributions": 23
+            },
+            {
+                "id": 112987653,
+                "login": "sepehrkrz",
+                "html_url": "https://github.com/sepehrkrz",
+                "type": "User",
+                "contributions": 5
+            },
+            {
+                "id": 2523434,
+                "login": "pkdash",
+                "html_url": "https://github.com/pkdash",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

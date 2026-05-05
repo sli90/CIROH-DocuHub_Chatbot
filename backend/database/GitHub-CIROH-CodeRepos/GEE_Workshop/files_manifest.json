@@ -1,0 +1,2522 @@
+[
+    {
+        "path": "GEE_ML_Workflow/.ipynb_checkpoints/EE_funcs-checkpoint.ipynb",
+        "file_name": "EE_funcs-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 72,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/.ipynb_checkpoints/GEE_Workshop_CH1-checkpoint.ipynb",
+        "file_name": "GEE_Workshop_CH1-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 232673,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/.ipynb_checkpoints/GEE_Workshop_CH2-checkpoint.ipynb",
+        "file_name": "GEE_Workshop_CH2-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 160737,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/.ipynb_checkpoints/Get_StreamStats-checkpoint.ipynb",
+        "file_name": "Get_StreamStats-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 5728,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Data/Pred_DF1.csv",
+        "file_name": "Pred_DF1.csv",
+        "extension": ".csv",
+        "size_bytes": 16891,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Data/StreamStats1.csv",
+        "file_name": "StreamStats1.csv",
+        "extension": ".csv",
+        "size_bytes": 221,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Data/StreamStats2.csv",
+        "file_name": "StreamStats2.csv",
+        "extension": ".csv",
+        "size_bytes": 377,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Data/StreamStats_All.csv",
+        "file_name": "StreamStats_All.csv",
+        "extension": ".csv",
+        "size_bytes": 1674089,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Data/Training_DF1.csv",
+        "file_name": "Training_DF1.csv",
+        "extension": ".csv",
+        "size_bytes": 116960,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Data/Training_DF2.csv",
+        "file_name": "Training_DF2.csv",
+        "extension": ".csv",
+        "size_bytes": 363762,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/EE_funcs.ipynb",
+        "file_name": "EE_funcs.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 1757,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/EE_funcs.py",
+        "file_name": "EE_funcs.py",
+        "extension": ".py",
+        "size_bytes": 881,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Evaluation_funcs.ipynb",
+        "file_name": "Evaluation_funcs.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 3206,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/Evaluation_funcs.py",
+        "file_name": "Evaluation_funcs.py",
+        "extension": ".py",
+        "size_bytes": 3300,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/.ipynb_checkpoints/GEE_Workshop_CH1-checkpoint.ipynb",
+        "file_name": "GEE_Workshop_CH1-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 231932,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/.ipynb_checkpoints/RJ_GEE_Workshop_CH1.5-checkpoint.ipynb",
+        "file_name": "RJ_GEE_Workshop_CH1.5-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 618220,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/.ipynb_checkpoints/RJ_GEE_Workshop_CH2-checkpoint.ipynb",
+        "file_name": "RJ_GEE_Workshop_CH2-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 205896,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/.ipynb_checkpoints/RJ_GEE_Workshop_CH3-checkpoint.ipynb",
+        "file_name": "RJ_GEE_Workshop_CH3-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 631013,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/Pred_DF1.csv",
+        "file_name": "Pred_DF1.csv",
+        "extension": ".csv",
+        "size_bytes": 16891,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/Pred_DF2.csv",
+        "file_name": "Pred_DF2.csv",
+        "extension": ".csv",
+        "size_bytes": 121071,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/Pred_DF_RJ.csv",
+        "file_name": "Pred_DF_RJ.csv",
+        "extension": ".csv",
+        "size_bytes": 121071,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/StreamStats1.csv",
+        "file_name": "StreamStats1.csv",
+        "extension": ".csv",
+        "size_bytes": 221,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/StreamStats2.csv",
+        "file_name": "StreamStats2.csv",
+        "extension": ".csv",
+        "size_bytes": 377,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/StreamStats_All.csv",
+        "file_name": "StreamStats_All.csv",
+        "extension": ".csv",
+        "size_bytes": 1674089,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/StreamStats_RJ.csv",
+        "file_name": "StreamStats_RJ.csv",
+        "extension": ".csv",
+        "size_bytes": 377,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/Training_DF1.csv",
+        "file_name": "Training_DF1.csv",
+        "extension": ".csv",
+        "size_bytes": 116960,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/Training_DF2.csv",
+        "file_name": "Training_DF2.csv",
+        "extension": ".csv",
+        "size_bytes": 363762,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Data/Training_DF_RJ.csv",
+        "file_name": "Training_DF_RJ.csv",
+        "extension": ".csv",
+        "size_bytes": 363762,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/EE_funcs.py",
+        "file_name": "EE_funcs.py",
+        "extension": ".py",
+        "size_bytes": 881,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Evaluation_funcs.py",
+        "file_name": "Evaluation_funcs.py",
+        "extension": ".py",
+        "size_bytes": 3300,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Get_StreamStats.py",
+        "file_name": "Get_StreamStats.py",
+        "extension": ".py",
+        "size_bytes": 4953,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/EE_authenticate.JPG",
+        "file_name": "EE_authenticate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/GEE.png",
+        "file_name": "GEE.png",
+        "extension": ".png",
+        "size_bytes": 173501,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/GEE_Jupyter_Kernel.JPG",
+        "file_name": "GEE_Jupyter_Kernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 20495,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/GEE_Jupyter_Kernel2.JPG",
+        "file_name": "GEE_Jupyter_Kernel2.JPG",
+        "extension": ".jpg",
+        "size_bytes": 13197,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/GEE_Logo.jpg",
+        "file_name": "GEE_Logo.jpg",
+        "extension": ".jpg",
+        "size_bytes": 51336,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/GEE_ML_Hydrological_Cycle.jpg",
+        "file_name": "GEE_ML_Hydrological_Cycle.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1820559,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/GEE_ML_Hydrological_Cycle.pptx",
+        "file_name": "GEE_ML_Hydrological_Cycle.pptx",
+        "extension": ".pptx",
+        "size_bytes": 1705429,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/GEE_imagery.JPG",
+        "file_name": "GEE_imagery.JPG",
+        "extension": ".jpg",
+        "size_bytes": 58478,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/GEE_ipkernel.JPG",
+        "file_name": "GEE_ipkernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2333,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/GEE_ipkernel_install.JPG",
+        "file_name": "GEE_ipkernel_install.JPG",
+        "extension": ".jpg",
+        "size_bytes": 3839,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/LandCover.JPG",
+        "file_name": "LandCover.JPG",
+        "extension": ".jpg",
+        "size_bytes": 114392,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/ML_workflow.JPG",
+        "file_name": "ML_workflow.JPG",
+        "extension": ".jpg",
+        "size_bytes": 38953,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/NOAA_HydroCycle.png",
+        "file_name": "NOAA_HydroCycle.png",
+        "extension": ".png",
+        "size_bytes": 639583,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/NoAAhydro_5cycle.jpg",
+        "file_name": "NoAAhydro_5cycle.jpg",
+        "extension": ".jpg",
+        "size_bytes": 122448,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/StreamStats.JPG",
+        "file_name": "StreamStats.JPG",
+        "extension": ".jpg",
+        "size_bytes": 186922,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/Terrain.JPG",
+        "file_name": "Terrain.JPG",
+        "extension": ".jpg",
+        "size_bytes": 173091,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/USGS_1017200_Red_Butte.JPG",
+        "file_name": "USGS_1017200_Red_Butte.JPG",
+        "extension": ".jpg",
+        "size_bytes": 149467,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/USGS_Guage_Locations.JPG",
+        "file_name": "USGS_Guage_Locations.JPG",
+        "extension": ".jpg",
+        "size_bytes": 36473,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/USGS_Sites.jpg",
+        "file_name": "USGS_Sites.jpg",
+        "extension": ".jpg",
+        "size_bytes": 622422,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/USGS_Sites.pptx",
+        "file_name": "USGS_Sites.pptx",
+        "extension": ".pptx",
+        "size_bytes": 78414,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/XGBoost.png",
+        "file_name": "XGBoost.png",
+        "extension": ".png",
+        "size_bytes": 55549,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/climate.JPG",
+        "file_name": "climate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 37977,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/condaActivate.JPG",
+        "file_name": "condaActivate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2006,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/condaEEisntall.JPG",
+        "file_name": "condaEEisntall.JPG",
+        "extension": ".jpg",
+        "size_bytes": 3768,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/condaEnv.JPG",
+        "file_name": "condaEnv.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2892,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Images/python.png",
+        "file_name": "python.png",
+        "extension": ".png",
+        "size_bytes": 11155,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/Model_1.dat",
+        "file_name": "Model_1.dat",
+        "extension": ".dat",
+        "size_bytes": 2815758,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/Model_1.pkl",
+        "file_name": "Model_1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 774,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/Model_2.dat",
+        "file_name": "Model_2.dat",
+        "extension": ".dat",
+        "size_bytes": 4201973,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/Model_HyperParam.dat",
+        "file_name": "Model_HyperParam.dat",
+        "extension": ".dat",
+        "size_bytes": 541029,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/Model_HyperParam2.dat",
+        "file_name": "Model_HyperParam2.dat",
+        "extension": ".dat",
+        "size_bytes": 1297379,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/Model_HyperParam_RJ.dat",
+        "file_name": "Model_HyperParam_RJ.dat",
+        "extension": ".dat",
+        "size_bytes": 1297379,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/Model_RJ.dat",
+        "file_name": "Model_RJ.dat",
+        "extension": ".dat",
+        "size_bytes": 4201973,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/XGBoost_2_params.pkl",
+        "file_name": "XGBoost_2_params.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1383526,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/XGBoost_RB_1_params.pkl",
+        "file_name": "XGBoost_RB_1_params.pkl",
+        "extension": ".pkl",
+        "size_bytes": 547142,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/XGBoost_RJ_params.pkl",
+        "file_name": "XGBoost_RJ_params.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1383526,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/scaler1.pkl",
+        "file_name": "scaler1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/scaler_x1.pkl",
+        "file_name": "scaler_x1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/scaler_x2.pkl",
+        "file_name": "scaler_x2.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/scaler_x_RJ.pkl",
+        "file_name": "scaler_x_RJ.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/scaler_y1.pkl",
+        "file_name": "scaler_y1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 618,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/scaler_y2.pkl",
+        "file_name": "scaler_y2.pkl",
+        "extension": ".pkl",
+        "size_bytes": 618,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/Model/XGBoost/scaler_y_RJ.pkl",
+        "file_name": "scaler_y_RJ.pkl",
+        "extension": ".pkl",
+        "size_bytes": 618,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/RJ_GEE_Workshop_CH1.5.ipynb",
+        "file_name": "RJ_GEE_Workshop_CH1.5.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 616832,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/RJ_GEE_Workshop_CH2.ipynb",
+        "file_name": "RJ_GEE_Workshop_CH2.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 238452,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/RJ_GEE_Workshop_CH3.ipynb",
+        "file_name": "RJ_GEE_Workshop_CH3.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 629621,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/__pycache__/EE_funcs.cpython-39.pyc",
+        "file_name": "EE_funcs.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 927,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/__pycache__/Evaluation_funcs.cpython-39.pyc",
+        "file_name": "Evaluation_funcs.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 3064,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/__pycache__/Get_StreamStats.cpython-39.pyc",
+        "file_name": "Get_StreamStats.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2977,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Exercises/nwisiv_cache.sqlite",
+        "file_name": "nwisiv_cache.sqlite",
+        "extension": ".sqlite",
+        "size_bytes": 48275456,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/GEE_Workshop_CH1.5.ipynb",
+        "file_name": "GEE_Workshop_CH1.5.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 868886,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/GEE_Workshop_CH1.ipynb",
+        "file_name": "GEE_Workshop_CH1.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 231976,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/GEE_Workshop_CH2.ipynb",
+        "file_name": "GEE_Workshop_CH2.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 193495,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/GEE_Workshop_CH3.ipynb",
+        "file_name": "GEE_Workshop_CH3.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 179591,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/Get_StreamStats.ipynb",
+        "file_name": "Get_StreamStats.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 5728,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_ML_Workflow/Get_StreamStats.py",
+        "file_name": "Get_StreamStats.py",
+        "extension": ".py",
+        "size_bytes": 4953,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/EE_authenticate.JPG",
+        "file_name": "EE_authenticate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/GEE.png",
+        "file_name": "GEE.png",
+        "extension": ".png",
+        "size_bytes": 173501,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/GEE_Jupyter_Kernel.JPG",
+        "file_name": "GEE_Jupyter_Kernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 20495,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/GEE_Jupyter_Kernel2.JPG",
+        "file_name": "GEE_Jupyter_Kernel2.JPG",
+        "extension": ".jpg",
+        "size_bytes": 13197,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/GEE_Logo.jpg",
+        "file_name": "GEE_Logo.jpg",
+        "extension": ".jpg",
+        "size_bytes": 51336,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/GEE_ML_Hydrological_Cycle.jpg",
+        "file_name": "GEE_ML_Hydrological_Cycle.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1820559,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/GEE_ML_Hydrological_Cycle.pptx",
+        "file_name": "GEE_ML_Hydrological_Cycle.pptx",
+        "extension": ".pptx",
+        "size_bytes": 1705429,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/GEE_imagery.JPG",
+        "file_name": "GEE_imagery.JPG",
+        "extension": ".jpg",
+        "size_bytes": 58478,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/GEE_ipkernel.JPG",
+        "file_name": "GEE_ipkernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2333,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/GEE_ipkernel_install.JPG",
+        "file_name": "GEE_ipkernel_install.JPG",
+        "extension": ".jpg",
+        "size_bytes": 3839,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/LandCover.JPG",
+        "file_name": "LandCover.JPG",
+        "extension": ".jpg",
+        "size_bytes": 114392,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/ML_workflow.JPG",
+        "file_name": "ML_workflow.JPG",
+        "extension": ".jpg",
+        "size_bytes": 38953,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/NOAA_HydroCycle.png",
+        "file_name": "NOAA_HydroCycle.png",
+        "extension": ".png",
+        "size_bytes": 639583,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/NoAAhydro_5cycle.jpg",
+        "file_name": "NoAAhydro_5cycle.jpg",
+        "extension": ".jpg",
+        "size_bytes": 122448,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/StreamStats.JPG",
+        "file_name": "StreamStats.JPG",
+        "extension": ".jpg",
+        "size_bytes": 186922,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/Terrain.JPG",
+        "file_name": "Terrain.JPG",
+        "extension": ".jpg",
+        "size_bytes": 173091,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/USGS_1017200_Red_Butte.JPG",
+        "file_name": "USGS_1017200_Red_Butte.JPG",
+        "extension": ".jpg",
+        "size_bytes": 149467,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/USGS_Guage_Locations.JPG",
+        "file_name": "USGS_Guage_Locations.JPG",
+        "extension": ".jpg",
+        "size_bytes": 36473,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/USGS_Sites.jpg",
+        "file_name": "USGS_Sites.jpg",
+        "extension": ".jpg",
+        "size_bytes": 622422,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/USGS_Sites.pptx",
+        "file_name": "USGS_Sites.pptx",
+        "extension": ".pptx",
+        "size_bytes": 78414,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/XGBoost.png",
+        "file_name": "XGBoost.png",
+        "extension": ".png",
+        "size_bytes": 55549,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/climate.JPG",
+        "file_name": "climate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 37977,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/condaActivate.JPG",
+        "file_name": "condaActivate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2006,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/condaEEisntall.JPG",
+        "file_name": "condaEEisntall.JPG",
+        "extension": ".jpg",
+        "size_bytes": 3768,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/condaEnv.JPG",
+        "file_name": "condaEnv.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2892,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Images/python.png",
+        "file_name": "python.png",
+        "extension": ".png",
+        "size_bytes": 11155,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Model/XGBoost/Model_1.dat",
+        "file_name": "Model_1.dat",
+        "extension": ".dat",
+        "size_bytes": 2815758,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Model/XGBoost/Model_1.pkl",
+        "file_name": "Model_1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 774,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Model/XGBoost/Model_HyperParam.dat",
+        "file_name": "Model_HyperParam.dat",
+        "extension": ".dat",
+        "size_bytes": 541029,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Model/XGBoost/XGBoost_RB_1_params.pkl",
+        "file_name": "XGBoost_RB_1_params.pkl",
+        "extension": ".pkl",
+        "size_bytes": 546990,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Model/XGBoost/scaler1.pkl",
+        "file_name": "scaler1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Model/XGBoost/scaler_x1.pkl",
+        "file_name": "scaler_x1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/Model/XGBoost/scaler_y1.pkl",
+        "file_name": "scaler_y1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 618,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 4371,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "GEE_ML_Workflow/XGB_Model.py",
+        "file_name": "XGB_Model.py",
+        "extension": ".py",
+        "size_bytes": 59179,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/__pycache__/EE_funcs.cpython-39.pyc",
+        "file_name": "EE_funcs.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 917,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/__pycache__/Get_StreamStats.cpython-39.pyc",
+        "file_name": "Get_StreamStats.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2399,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/__pycache__/XGB_Model.cpython-39.pyc",
+        "file_name": "XGB_Model.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 30134,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_ML_Workflow/nwisiv_cache.sqlite",
+        "file_name": "nwisiv_cache.sqlite",
+        "extension": ".sqlite",
+        "size_bytes": 33370112,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/.ipynb_checkpoints/notebooks-checkpoint.ipynb",
+        "file_name": "notebooks-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 155302,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/DataPreparationPredictions.ipynb",
+        "file_name": "DataPreparationPredictions.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 206932,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/.doctrees/DataPreparationPredictions.doctree",
+        "file_name": "DataPreparationPredictions.doctree",
+        "extension": ".doctree",
+        "size_bytes": 58144,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/.doctrees/environment.pickle",
+        "file_name": "environment.pickle",
+        "extension": ".pickle",
+        "size_bytes": 50952,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/.doctrees/intro.doctree",
+        "file_name": "intro.doctree",
+        "extension": ".doctree",
+        "size_bytes": 4680,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/.doctrees/markdown-notebooks.doctree",
+        "file_name": "markdown-notebooks.doctree",
+        "extension": ".doctree",
+        "size_bytes": 10013,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/.doctrees/markdown.doctree",
+        "file_name": "markdown.doctree",
+        "extension": ".doctree",
+        "size_bytes": 13180,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/.doctrees/notebooks.doctree",
+        "file_name": "notebooks.doctree",
+        "extension": ".doctree",
+        "size_bytes": 11550,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/.buildinfo",
+        "file_name": ".buildinfo",
+        "extension": "",
+        "size_bytes": 230,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_images/86a0b7c72f821f00bb691dc2575c2cac148f815144ed8b5dc93e79cafa1de851.png",
+        "file_name": "86a0b7c72f821f00bb691dc2575c2cac148f815144ed8b5dc93e79cafa1de851.png",
+        "extension": ".png",
+        "size_bytes": 132343,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_images/b6c74eeacd9a27520a58dea9f578314e86f617309bd3e29d08ce2ed076280dee.png",
+        "file_name": "b6c74eeacd9a27520a58dea9f578314e86f617309bd3e29d08ce2ed076280dee.png",
+        "extension": ".png",
+        "size_bytes": 113603,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_sources/DataPreparationPredictions.ipynb",
+        "file_name": "DataPreparationPredictions.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 206932,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_sources/intro.md",
+        "file_name": "intro.md",
+        "extension": ".md",
+        "size_bytes": 431,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_sources/markdown-notebooks.md",
+        "file_name": "markdown-notebooks.md",
+        "extension": ".md",
+        "size_bytes": 1787,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_sources/markdown.md",
+        "file_name": "markdown.md",
+        "extension": ".md",
+        "size_bytes": 1898,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_sources/notebooks.ipynb",
+        "file_name": "notebooks.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 3378,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_sphinx_design_static/design-style.4045f2051d55cab465a707391d5b2007.min.css",
+        "file_name": "design-style.4045f2051d55cab465a707391d5b2007.min.css",
+        "extension": ".css",
+        "size_bytes": 48417,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_sphinx_design_static/design-tabs.js",
+        "file_name": "design-tabs.js",
+        "extension": ".js",
+        "size_bytes": 770,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/basic.css",
+        "file_name": "basic.css",
+        "extension": ".css",
+        "size_bytes": 14692,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/check-solid.svg",
+        "file_name": "check-solid.svg",
+        "extension": ".svg",
+        "size_bytes": 313,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/clipboard.min.js",
+        "file_name": "clipboard.min.js",
+        "extension": ".js",
+        "size_bytes": 9031,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/copy-button.svg",
+        "file_name": "copy-button.svg",
+        "extension": ".svg",
+        "size_bytes": 411,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/copybutton.css",
+        "file_name": "copybutton.css",
+        "extension": ".css",
+        "size_bytes": 2060,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/copybutton.js",
+        "file_name": "copybutton.js",
+        "extension": ".js",
+        "size_bytes": 8467,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/copybutton_funcs.js",
+        "file_name": "copybutton_funcs.js",
+        "extension": ".js",
+        "size_bytes": 2698,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/design-style.4045f2051d55cab465a707391d5b2007.min.css",
+        "file_name": "design-style.4045f2051d55cab465a707391d5b2007.min.css",
+        "extension": ".css",
+        "size_bytes": 48417,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/design-tabs.js",
+        "file_name": "design-tabs.js",
+        "extension": ".js",
+        "size_bytes": 770,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/doctools.js",
+        "file_name": "doctools.js",
+        "extension": ".js",
+        "size_bytes": 9758,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/documentation_options.js",
+        "file_name": "documentation_options.js",
+        "extension": ".js",
+        "size_bytes": 345,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/file.png",
+        "file_name": "file.png",
+        "extension": ".png",
+        "size_bytes": 286,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/images/logo_binder.svg",
+        "file_name": "logo_binder.svg",
+        "extension": ".svg",
+        "size_bytes": 1186,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/images/logo_colab.png",
+        "file_name": "logo_colab.png",
+        "extension": ".png",
+        "size_bytes": 7601,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/images/logo_deepnote.svg",
+        "file_name": "logo_deepnote.svg",
+        "extension": ".svg",
+        "size_bytes": 681,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/images/logo_jupyterhub.svg",
+        "file_name": "logo_jupyterhub.svg",
+        "extension": ".svg",
+        "size_bytes": 1758,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/jquery-3.5.1.js",
+        "file_name": "jquery-3.5.1.js",
+        "extension": ".js",
+        "size_bytes": 287630,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/jquery.js",
+        "file_name": "jquery.js",
+        "extension": ".js",
+        "size_bytes": 89476,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/language_data.js",
+        "file_name": "language_data.js",
+        "extension": ".js",
+        "size_bytes": 10854,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ar/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1541,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ar/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1459,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/bg/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1708,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/bg/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1626,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/bn/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1646,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/bn/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1564,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ca/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1246,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ca/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1166,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/cs/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1405,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/cs/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1323,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/da/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1304,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/da/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1222,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/de/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1388,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/de/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1306,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/el/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1722,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/el/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1640,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/eo/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1337,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/eo/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1255,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/es/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1396,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/es/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1314,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/et/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1341,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/et/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1259,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/fi/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1368,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/fi/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1286,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/fr/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1412,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/fr/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1330,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/hr/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1402,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/hr/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1320,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/id/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1323,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/id/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1241,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/it/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1403,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/it/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1321,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/iw/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1445,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/iw/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1363,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ja/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1471,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ja/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1389,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ko/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1375,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ko/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1293,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/lt/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1413,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/lt/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1331,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/lv/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1404,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/lv/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1322,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ml/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1883,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ml/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1803,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/mr/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1674,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/mr/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1594,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ms/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1213,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ms/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1133,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/nl/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1356,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/nl/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1274,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/no/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1317,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/no/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1235,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/pl/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1371,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/pl/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1289,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/pt/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1364,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/pt/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1282,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ro/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1390,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ro/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1308,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ru/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1722,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ru/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1640,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/sk/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1393,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/sk/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1311,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/sl/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1374,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/sl/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/sr/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1679,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/sr/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1597,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/sv/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1349,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/sv/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1267,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ta/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1928,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ta/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1848,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/te/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1806,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/te/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1726,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/tg/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1628,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/tg/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1546,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/th/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1766,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/th/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1684,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/tl/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1273,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/tl/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1193,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/tr/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1373,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/tr/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1291,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/uk/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1681,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/uk/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1601,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ur/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1462,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/ur/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1382,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/vi/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1431,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/vi/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1349,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/zh_CN/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1310,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/zh_CN/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1228,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/zh_TW/LC_MESSAGES/booktheme.mo",
+        "file_name": "booktheme.mo",
+        "extension": ".mo",
+        "size_bytes": 1341,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/locales/zh_TW/LC_MESSAGES/booktheme.po",
+        "file_name": "booktheme.po",
+        "extension": ".po",
+        "size_bytes": 1259,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/logo.png",
+        "file_name": "logo.png",
+        "extension": ".png",
+        "size_bytes": 9854,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/minus.png",
+        "file_name": "minus.png",
+        "extension": ".png",
+        "size_bytes": 90,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css",
+        "file_name": "mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css",
+        "extension": ".css",
+        "size_bytes": 39364,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/plus.png",
+        "file_name": "plus.png",
+        "extension": ".png",
+        "size_bytes": 90,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/pygments.css",
+        "file_name": "pygments.css",
+        "extension": ".css",
+        "size_bytes": 12590,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/sbt-webpack-macros.html",
+        "file_name": "sbt-webpack-macros.html",
+        "extension": ".html",
+        "size_bytes": 419,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/scripts/bootstrap.js",
+        "file_name": "bootstrap.js",
+        "extension": ".js",
+        "size_bytes": 80813,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/scripts/bootstrap.js.LICENSE.txt",
+        "file_name": "bootstrap.js.LICENSE.txt",
+        "extension": ".txt",
+        "size_bytes": 237,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/scripts/bootstrap.js.map",
+        "file_name": "bootstrap.js.map",
+        "extension": ".map",
+        "size_bytes": 335757,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/scripts/pydata-sphinx-theme.js",
+        "file_name": "pydata-sphinx-theme.js",
+        "extension": ".js",
+        "size_bytes": 4456,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/scripts/pydata-sphinx-theme.js.map",
+        "file_name": "pydata-sphinx-theme.js.map",
+        "extension": ".map",
+        "size_bytes": 19648,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/scripts/sphinx-book-theme.js",
+        "file_name": "sphinx-book-theme.js",
+        "extension": ".js",
+        "size_bytes": 3075,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/scripts/sphinx-book-theme.js.map",
+        "file_name": "sphinx-book-theme.js.map",
+        "extension": ".map",
+        "size_bytes": 13066,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/searchtools.js",
+        "file_name": "searchtools.js",
+        "extension": ".js",
+        "size_bytes": 16793,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/sphinx-thebe.css",
+        "file_name": "sphinx-thebe.css",
+        "extension": ".css",
+        "size_bytes": 2234,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/sphinx-thebe.js",
+        "file_name": "sphinx-thebe.js",
+        "extension": ".js",
+        "size_bytes": 3986,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/styles/bootstrap.css",
+        "file_name": "bootstrap.css",
+        "extension": ".css",
+        "size_bytes": 176654,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/styles/pydata-sphinx-theme.css",
+        "file_name": "pydata-sphinx-theme.css",
+        "extension": ".css",
+        "size_bytes": 63341,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/styles/sphinx-book-theme.css",
+        "file_name": "sphinx-book-theme.css",
+        "extension": ".css",
+        "size_bytes": 13841,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/styles/theme.css",
+        "file_name": "theme.css",
+        "extension": ".css",
+        "size_bytes": 106,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/togglebutton.css",
+        "file_name": "togglebutton.css",
+        "extension": ".css",
+        "size_bytes": 3729,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/togglebutton.js",
+        "file_name": "togglebutton.js",
+        "extension": ".js",
+        "size_bytes": 7346,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/underscore-1.13.1.js",
+        "file_name": "underscore-1.13.1.js",
+        "extension": ".js",
+        "size_bytes": 68420,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/underscore.js",
+        "file_name": "underscore.js",
+        "extension": ".js",
+        "size_bytes": 19530,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/LICENSE.txt",
+        "file_name": "LICENSE.txt",
+        "extension": ".txt",
+        "size_bytes": 7427,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/css/all.min.css",
+        "file_name": "all.min.css",
+        "extension": ".css",
+        "size_bytes": 101691,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.ttf",
+        "file_name": "fa-brands-400.ttf",
+        "extension": ".ttf",
+        "size_bytes": 181264,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2",
+        "file_name": "fa-brands-400.woff2",
+        "extension": ".woff2",
+        "size_bytes": 105112,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.ttf",
+        "file_name": "fa-regular-400.ttf",
+        "extension": ".ttf",
+        "size_bytes": 60236,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2",
+        "file_name": "fa-regular-400.woff2",
+        "extension": ".woff2",
+        "size_bytes": 24028,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.ttf",
+        "file_name": "fa-solid-900.ttf",
+        "extension": ".ttf",
+        "size_bytes": 389948,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2",
+        "file_name": "fa-solid-900.woff2",
+        "extension": ".woff2",
+        "size_bytes": 154840,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-v4compatibility.ttf",
+        "file_name": "fa-v4compatibility.ttf",
+        "extension": ".ttf",
+        "size_bytes": 10084,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/vendor/fontawesome/6.1.2/webfonts/fa-v4compatibility.woff2",
+        "file_name": "fa-v4compatibility.woff2",
+        "extension": ".woff2",
+        "size_bytes": 4776,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/_static/webpack-macros.html",
+        "file_name": "webpack-macros.html",
+        "extension": ".html",
+        "size_bytes": 1863,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/genindex.html",
+        "file_name": "genindex.html",
+        "extension": ".html",
+        "size_bytes": 11395,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/index.html",
+        "file_name": "index.html",
+        "extension": ".html",
+        "size_bytes": 58,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/intro.html",
+        "file_name": "intro.html",
+        "extension": ".html",
+        "size_bytes": 14340,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/markdown-notebooks.html",
+        "file_name": "markdown-notebooks.html",
+        "extension": ".html",
+        "size_bytes": 18847,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/markdown.html",
+        "file_name": "markdown.html",
+        "extension": ".html",
+        "size_bytes": 20008,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/notebooks.html",
+        "file_name": "notebooks.html",
+        "extension": ".html",
+        "size_bytes": 24015,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/objects.inv",
+        "file_name": "objects.inv",
+        "extension": ".inv",
+        "size_bytes": 365,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/reports/DataPreparationPredictions.err.log",
+        "file_name": "DataPreparationPredictions.err.log",
+        "extension": ".log",
+        "size_bytes": 7043,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/search.html",
+        "file_name": "search.html",
+        "extension": ".html",
+        "size_bytes": 12207,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/html/searchindex.js",
+        "file_name": "searchindex.js",
+        "extension": ".js",
+        "size_bytes": 15441,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/jupyter_execute/86a0b7c72f821f00bb691dc2575c2cac148f815144ed8b5dc93e79cafa1de851.png",
+        "file_name": "86a0b7c72f821f00bb691dc2575c2cac148f815144ed8b5dc93e79cafa1de851.png",
+        "extension": ".png",
+        "size_bytes": 132343,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/jupyter_execute/DataPreparationPredictions.ipynb",
+        "file_name": "DataPreparationPredictions.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 214157,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/jupyter_execute/b6c74eeacd9a27520a58dea9f578314e86f617309bd3e29d08ce2ed076280dee.png",
+        "file_name": "b6c74eeacd9a27520a58dea9f578314e86f617309bd3e29d08ce2ed076280dee.png",
+        "extension": ".png",
+        "size_bytes": 113603,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/jupyter_execute/markdown-notebooks.ipynb",
+        "file_name": "markdown-notebooks.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 2952,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_build/jupyter_execute/notebooks.ipynb",
+        "file_name": "notebooks.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 155289,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_config.yml",
+        "file_name": "_config.yml",
+        "extension": ".yml",
+        "size_bytes": 1029,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/_toc.yml",
+        "file_name": "_toc.yml",
+        "extension": ".yml",
+        "size_bytes": 180,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/intro.md",
+        "file_name": "intro.md",
+        "extension": ".md",
+        "size_bytes": 431,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/logo.png",
+        "file_name": "logo.png",
+        "extension": ".png",
+        "size_bytes": 9854,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/markdown-notebooks.md",
+        "file_name": "markdown-notebooks.md",
+        "extension": ".md",
+        "size_bytes": 1787,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/markdown.md",
+        "file_name": "markdown.md",
+        "extension": ".md",
+        "size_bytes": 1898,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/notebooks.ipynb",
+        "file_name": "notebooks.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 3378,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/references.bib",
+        "file_name": "references.bib",
+        "extension": ".bib",
+        "size_bytes": 5524,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GEE_workshop/requirements.txt",
+        "file_name": "requirements.txt",
+        "extension": ".txt",
+        "size_bytes": 30,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1069,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1238,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "requirements.txt",
+        "file_name": "requirements.txt",
+        "extension": ".txt",
+        "size_bytes": 268,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    }
+]

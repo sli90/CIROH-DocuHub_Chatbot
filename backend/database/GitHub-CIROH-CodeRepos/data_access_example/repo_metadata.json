@@ -1,0 +1,43 @@
+{
+    "id": 697372188,
+    "name": "data_access_example",
+    "full_name": "CIROH-UA/data_access_example",
+    "html_url": "https://github.com/CIROH-UA/data_access_example",
+    "description": null,
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2023-09-27T15:38:24Z",
+    "updated_at": "2024-01-27T18:30:55Z",
+    "pushed_at": "2024-01-27T18:30:52Z",
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 122,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 4,
+    "open_issues_count": 2,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 2,
+        "top_contributors": [
+            {
+                "id": 112987653,
+                "login": "sepehrkrz",
+                "html_url": "https://github.com/sepehrkrz",
+                "type": "User",
+                "contributions": 10
+            },
+            {
+                "id": 130000039,
+                "login": "benlee0423",
+                "html_url": "https://github.com/benlee0423",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

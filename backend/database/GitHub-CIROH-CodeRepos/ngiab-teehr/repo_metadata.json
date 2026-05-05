@@ -1,0 +1,62 @@
+{
+    "id": 899628775,
+    "name": "ngiab-teehr",
+    "full_name": "CIROH-UA/ngiab-teehr",
+    "html_url": "https://github.com/CIROH-UA/ngiab-teehr",
+    "description": "A repository for coupling TEEHR with NextGen In A Box (NGIAB) simulation output",
+    "homepage": "",
+    "default_branch": "main",
+    "created_at": "2024-12-06T17:01:11Z",
+    "updated_at": "2025-08-28T20:22:12Z",
+    "pushed_at": "2026-03-23T18:15:26Z",
+    "language": "Python",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 524,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 2,
+    "open_issues_count": 5,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 4,
+        "top_contributors": [
+            {
+                "id": 7386333,
+                "login": "samlamont",
+                "html_url": "https://github.com/samlamont",
+                "type": "User",
+                "contributions": 48
+            },
+            {
+                "id": 130000039,
+                "login": "benlee0423",
+                "html_url": "https://github.com/benlee0423",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 26720477,
+                "login": "JoshCu",
+                "html_url": "https://github.com/JoshCu",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 79336055,
+                "login": "JordanLaserGit",
+                "html_url": "https://github.com/JordanLaserGit",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

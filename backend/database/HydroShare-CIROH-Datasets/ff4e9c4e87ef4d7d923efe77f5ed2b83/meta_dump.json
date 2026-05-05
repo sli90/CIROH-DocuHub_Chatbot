@@ -1,0 +1,94 @@
+{
+    "title": "RIce-Net dataset: River Ice detection",
+    "abstract": "A computer vision-based framework, River Ice-Network (RIce-Net), uses the USGS nationwide network of ground-based cameras whose images are published through the National Imagery Management System (NIMS), which is available to the public through the Hydrologic Imagery Visualization and Information System (HIVIS; https://apps.usgs.gov/hivis). RIce-Net classifies ice-affected images, segments the ice presence over river surface, calculates the fraction of ice coverage, and automatically generates a near real-time ice flag. The RIce-Net was trained using images from the Milwaukee River near Cedarburg station (https://apps.usgs.gov/hivis/camera/WI_Milwaukee_River_near_Cedarburg) collected in 2023 and tested using images collected in 2024. This repository provides the training data set of the classification and segmentation models.",
+    "language": "eng",
+    "subjects": [
+        "Ice Flag",
+        "Image Segmentation",
+        "River Ice",
+        "Classification"
+    ],
+    "creators": [
+        {
+            "name": "Ayyad, Mahmoud",
+            "phone": "+1 (201) 216-3739",
+            "organization": "Stevens Institute of Technology",
+            "email": "m-mayyad@outlook.com",
+            "creator_order": 1,
+            "hydroshare_user_id": 27584,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=xXO_CI8AAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Mahmoud-Ayyad?ev=hdr_xprf",
+                "ORCID": "https://orcid.org/0000-0001-5800-9313"
+            }
+        },
+        {
+            "name": "Temimi, Marouane",
+            "phone": "2012165303",
+            "address": "NJ, US",
+            "organization": "Stevens Institute of Technology",
+            "email": "mtemimi@stevens.edu",
+            "homepage": "https://web.stevens.edu/ismart/",
+            "creator_order": 2,
+            "hydroshare_user_id": 7653,
+            "identifiers": {}
+        },
+        {
+            "name": "Abdelkader, Mohamed",
+            "address": "NEW JERSEY, US",
+            "organization": "Stevens Institute of Technology",
+            "email": "mabdelka@stevens.edu",
+            "creator_order": 3,
+            "hydroshare_user_id": 10733,
+            "identifiers": {}
+        },
+        {
+            "name": "Henein, Moheb",
+            "address": "NJ, US",
+            "organization": "Stevens Institute of Technology",
+            "email": "mhenein@stevens.edu",
+            "creator_order": 4,
+            "hydroshare_user_id": 26420,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "USGS Next Generation Water Observing System (NGWOS) Research and Development Program"
+        },
+        {
+            "funding_agency_name": "NOAA Cooperative Institute Program",
+            "number": "NA22NWS4320003"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "point",
+        "name": "Milwaukee River near Cedarburg",
+        "east": -87.942722,
+        "north": 43.279846,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "2023-01-01 00:00:00",
+        "end": "2024-02-29 00:00:00"
+    },
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Ayyad, M., M. Temimi, M. Abdelkader, M. Henein (2025). RIce-Net dataset: River Ice detection, HydroShare, https://doi.org/10.4211/hs.ff4e9c4e87ef4d7d923efe77f5ed2b83, DOI for this published resource is pending activation.",
+    "url": "http://www.hydroshare.org/resource/ff4e9c4e87ef4d7d923efe77f5ed2b83",
+    "identifier": "http://www.hydroshare.org/resource/ff4e9c4e87ef4d7d923efe77f5ed2b83",
+    "created": "2025-01-26 19:13:42.113908+00:00",
+    "modified": "2025-09-26 10:35:53.532022+00:00",
+    "published": "2025-09-26 10:35:54.287843+00:00",
+    "type": "CompositeResource"
+}

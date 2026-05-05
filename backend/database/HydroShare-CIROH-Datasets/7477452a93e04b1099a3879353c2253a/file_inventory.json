@@ -1,0 +1,158 @@
+[
+    {
+        "file_name": "demDerived_reaches_split_filtered_addedAttributes_crosswalked_0.gpkg",
+        "file_path": "FIM_Demo/demDerived_reaches_split_filtered_addedAttributes_crosswalked_0.gpkg",
+        "extension": ".gpkg",
+        "checksum": "f1835cccc00afb809a8a32f5b8982994-3"
+    },
+    {
+        "file_name": "HydroShareHandsOnExercisePrint.docx",
+        "file_path": "HydroShareHandsOnExercisePrint.docx",
+        "extension": ".docx",
+        "checksum": "d51b986cf11b57cd39385c490bbe34af"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "FIM_Demo/nwm_utils/__init__.py",
+        "extension": ".py",
+        "checksum": "78fd2714d8180a8153adf11e4cb10e8a"
+    },
+    {
+        "file_name": "loganriverwatershed.png",
+        "file_path": "Figures/loganriverwatershed.png",
+        "extension": ".png",
+        "checksum": "a6f6d9eeacb003f32115a5b3a358450b"
+    },
+    {
+        "file_name": "HydroShareHandsOnExercise_step-by-step.docx",
+        "file_path": "HydroShareHandsOnExercise_step-by-step.docx",
+        "extension": ".docx",
+        "checksum": "c849232d3899234fc69b8b9bdfbab489"
+    },
+    {
+        "file_name": "hydroTable_0.csv",
+        "file_path": "FIM_Demo/hydroTable_0.csv",
+        "extension": ".csv",
+        "checksum": "697a7bdf43f515c3b6c9c169a360924f-21"
+    },
+    {
+        "file_name": "utils.py",
+        "file_path": "FIM_Demo/nwm_utils/fim/utils.py",
+        "extension": ".py",
+        "checksum": "6480ab54a98cc998a282d82a913d3b4f"
+    },
+    {
+        "file_name": "xfimdask.py",
+        "file_path": "FIM_Demo/nwm_utils/fim/xfimdask.py",
+        "extension": ".py",
+        "checksum": "1f42911ca072a7f8d206484850826a98"
+    },
+    {
+        "file_name": "sites.zip",
+        "file_path": "Hands_On_Exercise/sites.zip",
+        "extension": ".zip",
+        "checksum": "533a7e56ebe7a01b6a2988645c487da2"
+    },
+    {
+        "file_name": "map.py",
+        "file_path": "FIM_Demo/nwm_utils/fim/map.py",
+        "extension": ".py",
+        "checksum": "39316b894db88c721382e1503675df2c"
+    },
+    {
+        "file_name": "Readme.txt",
+        "file_path": "Hands_On_Exercise/Readme.txt",
+        "extension": ".txt",
+        "checksum": "b77d6b7c0ccb99b724a37b413805afa1"
+    },
+    {
+        "file_name": "loganwatershed.zip",
+        "file_path": "Hands_On_Exercise/loganwatershed.zip",
+        "extension": ".zip",
+        "checksum": "92923d0acf5b3dc0aaf8315765da3d6c"
+    },
+    {
+        "file_name": "AGU2023-CIROH-Portal-Icon.png",
+        "file_path": "Figures/AGU2023-CIROH-Portal-Icon.png",
+        "extension": ".png",
+        "checksum": "b4f5317478d193770528f1e82341a1ff"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "FIM_Demo/nwm_utils/fim/__init__.py",
+        "extension": ".py",
+        "checksum": "20ece41d6679ed5548484a79f67a0a58"
+    },
+    {
+        "file_name": "gw_catchments_reaches_filtered_addedAttributes_crosswalked_0.gpkg",
+        "file_path": "FIM_Demo/gw_catchments_reaches_filtered_addedAttributes_crosswalked_0.gpkg",
+        "extension": ".gpkg",
+        "checksum": "74473ed3b58c8905d499ca3ed0da6993-6"
+    },
+    {
+        "file_name": "usgs10109000.txt",
+        "file_path": "Hands_On_Exercise/usgs10109000.txt",
+        "extension": ".txt",
+        "checksum": "21042538260fcc6d10f0f8b6c34717c4"
+    },
+    {
+        "file_name": "HydroShare_for_CIROH-May_29_2024.pptx",
+        "file_path": "HydroShare_for_CIROH-May_29_2024.pptx",
+        "extension": ".pptx",
+        "checksum": "17e488ffb9dd137b0a25c17ce92f5806-3"
+    },
+    {
+        "file_name": "lickingriverwatershed.png",
+        "file_path": "Figures/lickingriverwatershed.png",
+        "extension": ".png",
+        "checksum": "1f6322b107a8fa8bdbaebd40f294a359"
+    },
+    {
+        "file_name": "FlowFromSnow.ipynb",
+        "file_path": "Hands_On_Exercise/FlowFromSnow.ipynb",
+        "extension": ".ipynb",
+        "checksum": "f933ae5b35bf58bb9443e7a139c74052"
+    },
+    {
+        "file_name": "HydroShare_for_CIROH-May_29_2024.png",
+        "file_path": "Figures/HydroShare_for_CIROH-May_29_2024.png",
+        "extension": ".png",
+        "checksum": "dc39178ea4d132591ca8a59741c14391"
+    },
+    {
+        "file_name": "README.md",
+        "file_path": "FIM_Demo/README.md",
+        "extension": ".md",
+        "checksum": "b08ab7bda6daae1482528cc223c6b9c2"
+    },
+    {
+        "file_name": "basic-fim-mapping.ipynb",
+        "file_path": "FIM_Demo/basic-fim-mapping.ipynb",
+        "extension": ".ipynb",
+        "checksum": "35e6629a583fbd880851f5dd908775c8"
+    },
+    {
+        "file_name": "xfim.py",
+        "file_path": "FIM_Demo/nwm_utils/fim/xfim.py",
+        "extension": ".py",
+        "checksum": "67e19eb75e406de3d3d00fa315ee5e4b"
+    },
+    {
+        "file_name": "v3.py",
+        "file_path": "FIM_Demo/nwm_utils/retrospective/v3.py",
+        "extension": ".py",
+        "checksum": "596b4e8e2b8e22866576359379ac4b39"
+    },
+    {
+        "file_name": "readme.md",
+        "file_path": "readme.md",
+        "extension": ".md",
+        "checksum": "b2fbbf809f1188a239752df1d7e1af7f"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "FIM_Demo/nwm_utils/retrospective/__init__.py",
+        "extension": ".py",
+        "checksum": "25265edb04e7df1ee310ff8c3b2023f5"
+    }
+]

@@ -1,0 +1,2026 @@
+[
+    {
+        "path": ".gitattributes",
+        "file_name": ".gitattributes",
+        "extension": "",
+        "size_bytes": 26,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE.md",
+        "file_name": "ISSUE_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 183,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "file_name": "PULL_REQUEST_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 988,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/ngen-cal.yaml",
+        "file_name": "ngen-cal.yaml",
+        "extension": ".yaml",
+        "size_bytes": 2247,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/ngen-conf.yml",
+        "file_name": "ngen-conf.yml",
+        "extension": ".yml",
+        "size_bytes": 1618,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/ngen-init-config.yml",
+        "file_name": "ngen-init-config.yml",
+        "extension": ".yml",
+        "size_bytes": 1658,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pre-commit.yml",
+        "file_name": "pre-commit.yml",
+        "extension": ".yml",
+        "size_bytes": 286,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 948,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".pre-commit-config.yaml",
+        "file_name": ".pre-commit-config.yaml",
+        "extension": ".yaml",
+        "size_bytes": 222,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CHANGELOG.md",
+        "file_name": "CHANGELOG.md",
+        "extension": ".md",
+        "size_bytes": 346,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 16055,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "INSTALL.md",
+        "file_name": "INSTALL.md",
+        "extension": ".md",
+        "size_bytes": 110,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 11358,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1485,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 3302,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 1516,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "data/calibration_demo/catchment_data.geojson",
+        "file_name": "catchment_data.geojson",
+        "extension": ".geojson",
+        "size_bytes": 6427,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/calibration_demo/crosswalk.json",
+        "file_name": "crosswalk.json",
+        "extension": ".json",
+        "size_bytes": 82,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/calibration_demo/nexus_data.geojson",
+        "file_name": "nexus_data.geojson",
+        "extension": ".geojson",
+        "size_bytes": 324,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/calibration_demo/realization_config.json",
+        "file_name": "realization_config.json",
+        "extension": ".json",
+        "size_bytes": 4367,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "doc/GIT_USAGE.md",
+        "file_name": "GIT_USAGE.md",
+        "extension": ".md",
+        "size_bytes": 8837,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "doc/RELEASE_MANAGEMENT.md",
+        "file_name": "RELEASE_MANAGEMENT.md",
+        "extension": ".md",
+        "size_bytes": 6690,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "python/conf_validation.py",
+        "file_name": "conf_validation.py",
+        "extension": ".py",
+        "size_bytes": 3174,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/example_config.yaml",
+        "file_name": "example_config.yaml",
+        "extension": ".yaml",
+        "size_bytes": 7735,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/make_schema.py",
+        "file_name": "make_schema.py",
+        "extension": ".py",
+        "size_bytes": 248,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_cal/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_cal/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 16,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 826,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_cal/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/changelog.md",
+        "file_name": "changelog.md",
+        "extension": ".md",
+        "size_bytes": 2651,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_cal/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 101,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_cal/setup.cfg",
+        "file_name": "setup.cfg",
+        "extension": ".cfg",
+        "size_bytes": 1613,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 607,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/__main__.py",
+        "file_name": "__main__.py",
+        "extension": ".py",
+        "size_bytes": 9320,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/_hookspec.py",
+        "file_name": "_hookspec.py",
+        "extension": ".py",
+        "size_bytes": 3504,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/_plugin_system.py",
+        "file_name": "_plugin_system.py",
+        "extension": ".py",
+        "size_bytes": 1109,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/agent.py",
+        "file_name": "agent.py",
+        "extension": ".py",
+        "size_bytes": 4392,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/calibratable.py",
+        "file_name": "calibratable.py",
+        "extension": ".py",
+        "size_bytes": 6325,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/calibration_cathment.py",
+        "file_name": "calibration_cathment.py",
+        "extension": ".py",
+        "size_bytes": 5951,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/calibration_set.py",
+        "file_name": "calibration_set.py",
+        "extension": ".py",
+        "size_bytes": 5342,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/configuration.py",
+        "file_name": "configuration.py",
+        "extension": ".py",
+        "size_bytes": 1872,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/errors.py",
+        "file_name": "errors.py",
+        "extension": ".py",
+        "size_bytes": 47,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/meta.py",
+        "file_name": "meta.py",
+        "extension": ".py",
+        "size_bytes": 1640,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/model.py",
+        "file_name": "model.py",
+        "extension": ".py",
+        "size_bytes": 11285,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/ngen.py",
+        "file_name": "ngen.py",
+        "extension": ".py",
+        "size_bytes": 27385,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/ngen_hooks/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/ngen_hooks/ngen_output.py",
+        "file_name": "ngen_output.py",
+        "extension": ".py",
+        "size_bytes": 12949,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/ngen_hooks/observations.py",
+        "file_name": "observations.py",
+        "extension": ".py",
+        "size_bytes": 1311,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/objectives.py",
+        "file_name": "objectives.py",
+        "extension": ".py",
+        "size_bytes": 1383,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/parameter.py",
+        "file_name": "parameter.py",
+        "extension": ".py",
+        "size_bytes": 348,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/plot.py",
+        "file_name": "plot.py",
+        "extension": ".py",
+        "size_bytes": 4984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/search.py",
+        "file_name": "search.py",
+        "extension": ".py",
+        "size_bytes": 14072,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/strategy.py",
+        "file_name": "strategy.py",
+        "extension": ".py",
+        "size_bytes": 1722,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/src/ngen/cal/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 2616,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/conftest.py",
+        "file_name": "conftest.py",
+        "extension": ".py",
+        "size_bytes": 7764,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/calibration_config.json",
+        "file_name": "calibration_config.json",
+        "extension": ".json",
+        "size_bytes": 2420,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/calibration_r_order.csv",
+        "file_name": "calibration_r_order.csv",
+        "extension": ".csv",
+        "size_bytes": 172,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/cat-87_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "file_name": "cat-87_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "extension": ".csv",
+        "size_bytes": 96512,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/cat-88_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "file_name": "cat-88_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "extension": ".csv",
+        "size_bytes": 96512,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/cat-89_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "file_name": "cat-89_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "extension": ".csv",
+        "size_bytes": 96512,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/cat-92_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "file_name": "cat-92_2015-12-01 00_00_00_2015-12-30 23_00_00.csv",
+        "extension": ".csv",
+        "size_bytes": 96512,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/catchment_data.geojson",
+        "file_name": "catchment_data.geojson",
+        "extension": ".geojson",
+        "size_bytes": 14889,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/catchment_edge_list.csv",
+        "file_name": "catchment_edge_list.csv",
+        "extension": ".csv",
+        "size_bytes": 272,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/crosswalk.json",
+        "file_name": "crosswalk.json",
+        "extension": ".json",
+        "size_bytes": 90,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/example_realization_config.json",
+        "file_name": "example_realization_config.json",
+        "extension": ".json",
+        "size_bytes": 5425,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/nexus_data.geojson",
+        "file_name": "nexus_data.geojson",
+        "extension": ".geojson",
+        "size_bytes": 410,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/troute_output/example_realization_config.json",
+        "file_name": "example_realization_config.json",
+        "extension": ".json",
+        "size_bytes": 268,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/troute_output/flowveldepth.csv",
+        "file_name": "flowveldepth.csv",
+        "extension": ".csv",
+        "size_bytes": 14367,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/troute_output/flowveldepth.parquet",
+        "file_name": "flowveldepth.parquet",
+        "extension": ".parquet",
+        "size_bytes": 7535,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/troute_output/troute_output.csv",
+        "file_name": "troute_output.csv",
+        "extension": ".csv",
+        "size_bytes": 1265,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/troute_output/troute_output.nc",
+        "file_name": "troute_output.nc",
+        "extension": ".nc",
+        "size_bytes": 12762,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/waterbody_data.geojson",
+        "file_name": "waterbody_data.geojson",
+        "extension": ".geojson",
+        "size_bytes": 7786,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/data/waterbody_edge_list.csv",
+        "file_name": "waterbody_edge_list.csv",
+        "extension": ".csv",
+        "size_bytes": 272,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/test_agent.py",
+        "file_name": "test_agent.py",
+        "extension": ".py",
+        "size_bytes": 961,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/test_calibration_catchment.py",
+        "file_name": "test_calibration_catchment.py",
+        "extension": ".py",
+        "size_bytes": 1213,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/test_model.py",
+        "file_name": "test_model.py",
+        "extension": ".py",
+        "size_bytes": 2744,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/test_ngen.py",
+        "file_name": "test_ngen.py",
+        "extension": ".py",
+        "size_bytes": 1168,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/test_ngen_output.py",
+        "file_name": "test_ngen_output.py",
+        "extension": ".py",
+        "size_bytes": 1388,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/test_objectives.py",
+        "file_name": "test_objectives.py",
+        "extension": ".py",
+        "size_bytes": 1961,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/test_plugin_system.py",
+        "file_name": "test_plugin_system.py",
+        "extension": ".py",
+        "size_bytes": 2545,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/test_search.py",
+        "file_name": "test_search.py",
+        "extension": ".py",
+        "size_bytes": 543,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/test_utils.py",
+        "file_name": "test_utils.py",
+        "extension": ".py",
+        "size_bytes": 1110,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_cal/tests/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 6229,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_conf/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_conf/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 16,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 166,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_conf/SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 17,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_conf/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/changelog.md",
+        "file_name": "changelog.md",
+        "extension": ".md",
+        "size_bytes": 988,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_conf/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 101,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_conf/setup.cfg",
+        "file_name": "setup.cfg",
+        "extension": ".cfg",
+        "size_bytes": 1383,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 493,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/all_formulations.py",
+        "file_name": "all_formulations.py",
+        "extension": ".py",
+        "size_bytes": 926,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/bmi_formulation.py",
+        "file_name": "bmi_formulation.py",
+        "extension": ".py",
+        "size_bytes": 10687,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/cfe.py",
+        "file_name": "cfe.py",
+        "extension": ".py",
+        "size_bytes": 3549,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/configurations.py",
+        "file_name": "configurations.py",
+        "extension": ".py",
+        "size_bytes": 2468,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/formulation.py",
+        "file_name": "formulation.py",
+        "extension": ".py",
+        "size_bytes": 1984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/hydrofabric.py",
+        "file_name": "hydrofabric.py",
+        "extension": ".py",
+        "size_bytes": 956,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/cfe.py",
+        "file_name": "cfe.py",
+        "extension": ".py",
+        "size_bytes": 6898,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/lgar.py",
+        "file_name": "lgar.py",
+        "extension": ".py",
+        "size_bytes": 3958,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/lstm.py",
+        "file_name": "lstm.py",
+        "extension": ".py",
+        "size_bytes": 1519,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/noahowp.py",
+        "file_name": "noahowp.py",
+        "extension": ".py",
+        "size_bytes": 10884,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/noahowp_options.py",
+        "file_name": "noahowp_options.py",
+        "extension": ".py",
+        "size_bytes": 10934,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/pet.py",
+        "file_name": "pet.py",
+        "extension": ".py",
+        "size_bytes": 3899,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/soil_freeze_thaw.py",
+        "file_name": "soil_freeze_thaw.py",
+        "extension": ".py",
+        "size_bytes": 6647,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/soil_moisture_profile.py",
+        "file_name": "soil_moisture_profile.py",
+        "extension": ".py",
+        "size_bytes": 6800,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/topmodel.py",
+        "file_name": "topmodel.py",
+        "extension": ".py",
+        "size_bytes": 16560,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 4271,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/validators.py",
+        "file_name": "validators.py",
+        "extension": ".py",
+        "size_bytes": 846,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/init_config/value_unit_pair.py",
+        "file_name": "value_unit_pair.py",
+        "extension": ".py",
+        "size_bytes": 3113,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/lgar.py",
+        "file_name": "lgar.py",
+        "extension": ".py",
+        "size_bytes": 1624,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/lstm.py",
+        "file_name": "lstm.py",
+        "extension": ".py",
+        "size_bytes": 728,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/lstm_rust.py",
+        "file_name": "lstm_rust.py",
+        "extension": ".py",
+        "size_bytes": 718,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/model_vars.py",
+        "file_name": "model_vars.py",
+        "extension": ".py",
+        "size_bytes": 19309,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/multi.py",
+        "file_name": "multi.py",
+        "extension": ".py",
+        "size_bytes": 4326,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/noahowp.py",
+        "file_name": "noahowp.py",
+        "extension": ".py",
+        "size_bytes": 1325,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/path_pair/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 229,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/path_pair/_abc_mixins.py",
+        "file_name": "_abc_mixins.py",
+        "extension": ".py",
+        "size_bytes": 6531,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/path_pair/_mixins.py",
+        "file_name": "_mixins.py",
+        "extension": ".py",
+        "size_bytes": 6043,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/path_pair/_utils.py",
+        "file_name": "_utils.py",
+        "extension": ".py",
+        "size_bytes": 531,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/path_pair/common.py",
+        "file_name": "common.py",
+        "extension": ".py",
+        "size_bytes": 613,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/path_pair/path_pair.py",
+        "file_name": "path_pair.py",
+        "extension": ".py",
+        "size_bytes": 19931,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/path_pair/protocol.py",
+        "file_name": "protocol.py",
+        "extension": ".py",
+        "size_bytes": 907,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/path_pair/typing.py",
+        "file_name": "typing.py",
+        "extension": ".py",
+        "size_bytes": 349,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/pet.py",
+        "file_name": "pet.py",
+        "extension": ".py",
+        "size_bytes": 819,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/realization.py",
+        "file_name": "realization.py",
+        "extension": ".py",
+        "size_bytes": 1981,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/sloth.py",
+        "file_name": "sloth.py",
+        "extension": ".py",
+        "size_bytes": 608,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/soil_freeze_thaw.py",
+        "file_name": "soil_freeze_thaw.py",
+        "extension": ".py",
+        "size_bytes": 736,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/soil_moisture_profile.py",
+        "file_name": "soil_moisture_profile.py",
+        "extension": ".py",
+        "size_bytes": 868,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/topmod.py",
+        "file_name": "topmod.py",
+        "extension": ".py",
+        "size_bytes": 1966,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 569,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/src/ngen/config/validate.py",
+        "file_name": "validate.py",
+        "extension": ".py",
+        "size_bytes": 1932,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/conftest.py",
+        "file_name": "conftest.py",
+        "extension": ".py",
+        "size_bytes": 8237,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/CFE/config.txt",
+        "file_name": "config.txt",
+        "extension": ".txt",
+        "size_bytes": 640,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/CFE/libfakecfe.dylib",
+        "file_name": "libfakecfe.dylib",
+        "extension": ".dylib",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/CFE/libfakecfe.so",
+        "file_name": "libfakecfe.so",
+        "extension": ".so",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/NOAH/cat-1.input",
+        "file_name": "cat-1.input",
+        "extension": ".input",
+        "size_bytes": 3172,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/NOAH/libfakenoah.dylib",
+        "file_name": "libfakenoah.dylib",
+        "extension": ".dylib",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/NOAH/namelist.input",
+        "file_name": "namelist.input",
+        "extension": ".input",
+        "size_bytes": 3394,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/NOAH/parameters/GENPARM.TBL",
+        "file_name": "GENPARM.TBL",
+        "extension": ".tbl",
+        "size_bytes": 274,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/NOAH/parameters/MPTABLE.TBL",
+        "file_name": "MPTABLE.TBL",
+        "extension": ".tbl",
+        "size_bytes": 56005,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/NOAH/parameters/SOILPARM.TBL",
+        "file_name": "SOILPARM.TBL",
+        "extension": ".tbl",
+        "size_bytes": 6556,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/forcing/cat-1.csv",
+        "file_name": "cat-1.csv",
+        "extension": ".csv",
+        "size_bytes": 13999,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/hydrofabric/test_catchment_config.geojson",
+        "file_name": "test_catchment_config.geojson",
+        "extension": ".geojson",
+        "size_bytes": 15423,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/hydrofabric/test_nexus_config.geojson",
+        "file_name": "test_nexus_config.geojson",
+        "extension": ".geojson",
+        "size_bytes": 818,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/init_config_data/cat_87_bmi_config_cfe.ini",
+        "file_name": "cat_87_bmi_config_cfe.ini",
+        "extension": ".ini",
+        "size_bytes": 691,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/init_config_data/lgar.txt",
+        "file_name": "lgar.txt",
+        "extension": ".txt",
+        "size_bytes": 489,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/init_config_data/noah_owp.namelist",
+        "file_name": "noah_owp.namelist",
+        "extension": ".namelist",
+        "size_bytes": 1430,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/init_config_data/params.dat",
+        "file_name": "params.dat",
+        "extension": ".dat",
+        "size_bytes": 110,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/init_config_data/pet.ini",
+        "file_name": "pet.ini",
+        "extension": ".ini",
+        "size_bytes": 527,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/init_config_data/soil_freeze_thaw.txt",
+        "file_name": "soil_freeze_thaw.txt",
+        "extension": ".txt",
+        "size_bytes": 399,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/init_config_data/soil_moisture_profile.txt",
+        "file_name": "soil_moisture_profile.txt",
+        "extension": ".txt",
+        "size_bytes": 173,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/init_config_data/subcat.dat",
+        "file_name": "subcat.dat",
+        "extension": ".dat",
+        "size_bytes": 85,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/init_config_data/topmodel.run",
+        "file_name": "topmodel.run",
+        "extension": ".run",
+        "size_bytes": 105,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/routing/fake_config.yaml",
+        "file_name": "fake_config.yaml",
+        "extension": ".yaml",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/sloth/config.txt",
+        "file_name": "config.txt",
+        "extension": ".txt",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/sloth/libfakesloth.dylib",
+        "file_name": "libfakesloth.dylib",
+        "extension": ".dylib",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/sloth/libfakesloth.so",
+        "file_name": "libfakesloth.so",
+        "extension": ".so",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/data/test_config.json",
+        "file_name": "test_config.json",
+        "extension": ".json",
+        "size_bytes": 4553,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_bmi_params.py",
+        "file_name": "test_bmi_params.py",
+        "extension": ".py",
+        "size_bytes": 992,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_cfe.py",
+        "file_name": "test_cfe.py",
+        "extension": ".py",
+        "size_bytes": 1083,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_cfe_sloth.py",
+        "file_name": "test_cfe_sloth.py",
+        "extension": ".py",
+        "size_bytes": 538,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_conf.py",
+        "file_name": "test_conf.py",
+        "extension": ".py",
+        "size_bytes": 753,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_forcing.py",
+        "file_name": "test_forcing.py",
+        "extension": ".py",
+        "size_bytes": 208,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_formulation.py",
+        "file_name": "test_formulation.py",
+        "extension": ".py",
+        "size_bytes": 1752,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_init_config_models.py",
+        "file_name": "test_init_config_models.py",
+        "extension": ".py",
+        "size_bytes": 6918,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_init_config_utils.py",
+        "file_name": "test_init_config_utils.py",
+        "extension": ".py",
+        "size_bytes": 2107,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_lgar.py",
+        "file_name": "test_lgar.py",
+        "extension": ".py",
+        "size_bytes": 698,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_lstm.py",
+        "file_name": "test_lstm.py",
+        "extension": ".py",
+        "size_bytes": 886,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_lstm_rust.py",
+        "file_name": "test_lstm_rust.py",
+        "extension": ".py",
+        "size_bytes": 1118,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_model_vars.py",
+        "file_name": "test_model_vars.py",
+        "extension": ".py",
+        "size_bytes": 11939,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_multi.py",
+        "file_name": "test_multi.py",
+        "extension": ".py",
+        "size_bytes": 1323,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_noahowp.py",
+        "file_name": "test_noahowp.py",
+        "extension": ".py",
+        "size_bytes": 923,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_path_pair.py",
+        "file_name": "test_path_pair.py",
+        "extension": ".py",
+        "size_bytes": 13817,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_realization.py",
+        "file_name": "test_realization.py",
+        "extension": ".py",
+        "size_bytes": 1819,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_routing.py",
+        "file_name": "test_routing.py",
+        "extension": ".py",
+        "size_bytes": 204,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_sloth.py",
+        "file_name": "test_sloth.py",
+        "extension": ".py",
+        "size_bytes": 682,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_soil_freeze_thaw.py",
+        "file_name": "test_soil_freeze_thaw.py",
+        "extension": ".py",
+        "size_bytes": 892,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_soil_moisture_profile.py",
+        "file_name": "test_soil_moisture_profile.py",
+        "extension": ".py",
+        "size_bytes": 1106,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_topmod.py",
+        "file_name": "test_topmod.py",
+        "extension": ".py",
+        "size_bytes": 1186,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_validate.py",
+        "file_name": "test_validate.py",
+        "extension": ".py",
+        "size_bytes": 547,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_conf/tests/test_value_unit_pair.py",
+        "file_name": "test_value_unit_pair.py",
+        "extension": ".py",
+        "size_bytes": 3696,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_config_gen/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_config_gen/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 16,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 8539,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_config_gen/SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 17,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_config_gen/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/changelog.md",
+        "file_name": "changelog.md",
+        "extension": ".md",
+        "size_bytes": 16,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_config_gen/examples/generate_conus/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 978,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/generate_simple/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 983,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/ngen_realization/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 62,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_config_gen/examples/ngen_realization/example_bmi_multi_realization_config.json",
+        "file_name": "example_bmi_multi_realization_config.json",
+        "extension": ".json",
+        "size_bytes": 5017,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/ngen_realization/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 3067,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/ngen_realization/parameters/GENPARM.TBL",
+        "file_name": "GENPARM.TBL",
+        "extension": ".tbl",
+        "size_bytes": 274,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/ngen_realization/parameters/MPTABLE.TBL",
+        "file_name": "MPTABLE.TBL",
+        "extension": ".tbl",
+        "size_bytes": 56005,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/ngen_realization/parameters/SOILPARM.TBL",
+        "file_name": "SOILPARM.TBL",
+        "extension": ".tbl",
+        "size_bytes": 6556,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/noaa_owp/noaa_owp.py",
+        "file_name": "noaa_owp.py",
+        "extension": ".py",
+        "size_bytes": 16646,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/pet/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 10217,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/progress_bar/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 1006,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/examples/write_to_tar_gz/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 1106,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 101,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_config_gen/setup.cfg",
+        "file_name": "setup.cfg",
+        "extension": ".cfg",
+        "size_bytes": 1545,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_config_gen/src/ngen/config_gen/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 70,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/src/ngen/config_gen/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/src/ngen/config_gen/file_writer.py",
+        "file_name": "file_writer.py",
+        "extension": ".py",
+        "size_bytes": 7230,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/src/ngen/config_gen/generate.py",
+        "file_name": "generate.py",
+        "extension": ".py",
+        "size_bytes": 1389,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/src/ngen/config_gen/hook_providers.py",
+        "file_name": "hook_providers.py",
+        "extension": ".py",
+        "size_bytes": 3185,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/src/ngen/config_gen/hooks.py",
+        "file_name": "hooks.py",
+        "extension": ".py",
+        "size_bytes": 7727,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/src/ngen/config_gen/models/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 21,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/src/ngen/config_gen/models/cfe.py",
+        "file_name": "cfe.py",
+        "extension": ".py",
+        "size_bytes": 8159,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/src/ngen/config_gen/models/pet.py",
+        "file_name": "pet.py",
+        "extension": ".py",
+        "size_bytes": 3960,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_config_gen/test/test_file_writers.py",
+        "file_name": "test_file_writers.py",
+        "extension": ".py",
+        "size_bytes": 2207,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_init_config/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_init_config/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 16,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 17,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_init_config/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 101,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_init_config/setup.cfg",
+        "file_name": "setup.cfg",
+        "extension": ".cfg",
+        "size_bytes": 1494,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 621,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/_constants.py",
+        "file_name": "_constants.py",
+        "extension": ".py",
+        "size_bytes": 28,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/_deserializers.py",
+        "file_name": "_deserializers.py",
+        "extension": ".py",
+        "size_bytes": 1587,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/alias_generator.py",
+        "file_name": "alias_generator.py",
+        "extension": ".py",
+        "size_bytes": 1155,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/core.py",
+        "file_name": "core.py",
+        "extension": ".py",
+        "size_bytes": 10158,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/deserializer.py",
+        "file_name": "deserializer.py",
+        "extension": ".py",
+        "size_bytes": 4034,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/format_serializers.py",
+        "file_name": "format_serializers.py",
+        "extension": ".py",
+        "size_bytes": 4280,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/root_validators.py",
+        "file_name": "root_validators.py",
+        "extension": ".py",
+        "size_bytes": 800,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/serializer.py",
+        "file_name": "serializer.py",
+        "extension": ".py",
+        "size_bytes": 5822,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/serializer_deserializer.py",
+        "file_name": "serializer_deserializer.py",
+        "extension": ".py",
+        "size_bytes": 3286,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/typing.py",
+        "file_name": "typing.py",
+        "extension": ".py",
+        "size_bytes": 1803,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 4933,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/src/ngen/init_config/validators.py",
+        "file_name": "validators.py",
+        "extension": ".py",
+        "size_bytes": 388,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/conftest.py",
+        "file_name": "conftest.py",
+        "extension": ".py",
+        "size_bytes": 1546,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/data/test.ini",
+        "file_name": "test.ini",
+        "extension": ".ini",
+        "size_bytes": 217,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/data/test.json",
+        "file_name": "test.json",
+        "extension": ".json",
+        "size_bytes": 248,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/data/test.namelist",
+        "file_name": "test.namelist",
+        "extension": ".namelist",
+        "size_bytes": 144,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/data/test.toml",
+        "file_name": "test.toml",
+        "extension": ".toml",
+        "size_bytes": 170,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/data/test.yaml",
+        "file_name": "test.yaml",
+        "extension": ".yaml",
+        "size_bytes": 158,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/data/test_no_header.ini",
+        "file_name": "test_no_header.ini",
+        "extension": ".ini",
+        "size_bytes": 213,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/data/test_no_space_around_delimiters.ini",
+        "file_name": "test_no_space_around_delimiters.ini",
+        "extension": ".ini",
+        "size_bytes": 209,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/test_alias_generator.py",
+        "file_name": "test_alias_generator.py",
+        "extension": ".py",
+        "size_bytes": 830,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/test_serializer_deserializer_straight_and_narrow.py",
+        "file_name": "test_serializer_deserializer_straight_and_narrow.py",
+        "extension": ".py",
+        "size_bytes": 6131,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/ngen_init_config/test/test_utils.py",
+        "file_name": "test_utils.py",
+        "extension": ".py",
+        "size_bytes": 4839,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/plot_calibration.py",
+        "file_name": "plot_calibration.py",
+        "extension": ".py",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "requirements.txt",
+        "file_name": "requirements.txt",
+        "extension": ".txt",
+        "size_bytes": 228,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    }
+]

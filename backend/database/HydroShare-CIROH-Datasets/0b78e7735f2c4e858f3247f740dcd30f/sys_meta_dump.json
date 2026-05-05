@@ -1,0 +1,46 @@
+{
+    "resource_type": "CollectionResource",
+    "resource_id": "0b78e7735f2c4e858f3247f740dcd30f",
+    "resource_title": "Collection of resources that illustrate data processing methods and computational and modeling libraries in HydroShare and linked JupyterHub computing platforms",
+    "abstract": "This collection of resources is was assembled to illustrate ways to use and work with data in HydroShare through its applications programming interface (API), the web application connector resource type, and web services for some content types. The resources collected here are intended to serve as tutorial examples for others to model in creating scripts and tools that act on HydroShare stored data.",
+    "authors": [
+        "Tarboton, David"
+    ],
+    "creator": "Tarboton, David",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2023-11-20T12:06:45.295233Z",
+    "date_last_updated": "2026-01-29T03:55:25.097225Z",
+    "bag_last_downloaded": "2025-12-06T12:11:45.290708Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/0b78e7735f2c4e858f3247f740dcd30f.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "eastlimit": -50.2965,
+                "westlimit": -131.5075,
+                "northlimit": 49.8565,
+                "southlimit": 24.2331,
+                "units": [
+                    "Decimal degrees"
+                ],
+                "projection": "WGS84 EPSG:4326"
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "10/01/2004",
+                "end": "04/05/2023"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/0b78e7735f2c4e858f3247f740dcd30f/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/0b78e7735f2c4e858f3247f740dcd30f/map/",
+    "resource_url": "http://www.hydroshare.org/resource/0b78e7735f2c4e858f3247f740dcd30f/",
+    "content_types": []
+}

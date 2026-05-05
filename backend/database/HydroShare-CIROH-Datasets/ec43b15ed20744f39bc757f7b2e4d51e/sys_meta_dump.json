@@ -1,0 +1,39 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "ec43b15ed20744f39bc757f7b2e4d51e",
+    "resource_title": "Accessing AORC and Hydrofabric on CIROH JupyterHub",
+    "abstract": "This resource includes data and codes to access, analyze and work with high community value datasets (AORC, Hydrofabric) through the use of JupyterHub computing platforms linked to HydroShare (CIROH Jupyterhub on 2i2c specifically).",
+    "authors": [
+        "Garousi-Nejad, Irene"
+    ],
+    "creator": "Garousi-Nejad, Irene",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2025-05-29T13:17:30.508449Z",
+    "date_last_updated": "2025-05-29T13:19:45.761665Z",
+    "bag_last_downloaded": "2026-03-16T00:47:28.977748Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/ec43b15ed20744f39bc757f7b2e4d51e.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "northlimit": 40.659051908319015,
+                "southlimit": 40.5827388007433,
+                "eastlimit": -111.54700091991539,
+                "westlimit": -111.79307134529958,
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/ec43b15ed20744f39bc757f7b2e4d51e/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/ec43b15ed20744f39bc757f7b2e4d51e/map/",
+    "resource_url": "http://www.hydroshare.org/resource/ec43b15ed20744f39bc757f7b2e4d51e/",
+    "content_types": [
+        "Geographic Feature Content"
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "id": 1052802715,
+    "name": "nrds-onprem",
+    "full_name": "CIROH-UA/nrds-onprem",
+    "html_url": "https://github.com/CIROH-UA/nrds-onprem",
+    "description": "NRDS Onpremise setup",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2025-09-08T15:09:31Z",
+    "updated_at": "2025-09-08T15:09:36Z",
+    "pushed_at": "2025-09-08T15:09:33Z",
+    "language": null,
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 150,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 1,
+        "top_contributors": [
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

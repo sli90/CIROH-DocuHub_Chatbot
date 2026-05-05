@@ -1,0 +1,104 @@
+{
+    "id": 979479266,
+    "name": "varnish-old",
+    "full_name": "CIROH-UA/varnish-old",
+    "html_url": "https://github.com/CIROH-UA/varnish-old",
+    "description": "Template for NGIAB 101 tutorial - pkgdown site",
+    "homepage": "https://carpentries.github.io/varnish/",
+    "default_branch": "main",
+    "created_at": "2025-05-07T15:16:25Z",
+    "updated_at": "2026-03-02T14:53:23Z",
+    "pushed_at": "2026-01-22T16:36:47Z",
+    "language": "SCSS",
+    "topics": [],
+    "fork": true,
+    "archived": true,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 7538,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null
+    },
+    "contributors_summary": {
+        "contributors_count": 17,
+        "top_contributors": [
+            {
+                "id": 3639446,
+                "login": "zkamvar",
+                "html_url": "https://github.com/zkamvar",
+                "type": "User",
+                "contributions": 337
+            },
+            {
+                "id": 65916846,
+                "login": "actions-user",
+                "html_url": "https://github.com/actions-user",
+                "type": "User",
+                "contributions": 88
+            },
+            {
+                "id": 1872302,
+                "login": "froggleston",
+                "html_url": "https://github.com/froggleston",
+                "type": "User",
+                "contributions": 60
+            },
+            {
+                "id": 64108146,
+                "login": "astroDimitrios",
+                "html_url": "https://github.com/astroDimitrios",
+                "type": "User",
+                "contributions": 20
+            },
+            {
+                "id": 170465264,
+                "login": "quinnylee",
+                "html_url": "https://github.com/quinnylee",
+                "type": "User",
+                "contributions": 12
+            },
+            {
+                "id": 9694524,
+                "login": "tobyhodges",
+                "html_url": "https://github.com/tobyhodges",
+                "type": "User",
+                "contributions": 12
+            },
+            {
+                "id": 19176319,
+                "login": "ErinBecker",
+                "html_url": "https://github.com/ErinBecker",
+                "type": "User",
+                "contributions": 8
+            },
+            {
+                "id": 10783929,
+                "login": "Bisaloo",
+                "html_url": "https://github.com/Bisaloo",
+                "type": "User",
+                "contributions": 7
+            },
+            {
+                "id": 742154,
+                "login": "Robadob",
+                "html_url": "https://github.com/Robadob",
+                "type": "User",
+                "contributions": 5
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 4
+            }
+        ]
+    }
+}

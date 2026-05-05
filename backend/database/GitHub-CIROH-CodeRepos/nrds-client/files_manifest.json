@@ -1,0 +1,922 @@
+[
+    {
+        "path": ".dockerignore",
+        "file_name": ".dockerignore",
+        "extension": "",
+        "size_bytes": 240,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/scripts/clean_up_docker_hub.sh",
+        "file_name": "clean_up_docker_hub.sh",
+        "extension": ".sh",
+        "size_bytes": 1248,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/security/.grype.yaml",
+        "file_name": ".grype.yaml",
+        "extension": ".yaml",
+        "size_bytes": 665,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/build_and_push_dev_image.yml",
+        "file_name": "build_and_push_dev_image.yml",
+        "extension": ".yml",
+        "size_bytes": 5476,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/build_and_push_prod_image.yml",
+        "file_name": "build_and_push_prod_image.yml",
+        "extension": ".yml",
+        "size_bytes": 5454,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 512,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Dockerfile",
+        "file_name": "Dockerfile",
+        "extension": "",
+        "size_bytes": 2635,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 10093,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "docker-compose.yaml",
+        "file_name": "docker-compose.yaml",
+        "extension": ".yaml",
+        "size_bytes": 954,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "install.yml",
+        "file_name": "install.yml",
+        "extension": ".yml",
+        "size_bytes": 453,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "jsconfig.json",
+        "file_name": "jsconfig.json",
+        "extension": ".json",
+        "size_bytes": 216,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "launchApp.sh",
+        "file_name": "launchApp.sh",
+        "extension": ".sh",
+        "size_bytes": 13955,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "package-lock.json",
+        "file_name": "package-lock.json",
+        "extension": ".json",
+        "size_bytes": 1196005,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "package.json",
+        "file_name": "package.json",
+        "extension": ".json",
+        "size_bytes": 5665,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pdm.lock",
+        "file_name": "pdm.lock",
+        "extension": ".lock",
+        "size_bytes": 203710,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 2063,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "reactapp/App.js",
+        "file_name": "App.js",
+        "extension": ".js",
+        "size_bytes": 687,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/App.scss",
+        "file_name": "App.scss",
+        "extension": ".scss",
+        "size_bytes": 7836,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/App.test.js",
+        "file_name": "App.test.js",
+        "extension": ".js",
+        "size_bytes": 1790,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/assets/error.png",
+        "file_name": "error.png",
+        "extension": ".png",
+        "size_bytes": 141690,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/assets/error404.png",
+        "file_name": "error404.png",
+        "extension": ".png",
+        "size_bytes": 85223,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/assets/reactLogo.svg",
+        "file_name": "reactLogo.svg",
+        "extension": ".svg",
+        "size_bytes": 2632,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/development.env",
+        "file_name": "development.env",
+        "extension": ".env",
+        "size_bytes": 178,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/tests/env.test.js",
+        "file_name": "env.test.js",
+        "extension": ".js",
+        "size_bytes": 689,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/tests/mocks/fileMock.js",
+        "file_name": "fileMock.js",
+        "extension": ".js",
+        "size_bytes": 34,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/tests/mocks/handlers.js",
+        "file_name": "handlers.js",
+        "extension": ".js",
+        "size_bytes": 1525,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/tests/mocks/server.js",
+        "file_name": "server.js",
+        "extension": ".js",
+        "size_bytes": 176,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/tests/setupTests.js",
+        "file_name": "setupTests.js",
+        "extension": ".js",
+        "size_bytes": 960,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/tests/test.env",
+        "file_name": "test.env",
+        "extension": ".env",
+        "size_bytes": 168,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/tests/transforms/babelTransform.js",
+        "file_name": "babelTransform.js",
+        "extension": ".js",
+        "size_bytes": 534,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/tests/transforms/cssTransform.js",
+        "file_name": "cssTransform.js",
+        "extension": ".js",
+        "size_bytes": 314,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/tests/transforms/fileTransform.js",
+        "file_name": "fileTransform.js",
+        "extension": ".js",
+        "size_bytes": 1261,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/config/webpack.config.js",
+        "file_name": "webpack.config.js",
+        "extension": ".js",
+        "size_bytes": 2203,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/MenuList.js",
+        "file_name": "MenuList.js",
+        "extension": ".js",
+        "size_bytes": 2578,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/Modals.js",
+        "file_name": "Modals.js",
+        "extension": ".js",
+        "size_bytes": 6803,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/SelectComponent.js",
+        "file_name": "SelectComponent.js",
+        "extension": ".js",
+        "size_bytes": 4212,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/forecast/FeatureInformation.js",
+        "file_name": "FeatureInformation.js",
+        "extension": ".js",
+        "size_bytes": 2757,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/forecast/ForecastHeader.js",
+        "file_name": "ForecastHeader.js",
+        "extension": ".js",
+        "size_bytes": 918,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/forecast/Plot.js",
+        "file_name": "Plot.js",
+        "extension": ".js",
+        "size_bytes": 14886,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/forecast/TimeSlider.css",
+        "file_name": "TimeSlider.css",
+        "extension": ".css",
+        "size_bytes": 2904,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/forecast/TimeSlider.js",
+        "file_name": "TimeSlider.js",
+        "extension": ".js",
+        "size_bytes": 4786,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/forecast/TimeseriesCard.js",
+        "file_name": "TimeseriesCard.js",
+        "extension": ".js",
+        "size_bytes": 1377,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/forecast/cacheTable.js",
+        "file_name": "cacheTable.js",
+        "extension": ".js",
+        "size_bytes": 4949,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/forecast/dataMenu.js",
+        "file_name": "dataMenu.js",
+        "extension": ".js",
+        "size_bytes": 15443,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/forecast/variablesMenu.js",
+        "file_name": "variablesMenu.js",
+        "extension": ".js",
+        "size_bytes": 3451,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/map/LayersControl.js",
+        "file_name": "LayersControl.js",
+        "extension": ".js",
+        "size_bytes": 4600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/map/MapLayers.js",
+        "file_name": "MapLayers.js",
+        "extension": ".js",
+        "size_bytes": 4363,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/map/Mapg.js",
+        "file_name": "Mapg.js",
+        "extension": ".js",
+        "size_bytes": 12251,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/map/Popup.js",
+        "file_name": "Popup.js",
+        "extension": ".js",
+        "size_bytes": 947,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/map/SearchBar.js",
+        "file_name": "SearchBar.js",
+        "extension": ".js",
+        "size_bytes": 2196,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/menus/CacheMenu.js",
+        "file_name": "CacheMenu.js",
+        "extension": ".js",
+        "size_bytes": 1355,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/menus/ForecastMenu.js",
+        "file_name": "ForecastMenu.js",
+        "extension": ".js",
+        "size_bytes": 1974,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/menus/LayersMenu.js",
+        "file_name": "LayersMenu.js",
+        "extension": ".js",
+        "size_bytes": 1234,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/menus/MainMenu.js",
+        "file_name": "MainMenu.js",
+        "extension": ".js",
+        "size_bytes": 308,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/components/styles/Styles.js",
+        "file_name": "Styles.js",
+        "extension": ".js",
+        "size_bytes": 8858,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/lib/data.js",
+        "file_name": "data.js",
+        "extension": ".js",
+        "size_bytes": 947,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/lib/duckdbClient.js",
+        "file_name": "duckdbClient.js",
+        "extension": ".js",
+        "size_bytes": 1431,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/lib/layers.js",
+        "file_name": "layers.js",
+        "extension": ".js",
+        "size_bytes": 13889,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/lib/opfsCache.js",
+        "file_name": "opfsCache.js",
+        "extension": ".js",
+        "size_bytes": 8266,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/lib/queryData.js",
+        "file_name": "queryData.js",
+        "extension": ".js",
+        "size_bytes": 9838,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/lib/s3Utils.js",
+        "file_name": "s3Utils.js",
+        "extension": ".js",
+        "size_bytes": 5150,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/lib/utils.js",
+        "file_name": "utils.js",
+        "extension": ".js",
+        "size_bytes": 1160,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/store/CacheTables.js",
+        "file_name": "CacheTables.js",
+        "extension": ".js",
+        "size_bytes": 1608,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/store/Datastream.js",
+        "file_name": "Datastream.js",
+        "extension": ".js",
+        "size_bytes": 3135,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/store/Layers.js",
+        "file_name": "Layers.js",
+        "extension": ".js",
+        "size_bytes": 6448,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/store/Timeseries.js",
+        "file_name": "Timeseries.js",
+        "extension": ".js",
+        "size_bytes": 4356,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/store/s3Store.js",
+        "file_name": "s3Store.js",
+        "extension": ".js",
+        "size_bytes": 4265,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/DataStream/views/DatastreamView.js",
+        "file_name": "DatastreamView.js",
+        "extension": ".js",
+        "size_bytes": 8898,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/README.MD",
+        "file_name": "README.MD",
+        "extension": ".md",
+        "size_bytes": 0,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "reactapp/features/Tethys/components/Styles.js",
+        "file_name": "Styles.js",
+        "extension": ".js",
+        "size_bytes": 3357,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/buttons/HeaderButton.js",
+        "file_name": "HeaderButton.js",
+        "extension": ".js",
+        "size_bytes": 561,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/buttons/NavButton.js",
+        "file_name": "NavButton.js",
+        "extension": ".js",
+        "size_bytes": 313,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/error/DebugError.js",
+        "file_name": "DebugError.js",
+        "extension": ".js",
+        "size_bytes": 3428,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/error/Error.js",
+        "file_name": "Error.js",
+        "extension": ".js",
+        "size_bytes": 1177,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/error/ErrorBoundary.js",
+        "file_name": "ErrorBoundary.js",
+        "extension": ".js",
+        "size_bytes": 1207,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/error/GenericError.js",
+        "file_name": "GenericError.js",
+        "extension": ".js",
+        "size_bytes": 288,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/error/NotFound.js",
+        "file_name": "NotFound.js",
+        "extension": ".js",
+        "size_bytes": 300,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/layout/Header.js",
+        "file_name": "Header.js",
+        "extension": ".js",
+        "size_bytes": 1982,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/layout/Layout.js",
+        "file_name": "Layout.js",
+        "extension": ".js",
+        "size_bytes": 3225,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/layout/NavMenu.js",
+        "file_name": "NavMenu.js",
+        "extension": ".js",
+        "size_bytes": 912,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/loader/Loader.js",
+        "file_name": "Loader.js",
+        "extension": ".js",
+        "size_bytes": 2115,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/loader/LoadingAnimation.js",
+        "file_name": "LoadingAnimation.js",
+        "extension": ".js",
+        "size_bytes": 1484,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/loader/LoadingAnimation.scss",
+        "file_name": "LoadingAnimation.scss",
+        "extension": ".scss",
+        "size_bytes": 3708,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/components/loader/LoadingComponents.js",
+        "file_name": "LoadingComponents.js",
+        "extension": ".js",
+        "size_bytes": 898,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/context/context.js",
+        "file_name": "context.js",
+        "extension": ".js",
+        "size_bytes": 82,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/services/api/app.js",
+        "file_name": "app.js",
+        "extension": ".js",
+        "size_bytes": 490,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/services/api/client.js",
+        "file_name": "client.js",
+        "extension": ".js",
+        "size_bytes": 1047,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/services/api/tethys.js",
+        "file_name": "tethys.js",
+        "extension": ".js",
+        "size_bytes": 1311,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/features/Tethys/services/utilities.js",
+        "file_name": "utilities.js",
+        "extension": ".js",
+        "size_bytes": 1309,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/index.css",
+        "file_name": "index.css",
+        "extension": ".css",
+        "size_bytes": 57,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/index.js",
+        "file_name": "index.js",
+        "extension": ".js",
+        "size_bytes": 662,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "reactapp/wdyr.js",
+        "file_name": "wdyr.js",
+        "extension": ".js",
+        "size_bytes": 250,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "run.sh",
+        "file_name": "run.sh",
+        "extension": ".sh",
+        "size_bytes": 1341,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "salt/patches.sls",
+        "file_name": "patches.sls",
+        "extension": ".sls",
+        "size_bytes": 1048,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "salt/top.sls",
+        "file_name": "top.sls",
+        "extension": ".sls",
+        "size_bytes": 76,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/Dockerfile",
+        "file_name": "Dockerfile",
+        "extension": "",
+        "size_bytes": 6217,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/con.Dockerfile",
+        "file_name": "con.Dockerfile",
+        "extension": ".dockerfile",
+        "size_bytes": 967,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/conus.Dockerfile",
+        "file_name": "conus.Dockerfile",
+        "extension": ".dockerfile",
+        "size_bytes": 7093,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/gkg2parquet.Dockerfile",
+        "file_name": "gkg2parquet.Dockerfile",
+        "extension": ".dockerfile",
+        "size_bytes": 1486,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/gpkg2parquet/gpkg2parquet.sh",
+        "file_name": "gpkg2parquet.sh",
+        "extension": ".sh",
+        "size_bytes": 7722,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/nc2parquet/nc2parquet.py",
+        "file_name": "nc2parquet.py",
+        "extension": ".py",
+        "size_bytes": 1234,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/nc2parquet/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 6891,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "static/imgs/CIROHLogo.png",
+        "file_name": "CIROHLogo.png",
+        "extension": ".png",
+        "size_bytes": 20704,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "static/imgs/nrds-fig-1.png",
+        "file_name": "nrds-fig-1.png",
+        "extension": ".png",
+        "size_bytes": 725185,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "static/imgs/nrds-fig-2.png",
+        "file_name": "nrds-fig-2.png",
+        "extension": ".png",
+        "size_bytes": 493620,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "static/imgs/nrds-fig-3.png",
+        "file_name": "nrds-fig-3.png",
+        "extension": ".png",
+        "size_bytes": 619172,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tests/.env",
+        "file_name": ".env",
+        "extension": "",
+        "size_bytes": 37,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/nrds/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 48,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/nrds/app.py",
+        "file_name": "app.py",
+        "extension": ".py",
+        "size_bytes": 683,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/nrds/controllers.py",
+        "file_name": "controllers.py",
+        "extension": ".py",
+        "size_bytes": 1170,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/nrds/data_utils.py",
+        "file_name": "data_utils.py",
+        "extension": ".py",
+        "size_bytes": 7085,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/nrds/public/images/icon.png",
+        "file_name": "icon.png",
+        "extension": ".png",
+        "size_bytes": 953886,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/nrds/templates/nrds/index.html",
+        "file_name": "index.html",
+        "extension": ".html",
+        "size_bytes": 734,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/nrds/tests/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tethysapp/nrds/tests/tests.py",
+        "file_name": "tests.py",
+        "extension": ".py",
+        "size_bytes": 6954,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

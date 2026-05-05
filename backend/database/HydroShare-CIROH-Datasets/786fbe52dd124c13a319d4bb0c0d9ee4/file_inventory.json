@@ -1,0 +1,56 @@
+[
+    {
+        "file_name": "hs_bucket_access_gdal_example.ipynb",
+        "file_path": "hs_bucket_access_gdal_example.ipynb",
+        "extension": ".ipynb",
+        "checksum": "d5f145fa544cc555718278d0a217b292-1"
+    },
+    {
+        "file_name": "user_account.py",
+        "file_path": "user_account.py",
+        "extension": ".py",
+        "checksum": "580f6bad0b366b5bee1a29810366e0aa"
+    },
+    {
+        "file_name": "environment.yml",
+        "file_path": "conda_env/environment.yml",
+        "extension": ".yml",
+        "checksum": "dc5f88cade3059a033f97b2dbb90d80a"
+    },
+    {
+        "file_name": "README.md",
+        "file_path": "README.md",
+        "extension": ".md",
+        "checksum": "a8c5b36b7c26fcb7cddffe834e12069b"
+    },
+    {
+        "file_name": "delete_s3bucket_jupyterhub_conda_env.sh",
+        "file_path": "conda_env/delete_s3bucket_jupyterhub_conda_env.sh",
+        "extension": ".sh",
+        "checksum": "046c30019a1b0cd6fc1b93208258225a"
+    },
+    {
+        "file_name": "hs_bucket_access_non_gdal_example.ipynb",
+        "file_path": "hs_bucket_access_non_gdal_example.ipynb",
+        "extension": ".ipynb",
+        "checksum": "be66746e004abbb37b6ba617f8a102ec-1"
+    },
+    {
+        "file_name": "hydroshare_s3_bucket_access_examples.ipynb",
+        "file_path": "hydroshare_s3_bucket_access_examples.ipynb",
+        "extension": ".ipynb",
+        "checksum": "16a2527bf43e93f70c78d837d23e30ac-1"
+    },
+    {
+        "file_name": "setup_s3bucket_jupyterhub_conda_env.sh",
+        "file_path": "conda_env/setup_s3bucket_jupyterhub_conda_env.sh",
+        "extension": ".sh",
+        "checksum": "dd6a726ca4e260d4b324ce1bf187bf54"
+    },
+    {
+        "file_name": "CondaEnvironmentSetup.ipynb",
+        "file_path": "conda_env/CondaEnvironmentSetup.ipynb",
+        "extension": ".ipynb",
+        "checksum": "9284a7dd91198541f6fbbb1fb3914410"
+    }
+]

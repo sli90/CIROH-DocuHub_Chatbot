@@ -1,0 +1,178 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 57,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "00-Welcome.ipynb",
+        "file_name": "00-Welcome.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 1803,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "01-Workflows.ipynb",
+        "file_name": "01-Workflows.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 4765,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "02-BaselineWorkflow.ipynb",
+        "file_name": "02-BaselineWorkflow.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 5267,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "03-Functions.ipynb",
+        "file_name": "03-Functions.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 7655,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "04-Interfaces.ipynb",
+        "file_name": "04-Interfaces.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 6740,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "05-ExpandingTheWorkflow_Acquire.ipynb",
+        "file_name": "05-ExpandingTheWorkflow_Acquire.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 8501,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "06-PythonFromTheTerminalPrompt.ipynb",
+        "file_name": "06-PythonFromTheTerminalPrompt.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 5756,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "07-ExpandingTheWorkflow_Visualize.ipynb",
+        "file_name": "07-ExpandingTheWorkflow_Visualize.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 4361,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "08-OneMoreVisualizationExample.ipynb",
+        "file_name": "08-OneMoreVisualizationExample.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 4555,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "09-WrapUp.ipynb",
+        "file_name": "09-WrapUp.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 5867,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_notebook"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 35149,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "images/DataWorkflowModeling.png",
+        "file_name": "DataWorkflowModeling.png",
+        "extension": ".png",
+        "size_bytes": 38843,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "images/DataWorkflowModularity.png",
+        "file_name": "DataWorkflowModularity.png",
+        "extension": ".png",
+        "size_bytes": 19573,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "images/DataWorkflowTraining.png",
+        "file_name": "DataWorkflowTraining.png",
+        "extension": ".png",
+        "size_bytes": 17483,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "images/DataWorkflowVisualization.png",
+        "file_name": "DataWorkflowVisualization.png",
+        "extension": ".png",
+        "size_bytes": 667623,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/modules.py",
+        "file_name": "modules.py",
+        "extension": ".py",
+        "size_bytes": 902,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/uber-workflow.py",
+        "file_name": "uber-workflow.py",
+        "extension": ".py",
+        "size_bytes": 1284,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/workflow.py",
+        "file_name": "workflow.py",
+        "extension": ".py",
+        "size_bytes": 303,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/workflowCLI.py",
+        "file_name": "workflowCLI.py",
+        "extension": ".py",
+        "size_bytes": 403,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pythonv2/modules.py",
+        "file_name": "modules.py",
+        "extension": ".py",
+        "size_bytes": 2043,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pythonv2/workflowCLI.py",
+        "file_name": "workflowCLI.py",
+        "extension": ".py",
+        "size_bytes": 742,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

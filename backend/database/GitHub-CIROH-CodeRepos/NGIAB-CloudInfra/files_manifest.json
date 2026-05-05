@@ -1,0 +1,570 @@
+[
+    {
+        "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+        "file_name": "bug_report.md",
+        "extension": ".md",
+        "size_bytes": 315,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+        "file_name": "bug_report.yml",
+        "extension": ".yml",
+        "size_bytes": 1458,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/case_studies_call.md",
+        "file_name": "case_studies_call.md",
+        "extension": ".md",
+        "size_bytes": 4880,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/case_studies_call_template.yml",
+        "file_name": "case_studies_call_template.yml",
+        "extension": ".yml",
+        "size_bytes": 7933,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/exceeding_budget_request.md",
+        "file_name": "exceeding_budget_request.md",
+        "extension": ".md",
+        "size_bytes": 2773,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/exceeding_budget_request.yml",
+        "file_name": "exceeding_budget_request.yml",
+        "extension": ".yml",
+        "size_bytes": 4828,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+        "file_name": "feature_request.md",
+        "extension": ".md",
+        "size_bytes": 613,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+        "file_name": "feature_request.yml",
+        "extension": ".yml",
+        "size_bytes": 1173,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/model_integration_request.md",
+        "file_name": "model_integration_request.md",
+        "extension": ".md",
+        "size_bytes": 9244,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/onprem-request.md",
+        "file_name": "onprem-request.md",
+        "extension": ".md",
+        "size_bytes": 3632,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/onprem-request.yml",
+        "file_name": "onprem-request.yml",
+        "extension": ".yml",
+        "size_bytes": 6299,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/workshop_IT_request.md",
+        "file_name": "workshop_IT_request.md",
+        "extension": ".md",
+        "size_bytes": 4291,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/workshop_IT_request_template.yml",
+        "file_name": "workshop_IT_request_template.yml",
+        "extension": ".yml",
+        "size_bytes": 8871,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "file_name": "PULL_REQUEST_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 618,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/action_templates/build-and-push/action.yaml",
+        "file_name": "action.yaml",
+        "extension": ".yaml",
+        "size_bytes": 2196,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/action_templates/build-and-test/action.yaml",
+        "file_name": "action.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3214,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/action_templates/slack/action.yml",
+        "file_name": "action.yml",
+        "extension": ".yml",
+        "size_bytes": 765,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/actions/docker-build/action.yml",
+        "file_name": "action.yml",
+        "extension": ".yml",
+        "size_bytes": 1324,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/actions/docker-test/action.yml",
+        "file_name": "action.yml",
+        "extension": ".yml",
+        "size_bytes": 3247,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/dependabot.yml",
+        "file_name": "dependabot.yml",
+        "extension": ".yml",
+        "size_bytes": 115,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/docker_build_pr.yml",
+        "file_name": "docker_build_pr.yml",
+        "extension": ".yml",
+        "size_bytes": 6217,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/docker_image_main_branch.yml",
+        "file_name": "docker_image_main_branch.yml",
+        "extension": ".yml",
+        "size_bytes": 8271,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/docker_publish_release.yml",
+        "file_name": "docker_publish_release.yml",
+        "extension": ".yml",
+        "size_bytes": 1240,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/dockerhub_readme.yml",
+        "file_name": "dockerhub_readme.yml",
+        "extension": ".yml",
+        "size_bytes": 537,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/terraform_validation.yml",
+        "file_name": "terraform_validation.yml",
+        "extension": ".yml",
+        "size_bytes": 474,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 811,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CITATION.cff",
+        "file_name": "CITATION.cff",
+        "extension": ".cff",
+        "size_bytes": 1895,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1080,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 5333,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "archive/AWI_007_windows_test.ps1",
+        "file_name": "AWI_007_windows_test.ps1",
+        "extension": ".ps1",
+        "size_bytes": 617,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/Example.json",
+        "file_name": "Example.json",
+        "extension": ".json",
+        "size_bytes": 1292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/README_ARCHIVE.md",
+        "file_name": "README_ARCHIVE.md",
+        "extension": ".md",
+        "size_bytes": 825,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/config/awi_simplified_realization.json",
+        "file_name": "awi_simplified_realization.json",
+        "extension": ".json",
+        "size_bytes": 3216,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/docs/Specification.md",
+        "file_name": "Specification.md",
+        "extension": ".md",
+        "size_bytes": 1686,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/docs/notes.md",
+        "file_name": "notes.md",
+        "extension": ".md",
+        "size_bytes": 1305,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/terraform/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 3241,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "archive/terraform/network/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 2211,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/terraform/network/variables.tf",
+        "file_name": "variables.tf",
+        "extension": ".tf",
+        "size_bytes": 709,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/terraform/user/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 4885,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/terraform/user/outputs.tf",
+        "file_name": "outputs.tf",
+        "extension": ".tf",
+        "size_bytes": 120,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/terraform/user/script.tftpl",
+        "file_name": "script.tftpl",
+        "extension": ".tftpl",
+        "size_bytes": 889,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "archive/terraform/user/variables.tf",
+        "file_name": "variables.tf",
+        "extension": ".tf",
+        "size_bytes": 2321,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docker/Dockerfile",
+        "file_name": "Dockerfile",
+        "extension": "",
+        "size_bytes": 12954,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docker/HelloNGEN.sh",
+        "file_name": "HelloNGEN.sh",
+        "extension": ".sh",
+        "size_bytes": 5830,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docker/buildtest",
+        "file_name": "buildtest",
+        "extension": "",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/00_CONTENTS.md",
+        "file_name": "00_CONTENTS.md",
+        "extension": ".md",
+        "size_bytes": 501,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/01_GETTING_STARTED.md",
+        "file_name": "01_GETTING_STARTED.md",
+        "extension": ".md",
+        "size_bytes": 2092,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/02_INSTALL.md",
+        "file_name": "02_INSTALL.md",
+        "extension": ".md",
+        "size_bytes": 5094,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/03_00_SPECIFICATIONS.md",
+        "file_name": "03_00_SPECIFICATIONS.md",
+        "extension": ".md",
+        "size_bytes": 367,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/03_01_CONTAINERS.md",
+        "file_name": "03_01_CONTAINERS.md",
+        "extension": ".md",
+        "size_bytes": 9485,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/03_02_RUN_DIRECTORIES.md",
+        "file_name": "03_02_RUN_DIRECTORIES.md",
+        "extension": ".md",
+        "size_bytes": 2700,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/03_03_REALIZATIONS.md",
+        "file_name": "03_03_REALIZATIONS.md",
+        "extension": ".md",
+        "size_bytes": 7940,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/03_04_MODELS.md",
+        "file_name": "03_04_MODELS.md",
+        "extension": ".md",
+        "size_bytes": 5419,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/04_BUILDING.md",
+        "file_name": "04_BUILDING.md",
+        "extension": ".md",
+        "size_bytes": 368,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/05_CONTRIBUTE.md",
+        "file_name": "05_CONTRIBUTE.md",
+        "extension": ".md",
+        "size_bytes": 1658,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/06_CONTACT.md",
+        "file_name": "06_CONTACT.md",
+        "extension": ".md",
+        "size_bytes": 1626,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/img/Provo_GeoSpatial.png",
+        "file_name": "Provo_GeoSpatial.png",
+        "extension": ".png",
+        "size_bytes": 1205711,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/Provo_catchments.png",
+        "file_name": "Provo_catchments.png",
+        "extension": ".png",
+        "size_bytes": 1276476,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/Provo_nexus_point.png",
+        "file_name": "Provo_nexus_point.png",
+        "extension": ".png",
+        "size_bytes": 1088717,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/Provo_teehr_metrics.png",
+        "file_name": "Provo_teehr_metrics.png",
+        "extension": ".png",
+        "size_bytes": 993829,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/VPU16.png",
+        "file_name": "VPU16.png",
+        "extension": ".png",
+        "size_bytes": 929275,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/VPU16_007.png",
+        "file_name": "VPU16_007.png",
+        "extension": ".png",
+        "size_bytes": 633446,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/ciroh-bgsafe.png",
+        "file_name": "ciroh-bgsafe.png",
+        "extension": ".png",
+        "size_bytes": 45263,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/ngiab.png",
+        "file_name": "ngiab.png",
+        "extension": ".png",
+        "size_bytes": 953886,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/outputcat.png",
+        "file_name": "outputcat.png",
+        "extension": ".png",
+        "size_bytes": 376444,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/outputnexus.png",
+        "file_name": "outputnexus.png",
+        "extension": ".png",
+        "size_bytes": 490581,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/img/outputnexusteehr.png",
+        "file_name": "outputnexusteehr.png",
+        "extension": ".png",
+        "size_bytes": 463165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "guide.sh",
+        "file_name": "guide.sh",
+        "extension": ".sh",
+        "size_bytes": 26007,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "runTeehr.sh",
+        "file_name": "runTeehr.sh",
+        "extension": ".sh",
+        "size_bytes": 14502,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "versions.yml",
+        "file_name": "versions.yml",
+        "extension": ".yml",
+        "size_bytes": 23,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "viewOnTethys.sh",
+        "file_name": "viewOnTethys.sh",
+        "extension": ".sh",
+        "size_bytes": 33678,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

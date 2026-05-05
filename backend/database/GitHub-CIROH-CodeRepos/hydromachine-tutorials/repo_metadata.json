@@ -1,0 +1,41 @@
+{
+    "id": 807667310,
+    "name": "hydromachine-tutorials",
+    "full_name": "CIROH-UA/hydromachine-tutorials",
+    "html_url": "https://github.com/CIROH-UA/hydromachine-tutorials",
+    "description": "This repository provides educational material regarding the application of Machine Learning in Hydrology. ",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2024-05-29T14:41:16Z",
+    "updated_at": "2025-01-16T18:47:27Z",
+    "pushed_at": "2025-01-16T18:47:24Z",
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 34357,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 1,
+    "open_issues_count": 0,
+    "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "contributors_summary": {
+        "contributors_count": 1,
+        "top_contributors": [
+            {
+                "id": 67179927,
+                "login": "savalann",
+                "html_url": "https://github.com/savalann",
+                "type": "User",
+                "contributions": 14
+            }
+        ]
+    }
+}

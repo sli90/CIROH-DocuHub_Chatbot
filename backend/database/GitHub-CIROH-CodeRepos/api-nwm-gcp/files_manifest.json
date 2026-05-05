@@ -1,0 +1,162 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 2735,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 3985,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "api-gateway/access_points_config.yaml",
+        "file_name": "access_points_config.yaml",
+        "extension": ".yaml",
+        "size_bytes": 10143,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "benchmarks/nwm_benchmarking_long_range_mulitple_reach.ipynb",
+        "file_name": "nwm_benchmarking_long_range_mulitple_reach.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 18903,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "benchmarks/nwm_benchmarking_long_range_single_reach.ipynb",
+        "file_name": "nwm_benchmarking_long_range_single_reach.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 17742,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "benchmarks/nwm_benchmarking_long_range_single_reach_ensemble.ipynb",
+        "file_name": "nwm_benchmarking_long_range_single_reach_ensemble.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 18810,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "examples/notebooks/nwm_usgs_streamflow_plot.ipynb",
+        "file_name": "nwm_usgs_streamflow_plot.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 5369,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/scripts/nwm_data_beam_export.py",
+        "file_name": "nwm_data_beam_export.py",
+        "extension": ".py",
+        "size_bytes": 2318,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/scripts/plotting_streamflow_velocity.py",
+        "file_name": "plotting_streamflow_velocity.py",
+        "extension": ".py",
+        "size_bytes": 2538,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "images/Architecture Diagram.jpg",
+        "file_name": "Architecture Diagram.jpg",
+        "extension": ".jpg",
+        "size_bytes": 41069,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "images/gcp_architecture_diagram.png",
+        "file_name": "gcp_architecture_diagram.png",
+        "extension": ".png",
+        "size_bytes": 79405,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/Dockerfile",
+        "file_name": "Dockerfile",
+        "extension": "",
+        "size_bytes": 552,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/app/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/app/main.py",
+        "file_name": "main.py",
+        "extension": ".py",
+        "size_bytes": 20526,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/cloudbuild.yaml",
+        "file_name": "cloudbuild.yaml",
+        "extension": ".yaml",
+        "size_bytes": 982,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/requirements.txt",
+        "file_name": "requirements.txt",
+        "extension": ".txt",
+        "size_bytes": 119,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "terraform/deployment.tfvars",
+        "file_name": "deployment.tfvars",
+        "extension": ".tfvars",
+        "size_bytes": 63,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "terraform/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 1934,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "terraform/variables.tf",
+        "file_name": "variables.tf",
+        "extension": ".tf",
+        "size_bytes": 340,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "terraform/versions.tf",
+        "file_name": "versions.tf",
+        "extension": ".tf",
+        "size_bytes": 272,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

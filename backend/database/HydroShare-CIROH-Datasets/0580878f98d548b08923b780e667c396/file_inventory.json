@@ -1,0 +1,56 @@
+[
+    {
+        "file_name": "Tarboton-Hydroshare-AWRA-11-10-25.pptx",
+        "file_path": "Tarboton-Hydroshare-AWRA-11-10-25.pptx",
+        "extension": ".pptx",
+        "checksum": "1bbd1486f38c0ce7d4e57e64b24fcfa2-1"
+    },
+    {
+        "file_name": "README.md",
+        "file_path": "README.md",
+        "extension": ".md",
+        "checksum": "98e02af539845b10a0ed49d730b6ab71-1"
+    },
+    {
+        "file_name": "NextGen_Run.ipynb",
+        "file_path": "Tutorial/NextGen_Run.ipynb",
+        "extension": ".ipynb",
+        "checksum": "de5c136d556ff87f3a8d722a16456a21"
+    },
+    {
+        "file_name": "forcings_utils.py",
+        "file_path": "Tutorial/forcings_utils.py",
+        "extension": ".py",
+        "checksum": "7b0e744ddf116b83f4ab8c13b92253c5"
+    },
+    {
+        "file_name": "ngen_outputs_utils.py",
+        "file_path": "Tutorial/ngen_outputs_utils.py",
+        "extension": ".py",
+        "checksum": "9b9bac0984dbec1a537d1feaac5e2db2"
+    },
+    {
+        "file_name": "NextGen_Outputs_Analysis.ipynb",
+        "file_path": "Tutorial/NextGen_Outputs_Analysis.ipynb",
+        "extension": ".ipynb",
+        "checksum": "e500bba64e21c8ba5c7693174b85a073"
+    },
+    {
+        "file_name": "NextGen_Data_Preparation.ipynb",
+        "file_path": "Tutorial/NextGen_Data_Preparation.ipynb",
+        "extension": ".ipynb",
+        "checksum": "abd0c322fa2424624f9d2f01306daf49"
+    },
+    {
+        "file_name": "Thumbnail.PNG",
+        "file_path": "Thumbnail.PNG",
+        "extension": ".PNG",
+        "checksum": "3f097a5903c4a1eed8c85254b5a71c25-1"
+    },
+    {
+        "file_name": "hydrofabric_visualization_utils.py",
+        "file_path": "Tutorial/hydrofabric_visualization_utils.py",
+        "extension": ".py",
+        "checksum": "379e2afd7ac3a8e888826ac3a04a39cf"
+    }
+]

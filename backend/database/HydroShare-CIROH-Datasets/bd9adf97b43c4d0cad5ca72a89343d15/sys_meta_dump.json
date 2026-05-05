@@ -1,0 +1,47 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "bd9adf97b43c4d0cad5ca72a89343d15",
+    "resource_title": "Materials for the CUAHSI's Workshops at the National Water Center Bootcamp 2024",
+    "abstract": "This resource includes materials for two workshops: (1) FAIR Data Management and (2) Advanced Application of Python for Hydrology and Scientific Storytelling, both prepared for presentation at the NWC Summer Institute BootCamp 2024.",
+    "authors": [
+        "Garousi-Nejad, Irene",
+        "Castronova, Anthony M."
+    ],
+    "creator": "Garousi-Nejad, Irene",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2024-06-17T14:38:52.593511Z",
+    "date_last_updated": "2024-07-12T18:20:08.195594Z",
+    "bag_last_downloaded": "2026-03-17T16:20:49.002517Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/bd9adf97b43c4d0cad5ca72a89343d15.zip",
+    "coverages": [
+        {
+            "type": "period",
+            "value": {
+                "start": "2024-06-19",
+                "end": "2024-06-21"
+            }
+        },
+        {
+            "type": "point",
+            "value": {
+                "name": "National Water Center The University of Alabama",
+                "projection": "WGS 84 EPSG:4326",
+                "east": -87.54156,
+                "north": 33.21841,
+                "units": "Decimal degrees"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/bd9adf97b43c4d0cad5ca72a89343d15/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/bd9adf97b43c4d0cad5ca72a89343d15/map/",
+    "resource_url": "http://www.hydroshare.org/resource/bd9adf97b43c4d0cad5ca72a89343d15/",
+    "content_types": [
+        "Geographic Feature Content",
+        "Geographic Raster Content"
+    ]
+}

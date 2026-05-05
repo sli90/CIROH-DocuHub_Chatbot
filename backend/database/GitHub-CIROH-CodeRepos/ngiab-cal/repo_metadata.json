@@ -1,0 +1,43 @@
+{
+    "id": 968169727,
+    "name": "ngiab-cal",
+    "full_name": "CIROH-UA/ngiab-cal",
+    "html_url": "https://github.com/CIROH-UA/ngiab-cal",
+    "description": "a tool for calibrating NGIAB compliant data packages",
+    "homepage": "",
+    "default_branch": "main",
+    "created_at": "2025-04-17T16:11:33Z",
+    "updated_at": "2026-04-26T20:50:35Z",
+    "pushed_at": "2026-04-26T20:52:45Z",
+    "language": "Python",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 479,
+    "stargazers_count": 2,
+    "watchers_count": 2,
+    "forks_count": 4,
+    "open_issues_count": 2,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 2,
+        "top_contributors": [
+            {
+                "id": 26720477,
+                "login": "JoshCu",
+                "html_url": "https://github.com/JoshCu",
+                "type": "User",
+                "contributions": 31
+            },
+            {
+                "id": 71176390,
+                "login": "skoriche",
+                "html_url": "https://github.com/skoriche",
+                "type": "User",
+                "contributions": 2
+            }
+        ]
+    }
+}

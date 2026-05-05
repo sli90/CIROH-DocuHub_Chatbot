@@ -1,0 +1,117 @@
+{
+    "title": "Collection of resources that illustrate data processing methods and computational and modeling libraries in HydroShare and linked JupyterHub computing platforms",
+    "abstract": "This collection of resources is was assembled to illustrate ways to use and work with data in HydroShare through its applications programming interface (API), the web application connector resource type, and web services for some content types. The resources collected here are intended to serve as tutorial examples for others to model in creating scripts and tools that act on HydroShare stored data.",
+    "language": "eng",
+    "subjects": [
+        "Web Application Connector",
+        "National Water Model",
+        "LandLab",
+        "HydroShare Python Client",
+        "Tutorial",
+        "RHESSys"
+    ],
+    "creators": [
+        {
+            "name": "Tarboton, David",
+            "phone": "+1 (435) 797-3172",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "This resource includes",
+            "value": "Garousi-Nejad, I., D. Tarboton (2026). Notebooks for combining the National Water Model results/inputs with observations from SNOTEL and MODIS at SNOTEL sites, HydroShare, http://www.hydroshare.org/resource/493e0ad05c2d45199427cc41a6c76de0"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Abualqumboz, M., D. Tarboton (2026). Watershed delineation using ModelMyWatershed, HydroShare, http://www.hydroshare.org/resource/48dc883d6eaa43a4abef01e0b9e6ce51"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Horsburgh, J. S., S. S. Black, P. Dash (2026). HydroShare Python Client Library (hsclient) Usage Examples, HydroShare, http://www.hydroshare.org/resource/7561aa12fd824ebb8edbee05af19b910"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Garousi-Nejad, I., D. Tarboton, M. Aboutalebi, A. F. Torres-Rua (2026). Data For Terrain Analysis Enhancements to the Height Above Nearest Drainage Flood Inundation Mapping Method, HydroShare, http://www.hydroshare.org/resource/7235a0d6a18343078b2028085b7d8018"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Miller, G. R. (2026). Jupyter Notebook for Pump Test Analysis in Confined Aquifers, HydroShare, http://www.hydroshare.org/resource/de85625a8db04474bb066809ae93521e"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Attallah, N., C. J. Bastidas Pacheco (2026). Supporting data and tools for \"An Open-source, Semi-supervised Water End Use Disaggregation and Classification Tool\", HydroShare, http://www.hydroshare.org/resource/3143b3b1bdff48e0aaebcb4aedf02feb"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Tucker, G. (2026). Landlab Jupyter Notebooks, HydroShare, http://www.hydroshare.org/resource/8176ba96e5ca4a2fa2c4588aef4b445f"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Ames, D., J. Hunter (2026). National Water Model HydroLearn Python Notebooks, HydroShare, http://www.hydroshare.org/resource/5949aec47b484e689573beeb004a2917"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Tarboton, D. (2026). Introduction to TauDEM, HydroShare, http://www.hydroshare.org/resource/18984997bf8f44dd99a246d4fbece903"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Gan, T. (2026). PyMT model and data components example, HydroShare, http://www.hydroshare.org/resource/ae3802d04675497b8788e079d58c3cc2"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Tarboton, D., I. Garousi-Nejad (2026). Notebook for retrieval of National Water Model Retrospective run results at SNOTEL sites, HydroShare, http://www.hydroshare.org/resource/3d4976bf6eb84dfbbe11446ab0e31a0a"
+        },
+        {
+            "type": "This resource is described by",
+            "value": "Tarboton, D. G., D. P. Ames, J. S. Horsburgh, J. L. Goodall, A. Couch, R. Hooper, J. Bales, S. Wang, A. Castronova, M. Seul, R. Idaszak, Z. Li, P. Dash, S. Black, M. Ramirez, H. Yi, C. Calloway and C. Cogswell, (2023), \"HydroShare Retrospective: Science and Technology Advances of a Comprehensive Data and Model Publication Environment for the Water Science Domain,\" Submitted to Environmental Modelling & Software."
+        },
+        {
+            "type": "This resource includes",
+            "value": "Lightbody, A., K. Tamaddun, L. Graup (2026). Modelling Watershed Sensitivity to Drought, HydroShare, http://www.hydroshare.org/resource/011ad5f49dc44e0298651f32034b5c74"
+        },
+        {
+            "type": "This resource includes",
+            "value": "Neupauer, R., C. Turnadge, J. Okkonen (2026). Forward and Adjoint Sensitivity Analysis, HydroShare, http://www.hydroshare.org/resource/030bdfa103b543c28f3ebdf9abb2da6e"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Science Foundation",
+            "title": "Collaborative Research: SI2-SSI: Cyberinfrastructure for Advancing Hydrologic Knowledge through Collaborative Integration of Data Science, Modeling and Analysis",
+            "number": "1664061",
+            "funding_agency_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1664061"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 49.8565,
+        "eastlimit": -50.2965,
+        "southlimit": 24.2331,
+        "westlimit": -131.5075,
+        "units": "['Decimal degrees']",
+        "projection": "WGS84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "2004-10-01 00:00:00",
+        "end": "2023-04-05 00:00:00"
+    },
+    "citation": "Tarboton, D. (2026). Collection of resources that illustrate data processing methods and computational and modeling libraries in HydroShare and linked JupyterHub computing platforms, HydroShare, http://www.hydroshare.org/resource/0b78e7735f2c4e858f3247f740dcd30f",
+    "url": "http://www.hydroshare.org/resource/0b78e7735f2c4e858f3247f740dcd30f",
+    "identifier": "http://www.hydroshare.org/resource/0b78e7735f2c4e858f3247f740dcd30f",
+    "created": "2023-11-20 12:06:45.295233+00:00",
+    "modified": "2026-01-29 03:55:25.097225+00:00",
+    "type": "CollectionResource"
+}

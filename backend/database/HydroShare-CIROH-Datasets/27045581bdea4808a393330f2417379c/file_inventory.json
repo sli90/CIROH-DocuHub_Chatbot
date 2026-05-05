@@ -1,0 +1,62 @@
+[
+    {
+        "file_name": "NextGen_Run.ipynb",
+        "file_path": "NextGen_Run.ipynb",
+        "extension": ".ipynb",
+        "checksum": "b388ab1a7904d870a086a3ac617159b0-1"
+    },
+    {
+        "file_name": "NextGen_Data_Preparation.ipynb",
+        "file_path": "NextGen_Data_Preparation.ipynb",
+        "extension": ".ipynb",
+        "checksum": "41ba11de1f5ed9f70763ef22c123bcd1-1"
+    },
+    {
+        "file_name": "NextGen_Outputs_Analysis.ipynb",
+        "file_path": "NextGen_Outputs_Analysis.ipynb",
+        "extension": ".ipynb",
+        "checksum": "fa5e831bea408fa2fa6eabfd82ae4320-1"
+    },
+    {
+        "file_name": "NextGEN_TEEHR_Evaluation.ipynb",
+        "file_path": "NextGEN_TEEHR_Evaluation.ipynb",
+        "extension": ".ipynb",
+        "checksum": "e36f5a6e3206e0e284627a21361b7919-1"
+    },
+    {
+        "file_name": "ngen_outputs_utils.py",
+        "file_path": "ngen_outputs_utils.py",
+        "extension": ".py",
+        "checksum": "cccb2db2b8a80cf5c90a0eed69f4d91c-1"
+    },
+    {
+        "file_name": "cal_utils.py",
+        "file_path": "cal_utils.py",
+        "extension": ".py",
+        "checksum": "ec909cbed43df17c263e61950b44b300-1"
+    },
+    {
+        "file_name": "forcings_utils.py",
+        "file_path": "forcings_utils.py",
+        "extension": ".py",
+        "checksum": "eba606f35b7a0d8193a213f7780cb7de-1"
+    },
+    {
+        "file_name": "hydrofabric_visualization_utils.py",
+        "file_path": "hydrofabric_visualization_utils.py",
+        "extension": ".py",
+        "checksum": "d3221bd3c45fe7ba0f98a6d5cc5fddaa-1"
+    },
+    {
+        "file_name": "ngen_cal.ipynb",
+        "file_path": "ngen_cal.ipynb",
+        "extension": ".ipynb",
+        "checksum": "1c965e5482f888e74df787464b420f00-1"
+    },
+    {
+        "file_name": "ngiab_utils.py",
+        "file_path": "ngiab_utils.py",
+        "extension": ".py",
+        "checksum": "f1894faa4160c8c1eafafc3804e252d0-1"
+    }
+]

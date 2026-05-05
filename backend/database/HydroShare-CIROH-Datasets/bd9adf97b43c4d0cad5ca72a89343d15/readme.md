@@ -1,0 +1,11 @@
+## Content of this resource include:
+- **img**: This folder contains images that are rendered in the jupyter notebooks.
+- **nwm_utils**: This folder contains supplementary code.
+- **sample-data**: A folder that contains input data for the basic-fim-mapping.ipynb and flow-duration-analysis.ipynb notebooks.
+- **basic-fim-mapping.ipynb**: The code that applies the basin flood inundation mapping approach to create flood maps for a given discharge.
+- **collect-aorc-v1.1.ipynb**: The code that collects the meteorological data from AORC version 1.1 dataset for a domain of interest and computes averages across the sub-catchments.
+- **flow-duration-analysis.ipynb**: The code that retrieves observed and modeled streamflow from USGS and National Water Model retrospective version 3, respectively, and computes flow duration curves.
+- **ngen-hydrofabric-subset.ipynb**: The code that creates a subset of hydrofabric data.
+- **snow-retrieval-workflow.ipynb**: The code that retrieves snow water equivalent from SNOTEL and National Water Model retrospective version 3 results for a set of SNOTEL sites within a domain. 
+- **getData.py**: A Python script that is used to get SNOTEL data and it is called in the `snow-retrieval-workflow` jupyter notebook.
+- **subset.py**: A Python script that is used to subset the NGen Hydrofabric in the `ngen-hydrofabric-subset.ipynb` jupyter notebook.

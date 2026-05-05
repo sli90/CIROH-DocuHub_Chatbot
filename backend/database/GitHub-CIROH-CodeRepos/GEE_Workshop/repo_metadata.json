@@ -1,0 +1,41 @@
+{
+    "id": 648387833,
+    "name": "GEE_Workshop",
+    "full_name": "CIROH-UA/GEE_Workshop",
+    "html_url": "https://github.com/CIROH-UA/GEE_Workshop",
+    "description": "A CIROH-support repository to educate new users to Google Earth Engine(GEE)",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2023-06-01T21:21:15Z",
+    "updated_at": "2025-06-18T16:25:06Z",
+    "pushed_at": "2023-06-08T14:07:09Z",
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 16846,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "forks_count": 5,
+    "open_issues_count": 0,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 1,
+        "top_contributors": [
+            {
+                "id": 33735397,
+                "login": "whitelightning450",
+                "html_url": "https://github.com/whitelightning450",
+                "type": "User",
+                "contributions": 51
+            }
+        ]
+    }
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "file_name": "comboCSV.zip",
+        "file_path": "comboCSV.zip",
+        "extension": ".zip",
+        "checksum": "949e173cbb3802a5f59e7112a61564f3-17"
+    },
+    {
+        "file_name": "columnMetadata.xlsx",
+        "file_path": "columnMetadata.xlsx",
+        "extension": ".xlsx",
+        "checksum": "d5455e76033ae129798d15cb2d8b3ab4-1"
+    },
+    {
+        "file_name": "joinCSVs.ipynb",
+        "file_path": "joinCSVs.ipynb",
+        "extension": ".ipynb",
+        "checksum": "09ae308db3c6a544f5756b536a415d80-1"
+    }
+]

@@ -1,0 +1,3472 @@
+[
+    {
+        "id": 921792119,
+        "name": "api-nwm-gcp",
+        "full_name": "CIROH-UA/api-nwm-gcp",
+        "html_url": "https://github.com/CIROH-UA/api-nwm-gcp",
+        "description": "REST API backed by National Water Model data, developed on Google Cloud Platform ",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2025-01-24T16:16:41Z",
+        "updated_at": "2025-08-19T20:44:11Z",
+        "pushed_at": "2025-03-06T04:24:02Z",
+        "language": "Jupyter Notebook",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 243,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 1,
+        "open_issues_count": 3,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 5,
+            "top_contributors": [
+                {
+                    "id": 11776290,
+                    "login": "KMarkert",
+                    "html_url": "https://github.com/KMarkert",
+                    "type": "User",
+                    "contributions": 39
+                },
+                {
+                    "id": 102833747,
+                    "login": "gmds2",
+                    "html_url": "https://github.com/gmds2",
+                    "type": "User",
+                    "contributions": 31
+                },
+                {
+                    "id": 130000039,
+                    "login": "benlee0423",
+                    "html_url": "https://github.com/benlee0423",
+                    "type": "User",
+                    "contributions": 6
+                },
+                {
+                    "id": 60822510,
+                    "login": "mondol-sc",
+                    "html_url": "https://github.com/mondol-sc",
+                    "type": "User",
+                    "contributions": 3
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 516822944,
+        "name": "awi-ciroh-image",
+        "full_name": "CIROH-UA/awi-ciroh-image",
+        "html_url": "https://github.com/CIROH-UA/awi-ciroh-image",
+        "description": "CIROH JupyterHub image repository",
+        "homepage": "https://ciroh.awi.2i2c.cloud/",
+        "default_branch": "main",
+        "created_at": "2022-07-22T16:46:51Z",
+        "updated_at": "2026-02-13T05:25:35Z",
+        "pushed_at": "2026-04-23T02:57:31Z",
+        "language": "Dockerfile",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 33169,
+        "stargazers_count": 2,
+        "watchers_count": 2,
+        "forks_count": 7,
+        "open_issues_count": 6,
+        "license": {
+            "key": "bsd-3-clause",
+            "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+            "spdx_id": "BSD-3-Clause",
+            "url": "https://api.github.com/licenses/bsd-3-clause"
+        },
+        "contributors_summary": {
+            "contributors_count": 6,
+            "top_contributors": [
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 45
+                },
+                {
+                    "id": 44771837,
+                    "login": "sgibson91",
+                    "html_url": "https://github.com/sgibson91",
+                    "type": "User",
+                    "contributions": 31
+                },
+                {
+                    "id": 130000039,
+                    "login": "benlee0423",
+                    "html_url": "https://github.com/benlee0423",
+                    "type": "User",
+                    "contributions": 28
+                },
+                {
+                    "id": 111385246,
+                    "login": "arpitapatel09",
+                    "html_url": "https://github.com/arpitapatel09",
+                    "type": "User",
+                    "contributions": 23
+                },
+                {
+                    "id": 112987653,
+                    "login": "sepehrkrz",
+                    "html_url": "https://github.com/sepehrkrz",
+                    "type": "User",
+                    "contributions": 5
+                },
+                {
+                    "id": 2523434,
+                    "login": "pkdash",
+                    "html_url": "https://github.com/pkdash",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 807667921,
+        "name": "CAMELS_data_sample",
+        "full_name": "CIROH-UA/CAMELS_data_sample",
+        "html_url": "https://github.com/CIROH-UA/CAMELS_data_sample",
+        "description": "Sample data for running neural hydrology examples, and others.",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-05-29T14:42:33Z",
+        "updated_at": "2024-05-29T14:42:33Z",
+        "pushed_at": "2024-05-23T14:35:04Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 3285,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 44035137,
+                    "login": "jmframe",
+                    "html_url": "https://github.com/jmframe",
+                    "type": "User",
+                    "contributions": 5
+                }
+            ]
+        }
+    },
+    {
+        "id": 884400050,
+        "name": "cfe_v1.0",
+        "full_name": "CIROH-UA/cfe_v1.0",
+        "html_url": "https://github.com/CIROH-UA/cfe_v1.0",
+        "description": "CFE is a conceptual rainfall-runoff model with an implementation of the Basic Model Interface.",
+        "homepage": "",
+        "default_branch": "master",
+        "created_at": "2024-11-06T17:21:18Z",
+        "updated_at": "2026-01-22T18:38:21Z",
+        "pushed_at": "2024-09-12T22:03:56Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": true,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 88691,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+        },
+        "contributors_summary": {
+            "contributors_count": 14,
+            "top_contributors": [
+                {
+                    "id": 15165757,
+                    "login": "ajkhattak",
+                    "html_url": "https://github.com/ajkhattak",
+                    "type": "User",
+                    "contributions": 92
+                },
+                {
+                    "id": 30940444,
+                    "login": "madMatchstick",
+                    "html_url": "https://github.com/madMatchstick",
+                    "type": "User",
+                    "contributions": 34
+                },
+                {
+                    "id": 8662550,
+                    "login": "lcunha0118",
+                    "html_url": "https://github.com/lcunha0118",
+                    "type": "User",
+                    "contributions": 17
+                },
+                {
+                    "id": 5186647,
+                    "login": "hellkite500",
+                    "html_url": "https://github.com/hellkite500",
+                    "type": "User",
+                    "contributions": 13
+                },
+                {
+                    "id": 44035137,
+                    "login": "jmframe",
+                    "html_url": "https://github.com/jmframe",
+                    "type": "User",
+                    "contributions": 11
+                },
+                {
+                    "id": 7683631,
+                    "login": "peckhams",
+                    "html_url": "https://github.com/peckhams",
+                    "type": "User",
+                    "contributions": 10
+                },
+                {
+                    "id": 126464,
+                    "login": "PhilMiller",
+                    "html_url": "https://github.com/PhilMiller",
+                    "type": "User",
+                    "contributions": 5
+                },
+                {
+                    "id": 32177682,
+                    "login": "SnowHydrology",
+                    "html_url": "https://github.com/SnowHydrology",
+                    "type": "User",
+                    "contributions": 4
+                },
+                {
+                    "id": 8505669,
+                    "login": "stcui007",
+                    "html_url": "https://github.com/stcui007",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 61248457,
+                    "login": "rlmcdaniel",
+                    "html_url": "https://github.com/rlmcdaniel",
+                    "type": "User",
+                    "contributions": 2
+                }
+            ]
+        }
+    },
+    {
+        "id": 767718206,
+        "name": "CIROH-open-source-project-template",
+        "full_name": "CIROH-UA/CIROH-open-source-project-template",
+        "html_url": "https://github.com/CIROH-UA/CIROH-open-source-project-template",
+        "description": "CIROH open source project template ",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-03-05T19:21:03Z",
+        "updated_at": "2025-04-23T19:57:47Z",
+        "pushed_at": "2025-04-23T19:57:43Z",
+        "language": "Shell",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 178,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 2,
+        "open_issues_count": 1,
+        "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+        },
+        "contributors_summary": {
+            "contributors_count": 5,
+            "top_contributors": [
+                {
+                    "id": 112987653,
+                    "login": "sepehrkrz",
+                    "html_url": "https://github.com/sepehrkrz",
+                    "type": "User",
+                    "contributions": 9
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 130000039,
+                    "login": "benlee0423",
+                    "html_url": "https://github.com/benlee0423",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 53343824,
+                    "login": "jameshalgren",
+                    "html_url": "https://github.com/jameshalgren",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 7992111,
+                    "login": "chp2001",
+                    "html_url": "https://github.com/chp2001",
+                    "type": "User",
+                    "contributions": 2
+                }
+            ]
+        }
+    },
+    {
+        "id": 995175642,
+        "name": "ciroh_pyngiab",
+        "full_name": "CIROH-UA/ciroh_pyngiab",
+        "html_url": "https://github.com/CIROH-UA/ciroh_pyngiab",
+        "description": null,
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2025-06-03T04:48:52Z",
+        "updated_at": "2026-03-17T23:31:40Z",
+        "pushed_at": "2026-04-29T16:32:20Z",
+        "language": "Python",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 23920,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 4,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 11427468,
+                    "login": "fbaig",
+                    "html_url": "https://github.com/fbaig",
+                    "type": "User",
+                    "contributions": 94
+                }
+            ]
+        }
+    },
+    {
+        "id": 699931341,
+        "name": "Community-Streamflow-Evaluation-System",
+        "full_name": "CIROH-UA/Community-Streamflow-Evaluation-System",
+        "html_url": "https://github.com/CIROH-UA/Community-Streamflow-Evaluation-System",
+        "description": "A Novel Research-Oriented Streamflow Evaluation Tool to evaluation hydrological model performance using a standardized NHDPlus data model.",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2023-10-03T16:05:58Z",
+        "updated_at": "2023-10-03T16:05:59Z",
+        "pushed_at": "2023-10-03T13:56:50Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 1569769,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 33735397,
+                    "login": "whitelightning450",
+                    "html_url": "https://github.com/whitelightning450",
+                    "type": "User",
+                    "contributions": 24
+                }
+            ]
+        }
+    },
+    {
+        "id": 950914515,
+        "name": "community_hf_patcher",
+        "full_name": "CIROH-UA/community_hf_patcher",
+        "html_url": "https://github.com/CIROH-UA/community_hf_patcher",
+        "description": null,
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2025-03-18T21:58:18Z",
+        "updated_at": "2025-10-21T16:03:07Z",
+        "pushed_at": "2025-10-21T16:03:03Z",
+        "language": "Python",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 158,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 2,
+        "open_issues_count": 0,
+        "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0"
+        },
+        "contributors_summary": {
+            "contributors_count": 3,
+            "top_contributors": [
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 16
+                },
+                {
+                    "id": 69406976,
+                    "login": "Sheargrub",
+                    "html_url": "https://github.com/Sheargrub",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 647441083,
+        "name": "Conferences",
+        "full_name": "CIROH-UA/Conferences",
+        "html_url": "https://github.com/CIROH-UA/Conferences",
+        "description": "presentations and posters from the Conferences ",
+        "homepage": "",
+        "default_branch": "main",
+        "created_at": "2023-05-30T19:42:55Z",
+        "updated_at": "2026-04-17T16:34:30Z",
+        "pushed_at": "2026-04-17T16:34:25Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 335002,
+        "stargazers_count": 2,
+        "watchers_count": 2,
+        "forks_count": 16,
+        "open_issues_count": 0,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 19,
+            "top_contributors": [
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 65
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 14
+                },
+                {
+                    "id": 69406976,
+                    "login": "Sheargrub",
+                    "html_url": "https://github.com/Sheargrub",
+                    "type": "User",
+                    "contributions": 9
+                },
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 5
+                },
+                {
+                    "id": 60660437,
+                    "login": "ZacharyWills",
+                    "html_url": "https://github.com/ZacharyWills",
+                    "type": "User",
+                    "contributions": 5
+                },
+                {
+                    "id": 79336055,
+                    "login": "JordanLaserGit",
+                    "html_url": "https://github.com/JordanLaserGit",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 119009859,
+                    "login": "manjila2002",
+                    "html_url": "https://github.com/manjila2002",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 112987653,
+                    "login": "sepehrkrz",
+                    "html_url": "https://github.com/sepehrkrz",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 130000039,
+                    "login": "benlee0423",
+                    "html_url": "https://github.com/benlee0423",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 42871840,
+                    "login": "brodiealexander",
+                    "html_url": "https://github.com/brodiealexander",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 1052790271,
+        "name": "datastreamcli",
+        "full_name": "CIROH-UA/datastreamcli",
+        "html_url": "https://github.com/CIROH-UA/datastreamcli",
+        "description": "CLI-based workflow tool for NextGen Water Modeling Framework simulations",
+        "homepage": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/",
+        "default_branch": "main",
+        "created_at": "2025-09-08T14:50:34Z",
+        "updated_at": "2026-04-27T17:09:08Z",
+        "pushed_at": "2026-04-27T17:08:54Z",
+        "language": "Python",
+        "topics": [
+            "ciroh",
+            "datastream",
+            "docker",
+            "geopackage",
+            "geospatial",
+            "hydrology-modeling",
+            "ngen",
+            "nrds",
+            "python",
+            "r2o",
+            "shell",
+            "streamflow",
+            "workflow"
+        ],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 110568,
+        "stargazers_count": 3,
+        "watchers_count": 3,
+        "forks_count": 6,
+        "open_issues_count": 17,
+        "license": {
+            "key": "gpl-3.0",
+            "name": "GNU General Public License v3.0",
+            "spdx_id": "GPL-3.0",
+            "url": "https://api.github.com/licenses/gpl-3.0"
+        },
+        "contributors_summary": {
+            "contributors_count": 7,
+            "top_contributors": [
+                {
+                    "id": 79336055,
+                    "login": "JordanLaserGit",
+                    "html_url": "https://github.com/JordanLaserGit",
+                    "type": "User",
+                    "contributions": 528
+                },
+                {
+                    "id": 223894814,
+                    "login": "harshavemula-ua",
+                    "html_url": "https://github.com/harshavemula-ua",
+                    "type": "User",
+                    "contributions": 67
+                },
+                {
+                    "id": 60660437,
+                    "login": "ZacharyWills",
+                    "html_url": "https://github.com/ZacharyWills",
+                    "type": "User",
+                    "contributions": 8
+                },
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 6
+                },
+                {
+                    "id": 43544549,
+                    "login": "romer8",
+                    "html_url": "https://github.com/romer8",
+                    "type": "User",
+                    "contributions": 4
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 697372188,
+        "name": "data_access_example",
+        "full_name": "CIROH-UA/data_access_example",
+        "html_url": "https://github.com/CIROH-UA/data_access_example",
+        "description": null,
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2023-09-27T15:38:24Z",
+        "updated_at": "2024-01-27T18:30:55Z",
+        "pushed_at": "2024-01-27T18:30:52Z",
+        "language": "Jupyter Notebook",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 122,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 4,
+        "open_issues_count": 2,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 2,
+            "top_contributors": [
+                {
+                    "id": 112987653,
+                    "login": "sepehrkrz",
+                    "html_url": "https://github.com/sepehrkrz",
+                    "type": "User",
+                    "contributions": 10
+                },
+                {
+                    "id": 130000039,
+                    "login": "benlee0423",
+                    "html_url": "https://github.com/benlee0423",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 807668057,
+        "name": "deep_bucket_lab",
+        "full_name": "CIROH-UA/deep_bucket_lab",
+        "html_url": "https://github.com/CIROH-UA/deep_bucket_lab",
+        "description": "Model of water in/out of a bucket. Training an LSTM.",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-05-29T14:42:50Z",
+        "updated_at": "2024-05-29T14:42:50Z",
+        "pushed_at": "2024-05-23T13:40:43Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 19273,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 6,
+        "open_issues_count": 0,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 3,
+            "top_contributors": [
+                {
+                    "id": 44035137,
+                    "login": "jmframe",
+                    "html_url": "https://github.com/jmframe",
+                    "type": "User",
+                    "contributions": 41
+                },
+                {
+                    "id": 3982615,
+                    "login": "maoyab",
+                    "html_url": "https://github.com/maoyab",
+                    "type": "User",
+                    "contributions": 12
+                },
+                {
+                    "id": 36898477,
+                    "login": "leilaher",
+                    "html_url": "https://github.com/leilaher",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 807668249,
+        "name": "DEVCON_SNOW_ML",
+        "full_name": "CIROH-UA/DEVCON_SNOW_ML",
+        "html_url": "https://github.com/CIROH-UA/DEVCON_SNOW_ML",
+        "description": "Machine Learning SWE workshop for CIROH DEVCON 2024",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-05-29T14:43:14Z",
+        "updated_at": "2024-06-01T01:06:19Z",
+        "pushed_at": "2024-05-31T16:13:08Z",
+        "language": "HTML",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 702008,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 21,
+        "open_issues_count": 0,
+        "license": {
+            "key": "bsd-3-clause",
+            "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+            "spdx_id": "BSD-3-Clause",
+            "url": "https://api.github.com/licenses/bsd-3-clause"
+        },
+        "contributors_summary": {
+            "contributors_count": 11,
+            "top_contributors": [
+                {
+                    "id": 33735397,
+                    "login": "whitelightning450",
+                    "html_url": "https://github.com/whitelightning450",
+                    "type": "User",
+                    "contributions": 129
+                },
+                {
+                    "id": 108009095,
+                    "login": "dliljest",
+                    "html_url": "https://github.com/dliljest",
+                    "type": "User",
+                    "contributions": 47
+                },
+                {
+                    "id": 650301,
+                    "login": "spestana",
+                    "html_url": "https://github.com/spestana",
+                    "type": "User",
+                    "contributions": 29
+                },
+                {
+                    "id": 39477680,
+                    "login": "manticore810",
+                    "html_url": "https://github.com/manticore810",
+                    "type": "User",
+                    "contributions": 8
+                },
+                {
+                    "id": 67179927,
+                    "login": "savalann",
+                    "html_url": "https://github.com/savalann",
+                    "type": "User",
+                    "contributions": 6
+                },
+                {
+                    "id": 147438654,
+                    "login": "akilasampath5",
+                    "html_url": "https://github.com/akilasampath5",
+                    "type": "User",
+                    "contributions": 4
+                },
+                {
+                    "id": 4822372,
+                    "login": "Castronova",
+                    "html_url": "https://github.com/Castronova",
+                    "type": "User",
+                    "contributions": 3
+                },
+                {
+                    "id": 124130354,
+                    "login": "IceZYin",
+                    "html_url": "https://github.com/IceZYin",
+                    "type": "User",
+                    "contributions": 3
+                },
+                {
+                    "id": 3924836,
+                    "login": "scottyhq",
+                    "html_url": "https://github.com/scottyhq",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 83613500,
+                    "login": "preetika11",
+                    "html_url": "https://github.com/preetika11",
+                    "type": "User",
+                    "contributions": 2
+                }
+            ]
+        }
+    },
+    {
+        "id": 1052799392,
+        "name": "forcingprocessor",
+        "full_name": "CIROH-UA/forcingprocessor",
+        "html_url": "https://github.com/CIROH-UA/forcingprocessor",
+        "description": "ForcingProcessor calculates NextGen catchment-averaged forcings from gridded sources like the National Water Model.",
+        "homepage": "https://docs.ciroh.org/docs/products/research-datastream/forcingprocessor/",
+        "default_branch": "main",
+        "created_at": "2025-09-08T15:04:24Z",
+        "updated_at": "2026-04-28T15:39:21Z",
+        "pushed_at": "2026-04-28T15:31:10Z",
+        "language": "Python",
+        "topics": [
+            "atmospheric",
+            "aws",
+            "boto3",
+            "ciroh",
+            "cloud",
+            "datastream",
+            "docker",
+            "forcings",
+            "geopackage",
+            "geospatial-processing",
+            "high-performance",
+            "multiprocessing",
+            "nrds",
+            "nwm",
+            "precipitation",
+            "python"
+        ],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 7477,
+        "stargazers_count": 2,
+        "watchers_count": 2,
+        "forks_count": 7,
+        "open_issues_count": 7,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 6,
+            "top_contributors": [
+                {
+                    "id": 79336055,
+                    "login": "JordanLaserGit",
+                    "html_url": "https://github.com/JordanLaserGit",
+                    "type": "User",
+                    "contributions": 315
+                },
+                {
+                    "id": 223894814,
+                    "login": "harshavemula-ua",
+                    "html_url": "https://github.com/harshavemula-ua",
+                    "type": "User",
+                    "contributions": 108
+                },
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 5
+                },
+                {
+                    "id": 49699333,
+                    "login": "dependabot[bot]",
+                    "html_url": "https://github.com/apps/dependabot",
+                    "type": "Bot",
+                    "contributions": 3
+                },
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 19376091,
+                    "login": "kamalcou",
+                    "html_url": "https://github.com/kamalcou",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 1075654835,
+        "name": "forecast_data_overlay",
+        "full_name": "CIROH-UA/forecast_data_overlay",
+        "html_url": "https://github.com/CIROH-UA/forecast_data_overlay",
+        "description": "Tool for displaying varying types of forecast data simultaneously.",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2025-10-13T19:54:38Z",
+        "updated_at": "2025-12-15T19:36:19Z",
+        "pushed_at": "2026-03-26T14:33:12Z",
+        "language": "Python",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 742,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 2,
+        "open_issues_count": 3,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 7992111,
+                    "login": "chp2001",
+                    "html_url": "https://github.com/chp2001",
+                    "type": "User",
+                    "contributions": 92
+                }
+            ]
+        }
+    },
+    {
+        "id": 648387833,
+        "name": "GEE_Workshop",
+        "full_name": "CIROH-UA/GEE_Workshop",
+        "html_url": "https://github.com/CIROH-UA/GEE_Workshop",
+        "description": "A CIROH-support repository to educate new users to Google Earth Engine(GEE)",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2023-06-01T21:21:15Z",
+        "updated_at": "2025-06-18T16:25:06Z",
+        "pushed_at": "2023-06-08T14:07:09Z",
+        "language": "Jupyter Notebook",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 16846,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 5,
+        "open_issues_count": 0,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 33735397,
+                    "login": "whitelightning450",
+                    "html_url": "https://github.com/whitelightning450",
+                    "type": "User",
+                    "contributions": 51
+                }
+            ]
+        }
+    },
+    {
+        "id": 891156029,
+        "name": "hf_pmtiles",
+        "full_name": "CIROH-UA/hf_pmtiles",
+        "html_url": "https://github.com/CIROH-UA/hf_pmtiles",
+        "description": "Script to convert hydrofabric geopackage to pmtiles + example uses",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-11-19T20:34:34Z",
+        "updated_at": "2025-03-04T18:15:18Z",
+        "pushed_at": "2026-04-22T19:14:50Z",
+        "language": "Python",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 34,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 0,
+        "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+        },
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 5
+                }
+            ]
+        }
+    },
+    {
+        "id": 807667310,
+        "name": "hydromachine-tutorials",
+        "full_name": "CIROH-UA/hydromachine-tutorials",
+        "html_url": "https://github.com/CIROH-UA/hydromachine-tutorials",
+        "description": "This repository provides educational material regarding the application of Machine Learning in Hydrology. ",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-05-29T14:41:16Z",
+        "updated_at": "2025-01-16T18:47:27Z",
+        "pushed_at": "2025-01-16T18:47:24Z",
+        "language": "Jupyter Notebook",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 34357,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 0,
+        "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0"
+        },
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 67179927,
+                    "login": "savalann",
+                    "html_url": "https://github.com/savalann",
+                    "type": "User",
+                    "contributions": 14
+                }
+            ]
+        }
+    },
+    {
+        "id": 880504625,
+        "name": "hydrotools",
+        "full_name": "CIROH-UA/hydrotools",
+        "html_url": "https://github.com/CIROH-UA/hydrotools",
+        "description": "Suite of tools for retrieving USGS NWIS observations and evaluating National Water Model (NWM) data.",
+        "homepage": "",
+        "default_branch": "main",
+        "created_at": "2024-10-29T21:04:07Z",
+        "updated_at": "2026-01-22T20:40:14Z",
+        "pushed_at": "2025-04-07T19:05:26Z",
+        "language": "Python",
+        "topics": [],
+        "fork": true,
+        "archived": true,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 17161,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 1,
+        "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0"
+        },
+        "contributors_summary": {
+            "contributors_count": 6,
+            "top_contributors": [
+                {
+                    "id": 12818140,
+                    "login": "jarq6c",
+                    "html_url": "https://github.com/jarq6c",
+                    "type": "User",
+                    "contributions": 756
+                },
+                {
+                    "id": 39420640,
+                    "login": "aaraney",
+                    "html_url": "https://github.com/aaraney",
+                    "type": "User",
+                    "contributions": 209
+                },
+                {
+                    "id": 10678620,
+                    "login": "groutr",
+                    "html_url": "https://github.com/groutr",
+                    "type": "User",
+                    "contributions": 4
+                },
+                {
+                    "id": 61292085,
+                    "login": "HankHerr-NOAA",
+                    "html_url": "https://github.com/HankHerr-NOAA",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 5186647,
+                    "login": "hellkite500",
+                    "html_url": "https://github.com/hellkite500",
+                    "type": "User",
+                    "contributions": 2
+                }
+            ]
+        }
+    },
+    {
+        "id": 881494808,
+        "name": "lstm",
+        "full_name": "CIROH-UA/lstm",
+        "html_url": "https://github.com/CIROH-UA/lstm",
+        "description": null,
+        "homepage": null,
+        "default_branch": "ngiab",
+        "created_at": "2024-10-31T17:25:56Z",
+        "updated_at": "2026-01-22T17:29:29Z",
+        "pushed_at": "2025-11-26T16:09:05Z",
+        "language": "Jupyter Notebook",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 127879,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 1,
+        "open_issues_count": 1,
+        "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0"
+        },
+        "contributors_summary": {
+            "contributors_count": 9,
+            "top_contributors": [
+                {
+                    "id": 44035137,
+                    "login": "jmframe",
+                    "html_url": "https://github.com/jmframe",
+                    "type": "User",
+                    "contributions": 48
+                },
+                {
+                    "id": 7683631,
+                    "login": "peckhams",
+                    "html_url": "https://github.com/peckhams",
+                    "type": "User",
+                    "contributions": 45
+                },
+                {
+                    "id": 39420640,
+                    "login": "aaraney",
+                    "html_url": "https://github.com/aaraney",
+                    "type": "User",
+                    "contributions": 44
+                },
+                {
+                    "id": 30940444,
+                    "login": "madMatchstick",
+                    "html_url": "https://github.com/madMatchstick",
+                    "type": "User",
+                    "contributions": 18
+                },
+                {
+                    "id": 5186647,
+                    "login": "hellkite500",
+                    "html_url": "https://github.com/hellkite500",
+                    "type": "User",
+                    "contributions": 12
+                },
+                {
+                    "id": 37884615,
+                    "login": "robertbartel",
+                    "html_url": "https://github.com/robertbartel",
+                    "type": "User",
+                    "contributions": 5
+                },
+                {
+                    "id": 131808837,
+                    "login": "Brian-Cosgrove",
+                    "html_url": "https://github.com/Brian-Cosgrove",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 62669859,
+                    "login": "frsalas-noaa",
+                    "html_url": "https://github.com/frsalas-noaa",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 917331426,
+        "name": "LSTM-Tutorials",
+        "full_name": "CIROH-UA/LSTM-Tutorials",
+        "html_url": "https://github.com/CIROH-UA/LSTM-Tutorials",
+        "description": "Developing a LSTM from Scratch",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2025-01-15T19:30:56Z",
+        "updated_at": "2025-01-15T19:30:56Z",
+        "pushed_at": "2025-01-15T19:31:53Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 7904,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 1,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 3,
+            "top_contributors": [
+                {
+                    "id": 33735397,
+                    "login": "whitelightning450",
+                    "html_url": "https://github.com/whitelightning450",
+                    "type": "User",
+                    "contributions": 21
+                },
+                {
+                    "id": 28275758,
+                    "login": "shahab122",
+                    "html_url": "https://github.com/shahab122",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 67179927,
+                    "login": "savalann",
+                    "html_url": "https://github.com/savalann",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 807667779,
+        "name": "neuralhydrology",
+        "full_name": "CIROH-UA/neuralhydrology",
+        "html_url": "https://github.com/CIROH-UA/neuralhydrology",
+        "description": "Python library to train neural networks with a strong focus on hydrological applications.",
+        "homepage": "https://neuralhydrology.readthedocs.io/",
+        "default_branch": "master",
+        "created_at": "2024-05-29T14:42:18Z",
+        "updated_at": "2024-05-29T14:42:18Z",
+        "pushed_at": "2024-03-01T08:43:23Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 9938,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "license": {
+            "key": "bsd-3-clause",
+            "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+            "spdx_id": "BSD-3-Clause",
+            "url": "https://api.github.com/licenses/bsd-3-clause"
+        },
+        "contributors_summary": {
+            "contributors_count": 11,
+            "top_contributors": [
+                {
+                    "id": 13069767,
+                    "login": "kratzert",
+                    "html_url": "https://github.com/kratzert",
+                    "type": "User",
+                    "contributions": 190
+                },
+                {
+                    "id": 15731649,
+                    "login": "gauchm",
+                    "html_url": "https://github.com/gauchm",
+                    "type": "User",
+                    "contributions": 88
+                },
+                {
+                    "id": 17014654,
+                    "login": "grey-nearing",
+                    "html_url": "https://github.com/grey-nearing",
+                    "type": "User",
+                    "contributions": 11
+                },
+                {
+                    "id": 7629007,
+                    "login": "danklotz",
+                    "html_url": "https://github.com/danklotz",
+                    "type": "User",
+                    "contributions": 6
+                },
+                {
+                    "id": 13355628,
+                    "login": "shamshaw",
+                    "html_url": "https://github.com/shamshaw",
+                    "type": "User",
+                    "contributions": 3
+                },
+                {
+                    "id": 10515040,
+                    "login": "Multihuntr",
+                    "html_url": "https://github.com/Multihuntr",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 2482242,
+                    "login": "bevanj",
+                    "html_url": "https://github.com/bevanj",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 4471859,
+                    "login": "visr",
+                    "html_url": "https://github.com/visr",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 18207870,
+                    "login": "SebaDro",
+                    "html_url": "https://github.com/SebaDro",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 16233925,
+                    "login": "taddyb",
+                    "html_url": "https://github.com/taddyb",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 712035389,
+        "name": "ngen",
+        "full_name": "CIROH-UA/ngen",
+        "html_url": "https://github.com/CIROH-UA/ngen",
+        "description": "Next Generation Water Modeling Engine and Framework Prototype (ngiab branch - development version of NextGen)",
+        "homepage": "",
+        "default_branch": "ngiab",
+        "created_at": "2023-10-30T16:58:58Z",
+        "updated_at": "2026-02-11T16:44:41Z",
+        "pushed_at": "2026-05-01T19:20:50Z",
+        "language": "C++",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 201603,
+        "stargazers_count": 2,
+        "watchers_count": 2,
+        "forks_count": 8,
+        "open_issues_count": 5,
+        "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0"
+        },
+        "contributors_summary": {
+            "contributors_count": 28,
+            "top_contributors": [
+                {
+                    "id": 37884615,
+                    "login": "robertbartel",
+                    "html_url": "https://github.com/robertbartel",
+                    "type": "User",
+                    "contributions": 1164
+                },
+                {
+                    "id": 5186647,
+                    "login": "hellkite500",
+                    "html_url": "https://github.com/hellkite500",
+                    "type": "User",
+                    "contributions": 567
+                },
+                {
+                    "id": 11025415,
+                    "login": "program--",
+                    "html_url": "https://github.com/program--",
+                    "type": "User",
+                    "contributions": 277
+                },
+                {
+                    "id": 126464,
+                    "login": "PhilMiller",
+                    "html_url": "https://github.com/PhilMiller",
+                    "type": "User",
+                    "contributions": 255
+                },
+                {
+                    "id": 87771120,
+                    "login": "mattw-nws",
+                    "html_url": "https://github.com/mattw-nws",
+                    "type": "User",
+                    "contributions": 190
+                },
+                {
+                    "id": 8505669,
+                    "login": "stcui007",
+                    "html_url": "https://github.com/stcui007",
+                    "type": "User",
+                    "contributions": 132
+                },
+                {
+                    "id": 24944644,
+                    "login": "donaldwj",
+                    "html_url": "https://github.com/donaldwj",
+                    "type": "User",
+                    "contributions": 93
+                },
+                {
+                    "id": 13144122,
+                    "login": "christophertubbs",
+                    "html_url": "https://github.com/christophertubbs",
+                    "type": "User",
+                    "contributions": 49
+                },
+                {
+                    "id": 41338082,
+                    "login": "jdmattern",
+                    "html_url": "https://github.com/jdmattern",
+                    "type": "User",
+                    "contributions": 35
+                },
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 20
+                }
+            ]
+        }
+    },
+    {
+        "id": 936861224,
+        "name": "ngen-cal",
+        "full_name": "CIROH-UA/ngen-cal",
+        "html_url": "https://github.com/CIROH-UA/ngen-cal",
+        "description": "Tools for calibrating and configuring NextGen",
+        "homepage": "https://github.com/NOAA-OWP/ngen-cal/wiki",
+        "default_branch": "master",
+        "created_at": "2025-02-21T20:21:33Z",
+        "updated_at": "2025-11-03T17:34:13Z",
+        "pushed_at": "2026-04-22T22:40:17Z",
+        "language": "Python",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 1401,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 4,
+        "open_issues_count": 0,
+        "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0"
+        },
+        "contributors_summary": {
+            "contributors_count": 11,
+            "top_contributors": [
+                {
+                    "id": 39420640,
+                    "login": "aaraney",
+                    "html_url": "https://github.com/aaraney",
+                    "type": "User",
+                    "contributions": 323
+                },
+                {
+                    "id": 5186647,
+                    "login": "hellkite500",
+                    "html_url": "https://github.com/hellkite500",
+                    "type": "User",
+                    "contributions": 246
+                },
+                {
+                    "id": 37884615,
+                    "login": "robertbartel",
+                    "html_url": "https://github.com/robertbartel",
+                    "type": "User",
+                    "contributions": 19
+                },
+                {
+                    "id": 7992111,
+                    "login": "chp2001",
+                    "html_url": "https://github.com/chp2001",
+                    "type": "User",
+                    "contributions": 6
+                },
+                {
+                    "id": 79336055,
+                    "login": "JordanLaserGit",
+                    "html_url": "https://github.com/JordanLaserGit",
+                    "type": "User",
+                    "contributions": 5
+                },
+                {
+                    "id": 24944644,
+                    "login": "donaldwj",
+                    "html_url": "https://github.com/donaldwj",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 87771120,
+                    "login": "mattw-nws",
+                    "html_url": "https://github.com/mattw-nws",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 96442889,
+                    "login": "Ben-Choat",
+                    "html_url": "https://github.com/Ben-Choat",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 131808837,
+                    "login": "Brian-Cosgrove",
+                    "html_url": "https://github.com/Brian-Cosgrove",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 62669859,
+                    "login": "frsalas-noaa",
+                    "html_url": "https://github.com/frsalas-noaa",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 706266756,
+        "name": "ngen-datastream",
+        "full_name": "CIROH-UA/ngen-datastream",
+        "html_url": "https://github.com/CIROH-UA/ngen-datastream",
+        "description": " Infrastructure and tooling for the NextGen Research DataStream (NRDS)",
+        "homepage": "https://datastream.ciroh.org/",
+        "default_branch": "main",
+        "created_at": "2023-10-17T15:59:05Z",
+        "updated_at": "2026-04-27T15:16:34Z",
+        "pushed_at": "2026-04-27T17:33:20Z",
+        "language": "Python",
+        "topics": [
+            "aws",
+            "bmi",
+            "ciroh",
+            "docker",
+            "environmental-modeling",
+            "hydrology",
+            "infrastructure",
+            "ngen",
+            "python",
+            "r2o",
+            "shell",
+            "terraform"
+        ],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 176910,
+        "stargazers_count": 11,
+        "watchers_count": 11,
+        "forks_count": 16,
+        "open_issues_count": 19,
+        "license": {
+            "key": "gpl-3.0",
+            "name": "GNU General Public License v3.0",
+            "spdx_id": "GPL-3.0",
+            "url": "https://api.github.com/licenses/gpl-3.0"
+        },
+        "contributors_summary": {
+            "contributors_count": 8,
+            "top_contributors": [
+                {
+                    "id": 79336055,
+                    "login": "JordanLaserGit",
+                    "html_url": "https://github.com/JordanLaserGit",
+                    "type": "User",
+                    "contributions": 1088
+                },
+                {
+                    "id": 223894814,
+                    "login": "harshavemula-ua",
+                    "html_url": "https://github.com/harshavemula-ua",
+                    "type": "User",
+                    "contributions": 157
+                },
+                {
+                    "id": 60660437,
+                    "login": "ZacharyWills",
+                    "html_url": "https://github.com/ZacharyWills",
+                    "type": "User",
+                    "contributions": 8
+                },
+                {
+                    "id": 49699333,
+                    "login": "dependabot[bot]",
+                    "html_url": "https://github.com/apps/dependabot",
+                    "type": "Bot",
+                    "contributions": 8
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 4
+                },
+                {
+                    "id": 43544549,
+                    "login": "romer8",
+                    "html_url": "https://github.com/romer8",
+                    "type": "User",
+                    "contributions": 4
+                },
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 3
+                },
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 968169727,
+        "name": "ngiab-cal",
+        "full_name": "CIROH-UA/ngiab-cal",
+        "html_url": "https://github.com/CIROH-UA/ngiab-cal",
+        "description": "a tool for calibrating NGIAB compliant data packages",
+        "homepage": "",
+        "default_branch": "main",
+        "created_at": "2025-04-17T16:11:33Z",
+        "updated_at": "2026-04-26T20:50:35Z",
+        "pushed_at": "2026-04-26T20:52:45Z",
+        "language": "Python",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 479,
+        "stargazers_count": 2,
+        "watchers_count": 2,
+        "forks_count": 4,
+        "open_issues_count": 2,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 2,
+            "top_contributors": [
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 31
+                },
+                {
+                    "id": 71176390,
+                    "login": "skoriche",
+                    "html_url": "https://github.com/skoriche",
+                    "type": "User",
+                    "contributions": 2
+                }
+            ]
+        }
+    },
+    {
+        "id": 800093880,
+        "name": "ngiab-client",
+        "full_name": "CIROH-UA/ngiab-client",
+        "html_url": "https://github.com/CIROH-UA/ngiab-client",
+        "description": "NGIAB Visualizer",
+        "homepage": "",
+        "default_branch": "main",
+        "created_at": "2024-05-13T17:31:02Z",
+        "updated_at": "2025-12-11T16:59:38Z",
+        "pushed_at": "2026-04-24T21:47:19Z",
+        "language": "JavaScript",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 6949,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 3,
+        "open_issues_count": 12,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 6,
+            "top_contributors": [
+                {
+                    "id": 43544549,
+                    "login": "romer8",
+                    "html_url": "https://github.com/romer8",
+                    "type": "User",
+                    "contributions": 190
+                },
+                {
+                    "id": 49699333,
+                    "login": "dependabot[bot]",
+                    "html_url": "https://github.com/apps/dependabot",
+                    "type": "Bot",
+                    "contributions": 31
+                },
+                {
+                    "id": 2021244,
+                    "login": "aaronjstewart",
+                    "html_url": "https://github.com/aaronjstewart",
+                    "type": "User",
+                    "contributions": 4
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 3
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 130000039,
+                    "login": "benlee0423",
+                    "html_url": "https://github.com/benlee0423",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 634661554,
+        "name": "NGIAB-CloudInfra",
+        "full_name": "CIROH-UA/NGIAB-CloudInfra",
+        "html_url": "https://github.com/CIROH-UA/NGIAB-CloudInfra",
+        "description": "NextGen In A Box: NextGen Generation Water Modeling Framework for Community Release (Docker version) and GitHub Repo for CIROH IT CyberInfrastructure",
+        "homepage": "https://doi.org/10.1016/j.envsoft.2025.106666",
+        "default_branch": "main",
+        "created_at": "2023-04-30T20:55:50Z",
+        "updated_at": "2026-05-01T13:27:16Z",
+        "pushed_at": "2026-05-01T19:25:45Z",
+        "language": "Shell",
+        "topics": [
+            "catchment",
+            "drought",
+            "flooding",
+            "forcings",
+            "nextgen",
+            "nexus",
+            "ngen",
+            "realizations",
+            "t-route"
+        ],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 13793,
+        "stargazers_count": 22,
+        "watchers_count": 22,
+        "forks_count": 34,
+        "open_issues_count": 32,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 20,
+            "top_contributors": [
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 169
+                },
+                {
+                    "id": 130000039,
+                    "login": "benlee0423",
+                    "html_url": "https://github.com/benlee0423",
+                    "type": "User",
+                    "contributions": 108
+                },
+                {
+                    "id": 60660437,
+                    "login": "ZacharyWills",
+                    "html_url": "https://github.com/ZacharyWills",
+                    "type": "User",
+                    "contributions": 47
+                },
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 19
+                },
+                {
+                    "id": 5186647,
+                    "login": "hellkite500",
+                    "html_url": "https://github.com/hellkite500",
+                    "type": "User",
+                    "contributions": 13
+                },
+                {
+                    "id": 69406976,
+                    "login": "Sheargrub",
+                    "html_url": "https://github.com/Sheargrub",
+                    "type": "User",
+                    "contributions": 12
+                },
+                {
+                    "id": 43544549,
+                    "login": "romer8",
+                    "html_url": "https://github.com/romer8",
+                    "type": "User",
+                    "contributions": 10
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 10
+                },
+                {
+                    "id": 53343824,
+                    "login": "jameshalgren",
+                    "html_url": "https://github.com/jameshalgren",
+                    "type": "User",
+                    "contributions": 6
+                },
+                {
+                    "id": 65355706,
+                    "login": "Prajwal2006",
+                    "html_url": "https://github.com/Prajwal2006",
+                    "type": "User",
+                    "contributions": 4
+                }
+            ]
+        }
+    },
+    {
+        "id": 709388580,
+        "name": "NGIAB-HPCInfra",
+        "full_name": "CIROH-UA/NGIAB-HPCInfra",
+        "html_url": "https://github.com/CIROH-UA/NGIAB-HPCInfra",
+        "description": "NextGen In A Box: NextGen Generation Water Modeling Framework for Community Release (Singularity version)",
+        "homepage": "",
+        "default_branch": "main",
+        "created_at": "2023-10-24T16:04:52Z",
+        "updated_at": "2026-02-20T04:12:31Z",
+        "pushed_at": "2026-02-20T04:17:39Z",
+        "language": "Shell",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 363,
+        "stargazers_count": 4,
+        "watchers_count": 4,
+        "forks_count": 8,
+        "open_issues_count": 7,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 4,
+            "top_contributors": [
+                {
+                    "id": 130000039,
+                    "login": "benlee0423",
+                    "html_url": "https://github.com/benlee0423",
+                    "type": "User",
+                    "contributions": 101
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 13
+                },
+                {
+                    "id": 47249670,
+                    "login": "TrupeshKumarPatel",
+                    "html_url": "https://github.com/TrupeshKumarPatel",
+                    "type": "User",
+                    "contributions": 12
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 2
+                }
+            ]
+        }
+    },
+    {
+        "id": 899628775,
+        "name": "ngiab-teehr",
+        "full_name": "CIROH-UA/ngiab-teehr",
+        "html_url": "https://github.com/CIROH-UA/ngiab-teehr",
+        "description": "A repository for coupling TEEHR with NextGen In A Box (NGIAB) simulation output",
+        "homepage": "",
+        "default_branch": "main",
+        "created_at": "2024-12-06T17:01:11Z",
+        "updated_at": "2025-08-28T20:22:12Z",
+        "pushed_at": "2026-03-23T18:15:26Z",
+        "language": "Python",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 524,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 2,
+        "open_issues_count": 5,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 4,
+            "top_contributors": [
+                {
+                    "id": 7386333,
+                    "login": "samlamont",
+                    "html_url": "https://github.com/samlamont",
+                    "type": "User",
+                    "contributions": 48
+                },
+                {
+                    "id": 130000039,
+                    "login": "benlee0423",
+                    "html_url": "https://github.com/benlee0423",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 79336055,
+                    "login": "JordanLaserGit",
+                    "html_url": "https://github.com/JordanLaserGit",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 970311620,
+        "name": "ngiab-website",
+        "full_name": "CIROH-UA/ngiab-website",
+        "html_url": "https://github.com/CIROH-UA/ngiab-website",
+        "description": null,
+        "homepage": "http://ngiab.ciroh.org/",
+        "default_branch": "main",
+        "created_at": "2025-04-21T20:20:21Z",
+        "updated_at": "2026-04-15T21:40:33Z",
+        "pushed_at": "2026-04-29T15:14:58Z",
+        "language": "JavaScript",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 265003,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 7,
+        "open_issues_count": 11,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 5,
+            "top_contributors": [
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 131
+                },
+                {
+                    "id": 69406976,
+                    "login": "Sheargrub",
+                    "html_url": "https://github.com/Sheargrub",
+                    "type": "User",
+                    "contributions": 19
+                },
+                {
+                    "id": 65355706,
+                    "login": "Prajwal2006",
+                    "html_url": "https://github.com/Prajwal2006",
+                    "type": "User",
+                    "contributions": 15
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 49699333,
+                    "login": "dependabot[bot]",
+                    "html_url": "https://github.com/apps/dependabot",
+                    "type": "Bot",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 1079878533,
+        "name": "ngiab-website-staging",
+        "full_name": "CIROH-UA/ngiab-website-staging",
+        "html_url": "https://github.com/CIROH-UA/ngiab-website-staging",
+        "description": null,
+        "homepage": "http://docs.ciroh.org/ngiab-website-staging/",
+        "default_branch": "main",
+        "created_at": "2025-10-20T14:22:59Z",
+        "updated_at": "2025-11-10T17:40:10Z",
+        "pushed_at": "2026-03-30T16:20:48Z",
+        "language": "JavaScript",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 266698,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 5,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 4,
+            "top_contributors": [
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 108
+                },
+                {
+                    "id": 69406976,
+                    "login": "Sheargrub",
+                    "html_url": "https://github.com/Sheargrub",
+                    "type": "User",
+                    "contributions": 12
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 49699333,
+                    "login": "dependabot[bot]",
+                    "html_url": "https://github.com/apps/dependabot",
+                    "type": "Bot",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 768365514,
+        "name": "NGIAB_data_preprocess",
+        "full_name": "CIROH-UA/NGIAB_data_preprocess",
+        "html_url": "https://github.com/CIROH-UA/NGIAB_data_preprocess",
+        "description": "Tools to subset hydrofabrics, generate forcings, create default realizations for NGIAB",
+        "homepage": "https://ngiab.ciroh.org/",
+        "default_branch": "main",
+        "created_at": "2024-03-07T00:16:56Z",
+        "updated_at": "2026-04-15T19:00:11Z",
+        "pushed_at": "2026-05-01T22:58:03Z",
+        "language": "Python",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 2707,
+        "stargazers_count": 14,
+        "watchers_count": 14,
+        "forks_count": 20,
+        "open_issues_count": 14,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 10,
+            "top_contributors": [
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 263
+                },
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 26
+                },
+                {
+                    "id": 7992111,
+                    "login": "chp2001",
+                    "html_url": "https://github.com/chp2001",
+                    "type": "User",
+                    "contributions": 18
+                },
+                {
+                    "id": 49699333,
+                    "login": "dependabot[bot]",
+                    "html_url": "https://github.com/apps/dependabot",
+                    "type": "Bot",
+                    "contributions": 6
+                },
+                {
+                    "id": 87771120,
+                    "login": "mattw-nws",
+                    "html_url": "https://github.com/mattw-nws",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 69406976,
+                    "login": "Sheargrub",
+                    "html_url": "https://github.com/Sheargrub",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 67179927,
+                    "login": "savalann",
+                    "html_url": "https://github.com/savalann",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 71176390,
+                    "login": "skoriche",
+                    "html_url": "https://github.com/skoriche",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 1114638059,
+        "name": "nrds-client",
+        "full_name": "CIROH-UA/nrds-client",
+        "html_url": "https://github.com/CIROH-UA/nrds-client",
+        "description": "NRDS visualizer",
+        "homepage": "https://nrds.ciroh.org",
+        "default_branch": "main",
+        "created_at": "2025-12-11T16:57:30Z",
+        "updated_at": "2026-04-20T18:27:18Z",
+        "pushed_at": "2026-04-08T22:21:41Z",
+        "language": "JavaScript",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 8164,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 2,
+        "open_issues_count": 1,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 2,
+            "top_contributors": [
+                {
+                    "id": 43544549,
+                    "login": "romer8",
+                    "html_url": "https://github.com/romer8",
+                    "type": "User",
+                    "contributions": 88
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 2
+                }
+            ]
+        }
+    },
+    {
+        "id": 1052802715,
+        "name": "nrds-onprem",
+        "full_name": "CIROH-UA/nrds-onprem",
+        "html_url": "https://github.com/CIROH-UA/nrds-onprem",
+        "description": "NRDS Onpremise setup",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2025-09-08T15:09:31Z",
+        "updated_at": "2025-09-08T15:09:36Z",
+        "pushed_at": "2025-09-08T15:09:33Z",
+        "language": null,
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 150,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 703154139,
+        "name": "nwmurl",
+        "full_name": "CIROH-UA/nwmurl",
+        "html_url": "https://github.com/CIROH-UA/nwmurl",
+        "description": "This library contains utility functions to generate National Water Model data URLs",
+        "homepage": "",
+        "default_branch": "main",
+        "created_at": "2023-10-10T17:38:52Z",
+        "updated_at": "2026-04-27T16:51:15Z",
+        "pushed_at": "2026-04-27T16:51:10Z",
+        "language": "Python",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 211,
+        "stargazers_count": 3,
+        "watchers_count": 3,
+        "forks_count": 6,
+        "open_issues_count": 12,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 8,
+            "top_contributors": [
+                {
+                    "id": 112987653,
+                    "login": "sepehrkrz",
+                    "html_url": "https://github.com/sepehrkrz",
+                    "type": "User",
+                    "contributions": 154
+                },
+                {
+                    "id": 7992111,
+                    "login": "chp2001",
+                    "html_url": "https://github.com/chp2001",
+                    "type": "User",
+                    "contributions": 18
+                },
+                {
+                    "id": 43341658,
+                    "login": "manjirigunaji",
+                    "html_url": "https://github.com/manjirigunaji",
+                    "type": "User",
+                    "contributions": 10
+                },
+                {
+                    "id": 22774612,
+                    "login": "karnesh",
+                    "html_url": "https://github.com/karnesh",
+                    "type": "User",
+                    "contributions": 7
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 6
+                },
+                {
+                    "id": 58287801,
+                    "login": "RohanSunkarapalli",
+                    "html_url": "https://github.com/RohanSunkarapalli",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 53343824,
+                    "login": "jameshalgren",
+                    "html_url": "https://github.com/jameshalgren",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 79336055,
+                    "login": "JordanLaserGit",
+                    "html_url": "https://github.com/JordanLaserGit",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 829019638,
+        "name": "NWM_ML",
+        "full_name": "CIROH-UA/NWM_ML",
+        "html_url": "https://github.com/CIROH-UA/NWM_ML",
+        "description": "A Machine Learning extension processor coupling the NWM to water resources management tools in the western US.",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-07-15T15:35:54Z",
+        "updated_at": "2024-07-15T18:21:38Z",
+        "pushed_at": "2024-07-15T18:21:33Z",
+        "language": "Jupyter Notebook",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 137507,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 0,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 3,
+            "top_contributors": [
+                {
+                    "id": 33735397,
+                    "login": "whitelightning450",
+                    "html_url": "https://github.com/whitelightning450",
+                    "type": "User",
+                    "contributions": 29
+                },
+                {
+                    "id": 67179927,
+                    "login": "savalann",
+                    "html_url": "https://github.com/savalann",
+                    "type": "User",
+                    "contributions": 4
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 3
+                }
+            ]
+        }
+    },
+    {
+        "id": 807667447,
+        "name": "OPG-CNN-Northern-Utah-CIROH-Workshop",
+        "full_name": "CIROH-UA/OPG-CNN-Northern-Utah-CIROH-Workshop",
+        "html_url": "https://github.com/CIROH-UA/OPG-CNN-Northern-Utah-CIROH-Workshop",
+        "description": "This workshop offers participants an introduction to convolutional neural networks (CNNs) for their application in hydro-meteorology. The hands-on portion of the workshop focuses on customizing a CNN through hyperparameter exploration, adjusting CNN layers, and manipulating inputs.",
+        "homepage": "",
+        "default_branch": "main",
+        "created_at": "2024-05-29T14:41:33Z",
+        "updated_at": "2024-05-30T17:25:17Z",
+        "pushed_at": "2024-05-21T22:07:40Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 194875,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 39,
+        "open_issues_count": 0,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 34422513,
+                    "login": "s-wolvin",
+                    "html_url": "https://github.com/s-wolvin",
+                    "type": "User",
+                    "contributions": 87
+                }
+            ]
+        }
+    },
+    {
+        "id": 807667554,
+        "name": "PINN_workshop_ciroh",
+        "full_name": "CIROH-UA/PINN_workshop_ciroh",
+        "html_url": "https://github.com/CIROH-UA/PINN_workshop_ciroh",
+        "description": null,
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-05-29T14:41:46Z",
+        "updated_at": "2024-05-29T14:41:46Z",
+        "pushed_at": "2024-05-23T22:33:54Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 13679,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 2,
+        "open_issues_count": 0,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 111563593,
+                    "login": "AMBehroozi",
+                    "html_url": "https://github.com/AMBehroozi",
+                    "type": "User",
+                    "contributions": 16
+                }
+            ]
+        }
+    },
+    {
+        "id": 1087282283,
+        "name": "RIVR",
+        "full_name": "CIROH-UA/RIVR",
+        "html_url": "https://github.com/CIROH-UA/RIVR",
+        "description": null,
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2025-10-31T16:49:30Z",
+        "updated_at": "2026-04-16T22:11:38Z",
+        "pushed_at": "2026-04-23T06:06:51Z",
+        "language": "Dart",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 36488,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 5,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 2,
+            "top_contributors": [
+                {
+                    "id": 115030763,
+                    "login": "jersjar7",
+                    "html_url": "https://github.com/jersjar7",
+                    "type": "User",
+                    "contributions": 326
+                },
+                {
+                    "id": 3472628,
+                    "login": "danames",
+                    "html_url": "https://github.com/danames",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 982280858,
+        "name": "rs_route",
+        "full_name": "CIROH-UA/rs_route",
+        "html_url": "https://github.com/CIROH-UA/rs_route",
+        "description": "Experimental rust MC routing",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2025-05-12T16:35:39Z",
+        "updated_at": "2026-04-22T02:16:14Z",
+        "pushed_at": "2026-04-22T02:16:10Z",
+        "language": "Rust",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 3230,
+        "stargazers_count": 3,
+        "watchers_count": 3,
+        "forks_count": 3,
+        "open_issues_count": 1,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 3,
+            "top_contributors": [
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 57
+                },
+                {
+                    "id": 7992111,
+                    "login": "chp2001",
+                    "html_url": "https://github.com/chp2001",
+                    "type": "User",
+                    "contributions": 14
+                },
+                {
+                    "id": 42871840,
+                    "login": "brodiealexander",
+                    "html_url": "https://github.com/brodiealexander",
+                    "type": "User",
+                    "contributions": 3
+                }
+            ]
+        }
+    },
+    {
+        "id": 1062924225,
+        "name": "rust-lstm",
+        "full_name": "CIROH-UA/rust-lstm",
+        "html_url": "https://github.com/CIROH-UA/rust-lstm",
+        "description": null,
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2025-09-23T23:36:09Z",
+        "updated_at": "2026-03-10T17:02:16Z",
+        "pushed_at": "2026-04-24T17:11:02Z",
+        "language": "Rust",
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 350,
+        "stargazers_count": 4,
+        "watchers_count": 4,
+        "forks_count": 4,
+        "open_issues_count": 2,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 5,
+            "top_contributors": [
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 13
+                },
+                {
+                    "id": 49699333,
+                    "login": "dependabot[bot]",
+                    "html_url": "https://github.com/apps/dependabot",
+                    "type": "Bot",
+                    "contributions": 2
+                },
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 69406976,
+                    "login": "Sheargrub",
+                    "html_url": "https://github.com/Sheargrub",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 7992111,
+                    "login": "chp2001",
+                    "html_url": "https://github.com/chp2001",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 829082151,
+        "name": "SWEML",
+        "full_name": "CIROH-UA/SWEML",
+        "html_url": "https://github.com/CIROH-UA/SWEML",
+        "description": "Deep Learning national scale 1 km resolution SWE prediction model",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-07-15T18:07:55Z",
+        "updated_at": "2024-07-15T18:27:11Z",
+        "pushed_at": "2026-04-15T00:08:15Z",
+        "language": "Jupyter Notebook",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 1009638,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 1,
+        "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit"
+        },
+        "contributors_summary": {
+            "contributors_count": 4,
+            "top_contributors": [
+                {
+                    "id": 33735397,
+                    "login": "whitelightning450",
+                    "html_url": "https://github.com/whitelightning450",
+                    "type": "User",
+                    "contributions": 137
+                },
+                {
+                    "id": 12688093,
+                    "login": "commanderjcc",
+                    "html_url": "https://github.com/commanderjcc",
+                    "type": "User",
+                    "contributions": 8
+                },
+                {
+                    "id": 108009095,
+                    "login": "dliljest",
+                    "html_url": "https://github.com/dliljest",
+                    "type": "User",
+                    "contributions": 6
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 5
+                }
+            ]
+        }
+    },
+    {
+        "id": 851775734,
+        "name": "t-route",
+        "full_name": "CIROH-UA/t-route",
+        "html_url": "https://github.com/CIROH-UA/t-route",
+        "description": "Tree based hydrologic and hydraulic routing (ngiab branch - development version)",
+        "homepage": "",
+        "default_branch": "ngiab",
+        "created_at": "2024-09-03T17:24:34Z",
+        "updated_at": "2026-01-07T19:49:01Z",
+        "pushed_at": "2026-03-24T23:25:47Z",
+        "language": "Python",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 65101,
+        "stargazers_count": 4,
+        "watchers_count": 4,
+        "forks_count": 8,
+        "open_issues_count": 6,
+        "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+        },
+        "contributors_summary": {
+            "contributors_count": 22,
+            "top_contributors": [
+                {
+                    "id": 53343824,
+                    "login": "jameshalgren",
+                    "html_url": "https://github.com/jameshalgren",
+                    "type": "User",
+                    "contributions": 287
+                },
+                {
+                    "id": 103054653,
+                    "login": "shorvath-noaa",
+                    "html_url": "https://github.com/shorvath-noaa",
+                    "type": "User",
+                    "contributions": 285
+                },
+                {
+                    "id": 66840445,
+                    "login": "awlostowski-noaa",
+                    "html_url": "https://github.com/awlostowski-noaa",
+                    "type": "User",
+                    "contributions": 114
+                },
+                {
+                    "id": 5186647,
+                    "login": "hellkite500",
+                    "html_url": "https://github.com/hellkite500",
+                    "type": "User",
+                    "contributions": 75
+                },
+                {
+                    "id": 54687070,
+                    "login": "kumdonoaa",
+                    "html_url": "https://github.com/kumdonoaa",
+                    "type": "User",
+                    "contributions": 42
+                },
+                {
+                    "id": 140189926,
+                    "login": "AminTorabi-NOAA",
+                    "html_url": "https://github.com/AminTorabi-NOAA",
+                    "type": "User",
+                    "contributions": 41
+                },
+                {
+                    "id": 59839548,
+                    "login": "jhrehanoaa",
+                    "html_url": "https://github.com/jhrehanoaa",
+                    "type": "User",
+                    "contributions": 38
+                },
+                {
+                    "id": 39420640,
+                    "login": "aaraney",
+                    "html_url": "https://github.com/aaraney",
+                    "type": "User",
+                    "contributions": 27
+                },
+                {
+                    "id": 140385333,
+                    "login": "JurgenZach-NOAA",
+                    "html_url": "https://github.com/JurgenZach-NOAA",
+                    "type": "User",
+                    "contributions": 25
+                },
+                {
+                    "id": 26720477,
+                    "login": "JoshCu",
+                    "html_url": "https://github.com/JoshCu",
+                    "type": "User",
+                    "contributions": 24
+                }
+            ]
+        }
+    },
+    {
+        "id": 829023140,
+        "name": "Tethys-CSES",
+        "full_name": "CIROH-UA/Tethys-CSES",
+        "html_url": "https://github.com/CIROH-UA/Tethys-CSES",
+        "description": "This repository serves as an interactive evaluation platform to visualize modeled streamflow.",
+        "homepage": "",
+        "default_branch": "main",
+        "created_at": "2024-07-15T15:43:54Z",
+        "updated_at": "2026-01-12T18:54:57Z",
+        "pushed_at": "2026-01-12T18:54:44Z",
+        "language": "Python",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 50612,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 0,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 7,
+            "top_contributors": [
+                {
+                    "id": 33735397,
+                    "login": "whitelightning450",
+                    "html_url": "https://github.com/whitelightning450",
+                    "type": "User",
+                    "contributions": 37
+                },
+                {
+                    "id": 5123221,
+                    "login": "swainn",
+                    "html_url": "https://github.com/swainn",
+                    "type": "User",
+                    "contributions": 4
+                },
+                {
+                    "id": 28275758,
+                    "login": "shahab122",
+                    "html_url": "https://github.com/shahab122",
+                    "type": "User",
+                    "contributions": 3
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 2
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 43544549,
+                    "login": "romer8",
+                    "html_url": "https://github.com/romer8",
+                    "type": "User",
+                    "contributions": 1
+                },
+                {
+                    "id": 12499203,
+                    "login": "shawncrawley",
+                    "html_url": "https://github.com/shawncrawley",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 807668151,
+        "name": "training-data-workflows-101",
+        "full_name": "CIROH-UA/training-data-workflows-101",
+        "html_url": "https://github.com/CIROH-UA/training-data-workflows-101",
+        "description": "Data Workflows 101",
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2024-05-29T14:43:01Z",
+        "updated_at": "2024-05-29T14:43:01Z",
+        "pushed_at": "2024-05-29T04:25:33Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 2324,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "license": {
+            "key": "gpl-3.0",
+            "name": "GNU General Public License v3.0",
+            "spdx_id": "GPL-3.0",
+            "url": "https://api.github.com/licenses/gpl-3.0"
+        },
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 16216093,
+                    "login": "pclemins",
+                    "html_url": "https://github.com/pclemins",
+                    "type": "User",
+                    "contributions": 4
+                }
+            ]
+        }
+    },
+    {
+        "id": 1004396017,
+        "name": "training-HydroShare-101",
+        "full_name": "CIROH-UA/training-HydroShare-101",
+        "html_url": "https://github.com/CIROH-UA/training-HydroShare-101",
+        "description": "HydroShare 101 training module",
+        "homepage": "http://docs.ciroh.org/training-HydroShare-101/",
+        "default_branch": "main",
+        "created_at": "2025-06-18T14:59:03Z",
+        "updated_at": "2025-06-18T16:06:40Z",
+        "pushed_at": "2026-04-28T00:45:20Z",
+        "language": null,
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 9459,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+        },
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 1
+                }
+            ]
+        }
+    },
+    {
+        "id": 938209490,
+        "name": "training-NGIAB-101",
+        "full_name": "CIROH-UA/training-NGIAB-101",
+        "html_url": "https://github.com/CIROH-UA/training-NGIAB-101",
+        "description": "This repository will be used for preparing training module for NGIAB",
+        "homepage": "http://docs.ciroh.org/training-NGIAB-101/",
+        "default_branch": "main",
+        "created_at": "2025-02-24T15:39:44Z",
+        "updated_at": "2026-04-16T13:32:43Z",
+        "pushed_at": "2026-04-30T20:54:36Z",
+        "language": null,
+        "topics": [],
+        "fork": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 16338,
+        "stargazers_count": 2,
+        "watchers_count": 2,
+        "forks_count": 7,
+        "open_issues_count": 6,
+        "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+        },
+        "contributors_summary": {
+            "contributors_count": 6,
+            "top_contributors": [
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 65
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 18
+                },
+                {
+                    "id": 43544549,
+                    "login": "romer8",
+                    "html_url": "https://github.com/romer8",
+                    "type": "User",
+                    "contributions": 13
+                },
+                {
+                    "id": 69406976,
+                    "login": "Sheargrub",
+                    "html_url": "https://github.com/Sheargrub",
+                    "type": "User",
+                    "contributions": 10
+                },
+                {
+                    "id": 9202282,
+                    "login": "JeffCarver",
+                    "html_url": "https://github.com/JeffCarver",
+                    "type": "User",
+                    "contributions": 7
+                },
+                {
+                    "id": 120678271,
+                    "login": "manjilasingh",
+                    "html_url": "https://github.com/manjilasingh",
+                    "type": "User",
+                    "contributions": 3
+                }
+            ]
+        }
+    },
+    {
+        "id": 1162740271,
+        "name": "varnish",
+        "full_name": "CIROH-UA/varnish",
+        "html_url": "https://github.com/CIROH-UA/varnish",
+        "description": "Template for pkgdown site",
+        "homepage": "https://carpentries.github.io/varnish/",
+        "default_branch": "main",
+        "created_at": "2026-02-20T16:29:19Z",
+        "updated_at": "2026-02-25T02:25:27Z",
+        "pushed_at": "2026-02-25T02:25:21Z",
+        "language": "SCSS",
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 10353,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 0,
+        "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+        },
+        "contributors_summary": {
+            "contributors_count": 19,
+            "top_contributors": [
+                {
+                    "id": 3639446,
+                    "login": "zkamvar",
+                    "html_url": "https://github.com/zkamvar",
+                    "type": "User",
+                    "contributions": 337
+                },
+                {
+                    "id": 65916846,
+                    "login": "actions-user",
+                    "html_url": "https://github.com/actions-user",
+                    "type": "User",
+                    "contributions": 104
+                },
+                {
+                    "id": 1872302,
+                    "login": "froggleston",
+                    "html_url": "https://github.com/froggleston",
+                    "type": "User",
+                    "contributions": 104
+                },
+                {
+                    "id": 64108146,
+                    "login": "astroDimitrios",
+                    "html_url": "https://github.com/astroDimitrios",
+                    "type": "User",
+                    "contributions": 42
+                },
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 12
+                },
+                {
+                    "id": 9694524,
+                    "login": "tobyhodges",
+                    "html_url": "https://github.com/tobyhodges",
+                    "type": "User",
+                    "contributions": 12
+                },
+                {
+                    "id": 19176319,
+                    "login": "ErinBecker",
+                    "html_url": "https://github.com/ErinBecker",
+                    "type": "User",
+                    "contributions": 9
+                },
+                {
+                    "id": 10783929,
+                    "login": "Bisaloo",
+                    "html_url": "https://github.com/Bisaloo",
+                    "type": "User",
+                    "contributions": 7
+                },
+                {
+                    "id": 742154,
+                    "login": "Robadob",
+                    "html_url": "https://github.com/Robadob",
+                    "type": "User",
+                    "contributions": 5
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 4
+                }
+            ]
+        }
+    },
+    {
+        "id": 979479266,
+        "name": "varnish-old",
+        "full_name": "CIROH-UA/varnish-old",
+        "html_url": "https://github.com/CIROH-UA/varnish-old",
+        "description": "Template for NGIAB 101 tutorial - pkgdown site",
+        "homepage": "https://carpentries.github.io/varnish/",
+        "default_branch": "main",
+        "created_at": "2025-05-07T15:16:25Z",
+        "updated_at": "2026-03-02T14:53:23Z",
+        "pushed_at": "2026-01-22T16:36:47Z",
+        "language": "SCSS",
+        "topics": [],
+        "fork": true,
+        "archived": true,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 7538,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null
+        },
+        "contributors_summary": {
+            "contributors_count": 17,
+            "top_contributors": [
+                {
+                    "id": 3639446,
+                    "login": "zkamvar",
+                    "html_url": "https://github.com/zkamvar",
+                    "type": "User",
+                    "contributions": 337
+                },
+                {
+                    "id": 65916846,
+                    "login": "actions-user",
+                    "html_url": "https://github.com/actions-user",
+                    "type": "User",
+                    "contributions": 88
+                },
+                {
+                    "id": 1872302,
+                    "login": "froggleston",
+                    "html_url": "https://github.com/froggleston",
+                    "type": "User",
+                    "contributions": 60
+                },
+                {
+                    "id": 64108146,
+                    "login": "astroDimitrios",
+                    "html_url": "https://github.com/astroDimitrios",
+                    "type": "User",
+                    "contributions": 20
+                },
+                {
+                    "id": 170465264,
+                    "login": "quinnylee",
+                    "html_url": "https://github.com/quinnylee",
+                    "type": "User",
+                    "contributions": 12
+                },
+                {
+                    "id": 9694524,
+                    "login": "tobyhodges",
+                    "html_url": "https://github.com/tobyhodges",
+                    "type": "User",
+                    "contributions": 12
+                },
+                {
+                    "id": 19176319,
+                    "login": "ErinBecker",
+                    "html_url": "https://github.com/ErinBecker",
+                    "type": "User",
+                    "contributions": 8
+                },
+                {
+                    "id": 10783929,
+                    "login": "Bisaloo",
+                    "html_url": "https://github.com/Bisaloo",
+                    "type": "User",
+                    "contributions": 7
+                },
+                {
+                    "id": 742154,
+                    "login": "Robadob",
+                    "html_url": "https://github.com/Robadob",
+                    "type": "User",
+                    "contributions": 5
+                },
+                {
+                    "id": 54657,
+                    "login": "arpita0911patel",
+                    "html_url": "https://github.com/arpita0911patel",
+                    "type": "User",
+                    "contributions": 4
+                }
+            ]
+        }
+    },
+    {
+        "id": 1141261055,
+        "name": "wpn-auth",
+        "full_name": "CIROH-UA/wpn-auth",
+        "html_url": "https://github.com/CIROH-UA/wpn-auth",
+        "description": null,
+        "homepage": null,
+        "default_branch": "main",
+        "created_at": "2026-01-24T14:50:12Z",
+        "updated_at": "2026-01-24T14:50:13Z",
+        "pushed_at": "2024-04-17T20:14:26Z",
+        "language": null,
+        "topics": [],
+        "fork": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "size_kb": 25,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "license": null,
+        "contributors_summary": {
+            "contributors_count": 1,
+            "top_contributors": [
+                {
+                    "id": 9595390,
+                    "login": "dylanlee",
+                    "html_url": "https://github.com/dylanlee",
+                    "type": "User",
+                    "contributions": 13
+                }
+            ]
+        }
+    }
+]

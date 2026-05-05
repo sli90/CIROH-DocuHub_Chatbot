@@ -1,0 +1,66 @@
+[
+    {
+        "path": ".github/ISSUE_TEMPLATE.md",
+        "file_name": "ISSUE_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 186,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "file_name": "PULL_REQUEST_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 617,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/singularity_image.yml",
+        "file_name": "singularity_image.yml",
+        "extension": ".yml",
+        "size_bytes": 2547,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1080,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 10091,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "guide.sh",
+        "file_name": "guide.sh",
+        "extension": ".sh",
+        "size_bytes": 6568,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "singularity/singularity_ngen.def",
+        "file_name": "singularity_ngen.def",
+        "extension": ".def",
+        "size_bytes": 12767,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "singularity/templates/guide/HelloNGEN.sh",
+        "file_name": "HelloNGEN.sh",
+        "extension": ".sh",
+        "size_bytes": 5828,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

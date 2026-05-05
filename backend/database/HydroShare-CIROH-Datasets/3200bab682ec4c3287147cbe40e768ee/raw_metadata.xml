@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/3200bab682ec4c3287147cbe40e768ee">
+    <dc:subject>National Water Model</dc:subject>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This resource provides codes and data to demonstrate a use case for evaluating the National Water Model (NWM) locally and enhancing its accessibility. The objective is to explore how NOAA’s NWM can be utilized by a new audience of potential users. The NWM, managed by NOAA’s National Water Center, is a comprehensive hydrologic model focusing on river and streamflow data. It offers insights into historical water conditions (with a 40-year retrospective capability), current water status, and future projections (ranging from 18 hours to 10-day and 30-day forecasts). Since its initial release in 2016, the NWM has been updated to version 3.0, with several planned enhancements and new services, including the Next Generation Framework and Flood Inundation Mapping, which are expected to be introduced within the next 24 months.&#13;
+&#13;
+Working Group's Project: "Evaluating the NWM in a Local Context” and “Using the NWM as a Data Source for  Emergency Planning"&#13;
+&#13;
+Funding for this project was provided by the National Oceanic and Atmospheric Administration (NOAA), awarded to the Cooperative Institute for Research on Hydrology (CIROH) through the NOAA Cooperative Agreement with The University of Alabama, NA22NWS4320003</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>Peak Flow Statistics</dc:subject>
+    <dc:subject>Flow Duration Statistics</dc:subject>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-06-14T06:49:28.947965+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:subject>Spruce Creek</dc:subject>
+    <dc:subject>CIROH</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1341-5681"/>
+        <hsterms:phone>3399334127</hsterms:phone>
+        <hsterms:name>Castronova, Anthony M.</hsterms:name>
+        <hsterms:address>MA, US</hsterms:address>
+        <hsterms:homepage rdf:resource="http://anthonycastronova.com"/>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:description>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Anthony_Castronova"/>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:hydroshare_user_id>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=ScWTFoQAAAAJ&amp;hl=en"/>
+        <hsterms:email>castronova.anthony@gmail.com</hsterms:email>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+    <hsterms:geospatialRelation>
+      <rdf:Description>
+        <hsterms:relation_name>Spruce Creek-Long Prairie River [hu10/0701010802]</hsterms:relation_name>
+        <dcterms:relation rdf:resource="https://geoconnex.us/ref/hu10/0701010802"/>
+      </rdf:Description>
+    </hsterms:geospatialRelation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isReferencedBy>https://globalresilience.northeastern.edu/project/cooperative-institute-for-research-to-operations-in-hydrology-ciroh/</dcterms:isReferencedBy>
+      </rdf:Description>
+    </dc:relation>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/3200bab682ec4c3287147cbe40e768ee"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dcterms:bibliographicCitation>Garousi-Nejad, I., A. M. Castronova, K. B. Raub (2024). Demonstration of the National Water Model’s Applicability to Community Resilience Planning: Minnesota Use Case, HydroShare, http://www.hydroshare.org/resource/3200bab682ec4c3287147cbe40e768ee</dcterms:bibliographicCitation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://github.com/NOAA-OWP/inundation-mapping</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardTitle>COOPERATIVE INSTITUTE FOR RESEARCH TO OPERATIONS IN HYDROLOGY (CIROH)</hsterms:awardTitle>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration (NOAA)</hsterms:fundingAgencyName>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyURL rdf:resource="https://ci.noaa.gov/locations/ciroh/"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:title>Demonstration of the National Water Model’s Applicability to Community Resilience Planning: Minnesota Use Case</dc:title>
+    <dc:subject>StreamStats</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://www.sciencebase.gov/catalog/item/577445bee4b07657d1a991b6</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://www.fema.gov/flood-maps/products-tools</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>ciroh_­portal_data</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://map1.msc.fema.gov/data/27/S/PDF/27153CV000A.pdf?LOC=c8c412907cf9de4d648f30668e598963</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:description>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Irene_Garousi-Nejad"/>
+        <hsterms:name>Garousi-Nejad, Irene</hsterms:name>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-2929-3946"/>
+        <hsterms:email>igarousi@cuahsi.org</hsterms:email>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:hydroshare_user_id>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=dKqI7iAAAAAJ&amp;hl=en"/>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>Flood Frequency Analysis</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <hsterms:isExecutedBy>Castronova, A. (2024). CIROH Production JupyterHub, HydroShare, http://www.hydroshare.org/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98</hsterms:isExecutedBy>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>Annual Exceedance Probability</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Hydrography/NHD/</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isReferencedBy>https://globalresilience.northeastern.edu/wp-content/uploads/2024/06/NWM-Minnesota-.pdf</dcterms:isReferencedBy>
+      </rdf:Description>
+    </dc:relation>
+    <hsterms:geospatialRelation>
+      <rdf:Description>
+        <hsterms:relation_name>Long Prairie [hu08/07010108]</hsterms:relation_name>
+        <dcterms:relation rdf:resource="https://geoconnex.us/ref/hu08/07010108"/>
+      </rdf:Description>
+    </hsterms:geospatialRelation>
+    <dc:language>eng</dc:language>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2024-09-12T19:45:55.968432+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:subject>Long Prairie River</dc:subject>
+    <dc:subject>Community Resilience Planning</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:subject>Flood Inundation Mapping</dc:subject>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>northlimit=46.4384280225743; southlimit=45.7106938761128; eastlimit=-94.36848235256984; westlimit=-95.64609616073427; projection=WGS 84 EPSG:4326; units=Decimal degrees</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>k.raub@northeastern.edu</hsterms:email>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10391</hsterms:hydroshare_user_id>
+        <hsterms:organization>Global Resilience Institute at Northeastern University</hsterms:organization>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10391</hsterms:description>
+        <hsterms:address>VT, US</hsterms:address>
+        <hsterms:name>Raub, Kristin B.</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>Minnesota</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://noaa-nwm-retrospective-3-0-pds.s3.amazonaws.com/index.html</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>FEMA</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>Castronova, A. M. (2024). Visualizing NWM Retrospective Streamflow in Python, HydroShare, http://www.hydroshare.org/resource/830b603665cc4ac0893d5449badd422d</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+  </hsterms:CompositeResource>
+</rdf:RDF>

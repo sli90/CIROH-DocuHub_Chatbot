@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/48b3355015f84e98a2cc6b6d134e77f2">
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=2021-10-01T00:00:00; end=2022-09-30T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:subject>CIROHDevCon25</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-05-26T21:22:46.271889+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyURL rdf:resource="https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"/>
+        <hsterms:awardTitle>CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare</hsterms:awardTitle>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration (NOAA), University of Alabama</hsterms:fundingAgencyName>
+        <hsterms:awardNumber>NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University</hsterms:awardNumber>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/48b3355015f84e98a2cc6b6d134e77f2"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>CIROH</dc:subject>
+    <dc:subject>NextGen</dc:subject>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This resource holds some of the files produced while doing the CIROH HydroShare NextGen Model Tutorial described in&#13;
+&#13;
+Tarboton, D., H. Salehabadi, A. Nassar, F. Baig, A. M. Castronova, I. Garousi-Nejad, A. Patel, P. Dash (2025). Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial, HydroShare, http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1&#13;
+&#13;
+It serves as a pedagogical example for sharing content with the CIROH HydroShare community and preliminary introduction to NextGen.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>dtarb@usu.edu</hsterms:email>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1998-3479"/>
+        <hsterms:phone>+1 (435) 797-3172</hsterms:phone>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:description>
+        <hsterms:name>Tarboton, David</hsterms:name>
+        <hsterms:organization>Utah State University</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:source>Tarboton, D., H. Salehabadi, A. Nassar, F. Baig, A. M. Castronova, I. Garousi-Nejad, A. Patel, P. Dash (2025). Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial, HydroShare, http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1</dcterms:source>
+      </rdf:Description>
+    </dc:relation>
+    <dc:language>eng</dc:language>
+    <dcterms:bibliographicCitation>Tarboton, D. (2025). David Tarbotons working files from CIROH JupyterHub Tutorial, HydroShare, http://www.hydroshare.org/resource/48b3355015f84e98a2cc6b6d134e77f2</dcterms:bibliographicCitation>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2025-05-26T17:06:35.531413+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:title>David Tarbotons working files from CIROH JupyterHub Tutorial</dc:title>
+  </hsterms:CompositeResource>
+</rdf:RDF>

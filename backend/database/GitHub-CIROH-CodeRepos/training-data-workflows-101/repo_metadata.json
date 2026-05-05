@@ -1,0 +1,41 @@
+{
+    "id": 807668151,
+    "name": "training-data-workflows-101",
+    "full_name": "CIROH-UA/training-data-workflows-101",
+    "html_url": "https://github.com/CIROH-UA/training-data-workflows-101",
+    "description": "Data Workflows 101",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2024-05-29T14:43:01Z",
+    "updated_at": "2024-05-29T14:43:01Z",
+    "pushed_at": "2024-05-29T04:25:33Z",
+    "language": null,
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 2324,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "contributors_summary": {
+        "contributors_count": 1,
+        "top_contributors": [
+            {
+                "id": 16216093,
+                "login": "pclemins",
+                "html_url": "https://github.com/pclemins",
+                "type": "User",
+                "contributions": 4
+            }
+        ]
+    }
+}

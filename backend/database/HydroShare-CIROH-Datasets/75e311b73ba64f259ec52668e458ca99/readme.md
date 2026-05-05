@@ -1,0 +1,1 @@
+This resource holds the powerpoint file for the HydroShare poster presented at the CIROH Science Meeting in Tuscaloosa Alabama October 14-17, 2024

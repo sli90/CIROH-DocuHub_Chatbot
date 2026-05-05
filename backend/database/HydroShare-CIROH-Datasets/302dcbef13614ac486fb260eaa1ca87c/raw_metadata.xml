@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CollectionResource rdf:about="http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c">
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Tarboton, D., A. M. Castronova, I. Garousi-Nejad, F. Baig (2026). Enabling collaboration through data and model sharing with CUAHSI HydroShare: Workshop presented as part of CIROH Developers Conference May 29, 2024, HydroShare, http://www.hydroshare.org/resource/7477452a93e04b1099a3879353c2253a</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>NOAA</dc:subject>
+    <dc:subject>CIROH</dc:subject>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-09-23T17:47:21.969325+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Nassar, A., D. Tarboton (2026). HydroFabric Subsetter and Retrieval, HydroShare, http://www.hydroshare.org/resource/631be88704ef4167b12e9ad9d2529ba9</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Tarboton, D., J. S. Horsburgh, S. Wang, J. S. Read, I. Garousi-Nejad, A. M. Castronova, C. Cogswell (2026). CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare, HydroShare, http://www.hydroshare.org/resource/23b51cb99b5445a1af740a21c5acaecb</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dcterms:bibliographicCitation>Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c</dcterms:bibliographicCitation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Tarboton, D., H. Salehabadi, A. Nassar, F. Baig, A. M. Castronova, I. Garousi-Nejad, A. Patel, P. Dash (2026). Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial, HydroShare, http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>National Water Model</dc:subject>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>NOAA Weather Program Office</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ror.org/01q70bz83"/>
+        <hsterms:awardTitle>Cooperative Institute for Research to Operations in Hydrology</hsterms:awardTitle>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Ames, D. (2026). Python Notebook for Retrieving Retrospective National Water Model Forecasts, HydroShare, http://www.hydroshare.org/resource/5caaa9919c2e490eb735aebc5e741c35</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=1979-01-01T00:00:00; end=2024-06-01T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>eastlimit=-48.6914; westlimit=-137.8125; northlimit=49.7586; southlimit=23.7728; units=['Decimal degrees']; projection=WGS84 EPSG:4326</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:language>eng</dc:language>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Nassar, A., D. Tarboton, H. Salehabadi (2026). NWM retrospective analysis version 3.0 data retrieval, HydroShare, http://www.hydroshare.org/resource/6ca065138d764339baf3514ba2f2d72f</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:hasPart>Salehabadi, H., D. Tarboton, A. Nassar, A. M. Castronova, P. Dash, A. Patel, F. Baig (2026). Jupyter Notebooks for the Retrieval of AORC Data for Hydrologic Analysis, HydroShare, http://www.hydroshare.org/resource/72ea9726187e43d7b50a624f2acf591f</dcterms:hasPart>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>NWS</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This is a curated and managed collection of resources of particular interest or importance to CIROH, NOAA, and/or the U.S. National Weather Service. The resources listed in this collection are scanned and made available for rapid discovery through the CIROH Science Portal at https://portal.ciroh.org/.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CollectionResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Collection Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:title>Curated List of Datasets for the CIROH Portal</dc:title>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2026-01-29T05:09:38.102537+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:name>Ames, Dan</hsterms:name>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hsterms:description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hsterms:hydroshare_user_id>
+        <hsterms:email>dan.ames@byu.edu</hsterms:email>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:organization>Brigham Young University</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+  </hsterms:CollectionResource>
+</rdf:RDF>

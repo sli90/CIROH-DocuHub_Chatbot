@@ -1,0 +1,55 @@
+{
+    "id": 807668057,
+    "name": "deep_bucket_lab",
+    "full_name": "CIROH-UA/deep_bucket_lab",
+    "html_url": "https://github.com/CIROH-UA/deep_bucket_lab",
+    "description": "Model of water in/out of a bucket. Training an LSTM.",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2024-05-29T14:42:50Z",
+    "updated_at": "2024-05-29T14:42:50Z",
+    "pushed_at": "2024-05-23T13:40:43Z",
+    "language": null,
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 19273,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 6,
+    "open_issues_count": 0,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 3,
+        "top_contributors": [
+            {
+                "id": 44035137,
+                "login": "jmframe",
+                "html_url": "https://github.com/jmframe",
+                "type": "User",
+                "contributions": 41
+            },
+            {
+                "id": 3982615,
+                "login": "maoyab",
+                "html_url": "https://github.com/maoyab",
+                "type": "User",
+                "contributions": 12
+            },
+            {
+                "id": 36898477,
+                "login": "leilaher",
+                "html_url": "https://github.com/leilaher",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

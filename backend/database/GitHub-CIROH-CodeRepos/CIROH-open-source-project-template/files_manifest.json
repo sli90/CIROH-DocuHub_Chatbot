@@ -1,0 +1,114 @@
+[
+    {
+        "path": ".gitattributes",
+        "file_name": ".gitattributes",
+        "extension": "",
+        "size_bytes": 26,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE.md",
+        "file_name": "ISSUE_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 186,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "file_name": "PULL_REQUEST_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 180,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 879,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CHANGELOG.md",
+        "file_name": "CHANGELOG.md",
+        "extension": ".md",
+        "size_bytes": 293,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 1805,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "INSTALL.md",
+        "file_name": "INSTALL.md",
+        "extension": ".md",
+        "size_bytes": 126,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 528,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 3732,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 3234,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 1200,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "doc/Screenshot.png",
+        "file_name": "Screenshot.png",
+        "extension": ".png",
+        "size_bytes": 156984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "open_source_template.sh",
+        "file_name": "open_source_template.sh",
+        "extension": ".sh",
+        "size_bytes": 436,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "opensource-checklist.md",
+        "file_name": "opensource-checklist.md",
+        "extension": ".md",
+        "size_bytes": 2812,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    }
+]

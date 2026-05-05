@@ -1,0 +1,26 @@
+[
+    {
+        "file_name": "data.kml",
+        "file_path": "data.kml",
+        "extension": ".kml",
+        "checksum": "2f4fa8b7ea2e30de6be10ecf235ac50d"
+    },
+    {
+        "file_name": "data.csv",
+        "file_path": "data.csv",
+        "extension": ".csv",
+        "checksum": "53ef42ab874a02ca2c4bd376a881e8f8"
+    },
+    {
+        "file_name": "data.geojson",
+        "file_path": "data.geojson",
+        "extension": ".geojson",
+        "checksum": "a0df5056653cf912dbba7c0cbe52640e"
+    },
+    {
+        "file_name": "download.zip",
+        "file_path": "download.zip",
+        "extension": ".zip",
+        "checksum": "633155402521385afef876bdf77fab3d"
+    }
+]

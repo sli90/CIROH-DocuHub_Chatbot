@@ -1,0 +1,45 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "2956a66c9e46466490f8857cecbaaa82",
+    "resource_title": "Basin Characteristics at Shawnee, KS",
+    "abstract": "This resource contains detailed information about the basin characteristics for Shawnee KS. These data have been obtained from the USGS StreamStats web application on June 19, 2024. This resource was created during the demo session of the National Water Center Summer Institute Program and the goal was to accessed data, share it on HydroShare and describe it.",
+    "authors": [
+        "Edwards, Jack"
+    ],
+    "creator": "Edwards, Jack",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2024-06-19T16:31:13.300400Z",
+    "date_last_updated": "2024-06-19T16:43:33.336615Z",
+    "bag_last_downloaded": "2025-12-06T10:35:46.686608Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/2956a66c9e46466490f8857cecbaaa82.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 39.07,
+                "eastlimit": -94.6872,
+                "southlimit": 39.0582,
+                "westlimit": -94.7066,
+                "name": "Shawnee Kansas"
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "2024-06-01",
+                "end": "2024-06-19"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/2956a66c9e46466490f8857cecbaaa82/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/2956a66c9e46466490f8857cecbaaa82/map/",
+    "resource_url": "http://www.hydroshare.org/resource/2956a66c9e46466490f8857cecbaaa82/",
+    "content_types": []
+}

@@ -1,0 +1,44 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "56e0ac25249d4451845a843eb3154954",
+    "resource_title": "Alluvial River Width Variability",
+    "abstract": "Data compilations of bankfull downstream hydraulic geometry for alluvial rivers, lidar derived high-resolution spatial series of bankfull width for 67 sites, and hydrograph metrics for sites with USGS hydrographs. This compilation is composed of three datasets: (1) a compilation of alluvial river geometry at bankfull for a variety of hydraulic attributes; (2) x, y, and z coordinates of channel bank lines for a selection of sites and their associated river widths derived from high-resolution lidar topography; and (3) statistics describing the hydrographs for a subset of the larger compilation. These data are divided into two primary sets, the larger compilation and a smaller set of sites where the bankfull width was derived from lidar topography. For the high-resolution dataset, the data are available as the coordinates of the bank lines, spatial series of distance downstream and bankfull width, and the spatial series filtered for quality.",
+    "authors": [
+        "Phillips, Colin B"
+    ],
+    "creator": "Phillips, Colin B",
+    "doi": "10.4211/hs.56e0ac25249d4451845a843eb3154954",
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": true,
+    "published": true,
+    "date_created": "2024-07-23T20:46:25.475280Z",
+    "date_last_updated": "2024-11-22T14:37:28.158425Z",
+    "bag_last_downloaded": "2025-12-18T09:42:58.676777Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/56e0ac25249d4451845a843eb3154954.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 49.0,
+                "eastlimit": -65.0,
+                "southlimit": 17.5,
+                "westlimit": -125.0
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "1980-10-01",
+                "end": "2024-07-01"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/56e0ac25249d4451845a843eb3154954/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/56e0ac25249d4451845a843eb3154954/map/",
+    "resource_url": "http://www.hydroshare.org/resource/56e0ac25249d4451845a843eb3154954/",
+    "content_types": []
+}

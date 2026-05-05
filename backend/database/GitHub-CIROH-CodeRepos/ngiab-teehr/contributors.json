@@ -1,0 +1,30 @@
+[
+    {
+        "id": 7386333,
+        "login": "samlamont",
+        "html_url": "https://github.com/samlamont",
+        "type": "User",
+        "contributions": 48
+    },
+    {
+        "id": 130000039,
+        "login": "benlee0423",
+        "html_url": "https://github.com/benlee0423",
+        "type": "User",
+        "contributions": 2
+    },
+    {
+        "id": 26720477,
+        "login": "JoshCu",
+        "html_url": "https://github.com/JoshCu",
+        "type": "User",
+        "contributions": 2
+    },
+    {
+        "id": 79336055,
+        "login": "JordanLaserGit",
+        "html_url": "https://github.com/JordanLaserGit",
+        "type": "User",
+        "contributions": 1
+    }
+]

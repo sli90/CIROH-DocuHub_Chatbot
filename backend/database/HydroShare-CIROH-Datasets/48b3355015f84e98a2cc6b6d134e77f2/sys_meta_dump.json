@@ -1,0 +1,36 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "48b3355015f84e98a2cc6b6d134e77f2",
+    "resource_title": "David Tarbotons working files from CIROH JupyterHub Tutorial",
+    "abstract": "This resource holds some of the files produced while doing the CIROH HydroShare NextGen Model Tutorial described in\r\n\r\nTarboton, D., H. Salehabadi, A. Nassar, F. Baig, A. M. Castronova, I. Garousi-Nejad, A. Patel, P. Dash (2025). Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial, HydroShare, http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1\r\n\r\nIt serves as a pedagogical example for sharing content with the CIROH HydroShare community and preliminary introduction to NextGen.",
+    "authors": [
+        "Tarboton, David"
+    ],
+    "creator": "Tarboton, David",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2025-05-26T17:06:35.531413Z",
+    "date_last_updated": "2025-05-26T21:22:46.271889Z",
+    "bag_last_downloaded": "2026-03-16T17:04:19.608804Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/48b3355015f84e98a2cc6b6d134e77f2.zip",
+    "coverages": [
+        {
+            "type": "period",
+            "value": {
+                "start": "2021-10-01 00:00:00",
+                "end": "2022-09-30 00:00:00"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/48b3355015f84e98a2cc6b6d134e77f2/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/48b3355015f84e98a2cc6b6d134e77f2/map/",
+    "resource_url": "http://www.hydroshare.org/resource/48b3355015f84e98a2cc6b6d134e77f2/",
+    "content_types": [
+        "Multidimensional Content",
+        "CSV Content"
+    ]
+}

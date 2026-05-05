@@ -1,0 +1,46 @@
+{
+    "resource_type": "CollectionResource",
+    "resource_id": "302dcbef13614ac486fb260eaa1ca87c",
+    "resource_title": "Curated List of Datasets for the CIROH Portal",
+    "abstract": "This is a curated and managed collection of resources of particular interest or importance to CIROH, NOAA, and/or the U.S. National Weather Service. The resources listed in this collection are scanned and made available for rapid discovery through the CIROH Science Portal at https://portal.ciroh.org/.",
+    "authors": [
+        "Ames, Dan"
+    ],
+    "creator": "Ames, Dan",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2024-09-23T17:47:21.969325Z",
+    "date_last_updated": "2026-01-29T05:09:38.102537Z",
+    "bag_last_downloaded": "2025-12-17T13:58:10.262827Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/302dcbef13614ac486fb260eaa1ca87c.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "eastlimit": -48.6914,
+                "westlimit": -137.8125,
+                "northlimit": 49.7586,
+                "southlimit": 23.7728,
+                "units": [
+                    "Decimal degrees"
+                ],
+                "projection": "WGS84 EPSG:4326"
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "01/01/1979",
+                "end": "06/01/2024"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/302dcbef13614ac486fb260eaa1ca87c/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/302dcbef13614ac486fb260eaa1ca87c/map/",
+    "resource_url": "http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c/",
+    "content_types": []
+}

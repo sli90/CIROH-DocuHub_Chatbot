@@ -1,0 +1,164 @@
+[
+    {
+        "file_name": "retrieve-nwm-v3-retrospective-streamflow-data.ipynb",
+        "file_path": "retrieve-nwm-v3-retrospective-streamflow-data.ipynb",
+        "extension": ".ipynb",
+        "checksum": "b888e1592b3998c2ba99c2e0941e225b"
+    },
+    {
+        "file_name": "xfimdask.py",
+        "file_path": "nwm_utils/fim/xfimdask.py",
+        "extension": ".py",
+        "checksum": "1f42911ca072a7f8d206484850826a98"
+    },
+    {
+        "file_name": "v3.py",
+        "file_path": "nwm_utils/retrospective/v3.py",
+        "extension": ".py",
+        "checksum": "17dfb9747fe64c3a046b9ea20851ae8b"
+    },
+    {
+        "file_name": "readme.md",
+        "file_path": "readme.md",
+        "extension": ".md",
+        "checksum": "7e94e0a53d876482ff7b34c66e598707"
+    },
+    {
+        "file_name": "hydroTable_0.csv",
+        "file_path": "hydroTable_0.csv",
+        "extension": ".csv",
+        "checksum": "8cace7d3e1c9f7aa070f89ae2df950bb-2"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "nwm_utils/__init__.py",
+        "extension": ".py",
+        "checksum": "78fd2714d8180a8153adf11e4cb10e8a"
+    },
+    {
+        "file_name": "create-inundation-maps-using-FIM-xarray.ipynb",
+        "file_path": "create-inundation-maps-using-FIM-xarray.ipynb",
+        "extension": ".ipynb",
+        "checksum": "3125f92fa179a28793d42362dace964f"
+    },
+    {
+        "file_name": "demDerived_reaches_split_filtered_addedAttributes_crosswalked_0.gpkg",
+        "file_path": "demDerived_reaches_split_filtered_addedAttributes_crosswalked_0.gpkg",
+        "extension": ".gpkg",
+        "checksum": "e39169ea75481b5f73ce7abe4942fa8b"
+    },
+    {
+        "file_name": "27041CV000A.pdf",
+        "file_path": "27041CV000A.pdf",
+        "extension": ".pdf",
+        "checksum": "9f38738255ce531819e9c66725d05ede"
+    },
+    {
+        "file_name": "flow-duration-analysis.ipynb",
+        "file_path": "flow-duration-analysis.ipynb",
+        "extension": ".ipynb",
+        "checksum": "117f23ef8c50ca644d1d9494c507599b"
+    },
+    {
+        "file_name": "27153C_20110204.zip",
+        "file_path": "27153C_20110204.zip",
+        "extension": ".zip",
+        "checksum": "0f806e05233e7aaed7b4d83a9b4d346f"
+    },
+    {
+        "file_name": "gw_catchments_reaches_filtered_addedAttributes_crosswalked_0.gpkg",
+        "file_path": "gw_catchments_reaches_filtered_addedAttributes_crosswalked_0.gpkg",
+        "extension": ".gpkg",
+        "checksum": "94568ca0c235d282edf9d03da2a18766"
+    },
+    {
+        "file_name": "fema-map-styles.qml",
+        "file_path": "fema-map-styles.qml",
+        "extension": ".qml",
+        "checksum": "cd921ab1c12f90f17e35c58acaaebdec"
+    },
+    {
+        "file_name": "StreamStats_LongPrairieRiver_Report.csv",
+        "file_path": "StreamStats_Report/StreamStats_LongPrairieRiver_Report.csv",
+        "extension": ".csv",
+        "checksum": "d9511465e829e1ce0059618ad8564808"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "nwm_utils/retrospective/__init__.py",
+        "extension": ".py",
+        "checksum": "25265edb04e7df1ee310ff8c3b2023f5"
+    },
+    {
+        "file_name": "StreamStats_LongPrairieRiver_Report.pdf",
+        "file_path": "StreamStats_Report/StreamStats_LongPrairieRiver_Report.pdf",
+        "extension": ".pdf",
+        "checksum": "2c8bd0e20bb9ed2fd89c65776be9626d"
+    },
+    {
+        "file_name": "StreamStats_LongPrairieRiver_HowTo.mp4",
+        "file_path": "Video/StreamStats_LongPrairieRiver_HowTo.mp4",
+        "extension": ".mp4",
+        "checksum": "268099fe1720d1921d39e7f32ec42f23-9"
+    },
+    {
+        "file_name": "StreamStats_SpruceCreek_Report.pdf",
+        "file_path": "StreamStats_Report/StreamStats_SpruceCreek_Report.pdf",
+        "extension": ".pdf",
+        "checksum": "7cda0f5730d60d04939a48801c3d1602"
+    },
+    {
+        "file_name": "map.py",
+        "file_path": "nwm_utils/fim/map.py",
+        "extension": ".py",
+        "checksum": "39316b894db88c721382e1503675df2c"
+    },
+    {
+        "file_name": "FEMA_nonNWMFIM_NWMFIM_comparison.png",
+        "file_path": "Figure/FEMA_nonNWMFIM_NWMFIM_comparison.png",
+        "extension": ".png",
+        "checksum": "55b5654c3969d978f4118f4cf29f536c"
+    },
+    {
+        "file_name": "domain-study.png",
+        "file_path": "Figure/domain-study.png",
+        "extension": ".png",
+        "checksum": "81a12e6a20261414c5767dde11388132"
+    },
+    {
+        "file_name": "xfim.py",
+        "file_path": "nwm_utils/fim/xfim.py",
+        "extension": ".py",
+        "checksum": "67e19eb75e406de3d3d00fa315ee5e4b"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "nwm_utils/fim/__init__.py",
+        "extension": ".py",
+        "checksum": "20ece41d6679ed5548484a79f67a0a58"
+    },
+    {
+        "file_name": "utils.py",
+        "file_path": "nwm_utils/fim/utils.py",
+        "extension": ".py",
+        "checksum": "6480ab54a98cc998a282d82a913d3b4f"
+    },
+    {
+        "file_name": "27153CV000A.pdf",
+        "file_path": "27153CV000A.pdf",
+        "extension": ".pdf",
+        "checksum": "a0ef3ba00fca2e72f62788712bc34aad"
+    },
+    {
+        "file_name": "27041C_20091118.zip",
+        "file_path": "27041C_20091118.zip",
+        "extension": ".zip",
+        "checksum": "3303666e43ec71283ea18072c1dca712"
+    },
+    {
+        "file_name": "StreamStats_SpruceCreek_Report.csv",
+        "file_path": "StreamStats_Report/StreamStats_SpruceCreek_Report.csv",
+        "extension": ".csv",
+        "checksum": "3c543b8faa0e89d11ab90b8f36bc735d"
+    }
+]

@@ -1,0 +1,1122 @@
+[
+    {
+        "path": ".github/ISSUE_TEMPLATE/nrds-parameter-proposal.md",
+        "file_name": "nrds-parameter-proposal.md",
+        "extension": ".md",
+        "size_bytes": 2155,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/orchestration-test/ci.backend.hcl",
+        "file_name": "ci.backend.hcl",
+        "extension": ".hcl",
+        "size_bytes": 149,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/orchestration-test/ci.tfvars",
+        "file_name": "ci.tfvars",
+        "extension": ".tfvars",
+        "size_bytes": 1026,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/orchestration-test/test-execution-payload.json",
+        "file_name": "test-execution-payload.json",
+        "extension": ".json",
+        "size_bytes": 1868,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/build_test_create_ami.yml",
+        "file_name": "build_test_create_ami.yml",
+        "extension": ".yml",
+        "size_bytes": 25829,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/build_test_ngiab_ami.yaml",
+        "file_name": "build_test_ngiab_ami.yaml",
+        "extension": ".yaml",
+        "size_bytes": 28299,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/orchestration-integration-test.yml",
+        "file_name": "orchestration-integration-test.yml",
+        "extension": ".yml",
+        "size_bytes": 11324,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/terraform-deploy.yml",
+        "file_name": "terraform-deploy.yml",
+        "extension": ".yml",
+        "size_bytes": 2376,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/terraform-drift-detection.yml",
+        "file_name": "terraform-drift-detection.yml",
+        "extension": ".yml",
+        "size_bytes": 6145,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/terraform-pr-validate.yml",
+        "file_name": "terraform-pr-validate.yml",
+        "extension": ".yml",
+        "size_bytes": 6121,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_fp.yaml",
+        "file_name": "test_research_datastream_fp.yaml",
+        "extension": ".yaml",
+        "size_bytes": 8353,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_01.yaml",
+        "file_name": "test_research_datastream_vpu_01.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_02.yaml",
+        "file_name": "test_research_datastream_vpu_02.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_03N.yaml",
+        "file_name": "test_research_datastream_vpu_03N.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3613,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_03S.yaml",
+        "file_name": "test_research_datastream_vpu_03S.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3613,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_03W.yaml",
+        "file_name": "test_research_datastream_vpu_03W.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3613,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_04.yaml",
+        "file_name": "test_research_datastream_vpu_04.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_05.yaml",
+        "file_name": "test_research_datastream_vpu_05.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_06.yaml",
+        "file_name": "test_research_datastream_vpu_06.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_07.yaml",
+        "file_name": "test_research_datastream_vpu_07.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_08.yaml",
+        "file_name": "test_research_datastream_vpu_08.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_09.yaml",
+        "file_name": "test_research_datastream_vpu_09.yaml",
+        "extension": ".yaml",
+        "size_bytes": 4853,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_10L.yaml",
+        "file_name": "test_research_datastream_vpu_10L.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3613,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_10U.yaml",
+        "file_name": "test_research_datastream_vpu_10U.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3613,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_11.yaml",
+        "file_name": "test_research_datastream_vpu_11.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_12.yaml",
+        "file_name": "test_research_datastream_vpu_12.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_13.yaml",
+        "file_name": "test_research_datastream_vpu_13.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_14.yaml",
+        "file_name": "test_research_datastream_vpu_14.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_15.yaml",
+        "file_name": "test_research_datastream_vpu_15.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_16.yaml",
+        "file_name": "test_research_datastream_vpu_16.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_17.yaml",
+        "file_name": "test_research_datastream_vpu_17.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_research_datastream_vpu_18.yaml",
+        "file_name": "test_research_datastream_vpu_18.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test_vpu_short_medium.yaml",
+        "file_name": "test_vpu_short_medium.yaml",
+        "extension": ".yaml",
+        "size_bytes": 19394,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 318,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CREDITS.md",
+        "file_name": "CREDITS.md",
+        "extension": ".md",
+        "size_bytes": 952,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "INSTALL.md",
+        "file_name": "INSTALL.md",
+        "extension": ".md",
+        "size_bytes": 341,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "LICENSE.md",
+        "file_name": "LICENSE.md",
+        "extension": ".md",
+        "size_bytes": 34903,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "ODbl.md",
+        "file_name": "ODbl.md",
+        "extension": ".md",
+        "size_bytes": 25663,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1821,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "STATUS.md",
+        "file_name": "STATUS.md",
+        "extension": ".md",
+        "size_bytes": 2689,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "ami_version.yml",
+        "file_name": "ami_version.yml",
+        "extension": ".yml",
+        "size_bytes": 82,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "configs/ngen/realization_sloth_nom_cfe_pet.json",
+        "file_name": "realization_sloth_nom_cfe_pet.json",
+        "extension": ".json",
+        "size_bytes": 4219,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "configs/ngen/realization_sloth_nom_cfe_pet_troute.json",
+        "file_name": "realization_sloth_nom_cfe_pet_troute.json",
+        "extension": ".json",
+        "size_bytes": 4299,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "configs/ngen/troute_hfv2.2.yaml",
+        "file_name": "troute_hfv2.2.yaml",
+        "extension": ".yaml",
+        "size_bytes": 2112,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/AGU2024.jpg",
+        "file_name": "AGU2024.jpg",
+        "extension": ".jpg",
+        "size_bytes": 5431272,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/images/AWS_diagram.jpg",
+        "file_name": "AWS_diagram.jpg",
+        "extension": ".jpg",
+        "size_bytes": 2591287,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/images/datastreamcli.jpg",
+        "file_name": "datastreamcli.jpg",
+        "extension": ".jpg",
+        "size_bytes": 53077,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/images/geopackage-viewer.jpg",
+        "file_name": "geopackage-viewer.jpg",
+        "extension": ".jpg",
+        "size_bytes": 407266,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/images/lynker-spatial-palisade.jpg",
+        "file_name": "lynker-spatial-palisade.jpg",
+        "extension": ".jpg",
+        "size_bytes": 59298,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/images/statemachine.jpg",
+        "file_name": "statemachine.jpg",
+        "extension": ".jpg",
+        "size_bytes": 27294,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/images/visualizer.png",
+        "file_name": "visualizer.png",
+        "extension": ".png",
+        "size_bytes": 518856,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/nrds/AGU2024.jpg",
+        "file_name": "AGU2024.jpg",
+        "extension": ".jpg",
+        "size_bytes": 5431272,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/nrds/CIROH_devcon_2024/presentation.pdf",
+        "file_name": "presentation.pdf",
+        "extension": ".pdf",
+        "size_bytes": 1154570,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/nrds/CIROH_devcon_2024/screenshots/merkdir_verifyfile.jpg",
+        "file_name": "merkdir_verifyfile.jpg",
+        "extension": ".jpg",
+        "size_bytes": 55007,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/nrds/CIROH_devcon_2024/screenshots/step2_timing.jpg",
+        "file_name": "step2_timing.jpg",
+        "extension": ".jpg",
+        "size_bytes": 88222,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/nrds/CIROH_devcon_2024/screenshots/step3_timing.jpg",
+        "file_name": "step3_timing.jpg",
+        "extension": ".jpg",
+        "size_bytes": 70870,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/nrds/CIROH_devcon_2024/workshop.md",
+        "file_name": "workshop.md",
+        "extension": ".md",
+        "size_bytes": 8917,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/nrds/CIROH_devcon_2025/presentation.pdf",
+        "file_name": "presentation.pdf",
+        "extension": ".pdf",
+        "size_bytes": 833292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/nrds/CIROH_devcon_2025/workshop.md",
+        "file_name": "workshop.md",
+        "extension": ".md",
+        "size_bytes": 21666,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/nrds/CONTRIBUTE.md",
+        "file_name": "CONTRIBUTE.md",
+        "extension": ".md",
+        "size_bytes": 582,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/nrds/STATUS_AND_METADATA.md",
+        "file_name": "STATUS_AND_METADATA.md",
+        "extension": ".md",
+        "size_bytes": 13897,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/visualizer/visualizer.png",
+        "file_name": "visualizer.png",
+        "extension": ".png",
+        "size_bytes": 518856,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/python/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 5314,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "infra/aws/python/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 101,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "infra/aws/python/setup.cfg",
+        "file_name": "setup.cfg",
+        "extension": ".cfg",
+        "size_bytes": 1094,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "infra/aws/python/src/research_datastream/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 5826,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "infra/aws/python/src/research_datastream/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 33,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/python/src/research_datastream/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 21,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/python/src/research_datastream/datastream_cost_nrds.py",
+        "file_name": "datastream_cost_nrds.py",
+        "extension": ".py",
+        "size_bytes": 24851,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/python/src/research_datastream/gen_vpu_execs.py",
+        "file_name": "gen_vpu_execs.py",
+        "extension": ".py",
+        "size_bytes": 10172,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/python/src/research_datastream/nrds_run_health.py",
+        "file_name": "nrds_run_health.py",
+        "extension": ".py",
+        "size_bytes": 21500,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/python/src/research_datastream/s3mv.py",
+        "file_name": "s3mv.py",
+        "extension": ".py",
+        "size_bytes": 20136,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/python/src/research_datastream/vpu_comparison_graphs.py",
+        "file_name": "vpu_comparison_graphs.py",
+        "extension": ".py",
+        "size_bytes": 4517,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/shell/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 270,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "infra/aws/shell/check_datastream_outputs.sh",
+        "file_name": "check_datastream_outputs.sh",
+        "extension": ".sh",
+        "size_bytes": 6558,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/shell/check_datastream_retries.sh",
+        "file_name": "check_datastream_retries.sh",
+        "extension": ".sh",
+        "size_bytes": 4370,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/shell/collect_metadata.sh",
+        "file_name": "collect_metadata.sh",
+        "extension": ".sh",
+        "size_bytes": 1067,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/shell/datastream_pull.sh",
+        "file_name": "datastream_pull.sh",
+        "extension": ".sh",
+        "size_bytes": 7025,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/shell/import_resources.sh",
+        "file_name": "import_resources.sh",
+        "extension": ".sh",
+        "size_bytes": 3405,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 4022,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "infra/aws/terraform/docs/ARCHITECTURE.md",
+        "file_name": "ARCHITECTURE.md",
+        "extension": ".md",
+        "size_bytes": 2814,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/AWS_BASICS.md",
+        "file_name": "AWS_BASICS.md",
+        "extension": ".md",
+        "size_bytes": 5247,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/GETTING_STARTED.md",
+        "file_name": "GETTING_STARTED.md",
+        "extension": ".md",
+        "size_bytes": 7615,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/TERRAFORM_BASICS.md",
+        "file_name": "TERRAFORM_BASICS.md",
+        "extension": ".md",
+        "size_bytes": 2870,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/images/create_AMI.jpg",
+        "file_name": "create_AMI.jpg",
+        "extension": ".jpg",
+        "size_bytes": 72940,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/images/create_AMI2.jpg",
+        "file_name": "create_AMI2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 53908,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/images/infra_diagram.jpg",
+        "file_name": "infra_diagram.jpg",
+        "extension": ".jpg",
+        "size_bytes": 2591287,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/images/launch_instance_1.jpg",
+        "file_name": "launch_instance_1.jpg",
+        "extension": ".jpg",
+        "size_bytes": 127855,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/images/launch_instance_2.jpg",
+        "file_name": "launch_instance_2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 121337,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/images/launch_instance_3.jpg",
+        "file_name": "launch_instance_3.jpg",
+        "extension": ".jpg",
+        "size_bytes": 130110,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/docs/images/statemachine.jpg",
+        "file_name": "statemachine.jpg",
+        "extension": ".jpg",
+        "size_bytes": 27294,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/examples/execution.json",
+        "file_name": "execution.json",
+        "extension": ".json",
+        "size_bytes": 787,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/examples/execution_nrds.json",
+        "file_name": "execution_nrds.json",
+        "extension": ".json",
+        "size_bytes": 1623,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/iam_ec2.tf",
+        "file_name": "iam_ec2.tf",
+        "extension": ".tf",
+        "size_bytes": 2615,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/iam_lambda.tf",
+        "file_name": "iam_lambda.tf",
+        "extension": ".tf",
+        "size_bytes": 3475,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/iam_statemachine.tf",
+        "file_name": "iam_statemachine.tf",
+        "extension": ".tf",
+        "size_bytes": 1312,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/lambda.tf",
+        "file_name": "lambda.tf",
+        "extension": ".tf",
+        "size_bytes": 3042,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/lambdas/checker/lambda_function.py",
+        "file_name": "lambda_function.py",
+        "extension": ".py",
+        "size_bytes": 3041,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/lambdas/poller/lambda_function.py",
+        "file_name": "lambda_function.py",
+        "extension": ".py",
+        "size_bytes": 1979,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/lambdas/start_ami/lambda_function.py",
+        "file_name": "lambda_function.py",
+        "extension": ".py",
+        "size_bytes": 5887,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/lambdas/stopper/lambda_function.py",
+        "file_name": "lambda_function.py",
+        "extension": ".py",
+        "size_bytes": 2940,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/lambdas/streamcommander/lambda_function.py",
+        "file_name": "lambda_function.py",
+        "extension": ".py",
+        "size_bytes": 9700,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 1019,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/outputs.tf",
+        "file_name": "outputs.tf",
+        "extension": ".tf",
+        "size_bytes": 1340,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/security_group.tf",
+        "file_name": "security_group.tf",
+        "extension": ".tf",
+        "size_bytes": 534,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/statemachine.tf",
+        "file_name": "statemachine.tf",
+        "extension": ".tf",
+        "size_bytes": 4985,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/modules/orchestration/variables.tfvars",
+        "file_name": "variables.tfvars",
+        "extension": ".tfvars",
+        "size_bytes": 796,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/outputs.tf",
+        "file_name": "outputs.tf",
+        "extension": ".tf",
+        "size_bytes": 1005,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/cfe-nom/config/execution_forecast_inputs_cfe_nom.json",
+        "file_name": "execution_forecast_inputs_cfe_nom.json",
+        "extension": ".json",
+        "size_bytes": 2145,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/cfe-nom/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 1024,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/cfe-nom/outputs.tf",
+        "file_name": "outputs.tf",
+        "extension": ".tf",
+        "size_bytes": 368,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/cfe-nom/schedules.tf",
+        "file_name": "schedules.tf",
+        "extension": ".tf",
+        "size_bytes": 9582,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/cfe-nom/templates/execution_datastream_cfe_nom_VPU_template.json.tpl",
+        "file_name": "execution_datastream_cfe_nom_VPU_template.json.tpl",
+        "extension": ".tpl",
+        "size_bytes": 2033,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/forcing/config/execution_forecast_inputs_forcing.json",
+        "file_name": "execution_forecast_inputs_forcing.json",
+        "extension": ".json",
+        "size_bytes": 527,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/forcing/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 856,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/forcing/outputs.tf",
+        "file_name": "outputs.tf",
+        "extension": ".tf",
+        "size_bytes": 368,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/forcing/schedules.tf",
+        "file_name": "schedules.tf",
+        "extension": ".tf",
+        "size_bytes": 5736,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/forcing/templates/execution_forcing_template.json.tpl",
+        "file_name": "execution_forcing_template.json.tpl",
+        "extension": ".tpl",
+        "size_bytes": 3216,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/lstm_0/config/execution_forecast_inputs.json",
+        "file_name": "execution_forecast_inputs.json",
+        "extension": ".json",
+        "size_bytes": 2258,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/lstm_0/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 1022,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/lstm_0/outputs.tf",
+        "file_name": "outputs.tf",
+        "extension": ".tf",
+        "size_bytes": 365,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/lstm_0/schedules.tf",
+        "file_name": "schedules.tf",
+        "extension": ".tf",
+        "size_bytes": 9507,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/lstm_0/templates/execution_datastream_VPU_template.json.tpl",
+        "file_name": "execution_datastream_VPU_template.json.tpl",
+        "extension": ".tpl",
+        "size_bytes": 2018,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/restart/config/execution_forecast_inputs_restart.json",
+        "file_name": "execution_forecast_inputs_restart.json",
+        "extension": ".json",
+        "size_bytes": 262,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/restart/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 862,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/restart/outputs.tf",
+        "file_name": "outputs.tf",
+        "extension": ".tf",
+        "size_bytes": 106,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/restart/schedules.tf",
+        "file_name": "schedules.tf",
+        "extension": ".tf",
+        "size_bytes": 1802,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/restart/templates/execution_restart_template.json.tpl",
+        "file_name": "execution_restart_template.json.tpl",
+        "extension": ".tpl",
+        "size_bytes": 3075,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/routing-only/config/execution_forecast_inputs_routing_only.json",
+        "file_name": "execution_forecast_inputs_routing_only.json",
+        "extension": ".json",
+        "size_bytes": 301,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/routing-only/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 867,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/routing-only/outputs.tf",
+        "file_name": "outputs.tf",
+        "extension": ".tf",
+        "size_bytes": 126,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/routing-only/schedules.tf",
+        "file_name": "schedules.tf",
+        "extension": ".tf",
+        "size_bytes": 2863,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/datastreams/routing-only/templates/execution_datastream_routing_only_VPU_template.json.tpl",
+        "file_name": "execution_datastream_routing_only_VPU_template.json.tpl",
+        "extension": ".tpl",
+        "size_bytes": 1927,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/envs/prod.backend.hcl",
+        "file_name": "prod.backend.hcl",
+        "extension": ".hcl",
+        "size_bytes": 151,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/envs/prod.tfvars",
+        "file_name": "prod.tfvars",
+        "extension": ".tfvars",
+        "size_bytes": 1313,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/iam_scheduler.tf",
+        "file_name": "iam_scheduler.tf",
+        "extension": ".tf",
+        "size_bytes": 1258,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/main.tf",
+        "file_name": "main.tf",
+        "extension": ".tf",
+        "size_bytes": 4246,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/outputs.tf",
+        "file_name": "outputs.tf",
+        "extension": ".tf",
+        "size_bytes": 1568,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "infra/aws/terraform/services/nrds/variables.tf",
+        "file_name": "variables.tf",
+        "extension": ".tf",
+        "size_bytes": 2251,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shell/create_ami.sh",
+        "file_name": "create_ami.sh",
+        "extension": ".sh",
+        "size_bytes": 4966,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

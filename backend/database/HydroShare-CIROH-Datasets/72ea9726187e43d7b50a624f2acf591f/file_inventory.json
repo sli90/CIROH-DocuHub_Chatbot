@@ -1,0 +1,68 @@
+[
+    {
+        "file_name": "AORC_DataRetrieval.pdf",
+        "file_path": "AORC_DataRetrieval.pdf",
+        "extension": ".pdf",
+        "checksum": "a8bc1efd7aa5738a276a95faf59aada6"
+    },
+    {
+        "file_name": "AORC_LL_ZoneRetrieval.ipynb",
+        "file_path": "AORC_LL_ZoneRetrieval.ipynb",
+        "extension": ".ipynb",
+        "checksum": "7fc99a1bddd3527f68ca26f8491cd1ed"
+    },
+    {
+        "file_name": "setup_aorc_jupyterhub_conda_env.sh",
+        "file_path": "conda_env/setup_aorc_jupyterhub_conda_env.sh",
+        "extension": ".sh",
+        "checksum": "e2c50da573d4672ca3f56a111732b06c"
+    },
+    {
+        "file_name": "delete_aorc_jupyterhub_conda_env.sh",
+        "file_path": "conda_env/delete_aorc_jupyterhub_conda_env.sh",
+        "extension": ".sh",
+        "checksum": "6c69e1aa491686478b48929623a72f3f"
+    },
+    {
+        "file_name": "CondaEnvironmentSetup.ipynb",
+        "file_path": "conda_env/CondaEnvironmentSetup.ipynb",
+        "extension": ".ipynb",
+        "checksum": "496edf644ff5ec2f4a22d5fa27b1a4cf"
+    },
+    {
+        "file_name": "README.md",
+        "file_path": "README.md",
+        "extension": ".md",
+        "checksum": "943059bdd87e62cde0d12f731cb710aa"
+    },
+    {
+        "file_name": "AORC_LL_PointRetrieval.ipynb",
+        "file_path": "AORC_LL_PointRetrieval.ipynb",
+        "extension": ".ipynb",
+        "checksum": "c345de441dbdd15a9bd3b046dcc8baf8"
+    },
+    {
+        "file_name": "environment.yml",
+        "file_path": "conda_env/environment.yml",
+        "extension": ".yml",
+        "checksum": "bcd1cd60a8fb540593d3905552ff45ee"
+    },
+    {
+        "file_name": "aorc_utils.py",
+        "file_path": "aorc_utils.py",
+        "extension": ".py",
+        "checksum": "23d8a73512899a2df7d082f9a50d2f76"
+    },
+    {
+        "file_name": "AORC_NWMProj_ZoneRetrieval.ipynb",
+        "file_path": "AORC_NWMProj_ZoneRetrieval.ipynb",
+        "extension": ".ipynb",
+        "checksum": "e8bf1b81d1cac43c2f42147faf21da98"
+    },
+    {
+        "file_name": "AORC_NWMProj_PointRetrieval.ipynb",
+        "file_path": "AORC_NWMProj_PointRetrieval.ipynb",
+        "extension": ".ipynb",
+        "checksum": "a7105764f9b80578e1b3e1a9f4761d66"
+    }
+]

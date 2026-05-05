@@ -1,0 +1,72 @@
+{
+    "title": "Data and Code for Building and Executing Scientific Workflows in the Cloud",
+    "abstract": "This resource contains data and codes demonstrating how to build and execute scientific workflows in the cloud using cyberinfrastructure developed as part of the \u201cHydroShare Modernization\u201d CIROH research project. The goal is to illustrate how the general-purpose cloud analysis workflows developed to support common data archival operations can also be leveraged for scientific computing. This notebook describes the process for using the outcomes of the aforementioned CIROH project; however, these capabilities are still under active development and are not ready for widespread public use.",
+    "language": "eng",
+    "subjects": [
+        "CIROH DevCon 2024",
+        "Reproducible Science",
+        "Cloud Workflows",
+        "Argo",
+        "NGEN"
+    ],
+    "creators": [
+        {
+            "name": "Garousi-Nejad, Irene",
+            "organization": "CUAHSI",
+            "email": "igarousi@cuahsi.org",
+            "creator_order": 1,
+            "hydroshare_user_id": 475,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=dKqI7iAAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Irene_Garousi-Nejad",
+                "ORCID": "https://orcid.org/0000-0003-2929-3946"
+            }
+        },
+        {
+            "name": "Castronova, Anthony M.",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 2,
+            "hydroshare_user_id": 11,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=ScWTFoQAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Anthony_Castronova",
+                "ORCID": "https://orcid.org/0000-0002-1341-5681"
+            }
+        },
+        {
+            "name": "Black, Scott",
+            "address": "US",
+            "organization": "CUAHSI;Utah State University",
+            "email": "sblack@cuahsi.org",
+            "creator_order": 3,
+            "hydroshare_user_id": 2351,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0009-0003-9687-2996"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA), University of Alabama",
+            "title": "CUAHSI HydroShare Modernization",
+            "funding_agency_url": "https://ciroh.ua.edu/research-projects/cuahsi-hydroshare-modernization/"
+        }
+    ],
+    "citation": "Garousi-Nejad, I., A. M. Castronova, S. Black (2025). Data and Code for Building and Executing Scientific Workflows in the Cloud, HydroShare, http://www.hydroshare.org/resource/0d0a8d67a7fe4676bc84f6973dde0fc8",
+    "url": "http://www.hydroshare.org/resource/0d0a8d67a7fe4676bc84f6973dde0fc8",
+    "identifier": "http://www.hydroshare.org/resource/0d0a8d67a7fe4676bc84f6973dde0fc8",
+    "created": "2024-05-30 15:28:16.805360+00:00",
+    "modified": "2025-04-17 18:52:44.017726+00:00",
+    "type": "CompositeResource"
+}

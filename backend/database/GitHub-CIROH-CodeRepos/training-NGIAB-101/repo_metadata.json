@@ -1,0 +1,76 @@
+{
+    "id": 938209490,
+    "name": "training-NGIAB-101",
+    "full_name": "CIROH-UA/training-NGIAB-101",
+    "html_url": "https://github.com/CIROH-UA/training-NGIAB-101",
+    "description": "This repository will be used for preparing training module for NGIAB",
+    "homepage": "http://docs.ciroh.org/training-NGIAB-101/",
+    "default_branch": "main",
+    "created_at": "2025-02-24T15:39:44Z",
+    "updated_at": "2026-04-16T13:32:43Z",
+    "pushed_at": "2026-04-30T20:54:36Z",
+    "language": null,
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 16338,
+    "stargazers_count": 2,
+    "watchers_count": 2,
+    "forks_count": 7,
+    "open_issues_count": 6,
+    "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null
+    },
+    "contributors_summary": {
+        "contributors_count": 6,
+        "top_contributors": [
+            {
+                "id": 170465264,
+                "login": "quinnylee",
+                "html_url": "https://github.com/quinnylee",
+                "type": "User",
+                "contributions": 65
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 18
+            },
+            {
+                "id": 43544549,
+                "login": "romer8",
+                "html_url": "https://github.com/romer8",
+                "type": "User",
+                "contributions": 13
+            },
+            {
+                "id": 69406976,
+                "login": "Sheargrub",
+                "html_url": "https://github.com/Sheargrub",
+                "type": "User",
+                "contributions": 10
+            },
+            {
+                "id": 9202282,
+                "login": "JeffCarver",
+                "html_url": "https://github.com/JeffCarver",
+                "type": "User",
+                "contributions": 7
+            },
+            {
+                "id": 120678271,
+                "login": "manjilasingh",
+                "html_url": "https://github.com/manjilasingh",
+                "type": "User",
+                "contributions": 3
+            }
+        ]
+    }
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/16f2de7e9de94148b868e9be795956bb">
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/16f2de7e9de94148b868e9be795956bb"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>Hydrofabric</dc:subject>
+    <dcterms:bibliographicCitation>Sturtevant, J., A. W. Wood (2025). Clear Creek at Golden, Colorado (USGS 06719505): Nextgen v2.2 hydrofabric and AORC forcings, HydroShare, http://www.hydroshare.org/resource/16f2de7e9de94148b868e9be795956bb</dcterms:bibliographicCitation>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>Clear Creek at Golden, Colorado (USGS 06719505) is a small, high-elevation, snow-dominated headwater basin on Colorado's Front Range that has been used as a pilot basin for modeling studies at the Colorado School of Mines (see: https://github.com/mines-ciroh/clear_creek_demo). In addition to its proximity to the Mines campus, Clear Creek at Golden, CO is also one of approximately 200 study basins in NOAA Office of Water Prediction's (OWP) Hydrologic Ensemble Forecast System (HEFS) testbed. This resource contains key model inputs to run NOAA's Next Generation Water Resources Modeling Framework (Nextgen) across Clear Creek. These data include 1) a geopackage containing the Clear Creek Nextgen v2.2 hydrofabric, with layers that describe the catchments, flowpaths, attributes, and more; and 2) the 1979-2024 retrospective AORC v1.1 forcings mapped to the Clear Creek v2.2 hydrofabric catchments in Nextgen-compliant netCDF format.&#13;
+&#13;
+Acknowledgements:&#13;
+- This dataset was supported by a project grant to the Colorado School of Mines (CSM) from the NOAA Cooperative Institute for Research to Operations in Hydrology (CIROH). CIROH is funded via the NOAA Cooperative Agreement with The University of Alabama (NA22NWS4320003).&#13;
+- The hydrofabric data on this resource were subset from v2.2 of the Lynker Spatial hydrofabric (s3://lynker-spatial/hydrofabric/v2.2/)&#13;
+&#13;
+Resources:&#13;
+https://github.com/mines-ciroh/clear_creek_demo&#13;
+https://www.lynker-spatial.com/data/hydrofabric/v2.2/conus/&#13;
+https://registry.opendata.aws/noaa-nws-aorc/&#13;
+https://water.noaa.gov/gauges/06719505&#13;
+https://waterdata.usgs.gov/monitoring-location/06719505</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>CIROH Hydrologic Prediction Testbed</dc:subject>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>name=Clear Creek at Golden, CO; projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=39.9; eastlimit=-105.2; southlimit=39.55; westlimit=-105.95</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2025-06-09T18:40:29.018753+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:subject>AORC</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27421</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27421</hsterms:description>
+        <hsterms:email>sturtevant.josh@gmail.com</hsterms:email>
+        <hsterms:organization>Colorado School of Mines</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:name>Sturtevant, Josh</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:language>eng</dc:language>
+    <dc:subject>Nextgen</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dc:subject>Hydrologic Modeling</dc:subject>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=1979-02-01T00:00:00; end=2024-12-31T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:email>andywood@ucar.edu</hsterms:email>
+        <hsterms:organization>NCAR;University of Colorado at Boulder</hsterms:organization>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:hydroshare_user_id>
+        <hsterms:name>Wood, Andrew W</hsterms:name>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:address>Colorado (CO), US</hsterms:address>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:description>
+        <hsterms:homepage></hsterms:homepage>
+      </rdf:Description>
+    </dc:creator>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:title>Clear Creek at Golden, Colorado (USGS 06719505): Nextgen v2.2 hydrofabric and AORC forcings</dc:title>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-06-12T14:04:34.084340+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+  </hsterms:CompositeResource>
+</rdf:RDF>

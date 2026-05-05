@@ -1,0 +1,3042 @@
+[
+  {
+    "idArtifact": 1,
+    "idArtifactType": 1,
+    "Title": "Contributing to CIROH Hub",
+    "URL": "https://docs.ciroh.org/docs/contribute/",
+    "idArtifactParent": null,
+    "description": "Find out how to contribute information to Hub.",
+    "tags": [
+      "CIROH",
+      "Hub",
+      "Contribute",
+      "Blog"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 2,
+    "idArtifactType": 1,
+    "Title": "Working with the CIROH Hub repository",
+    "URL": "https://docs.ciroh.org/docs/contribute/repository/",
+    "idArtifactParent": 1,
+    "description": "Learn how to submit pull requests to CIROH Hub and test changes locally.",
+    "tags": [
+      "CIROH",
+      "CIROH Hub",
+      "Contribute"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 3,
+    "idArtifactType": 1,
+    "Title": "CIROH Hub technologies",
+    "URL": "https://docs.ciroh.org/docs/contribute/technologies/",
+    "idArtifactParent": 1,
+    "description": "Learn more about the technologies that make up CIROH Hub.",
+    "tags": [
+      "CIROH",
+      "CIROH Hub",
+      "Contribute"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 4,
+    "idArtifactType": 1,
+    "Title": "Policies and Best Practices",
+    "URL": "https://docs.ciroh.org/docs/policies/",
+    "idArtifactParent": null,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Policies"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 5,
+    "idArtifactType": 1,
+    "Title": "Cyberinfrastructure",
+    "URL": "https://docs.ciroh.org/docs/policies/CyberinfrastructurePolicy/",
+    "idArtifactParent": 4,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Policies"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 6,
+    "idArtifactType": 1,
+    "Title": "Standard Operating Procedures",
+    "URL": "https://docs.ciroh.org/docs/policies/CyberinfrastructurePolicy/sop/",
+    "idArtifactParent": 5,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Policies"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 7,
+    "idArtifactType": 1,
+    "Title": "Data and Code Sharing",
+    "URL": "https://docs.ciroh.org/docs/policies/DataAndCodeSharingPolicy/",
+    "idArtifactParent": 4,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Policies"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 8,
+    "idArtifactType": 1,
+    "Title": "Policy and Guidance",
+    "URL": "https://docs.ciroh.org/docs/policies/DataAndCodeSharingPolicy/Policies/",
+    "idArtifactParent": 7,
+    "description": "Policy and Guidance for Data and Code Sharing Policy",
+    "tags": [
+      "CIROH",
+      "Policies"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 9,
+    "idArtifactType": 1,
+    "Title": "Recommendations",
+    "URL": "https://docs.ciroh.org/docs/policies/DataAndCodeSharingPolicy/Recommendations/",
+    "idArtifactParent": 7,
+    "description": "Recommendations for Data and Code Sharing Policy",
+    "tags": [
+      "CIROH",
+      "Policies"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 10,
+    "idArtifactType": 1,
+    "Title": "NextGen Framework",
+    "URL": "https://docs.ciroh.org/docs/policies/NextGen/",
+    "idArtifactParent": 4,
+    "description": "A comprehensive guide for integrating models and modules into the NextGen framework",
+    "tags": [
+      "CIROH",
+      "Policies",
+      "NGIAB",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 11,
+    "idArtifactType": 1,
+    "Title": "Community Resource Documentation",
+    "URL": "https://docs.ciroh.org/docs/products/",
+    "idArtifactParent": null,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Products",
+      "Software"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 12,
+    "idArtifactType": 1,
+    "Title": "Hydrofabric",
+    "URL": "https://docs.ciroh.org/docs/products/Hydrofabric/",
+    "idArtifactParent": 11,
+    "description": "An open-source R package for working with hydrologic data",
+    "tags": [
+      "Education",
+      "NOAA",
+      "Hydrofabric"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 13,
+    "idArtifactType": 1,
+    "Title": "CIROH Hydrologic Prediction Testbed (CHPT)",
+    "URL": "https://docs.ciroh.org/docs/products/chpt/",
+    "idArtifactParent": 11,
+    "description": "Testbed documenting and facilitating Prediction of Hydrologic Characteristics",
+    "tags": [
+      "Education",
+      "NOAA",
+      "CHPT"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 14,
+    "idArtifactType": 1,
+    "Title": "Harmful Algal Blooms",
+    "URL": "https://docs.ciroh.org/docs/products/chpt/habs/",
+    "idArtifactParent": 13,
+    "description": "Testbed Protocols for Predicting Harmful Algal Blooms",
+    "tags": [
+      "Education",
+      "NOAA",
+      "CHPT",
+      "HABS"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 15,
+    "idArtifactType": 1,
+    "Title": "Community Flood Inundation Mapping",
+    "URL": "https://docs.ciroh.org/docs/products/community-fim/",
+    "idArtifactParent": 11,
+    "description": "Community Flood Inundation Mapping",
+    "tags": [
+      "Products",
+      "Flood Inundation Mapping"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 16,
+    "idArtifactType": 1,
+    "Title": "FIM Database for Multi-Model Visualization",
+    "URL": "https://docs.ciroh.org/docs/products/community-fim/fim-database/",
+    "idArtifactParent": 15,
+    "description": "Documentation for creating a FIM database for flood scenarios visualization and comparison.",
+    "tags": [
+      "Products",
+      "Flood Inundation Mapping"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 17,
+    "idArtifactType": 1,
+    "Title": "FIM Evaluation Framework",
+    "URL": "https://docs.ciroh.org/docs/products/community-fim/fimeval/",
+    "idArtifactParent": 15,
+    "description": "FIM Evaluation Framework",
+    "tags": [
+      "Products",
+      "Flood Inundation Mapping"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 18,
+    "idArtifactType": 1,
+    "Title": "FIM as a Service",
+    "URL": "https://docs.ciroh.org/docs/products/community-fim/fimserv/",
+    "idArtifactParent": 15,
+    "description": "FIM as a Service",
+    "tags": [
+      "Products",
+      "Flood Inundation Mapping"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 19,
+    "idArtifactType": 1,
+    "Title": "Data Management and Access Tools",
+    "URL": "https://docs.ciroh.org/docs/products/data-management/",
+    "idArtifactParent": 11,
+    "description": "Data Management and Access Tools",
+    "tags": [
+      "Products"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 20,
+    "idArtifactType": 1,
+    "Title": "NWM BigQuery API",
+    "URL": "https://docs.ciroh.org/docs/products/data-management/bigquery-api/",
+    "idArtifactParent": 19,
+    "description": "REST API backed by National Water Model data, developed on Google Cloud Platform",
+    "tags": [
+      "Products",
+      "National Water Model",
+      "Google Cloud",
+      "BigQuery",
+      "CIROH"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 21,
+    "idArtifactType": 1,
+    "Title": "Data Access",
+    "URL": "https://docs.ciroh.org/docs/products/data-management/dataaccess/",
+    "idArtifactParent": 19,
+    "description": "Input and Output of NWM",
+    "tags": [
+      "Products",
+      "CIROH",
+      "National Water Model",
+      "AWS",
+      "Google Cloud",
+      "NOAA"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 22,
+    "idArtifactType": 1,
+    "Title": "nwmurl",
+    "URL": "https://docs.ciroh.org/docs/products/data-management/dataaccess/NWMURL Library/",
+    "idArtifactParent": 21,
+    "description": "",
+    "tags": [
+      "Products",
+      "CIROH",
+      "National Water Model",
+      "AWS",
+      "Google Cloud",
+      "NOAA"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 23,
+    "idArtifactType": 1,
+    "Title": "HydroServer",
+    "URL": "https://docs.ciroh.org/docs/products/data-management/hydroserver/",
+    "idArtifactParent": 19,
+    "description": "HydroServer Portal",
+    "tags": [
+      "Products",
+      "CIROH",
+      "National Water Model",
+      "AWS"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 24,
+    "idArtifactType": 1,
+    "Title": "HydroShare",
+    "URL": "https://docs.ciroh.org/docs/products/data-management/hydroshare/",
+    "idArtifactParent": 19,
+    "description": "HydroShare",
+    "tags": [
+      "Products",
+      "CIROH",
+      "HydroShare",
+      "JupyterHub",
+      "CUAHSI"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 25,
+    "idArtifactType": 1,
+    "Title": "NETWA",
+    "URL": "https://docs.ciroh.org/docs/products/data-management/netwa/",
+    "idArtifactParent": 19,
+    "description": "NETWA",
+    "tags": [
+      "Products",
+      "CIROH"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 26,
+    "idArtifactType": 1,
+    "Title": "Getting Started",
+    "URL": "https://docs.ciroh.org/docs/products/data-management/netwa/gettingstarted/",
+    "idArtifactParent": 25,
+    "description": "Getting started with NETWA",
+    "tags": [
+      "Products",
+      "CIROH"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 27,
+    "idArtifactType": 1,
+    "Title": "Water Prediction Node",
+    "URL": "https://docs.ciroh.org/docs/products/data-management/waternode/",
+    "idArtifactParent": 19,
+    "description": "Water Node Website",
+    "tags": [
+      "Products",
+      "NOAA",
+      "CIROH"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 28,
+    "idArtifactType": 1,
+    "Title": "Evaluation Tools",
+    "URL": "https://docs.ciroh.org/docs/products/evaluation/",
+    "idArtifactParent": 11,
+    "description": "Evaluation Tools",
+    "tags": [
+      "Products"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 29,
+    "idArtifactType": 1,
+    "Title": "CSES",
+    "URL": "https://docs.ciroh.org/docs/products/evaluation/cses/",
+    "idArtifactParent": 28,
+    "description": "Community Streamflow Evaluation System",
+    "tags": [
+      "Products",
+      "CIROH",
+      "CSES"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 30,
+    "idArtifactType": 1,
+    "Title": "TEEHR",
+    "URL": "https://docs.ciroh.org/docs/products/evaluation/rtiteehr/",
+    "idArtifactParent": 28,
+    "description": "Tools for Exploratory Evaluation in Hydrologic Research",
+    "tags": [
+      "Products",
+      "National Water Model",
+      "TEEHR",
+      "CIROH"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 31,
+    "idArtifactType": 1,
+    "Title": "Machine Learning and AI Tools",
+    "URL": "https://docs.ciroh.org/docs/products/ml-ai/",
+    "idArtifactParent": 11,
+    "description": "Machine Learning and AI Tools",
+    "tags": [
+      "Products",
+      "AI and Machine Learning"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 32,
+    "idArtifactType": 1,
+    "Title": "NWM-ML",
+    "URL": "https://docs.ciroh.org/docs/products/ml-ai/nwm_ml/",
+    "idArtifactParent": 31,
+    "description": "National Water Model - Machine Learning",
+    "tags": [
+      "Products",
+      "CIROH",
+      "National Water Model",
+      "AI and Machine Learning"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 33,
+    "idArtifactType": 1,
+    "Title": "SWEML",
+    "URL": "https://docs.ciroh.org/docs/products/ml-ai/sweml/",
+    "idArtifactParent": 31,
+    "description": "Snow Water Equivalent Machine Learning",
+    "tags": [
+      "Products",
+      "CIROH",
+      "Snow Sensing",
+      "AI and Machine Learning"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 34,
+    "idArtifactType": 1,
+    "Title": "Mobile Apps",
+    "URL": "https://docs.ciroh.org/docs/products/mobile-apps/",
+    "idArtifactParent": 11,
+    "description": "Mobile Apps",
+    "tags": [
+      "Products",
+      "Mobile Apps"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 35,
+    "idArtifactType": 1,
+    "Title": "CIROH RIVR App",
+    "URL": "https://docs.ciroh.org/docs/products/mobile-apps/RIVR/",
+    "idArtifactParent": 34,
+    "description": "CIROH RIVR App",
+    "tags": [
+      "Products",
+      "Mobile Apps"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 36,
+    "idArtifactType": 1,
+    "Title": "What is the National Water Model?",
+    "URL": "https://docs.ciroh.org/docs/products/national-water-model/",
+    "idArtifactParent": 11,
+    "description": "Introduction to the National Water Model",
+    "tags": [
+      "Education",
+      "National Water Model",
+      "NOAA"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 37,
+    "idArtifactType": 1,
+    "Title": "NextGen In A Box",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/",
+    "idArtifactParent": 11,
+    "description": "Community NextGen",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "NextGen Datastream",
+      "HPC",
+      "Cloud Services",
+      "Singularity",
+      "Docker",
+      "National Water Model",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 38,
+    "idArtifactType": 1,
+    "Title": "Community NextGen Repos",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/community-nextgen-repos/",
+    "idArtifactParent": 37,
+    "description": "Community open-source repositories that are integrated in NextGen In A Box (NGIAB).",
+    "tags": [
+      "National Water Model",
+      "NOAA",
+      "NGIAB",
+      "CIROH",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 39,
+    "idArtifactType": 1,
+    "Title": "lstm",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/community-nextgen-repos/lstm/",
+    "idArtifactParent": 38,
+    "description": "Cutting edge neural network-based modeling, adapted and optimized for the BMI standard.",
+    "tags": [
+      "National Water Model",
+      "NOAA",
+      "NGIAB",
+      "CIROH",
+      "AI and Machine Learning",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 40,
+    "idArtifactType": 1,
+    "Title": "ngen",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/community-nextgen-repos/ngen/",
+    "idArtifactParent": 38,
+    "description": "The core engine of the NextGen framework.",
+    "tags": [
+      "National Water Model",
+      "NOAA",
+      "NGIAB",
+      "CIROH",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 41,
+    "idArtifactType": 1,
+    "Title": "rust-lstm",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/community-nextgen-repos/rust-lstm/",
+    "idArtifactParent": 38,
+    "description": "A Rust implementation of a BMI (Basic Model Interface) adapter for LSTM-based streamflow prediction.",
+    "tags": [
+      "National Water Model",
+      "NOAA",
+      "NGIAB",
+      "CIROH",
+      "AI and Machine Learning",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 42,
+    "idArtifactType": 1,
+    "Title": "t-route",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/community-nextgen-repos/t-route/",
+    "idArtifactParent": 38,
+    "description": "A Python package for generating realistic and hydrologically consistent channel networks.",
+    "tags": [
+      "National Water Model",
+      "NOAA",
+      "NGIAB",
+      "CIROH",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 43,
+    "idArtifactType": 1,
+    "Title": "Components",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/components/",
+    "idArtifactParent": 37,
+    "description": "Get the most out of sub-utilities in the NGIAB ecosystem.",
+    "tags": [
+      "CIROH",
+      "NGIAB",
+      "Products"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 44,
+    "idArtifactType": 1,
+    "Title": "Community Hydrofabric Patcher",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/components/community-hydrofabric/",
+    "idArtifactParent": 43,
+    "description": "Community Hydrofabric Patcher",
+    "tags": [
+      "CIROH",
+      "Hydrofabric",
+      "Products"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 45,
+    "idArtifactType": 1,
+    "Title": "NGIAB Calibration",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/components/ngiab-calibration/",
+    "idArtifactParent": 43,
+    "description": "Callibrate your models to improve their output.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "National Water Model",
+      "Calibration"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 46,
+    "idArtifactType": 1,
+    "Title": "NGIAB Data Preprocess",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/components/ngiab-preprocessor/",
+    "idArtifactParent": 43,
+    "description": "Automatically process data for the NextGen directory structure.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "National Water Model",
+      "Data Preparation"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 47,
+    "idArtifactType": 1,
+    "Title": "NGIAB TEEHR Integration",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/components/ngiab-teehr/",
+    "idArtifactParent": 43,
+    "description": "Use the TEEHR toolkit to evaluate your model runs.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Cloud Services",
+      "Docker",
+      "National Water Model",
+      "TEEHR"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 48,
+    "idArtifactType": 1,
+    "Title": "NGIAB Tethys Visualization Integration",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/components/ngiab-visualizer/",
+    "idArtifactParent": 43,
+    "description": "Visualize your model output with both spatial navigation and temporal graphing.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Cloud Services",
+      "Docker",
+      "National Water Model",
+      "Education",
+      "Tethys Platform"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 49,
+    "idArtifactType": 1,
+    "Title": "GitHub Repository Dashboard",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/dashboard/",
+    "idArtifactParent": 37,
+    "description": "A dashboard for viewing CIROH's managed repositories and workflows.",
+    "tags": [
+      "CIROH",
+      "NGIAB",
+      "Products"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 50,
+    "idArtifactType": 1,
+    "Title": "Distributions",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/",
+    "idArtifactParent": 37,
+    "description": "Standalone packages for running NGIAB.",
+    "tags": [
+      "CIROH",
+      "NGIAB",
+      "NextGen",
+      "Products"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 51,
+    "idArtifactType": 1,
+    "Title": "NextGen on CIROH-2i2c JupyterHub",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/",
+    "idArtifactParent": 50,
+    "description": "A dedicated image on CIROH-2i2c JupyterHub for running NextGen In A Box.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen",
+      "Services",
+      "JupyterHub",
+      "2i2c",
+      "HydroShare",
+      "Hydrofabric"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 52,
+    "idArtifactType": 1,
+    "Title": "NGIAB-CloudInfra",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/",
+    "idArtifactParent": 50,
+    "description": "A Docker-based NGIAB distribution; suitable for both local and cloud-based workflows.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "NextGen",
+      "CIROH",
+      "Cloud Services",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 53,
+    "idArtifactType": 1,
+    "Title": "Building the NGIAB Docker Container",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/building/",
+    "idArtifactParent": 52,
+    "description": "Guidance on how NGIAB's Docker container is built.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 54,
+    "idArtifactType": 1,
+    "Title": "Contact Us",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/contact/",
+    "idArtifactParent": 52,
+    "description": "How to contact the maintainers of NGIAB's Docker distribution",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 55,
+    "idArtifactType": 1,
+    "Title": "Contribution Guidelines",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/contribute/",
+    "idArtifactParent": 52,
+    "description": "Contributor's guide for NGIAB.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 56,
+    "idArtifactType": 1,
+    "Title": "Getting Started",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/getting-started/",
+    "idArtifactParent": 52,
+    "description": "A brief introduction to NGIAB.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 57,
+    "idArtifactType": 1,
+    "Title": "Installation",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/install/",
+    "idArtifactParent": 52,
+    "description": "Tutorial to install NGIAB via Docker.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 58,
+    "idArtifactType": 1,
+    "Title": "Specifications",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/",
+    "idArtifactParent": 52,
+    "description": "A specifications guide for NGIAB.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 59,
+    "idArtifactType": 1,
+    "Title": "Containers and Guide Scripts",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/containers/",
+    "idArtifactParent": 58,
+    "description": "Guidance on NGIAB's associated containers and guide scripts.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 60,
+    "idArtifactType": 1,
+    "Title": "Included Models",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/models/",
+    "idArtifactParent": 58,
+    "description": "Guidance on models included within NGIAB.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 61,
+    "idArtifactType": 1,
+    "Title": "Realization Files",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/realizations/",
+    "idArtifactParent": 58,
+    "description": "Guidance on NextGen realization files.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 62,
+    "idArtifactType": 1,
+    "Title": "Model Run Directories",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-docker/specifications/run-directories/",
+    "idArtifactParent": 58,
+    "description": "Guidance on NGIAB's model run directories.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Docker",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 63,
+    "idArtifactType": 1,
+    "Title": "NGIAB-HPCInfra",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/distributions/ngiab-singularity/",
+    "idArtifactParent": 50,
+    "description": "A Singularity-based NGIAB distribution; suitable for high-performance computing (HPC) environments.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "NextGen",
+      "CIROH",
+      "HPC",
+      "Singularity",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 64,
+    "idArtifactType": 1,
+    "Title": "Intro to NGIAB",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/intro/",
+    "idArtifactParent": 37,
+    "description": "Introductory and ecosystem-wide information for NGIAB.",
+    "tags": [
+      "CIROH",
+      "NGIAB",
+      "NextGen",
+      "Products"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 65,
+    "idArtifactType": 1,
+    "Title": "NGIAB at a Glance",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/intro/at-a-glance/",
+    "idArtifactParent": 64,
+    "description": "A tour of the capabilities of the NGIAB ecosystem.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "National Water Model",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 66,
+    "idArtifactType": 1,
+    "Title": "Run Configuration Directory Structure",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/intro/directories/",
+    "idArtifactParent": 64,
+    "description": "The directory structure used by NGIAB to define model runs.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "National Water Model",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 67,
+    "idArtifactType": 1,
+    "Title": "Glossary",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/intro/glossary/",
+    "idArtifactParent": 64,
+    "description": "A quick reference for terms and jargon pertaining to NGIAB.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "National Water Model",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 68,
+    "idArtifactType": 1,
+    "Title": "Installing NGIAB Locally",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/intro/install/",
+    "idArtifactParent": 64,
+    "description": "A guide to install NGIAB locally.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "Cloud Services",
+      "Docker",
+      "National Water Model",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 69,
+    "idArtifactType": 1,
+    "Title": "NWM, NextGen, and NGIAB",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/intro/what-is/",
+    "idArtifactParent": 64,
+    "description": "An introduction to the NextGen Framework and its related models.",
+    "tags": [
+      "Products",
+      "NGIAB",
+      "CIROH",
+      "National Water Model",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 70,
+    "idArtifactType": 1,
+    "Title": "Cyberinfrastructure and Community NextGen Office Hours",
+    "URL": "https://docs.ciroh.org/docs/products/ngiab/office-hours/",
+    "idArtifactParent": 37,
+    "description": "Need help with NGIAB or CIROH Cyberinfrastructure. Join us for office hours!",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "Services",
+      "On-Premises Services",
+      "Cloud Services",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 71,
+    "idArtifactType": 1,
+    "Title": "NextGen Research Datastream",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/",
+    "idArtifactParent": 11,
+    "description": "Research Datastream",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen",
+      "NextGen Datastream",
+      "AWS",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 72,
+    "idArtifactType": 1,
+    "Title": "DatastreamCLI",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/",
+    "idArtifactParent": 71,
+    "description": "The software backend of the Research Datastream.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 73,
+    "idArtifactType": 1,
+    "Title": "Internal Breakdown",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/breakdown/",
+    "idArtifactParent": 72,
+    "description": "An end-to-end tour of the internal workings of DataStreamCLI.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 74,
+    "idArtifactType": 1,
+    "Title": "Directory Structure",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/directories/",
+    "idArtifactParent": 72,
+    "description": "The directory structure in DataStreamCLI.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 75,
+    "idArtifactType": 1,
+    "Title": "Installation",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/install/",
+    "idArtifactParent": 72,
+    "description": "Learn what you'll need to install DataStreamCLI.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 76,
+    "idArtifactType": 1,
+    "Title": "Available Models",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/models/",
+    "idArtifactParent": 72,
+    "description": "The available models in DataStreamCLI.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 77,
+    "idArtifactType": 1,
+    "Title": "CLI Options",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/options/",
+    "idArtifactParent": 72,
+    "description": "The available options in DataStreamCLI.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 78,
+    "idArtifactType": 1,
+    "Title": "Datastream Python Tools",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/python_tools/",
+    "idArtifactParent": 72,
+    "description": "Scripts to create ngen bmi module configuration files and validate ngen-run packages.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "AWS",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 79,
+    "idArtifactType": 1,
+    "Title": "Usage Guide",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/usage/",
+    "idArtifactParent": 72,
+    "description": "How to get the most out of DataStreamCLI.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 80,
+    "idArtifactType": 1,
+    "Title": "Forcing Processor",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/forcingprocessor/",
+    "idArtifactParent": 71,
+    "description": "Converts National Water Model (NWM) forcing data into Next Generation National Water Model (NextGen) forcing data.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 81,
+    "idArtifactType": 1,
+    "Title": "Forcing Sources",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/forcingprocessor/forcing_sources/",
+    "idArtifactParent": 80,
+    "description": "An overview of Forcing Processor sources.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 82,
+    "idArtifactType": 1,
+    "Title": "NextGen Research Datastream",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/nrds-aws/",
+    "idArtifactParent": 71,
+    "description": "Infrastructure-as-Code for the NextGen Research Datastream, ready to be deployed anywhere via Terraform.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "AWS",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 83,
+    "idArtifactType": 1,
+    "Title": "Operational Changelog",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/nrds-aws/changelog/",
+    "idArtifactParent": 82,
+    "description": "Summary of changes to NRDS, as it is currently deployed.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "AWS",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 84,
+    "idArtifactType": 1,
+    "Title": "NextGen Research Datastream for On-Premises",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/nrds-onprem/",
+    "idArtifactParent": 71,
+    "description": "[IN DEVELOPMENT] Infrastructure-as-Code for the NextGen Research Datastream, ready to be deployed anywhere via OpenStack.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 85,
+    "idArtifactType": 1,
+    "Title": "nwmurl",
+    "URL": "https://docs.ciroh.org/docs/products/research-datastream/nwmurl/",
+    "idArtifactParent": 71,
+    "description": "A simple Python library for handling NWM data URLs.",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NGIAB",
+      "NextGen Datastream",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 86,
+    "idArtifactType": 1,
+    "Title": "Snow Sensing and Modeling Tools",
+    "URL": "https://docs.ciroh.org/docs/products/snow-tools/",
+    "idArtifactParent": 11,
+    "description": "Snow Sensing and Modeling Tools",
+    "tags": [
+      "Products",
+      "CIROH",
+      "Snow Sensing"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 87,
+    "idArtifactType": 1,
+    "Title": "Optimized Snow Sensor Location",
+    "URL": "https://docs.ciroh.org/docs/products/snow-tools/optimize-sensors/",
+    "idArtifactParent": 86,
+    "description": "Optimized Snow Sensor Location",
+    "tags": [
+      "Products",
+      "CIROH",
+      "Snow Sensing"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 88,
+    "idArtifactType": 1,
+    "Title": "Intro to Snow Observations Modeling Analysis",
+    "URL": "https://docs.ciroh.org/docs/products/snow-tools/snow-intro/",
+    "idArtifactParent": 86,
+    "description": "Intro to Snow Observations Modeling Analysis",
+    "tags": [
+      "Products",
+      "CIROH",
+      "Snow Sensing"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 89,
+    "idArtifactType": 1,
+    "Title": "Snow Sensing",
+    "URL": "https://docs.ciroh.org/docs/products/snow-tools/snow-sensing/",
+    "idArtifactParent": 86,
+    "description": "Snow Sensing",
+    "tags": [
+      "Products",
+      "CIROH",
+      "Snow Sensing"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 90,
+    "idArtifactType": 1,
+    "Title": "SWEMLv2.0",
+    "URL": "https://docs.ciroh.org/docs/products/snow-tools/sweml-v2-0/",
+    "idArtifactParent": 86,
+    "description": "SWEMLv2.0",
+    "tags": [
+      "Products",
+      "CIROH",
+      "Snow Sensing"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 91,
+    "idArtifactType": 1,
+    "Title": "Visualization and Analysis Tools",
+    "URL": "https://docs.ciroh.org/docs/products/visualization/",
+    "idArtifactParent": 11,
+    "description": "Visualization and Analysis Tools",
+    "tags": [
+      "Products"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 92,
+    "idArtifactType": 1,
+    "Title": "Tethys-CSES",
+    "URL": "https://docs.ciroh.org/docs/products/visualization/tethys-cses/",
+    "idArtifactParent": 91,
+    "description": "Community Streamflow Evaluation System (CSES) - Tethys Web Application",
+    "tags": [
+      "Products",
+      "CIROH",
+      "NOAA",
+      "Alabama Water Institute",
+      "Tethys Platform",
+      "CSES"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 93,
+    "idArtifactType": 1,
+    "Title": "Publications",
+    "URL": "https://docs.ciroh.org/docs/publications/",
+    "idArtifactParent": null,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Publications"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 94,
+    "idArtifactType": 1,
+    "Title": "CIROH CyberInfrastructure",
+    "URL": "https://docs.ciroh.org/docs/services/",
+    "idArtifactParent": null,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Services",
+      "HPC",
+      "On-Premises Services",
+      "Cloud Services"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 95,
+    "idArtifactType": 1,
+    "Title": "Infrastructure Access",
+    "URL": "https://docs.ciroh.org/docs/services/access/",
+    "idArtifactParent": 94,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Services",
+      "HPC",
+      "On-Premises Services",
+      "Cloud Services",
+      "2i2c",
+      "AWS",
+      "Google Cloud",
+      "JupyterHub",
+      "Pantarhei",
+      "Wukong",
+      "BigQuery"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 96,
+    "idArtifactType": 1,
+    "Title": "Public Cloud",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/",
+    "idArtifactParent": 94,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 97,
+    "idArtifactType": 1,
+    "Title": "CIROH-2i2c JupyterHub",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/",
+    "idArtifactParent": 96,
+    "description": "2i2c JupyterHub is a cloud-based JupyterHub environment specifically designed for hydrological researchers. It is powered by 2i2c JupyterHub, a cloud-based JupyterHub environment specifically on Google Cloud",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "Google Cloud"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 98,
+    "idArtifactType": 1,
+    "Title": "Server Image Configurations",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/available-images/",
+    "idArtifactParent": 97,
+    "description": "Explore CIROH's available image configurations.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "Google Cloud",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 99,
+    "idArtifactType": 1,
+    "Title": "Persistent Conda Environment",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/conda/",
+    "idArtifactParent": 97,
+    "description": "Maintain your Conda environments between sessions.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "Google Cloud",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 100,
+    "idArtifactType": 1,
+    "Title": "Request Custom Images",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/custom-images/",
+    "idArtifactParent": 97,
+    "description": "Request JupyterHub server images tailored to your needs.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "Google Cloud",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 101,
+    "idArtifactType": 1,
+    "Title": "JupyterHub User Directory",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/directory/",
+    "idArtifactParent": 97,
+    "description": "Learn to navigate the 2i2c JupyterHub file system.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "Google Cloud",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 102,
+    "idArtifactType": 1,
+    "Title": "Manage files in GCP bucket",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/gcp-object-storage/",
+    "idArtifactParent": 97,
+    "description": "Take advantage of Google Cloud Bucket storage.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "Google Cloud",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 103,
+    "idArtifactType": 1,
+    "Title": "Push and Pull to GitHub",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/github-push/",
+    "idArtifactParent": 97,
+    "description": "Push to your GitHub repositories from the cloud.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "Google Cloud",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 104,
+    "idArtifactType": 1,
+    "Title": "HydroShare Integration",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/hydroshare-integration/",
+    "idArtifactParent": 97,
+    "description": "Easily launch and execute notebooks from HydroShare.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "HydroShare",
+      "Google Cloud",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 105,
+    "idArtifactType": 1,
+    "Title": "Python Package Version Conflicts",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/python-package-conflicts/",
+    "idArtifactParent": 97,
+    "description": "Debug version conflicts between your Python packages.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "Google Cloud",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 106,
+    "idArtifactType": 1,
+    "Title": "Prevent Server Timeout",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/2i2c/server-timeout/",
+    "idArtifactParent": 97,
+    "description": "Keep your server active to sustain long-running tasks.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "JupyterHub",
+      "2i2c",
+      "Google Cloud",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 107,
+    "idArtifactType": 1,
+    "Title": "HydroShare",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/HydroShare/",
+    "idArtifactParent": 96,
+    "description": "A web-based hydrologic information system for data and model sharing.",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "HydroShare"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 108,
+    "idArtifactType": 1,
+    "Title": "CIROH AWS Account",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/aws/",
+    "idArtifactParent": 96,
+    "description": "AWS Research Cloud",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "AWS"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 109,
+    "idArtifactType": 1,
+    "Title": "Documentation and Tutorial",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/aws/documentation/",
+    "idArtifactParent": 108,
+    "description": "AWS documentations",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "AWS",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 110,
+    "idArtifactType": 1,
+    "Title": "AWS Best Practices",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/aws/documentation/aws-best-practice/",
+    "idArtifactParent": 109,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "AWS",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 111,
+    "idArtifactType": 1,
+    "Title": "",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/aws/documentation/data-science-tools/",
+    "idArtifactParent": 109,
+    "description": "AWS Data Science Tools",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "AWS",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 112,
+    "idArtifactType": 1,
+    "Title": "Tag Resources on AWS",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/aws/documentation/tagging/",
+    "idArtifactParent": 109,
+    "description": "AWS tags for cost tracking",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "AWS",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 113,
+    "idArtifactType": 1,
+    "Title": "CIROH AWS Office Hours",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/aws/officehours/",
+    "idArtifactParent": 108,
+    "description": "CIROH AWS Office Hours",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "AWS",
+      "Education"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 114,
+    "idArtifactType": 1,
+    "Title": "Cloud Services Blogs",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/cloudserviceblogs/",
+    "idArtifactParent": 96,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "2i2c",
+      "Google Cloud",
+      "AWS"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 115,
+    "idArtifactType": 1,
+    "Title": "CUAHSI JupyterHub",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/cuahsi/",
+    "idArtifactParent": 96,
+    "description": "cuahsi jupyterhub",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "CUAHSI",
+      "JupyterHub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 116,
+    "idArtifactType": 1,
+    "Title": "CIROH Google Account",
+    "URL": "https://docs.ciroh.org/docs/services/cloudservices/google-cloud/",
+    "idArtifactParent": 96,
+    "description": "Google Research Cloud",
+    "tags": [
+      "CIROH",
+      "Services",
+      "Cloud Services",
+      "Google Cloud"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 117,
+    "idArtifactType": 1,
+    "Title": "External Resources",
+    "URL": "https://docs.ciroh.org/docs/services/external-resources/",
+    "idArtifactParent": 94,
+    "description": "",
+    "tags": [
+      "Services",
+      "NSF Access",
+      "NSF",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 118,
+    "idArtifactType": 1,
+    "Title": "NSF Access",
+    "URL": "https://docs.ciroh.org/docs/services/external-resources/nsf-access/",
+    "idArtifactParent": 117,
+    "description": "",
+    "tags": [
+      "Services",
+      "NSF Access",
+      "NSF",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 119,
+    "idArtifactType": 1,
+    "Title": "Anvil",
+    "URL": "https://docs.ciroh.org/docs/services/external-resources/nsf-access/anvil/",
+    "idArtifactParent": 118,
+    "description": "Accessing and Using Anvil",
+    "tags": [
+      "Services",
+      "NSF Access",
+      "NSF",
+      "HPC",
+      "Purdue University",
+      "Anvil"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 120,
+    "idArtifactType": 1,
+    "Title": "NSF NCAR Derecho",
+    "URL": "https://docs.ciroh.org/docs/services/external-resources/nsf-access/derecho/",
+    "idArtifactParent": 118,
+    "description": "Accessing and Using JetStream2",
+    "tags": [
+      "Services",
+      "NSF Access",
+      "NSF",
+      "HPC",
+      "Derecho"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 121,
+    "idArtifactType": 1,
+    "Title": "JetStream2",
+    "URL": "https://docs.ciroh.org/docs/services/external-resources/nsf-access/jetstream/",
+    "idArtifactParent": 118,
+    "description": "Accessing and Using JetStream2",
+    "tags": [
+      "Services",
+      "NSF Access",
+      "NSF",
+      "HPC",
+      "Indiana University",
+      "JetStream2"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 122,
+    "idArtifactType": 1,
+    "Title": "On-Premises",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/",
+    "idArtifactParent": 94,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Pantarhei",
+      "Wukong",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 123,
+    "idArtifactType": 1,
+    "Title": "Pantarhei",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Pantarhei/",
+    "idArtifactParent": 122,
+    "description": "Pantarhei HPC Cluster",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Pantarhei",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 124,
+    "idArtifactType": 1,
+    "Title": "Running Jobs",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Pantarhei/RunningJobs/",
+    "idArtifactParent": 123,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Pantarhei",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 125,
+    "idArtifactType": 1,
+    "Title": "Accessing the Compute Nodes",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Pantarhei/RunningJobs/computenode/",
+    "idArtifactParent": 124,
+    "description": "Accessing compute notes in Pantarhei",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Pantarhei",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 126,
+    "idArtifactType": 1,
+    "Title": "Accessing the System",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Pantarhei/access/",
+    "idArtifactParent": 123,
+    "description": "Access of On-Premises Cluster Pantarhei",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Pantarhei",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 127,
+    "idArtifactType": 1,
+    "Title": "Obtaining an Account",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Pantarhei/obtain/",
+    "idArtifactParent": 123,
+    "description": "Obtain an account on Pantarhei",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Pantarhei",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 128,
+    "idArtifactType": 1,
+    "Title": "System Architecture",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Pantarhei/sysinfo/",
+    "idArtifactParent": 123,
+    "description": "System Architecture of Pantarhei",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Pantarhei",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 129,
+    "idArtifactType": 1,
+    "Title": "Wukong",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Wukong/",
+    "idArtifactParent": 122,
+    "description": "Wukong HPC Cluster",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Wukong",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 130,
+    "idArtifactType": 1,
+    "Title": "Accessing the System",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Wukong/access/",
+    "idArtifactParent": 129,
+    "description": "Access of On-Premises Cluster Wukong",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Wukong",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 131,
+    "idArtifactType": 1,
+    "Title": "Obtaining an Account",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Wukong/obtain/",
+    "idArtifactParent": 129,
+    "description": "Obtain an account on Wukong",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Wukong",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 132,
+    "idArtifactType": 1,
+    "Title": "System Architecture",
+    "URL": "https://docs.ciroh.org/docs/services/on-prem/Wukong/sysinfo/",
+    "idArtifactParent": 129,
+    "description": "System Architecture of Wukong",
+    "tags": [
+      "CIROH",
+      "Services",
+      "On-Premises Services",
+      "Wukong",
+      "HPC"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 133,
+    "idArtifactType": 1,
+    "Title": "CIROH Subdomain Request Form",
+    "URL": "https://docs.ciroh.org/docs/services/subdomain/",
+    "idArtifactParent": 94,
+    "description": "",
+    "tags": [
+      "CIROH",
+      "Services"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 134,
+    "idArtifactType": 1,
+    "Title": "AWRA 2024 Spring Conference",
+    "URL": "https://docs.ciroh.org/blog/AWRA 2024 Spring Conference/",
+    "idArtifactParent": null,
+    "description": "AWRA 2024 Spring Conference",
+    "tags": [
+      "Blog",
+      "Conference",
+      "Alabama Water Institute",
+      "CIROH",
+      "NextGen Datastream",
+      "National Water Model",
+      "NGIAB",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 135,
+    "idArtifactType": 1,
+    "Title": "CIROH Cloud User Success Story",
+    "URL": "https://docs.ciroh.org/blog/August Monthly Blog Update/",
+    "idArtifactParent": null,
+    "description": "August Monthly Blog Update",
+    "tags": [
+      "Blog",
+      "CIROH",
+      "Monthly Update",
+      "AWS",
+      "Google Cloud",
+      "JupyterHub",
+      "HPC",
+      "NextGen Datastream",
+      "Cloud Services",
+      "National Water Model",
+      "TEEHR. NGIAB"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 136,
+    "idArtifactType": 1,
+    "Title": "Monthly News Update - February 2024",
+    "URL": "https://docs.ciroh.org/blog/Community NextGen Updates Feb 2024/",
+    "idArtifactParent": null,
+    "description": "News and release notes for Community NextGen",
+    "tags": [
+      "Blog",
+      "Monthly Update",
+      "CIROH",
+      "On-Premises Services",
+      "National Water Model",
+      "NGIAB",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 137,
+    "idArtifactType": 1,
+    "Title": "Monthly News Update - March 2024",
+    "URL": "https://docs.ciroh.org/blog/Community NextGen Updates March 2024/",
+    "idArtifactParent": null,
+    "description": "News and release notes for Community NextGen",
+    "tags": [
+      "Blog",
+      "Monthly Update",
+      "HPC",
+      "Singularity",
+      "On-Premises Services",
+      "National Water Model",
+      "CIROH",
+      "Conference"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 138,
+    "idArtifactType": 1,
+    "Title": "CIROH at AGU 2024",
+    "URL": "https://docs.ciroh.org/blog/December Monthly Blog Update/",
+    "idArtifactParent": null,
+    "description": "December Monthly Blog Update",
+    "tags": [
+      "Blog",
+      "Conference",
+      "CIROH",
+      "Monthly Update"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 139,
+    "idArtifactType": 1,
+    "Title": "Pennsylvania State University Researchers Leverage CIROH Cyberinfrastructure for Advanced Hydrological Modeling ",
+    "URL": "https://docs.ciroh.org/blog/February Monthly Blog Update/",
+    "idArtifactParent": null,
+    "description": "February Monthly Blog Update",
+    "tags": [
+      "CIROH",
+      "Blog",
+      "Community Spotlight",
+      "Pennsylvania State University",
+      "Monthly Update",
+      "Wukong",
+      "AWS",
+      "HPC",
+      "National Water Model",
+      "On-Premises Services",
+      "Cloud Services",
+      "AI and Machine Learning"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 140,
+    "idArtifactType": 1,
+    "Title": "Google Cloud Next '24: A Flood of Innovation and Inspiration",
+    "URL": "https://docs.ciroh.org/blog/Google Cloud Next 2024/",
+    "idArtifactParent": null,
+    "description": "Google Cloud Next '24: Las Vegas",
+    "tags": [
+      "Blog",
+      "Conference",
+      "Google Cloud",
+      "Google Cloud Next",
+      "CIROH",
+      "National Water Model",
+      "BYU"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 141,
+    "idArtifactType": 1,
+    "Title": "CIROH Research CyberInfrastructure Update",
+    "URL": "https://docs.ciroh.org/blog/July Monthly IT Update/",
+    "idArtifactParent": null,
+    "description": "July Monthly IT Update",
+    "tags": [
+      "Blog",
+      "Monthly Update",
+      "CIROH",
+      "2i2c",
+      "Google Cloud",
+      "AWS",
+      "BigQuery",
+      "BYU",
+      "JupyterHub",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 142,
+    "idArtifactType": 1,
+    "Title": "NextGen Framework Forcings",
+    "URL": "https://docs.ciroh.org/blog/NextGen Forcings/",
+    "idArtifactParent": null,
+    "description": "",
+    "tags": [
+      "NextGen Datastream",
+      "National Water Model",
+      "Blog",
+      "CIROH"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 143,
+    "idArtifactType": 1,
+    "Title": "NextGen In A Box v1.1.0 Release",
+    "URL": "https://docs.ciroh.org/blog/NextGen In A Box Release Notes/",
+    "idArtifactParent": null,
+    "description": "News and release notes for NGIAB",
+    "tags": [
+      "Blog",
+      "CIROH",
+      "Cloud Services",
+      "National Water Model",
+      "NGIAB",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 144,
+    "idArtifactType": 1,
+    "Title": "NextGen Monthly News Update - December 2023",
+    "URL": "https://docs.ciroh.org/blog/NextGen Updates Dec 2023/",
+    "idArtifactParent": null,
+    "description": "News and release notes for NextGen",
+    "tags": [
+      "Blog",
+      "Monthly Update"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 145,
+    "idArtifactType": 1,
+    "Title": "NextGen Monthly News Update - January 2024",
+    "URL": "https://docs.ciroh.org/blog/NextGen Updates Jan 2024/",
+    "idArtifactParent": null,
+    "description": "News and release notes for NextGen",
+    "tags": [
+      "Blog",
+      "CIROH",
+      "Monthly Update",
+      "HPC",
+      "Singularity",
+      "Cloud Services",
+      "NextGen Datastream",
+      "National Water Model",
+      "NGIAB",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 146,
+    "idArtifactType": 1,
+    "Title": "NextGen Monthly News Update - November 2023",
+    "URL": "https://docs.ciroh.org/blog/NextGen Updates Nov 2023/",
+    "idArtifactParent": null,
+    "description": "News and release notes for NextGen",
+    "tags": [
+      "Blog",
+      "Monthly Update"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 147,
+    "idArtifactType": 1,
+    "Title": "NextGen In A Box Updates",
+    "URL": "https://docs.ciroh.org/blog/NextGen-In-A-Box Release Notes/",
+    "idArtifactParent": null,
+    "description": "News and release notes for NGIAB",
+    "tags": [
+      "Blog",
+      "DocuHub",
+      "NGIAB",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 148,
+    "idArtifactType": 1,
+    "Title": "Community NextGen Updates",
+    "URL": "https://docs.ciroh.org/blog/November Monthly Blog Update/",
+    "idArtifactParent": null,
+    "description": "November Monthly Blog Update",
+    "tags": [
+      "Blog",
+      "Monthly Update",
+      "CIROH",
+      "National Water Model",
+      "NextGen Datastream",
+      "Singularity",
+      "HPC",
+      "TEEHR",
+      "Hydrofabric",
+      "NGIAB",
+      "NextGen",
+      "Data Preparation"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 149,
+    "idArtifactType": 1,
+    "Title": "CIROH Science Meeting 2024",
+    "URL": "https://docs.ciroh.org/blog/October Monthly Blog Update/",
+    "idArtifactParent": null,
+    "description": "October Monthly Blog Update",
+    "tags": [
+      "Blog",
+      "Monthly Update",
+      "CIROH",
+      "Conference"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 150,
+    "idArtifactType": 1,
+    "Title": "Accessing National Water Model (NWM) Data via Google Cloud BigQuery API",
+    "URL": "https://docs.ciroh.org/blog/September Monthly Blog Update/",
+    "idArtifactParent": null,
+    "description": "September Monthly Blog Update",
+    "tags": [
+      "Blog",
+      "Monthly Update",
+      "CIROH",
+      "BYU",
+      "BigQuery",
+      "National Water Model",
+      "Google Cloud",
+      "Cloud Services"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 151,
+    "idArtifactType": 1,
+    "Title": "CIROH Cyberinfrastructure and Hydroinformatics Team at AGU25",
+    "URL": "https://docs.ciroh.org/blog/agu2025/",
+    "idArtifactParent": null,
+    "description": "January Monthly Blog Update",
+    "tags": [
+      "Blog",
+      "Conference",
+      "CIROH",
+      "Monthly Update",
+      "AGU"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 152,
+    "idArtifactType": 1,
+    "Title": "AORC Data in Your Hands: User-Friendly Jupyter Notebooks for Data Retrieval and Analysis via CIROH-2i2c JupyterHub Notebooks",
+    "URL": "https://docs.ciroh.org/blog/aorc-data-access/",
+    "idArtifactParent": null,
+    "description": "Accessing AORC data has never been easier with our new Jupyter Notebooks, designed for both point and zone retrieval from the AORC datasets hosted on AWS.",
+    "tags": [
+      "Blog",
+      "Community Spotlight",
+      "Utah State University",
+      "HydroShare",
+      "CIROH",
+      "Data Preparation",
+      "JupyterHub",
+      "2i2c",
+      "Cloud Services",
+      "National Water Model",
+      "NOAA"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 153,
+    "idArtifactType": 1,
+    "Title": "Google Cloud Next 2025: Innovation at Scale ✨",
+    "URL": "https://docs.ciroh.org/blog/april-2025-update/",
+    "idArtifactParent": null,
+    "description": "Google Cloud Next 2025",
+    "tags": [
+      "Blog",
+      "Conference",
+      "Google Cloud",
+      "Google Cloud Next",
+      "AI and Machine Learning"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 154,
+    "idArtifactType": 1,
+    "Title": "AWS re:Invent 2025: Key Insights for Research and Cyberinfrastructure ",
+    "URL": "https://docs.ciroh.org/blog/aws-reinvent-2025/",
+    "idArtifactParent": null,
+    "description": "Insights from AWS re:Invent 2025 on AI, cloud efficiency, security, and innovations relevant to CIROH’s hybrid cyberinfrastructure.",
+    "tags": [
+      "CIROH",
+      "Blog",
+      "AWS"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 155,
+    "idArtifactType": 1,
+    "Title": "Building Bridges: CIROH–Penn State Collaboration Formalizes Differentiable Modeling for NRDS",
+    "URL": "https://docs.ciroh.org/blog/ciroh-psu-collab/",
+    "idArtifactParent": null,
+    "description": "Collaboration between CIROH and Penn State introduces differentiable models to the Next Generation Research Data Stream.",
+    "tags": [
+      "CIROH",
+      "Blog",
+      "Alabama Water Institute",
+      "Pennsylvania State University",
+      "Hydrology",
+      "Differentiable Modeling",
+      "NextGen",
+      "NGIAB",
+      "NRDS",
+      "National Water Model",
+      "Cloud Services",
+      "AI and Machine Learning"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 156,
+    "idArtifactType": 1,
+    "Title": "CIROH Developers Conference 2024",
+    "URL": "https://docs.ciroh.org/blog/devcon24-retrospective/",
+    "idArtifactParent": null,
+    "description": "CIROH Developers Conference 2024",
+    "tags": [
+      "Blog",
+      "CIROH",
+      "Conference",
+      "CIROH DevCon",
+      "Flood Inundation Mapping",
+      "National Water Model",
+      "AI and Machine Learning"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 157,
+    "idArtifactType": 1,
+    "Title": "DevCon 2025: A DevOps and Cyberinfrastructure Success Story",
+    "URL": "https://docs.ciroh.org/blog/devcon25-infra/",
+    "idArtifactParent": null,
+    "description": "Our team demonstrated how modern DevOps principles and cloud infrastructure can seamlessly support large-scale technical workshops for over 200 attendees.",
+    "tags": [
+      "Blog",
+      "CIROH",
+      "Conference",
+      "CIROH DevCon",
+      "Services",
+      "NSF",
+      "NSF Access",
+      "2i2c",
+      "JetStream2",
+      "AWS",
+      "Google Cloud",
+      "HPC",
+      "Wukong",
+      "Pantarhei",
+      "On-Premises Services"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 158,
+    "idArtifactType": 1,
+    "Title": "DevCon 2025: Hydroinformatics and Research CyberInfrastructure Keynote",
+    "URL": "https://docs.ciroh.org/blog/devcon25-keynote/",
+    "idArtifactParent": null,
+    "description": "Keynote Recap - CIROH Developers Conference 2025",
+    "tags": [
+      "Blog",
+      "CIROH",
+      "Conference",
+      "CIROH DevCon",
+      "Flood Inundation Mapping",
+      "National Water Model",
+      "NGIAB",
+      "NextGen",
+      "Services",
+      "NSF",
+      "NSF Access",
+      "2i2c",
+      "JetStream2",
+      "AWS",
+      "Google Cloud",
+      "NextGen Datastream",
+      "Tethys Platform",
+      "On-Premises Services",
+      "DocuHub",
+      "CIROH Portal"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 159,
+    "idArtifactType": 1,
+    "Title": "Application of NOAA-OWP's NextGen Framework: DevCon 2025 and EWRI Congress 2025 Highlights",
+    "URL": "https://docs.ciroh.org/blog/ewri-devcon25-ngiab/",
+    "idArtifactParent": null,
+    "description": "A recap of presentations and workshops from the 2025 EWRI Congress and CIROH Developers Conference, focusing on the practical application of the NOAA-OWP NextGen Framework.",
+    "tags": [
+      "Blog",
+      "CIROH",
+      "NOAA",
+      "Conference",
+      "EWRI",
+      "National Water Model",
+      "NGIAB",
+      "NextGen",
+      "CIROH DevCon",
+      "Calibration"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 160,
+    "idArtifactType": 1,
+    "Title": "Assessing Streamflow Forecast Over the Hackensack River Watershed Using NGIAB",
+    "URL": "https://docs.ciroh.org/blog/ismart-ngiab-application/",
+    "idArtifactParent": null,
+    "description": "A summary of the research presented at the 2025 CIROH DevCon, focusing on streamflow forecasting in the Hackensack River Watershed using NGIAB.",
+    "tags": [
+      "Blog",
+      "Community Spotlight",
+      "Stevens Institute of Technology",
+      "NGIAB",
+      "NextGen",
+      "CIROH DevCon",
+      "AI and Machine Learning",
+      "National Water Model"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 161,
+    "idArtifactType": 1,
+    "Title": "Cross-Institutional Collaboration Enhances Hydrologic Modeling in the Logan River Watershed",
+    "URL": "https://docs.ciroh.org/blog/logan-river-collaboration/",
+    "idArtifactParent": null,
+    "description": "A joint effort by CIROH (University of Alabama) and Utah State University",
+    "tags": [
+      "Blog",
+      "Hydrology",
+      "NextGen",
+      "T-Route",
+      "Logan River",
+      "CIROH",
+      "USU",
+      "NGIAB"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 162,
+    "idArtifactType": 1,
+    "Title": "🌟 UA's Alabama Water Institute Showcases 30-Minute Hydrological Modeling Revolution🌟",
+    "URL": "https://docs.ciroh.org/blog/march-2025-update/",
+    "idArtifactParent": null,
+    "description": "AWI News talks about NGIAB",
+    "tags": [
+      "CIROH",
+      "Alabama Water Institute",
+      "NGIAB",
+      "Blog",
+      "National Water Model",
+      "NextGen"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 163,
+    "idArtifactType": 1,
+    "Title": "δHBV2.0: How NGIAB and Wukong HPC Streamlined Advanced Hydrologic Modeling",
+    "URL": "https://docs.ciroh.org/blog/may-2025-update/",
+    "idArtifactParent": null,
+    "description": "Here's how NGIAB and Wukong HPC enabled researchers at Pennsylvania State University to create advanced models!",
+    "tags": [
+      "CIROH",
+      "Blog",
+      "Community Spotlight",
+      "Pennsylvania State University",
+      "Monthly Update",
+      "Wukong",
+      "HPC",
+      "NGIAB",
+      "NextGen",
+      "National Water Model",
+      "On-Premises Services",
+      "Cloud Services",
+      "AI and Machine Learning"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 164,
+    "idArtifactType": 1,
+    "Title": "Evaluating NextGen’s Performance in the MARFC Region with NGIAB",
+    "URL": "https://docs.ciroh.org/blog/nextgen-marfc-performance/",
+    "idArtifactParent": null,
+    "description": "A case study on using NextGen in a Box (NGIAB) to assess the NextGen Hydro Framework in the Middle Atlantic River Forecast Center (MARFC) region, comparing its performance with CHPS and NWM 3.0.",
+    "tags": [
+      "Blog",
+      "NGIAB",
+      "MARFC",
+      "Hydrology",
+      "Modeling",
+      "NOAA",
+      "NWM",
+      "NextGen",
+      "CHPS",
+      "JetStream2"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 165,
+    "idArtifactType": 1,
+    "Title": "NGIAB Reaches 10,000 Docker Pulls: NextGen In A Box Makes Water Modeling More Accessible",
+    "URL": "https://docs.ciroh.org/blog/ngiab-10k/",
+    "idArtifactParent": null,
+    "description": "NextGen In A Box (NGIAB) surpasses 10,000 Docker pulls, highlighting growing global adoption of accessible, containerized water modeling tools.",
+    "tags": [
+      "Blog",
+      "NGIAB",
+      "NextGen",
+      "CIROH",
+      "Containerization",
+      "Water Modeling",
+      "Docker",
+      "Hydrology",
+      "Education",
+      "Community Impact"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 166,
+    "idArtifactType": 1,
+    "Title": "CIROH Researchers Showcase Cutting-Edge Hydrologic Science at NHWC 2025",
+    "URL": "https://docs.ciroh.org/blog/nhwc-2025/",
+    "idArtifactParent": null,
+    "description": "CIROH researchers showcased innovative work and leadership at the 15th Biennial National Hydrologic Warning Conference (NHWC 2025), presenting cutting-edge hydrologic forecasting tools and earning top recognition.",
+    "tags": [
+      "Blog",
+      "NHWC",
+      "Conference Highlights",
+      "CIROH",
+      "Hydrologic Modeling",
+      "Forecasting",
+      "National Weather Service",
+      "NextGen",
+      "Deltares",
+      "Alabama"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 167,
+    "idArtifactType": 1,
+    "Title": "From Research to Impact: CIROH Science Meeting 2025 Resources and Reflections",
+    "URL": "https://docs.ciroh.org/blog/science-meeting-2025/",
+    "idArtifactParent": null,
+    "description": "Best CIROH Science Meeting Yet! Reflecting on the 2025 CIROH Science Meeting held September 15-18 in Tuscaloosa, Alabama. Access meeting resources, session recordings, and presentation slides while we celebrate four days of collaborative water science research and community building.",
+    "tags": [
+      "Blog",
+      "CIROH",
+      "Conferences"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 168,
+    "idArtifactType": 1,
+    "Title": "Moving Hydrologic Prediction Forward — A software integration meeting at the Alabama Water Institute",
+    "URL": "https://docs.ciroh.org/blog/software-integration-meeting/",
+    "idArtifactParent": null,
+    "description": "A recap of a multi-institution software integration meeting at the Alabama Water Institute focused on advancing NextGen hydrologic prediction.",
+    "tags": [
+      "CIROH",
+      "Blog",
+      "Alabama Water Institute",
+      "University of Calgary",
+      "Hydrology",
+      "RTI",
+      "Lynker",
+      "NextGen",
+      "NGIAB",
+      "NRDS",
+      "TEEHR",
+      "National Water Model",
+      "AWS"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 169,
+    "idArtifactType": 1,
+    "Title": "Focusing on Streamflow Data: New Software for Camera-Based Hydrologic Modeling",
+    "URL": "https://docs.ciroh.org/blog/streamflow-data-camera-based-hydrologic-modeling-software/",
+    "idArtifactParent": null,
+    "description": "New open-source software tools enable scalable, automated camera-based streamflow monitoring using low-cost field computers and cloud computing services.",
+    "tags": [
+      "Blog",
+      "Serverless Compute",
+      "Hydrologic Monitoring",
+      "Streamflow",
+      "Gage",
+      "CIROH",
+      "USGS",
+      "HydrocamCompute",
+      "HydrocamCollect",
+      "Camera-Based Monitoring",
+      "Computer Vision",
+      "Utah State University"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 170,
+    "idArtifactType": 1,
+    "Title": "Tethys Summit 2025: Advancing Geoscience with Open-Source Web Apps",
+    "URL": "https://docs.ciroh.org/blog/tethys-summit-2025/",
+    "idArtifactParent": null,
+    "description": "Explore the workshop materials and our experience at Tethys Summit 2025.",
+    "tags": [
+      "Blog",
+      "Conference",
+      "Tethys Platform",
+      "Geoscience",
+      "Open Source"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 171,
+    "idArtifactType": 1,
+    "Title": "01-09-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250109/",
+    "idArtifactParent": null,
+    "description": "Minor DocuHub update for January 2026!",
+    "tags": [
+      "Release Notes",
+      "DocuHub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 172,
+    "idArtifactType": 1,
+    "Title": "04-08-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250408/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for April 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 173,
+    "idArtifactType": 1,
+    "Title": "04-16-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250416/",
+    "idArtifactParent": null,
+    "description": "A new blog post has been added for April 2025!",
+    "tags": [
+      "Release Notes",
+      "DocuHub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 174,
+    "idArtifactType": 1,
+    "Title": "05-05-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250505/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for May 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 175,
+    "idArtifactType": 1,
+    "Title": "05-16-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250516/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for May 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 176,
+    "idArtifactType": 1,
+    "Title": "05-22-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250522/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for May 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 177,
+    "idArtifactType": 1,
+    "Title": "05-27-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250527/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for May 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 178,
+    "idArtifactType": 1,
+    "Title": "06-04-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250604/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for June 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 179,
+    "idArtifactType": 1,
+    "Title": "06-11-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250611/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for June 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 180,
+    "idArtifactType": 1,
+    "Title": "07-01-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250701/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for July 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 181,
+    "idArtifactType": 1,
+    "Title": "07-24-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250724/",
+    "idArtifactParent": null,
+    "description": "Minor CIROH Hub updates for July 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 182,
+    "idArtifactType": 1,
+    "Title": "08-01-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250801/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for August 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 183,
+    "idArtifactType": 1,
+    "Title": "08-29-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250829/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for August 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 184,
+    "idArtifactType": 1,
+    "Title": "09-12-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20250912/",
+    "idArtifactParent": null,
+    "description": "Minor CIROH Hub update for September 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 185,
+    "idArtifactType": 1,
+    "Title": "10-01-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20251001/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for October 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 186,
+    "idArtifactType": 1,
+    "Title": "11-03-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20251103/",
+    "idArtifactParent": null,
+    "description": "Major CIROH Hub update for November 2025!",
+    "tags": [
+      "Release Notes",
+      "CIROH Hub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 187,
+    "idArtifactType": 1,
+    "Title": "11-26-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20251126/",
+    "idArtifactParent": null,
+    "description": "Major DocuHub update for November 2025!",
+    "tags": [
+      "Release Notes",
+      "DocuHub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 188,
+    "idArtifactType": 1,
+    "Title": "12-09-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20251209/",
+    "idArtifactParent": null,
+    "description": "Minor DocuHub update for December 2025!",
+    "tags": [
+      "Release Notes",
+      "DocuHub"
+    ],
+    "Last updated date": "02/17/2026"
+  },
+  {
+    "idArtifact": 189,
+    "idArtifactType": 1,
+    "Title": "12-12-2025 Release Notes",
+    "URL": "https://docs.ciroh.org/release-notes/v20251212/",
+    "idArtifactParent": null,
+    "description": "Minor DocuHub update for December 2025!",
+    "tags": [
+      "Release Notes",
+      "DocuHub"
+    ],
+    "Last updated date": "02/17/2026"
+  }
+]

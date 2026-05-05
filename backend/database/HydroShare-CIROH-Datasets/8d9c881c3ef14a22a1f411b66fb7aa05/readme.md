@@ -1,0 +1,1 @@
+You can use the CHIRPS precipitation and watershed files to compute SPI using the application accessible [here] (https://drought.unl.edu/Monitoring/SPI/SPIProgram.aspx).

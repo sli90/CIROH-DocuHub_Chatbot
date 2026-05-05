@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/ec43b15ed20744f39bc757f7b2e4d51e">
+    <dc:subject>Big Cottonwood Creek</dc:subject>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyURL></hsterms:fundingAgencyURL>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration (NOAA), University of Alabama</hsterms:fundingAgencyName>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:awardTitle>CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare</hsterms:awardTitle>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dcterms:bibliographicCitation>Garousi-Nejad, I. (2025). Accessing AORC and Hydrofabric on CIROH JupyterHub, HydroShare, http://www.hydroshare.org/resource/ec43b15ed20744f39bc757f7b2e4d51e</dcterms:bibliographicCitation>
+    <dc:language>eng</dc:language>
+    <dc:subject>CIROH</dc:subject>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This resource includes data and codes to access, analyze and work with high community value datasets (AORC, Hydrofabric) through the use of JupyterHub computing platforms linked to HydroShare (CIROH Jupyterhub on 2i2c specifically).</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:description>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:email>igarousi@cuahsi.org</hsterms:email>
+        <hsterms:name>Garousi-Nejad, Irene</hsterms:name>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Irene_Garousi-Nejad"/>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=dKqI7iAAAAAJ&amp;hl=en"/>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-2929-3946"/>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:creator>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-05-29T13:19:45.761665+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:title>Accessing AORC and Hydrofabric on CIROH JupyterHub</dc:title>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>northlimit=40.659051908319015; southlimit=40.5827388007433; eastlimit=-111.54700091991539; westlimit=-111.79307134529958; projection=WGS 84 EPSG:4326; units=Decimal degrees</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2025-05-29T13:17:30.508449+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:subject>Hydrofabric</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/ec43b15ed20744f39bc757f7b2e4d51e"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>AORC</dc:subject>
+  </hsterms:CompositeResource>
+</rdf:RDF>

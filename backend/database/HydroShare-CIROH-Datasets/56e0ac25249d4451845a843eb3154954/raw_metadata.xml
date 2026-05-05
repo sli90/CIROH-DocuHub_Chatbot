@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/56e0ac25249d4451845a843eb3154954">
+    <dc:subject>topography</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:doi rdf:resource="https://doi.org/10.4211/hs.56e0ac25249d4451845a843eb3154954"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:language>eng</dc:language>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/56e0ac25249d4451845a843eb3154954"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>bankfull</dc:subject>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>Data compilations of bankfull downstream hydraulic geometry for alluvial rivers, lidar derived high-resolution spatial series of bankfull width for 67 sites, and hydrograph metrics for sites with USGS hydrographs. This compilation is composed of three datasets: (1) a compilation of alluvial river geometry at bankfull for a variety of hydraulic attributes; (2) x, y, and z coordinates of channel bank lines for a selection of sites and their associated river widths derived from high-resolution lidar topography; and (3) statistics describing the hydrographs for a subset of the larger compilation. These data are divided into two primary sets, the larger compilation and a smaller set of sites where the bankfull width was derived from lidar topography. For the high-resolution dataset, the data are available as the coordinates of the bank lines, spatial series of distance downstream and bankfull width, and the spatial series filtered for quality.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>rivers</dc:subject>
+    <dc:subject>grain size</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=49.0; eastlimit=-65.0; southlimit=17.5; westlimit=-125.0</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:publisher>
+      <rdf:Description>
+        <hsterms:publisherURL rdf:resource="https://www.cuahsi.org"/>
+        <hsterms:publisherName>Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)</hsterms:publisherName>
+      </rdf:Description>
+    </dc:publisher>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>Utah State University</hsterms:organization>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">787</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:email>colinbphillips@gmail.com</hsterms:email>
+        <hsterms:phone>7072935114</hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">787</hsterms:description>
+        <hsterms:name>Phillips, Colin B</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>discharge</dc:subject>
+    <dc:title>Alluvial River Width Variability</dc:title>
+    <dc:subject>hydraulic geometry</dc:subject>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-07-23T20:46:25.475280+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dcterms:bibliographicCitation>Phillips, C. B. (2024). Alluvial River Width Variability, HydroShare, https://doi.org/10.4211/hs.56e0ac25249d4451845a843eb3154954</dcterms:bibliographicCitation>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardTitle>Collaborative Research: Separating the Climate and Weather of River Channels: Characterizing Dynamics of Coarse-Grained River Channel Response to Perturbations Across Scales</hsterms:awardTitle>
+        <hsterms:awardNumber>2220505</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>U.S. National Science Foundation</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ror.org/021nxhr62"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=1980-10-01T00:00:00; end=2024-07-01T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:date>
+      <hsterms:published>
+        <rdf:value>2024-11-22T14:37:30.760710+00:00</rdf:value>
+      </hsterms:published>
+    </dc:date>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2024-11-22T14:37:28.158425+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardTitle>Cooperative Institute for Research on Hydrology</hsterms:awardTitle>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>NOAA Research</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ci.noaa.gov/news/"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+  </hsterms:CompositeResource>
+</rdf:RDF>
