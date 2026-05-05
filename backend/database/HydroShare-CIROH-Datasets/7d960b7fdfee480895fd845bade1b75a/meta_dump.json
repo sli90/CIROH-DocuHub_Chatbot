@@ -1,0 +1,84 @@
+{
+    "title": "Stream Temperature Seasonal Thermal Regime Data",
+    "abstract": "This resource contains analysis code and downloaded stream temperature data (from USGS NWIS) used to develop an analysis of stream seasonal thermal regimes in the United States.  The R Notebook, `analysis.Rmd`, will reproduce all supporting analysis and generate figures when run with the data files downloaded into a `Data` subdirectory of the working directory.  `analysis.Rmd` calls more involved functions from `functions.R`.  The knitted version of the notebook is also included as `analysis.pdf`.\r\n\r\nTo run the Notebook, in the working directory there must be a `Data` directory containing the data files and a `Figures` directory with a `MovingWindowSeasons` subdirectory, where figures will be stored.  For map generation, `functions.R` will also look for an EPA Level I Ecoregions (https://gaftp.epa.gov/EPADataCommons/ORD/Ecoregions/cec_na/na_cec_eco_l1.zip) shapefile in an `Ecoregions` directory.\r\n\r\nThese data and related items of information have not been formally disseminated by NOAA, and do not represent any agency determination, view, or policy.",
+    "language": "eng",
+    "subjects": [
+        "stream annual temperature cycle",
+        "stream seasonal thermal regime",
+        "stream temperature",
+        "united states"
+    ],
+    "creators": [
+        {
+            "name": "Philippus, Daniel",
+            "organization": "Colorado School of Mines",
+            "email": "dphilippus@mines.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 26228,
+            "identifiers": {}
+        },
+        {
+            "name": "Corona, Claudia R",
+            "address": "Colorado, US",
+            "organization": "University of Colorado, Boulder",
+            "email": "clco6964@colorado.edu",
+            "creator_order": 2,
+            "hydroshare_user_id": 7924,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-6447-9175"
+            }
+        },
+        {
+            "name": "Hogue, Terri S",
+            "organization": "Colorado School of Mines",
+            "email": "thogue@mines.edu",
+            "creator_order": 3,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "This resource is referenced by",
+            "value": "Philippus, Daniel, Claudia R. Corona and Terri S. Hogue 2024. \u201c Improved Annual Temperature Cycle Function For Stream Seasonal Thermal Regimes.\u201d JAWRA Journal of the American Water Resources Association. https://doi.org/10.1111/1752-1688.13228."
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration",
+            "title": "Cooperative Institute for Research to Operations in Hydrology",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ror.org/02z5nhe81"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "name": "United States",
+        "northlimit": 70.5,
+        "eastlimit": -67.25,
+        "southlimit": 19.71,
+        "westlimit": -163.68,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1964-10-16 00:00:00",
+        "end": "2023-01-01 00:00:00"
+    },
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Philippus, D., C. R. Corona, T. S. Hogue (2024). Stream Temperature Seasonal Thermal Regime Data, HydroShare, https://doi.org/10.4211/hs.7d960b7fdfee480895fd845bade1b75a",
+    "url": "http://www.hydroshare.org/resource/7d960b7fdfee480895fd845bade1b75a",
+    "identifier": "http://www.hydroshare.org/resource/7d960b7fdfee480895fd845bade1b75a",
+    "created": "2024-01-10 21:34:04.264582+00:00",
+    "modified": "2024-09-16 20:16:47.723282+00:00",
+    "published": "2024-07-11 13:36:05.296142+00:00",
+    "type": "CompositeResource"
+}

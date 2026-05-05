@@ -1,0 +1,1554 @@
+[
+    {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "file_name": "PULL_REQUEST_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 1026,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/deploy-gh-pages.yml",
+        "file_name": "deploy-gh-pages.yml",
+        "extension": ".yml",
+        "size_bytes": 1258,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/run_events.yml",
+        "file_name": "run_events.yml",
+        "extension": ".yml",
+        "size_bytes": 826,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/run_metrics.yml",
+        "file_name": "run_metrics.yml",
+        "extension": ".yml",
+        "size_bytes": 831,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/run_nwis_client.yml",
+        "file_name": "run_nwis_client.yml",
+        "extension": ".yml",
+        "size_bytes": 917,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/run_nwm_client.yml",
+        "file_name": "run_nwm_client.yml",
+        "extension": ".yml",
+        "size_bytes": 860,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/run_rest_client.yml",
+        "file_name": "run_rest_client.yml",
+        "extension": ".yml",
+        "size_bytes": 865,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/run_slow_unit_tests.yml",
+        "file_name": "run_slow_unit_tests.yml",
+        "extension": ".yml",
+        "size_bytes": 4451,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/run_svi_client.yml",
+        "file_name": "run_svi_client.yml",
+        "extension": ".yml",
+        "size_bytes": 860,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 2182,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CITATION.cff",
+        "file_name": "CITATION.cff",
+        "extension": ".cff",
+        "size_bytes": 397,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 5859,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 11358,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 31,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Makefile",
+        "file_name": "Makefile",
+        "extension": "",
+        "size_bytes": 1816,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "NOTICE",
+        "file_name": "NOTICE",
+        "extension": "",
+        "size_bytes": 1097,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 10165,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 3303,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 1515,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "docs/HydroLogo.png",
+        "file_name": "HydroLogo.png",
+        "extension": ".png",
+        "size_bytes": 22286,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/Makefile",
+        "file_name": "Makefile",
+        "extension": "",
+        "size_bytes": 634,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 4522,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "docs/USGS-02146470-FDC.png",
+        "file_name": "USGS-02146470-FDC.png",
+        "extension": ".png",
+        "size_bytes": 581316,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/USGS-02146470-PER.png",
+        "file_name": "USGS-02146470-PER.png",
+        "extension": ".png",
+        "size_bytes": 560103,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/banner.odt",
+        "file_name": "banner.odt",
+        "extension": ".odt",
+        "size_bytes": 34808,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/banner.pdf",
+        "file_name": "banner.pdf",
+        "extension": ".pdf",
+        "size_bytes": 20216,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/banner.png",
+        "file_name": "banner.png",
+        "extension": ".png",
+        "size_bytes": 70318,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/baseflow_hydrograph.png",
+        "file_name": "baseflow_hydrograph.png",
+        "extension": ".png",
+        "size_bytes": 139091,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/conf.py",
+        "file_name": "conf.py",
+        "extension": ".py",
+        "size_bytes": 2035,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/hydrotools._restclient._iterable_nonstring.rst",
+        "file_name": "hydrotools._restclient._iterable_nonstring.rst",
+        "extension": ".rst",
+        "size_bytes": 241,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools._restclient._restclient.rst",
+        "file_name": "hydrotools._restclient._restclient.rst",
+        "extension": ".rst",
+        "size_bytes": 215,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools._restclient._restclient_sigs.rst",
+        "file_name": "hydrotools._restclient._restclient_sigs.rst",
+        "extension": ".rst",
+        "size_bytes": 232,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools._restclient.async_client.rst",
+        "file_name": "hydrotools._restclient.async_client.rst",
+        "extension": ".rst",
+        "size_bytes": 218,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools._restclient.async_helpers.rst",
+        "file_name": "hydrotools._restclient.async_helpers.rst",
+        "extension": ".rst",
+        "size_bytes": 221,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools._restclient.rst",
+        "file_name": "hydrotools._restclient.rst",
+        "extension": ".rst",
+        "size_bytes": 586,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools._restclient.urllib.rst",
+        "file_name": "hydrotools._restclient.urllib.rst",
+        "extension": ".rst",
+        "size_bytes": 198,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools._restclient.urllib_types.rst",
+        "file_name": "hydrotools._restclient.urllib_types.rst",
+        "extension": ".rst",
+        "size_bytes": 218,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools._restclient.utilities.rst",
+        "file_name": "hydrotools._restclient.utilities.rst",
+        "extension": ".rst",
+        "size_bytes": 207,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.caches.hdf.rst",
+        "file_name": "hydrotools.caches.hdf.rst",
+        "extension": ".rst",
+        "size_bytes": 172,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.caches.rst",
+        "file_name": "hydrotools.caches.rst",
+        "extension": ".rst",
+        "size_bytes": 280,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.events.event_detection.decomposition.rst",
+        "file_name": "hydrotools.events.event_detection.decomposition.rst",
+        "extension": ".rst",
+        "size_bytes": 252,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.events.event_detection.rst",
+        "file_name": "hydrotools.events.event_detection.rst",
+        "extension": ".rst",
+        "size_bytes": 356,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.metrics.metrics.rst",
+        "file_name": "hydrotools.metrics.metrics.rst",
+        "extension": ".rst",
+        "size_bytes": 187,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.metrics.rst",
+        "file_name": "hydrotools.metrics.rst",
+        "extension": ".rst",
+        "size_bytes": 288,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwis_client.iv.rst",
+        "file_name": "hydrotools.nwis_client.iv.rst",
+        "extension": ".rst",
+        "size_bytes": 186,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwis_client.rst",
+        "file_name": "hydrotools.nwis_client.rst",
+        "extension": ".rst",
+        "size_bytes": 301,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.AzureFileCatalog.rst",
+        "file_name": "hydrotools.nwm_client.AzureFileCatalog.rst",
+        "extension": ".rst",
+        "size_bytes": 225,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.FileDownloader.rst",
+        "file_name": "hydrotools.nwm_client.FileDownloader.rst",
+        "extension": ".rst",
+        "size_bytes": 219,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.GCPFileCatalog.rst",
+        "file_name": "hydrotools.nwm_client.GCPFileCatalog.rst",
+        "extension": ".rst",
+        "size_bytes": 219,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.HTTPFileCatalog.rst",
+        "file_name": "hydrotools.nwm_client.HTTPFileCatalog.rst",
+        "extension": ".rst",
+        "size_bytes": 222,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.NWMClient.rst",
+        "file_name": "hydrotools.nwm_client.NWMClient.rst",
+        "extension": ".rst",
+        "size_bytes": 204,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.NWMClientDefaults.rst",
+        "file_name": "hydrotools.nwm_client.NWMClientDefaults.rst",
+        "extension": ".rst",
+        "size_bytes": 228,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.NWMFileCatalog.rst",
+        "file_name": "hydrotools.nwm_client.NWMFileCatalog.rst",
+        "extension": ".rst",
+        "size_bytes": 219,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.NWMFileClient.rst",
+        "file_name": "hydrotools.nwm_client.NWMFileClient.rst",
+        "extension": ".rst",
+        "size_bytes": 216,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.NWMFileProcessor.rst",
+        "file_name": "hydrotools.nwm_client.NWMFileProcessor.rst",
+        "extension": ".rst",
+        "size_bytes": 225,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.ParquetStore.rst",
+        "file_name": "hydrotools.nwm_client.ParquetStore.rst",
+        "extension": ".rst",
+        "size_bytes": 213,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.UnitHandler.rst",
+        "file_name": "hydrotools.nwm_client.UnitHandler.rst",
+        "extension": ".rst",
+        "size_bytes": 210,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/hydrotools.nwm_client.rst",
+        "file_name": "hydrotools.nwm_client.rst",
+        "extension": ".rst",
+        "size_bytes": 706,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/index.rst",
+        "file_name": "index.rst",
+        "extension": ".rst",
+        "size_bytes": 9934,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/make.bat",
+        "file_name": "make.bat",
+        "extension": ".bat",
+        "size_bytes": 795,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "gitflow.md",
+        "file_name": "gitflow.md",
+        "extension": ".md",
+        "size_bytes": 4244,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 1489,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "pytest.ini",
+        "file_name": "pytest.ini",
+        "extension": ".ini",
+        "size_bytes": 80,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/_restclient/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/_restclient/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 31,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/NOTICE",
+        "file_name": "NOTICE",
+        "extension": "",
+        "size_bytes": 12,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 3586,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/_restclient/SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 17,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/_restclient/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 1462,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/_restclient/pytest.ini",
+        "file_name": "pytest.ini",
+        "extension": ".ini",
+        "size_bytes": 29,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 349,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/_async_helpers.py",
+        "file_name": "_async_helpers.py",
+        "extension": ".py",
+        "size_bytes": 1437,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/_iterable_nonstring.py",
+        "file_name": "_iterable_nonstring.py",
+        "extension": ".py",
+        "size_bytes": 857,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/_restclient.py",
+        "file_name": "_restclient.py",
+        "extension": ".py",
+        "size_bytes": 11031,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/_restclient_sigs.py",
+        "file_name": "_restclient_sigs.py",
+        "extension": ".py",
+        "size_bytes": 1175,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/async_client.py",
+        "file_name": "async_client.py",
+        "extension": ".py",
+        "size_bytes": 2331,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/urllib.py",
+        "file_name": "urllib.py",
+        "extension": ".py",
+        "size_bytes": 13788,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/urllib_types.py",
+        "file_name": "urllib_types.py",
+        "extension": ".py",
+        "size_bytes": 1322,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/src/hydrotools/_restclient/utilities.py",
+        "file_name": "utilities.py",
+        "extension": ".py",
+        "size_bytes": 9028,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/tests/test_client.py",
+        "file_name": "test_client.py",
+        "extension": ".py",
+        "size_bytes": 5253,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/tests/test_iterable_nonstring.py",
+        "file_name": "test_iterable_nonstring.py",
+        "extension": ".py",
+        "size_bytes": 814,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/tests/test_restclient.py",
+        "file_name": "test_restclient.py",
+        "extension": ".py",
+        "size_bytes": 5381,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/tests/test_urllib.py",
+        "file_name": "test_urllib.py",
+        "extension": ".py",
+        "size_bytes": 5317,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/_restclient/tests/test_utilities.py",
+        "file_name": "test_utilities.py",
+        "extension": ".py",
+        "size_bytes": 5151,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/events/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/events/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 31,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/NOTICE",
+        "file_name": "NOTICE",
+        "extension": "",
+        "size_bytes": 12,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 8942,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/events/SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 17,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/events/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 1291,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/events/src/hydrotools/events/baseflow/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/src/hydrotools/events/baseflow/eckhardt.py",
+        "file_name": "eckhardt.py",
+        "extension": ".py",
+        "size_bytes": 12289,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/src/hydrotools/events/event_detection/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/src/hydrotools/events/event_detection/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/src/hydrotools/events/event_detection/decomposition.py",
+        "file_name": "decomposition.py",
+        "extension": ".py",
+        "size_bytes": 12861,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/src/hydrotools/events/models/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/src/hydrotools/events/models/interception.py",
+        "file_name": "interception.py",
+        "extension": ".py",
+        "size_bytes": 18802,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/tests/test_baseflow.py",
+        "file_name": "test_baseflow.py",
+        "extension": ".py",
+        "size_bytes": 2775,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/tests/test_decomposition.py",
+        "file_name": "test_decomposition.py",
+        "extension": ".py",
+        "size_bytes": 4244,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/events/tests/test_interception.py",
+        "file_name": "test_interception.py",
+        "extension": ".py",
+        "size_bytes": 4489,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/metrics/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/metrics/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 31,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/NOTICE",
+        "file_name": "NOTICE",
+        "extension": "",
+        "size_bytes": 12,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 16661,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/metrics/SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 17,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/metrics/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 1303,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/metrics/src/hydrotools/metrics/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/src/hydrotools/metrics/_validation.py",
+        "file_name": "_validation.py",
+        "extension": ".py",
+        "size_bytes": 3499,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/src/hydrotools/metrics/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/src/hydrotools/metrics/events.py",
+        "file_name": "events.py",
+        "extension": ".py",
+        "size_bytes": 5301,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/src/hydrotools/metrics/flow_duration_curve.py",
+        "file_name": "flow_duration_curve.py",
+        "extension": ".py",
+        "size_bytes": 17049,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/src/hydrotools/metrics/metrics.py",
+        "file_name": "metrics.py",
+        "extension": ".py",
+        "size_bytes": 31517,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/tests/test_contingency_table.py",
+        "file_name": "test_contingency_table.py",
+        "extension": ".py",
+        "size_bytes": 1632,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/tests/test_events.py",
+        "file_name": "test_events.py",
+        "extension": ".py",
+        "size_bytes": 2448,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/tests/test_flow_duration_curve.py",
+        "file_name": "test_flow_duration_curve.py",
+        "extension": ".py",
+        "size_bytes": 5721,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/tests/test_metrics.py",
+        "file_name": "test_metrics.py",
+        "extension": ".py",
+        "size_bytes": 12710,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/metrics/tests/test_validation.py",
+        "file_name": "test_validation.py",
+        "extension": ".py",
+        "size_bytes": 1662,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwis_client/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwis_client/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 31,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/NOTICE",
+        "file_name": "NOTICE",
+        "extension": "",
+        "size_bytes": 12,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 5932,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwis_client/SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 17,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwis_client/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 1602,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwis_client/pytest.ini",
+        "file_name": "pytest.ini",
+        "extension": ".ini",
+        "size_bytes": 127,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/src/hydrotools/nwis_client/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 196,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/src/hydrotools/nwis_client/_utilities.py",
+        "file_name": "_utilities.py",
+        "extension": ".py",
+        "size_bytes": 3247,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/src/hydrotools/nwis_client/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/src/hydrotools/nwis_client/cli.py",
+        "file_name": "cli.py",
+        "extension": ".py",
+        "size_bytes": 3322,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/src/hydrotools/nwis_client/iv.py",
+        "file_name": "iv.py",
+        "extension": ".py",
+        "size_bytes": 32403,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/tests/nwis_test_data.json",
+        "file_name": "nwis_test_data.json",
+        "extension": ".json",
+        "size_bytes": 18500,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/tests/test__utilities.py",
+        "file_name": "test__utilities.py",
+        "extension": ".py",
+        "size_bytes": 1283,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/tests/test_client_cli.py",
+        "file_name": "test_client_cli.py",
+        "extension": ".py",
+        "size_bytes": 1587,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwis_client/tests/test_nwis.py",
+        "file_name": "test_nwis.py",
+        "extension": ".py",
+        "size_bytes": 19017,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/.gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 17,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwm_client/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwm_client/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 31,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/NOTICE",
+        "file_name": "NOTICE",
+        "extension": "",
+        "size_bytes": 12,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 10935,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwm_client/SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 17,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwm_client/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 1694,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/nwm_client/pytest.ini",
+        "file_name": "pytest.ini",
+        "extension": ".ini",
+        "size_bytes": 85,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/AzureFileCatalog.py",
+        "file_name": "AzureFileCatalog.py",
+        "extension": ".py",
+        "size_bytes": 2802,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/FileDownloader.py",
+        "file_name": "FileDownloader.py",
+        "extension": ".py",
+        "size_bytes": 6951,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/GCPFileCatalog.py",
+        "file_name": "GCPFileCatalog.py",
+        "extension": ".py",
+        "size_bytes": 2795,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/HTTPFileCatalog.py",
+        "file_name": "HTTPFileCatalog.py",
+        "extension": ".py",
+        "size_bytes": 4432,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/NWMClient.py",
+        "file_name": "NWMClient.py",
+        "extension": ".py",
+        "size_bytes": 1992,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/NWMClientDefaults.py",
+        "file_name": "NWMClientDefaults.py",
+        "extension": ".py",
+        "size_bytes": 4950,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/NWMFileCatalog.py",
+        "file_name": "NWMFileCatalog.py",
+        "extension": ".py",
+        "size_bytes": 3803,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/NWMFileClient.py",
+        "file_name": "NWMFileClient.py",
+        "extension": ".py",
+        "size_bytes": 13786,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/NWMFileProcessor.py",
+        "file_name": "NWMFileProcessor.py",
+        "extension": ".py",
+        "size_bytes": 4190,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/ParquetStore.py",
+        "file_name": "ParquetStore.py",
+        "extension": ".py",
+        "size_bytes": 4620,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/UnitHandler.py",
+        "file_name": "UnitHandler.py",
+        "extension": ".py",
+        "size_bytes": 2423,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/src/hydrotools/nwm_client/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/tests/short_range/nwm.t00z.short_range.channel_rt.f001.conus.nc",
+        "file_name": "nwm.t00z.short_range.channel_rt.f001.conus.nc",
+        "extension": ".nc",
+        "size_bytes": 13063031,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/tests/test_FileDownloader.py",
+        "file_name": "test_FileDownloader.py",
+        "extension": ".py",
+        "size_bytes": 1260,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/tests/test_NWMClient.py",
+        "file_name": "test_NWMClient.py",
+        "extension": ".py",
+        "size_bytes": 2753,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/tests/test_NWMFileCatalog.py",
+        "file_name": "test_NWMFileCatalog.py",
+        "extension": ".py",
+        "size_bytes": 1715,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/tests/test_NWMFileProcessor.py",
+        "file_name": "test_NWMFileProcessor.py",
+        "extension": ".py",
+        "size_bytes": 988,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/tests/test_ParquetStore.py",
+        "file_name": "test_ParquetStore.py",
+        "extension": ".py",
+        "size_bytes": 2219,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/nwm_client/tests/test_UnitHandler.py",
+        "file_name": "test_UnitHandler.py",
+        "extension": ".py",
+        "size_bytes": 1001,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 21,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/svi_client/LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 13,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/svi_client/MANIFEST.in",
+        "file_name": "MANIFEST.in",
+        "extension": ".in",
+        "size_bytes": 31,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/NOTICE",
+        "file_name": "NOTICE",
+        "extension": "",
+        "size_bytes": 12,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 4952,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/svi_client/SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 17,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/svi_client/TERMS.md",
+        "file_name": "TERMS.md",
+        "extension": ".md",
+        "size_bytes": 14,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 1546,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "python/svi_client/pytest.ini",
+        "file_name": "pytest.ini",
+        "extension": ".ini",
+        "size_bytes": 85,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/src/hydrotools/svi_client/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 197,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/src/hydrotools/svi_client/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/src/hydrotools/svi_client/clients.py",
+        "file_name": "clients.py",
+        "extension": ".py",
+        "size_bytes": 9845,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/src/hydrotools/svi_client/consts.py",
+        "file_name": "consts.py",
+        "extension": ".py",
+        "size_bytes": 4891,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/src/hydrotools/svi_client/types/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 143,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/src/hydrotools/svi_client/types/field_name_map.py",
+        "file_name": "field_name_map.py",
+        "extension": ".py",
+        "size_bytes": 11045,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/src/hydrotools/svi_client/types/type_definitions.py",
+        "file_name": "type_definitions.py",
+        "extension": ".py",
+        "size_bytes": 5590,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/src/hydrotools/svi_client/types/utilities.py",
+        "file_name": "utilities.py",
+        "extension": ".py",
+        "size_bytes": 1793,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/src/hydrotools/svi_client/url_builders.py",
+        "file_name": "url_builders.py",
+        "extension": ".py",
+        "size_bytes": 9206,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/tests/test_integration.py",
+        "file_name": "test_integration.py",
+        "extension": ".py",
+        "size_bytes": 1371,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "python/svi_client/tests/test_svi_utilities.py",
+        "file_name": "test_svi_utilities.py",
+        "extension": ".py",
+        "size_bytes": 1887,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/hydrotools/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/hydrotools/_version.py",
+        "file_name": "_version.py",
+        "extension": ".py",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

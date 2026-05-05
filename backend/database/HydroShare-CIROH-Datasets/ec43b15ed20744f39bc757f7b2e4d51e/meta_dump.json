@@ -1,0 +1,54 @@
+{
+    "title": "Accessing AORC and Hydrofabric on CIROH JupyterHub",
+    "abstract": "This resource includes data and codes to access, analyze and work with high community value datasets (AORC, Hydrofabric) through the use of JupyterHub computing platforms linked to HydroShare (CIROH Jupyterhub on 2i2c specifically).",
+    "language": "eng",
+    "subjects": [
+        "Big Cottonwood Creek",
+        "Hydrofabric",
+        "AORC",
+        "CIROH"
+    ],
+    "creators": [
+        {
+            "name": "Garousi-Nejad, Irene",
+            "organization": "CUAHSI",
+            "email": "igarousi@cuahsi.org",
+            "creator_order": 1,
+            "hydroshare_user_id": 475,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=dKqI7iAAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Irene_Garousi-Nejad",
+                "ORCID": "https://orcid.org/0000-0003-2929-3946"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA), University of Alabama",
+            "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+            "number": "NA22NWS4320003"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 40.659051908319015,
+        "eastlimit": -111.54700091991539,
+        "southlimit": 40.5827388007433,
+        "westlimit": -111.79307134529958,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "citation": "Garousi-Nejad, I. (2025). Accessing AORC and Hydrofabric on CIROH JupyterHub, HydroShare, http://www.hydroshare.org/resource/ec43b15ed20744f39bc757f7b2e4d51e",
+    "url": "http://www.hydroshare.org/resource/ec43b15ed20744f39bc757f7b2e4d51e",
+    "identifier": "http://www.hydroshare.org/resource/ec43b15ed20744f39bc757f7b2e4d51e",
+    "created": "2025-05-29 13:17:30.508449+00:00",
+    "modified": "2025-05-29 13:19:45.761665+00:00",
+    "type": "CompositeResource"
+}

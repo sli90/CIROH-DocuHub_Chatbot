@@ -1,0 +1,82 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 75,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1358,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "accesslambda.zip",
+        "file_name": "accesslambda.zip",
+        "extension": ".zip",
+        "size_bytes": 1591,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "accesslambda/index.js",
+        "file_name": "index.js",
+        "extension": ".js",
+        "size_bytes": 4122,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "auth.tf",
+        "file_name": "auth.tf",
+        "extension": ".tf",
+        "size_bytes": 18231,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "auth_cloudformation.yaml",
+        "file_name": "auth_cloudformation.yaml",
+        "extension": ".yaml",
+        "size_bytes": 6881,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "authlambda.zip",
+        "file_name": "authlambda.zip",
+        "extension": ".zip",
+        "size_bytes": 1588,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "authlambda/index.js",
+        "file_name": "index.js",
+        "extension": ".js",
+        "size_bytes": 4831,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "authlambda/whitelist",
+        "file_name": "whitelist",
+        "extension": "",
+        "size_bytes": 73,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "variables.tf",
+        "file_name": "variables.tf",
+        "extension": ".tf",
+        "size_bytes": 852,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

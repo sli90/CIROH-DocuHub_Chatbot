@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/631be88704ef4167b12e9ad9d2529ba9">
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/631be88704ef4167b12e9ad9d2529ba9"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>aymnassar@gmail.com</hsterms:email>
+        <hsterms:name>Nassar, Ayman</hsterms:name>
+        <hsterms:phone>4358905557</hsterms:phone>
+        <hsterms:organization>Utah State University</hsterms:organization>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</hsterms:description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+      </rdf:Description>
+    </dc:creator>
+    <dc:language>eng</dc:language>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-06-24T19:08:23.883926+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2026-01-29T04:16:32.820315+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyURL></hsterms:fundingAgencyURL>
+        <hsterms:awardNumber>NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration (NOAA), University of Alabama</hsterms:fundingAgencyName>
+        <hsterms:awardTitle>CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare</hsterms:awardTitle>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:subject>Retrieval</dc:subject>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>name=CONUS; projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=49.7586; eastlimit=-64.7562; southlimit=24.7349; westlimit=-126.2801</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>dtarb@usu.edu</hsterms:email>
+        <hsterms:homepage rdf:resource="http://hydrology.usu.edu/dtarb"/>
+        <hsterms:name>Tarboton, David</hsterms:name>
+        <hsterms:phone>+1 (435) 797-3172</hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:description>
+        <hsterms:address>UT, US</hsterms:address>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1998-3479"/>
+        <hsterms:organization>Utah State University</hsterms:organization>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:creator>
+    <dcterms:bibliographicCitation>Nassar, A., D. Tarboton (2026). HydroFabric Subsetter and Retrieval, HydroShare, http://www.hydroshare.org/resource/631be88704ef4167b12e9ad9d2529ba9</dcterms:bibliographicCitation>
+    <dc:subject>HydroFabric</dc:subject>
+    <dc:subject>NextGEN NWM</dc:subject>
+    <dc:subject>Subsetter</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isPartOf>Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c</dcterms:isPartOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This HydroShare resource is developed to subset and retrieve the HydroFabric dataset (Johnson, J. M. (2022), https://lynker-spatial.s3-us-west-2.amazonaws.com/copyright.html) needed to execute the NOAA Next Generation (NextGen) Water Resource Modeling framework. The NextGen hydrofabric describes the representation, discretization, and topology of the hydrologic landscape and drainage network as a three-part data product that includes: (1) catchment and flowpath features, (2) their connectivity, and (3) the attribute sets needed to execute models. For more details about the HydroFabric data, please visit this website:  https://noaa-owp.github.io/hydrofabric/</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:title>HydroFabric Subsetter and Retrieval</dc:title>
+  </hsterms:CompositeResource>
+</rdf:RDF>

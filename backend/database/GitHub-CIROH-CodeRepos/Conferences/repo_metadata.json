@@ -1,0 +1,99 @@
+{
+    "id": 647441083,
+    "name": "Conferences",
+    "full_name": "CIROH-UA/Conferences",
+    "html_url": "https://github.com/CIROH-UA/Conferences",
+    "description": "presentations and posters from the Conferences ",
+    "homepage": "",
+    "default_branch": "main",
+    "created_at": "2023-05-30T19:42:55Z",
+    "updated_at": "2026-04-17T16:34:30Z",
+    "pushed_at": "2026-04-17T16:34:25Z",
+    "language": null,
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 335002,
+    "stargazers_count": 2,
+    "watchers_count": 2,
+    "forks_count": 16,
+    "open_issues_count": 0,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 19,
+        "top_contributors": [
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 65
+            },
+            {
+                "id": 120678271,
+                "login": "manjilasingh",
+                "html_url": "https://github.com/manjilasingh",
+                "type": "User",
+                "contributions": 14
+            },
+            {
+                "id": 69406976,
+                "login": "Sheargrub",
+                "html_url": "https://github.com/Sheargrub",
+                "type": "User",
+                "contributions": 9
+            },
+            {
+                "id": 170465264,
+                "login": "quinnylee",
+                "html_url": "https://github.com/quinnylee",
+                "type": "User",
+                "contributions": 5
+            },
+            {
+                "id": 60660437,
+                "login": "ZacharyWills",
+                "html_url": "https://github.com/ZacharyWills",
+                "type": "User",
+                "contributions": 5
+            },
+            {
+                "id": 79336055,
+                "login": "JordanLaserGit",
+                "html_url": "https://github.com/JordanLaserGit",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 119009859,
+                "login": "manjila2002",
+                "html_url": "https://github.com/manjila2002",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 112987653,
+                "login": "sepehrkrz",
+                "html_url": "https://github.com/sepehrkrz",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 130000039,
+                "login": "benlee0423",
+                "html_url": "https://github.com/benlee0423",
+                "type": "User",
+                "contributions": 1
+            },
+            {
+                "id": 42871840,
+                "login": "brodiealexander",
+                "html_url": "https://github.com/brodiealexander",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

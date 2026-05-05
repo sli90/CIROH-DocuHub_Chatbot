@@ -1,0 +1,72 @@
+[
+    {
+        "id": 26720477,
+        "login": "JoshCu",
+        "html_url": "https://github.com/JoshCu",
+        "type": "User",
+        "contributions": 263
+    },
+    {
+        "id": 170465264,
+        "login": "quinnylee",
+        "html_url": "https://github.com/quinnylee",
+        "type": "User",
+        "contributions": 26
+    },
+    {
+        "id": 7992111,
+        "login": "chp2001",
+        "html_url": "https://github.com/chp2001",
+        "type": "User",
+        "contributions": 18
+    },
+    {
+        "id": 49699333,
+        "login": "dependabot[bot]",
+        "html_url": "https://github.com/apps/dependabot",
+        "type": "Bot",
+        "contributions": 6
+    },
+    {
+        "id": 87771120,
+        "login": "mattw-nws",
+        "html_url": "https://github.com/mattw-nws",
+        "type": "User",
+        "contributions": 2
+    },
+    {
+        "id": 69406976,
+        "login": "Sheargrub",
+        "html_url": "https://github.com/Sheargrub",
+        "type": "User",
+        "contributions": 2
+    },
+    {
+        "id": 54657,
+        "login": "arpita0911patel",
+        "html_url": "https://github.com/arpita0911patel",
+        "type": "User",
+        "contributions": 1
+    },
+    {
+        "id": 120678271,
+        "login": "manjilasingh",
+        "html_url": "https://github.com/manjilasingh",
+        "type": "User",
+        "contributions": 1
+    },
+    {
+        "id": 67179927,
+        "login": "savalann",
+        "html_url": "https://github.com/savalann",
+        "type": "User",
+        "contributions": 1
+    },
+    {
+        "id": 71176390,
+        "login": "skoriche",
+        "html_url": "https://github.com/skoriche",
+        "type": "User",
+        "contributions": 1
+    }
+]

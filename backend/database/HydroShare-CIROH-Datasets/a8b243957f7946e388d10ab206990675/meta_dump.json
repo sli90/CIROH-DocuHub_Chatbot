@@ -1,0 +1,92 @@
+{
+    "title": "TempEst 2 Development Data: Observed Stream Temperature, Covariates, Performance Data, and Analysis Notebooks",
+    "abstract": "This resource contains code and data related to the development of the TempEst 2 stream temperature remote sensing model (manuscript in review with Journal of Hydrology).  The code includes the model implementation (model.R), some utility functions (valfn.R), data retrieval scripts for Google Earth Engine (eeretrieval.py and datapts.py), and a reproducible validation notebook (validation.Rmd), along with the knitted PDF of the latter (validation.pdf).  The main data include stream temperature daily mean/max observations retrieved from the USGS NWIS as well as remotely-sensed and gridded observations retrieved using Google Earth Engine from NLDAS, ESA WorldCover, MODIS, ERA5, and EPA Ecoregions (using eeretrieval.py).  These are contained in three files.  AllData.csv includes all observations for mean temperature.  ExtData.csv (\"extended data\") adds maximum temperature, at the expense of fewer total observations being included.  Ecoregions.csv is not central to the analysis, but includes EPA Level I ecoregion classifications for convenience.\r\n\r\nModel performance tests can be reproduced using validation.Rmd.  To run validation.Rmd in full, there must be a Data directory with subdirectories Density and TSLen, a Figures directory, at least one of the main data files (AllData.csv, ExtData.csv) or equivalent, and Ecoregions.csv.  A knitted version of the Notebook is included in this resource.  The error map plots also use an EPA Level I Ecoregions (https://gaftp.epa.gov/EPADataCommons/ORD/Ecoregions/cec_na/na_cec_eco_l1.zip) shapefile, which is assumed to be in an Ecoregions subdirectory of the *parent* directory.  This dependency can be removed by replacing the `plot.eco` function with ordinary ggplot plotting.\r\n\r\nThe two rda (RData) files contain different versions of a pre-trained model.  model.rda contains a regular, pre-trained model function that can be used directly to generate predictions.  krigs.rda contains a list of the actual fitted kriging models, which can be used for investigating model components (see demo.pdf).\r\n\r\nThese data and related items of information have not been formally disseminated by NOAA, and do not represent any agency determination, view, or policy.",
+    "language": "eng",
+    "subjects": [
+        "remote sensing",
+        "modeling",
+        "stream temperature",
+        "ungauged modeling",
+        "contiguous united states",
+        "river temperature"
+    ],
+    "creators": [
+        {
+            "name": "Philippus, Daniel",
+            "organization": "Colorado School of Mines",
+            "email": "dphilippus@mines.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 26228,
+            "identifiers": {}
+        },
+        {
+            "name": "Corona, Claudia R",
+            "address": "Colorado, US",
+            "organization": "University of Colorado, Boulder",
+            "email": "clco6964@colorado.edu",
+            "creator_order": 2,
+            "hydroshare_user_id": 7924,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-6447-9175"
+            }
+        },
+        {
+            "name": "Katie Schneider",
+            "organization": "Colorado School of Mines",
+            "creator_order": 3,
+            "identifiers": {}
+        },
+        {
+            "name": "Ashley Rust",
+            "organization": "Colorado School of Mines",
+            "creator_order": 4,
+            "identifiers": {}
+        },
+        {
+            "name": "Terri S Hogue",
+            "organization": "Colorado School of Mines",
+            "creator_order": 5,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration",
+            "title": "Cooperative Institute for Research to Operations in Hydrology",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ror.org/02z5nhe81"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "name": "Contiguous United States",
+        "northlimit": 49.0,
+        "eastlimit": -67.3,
+        "southlimit": 25.14,
+        "westlimit": -124.06,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "2001-01-02 00:00:00",
+        "end": "2022-12-31 00:00:00"
+    },
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Philippus, D., C. R. Corona, K. Schneider, A. Rust, T. S. Hogue (2025). TempEst 2 Development Data: Observed Stream Temperature, Covariates, Performance Data, and Analysis Notebooks, HydroShare, https://doi.org/10.4211/hs.a8b243957f7946e388d10ab206990675",
+    "url": "http://www.hydroshare.org/resource/a8b243957f7946e388d10ab206990675",
+    "identifier": "http://www.hydroshare.org/resource/a8b243957f7946e388d10ab206990675",
+    "created": "2024-09-16 19:46:55.228660+00:00",
+    "modified": "2025-02-04 15:44:41.743406+00:00",
+    "published": "2025-02-04 15:44:42.195659+00:00",
+    "type": "CompositeResource"
+}

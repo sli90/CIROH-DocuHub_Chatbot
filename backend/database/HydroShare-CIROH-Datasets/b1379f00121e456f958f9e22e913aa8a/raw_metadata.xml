@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/b1379f00121e456f958f9e22e913aa8a">
+    <dc:relation>
+      <rdf:Description>
+        <hsterms:isExecutedBy>https://jupyterhub.cuahsi.org/</hsterms:isExecutedBy>
+      </rdf:Description>
+    </dc:relation>
+    <dcterms:bibliographicCitation>Garousi-Nejad, I., A. M. Castronova (2024). Analysis of precipitation data across the Logan River Watershed for the Year 2010, HydroShare, http://www.hydroshare.org/resource/b1379f00121e456f958f9e22e913aa8a</dcterms:bibliographicCitation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:name>Garousi-Nejad, Irene</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:hydroshare_user_id>
+        <hsterms:email>igarousi@cuahsi.org</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:description>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=dKqI7iAAAAAJ&amp;hl=en"/>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-2929-3946"/>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Irene_Garousi-Nejad"/>
+      </rdf:Description>
+    </dc:creator>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardNumber>2118329</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>National Science Foundation</hsterms:fundingAgencyName>
+        <hsterms:awardTitle>HDR Institute: Geospatial Understanding through an Integrative Discovery Environment</hsterms:awardTitle>
+        <hsterms:fundingAgencyURL rdf:resource="https://www.nsf.gov/"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This resource was first created for a live demo during an online I-GUIDE VCO meeting on May 9, 2023. It was then modified for another live demo during the 1st annual CIROH users and developers conference in Salt Lake City, May 16-18. Recently, it was used for the National Water Center Summer Institute 2023. &#13;
+&#13;
+It contains codes and inputs for a precipitation analysis across the Logan River Watershed. In this analysis, we will obtain modeled precipitation from two products: AORC and PRISM, compare the basin's average daily precipitation, and save results back to HydroShare.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:language>eng</dc:language>
+    <dc:subject>2023CIROHDevCon</dc:subject>
+    <dc:subject>ClemsonAGM8710</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/b1379f00121e456f958f9e22e913aa8a"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>northlimit=42.09466879403567; southlimit=41.70988903942464; eastlimit=-111.47159761970573; westlimit=-111.79572988586932; projection=WGS 84 EPSG:4326; units=Decimal degrees</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:subject>PRISM</dc:subject>
+    <dc:subject>Logan River Watershed</dc:subject>
+    <dc:title>Analysis of precipitation data across the Logan River Watershed for the Year 2010</dc:title>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration</hsterms:fundingAgencyName>
+        <hsterms:awardTitle>CIROH: CUAHSI HydroShare Modernization</hsterms:awardTitle>
+        <hsterms:awardNumber>A22-0306-S004</hsterms:awardNumber>
+        <hsterms:fundingAgencyURL rdf:resource="https://www.noaa.gov"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>castronova.anthony@gmail.com</hsterms:email>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:name>Castronova, Anthony M.</hsterms:name>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Anthony_Castronova"/>
+        <hsterms:address>MA, US</hsterms:address>
+        <hsterms:homepage rdf:resource="http://anthonycastronova.com"/>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=ScWTFoQAAAAJ&amp;hl=en"/>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:phone>3399334127</hsterms:phone>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1341-5681"/>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:description>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>2024CIROHDevCon</dc:subject>
+    <dc:subject>AORC</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>Horsburgh, J. S., S. S. Black (2021). HydroShare Python Client Library (hsclient) Usage Examples, HydroShare, http://www.hydroshare.org/resource/7561aa12fd824ebb8edbee05af19b910</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>IGUIDE VCO</dc:subject>
+    <dc:subject>NWCSI2023</dc:subject>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2024-05-28T15:54:29.424504+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:subject>Precipitation Anlaysis</dc:subject>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2023-05-09T12:44:17.870465+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:email>mscranton@cuahsi.org</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4959</hsterms:description>
+        <hsterms:name>CUAHSI</hsterms:name>
+        <hsterms:organization>Consortium of Universities for the Advancement of Hydrological Science</hsterms:organization>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:address>Massachusetts, US</hsterms:address>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4959</hsterms:hydroshare_user_id>
+        <hsterms:homepage></hsterms:homepage>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+  </hsterms:CompositeResource>
+</rdf:RDF>

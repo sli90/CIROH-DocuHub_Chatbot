@@ -1,0 +1,461 @@
+[
+    {
+        "repo_name": "api-nwm-gcp",
+        "full_name": "CIROH-UA/api-nwm-gcp",
+        "frozen_commit_sha": "3e445c6ba0043b5c2625e75813285603639cd932",
+        "total_files": 20,
+        "downloaded_files": 5,
+        "contributors_count": 5,
+        "status": "success"
+    },
+    {
+        "repo_name": "awi-ciroh-image",
+        "full_name": "CIROH-UA/awi-ciroh-image",
+        "frozen_commit_sha": "d86a62ae0b855c82991706bac2de19a313272b4b",
+        "total_files": 13,
+        "downloaded_files": 2,
+        "contributors_count": 6,
+        "status": "success"
+    },
+    {
+        "repo_name": "CAMELS_data_sample",
+        "full_name": "CIROH-UA/CAMELS_data_sample",
+        "frozen_commit_sha": "7738a89cdb5e99ef7f9ee2cb9b8eff21eae7fab9",
+        "total_files": 57,
+        "downloaded_files": 1,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "cfe_v1.0",
+        "full_name": "CIROH-UA/cfe_v1.0",
+        "frozen_commit_sha": "29231c4004b13882145c2e75fcbe2506a592478c",
+        "total_files": 64,
+        "downloaded_files": 10,
+        "contributors_count": 14,
+        "status": "success"
+    },
+    {
+        "repo_name": "CIROH-open-source-project-template",
+        "full_name": "CIROH-UA/CIROH-open-source-project-template",
+        "frozen_commit_sha": "be88d23daf59fd4b5b6df3dbec2d55ec9257910c",
+        "total_files": 14,
+        "downloaded_files": 8,
+        "contributors_count": 5,
+        "status": "success"
+    },
+    {
+        "repo_name": "ciroh_pyngiab",
+        "full_name": "CIROH-UA/ciroh_pyngiab",
+        "frozen_commit_sha": "cc47515bca43b352989868a26ac4fc2e8330b715",
+        "total_files": 26,
+        "downloaded_files": 7,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "Community-Streamflow-Evaluation-System",
+        "full_name": "CIROH-UA/Community-Streamflow-Evaluation-System",
+        "frozen_commit_sha": "76d85d442bb20c564a13eb1cdccac674bd529494",
+        "total_files": 2293,
+        "downloaded_files": 9,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "community_hf_patcher",
+        "full_name": "CIROH-UA/community_hf_patcher",
+        "frozen_commit_sha": "9fc9dd48f532e44a3141e7619dc174d0a8d47e3d",
+        "total_files": 18,
+        "downloaded_files": 2,
+        "contributors_count": 3,
+        "status": "success"
+    },
+    {
+        "repo_name": "Conferences",
+        "full_name": "CIROH-UA/Conferences",
+        "frozen_commit_sha": "39d09f25c0a92ac26d48777ed1eab57a980f818d",
+        "total_files": 61,
+        "downloaded_files": 3,
+        "contributors_count": 19,
+        "status": "success"
+    },
+    {
+        "repo_name": "datastreamcli",
+        "full_name": "CIROH-UA/datastreamcli",
+        "frozen_commit_sha": "2616514639d4790673c888f894f3990c15f20111",
+        "total_files": 91,
+        "downloaded_files": 18,
+        "contributors_count": 7,
+        "status": "success"
+    },
+    {
+        "repo_name": "data_access_example",
+        "full_name": "CIROH-UA/data_access_example",
+        "frozen_commit_sha": "de9b244b193f27ff3a07e00b7bcdacef324db9a6",
+        "total_files": 2,
+        "downloaded_files": 2,
+        "contributors_count": 2,
+        "status": "success"
+    },
+    {
+        "repo_name": "deep_bucket_lab",
+        "full_name": "CIROH-UA/deep_bucket_lab",
+        "frozen_commit_sha": "23b412d6fabb8b386e97dcff1ad2c77a96a730d3",
+        "total_files": 25,
+        "downloaded_files": 5,
+        "contributors_count": 3,
+        "status": "success"
+    },
+    {
+        "repo_name": "DEVCON_SNOW_ML",
+        "full_name": "CIROH-UA/DEVCON_SNOW_ML",
+        "frozen_commit_sha": "c2d581380fc9033e70e359e021d9fbee3e11249a",
+        "total_files": 283,
+        "downloaded_files": 11,
+        "contributors_count": 11,
+        "status": "success"
+    },
+    {
+        "repo_name": "forcingprocessor",
+        "full_name": "CIROH-UA/forcingprocessor",
+        "frozen_commit_sha": "c888e1b007ea47918fab9334a829e5f383615fcf",
+        "total_files": 69,
+        "downloaded_files": 13,
+        "contributors_count": 6,
+        "status": "success"
+    },
+    {
+        "repo_name": "forecast_data_overlay",
+        "full_name": "CIROH-UA/forecast_data_overlay",
+        "frozen_commit_sha": "efd1c7c7d752290986954f684e23ae2f476ef0cb",
+        "total_files": 65,
+        "downloaded_files": 4,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "GEE_Workshop",
+        "full_name": "CIROH-UA/GEE_Workshop",
+        "frozen_commit_sha": "305936dbcbde5a9a26020e394a7bc5f4b899a74d",
+        "total_files": 315,
+        "downloaded_files": 16,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "hf_pmtiles",
+        "full_name": "CIROH-UA/hf_pmtiles",
+        "frozen_commit_sha": "5fe1eff96e2e5323743f836b8d180ed91b34e20a",
+        "total_files": 9,
+        "downloaded_files": 2,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "hydromachine-tutorials",
+        "full_name": "CIROH-UA/hydromachine-tutorials",
+        "frozen_commit_sha": "f478f21e76cf8f553c66dc5e19c3ab004ca85a71",
+        "total_files": 141,
+        "downloaded_files": 7,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "hydrotools",
+        "full_name": "CIROH-UA/hydrotools",
+        "frozen_commit_sha": "d94a28ea80480cbb4cac40f6800902e0c3510341",
+        "total_files": 194,
+        "downloaded_files": 41,
+        "contributors_count": 6,
+        "status": "success"
+    },
+    {
+        "repo_name": "lstm",
+        "full_name": "CIROH-UA/lstm",
+        "frozen_commit_sha": "47b3b59dfacf460c4fcfb5a926860bfb5214c47b",
+        "total_files": 84,
+        "downloaded_files": 14,
+        "contributors_count": 9,
+        "status": "success"
+    },
+    {
+        "repo_name": "LSTM-Tutorials",
+        "full_name": "CIROH-UA/LSTM-Tutorials",
+        "frozen_commit_sha": "fb5d1032e419e2358479bdd747b8db369ee07887",
+        "total_files": 33,
+        "downloaded_files": 9,
+        "contributors_count": 3,
+        "status": "success"
+    },
+    {
+        "repo_name": "neuralhydrology",
+        "full_name": "CIROH-UA/neuralhydrology",
+        "frozen_commit_sha": "e4329c32b73d2ea9a0490aaef822ded4a6f5d530",
+        "total_files": 223,
+        "downloaded_files": 29,
+        "contributors_count": 11,
+        "status": "success"
+    },
+    {
+        "repo_name": "ngen",
+        "full_name": "CIROH-UA/ngen",
+        "frozen_commit_sha": "d37aec56fdaa9612815cc2cdc37ef97081e1221d",
+        "total_files": 480,
+        "downloaded_files": 41,
+        "contributors_count": 28,
+        "status": "success"
+    },
+    {
+        "repo_name": "ngen-cal",
+        "full_name": "CIROH-UA/ngen-cal",
+        "frozen_commit_sha": "3bc28028ab9b069bc3bc1c32a29f8e174c70199e",
+        "total_files": 253,
+        "downloaded_files": 36,
+        "contributors_count": 11,
+        "status": "success"
+    },
+    {
+        "repo_name": "ngen-datastream",
+        "full_name": "CIROH-UA/ngen-datastream",
+        "frozen_commit_sha": "d630591fc7949d0fd6f12d94e2c139b717c08983",
+        "total_files": 140,
+        "downloaded_files": 16,
+        "contributors_count": 8,
+        "status": "success"
+    },
+    {
+        "repo_name": "ngiab-cal",
+        "full_name": "CIROH-UA/ngiab-cal",
+        "frozen_commit_sha": "4859c7676a95e61fa1a472e24f805c04c7b02a0e",
+        "total_files": 12,
+        "downloaded_files": 2,
+        "contributors_count": 2,
+        "status": "success"
+    },
+    {
+        "repo_name": "ngiab-client",
+        "full_name": "CIROH-UA/ngiab-client",
+        "frozen_commit_sha": "813a2caeca82ea998106ac482f90049602520f69",
+        "total_files": 138,
+        "downloaded_files": 2,
+        "contributors_count": 6,
+        "status": "success"
+    },
+    {
+        "repo_name": "NGIAB-CloudInfra",
+        "full_name": "CIROH-UA/NGIAB-CloudInfra",
+        "frozen_commit_sha": "6cc55b4e6d2eb28d8cbb9a0d000c8f550d49c30d",
+        "total_files": 71,
+        "downloaded_files": 15,
+        "contributors_count": 20,
+        "status": "success"
+    },
+    {
+        "repo_name": "NGIAB-HPCInfra",
+        "full_name": "CIROH-UA/NGIAB-HPCInfra",
+        "frozen_commit_sha": "f85d89f76f9ec4417d698617e36d3584b871a0fc",
+        "total_files": 8,
+        "downloaded_files": 2,
+        "contributors_count": 4,
+        "status": "success"
+    },
+    {
+        "repo_name": "ngiab-teehr",
+        "full_name": "CIROH-UA/ngiab-teehr",
+        "frozen_commit_sha": "5d7061197557b8b88903089de6f4b1125e68f05d",
+        "total_files": 12,
+        "downloaded_files": 5,
+        "contributors_count": 4,
+        "status": "success"
+    },
+    {
+        "repo_name": "ngiab-website",
+        "full_name": "CIROH-UA/ngiab-website",
+        "frozen_commit_sha": "803fee72f529307cad4f0b15b86342af6c38a1cd",
+        "total_files": 105,
+        "downloaded_files": 1,
+        "contributors_count": 5,
+        "status": "success"
+    },
+    {
+        "repo_name": "ngiab-website-staging",
+        "full_name": "CIROH-UA/ngiab-website-staging",
+        "frozen_commit_sha": "70d4d94fa7d0d0f6685f5848501fa1b1cb2fa94c",
+        "total_files": 154,
+        "downloaded_files": 1,
+        "contributors_count": 4,
+        "status": "success"
+    },
+    {
+        "repo_name": "NGIAB_data_preprocess",
+        "full_name": "CIROH-UA/NGIAB_data_preprocess",
+        "frozen_commit_sha": "4d7803e372b9f411caad071339bc9a0275a7fd5d",
+        "total_files": 64,
+        "downloaded_files": 5,
+        "contributors_count": 10,
+        "status": "success"
+    },
+    {
+        "repo_name": "nrds-client",
+        "full_name": "CIROH-UA/nrds-client",
+        "frozen_commit_sha": "0450c20820613a28442f05f3c5bb36560d415f64",
+        "total_files": 115,
+        "downloaded_files": 3,
+        "contributors_count": 2,
+        "status": "success"
+    },
+    {
+        "repo_name": "nrds-onprem",
+        "full_name": "CIROH-UA/nrds-onprem",
+        "frozen_commit_sha": "c0377e11fca744173887e0921cfc75bb472a1029",
+        "total_files": 11,
+        "downloaded_files": 6,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "nwmurl",
+        "full_name": "CIROH-UA/nwmurl",
+        "frozen_commit_sha": "5142a2673e7cba69514f2572eb986a64cf768ef3",
+        "total_files": 47,
+        "downloaded_files": 4,
+        "contributors_count": 8,
+        "status": "success"
+    },
+    {
+        "repo_name": "NWM_ML",
+        "full_name": "CIROH-UA/NWM_ML",
+        "frozen_commit_sha": "37523a84db2afba5c2ae7ce1639414fb2060c2c4",
+        "total_files": 234,
+        "downloaded_files": 17,
+        "contributors_count": 3,
+        "status": "success"
+    },
+    {
+        "repo_name": "OPG-CNN-Northern-Utah-CIROH-Workshop",
+        "full_name": "CIROH-UA/OPG-CNN-Northern-Utah-CIROH-Workshop",
+        "frozen_commit_sha": "1613b99c93c184e85e9fe484085bdfcf86123e46",
+        "total_files": 32,
+        "downloaded_files": 5,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "PINN_workshop_ciroh",
+        "full_name": "CIROH-UA/PINN_workshop_ciroh",
+        "frozen_commit_sha": "9baaa1a872e80a69f26f6af5eb4b90caf7abfe02",
+        "total_files": 71,
+        "downloaded_files": 11,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "RIVR",
+        "full_name": "CIROH-UA/RIVR",
+        "frozen_commit_sha": "d3aca0076b9d27834f1206379eb105c1e01b47b7",
+        "total_files": 391,
+        "downloaded_files": 16,
+        "contributors_count": 2,
+        "status": "success"
+    },
+    {
+        "repo_name": "rs_route",
+        "full_name": "CIROH-UA/rs_route",
+        "frozen_commit_sha": "02b7a515332643b30a330dcc4ece79577ec1bff9",
+        "total_files": 38,
+        "downloaded_files": 2,
+        "contributors_count": 3,
+        "status": "success"
+    },
+    {
+        "repo_name": "rust-lstm",
+        "full_name": "CIROH-UA/rust-lstm",
+        "frozen_commit_sha": "51c04e2c57880afeaceb66e3b7497079734899c9",
+        "total_files": 12,
+        "downloaded_files": 2,
+        "contributors_count": 5,
+        "status": "success"
+    },
+    {
+        "repo_name": "SWEML",
+        "full_name": "CIROH-UA/SWEML",
+        "frozen_commit_sha": "97b56fdd4706a28f44e4a9da0dca701d8016fe8e",
+        "total_files": 3129,
+        "downloaded_files": 25,
+        "contributors_count": 4,
+        "status": "success"
+    },
+    {
+        "repo_name": "t-route",
+        "full_name": "CIROH-UA/t-route",
+        "frozen_commit_sha": "dd43a7d218274c526306041369f4e5e8e76a2cb1",
+        "total_files": 1155,
+        "downloaded_files": 28,
+        "contributors_count": 22,
+        "status": "success"
+    },
+    {
+        "repo_name": "Tethys-CSES",
+        "full_name": "CIROH-UA/Tethys-CSES",
+        "frozen_commit_sha": "274ccd69cb911b16c54f7eeff7b3a447b6e60e89",
+        "total_files": 64,
+        "downloaded_files": 2,
+        "contributors_count": 7,
+        "status": "success"
+    },
+    {
+        "repo_name": "training-data-workflows-101",
+        "full_name": "CIROH-UA/training-data-workflows-101",
+        "frozen_commit_sha": "500c1b2a62e1db0c25248470a233e8592a466836",
+        "total_files": 22,
+        "downloaded_files": 11,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "training-HydroShare-101",
+        "full_name": "CIROH-UA/training-HydroShare-101",
+        "frozen_commit_sha": "71b0a49434181788407621021e043feea96dc6e2",
+        "total_files": 26,
+        "downloaded_files": 7,
+        "contributors_count": 1,
+        "status": "success"
+    },
+    {
+        "repo_name": "training-NGIAB-101",
+        "full_name": "CIROH-UA/training-NGIAB-101",
+        "frozen_commit_sha": "077b0b158683e4e2d419a33e3c7458df6ee60ffe",
+        "total_files": 54,
+        "downloaded_files": 7,
+        "contributors_count": 6,
+        "status": "success"
+    },
+    {
+        "repo_name": "varnish",
+        "full_name": "CIROH-UA/varnish",
+        "frozen_commit_sha": "93b60afcd3653ecde8cdf672fc782d83a37801a7",
+        "total_files": 381,
+        "downloaded_files": 4,
+        "contributors_count": 19,
+        "status": "success"
+    },
+    {
+        "repo_name": "varnish-old",
+        "full_name": "CIROH-UA/varnish-old",
+        "frozen_commit_sha": "cab906659fb18e08e39b3a66bb8d22eedf438173",
+        "total_files": 373,
+        "downloaded_files": 4,
+        "contributors_count": 17,
+        "status": "success"
+    },
+    {
+        "repo_name": "wpn-auth",
+        "full_name": "CIROH-UA/wpn-auth",
+        "frozen_commit_sha": "66714d425b61c8987a1633734f558c89a18615bb",
+        "total_files": 10,
+        "downloaded_files": 1,
+        "contributors_count": 1,
+        "status": "success"
+    }
+]

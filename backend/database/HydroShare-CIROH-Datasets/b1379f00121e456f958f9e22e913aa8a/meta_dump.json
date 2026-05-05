@@ -1,0 +1,99 @@
+{
+    "title": "Analysis of precipitation data across the Logan River Watershed for the Year 2010",
+    "abstract": "This resource was first created for a live demo during an online I-GUIDE VCO meeting on May 9, 2023. It was then modified for another live demo during the 1st annual CIROH users and developers conference in Salt Lake City, May 16-18. Recently, it was used for the National Water Center Summer Institute 2023. \r\n\r\nIt contains codes and inputs for a precipitation analysis across the Logan River Watershed. In this analysis, we will obtain modeled precipitation from two products: AORC and PRISM, compare the basin's average daily precipitation, and save results back to HydroShare.",
+    "language": "eng",
+    "subjects": [
+        "PRISM",
+        "ClemsonAGM8710",
+        "2023CIROHDevCon",
+        "2024CIROHDevCon",
+        "AORC",
+        "IGUIDE VCO",
+        "Logan River Watershed",
+        "NWCSI2023",
+        "Precipitation Anlaysis"
+    ],
+    "creators": [
+        {
+            "name": "Garousi-Nejad, Irene",
+            "organization": "CUAHSI",
+            "email": "igarousi@cuahsi.org",
+            "creator_order": 1,
+            "hydroshare_user_id": 475,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=dKqI7iAAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Irene_Garousi-Nejad",
+                "ORCID": "https://orcid.org/0000-0003-2929-3946"
+            }
+        },
+        {
+            "name": "Castronova, Anthony M.",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 2,
+            "hydroshare_user_id": 11,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=ScWTFoQAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Anthony_Castronova",
+                "ORCID": "https://orcid.org/0000-0002-1341-5681"
+            }
+        }
+    ],
+    "contributors": [
+        {
+            "name": "CUAHSI",
+            "address": "Massachusetts, US",
+            "organization": "Consortium of Universities for the Advancement of Hydrological Science",
+            "email": "mscranton@cuahsi.org",
+            "hydroshare_user_id": 4959,
+            "identifiers": {}
+        }
+    ],
+    "relations": [
+        {
+            "type": "The content of this resource references",
+            "value": "Horsburgh, J. S., S. S. Black (2021). HydroShare Python Client Library (hsclient) Usage Examples, HydroShare, http://www.hydroshare.org/resource/7561aa12fd824ebb8edbee05af19b910"
+        },
+        {
+            "type": "The content of this resource can be executed by",
+            "value": "https://jupyterhub.cuahsi.org/"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Science Foundation",
+            "title": "HDR Institute: Geospatial Understanding through an Integrative Discovery Environment",
+            "number": "2118329",
+            "funding_agency_url": "https://www.nsf.gov/"
+        },
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration",
+            "title": "CIROH: CUAHSI HydroShare Modernization",
+            "number": "A22-0306-S004",
+            "funding_agency_url": "https://www.noaa.gov/"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 42.09466879403567,
+        "eastlimit": -111.47159761970573,
+        "southlimit": 41.70988903942464,
+        "westlimit": -111.79572988586932,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "citation": "Garousi-Nejad, I., A. M. Castronova (2024). Analysis of precipitation data across the Logan River Watershed for the Year 2010, HydroShare, http://www.hydroshare.org/resource/b1379f00121e456f958f9e22e913aa8a",
+    "url": "http://www.hydroshare.org/resource/b1379f00121e456f958f9e22e913aa8a",
+    "identifier": "http://www.hydroshare.org/resource/b1379f00121e456f958f9e22e913aa8a",
+    "created": "2023-05-09 12:44:17.870465+00:00",
+    "modified": "2024-05-28 15:54:29.424504+00:00",
+    "type": "CompositeResource"
+}

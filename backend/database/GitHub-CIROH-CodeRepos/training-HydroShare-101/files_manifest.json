@@ -1,0 +1,210 @@
+[
+    {
+        "path": ".github/workflows/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 8745,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-close-signal.yaml",
+        "file_name": "pr-close-signal.yaml",
+        "extension": ".yaml",
+        "size_bytes": 482,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-comment.yaml",
+        "file_name": "pr-comment.yaml",
+        "extension": ".yaml",
+        "size_bytes": 6063,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-post-remove-branch.yaml",
+        "file_name": "pr-post-remove-branch.yaml",
+        "extension": ".yaml",
+        "size_bytes": 870,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-preflight.yaml",
+        "file_name": "pr-preflight.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1124,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-receive.yaml",
+        "file_name": "pr-receive.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3813,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/sandpaper-main.yaml",
+        "file_name": "sandpaper-main.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1639,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/sandpaper-version.txt",
+        "file_name": "sandpaper-version.txt",
+        "extension": ".txt",
+        "size_bytes": 8,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/update-cache.yaml",
+        "file_name": "update-cache.yaml",
+        "extension": ".yaml",
+        "size_bytes": 3928,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/update-workflows.yaml",
+        "file_name": "update-workflows.yaml",
+        "extension": ".yaml",
+        "size_bytes": 2146,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 682,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CITATION.cff",
+        "file_name": "CITATION.cff",
+        "extension": ".cff",
+        "size_bytes": 738,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CODE_OF_CONDUCT.md",
+        "file_name": "CODE_OF_CONDUCT.md",
+        "extension": ".md",
+        "size_bytes": 435,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 5913,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "FIXME.Rproj",
+        "file_name": "FIXME.Rproj",
+        "extension": ".rproj",
+        "size_bytes": 296,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE.md",
+        "file_name": "LICENSE.md",
+        "extension": ".md",
+        "size_bytes": 3382,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 4489,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "config.yaml",
+        "file_name": "config.yaml",
+        "extension": ".yaml",
+        "size_bytes": 2145,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/introduction.md",
+        "file_name": "introduction.md",
+        "extension": ".md",
+        "size_bytes": 3525,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "index.md",
+        "file_name": "index.md",
+        "extension": ".md",
+        "size_bytes": 175,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "instructors/instructor-notes.md",
+        "file_name": "instructor-notes.md",
+        "extension": ".md",
+        "size_bytes": 89,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "learners/reference.md",
+        "file_name": "reference.md",
+        "extension": ".md",
+        "size_bytes": 96,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "learners/setup.md",
+        "file_name": "setup.md",
+        "extension": ".md",
+        "size_bytes": 1160,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "links.md",
+        "file_name": "links.md",
+        "extension": ".md",
+        "size_bytes": 327,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "profiles/learner-profiles.md",
+        "file_name": "learner-profiles.md",
+        "extension": ".md",
+        "size_bytes": 76,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "site/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 84,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

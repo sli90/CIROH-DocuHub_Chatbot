@@ -1,0 +1,20 @@
+[
+    {
+        "file_name": "Bankfull_Meanflow_CONUS_Stream_Reaches.txt",
+        "file_path": "Bankfull_Meanflow_CONUS_Stream_Reaches.txt",
+        "extension": ".txt",
+        "checksum": "c37d9cde4598069a125612e694464b9a-3"
+    },
+    {
+        "file_name": "Bankfull_Meanflow_CONUS_USGS_Gages.zip",
+        "file_path": "Bankfull_Meanflow_CONUS_USGS_Gages.zip",
+        "extension": ".zip",
+        "checksum": "9f89cb0d3a20218c9a3fbda0d07d0593-1"
+    },
+    {
+        "file_name": "Bankfull_Meanflow_CONUS_Stream_Reaches.zip",
+        "file_path": "Bankfull_Meanflow_CONUS_Stream_Reaches.zip",
+        "extension": ".zip",
+        "checksum": "549fcabd6f17e3550a45bdfbba446fc8-15"
+    }
+]

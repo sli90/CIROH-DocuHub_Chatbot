@@ -1,0 +1,32 @@
+[
+    {
+        "file_name": "readme.md",
+        "file_path": "readme.md",
+        "extension": ".md",
+        "checksum": "3c1539330f1410897d6703ea0e9e15a4"
+    },
+    {
+        "file_name": "compare-aorc-precip.ipynb",
+        "file_path": "compare-aorc-precip.ipynb",
+        "extension": ".ipynb",
+        "checksum": "ce8155d22f5e32ae980280da01332538"
+    },
+    {
+        "file_name": "query-daily-prism-precipitation.ipynb",
+        "file_path": "query-daily-prism-precipitation.ipynb",
+        "extension": ".ipynb",
+        "checksum": "0b3b4ed601534bd58efa0d0b67fed27f"
+    },
+    {
+        "file_name": "case-study-logan-river-watershed.png",
+        "file_path": "case-study-logan-river-watershed.png",
+        "extension": ".png",
+        "checksum": "9e19742b11310f90e372dc25458118b0"
+    },
+    {
+        "file_name": "Daily_PRISM_Precipitation_in_2010_for_LoganRiverWatershed.csv",
+        "file_path": "Daily_PRISM_Precipitation_in_2010_for_LoganRiverWatershed.csv",
+        "extension": ".csv",
+        "checksum": "72743b9287317fd1ce5743edaf8d37bb"
+    }
+]

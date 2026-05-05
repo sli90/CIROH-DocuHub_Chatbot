@@ -1,0 +1,102 @@
+{
+    "title": "AORC atmospheric forcing data across CAMELS US basins, 1980 - 2024",
+    "abstract": "These data are atmospheric forcings from NOAA's Analysis of Record for Calibration (AORC 2024) summarized over the CAMELS catchments (Addor et al. 2017), however, the delineations over those CAMELS basins were updated by Andy Wood (2024) using the basin boundaries produced for the USGS GagesII effort (Falcone 2011). \r\n\r\nData collected using this repository code: https://github.com/jmframe/CIROH_DL_NextGen/tree/main/forcing_prep, which should be somewhat derivative of this: https://github.com/CIROH-UA/ngen-datastream/tree/main/forcingprocessor.\r\n\r\nThere are eight variables representing the meteorological conditions:\r\nTotal Precipitaion (APCP_surface) - Hourly total precipitation (kgm-2 or mm) for Calibration (AORC) dataset\r\nAir Temperature (TMP_2maboveground) - Temperature (at 2 m above-ground-level (AGL)) (K)\r\nSpecific Humidity (SPFH_2maboveground) - Specific humidity (at 2 m AGL) (g g-1)\r\nDownward Long-Wave Radiation Flux (DLWRF_surface) - longwave (infrared) radiation flux (at the surface) (W m-2)\r\nDownward Short-Wave Radiation Flux (DSWRF_surface) - Downward shortwave (solar) radiation flux (at the surface) (W m-2)\r\nPressure (PRES_surface) - Air pressure (at the surface) (Pa)\r\nU-Component of Wind (UGRD_10maboveground) - (west-east) - components of the wind (at 10 m AGL) (m s-1)\r\nV-Component of Wind (VGRD_10maboveground) - (south-north) - components of the wind (at 10 m AGL) (m s-1)\r\n\r\nThe data include a timestamp from Coordinated Universal Time (UTC; AORC 2021).\r\n\r\nReferences:\r\nAddor, N., Newman, A. J., Mizukami, N., and Clark, M. P.: The CAMELS data set: catchment attributes and meteorology for large-sample studies, Hydrol. Earth Syst. Sci., 21, 5293\u20135313, https://doi.org/10.5194/hess-21-5293-2017, 2017. \r\nAORC. 2021. Analysis of Record for Calibration Version 1.1 - Sources, Methods, and Verification, National Oceanic and Atmospheric Administration (NOAA), National Weather Service (NWS), Office of Water Prediction (OWP), Silver Spring, MD.https://www.weather.gov/media/owp/operations/aorc_v1_1_methods.pd\r\nAORC. 2024. NOAA Analysis of Record for Calibration (AORC) Dataset was accessed July 2024 from https://registry.opendata.aws/noaa-nws-aorc. \r\nFalcone, J., 2011, GAGES-II: Geospatial Attributes of Gages for Evaluating Streamflow: U.S. Geological Survey data release, https://doi.org/10.5066/P96CPHOT. https://www.sciencebase.gov/catalog/item/631405bbd34e36012efa304a\r\nWood. 2024. CAMELS basins delineation.",
+    "language": "eng",
+    "subjects": [
+        "Humidity",
+        "Precipitaion",
+        "Atmospheric forcing",
+        "Downward Long-Wave Radiation",
+        "V-Component of Wind",
+        "Analysis of Record for Calibration (AORC)",
+        "U-Component of Wind",
+        "Downward Short-Wave Radiation",
+        "Air Pressure",
+        "Temperature",
+        "CAMELS US"
+    ],
+    "creators": [
+        {
+            "name": "Frame, Jonathan Martin",
+            "organization": "National Water Center;University of Alabama - Tuscaloosa",
+            "email": "jonframe@gmail.com",
+            "creator_order": 1,
+            "hydroshare_user_id": 10119,
+            "identifiers": {}
+        },
+        {
+            "name": "Wood, Andrew W",
+            "address": "Colorado (CO), US",
+            "organization": "NCAR;University of Colorado at Boulder",
+            "email": "andywood@ucar.edu",
+            "creator_order": 2,
+            "hydroshare_user_id": 824,
+            "identifiers": {}
+        },
+        {
+            "name": "Frazier, Nels",
+            "address": "Alabama, US",
+            "organization": "Lynker;NOAA Affiliate",
+            "email": "hellkite500@gmail.com",
+            "creator_order": 3,
+            "hydroshare_user_id": 14954,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Frazier, Nels",
+            "address": "Alabama, US",
+            "organization": "Lynker;NOAA Affiliate",
+            "email": "hellkite500@gmail.com",
+            "hydroshare_user_id": 14954,
+            "identifiers": {}
+        },
+        {
+            "name": "Wood, Andrew W",
+            "address": "Colorado (CO), US",
+            "organization": "NCAR;University of Colorado at Boulder",
+            "email": "andywood@ucar.edu",
+            "hydroshare_user_id": 824,
+            "identifiers": {}
+        }
+    ],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "NOAA",
+            "title": "Cooperative Institute for Research to Operations in Hydrology",
+            "number": "NA22NWS4320003"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "name": "CONUS selected basins (CAMELS)",
+        "northlimit": 50.2107,
+        "eastlimit": -65.7422,
+        "southlimit": 24.255,
+        "westlimit": -126.7383,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1980-10-01 00:00:00",
+        "end": "2024-04-01 00:00:00"
+    },
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Frame, J. M., A. W. Wood, N. Frazier (2025). AORC atmospheric forcing data across CAMELS US basins, 1980 - 2024, HydroShare, https://doi.org/10.4211/hs.c738c05278a34bc9848dd14d61cffab9",
+    "url": "http://www.hydroshare.org/resource/c738c05278a34bc9848dd14d61cffab9",
+    "identifier": "http://www.hydroshare.org/resource/c738c05278a34bc9848dd14d61cffab9",
+    "created": "2024-08-07 00:51:08.090757+00:00",
+    "modified": "2025-01-06 15:35:48.734696+00:00",
+    "published": "2025-01-06 15:35:49.431349+00:00",
+    "type": "CompositeResource"
+}

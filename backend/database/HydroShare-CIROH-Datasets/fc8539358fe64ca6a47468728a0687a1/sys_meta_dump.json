@@ -1,0 +1,32 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "fc8539358fe64ca6a47468728a0687a1",
+    "resource_title": "Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial",
+    "abstract": "This tutorial introduces the use of the Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) HydroShare repository and linked CIROH JupyterHub computing platform on 2i2c in support of CIROH collaborative research and NextGen modeling. \r\n\r\nLearning Objectives\r\n\u25cf\tBe able to use JupyterHub computing platforms linked to HydroShare (CIROH Jupyterhub on 2i2c specifically) to access, analyze and work with high community value datasets (AORC, Hydrofabric).\r\n\u25cf\tBe able to set up, run, and analyze the results from a NextGEN model configured for research over a small watershed.\r\n\u25cf\tBe able to create a HydroShare resource, populate it with metadata to share with a colleague or make it public.\r\n\r\nTo do this tutorial download and work through the steps in the Word Document CIROH_HydroShare_Tutorial.docx.\r\n\r\nYou will need to launch this resource into CIROH JupyterHub using Open With to work with the Tutorial Python and Jupyter Notebook files.",
+    "authors": [
+        "Tarboton, David",
+        "Salehabadi, Homa",
+        "Nassar, Ayman",
+        "Baig, Furqan",
+        "Castronova, Anthony M.",
+        "Garousi-Nejad, Irene",
+        "Patel, Arpita",
+        "Dash, Pabitra"
+    ],
+    "creator": "Tarboton, David",
+    "doi": "10.4211/hs.fc8539358fe64ca6a47468728a0687a1",
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": true,
+    "published": true,
+    "date_created": "2025-05-26T03:03:11.389648Z",
+    "date_last_updated": "2026-02-27T14:39:04.321972Z",
+    "bag_last_downloaded": "2026-03-15T18:51:38.293719Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/fc8539358fe64ca6a47468728a0687a1.zip",
+    "coverages": [],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/fc8539358fe64ca6a47468728a0687a1/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/fc8539358fe64ca6a47468728a0687a1/map/",
+    "resource_url": "http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1/",
+    "content_types": []
+}

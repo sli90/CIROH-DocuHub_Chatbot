@@ -1,0 +1,131 @@
+{
+    "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+    "abstract": "Collaboration is central to CIROH (https://ciroh.ua.edu/). Advancing the knowledge needed to support research to operations in hydrology depends on collaboration around model and data sharing. It requires open data supporting the integration of information from multiple sources; easy to use, generally accessible, shareable computing; and working together as a team and community. The CUAHSI HydroShare platform was developed to advance water research by enabling communities of researchers to more easily and freely share digital products resulting from their research, not just the scientific publications summarizing a study, but the data, models and workflows used to produce the results, consistent with Findable, Accessible, Interoperable, and Reusable (FAIR) principles of present-day research. HydroShare supports and enables private (e.g., social science) and open data sharing, transparent workflows, and computational reproducibility, thereby improving reliability and trust in research findings. These are crucial as research is transferred into operations. \r\n\r\nThe goal of this project is to enhance the performance, reliability, usability, and scalability of HydroShare\u2019s linkages with cloud storage and computational systems to fulfill CIROH\u2019s community collaboration and linked computing needs and enable CIROH researchers to easily integrate and analyze national scale datasets required for their research using high-performance and cloud computing systems.\r\n\r\nThe objectives are to (1) enhance community data access; (2) establish interoperability with scalable computing; (3) demonstrate computational reproducibility; and (4) establish and grow a CIROH Community on HydroShare. Work under objective (1) will use community input to identify, prioritize, and establish easy to use access to multiple high-value community datasets. Work under objective (2) will establish or extend interfaces to high performance computing, leveraging tools for model input preparation such as the CUAHSI Domain Subsetter and I-GUIDE (the Institute for Geospatial Understanding through an enhanced Discovery Environment, https://iguide.illinois.edu). Work under objective (3) will establish and document CIROH community best practices for enhancing the reproducibility of high-performance computing and analysis workflows so that CIROH modeling workflows can be accessed, re-executed, and analyzed by multiple researchers. Work under objective (4) will establish a CIROH \u201cCommunity\u201d within the HydroShare repository to support collaboration around and sharing of CIROH research products.\r\n\r\nForecasting operations will benefit from the transparency of research products hosted in HydroShare and linked to computing platforms for reproducibility and evaluation. Linking publications, data, and code (often in GitHub), with methods and findings that are well documented and tested will support their evaluation by the National Water Center for operational adoption.\r\n\r\nThis project runs 6/1/2023 to 5/31/2025.",
+    "language": "eng",
+    "subjects": [
+        "Collaboration",
+        "model sharing",
+        "CIROH",
+        "ciroh_portal_data",
+        "Data sharing",
+        "CIROHScience2023"
+    ],
+    "creators": [
+        {
+            "name": "Tarboton, David",
+            "phone": "4357973172",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        },
+        {
+            "name": "Horsburgh, Jeffery S.",
+            "phone": "4357972946",
+            "address": "Utah, US",
+            "organization": "Utah State University;Utah Water Research Laboratory",
+            "email": "jeff.horsburgh@usu.edu",
+            "homepage": "http://jeffh.usu.edu/",
+            "creator_order": 2,
+            "hydroshare_user_id": 10,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=mu4k534AAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Jeffery_Horsburgh",
+                "ORCID": "https://orcid.org/0000-0002-0768-3196"
+            }
+        },
+        {
+            "name": "Wang, Shaowen",
+            "address": "Illinois, US",
+            "organization": "University of Illinois at Urbana-Champaign",
+            "email": "wangshaowen.uiuc@gmail.com",
+            "creator_order": 3,
+            "hydroshare_user_id": 1385,
+            "identifiers": {}
+        },
+        {
+            "name": "Read, Jordan Stuart",
+            "address": "Wisconsin, US",
+            "organization": "CUAHSI",
+            "email": "jread@cuahsi.org",
+            "creator_order": 4,
+            "hydroshare_user_id": 18538,
+            "identifiers": {}
+        },
+        {
+            "name": "Garousi-Nejad, Irene",
+            "email": "irene.garousi.nejad@gmail.com",
+            "creator_order": 5,
+            "hydroshare_user_id": 416,
+            "identifiers": {}
+        },
+        {
+            "name": "Castronova, Anthony M.",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 6,
+            "hydroshare_user_id": 11,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=ScWTFoQAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Anthony_Castronova",
+                "ORCID": "https://orcid.org/0000-0002-1341-5681"
+            }
+        },
+        {
+            "name": "Cogswell, Clara",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "ccogswell@cuahsi.org",
+            "creator_order": 7,
+            "hydroshare_user_id": 11139,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is part of",
+            "value": "Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c"
+        }
+    ],
+    "additional_metadata": {
+        "home_page_url": "https://www.hydroshare.org",
+        "app_icon": "https://www.hydroshare.org/resource/23b51cb99b5445a1af740a21c5acaecb/data/contents/CIROH-Science-Mtg-Portal_Icon.png",
+        "help_page_url": "httos://help.hydroshare.org"
+    },
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "University of Alabama, Cooperative Institute for Research to Operations in Hydrology",
+            "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+            "number": "Subaward number A23-0266-s001",
+            "funding_agency_url": "https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"
+        },
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration",
+            "title": "Cooperative Institute for Research to Operations in Hydrology",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ror.org/02z5nhe81"
+        }
+    ],
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Tarboton, D., J. S. Horsburgh, S. Wang, J. S. Read, I. Garousi-Nejad, A. M. Castronova, C. Cogswell (2026). CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare, HydroShare, https://doi.org/10.4211/hs.23b51cb99b5445a1af740a21c5acaecb",
+    "url": "http://www.hydroshare.org/resource/23b51cb99b5445a1af740a21c5acaecb",
+    "identifier": "http://www.hydroshare.org/resource/23b51cb99b5445a1af740a21c5acaecb",
+    "created": "2023-09-23 20:44:13.356148+00:00",
+    "modified": "2026-01-29 04:15:09.601207+00:00",
+    "published": "2024-08-26 13:18:15.661169+00:00",
+    "type": "CompositeResource"
+}

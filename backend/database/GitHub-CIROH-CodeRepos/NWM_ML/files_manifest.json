@@ -1,0 +1,1874 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 67,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Data/Processed/Precip_Total.pkl",
+        "file_name": "Precip_Total.pkl",
+        "extension": ".pkl",
+        "size_bytes": 300182,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Data/Processed/Temperature.pkl",
+        "file_name": "Temperature.pkl",
+        "extension": ".pkl",
+        "size_bytes": 229912,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Data/Processed/flow.pkl",
+        "file_name": "flow.pkl",
+        "extension": ".pkl",
+        "size_bytes": 124458,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Data/input/coordinates.pickle",
+        "file_name": "coordinates.pickle",
+        "extension": ".pickle",
+        "size_bytes": 14114496,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Data_Processing/DataCleanUP.ipynb",
+        "file_name": "DataCleanUP.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 4825,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Data_Processing/EE_funcs.ipynb",
+        "file_name": "EE_funcs.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 1757,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Data_Processing/NWM_ML_DataProcessing.ipynb",
+        "file_name": "NWM_ML_DataProcessing.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 1558681,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Data_Processing/data_preparation.ipynb",
+        "file_name": "data_preparation.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 58923,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Figures/NWM_ML_Hydrograph.png",
+        "file_name": "NWM_ML_Hydrograph.png",
+        "extension": ".png",
+        "size_bytes": 617561,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Figures/NWM_ML_parity.png",
+        "file_name": "NWM_ML_parity.png",
+        "extension": ".png",
+        "size_bytes": 982092,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "GettingStarted.md",
+        "file_name": "GettingStarted.md",
+        "extension": ".md",
+        "size_bytes": 2599,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "Images/EE_authenticate.JPG",
+        "file_name": "EE_authenticate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE.png",
+        "file_name": "GEE.png",
+        "extension": ".png",
+        "size_bytes": 173501,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_Jupyter_Kernel.JPG",
+        "file_name": "GEE_Jupyter_Kernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 20495,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_Jupyter_Kernel2.JPG",
+        "file_name": "GEE_Jupyter_Kernel2.JPG",
+        "extension": ".jpg",
+        "size_bytes": 13197,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_Logo.jpg",
+        "file_name": "GEE_Logo.jpg",
+        "extension": ".jpg",
+        "size_bytes": 51336,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_ML_Hydrological_Cycle.jpg",
+        "file_name": "GEE_ML_Hydrological_Cycle.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1820559,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_ML_Hydrological_Cycle.pptx",
+        "file_name": "GEE_ML_Hydrological_Cycle.pptx",
+        "extension": ".pptx",
+        "size_bytes": 1705429,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_imagery.JPG",
+        "file_name": "GEE_imagery.JPG",
+        "extension": ".jpg",
+        "size_bytes": 58478,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_ipkernel.JPG",
+        "file_name": "GEE_ipkernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2333,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/GEE_ipkernel_install.JPG",
+        "file_name": "GEE_ipkernel_install.JPG",
+        "extension": ".jpg",
+        "size_bytes": 3839,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/LandCover.JPG",
+        "file_name": "LandCover.JPG",
+        "extension": ".jpg",
+        "size_bytes": 114392,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/ML_workflow.JPG",
+        "file_name": "ML_workflow.JPG",
+        "extension": ".jpg",
+        "size_bytes": 38953,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/NOAA_HydroCycle.png",
+        "file_name": "NOAA_HydroCycle.png",
+        "extension": ".png",
+        "size_bytes": 639583,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/NWM_ML_Hydrological_Cycle.png",
+        "file_name": "NWM_ML_Hydrological_Cycle.png",
+        "extension": ".png",
+        "size_bytes": 24002256,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/NWM_ML_Hydrological_Cycle.pptx",
+        "file_name": "NWM_ML_Hydrological_Cycle.pptx",
+        "extension": ".pptx",
+        "size_bytes": 1989173,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/NoAAhydro_5cycle.jpg",
+        "file_name": "NoAAhydro_5cycle.jpg",
+        "extension": ".jpg",
+        "size_bytes": 122448,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/StreamStats.JPG",
+        "file_name": "StreamStats.JPG",
+        "extension": ".jpg",
+        "size_bytes": 186922,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/Terrain.JPG",
+        "file_name": "Terrain.JPG",
+        "extension": ".jpg",
+        "size_bytes": 173091,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/USGS_1017200_Red_Butte.JPG",
+        "file_name": "USGS_1017200_Red_Butte.JPG",
+        "extension": ".jpg",
+        "size_bytes": 149467,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/USGS_Guage_Locations.JPG",
+        "file_name": "USGS_Guage_Locations.JPG",
+        "extension": ".jpg",
+        "size_bytes": 36473,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/USGS_Sites.jpg",
+        "file_name": "USGS_Sites.jpg",
+        "extension": ".jpg",
+        "size_bytes": 622422,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/USGS_Sites.pptx",
+        "file_name": "USGS_Sites.pptx",
+        "extension": ".pptx",
+        "size_bytes": 78414,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/XGBoost.png",
+        "file_name": "XGBoost.png",
+        "extension": ".png",
+        "size_bytes": 55549,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/climate.JPG",
+        "file_name": "climate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 37977,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/condaActivate.JPG",
+        "file_name": "condaActivate.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2006,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/condaEEisntall.JPG",
+        "file_name": "condaEEisntall.JPG",
+        "extension": ".jpg",
+        "size_bytes": 3768,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/condaEnv.JPG",
+        "file_name": "condaEnv.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2892,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/python.png",
+        "file_name": "python.png",
+        "extension": ".png",
+        "size_bytes": 11155,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/seasonalityindex.JPG",
+        "file_name": "seasonalityindex.JPG",
+        "extension": ".jpg",
+        "size_bytes": 16425,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Images/~$NWM_ML_Hydrological_Cycle.pptx",
+        "file_name": "~$NWM_ML_Hydrological_Cycle.pptx",
+        "extension": ".pptx",
+        "size_bytes": 165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1069,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "Model/LSTM/LSTM_model.pt",
+        "file_name": "LSTM_model.pt",
+        "extension": ".pt",
+        "size_bytes": 105257,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/LSTM/scaler_x.save",
+        "file_name": "scaler_x.save",
+        "extension": ".save",
+        "size_bytes": 1383,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/LSTM/scaler_y.save",
+        "file_name": "scaler_y.save",
+        "extension": ".save",
+        "size_bytes": 927,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/MLP/Area_Perc_Seas_stor_swe_NWM_DOY_scaler_x.save",
+        "file_name": "Area_Perc_Seas_stor_swe_NWM_DOY_scaler_x.save",
+        "extension": ".save",
+        "size_bytes": 1143,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/MLP/Area_Perc_Seas_stor_swe_NWM_DOY_scaler_y.save",
+        "file_name": "Area_Perc_Seas_stor_swe_NWM_DOY_scaler_y.save",
+        "extension": ".save",
+        "size_bytes": 719,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/MLP/MLP_model.pkl",
+        "file_name": "MLP_model.pkl",
+        "extension": ".pkl",
+        "size_bytes": 104528,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/MLP/mlp_model.pkl",
+        "file_name": "mlp_model.pkl",
+        "extension": ".pkl",
+        "size_bytes": 137808,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/MLP/scaler_x.save",
+        "file_name": "scaler_x.save",
+        "extension": ".save",
+        "size_bytes": 1383,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/MLP/scaler_y.save",
+        "file_name": "scaler_y.save",
+        "extension": ".save",
+        "size_bytes": 719,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/NWM_ML/XGBoost/Model_1.dat",
+        "file_name": "Model_1.dat",
+        "extension": ".dat",
+        "size_bytes": 4689315,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/NWM_ML/XGBoost/Model_HyperParam.dat",
+        "file_name": "Model_HyperParam.dat",
+        "extension": ".dat",
+        "size_bytes": 1400665,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/NWM_ML/XGBoost/XGBoost_RB_1_params.pkl",
+        "file_name": "XGBoost_RB_1_params.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1357686,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/NWM_ML/XGBoost/scaler_x1.pkl",
+        "file_name": "scaler_x1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1328,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/NWM_ML/XGBoost/scaler_y1.pkl",
+        "file_name": "scaler_y1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 618,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/XGBoost/Model_1.dat",
+        "file_name": "Model_1.dat",
+        "extension": ".dat",
+        "size_bytes": 2815758,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/XGBoost/Model_1.pkl",
+        "file_name": "Model_1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 774,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/XGBoost/Model_HyperParam.dat",
+        "file_name": "Model_HyperParam.dat",
+        "extension": ".dat",
+        "size_bytes": 541029,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/XGBoost/XGBoost_RB_1_params.pkl",
+        "file_name": "XGBoost_RB_1_params.pkl",
+        "extension": ".pkl",
+        "size_bytes": 547142,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/XGBoost/best_model.pkl",
+        "file_name": "best_model.pkl",
+        "extension": ".pkl",
+        "size_bytes": 94510,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/XGBoost/best_model_hyperparameters.pkl",
+        "file_name": "best_model_hyperparameters.pkl",
+        "extension": ".pkl",
+        "size_bytes": 7894517,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/XGBoost/scaler1.pkl",
+        "file_name": "scaler1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/XGBoost/scaler_x1.pkl",
+        "file_name": "scaler_x1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Model/XGBoost/scaler_y1.pkl",
+        "file_name": "scaler_y1.pkl",
+        "extension": ".pkl",
+        "size_bytes": 618,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/Hindcast/LSTM/2020/LSTM_predictions.pkl",
+        "file_name": "LSTM_predictions.pkl",
+        "extension": ".pkl",
+        "size_bytes": 973016,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/Hindcast/LSTM/Multilocation/LSTM_predictions.pkl",
+        "file_name": "LSTM_predictions.pkl",
+        "extension": ".pkl",
+        "size_bytes": 730984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/Hindcast/MLP/2020/MLP_predictions.pkl",
+        "file_name": "MLP_predictions.pkl",
+        "extension": ".pkl",
+        "size_bytes": 731242,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/Hindcast/MLP/Figures/MLP_TS_plot_D_True.png",
+        "file_name": "MLP_TS_plot_D_True.png",
+        "extension": ".png",
+        "size_bytes": 1113594,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/Hindcast/MLP/Multilocation/MLP_predictions.pkl",
+        "file_name": "MLP_predictions.pkl",
+        "extension": ".pkl",
+        "size_bytes": 731242,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/Hindcast/NWM/Multilocation/NWM_predictions.pkl",
+        "file_name": "NWM_predictions.pkl",
+        "extension": ".pkl",
+        "size_bytes": 725476,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/Hindcast/XGBoost/Multilocation/XGBoost_predictions.pkl",
+        "file_name": "XGBoost_predictions.pkl",
+        "extension": ".pkl",
+        "size_bytes": 738934,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/10092262.csv",
+        "file_name": "10092262.csv",
+        "extension": ".csv",
+        "size_bytes": 6639,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/10273232.csv",
+        "file_name": "10273232.csv",
+        "extension": ".csv",
+        "size_bytes": 6619,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/10274270.csv",
+        "file_name": "10274270.csv",
+        "extension": ".csv",
+        "size_bytes": 6613,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/10274616.csv",
+        "file_name": "10274616.csv",
+        "extension": ".csv",
+        "size_bytes": 6658,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/10277268.csv",
+        "file_name": "10277268.csv",
+        "extension": ".csv",
+        "size_bytes": 6669,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/10329013.csv",
+        "file_name": "10329013.csv",
+        "extension": ".csv",
+        "size_bytes": 6329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/10373622.csv",
+        "file_name": "10373622.csv",
+        "extension": ".csv",
+        "size_bytes": 6670,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/10390290.csv",
+        "file_name": "10390290.csv",
+        "extension": ".csv",
+        "size_bytes": 6682,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/4605050.csv",
+        "file_name": "4605050.csv",
+        "extension": ".csv",
+        "size_bytes": 6659,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/Figures/MLP_ParityPlot.png",
+        "file_name": "MLP_ParityPlot.png",
+        "extension": ".png",
+        "size_bytes": 2293621,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/MLP/Figures/MLP_TS_plot.png",
+        "file_name": "MLP_TS_plot.png",
+        "extension": ".png",
+        "size_bytes": 1367917,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/.ipynb_checkpoints/XGBoost_10373622-checkpoint.csv",
+        "file_name": "XGBoost_10373622-checkpoint.csv",
+        "extension": ".csv",
+        "size_bytes": 6670,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/XGBoost_10092262.csv",
+        "file_name": "XGBoost_10092262.csv",
+        "extension": ".csv",
+        "size_bytes": 6677,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/XGBoost_10273232.csv",
+        "file_name": "XGBoost_10273232.csv",
+        "extension": ".csv",
+        "size_bytes": 6638,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/XGBoost_10274270.csv",
+        "file_name": "XGBoost_10274270.csv",
+        "extension": ".csv",
+        "size_bytes": 6640,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/XGBoost_10274616.csv",
+        "file_name": "XGBoost_10274616.csv",
+        "extension": ".csv",
+        "size_bytes": 6664,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/XGBoost_10277268.csv",
+        "file_name": "XGBoost_10277268.csv",
+        "extension": ".csv",
+        "size_bytes": 6519,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/XGBoost_10329013.csv",
+        "file_name": "XGBoost_10329013.csv",
+        "extension": ".csv",
+        "size_bytes": 6696,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/XGBoost_10373622.csv",
+        "file_name": "XGBoost_10373622.csv",
+        "extension": ".csv",
+        "size_bytes": 6670,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/XGBoost_10390290.csv",
+        "file_name": "XGBoost_10390290.csv",
+        "extension": ".csv",
+        "size_bytes": 6703,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Predictions/XGBoost/XGBoost_4605050.csv",
+        "file_name": "XGBoost_4605050.csv",
+        "extension": ".csv",
+        "size_bytes": 6657,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "PyTorch_GPU_env.yml",
+        "file_name": "PyTorch_GPU_env.yml",
+        "extension": ".yml",
+        "size_bytes": 6377,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 3257,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "RJ/DataProcessing/data_preparation.ipynb",
+        "file_name": "data_preparation.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 80825,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/Get_StreamStats.ipynb",
+        "file_name": "Get_StreamStats.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 5785,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/ModelDevelopment/lstm.ipynb",
+        "file_name": "lstm.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 194729,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/ModelDevelopment/mlp.ipynb",
+        "file_name": "mlp.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 782882,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/ModelDevelopment/xgboost.ipynb",
+        "file_name": "xgboost.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 824460,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/Model_Evaluation.ipynb",
+        "file_name": "Model_Evaluation.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 2137308,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/old/Evaluation_funcs.ipynb",
+        "file_name": "Evaluation_funcs.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 3206,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/old/NWM_ML_Eval.ipynb",
+        "file_name": "NWM_ML_Eval.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 211535,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/old/NWM_ML_Training.ipynb",
+        "file_name": "NWM_ML_Training.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 208171,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/old/cnn-RJ.ipynb",
+        "file_name": "cnn-RJ.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 504492,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/old/lstm.ipynb",
+        "file_name": "lstm.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 480447,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "RJ/old/mlpOG.ipynb",
+        "file_name": "mlpOG.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 58153,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/.ipynb_checkpoints/GettingStarted-checkpoint.md",
+        "file_name": "GettingStarted-checkpoint.md",
+        "extension": ".md",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/.ipynb_checkpoints/README-checkpoint.md",
+        "file_name": "README-checkpoint.md",
+        "extension": ".md",
+        "size_bytes": 97,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/.ipynb_checkpoints/AWS-Data-Push(1)-checkpoint.ipynb",
+        "file_name": "AWS-Data-Push(1)-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 97853,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/.ipynb_checkpoints/AWS_transfer-checkpoint.py",
+        "file_name": "AWS_transfer-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 1238,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/.ipynb_checkpoints/lstm(1)-checkpoint.ipynb",
+        "file_name": "lstm(1)-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 2000815,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/.ipynb_checkpoints/lstm-RJ-checkpoint.ipynb",
+        "file_name": "lstm-RJ-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 488877,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/.ipynb_checkpoints/mlp-RJ-changed-checkpoint.ipynb",
+        "file_name": "mlp-RJ-changed-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 547503,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/.ipynb_checkpoints/mlp-RJ-checkpoint.ipynb",
+        "file_name": "mlp-RJ-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 547503,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/.ipynb_checkpoints/mlp-draft-checkpoint.ipynb",
+        "file_name": "mlp-draft-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 115858,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/.ipynb_checkpoints/mlp-ryan-version-checkpoint.ipynb",
+        "file_name": "mlp-ryan-version-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 115858,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/.ipynb_checkpoints/temp-checkpoint.py",
+        "file_name": "temp-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 8650,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/AWS-Data-Push(1).ipynb",
+        "file_name": "AWS-Data-Push(1).ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 97853,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/00.temp/AWS_transfer.py",
+        "file_name": "AWS_transfer.py",
+        "extension": ".py",
+        "size_bytes": 1238,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/NWMFlow.png",
+        "file_name": "NWMFlow.png",
+        "extension": ".png",
+        "size_bytes": 289904,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/00.temp/lstm(1).ipynb",
+        "file_name": "lstm(1).ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 2000818,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/00.temp/lstm-RJ.ipynb",
+        "file_name": "lstm-RJ.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 488867,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/00.temp/mlp-RJ-changed.ipynb",
+        "file_name": "mlp-RJ-changed.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 82296,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/00.temp/mlp-RJ.ipynb",
+        "file_name": "mlp-RJ.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 884209,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/00.temp/mlp-draft.ipynb",
+        "file_name": "mlp-draft.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 189064,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/00.temp/mlp-ryan-version.ipynb",
+        "file_name": "mlp-ryan-version.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 96837,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/00.temp/temp.py",
+        "file_name": "temp.py",
+        "extension": ".py",
+        "size_bytes": 8650,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/01.data_preparation/.ipynb_checkpoints/data_preparation-checkpoint.ipynb",
+        "file_name": "data_preparation-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 58855,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/01.data_preparation/.ipynb_checkpoints/g_Get_StreamStats-checkpoint.py",
+        "file_name": "g_Get_StreamStats-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 5450,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/01.data_preparation/.ipynb_checkpoints/g_data_get-checkpoint.py",
+        "file_name": "g_data_get-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 4653,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/01.data_preparation/__pycache__/g_Get_StreamStats.cpython-39.pyc",
+        "file_name": "g_Get_StreamStats.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2141,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/01.data_preparation/__pycache__/g_data_get.cpython-39.pyc",
+        "file_name": "g_data_get.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 3256,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/01.data_preparation/data_preparation.ipynb",
+        "file_name": "data_preparation.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 80825,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/01.data_preparation/g_Get_StreamStats.py",
+        "file_name": "g_Get_StreamStats.py",
+        "extension": ".py",
+        "size_bytes": 5450,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/01.data_preparation/g_data_get.py",
+        "file_name": "g_data_get.py",
+        "extension": ".py",
+        "size_bytes": 4770,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/.ipynb_checkpoints/01.mlp-checkpoint.ipynb",
+        "file_name": "01.mlp-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 24443,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/.ipynb_checkpoints/g_evaluation_metric-checkpoint.py",
+        "file_name": "g_evaluation_metric-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 2326,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/.ipynb_checkpoints/g_mlp_model-checkpoint.py",
+        "file_name": "g_mlp_model-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 3329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/.ipynb_checkpoints/s_FigureGenerator-checkpoint.py",
+        "file_name": "s_FigureGenerator-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 8650,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/.ipynb_checkpoints/s_evalaution_table-checkpoint.py",
+        "file_name": "s_evalaution_table-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 2416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/01.mlp.ipynb",
+        "file_name": "01.mlp.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 1541764,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/__pycache__/g_evaluation_metric.cpython-311.pyc",
+        "file_name": "g_evaluation_metric.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2633,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/__pycache__/g_mlp_model.cpython-311.pyc",
+        "file_name": "g_mlp_model.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 5612,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/__pycache__/mlp_model.cpython-311.pyc",
+        "file_name": "mlp_model.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 5614,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/__pycache__/s_FigureGenerator.cpython-311.pyc",
+        "file_name": "s_FigureGenerator.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 11996,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/__pycache__/s_evalaution_table.cpython-311.pyc",
+        "file_name": "s_evalaution_table.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2603,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/g_evaluation_metric.py",
+        "file_name": "g_evaluation_metric.py",
+        "extension": ".py",
+        "size_bytes": 2326,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/g_mlp_model.py",
+        "file_name": "g_mlp_model.py",
+        "extension": ".py",
+        "size_bytes": 3329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/s_FigureGenerator.py",
+        "file_name": "s_FigureGenerator.py",
+        "extension": ".py",
+        "size_bytes": 8650,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/02.mlp/s_evalaution_table.py",
+        "file_name": "s_evalaution_table.py",
+        "extension": ".py",
+        "size_bytes": 2416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/.ipynb_checkpoints/01.bilstm-checkpoint.ipynb",
+        "file_name": "01.bilstm-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 727345,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/.ipynb_checkpoints/g_bidirectional_lstm-checkpoint.py",
+        "file_name": "g_bidirectional_lstm-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 3912,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/.ipynb_checkpoints/s_evalaution_table-checkpoint.py",
+        "file_name": "s_evalaution_table-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 2416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/01.bilstm.ipynb",
+        "file_name": "01.bilstm.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 479860,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/02.bilstm_multi_station.ipynb",
+        "file_name": "02.bilstm_multi_station.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 454626,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/__pycache__/g_bidirectional_lstm.cpython-311.pyc",
+        "file_name": "g_bidirectional_lstm.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 5933,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/__pycache__/g_evaluation_metric.cpython-311.pyc",
+        "file_name": "g_evaluation_metric.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2634,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/__pycache__/s_FigureGenerator.cpython-311.pyc",
+        "file_name": "s_FigureGenerator.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 9691,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/__pycache__/s_evalaution_table.cpython-311.pyc",
+        "file_name": "s_evalaution_table.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2598,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/g_bidirectional_lstm.py",
+        "file_name": "g_bidirectional_lstm.py",
+        "extension": ".py",
+        "size_bytes": 3912,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/g_evaluation_metric.py",
+        "file_name": "g_evaluation_metric.py",
+        "extension": ".py",
+        "size_bytes": 2326,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/s_FigureGenerator.py",
+        "file_name": "s_FigureGenerator.py",
+        "extension": ".py",
+        "size_bytes": 6693,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/03.bilstm/s_evalaution_table.py",
+        "file_name": "s_evalaution_table.py",
+        "extension": ".py",
+        "size_bytes": 2416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/.ipynb_checkpoints/01.cnn-checkpoint.ipynb",
+        "file_name": "01.cnn-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 738965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/.ipynb_checkpoints/g_cnn-checkpoint.py",
+        "file_name": "g_cnn-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 3912,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/01.cnn.ipynb",
+        "file_name": "01.cnn.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 730054,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/__pycache__/g_cnn.cpython-311.pyc",
+        "file_name": "g_cnn.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 6545,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/__pycache__/g_evaluation_metric.cpython-311.pyc",
+        "file_name": "g_evaluation_metric.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2633,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/__pycache__/s_FigureGenerator.cpython-311.pyc",
+        "file_name": "s_FigureGenerator.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 9690,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/__pycache__/s_evalaution_table.cpython-311.pyc",
+        "file_name": "s_evalaution_table.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2597,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/g_cnn.py",
+        "file_name": "g_cnn.py",
+        "extension": ".py",
+        "size_bytes": 3912,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/g_evaluation_metric.py",
+        "file_name": "g_evaluation_metric.py",
+        "extension": ".py",
+        "size_bytes": 2326,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/s_FigureGenerator.py",
+        "file_name": "s_FigureGenerator.py",
+        "extension": ".py",
+        "size_bytes": 6693,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/04.cnn1d/s_evalaution_table.py",
+        "file_name": "s_evalaution_table.py",
+        "extension": ".py",
+        "size_bytes": 2416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/.ipynb_checkpoints/01.xgboost-checkpoint.ipynb",
+        "file_name": "01.xgboost-checkpoint.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 738559,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/.ipynb_checkpoints/g_xgboost-checkpoint.py",
+        "file_name": "g_xgboost-checkpoint.py",
+        "extension": ".py",
+        "size_bytes": 3149,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/01.xgboost.ipynb",
+        "file_name": "01.xgboost.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 51531,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/__pycache__/g_cnn.cpython-311.pyc",
+        "file_name": "g_cnn.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 6549,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/__pycache__/g_evaluation_metric.cpython-311.pyc",
+        "file_name": "g_evaluation_metric.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2637,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/__pycache__/g_evaluation_metric.cpython-39.pyc",
+        "file_name": "g_evaluation_metric.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 1387,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/__pycache__/g_xgboost.cpython-311.pyc",
+        "file_name": "g_xgboost.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 4441,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/__pycache__/g_xgboost.cpython-39.pyc",
+        "file_name": "g_xgboost.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2830,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/__pycache__/s_FigureGenerator.cpython-311.pyc",
+        "file_name": "s_FigureGenerator.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 9694,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/__pycache__/s_FigureGenerator.cpython-39.pyc",
+        "file_name": "s_FigureGenerator.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 4070,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/__pycache__/s_evalaution_table.cpython-311.pyc",
+        "file_name": "s_evalaution_table.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2601,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/__pycache__/s_evalaution_table.cpython-39.pyc",
+        "file_name": "s_evalaution_table.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 1308,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/g_evaluation_metric.py",
+        "file_name": "g_evaluation_metric.py",
+        "extension": ".py",
+        "size_bytes": 2326,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/g_xgboost.py",
+        "file_name": "g_xgboost.py",
+        "extension": ".py",
+        "size_bytes": 3149,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/s_FigureGenerator.py",
+        "file_name": "s_FigureGenerator.py",
+        "extension": ".py",
+        "size_bytes": 6693,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/05.xgboost/s_evalaution_table.py",
+        "file_name": "s_evalaution_table.py",
+        "extension": ".py",
+        "size_bytes": 2416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/__pycache__/Get_StreamStats.cpython-39.pyc",
+        "file_name": "Get_StreamStats.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2119,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/__pycache__/data_get.cpython-39.pyc",
+        "file_name": "data_get.cpython-39.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2474,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/__pycache__/evalaution_table.cpython-311.pyc",
+        "file_name": "evalaution_table.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2586,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/__pycache__/evaluation_metric.cpython-311.pyc",
+        "file_name": "evaluation_metric.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2624,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/__pycache__/g_evaluation_metric.cpython-311.pyc",
+        "file_name": "g_evaluation_metric.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2626,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/__pycache__/s_FigureGenerator.cpython-311.pyc",
+        "file_name": "s_FigureGenerator.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 9683,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/01.script/__pycache__/s_evalaution_table.cpython-311.pyc",
+        "file_name": "s_evalaution_table.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2588,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/GettingStarted.md",
+        "file_name": "GettingStarted.md",
+        "extension": ".md",
+        "size_bytes": 29,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/Prev_Models/cnn.ipynb",
+        "file_name": "cnn.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 2071694,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/Prev_Models/lstm.ipynb",
+        "file_name": "lstm.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 2000815,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/Prev_Models/mlp.ipynb",
+        "file_name": "mlp.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 2367415,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Savalan/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 97,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "Savalan/Simple_EvalSav.py",
+        "file_name": "Simple_EvalSav.py",
+        "extension": ".py",
+        "size_bytes": 2803,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/AWS_transfer.py",
+        "file_name": "AWS_transfer.py",
+        "extension": ".py",
+        "size_bytes": 1207,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/EE_funcs.py",
+        "file_name": "EE_funcs.py",
+        "extension": ".py",
+        "size_bytes": 879,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/FigureGenerator.py",
+        "file_name": "FigureGenerator.py",
+        "extension": ".py",
+        "size_bytes": 6313,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/Get_StreamStats.py",
+        "file_name": "Get_StreamStats.py",
+        "extension": ".py",
+        "size_bytes": 5450,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/Reach_Eval.py",
+        "file_name": "Reach_Eval.py",
+        "extension": ".py",
+        "size_bytes": 31485,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/Simple_Eval.py",
+        "file_name": "Simple_Eval.py",
+        "extension": ".py",
+        "size_bytes": 7637,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/AWS_transfer.cpython-311.pyc",
+        "file_name": "AWS_transfer.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2114,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/FigureGenerator.cpython-311.pyc",
+        "file_name": "FigureGenerator.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 9153,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/Reach_Eval.cpython-311.pyc",
+        "file_name": "Reach_Eval.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 36106,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/Simple_Eval.cpython-311.pyc",
+        "file_name": "Simple_Eval.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 11942,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/__init__.cpython-311.pyc",
+        "file_name": "__init__.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/data.cpython-311.pyc",
+        "file_name": "data.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 1827,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/dataloader.cpython-311.pyc",
+        "file_name": "dataloader.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 4712,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/lstm_dataprocessing.cpython-311.pyc",
+        "file_name": "lstm_dataprocessing.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 9441,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/lstm_model.cpython-311.pyc",
+        "file_name": "lstm_model.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 20511,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/mlp_dataprocessing.cpython-311.pyc",
+        "file_name": "mlp_dataprocessing.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 6292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/mlp_model.cpython-311.pyc",
+        "file_name": "mlp_model.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 16640,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/xgb_dataprocessing.cpython-311.pyc",
+        "file_name": "xgb_dataprocessing.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 2880,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/__pycache__/xgb_model.cpython-311.pyc",
+        "file_name": "xgb_model.cpython-311.pyc",
+        "extension": ".pyc",
+        "size_bytes": 12329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/data.py",
+        "file_name": "data.py",
+        "extension": ".py",
+        "size_bytes": 1283,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/data_get.py",
+        "file_name": "data_get.py",
+        "extension": ".py",
+        "size_bytes": 3514,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/dataloader.py",
+        "file_name": "dataloader.py",
+        "extension": ".py",
+        "size_bytes": 3054,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/lstm_dataprocessing.py",
+        "file_name": "lstm_dataprocessing.py",
+        "extension": ".py",
+        "size_bytes": 7346,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/lstm_model.py",
+        "file_name": "lstm_model.py",
+        "extension": ".py",
+        "size_bytes": 19979,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/mlp_dataprocessing.py",
+        "file_name": "mlp_dataprocessing.py",
+        "extension": ".py",
+        "size_bytes": 4737,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/mlp_model.py",
+        "file_name": "mlp_model.py",
+        "extension": ".py",
+        "size_bytes": 16491,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/xgb_dataprocessing.py",
+        "file_name": "xgb_dataprocessing.py",
+        "extension": ".py",
+        "size_bytes": 1936,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "shared_scripts/xgb_model.py",
+        "file_name": "xgb_model.py",
+        "extension": ".py",
+        "size_bytes": 8901,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

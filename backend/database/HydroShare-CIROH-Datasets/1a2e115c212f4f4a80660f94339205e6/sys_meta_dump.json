@@ -1,0 +1,42 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "1a2e115c212f4f4a80660f94339205e6",
+    "resource_title": "Bankfull and Mean-flow Channel Geometry Dataset across the CONtiguous United States (CONUS)",
+    "abstract": "This dataset includes estimated river channel geometry attributes, specifically width and depth, under bankfull and mean-flow conditions across the CONtiguous United States (CONUS). The method utilized for providing these estimations is based on eXtreme Gradient Boosting Regression (XGBR).\r\n\r\nThe dataset can be linked to the National Hydrography Dataset Plus (NHDPlusV2.1) using the common NHD feature identifier, COMID, and to USGS gages using the identifier FLComID.\r\n\r\nData for NHDPlusV2.1 stream reaches are available for download in both TXT format (Bankfull_Meanflow_CONUS_Stream_Reaches.txt) and shapefile format (Bankfull_Meanflow_CONUS_Stream_Reaches.zip). Data for USGS gages are available in CSV format (Bankfull_Meanflow_CONUS_USGS_Gages.csv) and shapefile format (Bankfull_Meanflow_CONUS_USGS_Gages.zip).",
+    "authors": [
+        "Zarrabi, Reihaneh",
+        "McDermott, Riley",
+        "Erfani, Mohammad",
+        "Cohen, Sagy"
+    ],
+    "creator": "Zarrabi, Reihaneh",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2026-03-24T18:38:57.322085Z",
+    "date_last_updated": "2026-03-24T18:45:33.312892Z",
+    "bag_last_downloaded": "2026-03-30T04:46:02.040041Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/1a2e115c212f4f4a80660f94339205e6.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 49.0379,
+                "eastlimit": -66.4453,
+                "southlimit": 24.2069,
+                "westlimit": -125.1563
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/1a2e115c212f4f4a80660f94339205e6/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/1a2e115c212f4f4a80660f94339205e6/map/",
+    "resource_url": "http://www.hydroshare.org/resource/1a2e115c212f4f4a80660f94339205e6/",
+    "content_types": [
+        "CSV Content"
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "title": "Alluvial River Width Variability",
+    "abstract": "Data compilations of bankfull downstream hydraulic geometry for alluvial rivers, lidar derived high-resolution spatial series of bankfull width for 67 sites, and hydrograph metrics for sites with USGS hydrographs. This compilation is composed of three datasets: (1) a compilation of alluvial river geometry at bankfull for a variety of hydraulic attributes; (2) x, y, and z coordinates of channel bank lines for a selection of sites and their associated river widths derived from high-resolution lidar topography; and (3) statistics describing the hydrographs for a subset of the larger compilation. These data are divided into two primary sets, the larger compilation and a smaller set of sites where the bankfull width was derived from lidar topography. For the high-resolution dataset, the data are available as the coordinates of the bank lines, spatial series of distance downstream and bankfull width, and the spatial series filtered for quality.",
+    "language": "eng",
+    "subjects": [
+        "grain size",
+        "rivers",
+        "bankfull",
+        "hydraulic geometry",
+        "discharge",
+        "topography"
+    ],
+    "creators": [
+        {
+            "name": "Phillips, Colin B",
+            "phone": "7072935114",
+            "organization": "Utah State University",
+            "email": "colinbphillips@gmail.com",
+            "creator_order": 1,
+            "hydroshare_user_id": 787,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "U.S. National Science Foundation",
+            "title": "Collaborative Research: Separating the Climate and Weather of River Channels: Characterizing Dynamics of Coarse-Grained River Channel Response to Perturbations Across Scales",
+            "number": "2220505",
+            "funding_agency_url": "https://ror.org/021nxhr62"
+        },
+        {
+            "funding_agency_name": "NOAA Research",
+            "title": "Cooperative Institute for Research on Hydrology",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ci.noaa.gov/news/"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 49.0,
+        "eastlimit": -65.0,
+        "southlimit": 17.5,
+        "westlimit": -125.0,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1980-10-01 00:00:00",
+        "end": "2024-07-01 00:00:00"
+    },
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Phillips, C. B. (2024). Alluvial River Width Variability, HydroShare, https://doi.org/10.4211/hs.56e0ac25249d4451845a843eb3154954",
+    "url": "http://www.hydroshare.org/resource/56e0ac25249d4451845a843eb3154954",
+    "identifier": "http://www.hydroshare.org/resource/56e0ac25249d4451845a843eb3154954",
+    "created": "2024-07-23 20:46:25.475280+00:00",
+    "modified": "2024-11-22 14:37:28.158425+00:00",
+    "published": "2024-11-22 14:37:30.760710+00:00",
+    "type": "CompositeResource"
+}

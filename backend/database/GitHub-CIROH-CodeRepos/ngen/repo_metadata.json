@@ -1,0 +1,104 @@
+{
+    "id": 712035389,
+    "name": "ngen",
+    "full_name": "CIROH-UA/ngen",
+    "html_url": "https://github.com/CIROH-UA/ngen",
+    "description": "Next Generation Water Modeling Engine and Framework Prototype (ngiab branch - development version of NextGen)",
+    "homepage": "",
+    "default_branch": "ngiab",
+    "created_at": "2023-10-30T16:58:58Z",
+    "updated_at": "2026-02-11T16:44:41Z",
+    "pushed_at": "2026-05-01T19:20:50Z",
+    "language": "C++",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 201603,
+    "stargazers_count": 2,
+    "watchers_count": 2,
+    "forks_count": 8,
+    "open_issues_count": 5,
+    "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "contributors_summary": {
+        "contributors_count": 28,
+        "top_contributors": [
+            {
+                "id": 37884615,
+                "login": "robertbartel",
+                "html_url": "https://github.com/robertbartel",
+                "type": "User",
+                "contributions": 1164
+            },
+            {
+                "id": 5186647,
+                "login": "hellkite500",
+                "html_url": "https://github.com/hellkite500",
+                "type": "User",
+                "contributions": 567
+            },
+            {
+                "id": 11025415,
+                "login": "program--",
+                "html_url": "https://github.com/program--",
+                "type": "User",
+                "contributions": 277
+            },
+            {
+                "id": 126464,
+                "login": "PhilMiller",
+                "html_url": "https://github.com/PhilMiller",
+                "type": "User",
+                "contributions": 255
+            },
+            {
+                "id": 87771120,
+                "login": "mattw-nws",
+                "html_url": "https://github.com/mattw-nws",
+                "type": "User",
+                "contributions": 190
+            },
+            {
+                "id": 8505669,
+                "login": "stcui007",
+                "html_url": "https://github.com/stcui007",
+                "type": "User",
+                "contributions": 132
+            },
+            {
+                "id": 24944644,
+                "login": "donaldwj",
+                "html_url": "https://github.com/donaldwj",
+                "type": "User",
+                "contributions": 93
+            },
+            {
+                "id": 13144122,
+                "login": "christophertubbs",
+                "html_url": "https://github.com/christophertubbs",
+                "type": "User",
+                "contributions": 49
+            },
+            {
+                "id": 41338082,
+                "login": "jdmattern",
+                "html_url": "https://github.com/jdmattern",
+                "type": "User",
+                "contributions": 35
+            },
+            {
+                "id": 26720477,
+                "login": "JoshCu",
+                "html_url": "https://github.com/JoshCu",
+                "type": "User",
+                "contributions": 20
+            }
+        ]
+    }
+}

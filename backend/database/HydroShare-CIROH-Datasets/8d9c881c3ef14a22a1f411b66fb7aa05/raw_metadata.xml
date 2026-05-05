@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/8d9c881c3ef14a22a1f411b66fb7aa05">
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>northlimit=16.00833333333341; southlimit=7.7118572658963025; eastlimit=39.80833333333338; westlimit=32.49943271213105; projection=WGS 84 EPSG:4326; units=Decimal degrees; name=Blue Nile</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This is a work in progress with data for accessing data for drought index (standard precipitation index) on the Nile.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:title>Drought on the Blue Nile Using SPI</dc:title>
+    <dcterms:bibliographicCitation>Melesse, M. B. (2024). Drought on the Blue Nile Using SPI, HydroShare, http://www.hydroshare.org/resource/8d9c881c3ef14a22a1f411b66fb7aa05</dcterms:bibliographicCitation>
+    <dc:subject>SPI</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26858</hsterms:description>
+        <hsterms:organization>Washington State University</hsterms:organization>
+        <hsterms:email>m.melesse@wsu.edu</hsterms:email>
+        <hsterms:name>Melesse, Meklit Beriuhn</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26858</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:creator>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2024-06-19T16:55:45.421334+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:language>eng</dc:language>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=1981-01-01T00:00:00; end=2022-12-31T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:subject>Drought</dc:subject>
+    <dc:subject>HydroBASINS</dc:subject>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/8d9c881c3ef14a22a1f411b66fb7aa05"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-06-19T16:18:54.543166+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:subject>HydrSHEDS</dc:subject>
+    <dc:subject>Nile</dc:subject>
+  </hsterms:CompositeResource>
+</rdf:RDF>

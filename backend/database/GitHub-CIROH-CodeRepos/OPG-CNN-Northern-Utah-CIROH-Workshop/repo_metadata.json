@@ -1,0 +1,36 @@
+{
+    "id": 807667447,
+    "name": "OPG-CNN-Northern-Utah-CIROH-Workshop",
+    "full_name": "CIROH-UA/OPG-CNN-Northern-Utah-CIROH-Workshop",
+    "html_url": "https://github.com/CIROH-UA/OPG-CNN-Northern-Utah-CIROH-Workshop",
+    "description": "This workshop offers participants an introduction to convolutional neural networks (CNNs) for their application in hydro-meteorology. The hands-on portion of the workshop focuses on customizing a CNN through hyperparameter exploration, adjusting CNN layers, and manipulating inputs.",
+    "homepage": "",
+    "default_branch": "main",
+    "created_at": "2024-05-29T14:41:33Z",
+    "updated_at": "2024-05-30T17:25:17Z",
+    "pushed_at": "2024-05-21T22:07:40Z",
+    "language": null,
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 194875,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "forks_count": 39,
+    "open_issues_count": 0,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 1,
+        "top_contributors": [
+            {
+                "id": 34422513,
+                "login": "s-wolvin",
+                "html_url": "https://github.com/s-wolvin",
+                "type": "User",
+                "contributions": 87
+            }
+        ]
+    }
+}

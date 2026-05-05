@@ -1,0 +1,83 @@
+{
+    "title": "High Water Marks July 2024 Vermont Floods - UVM Floodplains",
+    "abstract": "This dataset represents high-water mark observations made following widespread flooding in Vermont on July 10-11, 2024. Sites visited following flood recession are part of a long-term floodplain monitoring and habitat assessment maintained by the University of Vermont.  Immediately after the floods, field teams flagged high water marks, took photos, and marked the locations with smart phone GPS. Subsequently a survey team revisited the sites with an RTK-GPS to more precisely capture the location and elevation and post-processed through NOAA's OPUS.\r\n\r\nData quality is noted based on the following:\r\nField Rating: Based on initial site visits. Field personnel noted their confidence level in the indicators of the high water marks. High confidence are noted as \"Excellent\" or \"Good\", and lower confidence points are noted as \"Fair\" or \"Poor\"\r\nGPS Quality: Based on RTK-GPS survey quality. More information can be found in accompanying txt file.",
+    "language": "eng",
+    "subjects": [
+        "Vermont",
+        "high water marks",
+        "floodplain research",
+        "flood inundation"
+    ],
+    "creators": [
+        {
+            "name": "Kenneth Johnston",
+            "organization": "University of Vermont",
+            "email": "kenneth.johnston@uvm.edu",
+            "creator_order": 1,
+            "identifiers": {}
+        },
+        {
+            "name": "Stewart Kabis",
+            "organization": "University of Vermont",
+            "email": "Stewart.Kabis@uvm.edu",
+            "creator_order": 2,
+            "identifiers": {}
+        },
+        {
+            "name": "Elizabeth Doran",
+            "organization": "University of Vermont",
+            "email": "elizabeth.doran@uvm.edu",
+            "creator_order": 3,
+            "identifiers": {}
+        },
+        {
+            "name": "Diehl, Rebecca",
+            "organization": "University of Vermont",
+            "email": "Rebecca.Diehl@uvm.edu",
+            "creator_order": 4,
+            "hydroshare_user_id": 4814,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "Lake Champlain Basin Program",
+            "title": "Evaluating Habitat Function in Floodplain Natural Communities of the Lake Champlain Basin to Support Conservation and Restoration Prioritization",
+            "number": "LS-2023-005",
+            "funding_agency_url": "https://www.lcbp.org/"
+        },
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration",
+            "title": "Cooperative Institute for Research to Operations in Hydrology (CIROH)",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ciroh.ua.edu/"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 44.9863,
+        "eastlimit": -72.3395,
+        "southlimit": 43.2593,
+        "westlimit": -73.3612,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Johnston, K., S. Kabis, E. Doran, R. Diehl (2025). High Water Marks July 2024 Vermont Floods - UVM Floodplains, HydroShare, https://doi.org/10.4211/hs.4d98edaf289942e49ba1e2491d123a32",
+    "url": "http://www.hydroshare.org/resource/4d98edaf289942e49ba1e2491d123a32",
+    "identifier": "http://www.hydroshare.org/resource/4d98edaf289942e49ba1e2491d123a32",
+    "created": "2025-07-22 16:06:52.547506+00:00",
+    "modified": "2025-07-28 14:45:06.693956+00:00",
+    "published": "2025-07-28 14:45:07.748481+00:00",
+    "type": "CompositeResource"
+}

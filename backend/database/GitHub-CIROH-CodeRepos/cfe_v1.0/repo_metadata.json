@@ -1,0 +1,104 @@
+{
+    "id": 884400050,
+    "name": "cfe_v1.0",
+    "full_name": "CIROH-UA/cfe_v1.0",
+    "html_url": "https://github.com/CIROH-UA/cfe_v1.0",
+    "description": "CFE is a conceptual rainfall-runoff model with an implementation of the Basic Model Interface.",
+    "homepage": "",
+    "default_branch": "master",
+    "created_at": "2024-11-06T17:21:18Z",
+    "updated_at": "2026-01-22T18:38:21Z",
+    "pushed_at": "2024-09-12T22:03:56Z",
+    "language": null,
+    "topics": [],
+    "fork": true,
+    "archived": true,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 88691,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null
+    },
+    "contributors_summary": {
+        "contributors_count": 14,
+        "top_contributors": [
+            {
+                "id": 15165757,
+                "login": "ajkhattak",
+                "html_url": "https://github.com/ajkhattak",
+                "type": "User",
+                "contributions": 92
+            },
+            {
+                "id": 30940444,
+                "login": "madMatchstick",
+                "html_url": "https://github.com/madMatchstick",
+                "type": "User",
+                "contributions": 34
+            },
+            {
+                "id": 8662550,
+                "login": "lcunha0118",
+                "html_url": "https://github.com/lcunha0118",
+                "type": "User",
+                "contributions": 17
+            },
+            {
+                "id": 5186647,
+                "login": "hellkite500",
+                "html_url": "https://github.com/hellkite500",
+                "type": "User",
+                "contributions": 13
+            },
+            {
+                "id": 44035137,
+                "login": "jmframe",
+                "html_url": "https://github.com/jmframe",
+                "type": "User",
+                "contributions": 11
+            },
+            {
+                "id": 7683631,
+                "login": "peckhams",
+                "html_url": "https://github.com/peckhams",
+                "type": "User",
+                "contributions": 10
+            },
+            {
+                "id": 126464,
+                "login": "PhilMiller",
+                "html_url": "https://github.com/PhilMiller",
+                "type": "User",
+                "contributions": 5
+            },
+            {
+                "id": 32177682,
+                "login": "SnowHydrology",
+                "html_url": "https://github.com/SnowHydrology",
+                "type": "User",
+                "contributions": 4
+            },
+            {
+                "id": 8505669,
+                "login": "stcui007",
+                "html_url": "https://github.com/stcui007",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 61248457,
+                "login": "rlmcdaniel",
+                "html_url": "https://github.com/rlmcdaniel",
+                "type": "User",
+                "contributions": 2
+            }
+        ]
+    }
+}

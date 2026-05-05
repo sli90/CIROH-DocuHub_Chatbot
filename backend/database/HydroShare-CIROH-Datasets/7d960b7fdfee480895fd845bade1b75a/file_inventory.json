@@ -1,0 +1,44 @@
+[
+    {
+        "file_name": "GageInfo.txt",
+        "file_path": "GageInfo.txt",
+        "extension": ".txt",
+        "checksum": "5c020b942ea378dc59b326f1fb963352"
+    },
+    {
+        "file_name": "GageData.csv",
+        "file_path": "GageData.csv",
+        "extension": ".csv",
+        "checksum": "2b292bfea1e538c30e4cf21fa33516d1-31"
+    },
+    {
+        "file_name": "analysis.Rmd",
+        "file_path": "analysis.Rmd",
+        "extension": ".Rmd",
+        "checksum": "9e4d754c561706e5d8d58201ba3b4abc"
+    },
+    {
+        "file_name": "analysis.pdf",
+        "file_path": "analysis.pdf",
+        "extension": ".pdf",
+        "checksum": "b1a1c9cb7986f2a63a62df686bef2677"
+    },
+    {
+        "file_name": "ecoregions.csv",
+        "file_path": "ecoregions.csv",
+        "extension": ".csv",
+        "checksum": "853a53806bb4f252bdf3eb217dc2f08e"
+    },
+    {
+        "file_name": "functions.R",
+        "file_path": "functions.R",
+        "extension": ".R",
+        "checksum": "9a56d19df3b393f3a315226683bb4724"
+    },
+    {
+        "file_name": "GageTemperatures.csv",
+        "file_path": "GageTemperatures.csv",
+        "extension": ".csv",
+        "checksum": "d01d727ec8b3bb2ff14811059d8df4b2-12"
+    }
+]

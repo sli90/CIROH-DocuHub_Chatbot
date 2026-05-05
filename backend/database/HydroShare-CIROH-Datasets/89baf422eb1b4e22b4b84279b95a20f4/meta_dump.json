@@ -1,0 +1,69 @@
+{
+    "title": "Nextgen-CAMELS-Hydrofabric v2.2: NOAA Next Generation Water Resources Modeling Framework Hydrofabric for the CAMELS Basins",
+    "abstract": "Since the release of the CAMELS large-sample catchment dataset a decade ago, the CAMELS watershed collection has become a de facto set of minimally impacted headwater basins for hydrologic model benchmarking studies in the continental US (Newman et al., 2015; 2017; see https://ral.ucar.edu/solutions/products/camels). In this dataset, we release the first subset of the Next Generation Water Resources Modeling Framework (Nextgen) Hydrofabric (v2.2; Johnson, 2022; Johnson et al., 2024) that includes the full spatial extent of the CAMELS basin delineations, after revision to correct erroneous boundaries (by using more reliable published Gages-II shapefiles). Our Hydrofabric subsetting workflow includes all Nextgen catchments that are within (with at least 5% area overlap) and/or hydrologically connected to the updated CAMELS basins shapes, thus this catchment boundary dataset enables a wide range of possible use cases, e.g., streamflow routing with alternative river networks. It also ensures improved comparison of hydrologic simulations to other CAMELS model benchmarking studies that do not use the Nextgen Hydrofabric. The layers included in this dataset provide the key geospatial inputs for Nextgen, while the accompanying daily 1979-2023 AORC retrospective forcing dataset (https://www.hydroshare.org/resource/1e934d92acdb42fa8379cd5009371150/; Sturtevant and Wood, 2024) also contributes to the required set of inputs needed for running the Nextgen modeling framework on the Hydrofabric v2.2 spatial units across the 671 CAMELS basins.\r\n\r\n\r\n\r\nAcknowledgements:\r\nThis dataset was supported by a project grant to the Colorado School of Mines from the NOAA Cooperative Institute for Research to Operations in Hydrology (CIROH). CIROH is funded via the NOAA Cooperative Agreement with The University of Alabama (NA22NWS4320003).\r\nThe revised CAMELS boundary GIS work was supported by the US Army Corps of Engineers Climate Preparedness and Resilience Program via a grant to NSF NCAR.\r\nWe also acknowledge and thank Mike Johnson and Lynker Spatial for use of and assistance with the Hydrofabric v2.2 dataset\r\n\r\nReferences: \r\nNewman, A. J., Clark, M. P., Sampson, K., Wood, A., Hay, L. E., Bock, A., Viger, R. J., Blodgett, D., Brekke, L., Arnold, J. R., Hopson, T., and Duan, Q. (2015). Development of a large-sample watershed-scale hydrometeorological data set for the contiguous USA: data set characteristics and assessment of regional variability in hydrologic model performance, Hydrol. Earth Syst. Sci., 19, 209\u2013223, https://doi.org/10.5194/hess-19-209-2015 .\r\nNewman, A. J., N. Mizukami, M. P. Clark, A. W. Wood, B. Nijssen, and G. Nearing (2017). Benchmarking of a Physically Based Hydrologic Model. J. Hydrometeor., 18, 2215\u20132225, https://doi.org/10.1175/JHM-D-16-0284.1.\r\nJohnson, J. M. (2022). National Hydrologic Geospatial Fabric (hydrofabric) for the Next Generation (NextGen) Hydrologic Modeling Framework,\r\nHydroShare http://www.hydroshare.org/resource/129787b468aa4d55ace7b124ed27dbde\r\nJohnson, J. Michael, Arash Modesari Rad, Trey C. Flowers, and Fred L. Ogden. (2024). \u201cThe NOAA Next Generation Water Resource Modeling Framework Hydrofabric.\u201d In 104th AMS Annual Meeting. AMS, 2024. https://ams.confex.com/ams/104ANNUAL/meetingapp.cgi/Paper/436827.\r\nSturtevant, J. and Wood, A. (2024). Daily AORC meteorological forcings (1979-2023) for Nextgen-CAMELS-Hydrofabric Catchments (v2.2), HydroShare, http://www.hydroshare.org/resource/1e934d92acdb42fa8379cd5009371150",
+    "language": "eng",
+    "subjects": [
+        "CAMELS",
+        "Hydrofabric",
+        "Nextgen",
+        "Hydrologic Modeling"
+    ],
+    "creators": [
+        {
+            "name": "Sturtevant, Josh",
+            "organization": "Colorado School of Mines",
+            "email": "sturtevant.josh@gmail.com",
+            "creator_order": 1,
+            "hydroshare_user_id": 27421,
+            "identifiers": {}
+        },
+        {
+            "name": "Wood, Andrew W",
+            "address": "Colorado (CO), US",
+            "organization": "NCAR;University of Colorado at Boulder",
+            "email": "andywood@ucar.edu",
+            "creator_order": 2,
+            "hydroshare_user_id": 824,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Wood, Andrew W",
+            "address": "Colorado (CO), US",
+            "organization": "NCAR;University of Colorado at Boulder",
+            "email": "andywood@ucar.edu",
+            "hydroshare_user_id": 824,
+            "identifiers": {}
+        }
+    ],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration",
+            "title": "Cooperative Institute for Research to Operations in Hydrology (CIROH)",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ror.org/02z5nhe81"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 50.0,
+        "eastlimit": -65.0,
+        "southlimit": 24.0,
+        "westlimit": -125.0,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "citation": "Sturtevant, J., A. W. Wood (2025). Nextgen-CAMELS-Hydrofabric v2.2: NOAA Next Generation Water Resources Modeling Framework Hydrofabric for the CAMELS Basins, HydroShare, http://www.hydroshare.org/resource/89baf422eb1b4e22b4b84279b95a20f4",
+    "url": "http://www.hydroshare.org/resource/89baf422eb1b4e22b4b84279b95a20f4",
+    "identifier": "http://www.hydroshare.org/resource/89baf422eb1b4e22b4b84279b95a20f4",
+    "created": "2024-12-06 15:43:09.900180+00:00",
+    "modified": "2025-01-02 20:33:49.059580+00:00",
+    "type": "CompositeResource"
+}

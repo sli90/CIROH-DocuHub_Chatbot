@@ -1,0 +1,97 @@
+{
+    "id": 1052790271,
+    "name": "datastreamcli",
+    "full_name": "CIROH-UA/datastreamcli",
+    "html_url": "https://github.com/CIROH-UA/datastreamcli",
+    "description": "CLI-based workflow tool for NextGen Water Modeling Framework simulations",
+    "homepage": "https://docs.ciroh.org/docs/products/research-datastream/datastreamcli/",
+    "default_branch": "main",
+    "created_at": "2025-09-08T14:50:34Z",
+    "updated_at": "2026-04-27T17:09:08Z",
+    "pushed_at": "2026-04-27T17:08:54Z",
+    "language": "Python",
+    "topics": [
+        "ciroh",
+        "datastream",
+        "docker",
+        "geopackage",
+        "geospatial",
+        "hydrology-modeling",
+        "ngen",
+        "nrds",
+        "python",
+        "r2o",
+        "shell",
+        "streamflow",
+        "workflow"
+    ],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 110568,
+    "stargazers_count": 3,
+    "watchers_count": 3,
+    "forks_count": 6,
+    "open_issues_count": 17,
+    "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "contributors_summary": {
+        "contributors_count": 7,
+        "top_contributors": [
+            {
+                "id": 79336055,
+                "login": "JordanLaserGit",
+                "html_url": "https://github.com/JordanLaserGit",
+                "type": "User",
+                "contributions": 528
+            },
+            {
+                "id": 223894814,
+                "login": "harshavemula-ua",
+                "html_url": "https://github.com/harshavemula-ua",
+                "type": "User",
+                "contributions": 67
+            },
+            {
+                "id": 60660437,
+                "login": "ZacharyWills",
+                "html_url": "https://github.com/ZacharyWills",
+                "type": "User",
+                "contributions": 8
+            },
+            {
+                "id": 170465264,
+                "login": "quinnylee",
+                "html_url": "https://github.com/quinnylee",
+                "type": "User",
+                "contributions": 6
+            },
+            {
+                "id": 43544549,
+                "login": "romer8",
+                "html_url": "https://github.com/romer8",
+                "type": "User",
+                "contributions": 4
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 26720477,
+                "login": "JoshCu",
+                "html_url": "https://github.com/JoshCu",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

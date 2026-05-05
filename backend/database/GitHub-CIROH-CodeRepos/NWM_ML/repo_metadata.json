@@ -1,0 +1,55 @@
+{
+    "id": 829019638,
+    "name": "NWM_ML",
+    "full_name": "CIROH-UA/NWM_ML",
+    "html_url": "https://github.com/CIROH-UA/NWM_ML",
+    "description": "A Machine Learning extension processor coupling the NWM to water resources management tools in the western US.",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2024-07-15T15:35:54Z",
+    "updated_at": "2024-07-15T18:21:38Z",
+    "pushed_at": "2024-07-15T18:21:33Z",
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 137507,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 1,
+    "open_issues_count": 0,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 3,
+        "top_contributors": [
+            {
+                "id": 33735397,
+                "login": "whitelightning450",
+                "html_url": "https://github.com/whitelightning450",
+                "type": "User",
+                "contributions": 29
+            },
+            {
+                "id": 67179927,
+                "login": "savalann",
+                "html_url": "https://github.com/savalann",
+                "type": "User",
+                "contributions": 4
+            },
+            {
+                "id": 120678271,
+                "login": "manjilasingh",
+                "html_url": "https://github.com/manjilasingh",
+                "type": "User",
+                "contributions": 3
+            }
+        ]
+    }
+}

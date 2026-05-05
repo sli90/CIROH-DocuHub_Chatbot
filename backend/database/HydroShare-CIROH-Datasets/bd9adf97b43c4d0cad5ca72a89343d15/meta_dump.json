@@ -1,0 +1,103 @@
+{
+    "title": "Materials for the CUAHSI's Workshops at the National Water Center Bootcamp 2024",
+    "abstract": "This resource includes materials for two workshops: (1) FAIR Data Management and (2) Advanced Application of Python for Hydrology and Scientific Storytelling, both prepared for presentation at the NWC Summer Institute BootCamp 2024.",
+    "language": "eng",
+    "subjects": [
+        "National Water Center Summer Institute",
+        "Python",
+        "Object Storage",
+        "Data Management",
+        "Leaflet",
+        "Dask",
+        "FAIR Principles",
+        "NWCSI2024",
+        "Xarray"
+    ],
+    "creators": [
+        {
+            "name": "Garousi-Nejad, Irene",
+            "organization": "CUAHSI",
+            "email": "igarousi@cuahsi.org",
+            "creator_order": 1,
+            "hydroshare_user_id": 475,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=dKqI7iAAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Irene_Garousi-Nejad",
+                "ORCID": "https://orcid.org/0000-0003-2929-3946"
+            }
+        },
+        {
+            "name": "Castronova, Anthony M.",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 2,
+            "hydroshare_user_id": 11,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=ScWTFoQAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Anthony_Castronova",
+                "ORCID": "https://orcid.org/0000-0002-1341-5681"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource references",
+            "value": "https://noaa-nwm-retrospective-3-0-pds.s3.amazonaws.com/index.html"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "https://github.com/NOAA-OWP/inundation-mapping"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "https://github.com/egagli/snotel_ccss_stations"
+        },
+        {
+            "type": "The content of this resource can be executed by",
+            "value": "Castronova, A. (2024). CIROH Production JupyterHub, HydroShare, http://www.hydroshare.org/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "https://streamstats.usgs.gov/ss/"
+        },
+        {
+            "type": "The content of this resource is derived from",
+            "value": "https://github.com/CUAHSI/notebooks"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA)",
+            "title": "COOPERATIVE INSTITUTE FOR RESEARCH TO OPERATIONS IN HYDROLOGY (CIROH)",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ci.noaa.gov/locations/ciroh/"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "point",
+        "name": "National Water Center The University of Alabama",
+        "east": -87.54156,
+        "north": 33.21841,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "2024-06-19 00:00:00",
+        "end": "2024-06-21 00:00:00"
+    },
+    "citation": "Garousi-Nejad, I., A. M. Castronova (2024). Materials for the CUAHSI's Workshops at the National Water Center Bootcamp 2024, HydroShare, http://www.hydroshare.org/resource/bd9adf97b43c4d0cad5ca72a89343d15",
+    "url": "http://www.hydroshare.org/resource/bd9adf97b43c4d0cad5ca72a89343d15",
+    "identifier": "http://www.hydroshare.org/resource/bd9adf97b43c4d0cad5ca72a89343d15",
+    "created": "2024-06-17 14:38:52.593511+00:00",
+    "modified": "2024-07-12 18:20:08.195594+00:00",
+    "type": "CompositeResource"
+}

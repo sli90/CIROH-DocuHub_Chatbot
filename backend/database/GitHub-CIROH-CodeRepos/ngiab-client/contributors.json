@@ -1,0 +1,44 @@
+[
+    {
+        "id": 43544549,
+        "login": "romer8",
+        "html_url": "https://github.com/romer8",
+        "type": "User",
+        "contributions": 190
+    },
+    {
+        "id": 49699333,
+        "login": "dependabot[bot]",
+        "html_url": "https://github.com/apps/dependabot",
+        "type": "Bot",
+        "contributions": 31
+    },
+    {
+        "id": 2021244,
+        "login": "aaronjstewart",
+        "html_url": "https://github.com/aaronjstewart",
+        "type": "User",
+        "contributions": 4
+    },
+    {
+        "id": 120678271,
+        "login": "manjilasingh",
+        "html_url": "https://github.com/manjilasingh",
+        "type": "User",
+        "contributions": 3
+    },
+    {
+        "id": 54657,
+        "login": "arpita0911patel",
+        "html_url": "https://github.com/arpita0911patel",
+        "type": "User",
+        "contributions": 2
+    },
+    {
+        "id": 130000039,
+        "login": "benlee0423",
+        "html_url": "https://github.com/benlee0423",
+        "type": "User",
+        "contributions": 1
+    }
+]

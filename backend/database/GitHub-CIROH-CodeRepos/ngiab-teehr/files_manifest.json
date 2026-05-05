@@ -1,0 +1,98 @@
+[
+    {
+        "path": ".github/workflows/docker_publish.yaml",
+        "file_name": "docker_publish.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1113,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 3139,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Changelog.md",
+        "file_name": "Changelog.md",
+        "extension": ".md",
+        "size_bytes": 920,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "Dockerfile",
+        "file_name": "Dockerfile",
+        "extension": "",
+        "size_bytes": 1001,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1074,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1570,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "example_guide.sh",
+        "file_name": "example_guide.sh",
+        "extension": ".sh",
+        "size_bytes": 9012,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "poetry.lock",
+        "file_name": "poetry.lock",
+        "extension": ".lock",
+        "size_bytes": 326421,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 419,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "requirements.txt",
+        "file_name": "requirements.txt",
+        "extension": ".txt",
+        "size_bytes": 9053,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "scripts/teehr_ngen.py",
+        "file_name": "teehr_ngen.py",
+        "extension": ".py",
+        "size_bytes": 6284,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 6073,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

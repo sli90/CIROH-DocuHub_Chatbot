@@ -1,0 +1,90 @@
+{
+    "id": 703154139,
+    "name": "nwmurl",
+    "full_name": "CIROH-UA/nwmurl",
+    "html_url": "https://github.com/CIROH-UA/nwmurl",
+    "description": "This library contains utility functions to generate National Water Model data URLs",
+    "homepage": "",
+    "default_branch": "main",
+    "created_at": "2023-10-10T17:38:52Z",
+    "updated_at": "2026-04-27T16:51:15Z",
+    "pushed_at": "2026-04-27T16:51:10Z",
+    "language": "Python",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 211,
+    "stargazers_count": 3,
+    "watchers_count": 3,
+    "forks_count": 6,
+    "open_issues_count": 12,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 8,
+        "top_contributors": [
+            {
+                "id": 112987653,
+                "login": "sepehrkrz",
+                "html_url": "https://github.com/sepehrkrz",
+                "type": "User",
+                "contributions": 154
+            },
+            {
+                "id": 7992111,
+                "login": "chp2001",
+                "html_url": "https://github.com/chp2001",
+                "type": "User",
+                "contributions": 18
+            },
+            {
+                "id": 43341658,
+                "login": "manjirigunaji",
+                "html_url": "https://github.com/manjirigunaji",
+                "type": "User",
+                "contributions": 10
+            },
+            {
+                "id": 22774612,
+                "login": "karnesh",
+                "html_url": "https://github.com/karnesh",
+                "type": "User",
+                "contributions": 7
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 6
+            },
+            {
+                "id": 58287801,
+                "login": "RohanSunkarapalli",
+                "html_url": "https://github.com/RohanSunkarapalli",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 53343824,
+                "login": "jameshalgren",
+                "html_url": "https://github.com/jameshalgren",
+                "type": "User",
+                "contributions": 1
+            },
+            {
+                "id": 79336055,
+                "login": "JordanLaserGit",
+                "html_url": "https://github.com/JordanLaserGit",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

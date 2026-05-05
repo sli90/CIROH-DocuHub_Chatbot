@@ -61,9 +61,12 @@ class DatabaseManager:
             # Using RealDictCursor for easier data handling (access by column name)
             with conn.cursor(cursor_factory=RealDictCursor) as cur:
                 cur.execute(query, params)
-                if fetch:
-                    return cur.fetchall()
-                conn.commit()
+                result = cur.fetchall() if fetch else None
+                #if fetch:
+                #    return cur.fetchall()
+                
+            conn.commit()
+            return result
         except Exception as e:
             conn.rollback()
             print(f"Database Error: {e}")

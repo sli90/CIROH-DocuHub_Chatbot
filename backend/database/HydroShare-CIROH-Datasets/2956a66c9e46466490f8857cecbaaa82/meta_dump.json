@@ -1,0 +1,49 @@
+{
+    "title": "Basin Characteristics at Shawnee, KS",
+    "abstract": "This resource contains detailed information about the basin characteristics for Shawnee KS. These data have been obtained from the USGS StreamStats web application on June 19, 2024. This resource was created during the demo session of the National Water Center Summer Institute Program and the goal was to accessed data, share it on HydroShare and describe it.",
+    "language": "eng",
+    "subjects": [
+        "Streamflow",
+        "StreamStats",
+        "Kansas",
+        "Shawnee"
+    ],
+    "creators": [
+        {
+            "name": "Edwards, Jack",
+            "organization": "University of Kansas;Summer Institute",
+            "email": "j375e293@ku.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 26852,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [],
+    "spatial_coverage": {
+        "type": "box",
+        "name": "Shawnee Kansas",
+        "northlimit": 39.07,
+        "eastlimit": -94.6872,
+        "southlimit": 39.0582,
+        "westlimit": -94.7066,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "2024-06-01 00:00:00",
+        "end": "2024-06-19 00:00:00"
+    },
+    "citation": "Edwards, J. (2024). Basin Characteristics at Shawnee, KS, HydroShare, http://www.hydroshare.org/resource/2956a66c9e46466490f8857cecbaaa82",
+    "url": "http://www.hydroshare.org/resource/2956a66c9e46466490f8857cecbaaa82",
+    "identifier": "http://www.hydroshare.org/resource/2956a66c9e46466490f8857cecbaaa82",
+    "created": "2024-06-19 16:31:13.300400+00:00",
+    "modified": "2024-06-19 16:43:33.336615+00:00",
+    "type": "CompositeResource"
+}

@@ -1,0 +1,45 @@
+{
+    "title": "Streamflow Stats for the USGS Stream Gage Cheery Creek at Denver - USGS Station ID: 06713500",
+    "abstract": "This data contains detailed information about the basin characteristics and streamflow characteristics for the US stream gage Cheery Creek at Denver, Colorado (station ID: 06713500). All data in this resource has been obtained from USGS Streamstats.",
+    "language": "eng",
+    "subjects": [
+        "StreamStats",
+        "NWCSI2024",
+        "Hydrology"
+    ],
+    "creators": [
+        {
+            "name": "Upadhyay, Surabhi",
+            "organization": "Colorado School of Mines",
+            "email": "surabhi_upadhyay@mines.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 26854,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [],
+    "spatial_coverage": {
+        "type": "point",
+        "east": -105.0001851858894,
+        "north": 39.743832055664086,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1942-08-09 00:00:00",
+        "end": "2024-06-16 00:00:00"
+    },
+    "citation": "Upadhyay, S. (2024). Streamflow Stats for the USGS Stream Gage Cheery Creek at Denver - USGS Station ID: 06713500, HydroShare, http://www.hydroshare.org/resource/db862614dd8643648940988bb9cc9e8c",
+    "url": "http://www.hydroshare.org/resource/db862614dd8643648940988bb9cc9e8c",
+    "identifier": "http://www.hydroshare.org/resource/db862614dd8643648940988bb9cc9e8c",
+    "created": "2024-06-19 16:20:12.742053+00:00",
+    "modified": "2024-06-19 16:43:55.832030+00:00",
+    "type": "CompositeResource"
+}

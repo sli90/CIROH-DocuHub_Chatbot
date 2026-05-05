@@ -1,0 +1,7 @@
+setuptools
+wheel
+pytest
+python-dateutil
+requests
+tqdm
+gevent

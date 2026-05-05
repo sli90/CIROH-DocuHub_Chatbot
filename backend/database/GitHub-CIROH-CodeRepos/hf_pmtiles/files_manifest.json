@@ -1,0 +1,74 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 35,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Dockerfile",
+        "file_name": "Dockerfile",
+        "extension": "",
+        "size_bytes": 6520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 925,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "convert_hydrolocations_to_geom.sql",
+        "file_name": "convert_hydrolocations_to_geom.sql",
+        "extension": ".sql",
+        "size_bytes": 665,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "hydrolocations_to_geom.py",
+        "file_name": "hydrolocations_to_geom.py",
+        "extension": ".py",
+        "size_bytes": 797,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "license.txt",
+        "file_name": "license.txt",
+        "extension": ".txt",
+        "size_bytes": 21451,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "map/light-style.json",
+        "file_name": "light-style.json",
+        "extension": ".json",
+        "size_bytes": 418612,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "map/map.html",
+        "file_name": "map.html",
+        "extension": ".html",
+        "size_bytes": 3552,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 5915,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

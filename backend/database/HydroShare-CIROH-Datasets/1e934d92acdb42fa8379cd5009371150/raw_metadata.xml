@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/1e934d92acdb42fa8379cd5009371150">
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ror.org/02z5nhe81"/>
+        <hsterms:awardTitle>Cooperative Institute for Research to Operations in Hydrology (CIROH)</hsterms:awardTitle>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-12-06T18:55:47.858901+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:subject>Hydrologic Modeling</dc:subject>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:hydroshare_user_id>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:email>andywood@ucar.edu</hsterms:email>
+        <hsterms:name>Wood, Andrew W</hsterms:name>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:description>
+        <hsterms:address>Colorado (CO), US</hsterms:address>
+        <hsterms:organization>NCAR;University of Colorado at Boulder</hsterms:organization>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>The Analysis of Record Calibration (AORC) meteorological forcing dataset is a retrospective gridded product produced by NOAA’s Office of Water Prediction (Fall et al., 2023). The AORC hourly dataset provides high resolution (800-m) gridded fields for seven meteorological variables (‘forcings’), used as time series inputs for calibration of the current NOAA National Water Model (NWMv3), among other modeling and analysis applications. The upcoming v4 update of the NWM will adopt a catchment-based modeling approach centered on an NHDPlus-based NextGen Hydrofabric (Johnson et al., 2024).  &#13;
+&#13;
+In view of this transition, we provide a remapped daily version of the AORC forcings (with the addition of maximum and minimum temperature) to the Hydrofabric catchments representing a large-sample watershed subset – i.e., for the 671 CAMELS basins (Newman et al., 2015; Addor et al., 2017; see https://ral.ucar.edu/solutions/products/camels). The associated CAMELS-Hydrofabric v2.2 data are provided as a separate Hydroshare resource, "Nextgen-CAMELS-Hydrofabric v2.2: NOAA Next Generation Water Resources Modeling Framework Hydrofabric for the CAMELS Basins". The remapping was performed by calculating catchment areal-mean forcing values using a spatially-conservative remapping technique developed previously at the NSF National Center for Atmospheric Research (NCAR). Specifically, the ‘poly2poly.py’ script is used to generate spatial weights relating the AORC grid to the catchment Hydrofabric polygons, and associated scripts then apply the weights efficiently over all the timesteps in the dataset. Catchment averages are adjusted to account for missing input grid values, where necessary. The remapped dataset of n = 54,667 catchments is available in netCDF format and designed to meets the standards of the Next Generation Water Resources Modeling Framework (Nextgen) – such as variable naming and epoch start date formatting – making it model-ready off the shelf. This retrospective 1979-2023 forcing dataset, together with the hydrofabric divides, nexus, and flowpath layers, provides a core input required for running the Nextgen modeling framework at a Hydrofabric resolution across the CAMELS basins. Note, an earlier lumped-basin version of these forcings is available at: https://www.hydroshare.org/resource/c738c05278a34bc9848dd14d61cffab9/ (Frame et al, 2024).  &#13;
+&#13;
+Acknowledgements:&#13;
+- This dataset was supported by a project grant to the Colorado School of Mines (CSM) from the NOAA Cooperative Institute for Research to Operations in Hydrology (CIROH). CIROH is funded via the NOAA Cooperative Agreement with The University of Alabama (NA22NWS4320003).&#13;
+- We are grateful to Mike Robbert at CSM for his assistance in transferring the large AORC dataset onto Mines HPC systems to facilitate the remapping process. &#13;
+&#13;
+References: &#13;
+Fall, Greg, David Kitzmiller, Sandra Pavlovic, Ziya Zhang, Nathan Patrick, Michael St. Laurent, Carl Trypaluk, Wanru Wu, and Dennis Miller. “The Office of Water Prediction’s Analysis of Record for Calibration, Version 1.1: Dataset Description and Precipitation Evaluation,” December 2023. https://doi.org/10.1111/1752-1688.13143.&#13;
+Addor, N., Newman, A. J., Mizukami, N. and Clark, M. P.: The CAMELS data set: catchment attributes and meteorology for large-sample studies, Hydrol. Earth Syst. Sci., 21, 5293–5313, doi:10.5194/hess-21-5293-2017, 2017.&#13;
+Frame, J. M., A. W. Wood, N. Frazier (2024). AORC atmospheric forcing data across CAMELS US basins, 1980 - 2024, HydroShare, http://www.hydroshare.org/resource/c738c05278a34bc9848dd14d61cffab9 &#13;
+Johnson, J. Michael, Arash Modesari Rad, Trey C. Flowers, and Fred L. Ogden. “The NOAA Next Generation Water Resource Modeling Framework Hydrofabric.” In 104th AMS Annual Meeting. AMS, 2024. https://ams.confex.com/ams/104ANNUAL/meetingapp.cgi/Paper/436827.&#13;
+Newman, A. J., Clark, M. P., Sampson, K., Wood, A., Hay, L. E., Bock, A., Viger, R. J., Blodgett, D., Brekke, L., Arnold, J. R., Hopson, T., and Duan, Q., 2015: Development of a large-sample watershed-scale hydrometeorological data set for the contiguous USA: data set characteristics and assessment of regional variability in hydrologic model performance, Hydrol. Earth Syst. Sci., 19, 209–223, https://doi.org/10.5194/hess-19-209-2015 .&#13;
+Newman, A. J., N. Mizukami, M. P. Clark, A. W. Wood, B. Nijssen, and G. Nearing, 2017: Benchmarking of a Physically Based Hydrologic Model. J. Hydrometeor., 18, 2215–2225, https://doi.org/10.1175/JHM-D-16-0284.1.&#13;
+NOAA Analysis of Record for Calibration (AORC) Dataset was accessed on 2024-11-07 from https://registry.opendata.aws/noaa-nws-aorc.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>Colorado School of Mines</hsterms:organization>
+        <hsterms:email>sturtevant.josh@gmail.com</hsterms:email>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27421</hsterms:hydroshare_user_id>
+        <hsterms:name>Sturtevant, Josh</hsterms:name>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27421</hsterms:description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+      </rdf:Description>
+    </dc:creator>
+    <dc:language>eng</dc:language>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dcterms:bibliographicCitation>Sturtevant, J., A. W. Wood, N. Frazier (2025). Daily AORC meteorological forcings (1979-2023) for Nextgen-CAMELS-Hydrofabric Catchments (v2.2), HydroShare, http://www.hydroshare.org/resource/1e934d92acdb42fa8379cd5009371150</dcterms:bibliographicCitation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>Lynker;NOAA Affiliate</hsterms:organization>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14954</hsterms:description>
+        <hsterms:name>Frazier, Nels</hsterms:name>
+        <hsterms:email>hellkite500@gmail.com</hsterms:email>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:address>Alabama, US</hsterms:address>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14954</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>CAMELS</dc:subject>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=1979-02-01T00:00:00; end=2023-12-31T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:subject>Model Forcings</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/1e934d92acdb42fa8379cd5009371150"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=50.0; eastlimit=-65.0; southlimit=24.0; westlimit=-125.0; name=CONUS</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:title>Daily AORC meteorological forcings (1979-2023) for Nextgen-CAMELS-Hydrofabric Catchments (v2.2)</dc:title>
+    <dc:subject>Nextgen</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>NCAR;University of Colorado at Boulder</hsterms:organization>
+        <hsterms:name>Wood, Andrew W</hsterms:name>
+        <hsterms:email>andywood@ucar.edu</hsterms:email>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:address>Colorado (CO), US</hsterms:address>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:hydroshare_user_id>
+        <hsterms:phone></hsterms:phone>
+      </rdf:Description>
+    </dc:creator>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:name>Frazier, Nels</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14954</hsterms:hydroshare_user_id>
+        <hsterms:email>hellkite500@gmail.com</hsterms:email>
+        <hsterms:address>Alabama, US</hsterms:address>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14954</hsterms:description>
+        <hsterms:organization>Lynker;NOAA Affiliate</hsterms:organization>
+        <hsterms:phone></hsterms:phone>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-01-02T20:40:38.038065+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+  </hsterms:CompositeResource>
+</rdf:RDF>

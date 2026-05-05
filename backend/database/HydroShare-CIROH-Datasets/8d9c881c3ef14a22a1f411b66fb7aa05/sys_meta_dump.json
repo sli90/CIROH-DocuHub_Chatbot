@@ -1,0 +1,47 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "8d9c881c3ef14a22a1f411b66fb7aa05",
+    "resource_title": "Drought on the Blue Nile Using SPI",
+    "abstract": "This is a work in progress with data for accessing data for drought index (standard precipitation index) on the Nile.",
+    "authors": [
+        "Melesse, Meklit Beriuhn"
+    ],
+    "creator": "Melesse, Meklit Beriuhn",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2024-06-19T16:18:54.543166Z",
+    "date_last_updated": "2024-06-19T16:55:45.421334Z",
+    "bag_last_downloaded": "2025-12-06T10:35:45.475533Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/8d9c881c3ef14a22a1f411b66fb7aa05.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "northlimit": 16.00833333333341,
+                "southlimit": 7.7118572658963025,
+                "eastlimit": 39.80833333333338,
+                "westlimit": 32.49943271213105,
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "name": "Blue Nile"
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "1981-01-01",
+                "end": "2022-12-31"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/8d9c881c3ef14a22a1f411b66fb7aa05/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/8d9c881c3ef14a22a1f411b66fb7aa05/map/",
+    "resource_url": "http://www.hydroshare.org/resource/8d9c881c3ef14a22a1f411b66fb7aa05/",
+    "content_types": [
+        "Geographic Feature Content"
+    ]
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "file_name": "Classification.zip",
+        "file_path": "Classification.zip",
+        "extension": ".zip",
+        "checksum": "e68f15dd6f6ce68b839d07f1d571801f"
+    },
+    {
+        "file_name": "README.md",
+        "file_path": "README.md",
+        "extension": ".md",
+        "checksum": "39ae3d18f423ba86b1297c88f4177637"
+    },
+    {
+        "file_name": "classification_model.pth",
+        "file_path": "Weights/classification_model.pth",
+        "extension": ".pth",
+        "checksum": "a927a3309b072a526b82ce7f860f02ee"
+    },
+    {
+        "file_name": "segmentation_model.pth",
+        "file_path": "Weights/segmentation_model.pth",
+        "extension": ".pth",
+        "checksum": "95c88bdc812c557267ce40a9573a6cf4"
+    },
+    {
+        "file_name": "segmentation.zip",
+        "file_path": "segmentation.zip",
+        "extension": ".zip",
+        "checksum": "04436e6c4ab8402f20a8f9df10302501"
+    }
+]

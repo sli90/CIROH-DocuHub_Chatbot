@@ -1,0 +1,39 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "631be88704ef4167b12e9ad9d2529ba9",
+    "resource_title": "HydroFabric Subsetter and Retrieval",
+    "abstract": "This HydroShare resource is developed to subset and retrieve the HydroFabric dataset (Johnson, J. M. (2022), https://lynker-spatial.s3-us-west-2.amazonaws.com/copyright.html) needed to execute the NOAA Next Generation (NextGen) Water Resource Modeling framework. The NextGen hydrofabric describes the representation, discretization, and topology of the hydrologic landscape and drainage network as a three-part data product that includes: (1) catchment and flowpath features, (2) their connectivity, and (3) the attribute sets needed to execute models. For more details about the HydroFabric data, please visit this website:  https://noaa-owp.github.io/hydrofabric/",
+    "authors": [
+        "Nassar, Ayman",
+        "Tarboton, David"
+    ],
+    "creator": "Nassar, Ayman",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2024-06-24T19:08:23.883926Z",
+    "date_last_updated": "2026-01-29T04:16:32.820315Z",
+    "bag_last_downloaded": "2025-12-06T10:20:40.415425Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/631be88704ef4167b12e9ad9d2529ba9.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "name": "CONUS",
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 49.7586,
+                "eastlimit": -64.7562,
+                "southlimit": 24.7349,
+                "westlimit": -126.2801
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/631be88704ef4167b12e9ad9d2529ba9/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/631be88704ef4167b12e9ad9d2529ba9/map/",
+    "resource_url": "http://www.hydroshare.org/resource/631be88704ef4167b12e9ad9d2529ba9/",
+    "content_types": []
+}

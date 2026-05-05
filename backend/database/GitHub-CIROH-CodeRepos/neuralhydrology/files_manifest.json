@@ -1,0 +1,1786 @@
+[
+    {
+        "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+        "file_name": "bug_report.md",
+        "extension": ".md",
+        "size_bytes": 1224,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+        "file_name": "feature_request.md",
+        "extension": ".md",
+        "size_bytes": 641,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/docs-ci.yml",
+        "file_name": "docs-ci.yml",
+        "extension": ".yml",
+        "size_bytes": 637,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/package-install.yml",
+        "file_name": "package-install.yml",
+        "extension": ".yml",
+        "size_bytes": 334,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/publish-pypi.yml",
+        "file_name": "publish-pypi.yml",
+        "extension": ".yml",
+        "size_bytes": 870,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pytest-ci.yml",
+        "file_name": "pytest-ci.yml",
+        "extension": ".yml",
+        "size_bytes": 1153,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 204,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".readthedocs.yml",
+        "file_name": ".readthedocs.yml",
+        "extension": ".yml",
+        "size_bytes": 457,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".style.yapf",
+        "file_name": ".style.yapf",
+        "extension": ".yapf",
+        "size_bytes": 50,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CITATION.cff",
+        "file_name": "CITATION.cff",
+        "extension": ".cff",
+        "size_bytes": 1009,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CODEOWNERS",
+        "file_name": "CODEOWNERS",
+        "extension": "",
+        "size_bytes": 22,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CONTRIBUTING.rst",
+        "file_name": "CONTRIBUTING.rst",
+        "extension": ".rst",
+        "size_bytes": 7672,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1523,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 2474,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "docs/Makefile",
+        "file_name": "Makefile",
+        "extension": "",
+        "size_bytes": 638,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/make.bat",
+        "file_name": "make.bat",
+        "extension": ".bat",
+        "size_bytes": 799,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/_static/img/neural-hyd-logo-black.png",
+        "file_name": "neural-hyd-logo-black.png",
+        "extension": ".png",
+        "size_bytes": 103177,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/_static/img/neural-hyd-logo-white.png",
+        "file_name": "neural-hyd-logo-white.png",
+        "extension": ".png",
+        "size_bytes": 111793,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/_static/img/neural-hyd-logo.png",
+        "file_name": "neural-hyd-logo.png",
+        "extension": ".png",
+        "size_bytes": 97805,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.basedataset.rst",
+        "file_name": "neuralhydrology.datasetzoo.basedataset.rst",
+        "extension": ".rst",
+        "size_bytes": 133,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.camelsaus.rst",
+        "file_name": "neuralhydrology.datasetzoo.camelsaus.rst",
+        "extension": ".rst",
+        "size_bytes": 127,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.camelsbr.rst",
+        "file_name": "neuralhydrology.datasetzoo.camelsbr.rst",
+        "extension": ".rst",
+        "size_bytes": 124,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.camelscl.rst",
+        "file_name": "neuralhydrology.datasetzoo.camelscl.rst",
+        "extension": ".rst",
+        "size_bytes": 125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.camelsgb.rst",
+        "file_name": "neuralhydrology.datasetzoo.camelsgb.rst",
+        "extension": ".rst",
+        "size_bytes": 124,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.camelsus.rst",
+        "file_name": "neuralhydrology.datasetzoo.camelsus.rst",
+        "extension": ".rst",
+        "size_bytes": 125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.caravan.rst",
+        "file_name": "neuralhydrology.datasetzoo.caravan.rst",
+        "extension": ".rst",
+        "size_bytes": 121,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.genericdataset.rst",
+        "file_name": "neuralhydrology.datasetzoo.genericdataset.rst",
+        "extension": ".rst",
+        "size_bytes": 143,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.hourlycamelsus.rst",
+        "file_name": "neuralhydrology.datasetzoo.hourlycamelsus.rst",
+        "extension": ".rst",
+        "size_bytes": 142,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.lamah.rst",
+        "file_name": "neuralhydrology.datasetzoo.lamah.rst",
+        "extension": ".rst",
+        "size_bytes": 115,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.rst",
+        "file_name": "neuralhydrology.datasetzoo.rst",
+        "extension": ".rst",
+        "size_bytes": 598,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datasetzoo.template.rst",
+        "file_name": "neuralhydrology.datasetzoo.template.rst",
+        "extension": ".rst",
+        "size_bytes": 138,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datautils.climateindices.rst",
+        "file_name": "neuralhydrology.datautils.climateindices.rst",
+        "extension": ".rst",
+        "size_bytes": 142,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datautils.pet.rst",
+        "file_name": "neuralhydrology.datautils.pet.rst",
+        "extension": ".rst",
+        "size_bytes": 109,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datautils.rst",
+        "file_name": "neuralhydrology.datautils.rst",
+        "extension": ".rst",
+        "size_bytes": 266,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.datautils.utils.rst",
+        "file_name": "neuralhydrology.datautils.utils.rst",
+        "extension": ".rst",
+        "size_bytes": 115,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.evaluation.evaluate.rst",
+        "file_name": "neuralhydrology.evaluation.evaluate.rst",
+        "extension": ".rst",
+        "size_bytes": 125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.evaluation.metrics.rst",
+        "file_name": "neuralhydrology.evaluation.metrics.rst",
+        "extension": ".rst",
+        "size_bytes": 122,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.evaluation.plots.rst",
+        "file_name": "neuralhydrology.evaluation.plots.rst",
+        "extension": ".rst",
+        "size_bytes": 116,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.evaluation.rst",
+        "file_name": "neuralhydrology.evaluation.rst",
+        "extension": ".rst",
+        "size_bytes": 348,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.evaluation.signatures.rst",
+        "file_name": "neuralhydrology.evaluation.signatures.rst",
+        "extension": ".rst",
+        "size_bytes": 131,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.evaluation.tester.rst",
+        "file_name": "neuralhydrology.evaluation.tester.rst",
+        "extension": ".rst",
+        "size_bytes": 119,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.arlstm.rst",
+        "file_name": "neuralhydrology.modelzoo.arlstm.rst",
+        "extension": ".rst",
+        "size_bytes": 117,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.basemodel.rst",
+        "file_name": "neuralhydrology.modelzoo.basemodel.rst",
+        "extension": ".rst",
+        "size_bytes": 126,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.cudalstm.rst",
+        "file_name": "neuralhydrology.modelzoo.cudalstm.rst",
+        "extension": ".rst",
+        "size_bytes": 123,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.customlstm.rst",
+        "file_name": "neuralhydrology.modelzoo.customlstm.rst",
+        "extension": ".rst",
+        "size_bytes": 129,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.ealstm.rst",
+        "file_name": "neuralhydrology.modelzoo.ealstm.rst",
+        "extension": ".rst",
+        "size_bytes": 117,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.embcudalstm.rst",
+        "file_name": "neuralhydrology.modelzoo.embcudalstm.rst",
+        "extension": ".rst",
+        "size_bytes": 132,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.fc.rst",
+        "file_name": "neuralhydrology.modelzoo.fc.rst",
+        "extension": ".rst",
+        "size_bytes": 105,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.gru.rst",
+        "file_name": "neuralhydrology.modelzoo.gru.rst",
+        "extension": ".rst",
+        "size_bytes": 108,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.handoff_forecast_lstm.rst",
+        "file_name": "neuralhydrology.modelzoo.handoff_forecast_lstm.rst",
+        "extension": ".rst",
+        "size_bytes": 158,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.head.rst",
+        "file_name": "neuralhydrology.modelzoo.head.rst",
+        "extension": ".rst",
+        "size_bytes": 111,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.inputlayer.rst",
+        "file_name": "neuralhydrology.modelzoo.inputlayer.rst",
+        "extension": ".rst",
+        "size_bytes": 129,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.mamba.rst",
+        "file_name": "neuralhydrology.modelzoo.mamba.rst",
+        "extension": ".rst",
+        "size_bytes": 114,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.mclstm.rst",
+        "file_name": "neuralhydrology.modelzoo.mclstm.rst",
+        "extension": ".rst",
+        "size_bytes": 119,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.mtslstm.rst",
+        "file_name": "neuralhydrology.modelzoo.mtslstm.rst",
+        "extension": ".rst",
+        "size_bytes": 120,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.multihead_forecast_lstm.rst",
+        "file_name": "neuralhydrology.modelzoo.multihead_forecast_lstm.rst",
+        "extension": ".rst",
+        "size_bytes": 164,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.odelstm.rst",
+        "file_name": "neuralhydrology.modelzoo.odelstm.rst",
+        "extension": ".rst",
+        "size_bytes": 120,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.rst",
+        "file_name": "neuralhydrology.modelzoo.rst",
+        "extension": ".rst",
+        "size_bytes": 933,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.sequential_forecast_lstm.rst",
+        "file_name": "neuralhydrology.modelzoo.sequential_forecast_lstm.rst",
+        "extension": ".rst",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.stacked_forecast_lstm.rst",
+        "file_name": "neuralhydrology.modelzoo.stacked_forecast_lstm.rst",
+        "extension": ".rst",
+        "size_bytes": 158,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.template.rst",
+        "file_name": "neuralhydrology.modelzoo.template.rst",
+        "extension": ".rst",
+        "size_bytes": 133,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.modelzoo.transformer.rst",
+        "file_name": "neuralhydrology.modelzoo.transformer.rst",
+        "extension": ".rst",
+        "size_bytes": 132,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.nh_run.rst",
+        "file_name": "neuralhydrology.nh_run.rst",
+        "extension": ".rst",
+        "size_bytes": 110,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.nh_run_scheduler.rst",
+        "file_name": "neuralhydrology.nh_run_scheduler.rst",
+        "extension": ".rst",
+        "size_bytes": 142,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.rst",
+        "file_name": "neuralhydrology.rst",
+        "extension": ".rst",
+        "size_bytes": 504,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.training.basetrainer.rst",
+        "file_name": "neuralhydrology.training.basetrainer.rst",
+        "extension": ".rst",
+        "size_bytes": 132,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.training.logger.rst",
+        "file_name": "neuralhydrology.training.logger.rst",
+        "extension": ".rst",
+        "size_bytes": 117,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.training.loss.rst",
+        "file_name": "neuralhydrology.training.loss.rst",
+        "extension": ".rst",
+        "size_bytes": 111,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.training.regularization.rst",
+        "file_name": "neuralhydrology.training.regularization.rst",
+        "extension": ".rst",
+        "size_bytes": 141,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.training.rst",
+        "file_name": "neuralhydrology.training.rst",
+        "extension": ".rst",
+        "size_bytes": 336,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.training.train.rst",
+        "file_name": "neuralhydrology.training.train.rst",
+        "extension": ".rst",
+        "size_bytes": 114,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.utils.config.rst",
+        "file_name": "neuralhydrology.utils.config.rst",
+        "extension": ".rst",
+        "size_bytes": 114,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.utils.configutils.rst",
+        "file_name": "neuralhydrology.utils.configutils.rst",
+        "extension": ".rst",
+        "size_bytes": 129,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.utils.errors.rst",
+        "file_name": "neuralhydrology.utils.errors.rst",
+        "extension": ".rst",
+        "size_bytes": 114,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.utils.nh_results_ensemble.rst",
+        "file_name": "neuralhydrology.utils.nh_results_ensemble.rst",
+        "extension": ".rst",
+        "size_bytes": 171,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.utils.rst",
+        "file_name": "neuralhydrology.utils.rst",
+        "extension": ".rst",
+        "size_bytes": 283,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/api/neuralhydrology.utils.samplingutils.rst",
+        "file_name": "neuralhydrology.utils.samplingutils.rst",
+        "extension": ".rst",
+        "size_bytes": 135,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/conf.py",
+        "file_name": "conf.py",
+        "extension": ".py",
+        "size_bytes": 3036,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/source/contributing.rst",
+        "file_name": "contributing.rst",
+        "extension": ".rst",
+        "size_bytes": 35,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "docs/source/index.rst",
+        "file_name": "index.rst",
+        "extension": ".rst",
+        "size_bytes": 1382,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/source/tutorials/add-dataset.nblink",
+        "file_name": "add-dataset.nblink",
+        "extension": ".nblink",
+        "size_bytes": 77,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/tutorials/adding-gru.nblink",
+        "file_name": "adding-gru.nblink",
+        "extension": ".nblink",
+        "size_bytes": 69,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/tutorials/data-prerequisites.nblink",
+        "file_name": "data-prerequisites.nblink",
+        "extension": ".nblink",
+        "size_bytes": 77,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/tutorials/finetuning.nblink",
+        "file_name": "finetuning.nblink",
+        "extension": ".nblink",
+        "size_bytes": 66,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/tutorials/index.rst",
+        "file_name": "index.rst",
+        "extension": ".rst",
+        "size_bytes": 2704,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/source/tutorials/inspect-lstm.nblink",
+        "file_name": "inspect-lstm.nblink",
+        "extension": ".nblink",
+        "size_bytes": 78,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/tutorials/introduction.nblink",
+        "file_name": "introduction.nblink",
+        "extension": ".nblink",
+        "size_bytes": 70,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/tutorials/multi-timescale.nblink",
+        "file_name": "multi-timescale.nblink",
+        "extension": ".nblink",
+        "size_bytes": 76,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/source/usage/config.rst",
+        "file_name": "config.rst",
+        "extension": ".rst",
+        "size_bytes": 32793,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/source/usage/models.rst",
+        "file_name": "models.rst",
+        "extension": ".rst",
+        "size_bytes": 23291,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/source/usage/quickstart.rst",
+        "file_name": "quickstart.rst",
+        "extension": ".rst",
+        "size_bytes": 4166,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "environments/environment_cpu.yml",
+        "file_name": "environment_cpu.yml",
+        "extension": ".yml",
+        "size_bytes": 419,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "environments/environment_cuda11_8.yml",
+        "file_name": "environment_cuda11_8.yml",
+        "extension": ".yml",
+        "size_bytes": 420,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "environments/rtd_requirements.txt",
+        "file_name": "rtd_requirements.txt",
+        "extension": ".txt",
+        "size_bytes": 161,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "examples/00-Data-Prerequisites/prerequisites.ipynb",
+        "file_name": "prerequisites.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 5868,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/01-Introduction/1_basin.txt",
+        "file_name": "1_basin.txt",
+        "extension": ".txt",
+        "size_bytes": 9,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "examples/01-Introduction/1_basin.yml",
+        "file_name": "1_basin.yml",
+        "extension": ".yml",
+        "size_bytes": 3968,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/01-Introduction/Introduction.ipynb",
+        "file_name": "Introduction.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 159079,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/02-Adding-Models/adding-gru.ipynb",
+        "file_name": "adding-gru.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 13082,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/03-Adding-Datasets/adding-camels-cl.ipynb",
+        "file_name": "adding-camels-cl.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 17061,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/04-Multi-Timescale/1_basin.txt",
+        "file_name": "1_basin.txt",
+        "extension": ".txt",
+        "size_bytes": 9,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "examples/04-Multi-Timescale/1_basin.yml",
+        "file_name": "1_basin.yml",
+        "extension": ".yml",
+        "size_bytes": 4853,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/04-Multi-Timescale/mtslstm.jpg",
+        "file_name": "mtslstm.jpg",
+        "extension": ".jpg",
+        "size_bytes": 82102,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "examples/04-Multi-Timescale/multi-timescale.ipynb",
+        "file_name": "multi-timescale.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 197419,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/05-Inspecting-LSTMs/1_basin.txt",
+        "file_name": "1_basin.txt",
+        "extension": ".txt",
+        "size_bytes": 9,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "examples/05-Inspecting-LSTMs/1_basin.yml",
+        "file_name": "1_basin.yml",
+        "extension": ".yml",
+        "size_bytes": 3847,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/05-Inspecting-LSTMs/inspecting-lstms.ipynb",
+        "file_name": "inspecting-lstms.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 1404102,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/06-Finetuning/531_basin_list.txt",
+        "file_name": "531_basin_list.txt",
+        "extension": ".txt",
+        "size_bytes": 4779,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "examples/06-Finetuning/531_basins.yml",
+        "file_name": "531_basins.yml",
+        "extension": ".yml",
+        "size_bytes": 3993,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/06-Finetuning/finetune.yml",
+        "file_name": "finetune.yml",
+        "extension": ".yml",
+        "size_bytes": 709,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/06-Finetuning/finetuning.ipynb",
+        "file_name": "finetuning.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 37453,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "examples/config.yml.example",
+        "file_name": "config.yml.example",
+        "extension": ".example",
+        "size_bytes": 9517,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/__about__.py",
+        "file_name": "__about__.py",
+        "extension": ".py",
+        "size_bytes": 23,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 4232,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/basedataset.py",
+        "file_name": "basedataset.py",
+        "extension": ".py",
+        "size_bytes": 46346,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/camelsaus.py",
+        "file_name": "camelsaus.py",
+        "extension": ".py",
+        "size_bytes": 8960,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/camelsbr.py",
+        "file_name": "camelsbr.py",
+        "extension": ".py",
+        "size_bytes": 10047,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/camelscl.py",
+        "file_name": "camelscl.py",
+        "extension": ".py",
+        "size_bytes": 9264,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/camelsgb.py",
+        "file_name": "camelsgb.py",
+        "extension": ".py",
+        "size_bytes": 6729,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/camelsus.py",
+        "file_name": "camelsus.py",
+        "extension": ".py",
+        "size_bytes": 9564,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/caravan.py",
+        "file_name": "caravan.py",
+        "extension": ".py",
+        "size_bytes": 8834,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/genericdataset.py",
+        "file_name": "genericdataset.py",
+        "extension": ".py",
+        "size_bytes": 9061,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/hourlycamelsus.py",
+        "file_name": "hourlycamelsus.py",
+        "extension": ".py",
+        "size_bytes": 12454,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/lamah.py",
+        "file_name": "lamah.py",
+        "extension": ".py",
+        "size_bytes": 13428,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datasetzoo/template.py",
+        "file_name": "template.py",
+        "extension": ".py",
+        "size_bytes": 5005,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datautils/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datautils/climateindices.py",
+        "file_name": "climateindices.py",
+        "extension": ".py",
+        "size_bytes": 9401,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datautils/pet.py",
+        "file_name": "pet.py",
+        "extension": ".py",
+        "size_bytes": 9061,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/datautils/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 13783,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/evaluation/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 1414,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/evaluation/evaluate.py",
+        "file_name": "evaluate.py",
+        "extension": ".py",
+        "size_bytes": 854,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/evaluation/metrics.py",
+        "file_name": "metrics.py",
+        "extension": ".py",
+        "size_bytes": 30060,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/evaluation/plots.py",
+        "file_name": "plots.py",
+        "extension": ".py",
+        "size_bytes": 5785,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/evaluation/signatures.py",
+        "file_name": "signatures.py",
+        "extension": ".py",
+        "size_bytes": 25027,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/evaluation/tester.py",
+        "file_name": "tester.py",
+        "extension": ".py",
+        "size_bytes": 27329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/evaluation/utils.py",
+        "file_name": "utils.py",
+        "extension": ".py",
+        "size_bytes": 2352,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 3846,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/arlstm.py",
+        "file_name": "arlstm.py",
+        "extension": ".py",
+        "size_bytes": 6235,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/baseconceptualmodel.py",
+        "file_name": "baseconceptualmodel.py",
+        "extension": ".py",
+        "size_bytes": 3882,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/basemodel.py",
+        "file_name": "basemodel.py",
+        "extension": ".py",
+        "size_bytes": 3815,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/cudalstm.py",
+        "file_name": "cudalstm.py",
+        "extension": ".py",
+        "size_bytes": 3297,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/customlstm.py",
+        "file_name": "customlstm.py",
+        "extension": ".py",
+        "size_bytes": 7227,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/ealstm.py",
+        "file_name": "ealstm.py",
+        "extension": ".py",
+        "size_bytes": 6133,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/embcudalstm.py",
+        "file_name": "embcudalstm.py",
+        "extension": ".py",
+        "size_bytes": 2841,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/fc.py",
+        "file_name": "fc.py",
+        "extension": ".py",
+        "size_bytes": 3223,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/gru.py",
+        "file_name": "gru.py",
+        "extension": ".py",
+        "size_bytes": 2464,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/handoff_forecast_lstm.py",
+        "file_name": "handoff_forecast_lstm.py",
+        "extension": ".py",
+        "size_bytes": 10145,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/head.py",
+        "file_name": "head.py",
+        "extension": ".py",
+        "size_bytes": 9784,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/hybridmodel.py",
+        "file_name": "hybridmodel.py",
+        "extension": ".py",
+        "size_bytes": 3173,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/inputlayer.py",
+        "file_name": "inputlayer.py",
+        "extension": ".py",
+        "size_bytes": 8408,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/mamba.py",
+        "file_name": "mamba.py",
+        "extension": ".py",
+        "size_bytes": 3249,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/mclstm.py",
+        "file_name": "mclstm.py",
+        "extension": ".py",
+        "size_bytes": 10964,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/mtslstm.py",
+        "file_name": "mtslstm.py",
+        "extension": ".py",
+        "size_bytes": 11600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/multihead_forecast_lstm.py",
+        "file_name": "multihead_forecast_lstm.py",
+        "extension": ".py",
+        "size_bytes": 5447,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/odelstm.py",
+        "file_name": "odelstm.py",
+        "extension": ".py",
+        "size_bytes": 17465,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/sequential_forecast_lstm.py",
+        "file_name": "sequential_forecast_lstm.py",
+        "extension": ".py",
+        "size_bytes": 5026,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/shm.py",
+        "file_name": "shm.py",
+        "extension": ".py",
+        "size_bytes": 7219,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/stacked_forecast_lstm.py",
+        "file_name": "stacked_forecast_lstm.py",
+        "extension": ".py",
+        "size_bytes": 5435,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/template.py",
+        "file_name": "template.py",
+        "extension": ".py",
+        "size_bytes": 4248,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/modelzoo/transformer.py",
+        "file_name": "transformer.py",
+        "extension": ".py",
+        "size_bytes": 9050,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/nh_run.py",
+        "file_name": "nh_run.py",
+        "extension": ".py",
+        "size_bytes": 6629,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/nh_run_scheduler.py",
+        "file_name": "nh_run_scheduler.py",
+        "extension": ".py",
+        "size_bytes": 5432,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/training/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 3578,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/training/basetrainer.py",
+        "file_name": "basetrainer.py",
+        "extension": ".py",
+        "size_bytes": 17167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/training/logger.py",
+        "file_name": "logger.py",
+        "extension": ".py",
+        "size_bytes": 6063,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/training/loss.py",
+        "file_name": "loss.py",
+        "extension": ".py",
+        "size_bytes": 17483,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/training/regularization.py",
+        "file_name": "regularization.py",
+        "extension": ".py",
+        "size_bytes": 6317,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/training/train.py",
+        "file_name": "train.py",
+        "extension": ".py",
+        "size_bytes": 623,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/utils/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/utils/config.py",
+        "file_name": "config.py",
+        "extension": ".py",
+        "size_bytes": 32122,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/utils/configutils.py",
+        "file_name": "configutils.py",
+        "extension": ".py",
+        "size_bytes": 1639,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/utils/errors.py",
+        "file_name": "errors.py",
+        "extension": ".py",
+        "size_bytes": 361,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/utils/logging_utils.py",
+        "file_name": "logging_utils.py",
+        "extension": ".py",
+        "size_bytes": 2943,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/utils/nh_results_ensemble.py",
+        "file_name": "nh_results_ensemble.py",
+        "extension": ".py",
+        "size_bytes": 11495,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/utils/ratingcurve.py",
+        "file_name": "ratingcurve.py",
+        "extension": ".py",
+        "size_bytes": 2933,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neuralhydrology/utils/samplingutils.py",
+        "file_name": "samplingutils.py",
+        "extension": ".py",
+        "size_bytes": 34138,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "setup.py",
+        "file_name": "setup.py",
+        "extension": ".py",
+        "size_bytes": 2157,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "test/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 145,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/conftest.py",
+        "file_name": "conftest.py",
+        "extension": ".py",
+        "size_bytes": 3793,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_config_runs.py",
+        "file_name": "test_config_runs.py",
+        "extension": ".py",
+        "size_bytes": 9743,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_configs/autoregression_daily_regression.test.yml",
+        "file_name": "autoregression_daily_regression.test.yml",
+        "extension": ".yml",
+        "size_bytes": 1881,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_configs/daily_regression.test.yml",
+        "file_name": "daily_regression.test.yml",
+        "extension": ".yml",
+        "size_bytes": 1687,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_configs/daily_regression_additional_features.test.yml",
+        "file_name": "daily_regression_additional_features.test.yml",
+        "extension": ".yml",
+        "size_bytes": 1790,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_configs/daily_regression_nan_targets.test.yml",
+        "file_name": "daily_regression_nan_targets.test.yml",
+        "extension": ".yml",
+        "size_bytes": 1720,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_configs/daily_regression_with_embedding.test.yml",
+        "file_name": "daily_regression_with_embedding.test.yml",
+        "extension": ".yml",
+        "size_bytes": 1716,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_configs/multi_timescale_regression.test.yml",
+        "file_name": "multi_timescale_regression.test.yml",
+        "extension": ".yml",
+        "size_bytes": 1852,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_configs/transformer_daily_regression.test.yml",
+        "file_name": "transformer_daily_regression.test.yml",
+        "extension": ".yml",
+        "size_bytes": 1840,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_custom_lstm.py",
+        "file_name": "test_custom_lstm.py",
+        "extension": ".py",
+        "size_bytes": 1594,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/1_basin_test_set.txt",
+        "file_name": "1_basin_test_set.txt",
+        "extension": ".txt",
+        "size_bytes": 9,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/4_basins_test_set.txt",
+        "file_name": "4_basins_test_set.txt",
+        "extension": ".txt",
+        "size_bytes": 36,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/additional_features.p",
+        "file_name": "additional_features.p",
+        "extension": ".p",
+        "size_bytes": 45823,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/daymet/01022500_lump_cida_forcing_leap.txt",
+        "file_name": "01022500_lump_cida_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 86231,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/daymet/01547700_lump_cida_forcing_leap.txt",
+        "file_name": "01547700_lump_cida_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64729,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/daymet/02064000_lump_cida_forcing_leap.txt",
+        "file_name": "02064000_lump_cida_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64922,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/daymet/03015500_lump_cida_forcing_leap.txt",
+        "file_name": "03015500_lump_cida_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64727,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/maurer/01022500_lump_maurer_forcing_leap.txt",
+        "file_name": "01022500_lump_maurer_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64579,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/maurer/01547700_lump_maurer_forcing_leap.txt",
+        "file_name": "01547700_lump_maurer_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64599,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/maurer/02064000_lump_maurer_forcing_leap.txt",
+        "file_name": "02064000_lump_maurer_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64718,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/maurer/03015500_lump_maurer_forcing_leap.txt",
+        "file_name": "03015500_lump_maurer_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64611,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/maurer_extended/01022500_lump_maurer_forcing_leap.txt",
+        "file_name": "01022500_lump_maurer_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 60887,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/maurer_extended/01547700_lump_maurer_forcing_leap.txt",
+        "file_name": "01547700_lump_maurer_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 60611,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/maurer_extended/02064000_lump_maurer_forcing_leap.txt",
+        "file_name": "02064000_lump_maurer_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 60795,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/maurer_extended/03015500_lump_maurer_forcing_leap.txt",
+        "file_name": "03015500_lump_maurer_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 60919,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/nldas/01022500_lump_nldas_forcing_leap.txt",
+        "file_name": "01022500_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64665,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/nldas/01547700_lump_nldas_forcing_leap.txt",
+        "file_name": "01547700_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64702,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/nldas/02064000_lump_nldas_forcing_leap.txt",
+        "file_name": "02064000_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64882,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/basin_mean_forcing/nldas/03015500_lump_nldas_forcing_leap.txt",
+        "file_name": "03015500_lump_nldas_forcing_leap.txt",
+        "extension": ".txt",
+        "size_bytes": 64728,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/camels_attributes_v2.0/camels_clim.txt",
+        "file_name": "camels_clim.txt",
+        "extension": ".txt",
+        "size_bytes": 100673,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/camels_attributes_v2.0/camels_geol.txt",
+        "file_name": "camels_geol.txt",
+        "extension": ".txt",
+        "size_bytes": 71583,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/camels_attributes_v2.0/camels_hydro.txt",
+        "file_name": "camels_hydro.txt",
+        "extension": ".txt",
+        "size_bytes": 122799,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/camels_attributes_v2.0/camels_name.txt",
+        "file_name": "camels_name.txt",
+        "extension": ".txt",
+        "size_bytes": 30417,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/camels_attributes_v2.0/camels_soil.txt",
+        "file_name": "camels_soil.txt",
+        "extension": ".txt",
+        "size_bytes": 109125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/camels_attributes_v2.0/camels_topo.txt",
+        "file_name": "camels_topo.txt",
+        "extension": ".txt",
+        "size_bytes": 38677,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/camels_attributes_v2.0/camels_vege.txt",
+        "file_name": "camels_vege.txt",
+        "extension": ".txt",
+        "size_bytes": 107970,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/camels_attributes_v2.0/readme.txt",
+        "file_name": "readme.txt",
+        "extension": ".txt",
+        "size_bytes": 1704,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "test/test_data/camels_us/hourly/usgs-streamflow-nldas_hourly.nc",
+        "file_name": "usgs-streamflow-nldas_hourly.nc",
+        "extension": ".nc",
+        "size_bytes": 13036556,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/usgs_streamflow/01022500_streamflow_qc.txt",
+        "file_name": "01022500_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 34426,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/usgs_streamflow/01547700_streamflow_qc.txt",
+        "file_name": "01547700_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 34004,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/usgs_streamflow/02064000_streamflow_qc.txt",
+        "file_name": "02064000_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 34190,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_data/camels_us/usgs_streamflow/03015500_streamflow_qc.txt",
+        "file_name": "03015500_streamflow_qc.txt",
+        "extension": ".txt",
+        "size_bytes": 34156,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_datautils.py",
+        "file_name": "test_datautils.py",
+        "extension": ".py",
+        "size_bytes": 2744,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_mclstm.py",
+        "file_name": "test_mclstm.py",
+        "extension": ".py",
+        "size_bytes": 1198,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

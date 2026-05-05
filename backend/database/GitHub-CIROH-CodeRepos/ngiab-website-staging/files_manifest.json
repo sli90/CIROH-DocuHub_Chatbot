@@ -1,0 +1,1234 @@
+[
+    {
+        "path": ".eslintrc.cjs",
+        "file_name": ".eslintrc.cjs",
+        "extension": ".cjs",
+        "size_bytes": 1053,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pages.yml",
+        "file_name": "pages.yml",
+        "extension": ".yml",
+        "size_bytes": 816,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-staging-deploy.yml",
+        "file_name": "pr-staging-deploy.yml",
+        "extension": ".yml",
+        "size_bytes": 2292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/sync-to-prod.yml",
+        "file_name": "sync-to-prod.yml",
+        "extension": ".yml",
+        "size_bytes": 700,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1775,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "components.json",
+        "file_name": "components.json",
+        "extension": ".json",
+        "size_bytes": 445,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/favicon.ico",
+        "file_name": "favicon.ico",
+        "extension": ".ico",
+        "size_bytes": 23462,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/architecture/1.jpg",
+        "file_name": "1.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1580571,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/architecture/2.jpg",
+        "file_name": "2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 915568,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/architecture/3.jpg",
+        "file_name": "3.jpg",
+        "extension": ".jpg",
+        "size_bytes": 279978,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/architecture/4.jpg",
+        "file_name": "4.jpg",
+        "extension": ".jpg",
+        "size_bytes": 475546,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/awi.png",
+        "file_name": "awi.png",
+        "extension": ".png",
+        "size_bytes": 50455,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/aws.png",
+        "file_name": "aws.png",
+        "extension": ".png",
+        "size_bytes": 48600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/byu.png",
+        "file_name": "byu.png",
+        "extension": ".png",
+        "size_bytes": 47527,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/ciroh_dark.png",
+        "file_name": "ciroh_dark.png",
+        "extension": ".png",
+        "size_bytes": 103279,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/ciroh_light.png",
+        "file_name": "ciroh_light.png",
+        "extension": ".png",
+        "size_bytes": 103877,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/facebook.svg",
+        "file_name": "facebook.svg",
+        "extension": ".svg",
+        "size_bytes": 3223,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/gcp.png",
+        "file_name": "gcp.png",
+        "extension": ".png",
+        "size_bytes": 13387,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/google.svg",
+        "file_name": "google.svg",
+        "extension": ".svg",
+        "size_bytes": 3282,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/ibm.svg",
+        "file_name": "ibm.svg",
+        "extension": ".svg",
+        "size_bytes": 2284,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/lynker-dark.png",
+        "file_name": "lynker-dark.png",
+        "extension": ".png",
+        "size_bytes": 4968,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/lynker-light.jpeg",
+        "file_name": "lynker-light.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 10165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/microsoft.svg",
+        "file_name": "microsoft.svg",
+        "extension": ".svg",
+        "size_bytes": 4137,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/noaa.png",
+        "file_name": "noaa.png",
+        "extension": ".png",
+        "size_bytes": 57994,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/logos/nwc.png",
+        "file_name": "nwc.png",
+        "extension": ".png",
+        "size_bytes": 6616,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Arpita-Patel.jpg",
+        "file_name": "Arpita-Patel.jpg",
+        "extension": ".jpg",
+        "size_bytes": 9955,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Benjamin-Lee.jpg",
+        "file_name": "Benjamin-Lee.jpg",
+        "extension": ".jpg",
+        "size_bytes": 13180,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Chad-Perry.jpg",
+        "file_name": "Chad-Perry.jpg",
+        "extension": ".jpg",
+        "size_bytes": 12745,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Dan-Ames.jpg",
+        "file_name": "Dan-Ames.jpg",
+        "extension": ".jpg",
+        "size_bytes": 5603,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Fred-Ogden.jpg",
+        "file_name": "Fred-Ogden.jpg",
+        "extension": ".jpg",
+        "size_bytes": 112629,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Giovanni-Romero.png",
+        "file_name": "Giovanni-Romero.png",
+        "extension": ".png",
+        "size_bytes": 61519,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Hari-Teja-Jajula.jpg",
+        "file_name": "Hari-Teja-Jajula.jpg",
+        "extension": ".jpg",
+        "size_bytes": 113236,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/James-Halgren.jpg",
+        "file_name": "James-Halgren.jpg",
+        "extension": ".jpg",
+        "size_bytes": 10532,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Jeffrey-Carver.jpg",
+        "file_name": "Jeffrey-Carver.jpg",
+        "extension": ".jpg",
+        "size_bytes": 15555,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Jordan-Laser.jpg",
+        "file_name": "Jordan-Laser.jpg",
+        "extension": ".jpg",
+        "size_bytes": 9714,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Josh-Cunningham.png",
+        "file_name": "Josh-Cunningham.png",
+        "extension": ".png",
+        "size_bytes": 179413,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Keith-Jennings.jpg",
+        "file_name": "Keith-Jennings.jpg",
+        "extension": ".jpg",
+        "size_bytes": 199173,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Matthew-Denno.jpg",
+        "file_name": "Matthew-Denno.jpg",
+        "extension": ".jpg",
+        "size_bytes": 8985,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Md-Shahabul-Alam.jpg",
+        "file_name": "Md-Shahabul-Alam.jpg",
+        "extension": ".jpg",
+        "size_bytes": 147696,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Me.jpg",
+        "file_name": "Me.jpg",
+        "extension": ".jpg",
+        "size_bytes": 105623,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Mike-Johnson.jpg",
+        "file_name": "Mike-Johnson.jpg",
+        "extension": ".jpg",
+        "size_bytes": 113033,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Nels-Frazier.jpg",
+        "file_name": "Nels-Frazier.jpg",
+        "extension": ".jpg",
+        "size_bytes": 27667,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Nia-Minor.png",
+        "file_name": "Nia-Minor.png",
+        "extension": ".png",
+        "size_bytes": 8128,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Purushotham-Bangalore.jpg",
+        "file_name": "Purushotham-Bangalore.jpg",
+        "extension": ".jpg",
+        "size_bytes": 120990,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Quinn-Lee.jpg",
+        "file_name": "Quinn-Lee.jpg",
+        "extension": ".jpg",
+        "size_bytes": 36667,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Sai-Harsha-Vemula.jpeg",
+        "file_name": "Sai-Harsha-Vemula.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 74439,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Sam-Lamont.png",
+        "file_name": "Sam-Lamont.png",
+        "extension": ".png",
+        "size_bytes": 7290,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Sifan-A-Koriche.jpg",
+        "file_name": "Sifan-A-Koriche.jpg",
+        "extension": ".jpg",
+        "size_bytes": 10992,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Steven-J-Burian.jpg",
+        "file_name": "Steven-J-Burian.jpg",
+        "extension": ".jpg",
+        "size_bytes": 11119,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Trupesh-Patel.jpg",
+        "file_name": "Trupesh-Patel.jpg",
+        "extension": ".jpg",
+        "size_bytes": 4358,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/team/Zach-Wills.jpg",
+        "file_name": "Zach-Wills.jpg",
+        "extension": ".jpg",
+        "size_bytes": 18486,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/tool/ngen_calibration.jpeg",
+        "file_name": "ngen_calibration.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1376493,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/tool/ngen_datastream.jpeg",
+        "file_name": "ngen_datastream.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1281461,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/tool/ngiab_cloudinfra.jpg",
+        "file_name": "ngiab_cloudinfra.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1151653,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/tool/ngiab_data_preprocess.jpg",
+        "file_name": "ngiab_data_preprocess.jpg",
+        "extension": ".jpg",
+        "size_bytes": 617628,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/tool/ngiab_hpcinfra.jpeg",
+        "file_name": "ngiab_hpcinfra.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1016435,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/tool/ngiab_teehr.png",
+        "file_name": "ngiab_teehr.png",
+        "extension": ".png",
+        "size_bytes": 2993087,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/img/tool/ngiab_visualizer.jpeg",
+        "file_name": "ngiab_visualizer.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 2649230,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/index-D9_XvPqw.css",
+        "file_name": "index-D9_XvPqw.css",
+        "extension": ".css",
+        "size_bytes": 57836,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/index-QyaH8cuK.js",
+        "file_name": "index-QyaH8cuK.js",
+        "extension": ".js",
+        "size_bytes": 437964,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/video/ngiab-docuhub.mp4",
+        "file_name": "ngiab-docuhub.mp4",
+        "extension": ".mp4",
+        "size_bytes": 28156213,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/assets/video/water-video.mp4",
+        "file_name": "water-video.mp4",
+        "extension": ".mp4",
+        "size_bytes": 36401547,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/css/styles.css",
+        "file_name": "styles.css",
+        "extension": ".css",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/index.html",
+        "file_name": "index.html",
+        "extension": ".html",
+        "size_bytes": 1324,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "dist/js/scripts.js",
+        "file_name": "scripts.js",
+        "extension": ".js",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "index.html",
+        "file_name": "index.html",
+        "extension": ".html",
+        "size_bytes": 950,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "jsconfig.json",
+        "file_name": "jsconfig.json",
+        "extension": ".json",
+        "size_bytes": 117,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "package-lock.json",
+        "file_name": "package-lock.json",
+        "extension": ".json",
+        "size_bytes": 249549,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "package.json",
+        "file_name": "package.json",
+        "extension": ".json",
+        "size_bytes": 1609,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "postcss.config.js",
+        "file_name": "postcss.config.js",
+        "extension": ".js",
+        "size_bytes": 80,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/favicon.ico",
+        "file_name": "favicon.ico",
+        "extension": ".ico",
+        "size_bytes": 23462,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/architecture/1.jpg",
+        "file_name": "1.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1580571,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/architecture/2.jpg",
+        "file_name": "2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 915568,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/architecture/3.jpg",
+        "file_name": "3.jpg",
+        "extension": ".jpg",
+        "size_bytes": 279978,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/architecture/4.jpg",
+        "file_name": "4.jpg",
+        "extension": ".jpg",
+        "size_bytes": 475546,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/awi.png",
+        "file_name": "awi.png",
+        "extension": ".png",
+        "size_bytes": 50455,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/aws.png",
+        "file_name": "aws.png",
+        "extension": ".png",
+        "size_bytes": 48600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/byu.png",
+        "file_name": "byu.png",
+        "extension": ".png",
+        "size_bytes": 47527,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/ciroh_dark.png",
+        "file_name": "ciroh_dark.png",
+        "extension": ".png",
+        "size_bytes": 103279,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/ciroh_light.png",
+        "file_name": "ciroh_light.png",
+        "extension": ".png",
+        "size_bytes": 103877,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/facebook.svg",
+        "file_name": "facebook.svg",
+        "extension": ".svg",
+        "size_bytes": 3223,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/gcp.png",
+        "file_name": "gcp.png",
+        "extension": ".png",
+        "size_bytes": 13387,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/google.svg",
+        "file_name": "google.svg",
+        "extension": ".svg",
+        "size_bytes": 3282,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/ibm.svg",
+        "file_name": "ibm.svg",
+        "extension": ".svg",
+        "size_bytes": 2284,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/lynker-dark.png",
+        "file_name": "lynker-dark.png",
+        "extension": ".png",
+        "size_bytes": 4968,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/lynker-light.jpeg",
+        "file_name": "lynker-light.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 10165,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/microsoft.svg",
+        "file_name": "microsoft.svg",
+        "extension": ".svg",
+        "size_bytes": 4137,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/noaa.png",
+        "file_name": "noaa.png",
+        "extension": ".png",
+        "size_bytes": 57994,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/logos/nwc.png",
+        "file_name": "nwc.png",
+        "extension": ".png",
+        "size_bytes": 6616,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Arpita-Patel.jpg",
+        "file_name": "Arpita-Patel.jpg",
+        "extension": ".jpg",
+        "size_bytes": 9955,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Benjamin-Lee.jpg",
+        "file_name": "Benjamin-Lee.jpg",
+        "extension": ".jpg",
+        "size_bytes": 13180,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Chad-Perry.jpg",
+        "file_name": "Chad-Perry.jpg",
+        "extension": ".jpg",
+        "size_bytes": 12745,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Dan-Ames.jpg",
+        "file_name": "Dan-Ames.jpg",
+        "extension": ".jpg",
+        "size_bytes": 5603,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Fred-Ogden.jpg",
+        "file_name": "Fred-Ogden.jpg",
+        "extension": ".jpg",
+        "size_bytes": 112629,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Giovanni-Romero.png",
+        "file_name": "Giovanni-Romero.png",
+        "extension": ".png",
+        "size_bytes": 61519,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Hari-Teja-Jajula.jpg",
+        "file_name": "Hari-Teja-Jajula.jpg",
+        "extension": ".jpg",
+        "size_bytes": 113236,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/James-Halgren.jpg",
+        "file_name": "James-Halgren.jpg",
+        "extension": ".jpg",
+        "size_bytes": 10532,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Jeffrey-Carver.jpg",
+        "file_name": "Jeffrey-Carver.jpg",
+        "extension": ".jpg",
+        "size_bytes": 15555,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Jordan-Laser.jpg",
+        "file_name": "Jordan-Laser.jpg",
+        "extension": ".jpg",
+        "size_bytes": 9714,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Josh-Cunningham.png",
+        "file_name": "Josh-Cunningham.png",
+        "extension": ".png",
+        "size_bytes": 179413,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Keith-Jennings.jpg",
+        "file_name": "Keith-Jennings.jpg",
+        "extension": ".jpg",
+        "size_bytes": 199173,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Matthew-Denno.jpg",
+        "file_name": "Matthew-Denno.jpg",
+        "extension": ".jpg",
+        "size_bytes": 8985,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Md-Shahabul-Alam.jpg",
+        "file_name": "Md-Shahabul-Alam.jpg",
+        "extension": ".jpg",
+        "size_bytes": 147696,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Me.jpg",
+        "file_name": "Me.jpg",
+        "extension": ".jpg",
+        "size_bytes": 105623,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Mike-Johnson.jpg",
+        "file_name": "Mike-Johnson.jpg",
+        "extension": ".jpg",
+        "size_bytes": 113033,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Nels-Frazier.jpg",
+        "file_name": "Nels-Frazier.jpg",
+        "extension": ".jpg",
+        "size_bytes": 27667,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Nia-Minor.png",
+        "file_name": "Nia-Minor.png",
+        "extension": ".png",
+        "size_bytes": 8128,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Purushotham-Bangalore.jpg",
+        "file_name": "Purushotham-Bangalore.jpg",
+        "extension": ".jpg",
+        "size_bytes": 120990,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Quinn-Lee.jpg",
+        "file_name": "Quinn-Lee.jpg",
+        "extension": ".jpg",
+        "size_bytes": 36667,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Sai-Harsha-Vemula.jpeg",
+        "file_name": "Sai-Harsha-Vemula.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 74439,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Sam-Lamont.png",
+        "file_name": "Sam-Lamont.png",
+        "extension": ".png",
+        "size_bytes": 7290,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Sifan-A-Koriche.jpg",
+        "file_name": "Sifan-A-Koriche.jpg",
+        "extension": ".jpg",
+        "size_bytes": 10992,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Steven-J-Burian.jpg",
+        "file_name": "Steven-J-Burian.jpg",
+        "extension": ".jpg",
+        "size_bytes": 11119,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Trupesh-Patel.jpg",
+        "file_name": "Trupesh-Patel.jpg",
+        "extension": ".jpg",
+        "size_bytes": 4358,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/team/Zach-Wills.jpg",
+        "file_name": "Zach-Wills.jpg",
+        "extension": ".jpg",
+        "size_bytes": 18486,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/tool/ngen_calibration.jpeg",
+        "file_name": "ngen_calibration.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1376493,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/tool/ngen_datastream.jpeg",
+        "file_name": "ngen_datastream.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1281461,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/tool/ngiab_cloudinfra.jpg",
+        "file_name": "ngiab_cloudinfra.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1151653,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/tool/ngiab_data_preprocess.jpg",
+        "file_name": "ngiab_data_preprocess.jpg",
+        "extension": ".jpg",
+        "size_bytes": 617628,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/tool/ngiab_hpcinfra.jpeg",
+        "file_name": "ngiab_hpcinfra.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1016435,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/tool/ngiab_teehr.png",
+        "file_name": "ngiab_teehr.png",
+        "extension": ".png",
+        "size_bytes": 2993087,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/img/tool/ngiab_visualizer.jpeg",
+        "file_name": "ngiab_visualizer.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 2649230,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/video/ngiab-docuhub.mp4",
+        "file_name": "ngiab-docuhub.mp4",
+        "extension": ".mp4",
+        "size_bytes": 28156213,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/assets/video/water-video.mp4",
+        "file_name": "water-video.mp4",
+        "extension": ".mp4",
+        "size_bytes": 36401547,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/css/styles.css",
+        "file_name": "styles.css",
+        "extension": ".css",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "public/js/scripts.js",
+        "file_name": "scripts.js",
+        "extension": ".js",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/App.css",
+        "file_name": "App.css",
+        "extension": ".css",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/App.jsx",
+        "file_name": "App.jsx",
+        "extension": ".jsx",
+        "size_bytes": 741,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/fancy/text/underline-to-background.jsx",
+        "file_name": "underline-to-background.jsx",
+        "extension": ".jsx",
+        "size_bytes": 2472,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/VideoTestimonial.jsx",
+        "file_name": "VideoTestimonial.jsx",
+        "extension": ".jsx",
+        "size_bytes": 1183,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/about.jsx",
+        "file_name": "about.jsx",
+        "extension": ".jsx",
+        "size_bytes": 2551,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/blog.jsx",
+        "file_name": "blog.jsx",
+        "extension": ".jsx",
+        "size_bytes": 1010,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/contact.jsx",
+        "file_name": "contact.jsx",
+        "extension": ".jsx",
+        "size_bytes": 5190,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/documentation.jsx",
+        "file_name": "documentation.jsx",
+        "extension": ".jsx",
+        "size_bytes": 10898,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/hero.jsx",
+        "file_name": "hero.jsx",
+        "extension": ".jsx",
+        "size_bytes": 6654,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/impact.jsx",
+        "file_name": "impact.jsx",
+        "extension": ".jsx",
+        "size_bytes": 649,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/partner.jsx",
+        "file_name": "partner.jsx",
+        "extension": ".jsx",
+        "size_bytes": 4386,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/team.jsx",
+        "file_name": "team.jsx",
+        "extension": ".jsx",
+        "size_bytes": 16203,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/home/tools.jsx",
+        "file_name": "tools.jsx",
+        "extension": ".jsx",
+        "size_bytes": 10408,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/layout/Footer.jsx",
+        "file_name": "Footer.jsx",
+        "extension": ".jsx",
+        "size_bytes": 1639,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/components/layout/Header.jsx",
+        "file_name": "Header.jsx",
+        "extension": ".jsx",
+        "size_bytes": 10485,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/config/environment.js",
+        "file_name": "environment.js",
+        "extension": ".js",
+        "size_bytes": 564,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/index.css",
+        "file_name": "index.css",
+        "extension": ".css",
+        "size_bytes": 3843,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/index.jsx",
+        "file_name": "index.jsx",
+        "extension": ".jsx",
+        "size_bytes": 309,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/lib/utils.js",
+        "file_name": "utils.js",
+        "extension": ".js",
+        "size_bytes": 137,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/logo.svg",
+        "file_name": "logo.svg",
+        "extension": ".svg",
+        "size_bytes": 2632,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/pages/Home.jsx",
+        "file_name": "Home.jsx",
+        "extension": ".jsx",
+        "size_bytes": 1570,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/pages/RedirSurvey.jsx",
+        "file_name": "RedirSurvey.jsx",
+        "extension": ".jsx",
+        "size_bytes": 134,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/reportWebVitals.js",
+        "file_name": "reportWebVitals.js",
+        "extension": ".js",
+        "size_bytes": 362,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/setupTests.js",
+        "file_name": "setupTests.js",
+        "extension": ".js",
+        "size_bytes": 241,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/utils/DockerPullCounter.jsx",
+        "file_name": "DockerPullCounter.jsx",
+        "extension": ".jsx",
+        "size_bytes": 5432,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "tailwind.config.js",
+        "file_name": "tailwind.config.js",
+        "extension": ".js",
+        "size_bytes": 560,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "vite.config.js",
+        "file_name": "vite.config.js",
+        "extension": ".js",
+        "size_bytes": 730,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

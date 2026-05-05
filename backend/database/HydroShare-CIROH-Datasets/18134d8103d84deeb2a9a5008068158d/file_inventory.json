@@ -1,0 +1,38 @@
+[
+    {
+        "file_name": "20250612-ngen-workshop-at-nwcsi.pptx",
+        "file_path": "20250612-ngen-workshop-at-nwcsi.pptx",
+        "extension": ".pptx",
+        "checksum": "6197140177170356d8248d1bab099887"
+    },
+    {
+        "file_name": "model-formulation.png",
+        "file_path": "img/model-formulation.png",
+        "extension": ".png",
+        "checksum": "ee801dff7164edeceebf79016331b724"
+    },
+    {
+        "file_name": "usgs-on-north-river-alabama.png",
+        "file_path": "img/usgs-on-north-river-alabama.png",
+        "extension": ".png",
+        "checksum": "4cbfcd7659546a3470b0afb46b9d77cb"
+    },
+    {
+        "file_name": "preparing-and-executing-ngen.ipynb",
+        "file_path": "preparing-and-executing-ngen.ipynb",
+        "extension": ".ipynb",
+        "checksum": "c970e1410c57aa3e5469588b85aeb82e"
+    },
+    {
+        "file_name": "usgs-gage-location.png",
+        "file_path": "img/usgs-gage-location.png",
+        "extension": ".png",
+        "checksum": "d178af4534990ca29a607dd549bee006"
+    },
+    {
+        "file_name": "jupyter-screenshot.png",
+        "file_path": "img/jupyter-screenshot.png",
+        "extension": ".png",
+        "checksum": "ee92352e1899525646978a325530e0ba"
+    }
+]

@@ -1,0 +1,3130 @@
+[
+    {
+        "path": ".firebaserc",
+        "file_name": ".firebaserc",
+        "extension": "",
+        "size_bytes": 56,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/ci.yml",
+        "file_name": "ci.yml",
+        "extension": ".yml",
+        "size_bytes": 843,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 1224,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".metadata",
+        "file_name": ".metadata",
+        "extension": "",
+        "size_bytes": 1114,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CLAUDE.md",
+        "file_name": "CLAUDE.md",
+        "extension": ".md",
+        "size_bytes": 13806,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "Makefile",
+        "file_name": "Makefile",
+        "extension": "",
+        "size_bytes": 1137,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 13947,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "analysis_options.yaml",
+        "file_name": "analysis_options.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1420,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/.gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 253,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/build.gradle.kts",
+        "file_name": "build.gradle.kts",
+        "extension": ".kts",
+        "size_bytes": 4029,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/proguard-rules.pro",
+        "file_name": "proguard-rules.pro",
+        "extension": ".pro",
+        "size_bytes": 556,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/debug/AndroidManifest.xml",
+        "file_name": "AndroidManifest.xml",
+        "extension": ".xml",
+        "size_bytes": 378,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/AndroidManifest.xml",
+        "file_name": "AndroidManifest.xml",
+        "extension": ".xml",
+        "size_bytes": 5115,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/kotlin/com/hydromap/rivr/MainActivity.kt",
+        "file_name": "MainActivity.kt",
+        "extension": ".kt",
+        "size_bytes": 122,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/drawable-hdpi/ic_notification.png",
+        "file_name": "ic_notification.png",
+        "extension": ".png",
+        "size_bytes": 658,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/drawable-mdpi/ic_notification.png",
+        "file_name": "ic_notification.png",
+        "extension": ".png",
+        "size_bytes": 472,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/drawable-v21/launch_background.xml",
+        "file_name": "launch_background.xml",
+        "extension": ".xml",
+        "size_bytes": 438,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/drawable-xhdpi/ic_notification.png",
+        "file_name": "ic_notification.png",
+        "extension": ".png",
+        "size_bytes": 945,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/drawable-xxhdpi/ic_notification.png",
+        "file_name": "ic_notification.png",
+        "extension": ".png",
+        "size_bytes": 1437,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/drawable-xxxhdpi/ic_notification.png",
+        "file_name": "ic_notification.png",
+        "extension": ".png",
+        "size_bytes": 2038,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/drawable/launch_background.xml",
+        "file_name": "launch_background.xml",
+        "extension": ".xml",
+        "size_bytes": 434,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/mipmap-anydpi-v26/rivr.xml",
+        "file_name": "rivr.xml",
+        "extension": ".xml",
+        "size_bytes": 248,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/mipmap-hdpi/rivr.png",
+        "file_name": "rivr.png",
+        "extension": ".png",
+        "size_bytes": 5193,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/mipmap-mdpi/rivr.png",
+        "file_name": "rivr.png",
+        "extension": ".png",
+        "size_bytes": 2856,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/mipmap-xhdpi/rivr.png",
+        "file_name": "rivr.png",
+        "extension": ".png",
+        "size_bytes": 8443,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/mipmap-xxhdpi/rivr.png",
+        "file_name": "rivr.png",
+        "extension": ".png",
+        "size_bytes": 16912,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/mipmap-xxxhdpi/rivr.png",
+        "file_name": "rivr.png",
+        "extension": ".png",
+        "size_bytes": 28870,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/values-night/styles.xml",
+        "file_name": "styles.xml",
+        "extension": ".xml",
+        "size_bytes": 995,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/values/colors.xml",
+        "file_name": "colors.xml",
+        "extension": ".xml",
+        "size_bytes": 121,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/values/strings.xml",
+        "file_name": "strings.xml",
+        "extension": ".xml",
+        "size_bytes": 254,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/main/res/values/styles.xml",
+        "file_name": "styles.xml",
+        "extension": ".xml",
+        "size_bytes": 996,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/app/src/profile/AndroidManifest.xml",
+        "file_name": "AndroidManifest.xml",
+        "extension": ".xml",
+        "size_bytes": 378,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/build.gradle.kts",
+        "file_name": "build.gradle.kts",
+        "extension": ".kts",
+        "size_bytes": 515,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/gradle.properties",
+        "file_name": "gradle.properties",
+        "extension": ".properties",
+        "size_bytes": 166,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/gradle/wrapper/gradle-wrapper.properties",
+        "file_name": "gradle-wrapper.properties",
+        "extension": ".properties",
+        "size_bytes": 201,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/local.properties.template",
+        "file_name": "local.properties.template",
+        "extension": ".template",
+        "size_bytes": 476,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "android/settings.gradle.kts",
+        "file_name": "settings.gradle.kts",
+        "extension": ".kts",
+        "size_bytes": 887,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "app_releases.md",
+        "file_name": "app_releases.md",
+        "extension": ".md",
+        "size_bytes": 1349,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "assets/images/onboarding/explore_rivers.svg",
+        "file_name": "explore_rivers.svg",
+        "extension": ".svg",
+        "size_bytes": 761,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/onboarding/forecasts_risk.svg",
+        "file_name": "forecasts_risk.svg",
+        "extension": ".svg",
+        "size_bytes": 854,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/onboarding/save_monitor.svg",
+        "file_name": "save_monitor.svg",
+        "extension": ".svg",
+        "size_bytes": 674,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/onboarding/welcome.svg",
+        "file_name": "welcome.svg",
+        "extension": ".svg",
+        "size_bytes": 581,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/big_water/big_water_1.webp",
+        "file_name": "big_water_1.webp",
+        "extension": ".webp",
+        "size_bytes": 220776,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/big_water/big_water_2.webp",
+        "file_name": "big_water_2.webp",
+        "extension": ".webp",
+        "size_bytes": 122004,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/big_water/big_water_3.webp",
+        "file_name": "big_water_3.webp",
+        "extension": ".webp",
+        "size_bytes": 170862,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/big_water/big_water_4.webp",
+        "file_name": "big_water_4.webp",
+        "extension": ".webp",
+        "size_bytes": 222544,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/big_water/big_water_5.webp",
+        "file_name": "big_water_5.webp",
+        "extension": ".webp",
+        "size_bytes": 197874,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/big_water/big_water_6.webp",
+        "file_name": "big_water_6.webp",
+        "extension": ".webp",
+        "size_bytes": 136010,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/desert/desert_river_1.webp",
+        "file_name": "desert_river_1.webp",
+        "extension": ".webp",
+        "size_bytes": 213262,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/desert/desert_river_2.webp",
+        "file_name": "desert_river_2.webp",
+        "extension": ".webp",
+        "size_bytes": 256474,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/desert/desert_river_3.webp",
+        "file_name": "desert_river_3.webp",
+        "extension": ".webp",
+        "size_bytes": 228856,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/desert/desert_river_4.webp",
+        "file_name": "desert_river_4.webp",
+        "extension": ".webp",
+        "size_bytes": 247930,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/desert/desert_river_5.webp",
+        "file_name": "desert_river_5.webp",
+        "extension": ".webp",
+        "size_bytes": 214458,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/desert/desert_river_6.webp",
+        "file_name": "desert_river_6.webp",
+        "extension": ".webp",
+        "size_bytes": 243398,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/mountain/mountain_river_1.webp",
+        "file_name": "mountain_river_1.webp",
+        "extension": ".webp",
+        "size_bytes": 272452,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/mountain/mountain_river_2.webp",
+        "file_name": "mountain_river_2.webp",
+        "extension": ".webp",
+        "size_bytes": 279226,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/mountain/mountain_river_3.webp",
+        "file_name": "mountain_river_3.webp",
+        "extension": ".webp",
+        "size_bytes": 280010,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/mountain/mountain_river_4.webp",
+        "file_name": "mountain_river_4.webp",
+        "extension": ".webp",
+        "size_bytes": 199712,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/mountain/mountain_river_5.webp",
+        "file_name": "mountain_river_5.webp",
+        "extension": ".webp",
+        "size_bytes": 218006,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/mountain/mountain_river_6.webp",
+        "file_name": "mountain_river_6.webp",
+        "extension": ".webp",
+        "size_bytes": 297482,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/urban/urban_river_1.webp",
+        "file_name": "urban_river_1.webp",
+        "extension": ".webp",
+        "size_bytes": 260334,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/urban/urban_river_2.webp",
+        "file_name": "urban_river_2.webp",
+        "extension": ".webp",
+        "size_bytes": 274744,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/urban/urban_river_3.webp",
+        "file_name": "urban_river_3.webp",
+        "extension": ".webp",
+        "size_bytes": 251280,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/urban/urban_river_4.webp",
+        "file_name": "urban_river_4.webp",
+        "extension": ".webp",
+        "size_bytes": 198584,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/urban/urban_river_5.webp",
+        "file_name": "urban_river_5.webp",
+        "extension": ".webp",
+        "size_bytes": 161318,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivers/urban/urban_river_6.webp",
+        "file_name": "urban_river_6.webp",
+        "extension": ".webp",
+        "size_bytes": 232570,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivr_logo-old.png",
+        "file_name": "rivr_logo-old.png",
+        "extension": ".png",
+        "size_bytes": 1413943,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/rivr_logo.png",
+        "file_name": "rivr_logo.png",
+        "extension": ".png",
+        "size_bytes": 1457251,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/sponsors/BYU MonogramWordmark_navy.svg",
+        "file_name": "BYU MonogramWordmark_navy.svg",
+        "extension": ".svg",
+        "size_bytes": 5771,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/sponsors/BYU MonogramWordmark_navy@2x.png",
+        "file_name": "BYU MonogramWordmark_navy@2x.png",
+        "extension": ".png",
+        "size_bytes": 24254,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/sponsors/NOAA-logo.png",
+        "file_name": "NOAA-logo.png",
+        "extension": ".png",
+        "size_bytes": 61957,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/sponsors/Office_of_Water_Prediction_Logo.png",
+        "file_name": "Office_of_Water_Prediction_Logo.png",
+        "extension": ".png",
+        "size_bytes": 21796,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/sponsors/University-of-Alabama-Logo.png",
+        "file_name": "University-of-Alabama-Logo.png",
+        "extension": ".png",
+        "size_bytes": 19629,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/images/sponsors/ciroh_logo.png",
+        "file_name": "ciroh_logo.png",
+        "extension": ".png",
+        "size_bytes": 174373,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/videos/Action-Risk.mp4",
+        "file_name": "Action-Risk.mp4",
+        "extension": ".mp4",
+        "size_bytes": 521883,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/videos/Extreme-Risk.mp4",
+        "file_name": "Extreme-Risk.mp4",
+        "extension": ".mp4",
+        "size_bytes": 1044939,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/videos/Major-Risk.mp4",
+        "file_name": "Major-Risk.mp4",
+        "extension": ".mp4",
+        "size_bytes": 547942,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/videos/Moderate-Risk.mp4",
+        "file_name": "Moderate-Risk.mp4",
+        "extension": ".mp4",
+        "size_bytes": 218910,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/videos/NoData-Risk.mp4",
+        "file_name": "NoData-Risk.mp4",
+        "extension": ".mp4",
+        "size_bytes": 56333,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "assets/videos/Normal-Risk.mp4",
+        "file_name": "Normal-Risk.mp4",
+        "extension": ".mp4",
+        "size_bytes": 135407,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "devtools_options.yaml",
+        "file_name": "devtools_options.yaml",
+        "extension": ".yaml",
+        "size_bytes": 184,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "docs/architecture-guide.md",
+        "file_name": "architecture-guide.md",
+        "extension": ".md",
+        "size_bytes": 43719,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/audits/04-03-2026-roadmap.md",
+        "file_name": "04-03-2026-roadmap.md",
+        "extension": ".md",
+        "size_bytes": 2804,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/audits/04-03-2026.md",
+        "file_name": "04-03-2026.md",
+        "extension": ".md",
+        "size_bytes": 31858,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/audits/04-06-2026-architecture-audit.md",
+        "file_name": "04-06-2026-architecture-audit.md",
+        "extension": ".md",
+        "size_bytes": 14299,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/audits/04-06-2026-architecture-roadmap.md",
+        "file_name": "04-06-2026-architecture-roadmap.md",
+        "extension": ".md",
+        "size_bytes": 12147,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/audits/04-07-2026-data-loading-audit.md",
+        "file_name": "04-07-2026-data-loading-audit.md",
+        "extension": ".md",
+        "size_bytes": 10031,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/audits/04-07-2026-data-loading-roadmap.md",
+        "file_name": "04-07-2026-data-loading-roadmap.md",
+        "extension": ".md",
+        "size_bytes": 16367,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/audits/2026-04-14-store-release-audit.md",
+        "file_name": "2026-04-14-store-release-audit.md",
+        "extension": ".md",
+        "size_bytes": 28961,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/feedback/1.0.0+5/feedback.md",
+        "file_name": "feedback.md",
+        "extension": ".md",
+        "size_bytes": 7885,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "docs/rubric.md",
+        "file_name": "rubric.md",
+        "extension": ".md",
+        "size_bytes": 33420,
+        "downloaded": true,
+        "selection_reason": "allowed_path_prefix"
+    },
+    {
+        "path": "firebase.json",
+        "file_name": "firebase.json",
+        "extension": ".json",
+        "size_bytes": 1291,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "firestore.indexes.json",
+        "file_name": "firestore.indexes.json",
+        "extension": ".json",
+        "size_bytes": 337,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "firestore.rules",
+        "file_name": "firestore.rules",
+        "extension": ".rules",
+        "size_bytes": 677,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "functions/.gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 153,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "functions/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 8493,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "functions/eslint.config.mjs",
+        "file_name": "eslint.config.mjs",
+        "extension": ".mjs",
+        "size_bytes": 503,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "functions/package-lock.json",
+        "file_name": "package-lock.json",
+        "extension": ".json",
+        "size_bytes": 301627,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "functions/package.json",
+        "file_name": "package.json",
+        "extension": ".json",
+        "size_bytes": 830,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "functions/src/index.ts",
+        "file_name": "index.ts",
+        "extension": ".ts",
+        "size_bytes": 7970,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "functions/src/noaa-client.ts",
+        "file_name": "noaa-client.ts",
+        "extension": ".ts",
+        "size_bytes": 19108,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "functions/src/notification-service.ts",
+        "file_name": "notification-service.ts",
+        "extension": ".ts",
+        "size_bytes": 20075,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "functions/tsconfig.dev.json",
+        "file_name": "tsconfig.dev.json",
+        "extension": ".json",
+        "size_bytes": 42,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "functions/tsconfig.json",
+        "file_name": "tsconfig.json",
+        "extension": ".json",
+        "size_bytes": 349,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/.gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 569,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Flutter/AppFrameworkInfo.plist",
+        "file_name": "AppFrameworkInfo.plist",
+        "extension": ".plist",
+        "size_bytes": 774,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Flutter/Debug.xcconfig",
+        "file_name": "Debug.xcconfig",
+        "extension": ".xcconfig",
+        "size_bytes": 136,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Flutter/Release.xcconfig",
+        "file_name": "Release.xcconfig",
+        "extension": ".xcconfig",
+        "size_bytes": 138,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Flutter/Secrets.xcconfig.template",
+        "file_name": "Secrets.xcconfig.template",
+        "extension": ".template",
+        "size_bytes": 359,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Podfile",
+        "file_name": "Podfile",
+        "extension": "",
+        "size_bytes": 1775,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Podfile.lock",
+        "file_name": "Podfile.lock",
+        "extension": ".lock",
+        "size_bytes": 60614,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner.xcodeproj/project.pbxproj",
+        "file_name": "project.pbxproj",
+        "extension": ".pbxproj",
+        "size_bytes": 33152,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+        "file_name": "contents.xcworkspacedata",
+        "extension": ".xcworkspacedata",
+        "size_bytes": 135,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+        "file_name": "IDEWorkspaceChecks.plist",
+        "extension": ".plist",
+        "size_bytes": 238,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+        "file_name": "WorkspaceSettings.xcsettings",
+        "extension": ".xcsettings",
+        "size_bytes": 226,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+        "file_name": "Runner.xcscheme",
+        "extension": ".xcscheme",
+        "size_bytes": 3833,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner.xcworkspace/contents.xcworkspacedata",
+        "file_name": "contents.xcworkspacedata",
+        "extension": ".xcworkspacedata",
+        "size_bytes": 224,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/AppDelegate.swift",
+        "file_name": "AppDelegate.swift",
+        "extension": ".swift",
+        "size_bytes": 3190,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/1024.png",
+        "file_name": "1024.png",
+        "extension": ".png",
+        "size_bytes": 1163238,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/114.png",
+        "file_name": "114.png",
+        "extension": ".png",
+        "size_bytes": 11247,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/120.png",
+        "file_name": "120.png",
+        "extension": ".png",
+        "size_bytes": 12277,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/152.png",
+        "file_name": "152.png",
+        "extension": ".png",
+        "size_bytes": 17259,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/167.png",
+        "file_name": "167.png",
+        "extension": ".png",
+        "size_bytes": 20479,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/180.png",
+        "file_name": "180.png",
+        "extension": ".png",
+        "size_bytes": 25553,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/20.png",
+        "file_name": "20.png",
+        "extension": ".png",
+        "size_bytes": 711,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/29.png",
+        "file_name": "29.png",
+        "extension": ".png",
+        "size_bytes": 1354,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/40.png",
+        "file_name": "40.png",
+        "extension": ".png",
+        "size_bytes": 2177,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/57.png",
+        "file_name": "57.png",
+        "extension": ".png",
+        "size_bytes": 3685,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/58.png",
+        "file_name": "58.png",
+        "extension": ".png",
+        "size_bytes": 3841,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/60.png",
+        "file_name": "60.png",
+        "extension": ".png",
+        "size_bytes": 4012,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/76.png",
+        "file_name": "76.png",
+        "extension": ".png",
+        "size_bytes": 5280,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/80.png",
+        "file_name": "80.png",
+        "extension": ".png",
+        "size_bytes": 6211,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/87.png",
+        "file_name": "87.png",
+        "extension": ".png",
+        "size_bytes": 7134,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+        "file_name": "Contents.json",
+        "extension": ".json",
+        "size_bytes": 1987,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Base.lproj/LaunchScreen.storyboard",
+        "file_name": "LaunchScreen.storyboard",
+        "extension": ".storyboard",
+        "size_bytes": 2377,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Base.lproj/Main.storyboard",
+        "file_name": "Main.storyboard",
+        "extension": ".storyboard",
+        "size_bytes": 1605,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Info.plist",
+        "file_name": "Info.plist",
+        "extension": ".plist",
+        "size_bytes": 3486,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/PrivacyInfo.xcprivacy",
+        "file_name": "PrivacyInfo.xcprivacy",
+        "extension": ".xcprivacy",
+        "size_bytes": 2501,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Runner-Bridging-Header.h",
+        "file_name": "Runner-Bridging-Header.h",
+        "extension": ".h",
+        "size_bytes": 38,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/Runner/Runner.entitlements",
+        "file_name": "Runner.entitlements",
+        "extension": ".entitlements",
+        "size_bytes": 246,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "ios/RunnerTests/RunnerTests.swift",
+        "file_name": "RunnerTests.swift",
+        "extension": ".swift",
+        "size_bytes": 285,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/firebase_options.ci.dart",
+        "file_name": "firebase_options.ci.dart",
+        "extension": ".dart",
+        "size_bytes": 1435,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/main.dart",
+        "file_name": "main.dart",
+        "extension": ".dart",
+        "size_bytes": 6322,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/features/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/features/auth/auth_user.dart",
+        "file_name": "auth_user.dart",
+        "extension": ".dart",
+        "size_bytes": 2225,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/features/forecast/daily_flow_forecast.dart",
+        "file_name": "daily_flow_forecast.dart",
+        "extension": ".dart",
+        "size_bytes": 10869,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/features/map/selected_reach.dart",
+        "file_name": "selected_reach.dart",
+        "extension": ".dart",
+        "size_bytes": 3223,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/features/map/visible_stream.dart",
+        "file_name": "visible_stream.dart",
+        "extension": ".dart",
+        "size_bytes": 1067,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/shared/entities/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/shared/failure.dart",
+        "file_name": "failure.dart",
+        "extension": ".dart",
+        "size_bytes": 399,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/shared/favorite_river.dart",
+        "file_name": "favorite_river.dart",
+        "extension": ".dart",
+        "size_bytes": 3266,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/shared/favorite_session_data.dart",
+        "file_name": "favorite_session_data.dart",
+        "extension": ".dart",
+        "size_bytes": 3561,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/shared/forecast_chart_data.dart",
+        "file_name": "forecast_chart_data.dart",
+        "extension": ".dart",
+        "size_bytes": 905,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/shared/hourly_flow_data.dart",
+        "file_name": "hourly_flow_data.dart",
+        "extension": ".dart",
+        "size_bytes": 941,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/shared/map_base_layer.dart",
+        "file_name": "map_base_layer.dart",
+        "extension": ".dart",
+        "size_bytes": 1343,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/shared/reach_data.dart",
+        "file_name": "reach_data.dart",
+        "extension": ".dart",
+        "size_bytes": 13336,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/1_domain/shared/user_settings.dart",
+        "file_name": "user_settings.dart",
+        "extension": ".dart",
+        "size_bytes": 3926,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/auth/disable_biometric_usecase.dart",
+        "file_name": "disable_biometric_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 424,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/auth/enable_biometric_usecase.dart",
+        "file_name": "enable_biometric_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 420,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/auth/reset_password_usecase.dart",
+        "file_name": "reset_password_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 453,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/auth/sign_in_usecase.dart",
+        "file_name": "sign_in_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 536,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/auth/sign_in_with_biometrics_usecase.dart",
+        "file_name": "sign_in_with_biometrics_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 494,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/auth/sign_out_usecase.dart",
+        "file_name": "sign_out_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 388,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/auth/sign_up_usecase.dart",
+        "file_name": "sign_up_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 680,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/favorites/add_favorite_usecase.dart",
+        "file_name": "add_favorite_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 497,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/favorites/get_favorite_flow_usecase.dart",
+        "file_name": "get_favorite_flow_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 538,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/favorites/initialize_favorites_usecase.dart",
+        "file_name": "initialize_favorites_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 537,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/favorites/remove_favorite_usecase.dart",
+        "file_name": "remove_favorite_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 463,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/favorites/reorder_favorites_usecase.dart",
+        "file_name": "reorder_favorites_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 572,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/forecast/get_reach_details_usecase.dart",
+        "file_name": "get_reach_details_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 551,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/forecast/load_complete_forecast_usecase.dart",
+        "file_name": "load_complete_forecast_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 550,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/forecast/load_forecast_overview_usecase.dart",
+        "file_name": "load_forecast_overview_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 550,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/forecast/load_forecast_supplementary_usecase.dart",
+        "file_name": "load_forecast_supplementary_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 628,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/forecast/load_specific_forecast_usecase.dart",
+        "file_name": "load_specific_forecast_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 606,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/forecast/refresh_forecast_usecase.dart",
+        "file_name": "refresh_forecast_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 529,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/map/get_reach_details_for_map_usecase.dart",
+        "file_name": "get_reach_details_for_map_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 758,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/settings/get_user_settings_usecase.dart",
+        "file_name": "get_user_settings_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 536,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/settings/sync_settings_after_login_usecase.dart",
+        "file_name": "sync_settings_after_login_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 557,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/settings/update_flow_unit_usecase.dart",
+        "file_name": "update_flow_unit_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 561,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/settings/update_notification_frequency_usecase.dart",
+        "file_name": "update_notification_frequency_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 610,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/features/settings/update_notifications_usecase.dart",
+        "file_name": "update_notifications_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 583,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/models/2_usecases/shared/base_usecase.dart",
+        "file_name": "base_usecase.dart",
+        "extension": ".dart",
+        "size_bytes": 896,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/0_config/shared/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/0_config/shared/config.template.dart",
+        "file_name": "config.template.dart",
+        "extension": ".dart",
+        "size_bytes": 3483,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/0_config/shared/constants.dart",
+        "file_name": "constants.dart",
+        "extension": ".dart",
+        "size_bytes": 9374,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/features/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/features/auth/i_auth_repository.dart",
+        "file_name": "i_auth_repository.dart",
+        "extension": ".dart",
+        "size_bytes": 1432,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/features/favorites/i_favorites_repository.dart",
+        "file_name": "i_favorites_repository.dart",
+        "extension": ".dart",
+        "size_bytes": 1236,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/features/forecast/i_forecast_repository.dart",
+        "file_name": "i_forecast_repository.dart",
+        "extension": ".dart",
+        "size_bytes": 902,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/features/settings/i_settings_repository.dart",
+        "file_name": "i_settings_repository.dart",
+        "extension": ".dart",
+        "size_bytes": 866,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_auth_service.dart",
+        "file_name": "i_auth_service.dart",
+        "extension": ".dart",
+        "size_bytes": 1117,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_background_image_service.dart",
+        "file_name": "i_background_image_service.dart",
+        "extension": ".dart",
+        "size_bytes": 701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_cache_service.dart",
+        "file_name": "i_cache_service.dart",
+        "extension": ".dart",
+        "size_bytes": 1678,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_favorites_service.dart",
+        "file_name": "i_favorites_service.dart",
+        "extension": ".dart",
+        "size_bytes": 917,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_fcm_service.dart",
+        "file_name": "i_fcm_service.dart",
+        "extension": ".dart",
+        "size_bytes": 1288,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_flow_unit_preference_service.dart",
+        "file_name": "i_flow_unit_preference_service.dart",
+        "extension": ".dart",
+        "size_bytes": 568,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_forecast_cache_service.dart",
+        "file_name": "i_forecast_cache_service.dart",
+        "extension": ".dart",
+        "size_bytes": 1227,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_forecast_service.dart",
+        "file_name": "i_forecast_service.dart",
+        "extension": ".dart",
+        "size_bytes": 2860,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_noaa_api_service.dart",
+        "file_name": "i_noaa_api_service.dart",
+        "extension": ".dart",
+        "size_bytes": 623,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_reach_cache_service.dart",
+        "file_name": "i_reach_cache_service.dart",
+        "extension": ".dart",
+        "size_bytes": 1251,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/1_contracts/shared/i_user_settings_service.dart",
+        "file_name": "i_user_settings_service.dart",
+        "extension": ".dart",
+        "size_bytes": 1573,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/2_coordinators/features/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/2_coordinators/features/auth/auth_repository_impl.dart",
+        "file_name": "auth_repository_impl.dart",
+        "extension": ".dart",
+        "size_bytes": 6032,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/2_coordinators/features/favorites/favorites_repository_impl.dart",
+        "file_name": "favorites_repository_impl.dart",
+        "extension": ".dart",
+        "size_bytes": 6541,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/2_coordinators/features/forecast/forecast_repository_impl.dart",
+        "file_name": "forecast_repository_impl.dart",
+        "extension": ".dart",
+        "size_bytes": 3211,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/2_coordinators/features/settings/settings_repository_impl.dart",
+        "file_name": "settings_repository_impl.dart",
+        "extension": ".dart",
+        "size_bytes": 2925,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/3_datasources/features/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/3_datasources/features/auth/auth_firebase_datasource.dart",
+        "file_name": "auth_firebase_datasource.dart",
+        "extension": ".dart",
+        "size_bytes": 2656,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/3_datasources/features/auth/biometric_datasource.dart",
+        "file_name": "biometric_datasource.dart",
+        "extension": ".dart",
+        "size_bytes": 2928,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/3_datasources/features/settings/settings_firestore_datasource.dart",
+        "file_name": "settings_firestore_datasource.dart",
+        "extension": ".dart",
+        "size_bytes": 2171,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/3_datasources/shared/dtos/favorite_river_dto.dart",
+        "file_name": "favorite_river_dto.dart",
+        "extension": ".dart",
+        "size_bytes": 2866,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/3_datasources/shared/dtos/reach_data_dto.dart",
+        "file_name": "reach_data_dto.dart",
+        "extension": ".dart",
+        "size_bytes": 18689,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/3_datasources/shared/dtos/user_settings_dto.dart",
+        "file_name": "user_settings_dto.dart",
+        "extension": ".dart",
+        "size_bytes": 4935,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/api/noaa_api_service.dart",
+        "file_name": "noaa_api_service.dart",
+        "extension": ".dart",
+        "size_bytes": 24261,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/auth/auth_service.dart",
+        "file_name": "auth_service.dart",
+        "extension": ".dart",
+        "size_bytes": 13984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/cache/cache_service.dart",
+        "file_name": "cache_service.dart",
+        "extension": ".dart",
+        "size_bytes": 14350,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/cache/forecast_cache_service.dart",
+        "file_name": "forecast_cache_service.dart",
+        "extension": ".dart",
+        "size_bytes": 7307,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/cache/reach_cache_service.dart",
+        "file_name": "reach_cache_service.dart",
+        "extension": ".dart",
+        "size_bytes": 10141,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/favorites/coach_mark_service.dart",
+        "file_name": "coach_mark_service.dart",
+        "extension": ".dart",
+        "size_bytes": 941,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/favorites/coach_mark_targets.dart",
+        "file_name": "coach_mark_targets.dart",
+        "extension": ".dart",
+        "size_bytes": 6163,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/favorites/favorites_service.dart",
+        "file_name": "favorites_service.dart",
+        "extension": ".dart",
+        "size_bytes": 9638,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/favorites/flood_risk_video_service.dart",
+        "file_name": "flood_risk_video_service.dart",
+        "extension": ".dart",
+        "size_bytes": 1639,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/fcm/fcm_service.dart",
+        "file_name": "fcm_service.dart",
+        "extension": ".dart",
+        "size_bytes": 13889,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/forecast/daily_forecast_processor.dart",
+        "file_name": "daily_forecast_processor.dart",
+        "extension": ".dart",
+        "size_bytes": 11134,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/forecast/forecast_service.dart",
+        "file_name": "forecast_service.dart",
+        "extension": ".dart",
+        "size_bytes": 37889,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/geo/geocoding_service.dart",
+        "file_name": "geocoding_service.dart",
+        "extension": ".dart",
+        "size_bytes": 4269,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/logging/app_logger.dart",
+        "file_name": "app_logger.dart",
+        "extension": ".dart",
+        "size_bytes": 1219,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/map/map_controls_service.dart",
+        "file_name": "map_controls_service.dart",
+        "extension": ".dart",
+        "size_bytes": 14203,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/map/map_marker_service.dart",
+        "file_name": "map_marker_service.dart",
+        "extension": ".dart",
+        "size_bytes": 10511,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/map/map_preference_service.dart",
+        "file_name": "map_preference_service.dart",
+        "extension": ".dart",
+        "size_bytes": 3300,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/map/map_reach_selection_service.dart",
+        "file_name": "map_reach_selection_service.dart",
+        "extension": ".dart",
+        "size_bytes": 14899,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/map/map_search_service.dart",
+        "file_name": "map_search_service.dart",
+        "extension": ".dart",
+        "size_bytes": 6388,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/map/map_service_factory.dart",
+        "file_name": "map_service_factory.dart",
+        "extension": ".dart",
+        "size_bytes": 922,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/map/map_vector_tiles_service.dart",
+        "file_name": "map_vector_tiles_service.dart",
+        "extension": ".dart",
+        "size_bytes": 7834,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/media/background_image_service.dart",
+        "file_name": "background_image_service.dart",
+        "extension": ".dart",
+        "size_bytes": 15968,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/network/connectivity_service.dart",
+        "file_name": "connectivity_service.dart",
+        "extension": ".dart",
+        "size_bytes": 608,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/onboarding/onboarding_service.dart",
+        "file_name": "onboarding_service.dart",
+        "extension": ".dart",
+        "size_bytes": 514,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/settings/user_settings_service.dart",
+        "file_name": "user_settings_service.dart",
+        "extension": ".dart",
+        "size_bytes": 15579,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/shared/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/shared/analytics_service.dart",
+        "file_name": "analytics_service.dart",
+        "extension": ".dart",
+        "size_bytes": 3480,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/shared/error_service.dart",
+        "file_name": "error_service.dart",
+        "extension": ".dart",
+        "size_bytes": 12385,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/shared/flow_unit_preference_service.dart",
+        "file_name": "flow_unit_preference_service.dart",
+        "extension": ".dart",
+        "size_bytes": 3666,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/4_infrastructure/shared/service_result.dart",
+        "file_name": "service_result.dart",
+        "extension": ".dart",
+        "size_bytes": 6574,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/5_injection/auth_dependencies.dart",
+        "file_name": "auth_dependencies.dart",
+        "extension": ".dart",
+        "size_bytes": 2397,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/5_injection/dependency_container.dart",
+        "file_name": "dependency_container.dart",
+        "extension": ".dart",
+        "size_bytes": 824,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/5_injection/favorites_dependencies.dart",
+        "file_name": "favorites_dependencies.dart",
+        "extension": ".dart",
+        "size_bytes": 2377,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/5_injection/features/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/5_injection/forecast_dependencies.dart",
+        "file_name": "forecast_dependencies.dart",
+        "extension": ".dart",
+        "size_bytes": 2774,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/5_injection/map_dependencies.dart",
+        "file_name": "map_dependencies.dart",
+        "extension": ".dart",
+        "size_bytes": 361,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/5_injection/settings_dependencies.dart",
+        "file_name": "settings_dependencies.dart",
+        "extension": ".dart",
+        "size_bytes": 2517,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/services/5_injection/shared_dependencies.dart",
+        "file_name": "shared_dependencies.dart",
+        "extension": ".dart",
+        "size_bytes": 1401,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/1_state/features/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/1_state/features/auth/auth_provider.dart",
+        "file_name": "auth_provider.dart",
+        "extension": ".dart",
+        "size_bytes": 15257,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/1_state/features/favorites/favorites_provider.dart",
+        "file_name": "favorites_provider.dart",
+        "extension": ".dart",
+        "size_bytes": 23460,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/1_state/features/forecast/reach_data_cache_mixin.dart",
+        "file_name": "reach_data_cache_mixin.dart",
+        "extension": ".dart",
+        "size_bytes": 6018,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/1_state/features/forecast/reach_data_provider.dart",
+        "file_name": "reach_data_provider.dart",
+        "extension": ".dart",
+        "size_bytes": 31812,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/1_state/shared/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/1_state/shared/connectivity_provider.dart",
+        "file_name": "connectivity_provider.dart",
+        "extension": ".dart",
+        "size_bytes": 771,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/1_state/shared/section_load_state.dart",
+        "file_name": "section_load_state.dart",
+        "extension": ".dart",
+        "size_bytes": 1479,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/pages/auth_coordinator.dart",
+        "file_name": "auth_coordinator.dart",
+        "extension": ".dart",
+        "size_bytes": 13082,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/pages/auth_wrapper.dart",
+        "file_name": "auth_wrapper.dart",
+        "extension": ".dart",
+        "size_bytes": 5716,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/pages/email_verification_page.dart",
+        "file_name": "email_verification_page.dart",
+        "extension": ".dart",
+        "size_bytes": 5922,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/pages/forgot_password_page.dart",
+        "file_name": "forgot_password_page.dart",
+        "extension": ".dart",
+        "size_bytes": 8964,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/pages/login_page.dart",
+        "file_name": "login_page.dart",
+        "extension": ".dart",
+        "size_bytes": 10765,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/pages/register_page.dart",
+        "file_name": "register_page.dart",
+        "extension": ".dart",
+        "size_bytes": 14496,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/widgets/auth_error_display.dart",
+        "file_name": "auth_error_display.dart",
+        "extension": ".dart",
+        "size_bytes": 2445,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/widgets/biometric_button.dart",
+        "file_name": "biometric_button.dart",
+        "extension": ".dart",
+        "size_bytes": 4870,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/widgets/live_validation_field.dart",
+        "file_name": "live_validation_field.dart",
+        "extension": ".dart",
+        "size_bytes": 6258,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/widgets/managed_async_button.dart",
+        "file_name": "managed_async_button.dart",
+        "extension": ".dart",
+        "size_bytes": 4116,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/auth/widgets/password_strength_indicator.dart",
+        "file_name": "password_strength_indicator.dart",
+        "extension": ".dart",
+        "size_bytes": 3445,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/favorites/pages/favorites_page.dart",
+        "file_name": "favorites_page.dart",
+        "extension": ".dart",
+        "size_bytes": 39693,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/favorites/pages/image_selection_page.dart",
+        "file_name": "image_selection_page.dart",
+        "extension": ".dart",
+        "size_bytes": 26356,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/favorites/widgets/components/slide_action_buttons.dart",
+        "file_name": "slide_action_buttons.dart",
+        "extension": ".dart",
+        "size_bytes": 6201,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/favorites/widgets/components/slide_action_constants.dart",
+        "file_name": "slide_action_constants.dart",
+        "extension": ".dart",
+        "size_bytes": 882,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/favorites/widgets/favorite_river_card.dart",
+        "file_name": "favorite_river_card.dart",
+        "extension": ".dart",
+        "size_bytes": 23657,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/favorites/widgets/favorites_search_bar.dart",
+        "file_name": "favorites_search_bar.dart",
+        "extension": ".dart",
+        "size_bytes": 10504,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/favorites/widgets/image_category_grid.dart",
+        "file_name": "image_category_grid.dart",
+        "extension": ".dart",
+        "size_bytes": 10748,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/favorites/widgets/notification_prompt_banner.dart",
+        "file_name": "notification_prompt_banner.dart",
+        "extension": ".dart",
+        "size_bytes": 3494,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/favorites/widgets/skeleton_river_card.dart",
+        "file_name": "skeleton_river_card.dart",
+        "extension": ".dart",
+        "size_bytes": 1879,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/pages/hydrograph_page.dart",
+        "file_name": "hydrograph_page.dart",
+        "extension": ".dart",
+        "size_bytes": 29428,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/pages/long_range_detail_page.dart",
+        "file_name": "long_range_detail_page.dart",
+        "extension": ".dart",
+        "size_bytes": 7581,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/pages/medium_range_detail_page.dart",
+        "file_name": "medium_range_detail_page.dart",
+        "extension": ".dart",
+        "size_bytes": 10147,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/pages/reach_overview_page.dart",
+        "file_name": "reach_overview_page.dart",
+        "extension": ".dart",
+        "size_bytes": 22275,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/pages/short_range_detail_page.dart",
+        "file_name": "short_range_detail_page.dart",
+        "extension": ".dart",
+        "size_bytes": 7188,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/calendar_day_cell.dart",
+        "file_name": "calendar_day_cell.dart",
+        "extension": ".dart",
+        "size_bytes": 6436,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/calendar_day_detail_sheet.dart",
+        "file_name": "calendar_day_detail_sheet.dart",
+        "extension": ".dart",
+        "size_bytes": 13139,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/chart_preview_widget.dart",
+        "file_name": "chart_preview_widget.dart",
+        "extension": ".dart",
+        "size_bytes": 17246,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/current_flow_status_card.dart",
+        "file_name": "current_flow_status_card.dart",
+        "extension": ".dart",
+        "size_bytes": 26958,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/daily_expandable_widget/daily_flow_forecast_widget.dart",
+        "file_name": "daily_flow_forecast_widget.dart",
+        "extension": ".dart",
+        "size_bytes": 16807,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/daily_expandable_widget/daily_forecast_row.dart",
+        "file_name": "daily_forecast_row.dart",
+        "extension": ".dart",
+        "size_bytes": 17361,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/daily_expandable_widget/flow_condition_icon.dart",
+        "file_name": "flow_condition_icon.dart",
+        "extension": ".dart",
+        "size_bytes": 3597,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/daily_expandable_widget/flow_range_bar.dart",
+        "file_name": "flow_range_bar.dart",
+        "extension": ".dart",
+        "size_bytes": 8496,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/daily_expandable_widget/hourly_display/flow_value_indicator.dart",
+        "file_name": "flow_value_indicator.dart",
+        "extension": ".dart",
+        "size_bytes": 7951,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/daily_expandable_widget/hourly_display/hourly_flow_display.dart",
+        "file_name": "hourly_flow_display.dart",
+        "extension": ".dart",
+        "size_bytes": 10880,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/daily_expandable_widget/hourly_display/micro_bar_chart.dart",
+        "file_name": "micro_bar_chart.dart",
+        "extension": ".dart",
+        "size_bytes": 11968,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/daily_expandable_widget/hourly_display/time_slider.dart",
+        "file_name": "time_slider.dart",
+        "extension": ".dart",
+        "size_bytes": 11260,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/flood_categories_info_sheet.dart",
+        "file_name": "flood_categories_info_sheet.dart",
+        "extension": ".dart",
+        "size_bytes": 10718,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/flow_values_usage_guide.dart",
+        "file_name": "flow_values_usage_guide.dart",
+        "extension": ".dart",
+        "size_bytes": 8927,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/forecast_category_grid.dart",
+        "file_name": "forecast_category_grid.dart",
+        "extension": ".dart",
+        "size_bytes": 11943,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/forecast_detail_template.dart",
+        "file_name": "forecast_detail_template.dart",
+        "extension": ".dart",
+        "size_bytes": 21719,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/horizontal_flow_timeline.dart",
+        "file_name": "horizontal_flow_timeline.dart",
+        "extension": ".dart",
+        "size_bytes": 14932,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/interactive_chart.dart",
+        "file_name": "interactive_chart.dart",
+        "extension": ".dart",
+        "size_bytes": 33198,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/forecast/widgets/long_range_calendar.dart",
+        "file_name": "long_range_calendar.dart",
+        "extension": ".dart",
+        "size_bytes": 13639,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/map/pages/map_page.dart",
+        "file_name": "map_page.dart",
+        "extension": ".dart",
+        "size_bytes": 15066,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/map/widgets/base_layer_modal.dart",
+        "file_name": "base_layer_modal.dart",
+        "extension": ".dart",
+        "size_bytes": 2856,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/map/widgets/components/reach_action_buttons.dart",
+        "file_name": "reach_action_buttons.dart",
+        "extension": ".dart",
+        "size_bytes": 10793,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/map/widgets/components/return_periods_info_sheet.dart",
+        "file_name": "return_periods_info_sheet.dart",
+        "extension": ".dart",
+        "size_bytes": 11024,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/map/widgets/map_control_buttons.dart",
+        "file_name": "map_control_buttons.dart",
+        "extension": ".dart",
+        "size_bytes": 3884,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/map/widgets/map_search_widget.dart",
+        "file_name": "map_search_widget.dart",
+        "extension": ".dart",
+        "size_bytes": 13895,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/map/widgets/map_with_favorites.dart",
+        "file_name": "map_with_favorites.dart",
+        "extension": ".dart",
+        "size_bytes": 4304,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/map/widgets/reach_details_bottom_sheet.dart",
+        "file_name": "reach_details_bottom_sheet.dart",
+        "extension": ".dart",
+        "size_bytes": 17389,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/map/widgets/streams_list_bottom_sheet.dart",
+        "file_name": "streams_list_bottom_sheet.dart",
+        "extension": ".dart",
+        "size_bytes": 11637,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/onboarding/pages/onboarding_page.dart",
+        "file_name": "onboarding_page.dart",
+        "extension": ".dart",
+        "size_bytes": 6121,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/onboarding/widgets/onboarding_page_content.dart",
+        "file_name": "onboarding_page_content.dart",
+        "extension": ".dart",
+        "size_bytes": 2279,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/onboarding/widgets/page_indicator.dart",
+        "file_name": "page_indicator.dart",
+        "extension": ".dart",
+        "size_bytes": 1095,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/settings/pages/notifications_settings_page.dart",
+        "file_name": "notifications_settings_page.dart",
+        "extension": ".dart",
+        "size_bytes": 12274,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/settings/pages/sponsors_page.dart",
+        "file_name": "sponsors_page.dart",
+        "extension": ".dart",
+        "size_bytes": 10933,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/features/settings/widgets/notification_frequency_picker.dart",
+        "file_name": "notification_frequency_picker.dart",
+        "extension": ".dart",
+        "size_bytes": 2357,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/routing/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/routing/app_router.dart",
+        "file_name": "app_router.dart",
+        "extension": ".dart",
+        "size_bytes": 9098,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/routing/app_routes.dart",
+        "file_name": "app_routes.dart",
+        "extension": ".dart",
+        "size_bytes": 1161,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/routing/auth_guard.dart",
+        "file_name": "auth_guard.dart",
+        "extension": ".dart",
+        "size_bytes": 6514,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/routing/route_args.dart",
+        "file_name": "route_args.dart",
+        "extension": ".dart",
+        "size_bytes": 541,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/shared/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/shared/pages/navigation_error_page.dart",
+        "file_name": "navigation_error_page.dart",
+        "extension": ".dart",
+        "size_bytes": 5151,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/shared/widgets/data_source_message.dart",
+        "file_name": "data_source_message.dart",
+        "extension": ".dart",
+        "size_bytes": 6744,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/shared/widgets/navigation_button.dart",
+        "file_name": "navigation_button.dart",
+        "extension": ".dart",
+        "size_bytes": 3407,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/ui/2_presentation/shared/widgets/offline_banner.dart",
+        "file_name": "offline_banner.dart",
+        "extension": ".dart",
+        "size_bytes": 1255,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/utils/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/utils/auth/email_validator.dart",
+        "file_name": "email_validator.dart",
+        "extension": ".dart",
+        "size_bytes": 709,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/utils/forecast/export_functionality.dart",
+        "file_name": "export_functionality.dart",
+        "extension": ".dart",
+        "size_bytes": 11075,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/utils/forecast/flow_category_pulse_animator.dart",
+        "file_name": "flow_category_pulse_animator.dart",
+        "extension": ".dart",
+        "size_bytes": 6115,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "lib/utils/river_image_utility.dart",
+        "file_name": "river_image_utility.dart",
+        "extension": ".dart",
+        "size_bytes": 4674,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "notifications_history.md",
+        "file_name": "notifications_history.md",
+        "extension": ".md",
+        "size_bytes": 580,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "pubspec.lock",
+        "file_name": "pubspec.lock",
+        "extension": ".lock",
+        "size_bytes": 54329,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pubspec.yaml",
+        "file_name": "pubspec.yaml",
+        "extension": ".yaml",
+        "size_bytes": 4800,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 15622,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "release-assets/app-store/icon/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/app-store/icon/icon-1024x1024.png",
+        "file_name": "icon-1024x1024.png",
+        "extension": ".png",
+        "size_bytes": 1163238,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/app-store/screenshots/ipad-12.9/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/app-store/screenshots/iphone-5.5/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/app-store/screenshots/iphone-6.5/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/app-store/screenshots/iphone-6.7/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/google-play/feature-graphic/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/google-play/icon/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/google-play/icon/icon-512x512.png",
+        "file_name": "icon-512x512.png",
+        "extension": ".png",
+        "size_bytes": 114439,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/google-play/screenshots/phone/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/google-play/screenshots/tablet-10/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/google-play/screenshots/tablet-7/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/shared/promotional/.gitkeep",
+        "file_name": ".gitkeep",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "release-assets/store-listing-template.md",
+        "file_name": "store-listing-template.md",
+        "extension": ".md",
+        "size_bytes": 11049,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/helpers/fake_data.dart",
+        "file_name": "fake_data.dart",
+        "extension": ".dart",
+        "size_bytes": 3458,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/helpers/test_helpers.dart",
+        "file_name": "test_helpers.dart",
+        "extension": ".dart",
+        "size_bytes": 1752,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/integration_test/app_test.dart",
+        "file_name": "app_test.dart",
+        "extension": ".dart",
+        "size_bytes": 1542,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/integration_test/auth_flow_test.dart",
+        "file_name": "auth_flow_test.dart",
+        "extension": ".dart",
+        "size_bytes": 13255,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/integration_test/favorites_flow_test.dart",
+        "file_name": "favorites_flow_test.dart",
+        "extension": ".dart",
+        "size_bytes": 12233,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/integration_test/forecast_flow_test.dart",
+        "file_name": "forecast_flow_test.dart",
+        "extension": ".dart",
+        "size_bytes": 7769,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/integration_test/helpers/mock_services.dart",
+        "file_name": "mock_services.dart",
+        "extension": ".dart",
+        "size_bytes": 31719,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/integration_test/helpers/test_app.dart",
+        "file_name": "test_app.dart",
+        "extension": ".dart",
+        "size_bytes": 14186,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/integration_test/settings_flow_test.dart",
+        "file_name": "settings_flow_test.dart",
+        "extension": ".dart",
+        "size_bytes": 3330,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/models/1_domain/shared/favorite_river_test.dart",
+        "file_name": "favorite_river_test.dart",
+        "extension": ".dart",
+        "size_bytes": 7379,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/models/1_domain/shared/reach_data_test.dart",
+        "file_name": "reach_data_test.dart",
+        "extension": ".dart",
+        "size_bytes": 22015,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/models/1_domain/shared/user_settings_test.dart",
+        "file_name": "user_settings_test.dart",
+        "extension": ".dart",
+        "size_bytes": 10018,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/2_coordinators/features/auth/auth_repository_impl_test.dart",
+        "file_name": "auth_repository_impl_test.dart",
+        "extension": ".dart",
+        "size_bytes": 14680,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/2_coordinators/features/favorites/favorites_repository_impl_test.dart",
+        "file_name": "favorites_repository_impl_test.dart",
+        "extension": ".dart",
+        "size_bytes": 15382,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/2_coordinators/features/forecast/forecast_repository_impl_test.dart",
+        "file_name": "forecast_repository_impl_test.dart",
+        "extension": ".dart",
+        "size_bytes": 9645,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/2_coordinators/features/settings/settings_repository_impl_test.dart",
+        "file_name": "settings_repository_impl_test.dart",
+        "extension": ".dart",
+        "size_bytes": 8349,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/3_datasources/features/settings/settings_firestore_datasource_test.dart",
+        "file_name": "settings_firestore_datasource_test.dart",
+        "extension": ".dart",
+        "size_bytes": 4528,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/3_datasources/shared/dtos/favorite_river_dto_test.dart",
+        "file_name": "favorite_river_dto_test.dart",
+        "extension": ".dart",
+        "size_bytes": 4722,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/3_datasources/shared/dtos/forecast_response_dto_test.dart",
+        "file_name": "forecast_response_dto_test.dart",
+        "extension": ".dart",
+        "size_bytes": 5018,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/3_datasources/shared/dtos/reach_data_dto_test.dart",
+        "file_name": "reach_data_dto_test.dart",
+        "extension": ".dart",
+        "size_bytes": 14429,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/3_datasources/shared/dtos/user_settings_dto_test.dart",
+        "file_name": "user_settings_dto_test.dart",
+        "extension": ".dart",
+        "size_bytes": 7710,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/api/noaa_api_service_test.dart",
+        "file_name": "noaa_api_service_test.dart",
+        "extension": ".dart",
+        "size_bytes": 15963,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/cache/reach_cache_service_test.dart",
+        "file_name": "reach_cache_service_test.dart",
+        "extension": ".dart",
+        "size_bytes": 8982,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/favorites/coach_mark_service_test.dart",
+        "file_name": "coach_mark_service_test.dart",
+        "extension": ".dart",
+        "size_bytes": 2615,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/favorites/coach_mark_targets_test.dart",
+        "file_name": "coach_mark_targets_test.dart",
+        "extension": ".dart",
+        "size_bytes": 2863,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/fcm/fcm_service_test.dart",
+        "file_name": "fcm_service_test.dart",
+        "extension": ".dart",
+        "size_bytes": 20055,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/fcm/fcm_service_test.mocks.dart",
+        "file_name": "fcm_service_test.mocks.dart",
+        "extension": ".dart",
+        "size_bytes": 9408,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/forecast/daily_forecast_processor_test.dart",
+        "file_name": "daily_forecast_processor_test.dart",
+        "extension": ".dart",
+        "size_bytes": 29178,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/shared/error_service_test.dart",
+        "file_name": "error_service_test.dart",
+        "extension": ".dart",
+        "size_bytes": 6968,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/shared/flow_unit_preference_service_test.dart",
+        "file_name": "flow_unit_preference_service_test.dart",
+        "extension": ".dart",
+        "size_bytes": 4683,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/services/4_infrastructure/shared/service_result_test.dart",
+        "file_name": "service_result_test.dart",
+        "extension": ".dart",
+        "size_bytes": 7767,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/ui/1_state/features/auth/auth_provider_test.dart",
+        "file_name": "auth_provider_test.dart",
+        "extension": ".dart",
+        "size_bytes": 11258,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/ui/1_state/features/forecast/reach_data_provider_test.dart",
+        "file_name": "reach_data_provider_test.dart",
+        "extension": ".dart",
+        "size_bytes": 29327,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/ui/1_state/shared/section_load_state_test.dart",
+        "file_name": "section_load_state_test.dart",
+        "extension": ".dart",
+        "size_bytes": 2023,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/ui/2_presentation/features/favorites/widgets/notification_prompt_banner_test.dart",
+        "file_name": "notification_prompt_banner_test.dart",
+        "extension": ".dart",
+        "size_bytes": 2929,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/ui/2_presentation/shared/widgets/data_source_message_test.dart",
+        "file_name": "data_source_message_test.dart",
+        "extension": ".dart",
+        "size_bytes": 6341,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/utils/auth/email_validator_test.dart",
+        "file_name": "email_validator_test.dart",
+        "extension": ".dart",
+        "size_bytes": 2244,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/utils/river_image_utility_test.dart",
+        "file_name": "river_image_utility_test.dart",
+        "extension": ".dart",
+        "size_bytes": 7462,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

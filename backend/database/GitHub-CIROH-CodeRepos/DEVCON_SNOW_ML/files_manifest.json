@@ -1,0 +1,2266 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 1246,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "Getting Started.md",
+        "file_name": "Getting Started.md",
+        "extension": ".md",
+        "size_bytes": 3393,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1544,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "Literature/Water Resources Research - 2021 - Clark - The Abuse of Popular Performance Metrics in Hydrologic Modeling.pdf",
+        "file_name": "Water Resources Research - 2021 - Clark - The Abuse of Popular Performance Metrics in Hydrologic Modeling.pdf",
+        "extension": ".pdf",
+        "size_bytes": 3315473,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 4434,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "data/Optimal_Features.pkl",
+        "file_name": "Optimal_Features.pkl",
+        "extension": ".pkl",
+        "size_bytes": 27004,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/PreProcessed/DA_ground_measures_features_2022-09-24.csv",
+        "file_name": "DA_ground_measures_features_2022-09-24.csv",
+        "extension": ".csv",
+        "size_bytes": 71097,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/PreProcessed/RegionVal.pkl",
+        "file_name": "RegionVal.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1649120,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/PreProcessed/RegionVal2.pkl",
+        "file_name": "RegionVal2.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1285032,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/PreProcessed/ground_measures_features_2022-09-24.csv",
+        "file_name": "ground_measures_features_2022-09-24.csv",
+        "extension": ".csv",
+        "size_bytes": 15157,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/PreProcessed/ground_measures_features_template.csv",
+        "file_name": "ground_measures_features_template.csv",
+        "extension": ".csv",
+        "size_bytes": 29688,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/PreProcessed/ground_measures_metadata.csv",
+        "file_name": "ground_measures_metadata.csv",
+        "extension": ".csv",
+        "size_bytes": 63522,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/PreProcessed/submission_format_2022-09-24.csv",
+        "file_name": "submission_format_2022-09-24.csv",
+        "extension": ".csv",
+        "size_bytes": 712896,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/RegionSnotel_Train.pkl",
+        "file_name": "RegionSnotel_Train.pkl",
+        "extension": ".pkl",
+        "size_bytes": 9420276,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/RegionTrain.pkl",
+        "file_name": "RegionTrain.pkl",
+        "extension": ".pkl",
+        "size_bytes": 7017996,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/RegionTrain_SCA.pkl",
+        "file_name": "RegionTrain_SCA.pkl",
+        "extension": ".pkl",
+        "size_bytes": 10042024,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "data/Untitled.ipynb",
+        "file_name": "Untitled.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 44802,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "environment.yml",
+        "file_name": "environment.yml",
+        "extension": ".yml",
+        "size_bytes": 9086,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "scripts/DataFrame_NSM_Feature_Development_VIIRS_SCA.ipynb",
+        "file_name": "DataFrame_NSM_Feature_Development_VIIRS_SCA.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 79846,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "scripts/helper_tool.sh",
+        "file_name": "helper_tool.sh",
+        "extension": ".sh",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Hindcast_Evaluation.ipynb",
+        "file_name": "Hindcast_Evaluation.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 15476,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Binder.JPG",
+        "file_name": "Binder.JPG",
+        "extension": ".jpg",
+        "size_bytes": 77949,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/CDEC_DA.PNG",
+        "file_name": "CDEC_DA.PNG",
+        "extension": ".png",
+        "size_bytes": 29155,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/CONUSsnow.jpg",
+        "file_name": "CONUSsnow.jpg",
+        "extension": ".jpg",
+        "size_bytes": 32442,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Calisnow.jpg",
+        "file_name": "Calisnow.jpg",
+        "extension": ".jpg",
+        "size_bytes": 3351245,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/DEM.jpg",
+        "file_name": "DEM.jpg",
+        "extension": ".jpg",
+        "size_bytes": 64981,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Distribution.jpg",
+        "file_name": "Distribution.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1013965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Distribution_locations_number.jpg",
+        "file_name": "Distribution_locations_number.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1054386,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/GeoSmart.PNG",
+        "file_name": "GeoSmart.PNG",
+        "extension": ".png",
+        "size_bytes": 9611,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/GeoWeaver.JPG",
+        "file_name": "GeoWeaver.JPG",
+        "extension": ".jpg",
+        "size_bytes": 10954,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Geoweaver_home.jpg",
+        "file_name": "Geoweaver_home.jpg",
+        "extension": ".jpg",
+        "size_bytes": 67996,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Geoweaver_model.jpg",
+        "file_name": "Geoweaver_model.jpg",
+        "extension": ".jpg",
+        "size_bytes": 75692,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Hydrocycle.jpg",
+        "file_name": "Hydrocycle.jpg",
+        "extension": ".jpg",
+        "size_bytes": 122448,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Landsat_Rockies.jpg",
+        "file_name": "Landsat_Rockies.jpg",
+        "extension": ".jpg",
+        "size_bytes": 298279,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/ML.jpg",
+        "file_name": "ML.jpg",
+        "extension": ".jpg",
+        "size_bytes": 806041,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/MLP_architecture.png",
+        "file_name": "MLP_architecture.png",
+        "extension": ".png",
+        "size_bytes": 38252,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/ML_SWE.jpg",
+        "file_name": "ML_SWE.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1507110,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/MODIS_SCA.jpg",
+        "file_name": "MODIS_SCA.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1737668,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/MODIS_SCA_rockies.jpg",
+        "file_name": "MODIS_SCA_rockies.jpg",
+        "extension": ".jpg",
+        "size_bytes": 70227,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/MammothPass_SNOTEL.png",
+        "file_name": "MammothPass_SNOTEL.png",
+        "extension": ".png",
+        "size_bytes": 63008,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/NRCS_Ca.JPG",
+        "file_name": "NRCS_Ca.JPG",
+        "extension": ".jpg",
+        "size_bytes": 78098,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/NRCS_Col.JPG",
+        "file_name": "NRCS_Col.JPG",
+        "extension": ".jpg",
+        "size_bytes": 69055,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/NSM-Kernel.JPG",
+        "file_name": "NSM-Kernel.JPG",
+        "extension": ".jpg",
+        "size_bytes": 21451,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/NWM.JPG",
+        "file_name": "NWM.JPG",
+        "extension": ".jpg",
+        "size_bytes": 33654,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/ParameterTuning.png",
+        "file_name": "ParameterTuning.png",
+        "extension": ".png",
+        "size_bytes": 152361,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/RMSE_R2.JPG",
+        "file_name": "RMSE_R2.JPG",
+        "extension": ".jpg",
+        "size_bytes": 8737,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Regions_Table.PNG",
+        "file_name": "Regions_Table.PNG",
+        "extension": ".png",
+        "size_bytes": 140269,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Regions_Training_Geoloc.PNG",
+        "file_name": "Regions_Training_Geoloc.PNG",
+        "extension": ".png",
+        "size_bytes": 1082675,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/SNOTEL.jpg",
+        "file_name": "SNOTEL.jpg",
+        "extension": ".jpg",
+        "size_bytes": 561894,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/SWE_2023-02-04_Interactive.html",
+        "file_name": "SWE_2023-02-04_Interactive.html",
+        "extension": ".html",
+        "size_bytes": 16045009,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/SWE_model_workflow_V2.png",
+        "file_name": "SWE_model_workflow_V2.png",
+        "extension": ".png",
+        "size_bytes": 46908,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Snotel_DA.PNG",
+        "file_name": "Snotel_DA.PNG",
+        "extension": ".png",
+        "size_bytes": 54603,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/SnowEnergy.jpg",
+        "file_name": "SnowEnergy.jpg",
+        "extension": ".jpg",
+        "size_bytes": 419878,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Snow_Ca.jpg",
+        "file_name": "Snow_Ca.jpg",
+        "extension": ".jpg",
+        "size_bytes": 2572873,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Snow_State_Ca.JPG",
+        "file_name": "Snow_State_Ca.JPG",
+        "extension": ".jpg",
+        "size_bytes": 96907,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis.JPG",
+        "file_name": "Spatial_Analysis.JPG",
+        "extension": ".jpg",
+        "size_bytes": 78288,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis2.JPG",
+        "file_name": "Spatial_Analysis2.JPG",
+        "extension": ".jpg",
+        "size_bytes": 68380,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis3.JPG",
+        "file_name": "Spatial_Analysis3.JPG",
+        "extension": ".jpg",
+        "size_bytes": 36106,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis_1.JPG",
+        "file_name": "Spatial_Analysis_1.JPG",
+        "extension": ".jpg",
+        "size_bytes": 96005,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis_KGE.JPG",
+        "file_name": "Spatial_Analysis_KGE.JPG",
+        "extension": ".jpg",
+        "size_bytes": 177851,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis_KGE_Prev.JPG",
+        "file_name": "Spatial_Analysis_KGE_Prev.JPG",
+        "extension": ".jpg",
+        "size_bytes": 121949,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis_KGE_icon.JPG",
+        "file_name": "Spatial_Analysis_KGE_icon.JPG",
+        "extension": ".jpg",
+        "size_bytes": 90269,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis_Perc.JPG",
+        "file_name": "Spatial_Analysis_Perc.JPG",
+        "extension": ".jpg",
+        "size_bytes": 173507,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis_Perc_Prev.JPG",
+        "file_name": "Spatial_Analysis_Perc_Prev.JPG",
+        "extension": ".jpg",
+        "size_bytes": 135381,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis_in.JPG",
+        "file_name": "Spatial_Analysis_in.JPG",
+        "extension": ".jpg",
+        "size_bytes": 173953,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis_in_Prev.JPG",
+        "file_name": "Spatial_Analysis_in_Prev.JPG",
+        "extension": ".jpg",
+        "size_bytes": 134137,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Spatial_Analysis_in_Prev_icon.JPG",
+        "file_name": "Spatial_Analysis_in_Prev_icon.JPG",
+        "extension": ".jpg",
+        "size_bytes": 90167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Superior.JPG",
+        "file_name": "Superior.JPG",
+        "extension": ".jpg",
+        "size_bytes": 2028579,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/Superior_AlpenGlow.JPG",
+        "file_name": "Superior_AlpenGlow.JPG",
+        "extension": ".jpg",
+        "size_bytes": 1605747,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/WYWeek_hist.JPG",
+        "file_name": "WYWeek_hist.JPG",
+        "extension": ".jpg",
+        "size_bytes": 18667,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/airborne-snow-observatory.jpg",
+        "file_name": "airborne-snow-observatory.jpg",
+        "extension": ".jpg",
+        "size_bytes": 57570,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/example_watershed.png",
+        "file_name": "example_watershed.png",
+        "extension": ".png",
+        "size_bytes": 3553442,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/northness.JPG",
+        "file_name": "northness.JPG",
+        "extension": ".jpg",
+        "size_bytes": 4017,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Images/predictivemodeling.jpg",
+        "file_name": "predictivemodeling.jpg",
+        "extension": ".jpg",
+        "size_bytes": 83173,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/N_Sierras/N_Sierras_SWEmax.npy",
+        "file_name": "N_Sierras_SWEmax.npy",
+        "extension": ".npy",
+        "size_bytes": 136,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/N_Sierras/N_Sierras_lgbm_model.pkl",
+        "file_name": "N_Sierras_lgbm_model.pkl",
+        "extension": ".pkl",
+        "size_bytes": 218950,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/N_Sierras/N_Sierras_model.keras",
+        "file_name": "N_Sierras_model.keras",
+        "extension": ".keras",
+        "size_bytes": 605624,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/N_Sierras/N_Sierras_scaler.pkl",
+        "file_name": "N_Sierras_scaler.pkl",
+        "extension": ".pkl",
+        "size_bytes": 7018,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/S_Sierras_High/S_Sierras_High_SWEmax.npy",
+        "file_name": "S_Sierras_High_SWEmax.npy",
+        "extension": ".npy",
+        "size_bytes": 136,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/S_Sierras_High/S_Sierras_High_lgbm_model.pkl",
+        "file_name": "S_Sierras_High_lgbm_model.pkl",
+        "extension": ".pkl",
+        "size_bytes": 217039,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/S_Sierras_High/S_Sierras_High_model.keras",
+        "file_name": "S_Sierras_High_model.keras",
+        "extension": ".keras",
+        "size_bytes": 505880,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/S_Sierras_High/S_Sierras_High_scaler.pkl",
+        "file_name": "S_Sierras_High_scaler.pkl",
+        "extension": ".pkl",
+        "size_bytes": 2862,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/S_Sierras_Low/S_Sierras_Low_SWEmax.npy",
+        "file_name": "S_Sierras_Low_SWEmax.npy",
+        "extension": ".npy",
+        "size_bytes": 136,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/S_Sierras_Low/S_Sierras_Low_lgbm_model.pkl",
+        "file_name": "S_Sierras_Low_lgbm_model.pkl",
+        "extension": ".pkl",
+        "size_bytes": 211554,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/S_Sierras_Low/S_Sierras_Low_model.keras",
+        "file_name": "S_Sierras_Low_model.keras",
+        "extension": ".keras",
+        "size_bytes": 453656,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Model/S_Sierras_Low/S_Sierras_Low_scaler.pkl",
+        "file_name": "S_Sierras_Low_scaler.pkl",
+        "extension": ".pkl",
+        "size_bytes": 882,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-10-02.PNG",
+        "file_name": "SWE_2018-10-02.PNG",
+        "extension": ".png",
+        "size_bytes": 268540,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-10-02.png",
+        "file_name": "SWE_2018-10-02.png",
+        "extension": ".png",
+        "size_bytes": 273136,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-10-09.PNG",
+        "file_name": "SWE_2018-10-09.PNG",
+        "extension": ".png",
+        "size_bytes": 266915,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-10-09.png",
+        "file_name": "SWE_2018-10-09.png",
+        "extension": ".png",
+        "size_bytes": 264805,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-10-16.PNG",
+        "file_name": "SWE_2018-10-16.PNG",
+        "extension": ".png",
+        "size_bytes": 266115,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-10-16.png",
+        "file_name": "SWE_2018-10-16.png",
+        "extension": ".png",
+        "size_bytes": 264057,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-10-23.PNG",
+        "file_name": "SWE_2018-10-23.PNG",
+        "extension": ".png",
+        "size_bytes": 266102,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-10-30.PNG",
+        "file_name": "SWE_2018-10-30.PNG",
+        "extension": ".png",
+        "size_bytes": 265695,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-10-30.png",
+        "file_name": "SWE_2018-10-30.png",
+        "extension": ".png",
+        "size_bytes": 263443,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-11-06.PNG",
+        "file_name": "SWE_2018-11-06.PNG",
+        "extension": ".png",
+        "size_bytes": 265865,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-11-06.png",
+        "file_name": "SWE_2018-11-06.png",
+        "extension": ".png",
+        "size_bytes": 265550,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-11-13.PNG",
+        "file_name": "SWE_2018-11-13.PNG",
+        "extension": ".png",
+        "size_bytes": 266571,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-11-13.png",
+        "file_name": "SWE_2018-11-13.png",
+        "extension": ".png",
+        "size_bytes": 269146,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-11-20.PNG",
+        "file_name": "SWE_2018-11-20.PNG",
+        "extension": ".png",
+        "size_bytes": 266742,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-11-20.png",
+        "file_name": "SWE_2018-11-20.png",
+        "extension": ".png",
+        "size_bytes": 269223,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-11-27.PNG",
+        "file_name": "SWE_2018-11-27.PNG",
+        "extension": ".png",
+        "size_bytes": 282723,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-11-27.png",
+        "file_name": "SWE_2018-11-27.png",
+        "extension": ".png",
+        "size_bytes": 281727,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-12-04.PNG",
+        "file_name": "SWE_2018-12-04.PNG",
+        "extension": ".png",
+        "size_bytes": 285914,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-12-04.png",
+        "file_name": "SWE_2018-12-04.png",
+        "extension": ".png",
+        "size_bytes": 285343,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-12-11.PNG",
+        "file_name": "SWE_2018-12-11.PNG",
+        "extension": ".png",
+        "size_bytes": 285026,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-12-11.png",
+        "file_name": "SWE_2018-12-11.png",
+        "extension": ".png",
+        "size_bytes": 284405,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-12-18.PNG",
+        "file_name": "SWE_2018-12-18.PNG",
+        "extension": ".png",
+        "size_bytes": 285132,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-12-18.png",
+        "file_name": "SWE_2018-12-18.png",
+        "extension": ".png",
+        "size_bytes": 284210,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-12-25.PNG",
+        "file_name": "SWE_2018-12-25.PNG",
+        "extension": ".png",
+        "size_bytes": 286439,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2018-12-25.png",
+        "file_name": "SWE_2018-12-25.png",
+        "extension": ".png",
+        "size_bytes": 285278,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-01.PNG",
+        "file_name": "SWE_2019-01-01.PNG",
+        "extension": ".png",
+        "size_bytes": 285544,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-01.png",
+        "file_name": "SWE_2019-01-01.png",
+        "extension": ".png",
+        "size_bytes": 284496,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-08.PNG",
+        "file_name": "SWE_2019-01-08.PNG",
+        "extension": ".png",
+        "size_bytes": 285734,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-08.png",
+        "file_name": "SWE_2019-01-08.png",
+        "extension": ".png",
+        "size_bytes": 284378,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-15.PNG",
+        "file_name": "SWE_2019-01-15.PNG",
+        "extension": ".png",
+        "size_bytes": 286850,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-15.png",
+        "file_name": "SWE_2019-01-15.png",
+        "extension": ".png",
+        "size_bytes": 285723,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-22.PNG",
+        "file_name": "SWE_2019-01-22.PNG",
+        "extension": ".png",
+        "size_bytes": 287710,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-22.png",
+        "file_name": "SWE_2019-01-22.png",
+        "extension": ".png",
+        "size_bytes": 286252,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-29.PNG",
+        "file_name": "SWE_2019-01-29.PNG",
+        "extension": ".png",
+        "size_bytes": 287661,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-01-29.png",
+        "file_name": "SWE_2019-01-29.png",
+        "extension": ".png",
+        "size_bytes": 286530,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-02-05.PNG",
+        "file_name": "SWE_2019-02-05.PNG",
+        "extension": ".png",
+        "size_bytes": 287592,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-02-05.png",
+        "file_name": "SWE_2019-02-05.png",
+        "extension": ".png",
+        "size_bytes": 286133,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-02-12.PNG",
+        "file_name": "SWE_2019-02-12.PNG",
+        "extension": ".png",
+        "size_bytes": 290524,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-02-12.png",
+        "file_name": "SWE_2019-02-12.png",
+        "extension": ".png",
+        "size_bytes": 289564,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-02-19.PNG",
+        "file_name": "SWE_2019-02-19.PNG",
+        "extension": ".png",
+        "size_bytes": 290803,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-02-19.png",
+        "file_name": "SWE_2019-02-19.png",
+        "extension": ".png",
+        "size_bytes": 289551,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-02-26.PNG",
+        "file_name": "SWE_2019-02-26.PNG",
+        "extension": ".png",
+        "size_bytes": 290591,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-02-26.png",
+        "file_name": "SWE_2019-02-26.png",
+        "extension": ".png",
+        "size_bytes": 289187,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-03-05.PNG",
+        "file_name": "SWE_2019-03-05.PNG",
+        "extension": ".png",
+        "size_bytes": 290695,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-03-05.png",
+        "file_name": "SWE_2019-03-05.png",
+        "extension": ".png",
+        "size_bytes": 289145,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-03-12.PNG",
+        "file_name": "SWE_2019-03-12.PNG",
+        "extension": ".png",
+        "size_bytes": 290856,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-03-12.png",
+        "file_name": "SWE_2019-03-12.png",
+        "extension": ".png",
+        "size_bytes": 289358,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-03-19.PNG",
+        "file_name": "SWE_2019-03-19.PNG",
+        "extension": ".png",
+        "size_bytes": 289971,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-03-19.png",
+        "file_name": "SWE_2019-03-19.png",
+        "extension": ".png",
+        "size_bytes": 288419,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-03-26.PNG",
+        "file_name": "SWE_2019-03-26.PNG",
+        "extension": ".png",
+        "size_bytes": 290486,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-03-26.png",
+        "file_name": "SWE_2019-03-26.png",
+        "extension": ".png",
+        "size_bytes": 289147,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-02.PNG",
+        "file_name": "SWE_2019-04-02.PNG",
+        "extension": ".png",
+        "size_bytes": 289639,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-02.png",
+        "file_name": "SWE_2019-04-02.png",
+        "extension": ".png",
+        "size_bytes": 288298,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-09.PNG",
+        "file_name": "SWE_2019-04-09.PNG",
+        "extension": ".png",
+        "size_bytes": 288987,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-09.png",
+        "file_name": "SWE_2019-04-09.png",
+        "extension": ".png",
+        "size_bytes": 287806,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-16.PNG",
+        "file_name": "SWE_2019-04-16.PNG",
+        "extension": ".png",
+        "size_bytes": 289983,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-16.png",
+        "file_name": "SWE_2019-04-16.png",
+        "extension": ".png",
+        "size_bytes": 288627,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-23.PNG",
+        "file_name": "SWE_2019-04-23.PNG",
+        "extension": ".png",
+        "size_bytes": 287590,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-23.png",
+        "file_name": "SWE_2019-04-23.png",
+        "extension": ".png",
+        "size_bytes": 286271,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-30.PNG",
+        "file_name": "SWE_2019-04-30.PNG",
+        "extension": ".png",
+        "size_bytes": 287182,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-04-30.png",
+        "file_name": "SWE_2019-04-30.png",
+        "extension": ".png",
+        "size_bytes": 286055,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-05-07.PNG",
+        "file_name": "SWE_2019-05-07.PNG",
+        "extension": ".png",
+        "size_bytes": 286142,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-05-07.png",
+        "file_name": "SWE_2019-05-07.png",
+        "extension": ".png",
+        "size_bytes": 285008,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-05-14.PNG",
+        "file_name": "SWE_2019-05-14.PNG",
+        "extension": ".png",
+        "size_bytes": 284834,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-05-14.png",
+        "file_name": "SWE_2019-05-14.png",
+        "extension": ".png",
+        "size_bytes": 283634,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-05-21.PNG",
+        "file_name": "SWE_2019-05-21.PNG",
+        "extension": ".png",
+        "size_bytes": 284230,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-05-21.png",
+        "file_name": "SWE_2019-05-21.png",
+        "extension": ".png",
+        "size_bytes": 284790,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-05-28.PNG",
+        "file_name": "SWE_2019-05-28.PNG",
+        "extension": ".png",
+        "size_bytes": 283910,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-05-28.png",
+        "file_name": "SWE_2019-05-28.png",
+        "extension": ".png",
+        "size_bytes": 284037,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-06-04.PNG",
+        "file_name": "SWE_2019-06-04.PNG",
+        "extension": ".png",
+        "size_bytes": 278007,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-06-04.png",
+        "file_name": "SWE_2019-06-04.png",
+        "extension": ".png",
+        "size_bytes": 278264,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-06-11.PNG",
+        "file_name": "SWE_2019-06-11.PNG",
+        "extension": ".png",
+        "size_bytes": 276396,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-06-11.png",
+        "file_name": "SWE_2019-06-11.png",
+        "extension": ".png",
+        "size_bytes": 280473,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-06-18.PNG",
+        "file_name": "SWE_2019-06-18.PNG",
+        "extension": ".png",
+        "size_bytes": 274813,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-06-18.png",
+        "file_name": "SWE_2019-06-18.png",
+        "extension": ".png",
+        "size_bytes": 279180,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-06-25.PNG",
+        "file_name": "SWE_2019-06-25.PNG",
+        "extension": ".png",
+        "size_bytes": 273306,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019-06-25.png",
+        "file_name": "SWE_2019-06-25.png",
+        "extension": ".png",
+        "size_bytes": 273421,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Figures/SWE_2019.gif",
+        "file_name": "SWE_2019.gif",
+        "extension": ".gif",
+        "size_bytes": 644641,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-10-02.pkl",
+        "file_name": "Prediction_DF_SCA_2018-10-02.pkl",
+        "extension": ".pkl",
+        "size_bytes": 44168988,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-10-09.pkl",
+        "file_name": "Prediction_DF_SCA_2018-10-09.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-10-16.pkl",
+        "file_name": "Prediction_DF_SCA_2018-10-16.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-10-23.pkl",
+        "file_name": "Prediction_DF_SCA_2018-10-23.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-10-30.pkl",
+        "file_name": "Prediction_DF_SCA_2018-10-30.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-11-06.pkl",
+        "file_name": "Prediction_DF_SCA_2018-11-06.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-11-13.pkl",
+        "file_name": "Prediction_DF_SCA_2018-11-13.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-11-20.pkl",
+        "file_name": "Prediction_DF_SCA_2018-11-20.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-11-27.pkl",
+        "file_name": "Prediction_DF_SCA_2018-11-27.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-12-04.pkl",
+        "file_name": "Prediction_DF_SCA_2018-12-04.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-12-11.pkl",
+        "file_name": "Prediction_DF_SCA_2018-12-11.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-12-18.pkl",
+        "file_name": "Prediction_DF_SCA_2018-12-18.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2018-12-25.pkl",
+        "file_name": "Prediction_DF_SCA_2018-12-25.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-01-01.pkl",
+        "file_name": "Prediction_DF_SCA_2019-01-01.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-01-08.pkl",
+        "file_name": "Prediction_DF_SCA_2019-01-08.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-01-15.pkl",
+        "file_name": "Prediction_DF_SCA_2019-01-15.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-01-22.pkl",
+        "file_name": "Prediction_DF_SCA_2019-01-22.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-01-29.pkl",
+        "file_name": "Prediction_DF_SCA_2019-01-29.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-02-05.pkl",
+        "file_name": "Prediction_DF_SCA_2019-02-05.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-02-12.pkl",
+        "file_name": "Prediction_DF_SCA_2019-02-12.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-02-19.pkl",
+        "file_name": "Prediction_DF_SCA_2019-02-19.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-02-26.pkl",
+        "file_name": "Prediction_DF_SCA_2019-02-26.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-03-05.pkl",
+        "file_name": "Prediction_DF_SCA_2019-03-05.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-03-12.pkl",
+        "file_name": "Prediction_DF_SCA_2019-03-12.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-03-19.pkl",
+        "file_name": "Prediction_DF_SCA_2019-03-19.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-03-26.pkl",
+        "file_name": "Prediction_DF_SCA_2019-03-26.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-04-02.pkl",
+        "file_name": "Prediction_DF_SCA_2019-04-02.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-04-09.pkl",
+        "file_name": "Prediction_DF_SCA_2019-04-09.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-04-16.pkl",
+        "file_name": "Prediction_DF_SCA_2019-04-16.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-04-23.pkl",
+        "file_name": "Prediction_DF_SCA_2019-04-23.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-04-30.pkl",
+        "file_name": "Prediction_DF_SCA_2019-04-30.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-05-07.pkl",
+        "file_name": "Prediction_DF_SCA_2019-05-07.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-05-14.pkl",
+        "file_name": "Prediction_DF_SCA_2019-05-14.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-05-21.pkl",
+        "file_name": "Prediction_DF_SCA_2019-05-21.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-05-28.pkl",
+        "file_name": "Prediction_DF_SCA_2019-05-28.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-06-04.pkl",
+        "file_name": "Prediction_DF_SCA_2019-06-04.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-06-11.pkl",
+        "file_name": "Prediction_DF_SCA_2019-06-11.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-06-18.pkl",
+        "file_name": "Prediction_DF_SCA_2019-06-18.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/Prediction_DF_SCA_2019-06-25.pkl",
+        "file_name": "Prediction_DF_SCA_2019-06-25.pkl",
+        "extension": ".pkl",
+        "size_bytes": 50319701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Hold_Out_Year/Predictions/submission_format_2018-10-02.csv",
+        "file_name": "submission_format_2018-10-02.csv",
+        "extension": ".csv",
+        "size_bytes": 542575,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/Predictions/Testing/placeholder.txt",
+        "file_name": "placeholder.txt",
+        "extension": ".txt",
+        "size_bytes": 27,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/SSM_Hindcast_2019.ipynb",
+        "file_name": "SSM_Hindcast_2019.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 5750,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "workbook/NSM_Example/evaluation.ipynb",
+        "file_name": "evaluation.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 17289,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/Mammoth_Pass_SWE.csv",
+        "file_name": "Mammoth_Pass_SWE.csv",
+        "extension": ".csv",
+        "size_bytes": 688,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/Pre_Processed/ground_measures_metadata.csv",
+        "file_name": "ground_measures_metadata.csv",
+        "extension": ".csv",
+        "size_bytes": 64223,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/Pre_Processed_DA/ground_measures_features_template.csv",
+        "file_name": "ground_measures_features_template.csv",
+        "extension": ".csv",
+        "size_bytes": 30453,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/Processed/DA_ground_measures_features_template.csv",
+        "file_name": "DA_ground_measures_features_template.csv",
+        "extension": ".csv",
+        "size_bytes": 72490,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/Processed/initialize_predictions.h5",
+        "file_name": "initialize_predictions.h5",
+        "extension": ".h5",
+        "size_bytes": 314045,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021274_h08v05_002_2023045194202_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_9eee573d.tif",
+        "file_name": "VNP10A1F_A2021274_h08v05_002_2023045194202_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_9eee573d.tif",
+        "extension": ".tif",
+        "size_bytes": 8491,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021281_h08v05_002_2023046011740_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3c171cd3.tif",
+        "file_name": "VNP10A1F_A2021281_h08v05_002_2023046011740_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3c171cd3.tif",
+        "extension": ".tif",
+        "size_bytes": 27811,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021288_h08v05_002_2023046063420_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6a77898b.tif",
+        "file_name": "VNP10A1F_A2021288_h08v05_002_2023046063420_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6a77898b.tif",
+        "extension": ".tif",
+        "size_bytes": 9925,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021295_h08v05_002_2023046133224_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_a865b77.tif",
+        "file_name": "VNP10A1F_A2021295_h08v05_002_2023046133224_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_a865b77.tif",
+        "extension": ".tif",
+        "size_bytes": 32125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021302_h08v05_002_2023047014029_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_78b1d61.tif",
+        "file_name": "VNP10A1F_A2021302_h08v05_002_2023047014029_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_78b1d61.tif",
+        "extension": ".tif",
+        "size_bytes": 48609,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021309_h08v05_002_2023047132000_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_5847ca2.tif",
+        "file_name": "VNP10A1F_A2021309_h08v05_002_2023047132000_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_5847ca2.tif",
+        "extension": ".tif",
+        "size_bytes": 28887,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021316_h08v05_002_2023001072251_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_90df126.tif",
+        "file_name": "VNP10A1F_A2021316_h08v05_002_2023001072251_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_90df126.tif",
+        "extension": ".tif",
+        "size_bytes": 27521,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021323_h08v05_002_2023048022945_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3da21b4c.tif",
+        "file_name": "VNP10A1F_A2021323_h08v05_002_2023048022945_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3da21b4c.tif",
+        "extension": ".tif",
+        "size_bytes": 26917,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021330_h08v05_002_2023048043749_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3dbc792d.tif",
+        "file_name": "VNP10A1F_A2021330_h08v05_002_2023048043749_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3dbc792d.tif",
+        "extension": ".tif",
+        "size_bytes": 26857,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021337_h08v05_002_2023048055657_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_c575c53.tif",
+        "file_name": "VNP10A1F_A2021337_h08v05_002_2023048055657_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_c575c53.tif",
+        "extension": ".tif",
+        "size_bytes": 22335,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021344_h08v05_002_2023048065739_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3de8860d.tif",
+        "file_name": "VNP10A1F_A2021344_h08v05_002_2023048065739_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3de8860d.tif",
+        "extension": ".tif",
+        "size_bytes": 80873,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021351_h08v05_002_2023048081054_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6f87e922.tif",
+        "file_name": "VNP10A1F_A2021351_h08v05_002_2023048081054_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6f87e922.tif",
+        "extension": ".tif",
+        "size_bytes": 96335,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021358_h08v05_002_2023006010716_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_e48a549.tif",
+        "file_name": "VNP10A1F_A2021358_h08v05_002_2023006010716_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_e48a549.tif",
+        "extension": ".tif",
+        "size_bytes": 86063,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2021365_h08v05_002_2023048150515_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3752eccf.tif",
+        "file_name": "VNP10A1F_A2021365_h08v05_002_2023048150515_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_3752eccf.tif",
+        "extension": ".tif",
+        "size_bytes": 94705,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022007_h08v05_002_2023048201100_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_72e4114b.tif",
+        "file_name": "VNP10A1F_A2022007_h08v05_002_2023048201100_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_72e4114b.tif",
+        "extension": ".tif",
+        "size_bytes": 90097,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022014_h08v05_002_2023049005730_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_8e02545.tif",
+        "file_name": "VNP10A1F_A2022014_h08v05_002_2023049005730_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_8e02545.tif",
+        "extension": ".tif",
+        "size_bytes": 94571,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022021_h08v05_002_2023049053211_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_77c2c46.tif",
+        "file_name": "VNP10A1F_A2022021_h08v05_002_2023049053211_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_77c2c46.tif",
+        "extension": ".tif",
+        "size_bytes": 93481,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022028_h08v05_002_2023049093013_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_9eeba40a.tif",
+        "file_name": "VNP10A1F_A2022028_h08v05_002_2023049093013_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_9eeba40a.tif",
+        "extension": ".tif",
+        "size_bytes": 84925,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022035_h08v05_002_2023014133829_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_4ba741b2.tif",
+        "file_name": "VNP10A1F_A2022035_h08v05_002_2023014133829_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_4ba741b2.tif",
+        "extension": ".tif",
+        "size_bytes": 73697,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022042_h08v05_002_2023049180846_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_70b82c4a.tif",
+        "file_name": "VNP10A1F_A2022042_h08v05_002_2023049180846_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_70b82c4a.tif",
+        "extension": ".tif",
+        "size_bytes": 88709,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022049_h08v05_002_2023049222820_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_5ac79ff.tif",
+        "file_name": "VNP10A1F_A2022049_h08v05_002_2023049222820_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_5ac79ff.tif",
+        "extension": ".tif",
+        "size_bytes": 83031,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022056_h08v05_002_2023018212837_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_ff028852.tif",
+        "file_name": "VNP10A1F_A2022056_h08v05_002_2023018212837_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_ff028852.tif",
+        "extension": ".tif",
+        "size_bytes": 63895,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022063_h08v05_002_2023050070816_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6a14d905.tif",
+        "file_name": "VNP10A1F_A2022063_h08v05_002_2023050070816_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6a14d905.tif",
+        "extension": ".tif",
+        "size_bytes": 80555,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022070_h08v05_002_2023050111615_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_74bb0612.tif",
+        "file_name": "VNP10A1F_A2022070_h08v05_002_2023050111615_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_74bb0612.tif",
+        "extension": ".tif",
+        "size_bytes": 69469,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022077_h08v05_002_2023050152442_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_c49cf1d.tif",
+        "file_name": "VNP10A1F_A2022077_h08v05_002_2023050152442_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_c49cf1d.tif",
+        "extension": ".tif",
+        "size_bytes": 67947,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022084_h08v05_002_2023050192014_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_5c75709.tif",
+        "file_name": "VNP10A1F_A2022084_h08v05_002_2023050192014_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_5c75709.tif",
+        "extension": ".tif",
+        "size_bytes": 58851,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022091_h08v05_002_2023033120645_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_4288bf25.tif",
+        "file_name": "VNP10A1F_A2022091_h08v05_002_2023033120645_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_4288bf25.tif",
+        "extension": ".tif",
+        "size_bytes": 54935,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022098_h08v05_002_2023034030820_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_42b20344.tif",
+        "file_name": "VNP10A1F_A2022098_h08v05_002_2023034030820_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_42b20344.tif",
+        "extension": ".tif",
+        "size_bytes": 47451,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022105_h08v05_002_2023034182559_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_42db734e.tif",
+        "file_name": "VNP10A1F_A2022105_h08v05_002_2023034182559_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_42db734e.tif",
+        "extension": ".tif",
+        "size_bytes": 48343,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022112_h08v05_002_2023035092956_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_4305c5b3.tif",
+        "file_name": "VNP10A1F_A2022112_h08v05_002_2023035092956_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_4305c5b3.tif",
+        "extension": ".tif",
+        "size_bytes": 62235,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022119_h08v05_002_2023036000731_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_444b98fa.tif",
+        "file_name": "VNP10A1F_A2022119_h08v05_002_2023036000731_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_444b98fa.tif",
+        "extension": ".tif",
+        "size_bytes": 40345,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022126_h08v05_002_2023036143854_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_447489cc.tif",
+        "file_name": "VNP10A1F_A2022126_h08v05_002_2023036143854_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_447489cc.tif",
+        "extension": ".tif",
+        "size_bytes": 33305,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022133_h08v05_002_2023037054156_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_449dfe36.tif",
+        "file_name": "VNP10A1F_A2022133_h08v05_002_2023037054156_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_449dfe36.tif",
+        "extension": ".tif",
+        "size_bytes": 33733,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022140_h08v05_002_2023037214032_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_460b74e9.tif",
+        "file_name": "VNP10A1F_A2022140_h08v05_002_2023037214032_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_460b74e9.tif",
+        "extension": ".tif",
+        "size_bytes": 25499,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022147_h08v05_002_2023038141232_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_4655fac3.tif",
+        "file_name": "VNP10A1F_A2022147_h08v05_002_2023038141232_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_4655fac3.tif",
+        "extension": ".tif",
+        "size_bytes": 20533,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022154_h08v05_002_2023039044604_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_47b64200.tif",
+        "file_name": "VNP10A1F_A2022154_h08v05_002_2023039044604_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_47b64200.tif",
+        "extension": ".tif",
+        "size_bytes": 14873,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022161_h08v05_002_2023039194736_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_47fbc81e.tif",
+        "file_name": "VNP10A1F_A2022161_h08v05_002_2023039194736_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_47fbc81e.tif",
+        "extension": ".tif",
+        "size_bytes": 11941,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022168_h08v05_002_2023040120406_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_496a9aba.tif",
+        "file_name": "VNP10A1F_A2022168_h08v05_002_2023040120406_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_496a9aba.tif",
+        "extension": ".tif",
+        "size_bytes": 8841,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022175_h08v05_002_2023041123139_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_49b17d40.tif",
+        "file_name": "VNP10A1F_A2022175_h08v05_002_2023041123139_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_49b17d40.tif",
+        "extension": ".tif",
+        "size_bytes": 6621,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022182_h08v05_002_2023042163939_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6ee72583.tif",
+        "file_name": "VNP10A1F_A2022182_h08v05_002_2023042163939_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6ee72583.tif",
+        "extension": ".tif",
+        "size_bytes": 4417,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022189_h08v05_002_2023044000148_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_58314ff.tif",
+        "file_name": "VNP10A1F_A2022189_h08v05_002_2023044000148_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_58314ff.tif",
+        "extension": ".tif",
+        "size_bytes": 4487,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/VNP10A1F_A2022196_h08v05_002_2023045014435_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6f65fc72.tif",
+        "file_name": "VNP10A1F_A2022196_h08v05_002_2023045014435_VIIRS_Grid_IMG_2D_CGF_NDSI_Snow_Cover_6f65fc72.tif",
+        "extension": ".tif",
+        "size_bytes": 3487,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/2021-2022NASA/dummy.txt",
+        "file_name": "dummy.txt",
+        "extension": ".txt",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/Regions.csv",
+        "file_name": "Regions.csv",
+        "extension": ".csv",
+        "size_bytes": 296,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/Regions_Cali.csv",
+        "file_name": "Regions_Cali.csv",
+        "extension": ".csv",
+        "size_bytes": 54,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Data/VIIRS_SCA/dates.csv",
+        "file_name": "dates.csv",
+        "extension": ".csv",
+        "size_bytes": 630,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Model/National_Snow_Model_Regional.py",
+        "file_name": "National_Snow_Model_Regional.py",
+        "extension": ".py",
+        "size_bytes": 104503,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Model/Regional_SWE.py",
+        "file_name": "Regional_SWE.py",
+        "extension": ".py",
+        "size_bytes": 25689,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Model/Run_simulation.ipynb",
+        "file_name": "Run_simulation.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 4556,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Model/nsidc_fetch.py",
+        "file_name": "nsidc_fetch.py",
+        "extension": ".py",
+        "size_bytes": 13069,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/Model/viz.py",
+        "file_name": "viz.py",
+        "extension": ".py",
+        "size_bytes": 13138,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd.dbf",
+        "file_name": "example_wshd.dbf",
+        "extension": ".dbf",
+        "size_bytes": 371,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd.prj",
+        "file_name": "example_wshd.prj",
+        "extension": ".prj",
+        "size_bytes": 143,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd.shp",
+        "file_name": "example_wshd.shp",
+        "extension": ".shp",
+        "size_bytes": 38924,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd.shx",
+        "file_name": "example_wshd.shx",
+        "extension": ".shx",
+        "size_bytes": 108,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd_Geo_df.csv",
+        "file_name": "example_wshd_Geo_df.csv",
+        "extension": ".csv",
+        "size_bytes": 22114,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd_points.cpg",
+        "file_name": "example_wshd_points.cpg",
+        "extension": ".cpg",
+        "size_bytes": 10,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd_points.dbf",
+        "file_name": "example_wshd_points.dbf",
+        "extension": ".dbf",
+        "size_bytes": 3690,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd_points.prj",
+        "file_name": "example_wshd_points.prj",
+        "extension": ".prj",
+        "size_bytes": 145,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd_points.shp",
+        "file_name": "example_wshd_points.shp",
+        "extension": ".shp",
+        "size_bytes": 8556,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/extrapolation/example_wshd/example_wshd_points.shx",
+        "file_name": "example_wshd_points.shx",
+        "extension": ".shx",
+        "size_bytes": 2516,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/methods.ipynb",
+        "file_name": "methods.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 10966,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "workbook/NSM_Example/scripts/DataProcess.py",
+        "file_name": "DataProcess.py",
+        "extension": ".py",
+        "size_bytes": 4639,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/scripts/GBM_Model.py",
+        "file_name": "GBM_Model.py",
+        "extension": ".py",
+        "size_bytes": 9177,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/scripts/Hindcast_Initialization.py",
+        "file_name": "Hindcast_Initialization.py",
+        "extension": ".py",
+        "size_bytes": 15285,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/scripts/MLP_Model.py",
+        "file_name": "MLP_Model.py",
+        "extension": ".py",
+        "size_bytes": 10216,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/scripts/NSM_SCA.py",
+        "file_name": "NSM_SCA.py",
+        "extension": ".py",
+        "size_bytes": 35845,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/scripts/National_Snow_Model.py",
+        "file_name": "National_Snow_Model.py",
+        "extension": ".py",
+        "size_bytes": 81837,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/scripts/SSWEET.py",
+        "file_name": "SSWEET.py",
+        "extension": ".py",
+        "size_bytes": 20350,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/scripts/nsidc_fetch.py",
+        "file_name": "nsidc_fetch.py",
+        "extension": ".py",
+        "size_bytes": 13316,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "workbook/NSM_Example/training.ipynb",
+        "file_name": "training.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 9716,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    }
+]

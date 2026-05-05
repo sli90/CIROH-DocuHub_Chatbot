@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/f7d6db8f8677402d808531924bbcf60c">
+    <dc:subject>CFE</dc:subject>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4959</hsterms:description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4959</hsterms:hydroshare_user_id>
+        <hsterms:address>MA, US</hsterms:address>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:email>mscranton@cuahsi.org</hsterms:email>
+        <hsterms:organization>Consortium of Universities for the Advancement of Hydrological Science</hsterms:organization>
+        <hsterms:name>CUAHSI</hsterms:name>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2023-07-20T15:05:02.810918+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21917</hsterms:description>
+        <hsterms:address>VA, US</hsterms:address>
+        <hsterms:organization>george mason university</hsterms:organization>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21917</hsterms:hydroshare_user_id>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:phone>+1 (571) 394-1494</hsterms:phone>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:email>soelem.aafnan@gmail.com</hsterms:email>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=cXv60q8AAAAJ&amp;amp;hl=en"/>
+        <hsterms:name>Bhuiyan, Soelem Aafnan</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:title>CUAHSI-SI23 Theme-1 Nextgen-aridity: CFE config &amp; outputs</dc:title>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/f7d6db8f8677402d808531924bbcf60c"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>NextGen</dc:subject>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:date>
+      <hsterms:published>
+        <rdf:value>2025-01-06T15:36:15.415370+00:00</rdf:value>
+      </hsterms:published>
+    </dc:date>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10119</hsterms:description>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:name>Frame, Jonathan Martin</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hsterms:creatorOrder>
+        <hsterms:address>CA, US</hsterms:address>
+        <hsterms:email>jonframe@gmail.com</hsterms:email>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10119</hsterms:hydroshare_user_id>
+        <hsterms:organization>National Water Center;University of Alabama - Tuscaloosa</hsterms:organization>
+        <hsterms:homepage></hsterms:homepage>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">116</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">116</hsterms:description>
+        <hsterms:email>luciana.k.cunha@gmail.com</hsterms:email>
+        <hsterms:organization></hsterms:organization>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:name>Cunha, Luciana</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:address></hsterms:address>
+      </rdf:Description>
+    </dc:creator>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:doi rdf:resource="https://doi.org/10.4211/hs.f7d6db8f8677402d808531924bbcf60c"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:organization></hsterms:organization>
+        <hsterms:email></hsterms:email>
+        <hsterms:address></hsterms:address>
+        <hsterms:name>University of Alabama</hsterms:name>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:phone></hsterms:phone>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:publisher>
+      <rdf:Description>
+        <hsterms:publisherURL rdf:resource="https://www.cuahsi.org"/>
+        <hsterms:publisherName>Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)</hsterms:publisherName>
+      </rdf:Description>
+    </dc:publisher>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration</hsterms:fundingAgencyName>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyURL></hsterms:fundingAgencyURL>
+        <hsterms:awardTitle>This project was conducted as part of the NOAA National Water Center Innovators Program, Summer Institute. The Summer Institute was administered by CUAHSI and the University of Alabama under CIROH.</hsterms:awardTitle>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-01-06T15:36:15.025420+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21962</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hsterms:creatorOrder>
+        <hsterms:address>PA, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21962</hsterms:description>
+        <hsterms:organization>Pennsylvania State University</hsterms:organization>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:name>Bindas, Tadd</hsterms:name>
+        <hsterms:email>taddbindas@gmail.com</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3424</hsterms:hydroshare_user_id>
+        <hsterms:address>Alabama, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:email>jmframe@crimson.ua.edu</hsterms:email>
+        <hsterms:organization>University of Alabama</hsterms:organization>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3424</hsterms:description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hsterms:creatorOrder>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:name>Frame, Jonathan</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>name=CONUS; projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=54.4905; eastlimit=-60.3281; southlimit=20.5011; westlimit=-133.4531</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This repository contains the CUAHSI Summer Institute 2023 results, Theme-1 Nextgen-aridity team. For each CAMELS US basin, we provide the initial parameter configurations (refer to the "config" folder) generated by Dr. Luciana Cunha, and the best-calibrated parameters and streamflow outputs from CFE-classic and CFE-ODE run (refer to the "outputs" folder) generated by the Nextgen-aridity team. The CFE was calibrated for 2000-2009 WY with a 1-year of spin-up using Dynamically Dimensioned Search optimization algorithm (N=500).&#13;
+&#13;
+Please refer to the following resources for further details:&#13;
+- Short summary (Chapter 2): https://www.hydroshare.org/resource/709de9e2bc5640b281c7f022cecc593d/&#13;
+- Long version of the report can be found here: https://github.com/NWC-CUAHSI-Summer-Institute/ngen-aridity&#13;
+- GitHub Repository: https://github.com/NWC-CUAHSI-Summer-Institute/calibrate-cfe&#13;
+&#13;
+*** If you use this resource, please provide appropriate citation for this work (see "Citation" section below). If you make any modifications to the original materials, please indicate those changes in your work. ***&#13;
+&#13;
+Known issue: there were fewer than 10 cases where the baseflow did not converge after a warm-up period of 1 year. We plan to rerun the calibration with an extended warming-up period.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization></hsterms:organization>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:address></hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:email>rappjer1@gmail.com</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1774</hsterms:description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1774</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hsterms:creatorOrder>
+        <hsterms:name>Rapp, Jeremy</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:language>eng</dc:language>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>San Diego State University;University of California, Santa Barbara</hsterms:organization>
+        <hsterms:name>Araki, Ryoko</hsterms:name>
+        <hsterms:phone>+1 (619) 913-3086</hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5068</hsterms:description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5068</hsterms:hydroshare_user_id>
+        <hsterms:email>raraki8159@sdsu.edu</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+    <dcterms:bibliographicCitation>Araki, R., S. A. Bhuiyan, L. Cunha, T. Bindas, J. Rapp, J. Frame, J. M. Frame (2025). CUAHSI-SI23 Theme-1 Nextgen-aridity: CFE config &amp; outputs, HydroShare, https://doi.org/10.4211/hs.f7d6db8f8677402d808531924bbcf60c</dcterms:bibliographicCitation>
+    <dc:subject>Summer Institute</dc:subject>
+  </hsterms:CompositeResource>
+</rdf:RDF>

@@ -1,0 +1,103 @@
+{
+    "id": 706266756,
+    "name": "ngen-datastream",
+    "full_name": "CIROH-UA/ngen-datastream",
+    "html_url": "https://github.com/CIROH-UA/ngen-datastream",
+    "description": " Infrastructure and tooling for the NextGen Research DataStream (NRDS)",
+    "homepage": "https://datastream.ciroh.org/",
+    "default_branch": "main",
+    "created_at": "2023-10-17T15:59:05Z",
+    "updated_at": "2026-04-27T15:16:34Z",
+    "pushed_at": "2026-04-27T17:33:20Z",
+    "language": "Python",
+    "topics": [
+        "aws",
+        "bmi",
+        "ciroh",
+        "docker",
+        "environmental-modeling",
+        "hydrology",
+        "infrastructure",
+        "ngen",
+        "python",
+        "r2o",
+        "shell",
+        "terraform"
+    ],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 176910,
+    "stargazers_count": 11,
+    "watchers_count": 11,
+    "forks_count": 16,
+    "open_issues_count": 19,
+    "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "contributors_summary": {
+        "contributors_count": 8,
+        "top_contributors": [
+            {
+                "id": 79336055,
+                "login": "JordanLaserGit",
+                "html_url": "https://github.com/JordanLaserGit",
+                "type": "User",
+                "contributions": 1088
+            },
+            {
+                "id": 223894814,
+                "login": "harshavemula-ua",
+                "html_url": "https://github.com/harshavemula-ua",
+                "type": "User",
+                "contributions": 157
+            },
+            {
+                "id": 60660437,
+                "login": "ZacharyWills",
+                "html_url": "https://github.com/ZacharyWills",
+                "type": "User",
+                "contributions": 8
+            },
+            {
+                "id": 49699333,
+                "login": "dependabot[bot]",
+                "html_url": "https://github.com/apps/dependabot",
+                "type": "Bot",
+                "contributions": 8
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 4
+            },
+            {
+                "id": 43544549,
+                "login": "romer8",
+                "html_url": "https://github.com/romer8",
+                "type": "User",
+                "contributions": 4
+            },
+            {
+                "id": 26720477,
+                "login": "JoshCu",
+                "html_url": "https://github.com/JoshCu",
+                "type": "User",
+                "contributions": 3
+            },
+            {
+                "id": 170465264,
+                "login": "quinnylee",
+                "html_url": "https://github.com/quinnylee",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

@@ -1,0 +1,1130 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 3088,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 11558,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 134,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "decision_trees/01.script/00.tutorial_post_processing_xgboost_all.ipynb",
+        "file_name": "00.tutorial_post_processing_xgboost_all.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 6086222,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "decision_trees/01.script/01.tutorial_post_processing_xgboost_tuning.ipynb",
+        "file_name": "01.tutorial_post_processing_xgboost_tuning.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 47283,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "decision_trees/01.script/02.tutorial_post_processing_xgboost_automatic_tuning.ipynb",
+        "file_name": "02.tutorial_post_processing_xgboost_automatic_tuning.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 113357,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "decision_trees/01.script/03.tutorial_post_processing_xgboost_evaluation.ipynb",
+        "file_name": "03.tutorial_post_processing_xgboost_evaluation.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 2650054,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "decision_trees/01.script/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/01.script/evaluation_table.py",
+        "file_name": "evaluation_table.py",
+        "extension": ".py",
+        "size_bytes": 4492,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/01.script/g_evaluation_metric.py",
+        "file_name": "g_evaluation_metric.py",
+        "extension": ".py",
+        "size_bytes": 2326,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/aws_key.csv",
+        "file_name": "aws_key.csv",
+        "extension": ".csv",
+        "size_bytes": 43,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/final_input.parquet",
+        "file_name": "final_input.parquet",
+        "extension": ".parquet",
+        "size_bytes": 3032573,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/arrow.jpg",
+        "file_name": "arrow.jpg",
+        "extension": ".jpg",
+        "size_bytes": 60147,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/arrow.png",
+        "file_name": "arrow.png",
+        "extension": ".png",
+        "size_bytes": 2969,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear.cpg",
+        "file_name": "bear.cpg",
+        "extension": ".cpg",
+        "size_bytes": 5,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear.dbf",
+        "file_name": "bear.dbf",
+        "extension": ".dbf",
+        "size_bytes": 4220,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear.prj",
+        "file_name": "bear.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear.sbn",
+        "file_name": "bear.sbn",
+        "extension": ".sbn",
+        "size_bytes": 204,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear.sbx",
+        "file_name": "bear.sbx",
+        "extension": ".sbx",
+        "size_bytes": 132,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear.shp",
+        "file_name": "bear.shp",
+        "extension": ".shp",
+        "size_bytes": 1029508,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear.shp.xml",
+        "file_name": "bear.shp.xml",
+        "extension": ".xml",
+        "size_bytes": 318364,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear.shx",
+        "file_name": "bear.shx",
+        "extension": ".shx",
+        "size_bytes": 148,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear_merged.cpg",
+        "file_name": "bear_merged.cpg",
+        "extension": ".cpg",
+        "size_bytes": 10,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear_merged.dbf",
+        "file_name": "bear_merged.dbf",
+        "extension": ".dbf",
+        "size_bytes": 78,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear_merged.prj",
+        "file_name": "bear_merged.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear_merged.shp",
+        "file_name": "bear_merged.shp",
+        "extension": ".shp",
+        "size_bytes": 491292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/bear_merged.shx",
+        "file_name": "bear_merged.shx",
+        "extension": ".shx",
+        "size_bytes": 108,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan.cpg",
+        "file_name": "jordan.cpg",
+        "extension": ".cpg",
+        "size_bytes": 5,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan.dbf",
+        "file_name": "jordan.dbf",
+        "extension": ".dbf",
+        "size_bytes": 1534,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan.prj",
+        "file_name": "jordan.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan.sbn",
+        "file_name": "jordan.sbn",
+        "extension": ".sbn",
+        "size_bytes": 156,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan.sbx",
+        "file_name": "jordan.sbx",
+        "extension": ".sbx",
+        "size_bytes": 116,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan.shp",
+        "file_name": "jordan.shp",
+        "extension": ".shp",
+        "size_bytes": 608596,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan.shp.xml",
+        "file_name": "jordan.shp.xml",
+        "extension": ".xml",
+        "size_bytes": 318842,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan.shx",
+        "file_name": "jordan.shx",
+        "extension": ".shx",
+        "size_bytes": 132,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan_merged.cpg",
+        "file_name": "jordan_merged.cpg",
+        "extension": ".cpg",
+        "size_bytes": 10,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan_merged.dbf",
+        "file_name": "jordan_merged.dbf",
+        "extension": ".dbf",
+        "size_bytes": 78,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan_merged.prj",
+        "file_name": "jordan_merged.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan_merged.shp",
+        "file_name": "jordan_merged.shp",
+        "extension": ".shp",
+        "size_bytes": 305468,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/jordan_merged.shx",
+        "file_name": "jordan_merged.shx",
+        "extension": ".shx",
+        "size_bytes": 108,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.cpg",
+        "file_name": "lake_bear.cpg",
+        "extension": ".cpg",
+        "size_bytes": 5,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.dbf",
+        "file_name": "lake_bear.dbf",
+        "extension": ".dbf",
+        "size_bytes": 3420565,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.prj",
+        "file_name": "lake_bear.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.sbn",
+        "file_name": "lake_bear.sbn",
+        "extension": ".sbn",
+        "size_bytes": 120428,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.sbx",
+        "file_name": "lake_bear.sbx",
+        "extension": ".sbx",
+        "size_bytes": 7292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.shp",
+        "file_name": "lake_bear.shp",
+        "extension": ".shp",
+        "size_bytes": 20663464,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.shp.CYB-TURING-AG1.24688.25756.sr.lock",
+        "file_name": "lake_bear.shp.CYB-TURING-AG1.24688.25756.sr.lock",
+        "extension": ".lock",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.shp.CYB-TURING-AG1.25812.25756.sr.lock",
+        "file_name": "lake_bear.shp.CYB-TURING-AG1.25812.25756.sr.lock",
+        "extension": ".lock",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.shp.CYB-TURING-AG1.29092.25756.sr.lock",
+        "file_name": "lake_bear.shp.CYB-TURING-AG1.29092.25756.sr.lock",
+        "extension": ".lock",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.shp.CYB-TURING-AG1.50100.25756.sr.lock",
+        "file_name": "lake_bear.shp.CYB-TURING-AG1.50100.25756.sr.lock",
+        "extension": ".lock",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.shp.xml",
+        "file_name": "lake_bear.shp.xml",
+        "extension": ".xml",
+        "size_bytes": 40440,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_bear.shx",
+        "file_name": "lake_bear.shx",
+        "extension": ".shx",
+        "size_bytes": 97468,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.cpg",
+        "file_name": "lake_jordan_weber.cpg",
+        "extension": ".cpg",
+        "size_bytes": 5,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.dbf",
+        "file_name": "lake_jordan_weber.dbf",
+        "extension": ".dbf",
+        "size_bytes": 2256382,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.prj",
+        "file_name": "lake_jordan_weber.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.sbn",
+        "file_name": "lake_jordan_weber.sbn",
+        "extension": ".sbn",
+        "size_bytes": 75052,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.sbx",
+        "file_name": "lake_jordan_weber.sbx",
+        "extension": ".sbx",
+        "size_bytes": 3364,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.shp",
+        "file_name": "lake_jordan_weber.shp",
+        "extension": ".shp",
+        "size_bytes": 9515700,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.shp.CYB-TURING-AG1.24688.25756.sr.lock",
+        "file_name": "lake_jordan_weber.shp.CYB-TURING-AG1.24688.25756.sr.lock",
+        "extension": ".lock",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.shp.CYB-TURING-AG1.25812.25756.sr.lock",
+        "file_name": "lake_jordan_weber.shp.CYB-TURING-AG1.25812.25756.sr.lock",
+        "extension": ".lock",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.shp.CYB-TURING-AG1.29092.25756.sr.lock",
+        "file_name": "lake_jordan_weber.shp.CYB-TURING-AG1.29092.25756.sr.lock",
+        "extension": ".lock",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.shp.CYB-TURING-AG1.50100.25756.sr.lock",
+        "file_name": "lake_jordan_weber.shp.CYB-TURING-AG1.50100.25756.sr.lock",
+        "extension": ".lock",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.shp.xml",
+        "file_name": "lake_jordan_weber.shp.xml",
+        "extension": ".xml",
+        "size_bytes": 39200,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/lake_jordan_weber.shx",
+        "file_name": "lake_jordan_weber.shx",
+        "extension": ".shx",
+        "size_bytes": 64324,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_bear.cpg",
+        "file_name": "river_bear.cpg",
+        "extension": ".cpg",
+        "size_bytes": 5,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_bear.dbf",
+        "file_name": "river_bear.dbf",
+        "extension": ".dbf",
+        "size_bytes": 3106694,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_bear.prj",
+        "file_name": "river_bear.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_bear.sbn",
+        "file_name": "river_bear.sbn",
+        "extension": ".sbn",
+        "size_bytes": 12796,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_bear.sbx",
+        "file_name": "river_bear.sbx",
+        "extension": ".sbx",
+        "size_bytes": 980,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_bear.shp",
+        "file_name": "river_bear.shp",
+        "extension": ".shp",
+        "size_bytes": 1140820,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_bear.shp.xml",
+        "file_name": "river_bear.shp.xml",
+        "extension": ".xml",
+        "size_bytes": 148017,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_bear.shx",
+        "file_name": "river_bear.shx",
+        "extension": ".shx",
+        "size_bytes": 9972,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_jordan_weber.dbf",
+        "file_name": "river_jordan_weber.dbf",
+        "extension": ".dbf",
+        "size_bytes": 2973452,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_jordan_weber.prj",
+        "file_name": "river_jordan_weber.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_jordan_weber.sbn",
+        "file_name": "river_jordan_weber.sbn",
+        "extension": ".sbn",
+        "size_bytes": 12052,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_jordan_weber.shp",
+        "file_name": "river_jordan_weber.shp",
+        "extension": ".shp",
+        "size_bytes": 787996,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_jordan_weber.shp.xml",
+        "file_name": "river_jordan_weber.shp.xml",
+        "extension": ".xml",
+        "size_bytes": 148644,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/river_jordan_weber.shx",
+        "file_name": "river_jordan_weber.shx",
+        "extension": ".shx",
+        "size_bytes": 9548,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber.cpg",
+        "file_name": "weber.cpg",
+        "extension": ".cpg",
+        "size_bytes": 5,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber.dbf",
+        "file_name": "weber.dbf",
+        "extension": ".dbf",
+        "size_bytes": 928,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber.prj",
+        "file_name": "weber.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber.sbn",
+        "file_name": "weber.sbn",
+        "extension": ".sbn",
+        "size_bytes": 140,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber.sbx",
+        "file_name": "weber.sbx",
+        "extension": ".sbx",
+        "size_bytes": 116,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber.shp",
+        "file_name": "weber.shp",
+        "extension": ".shp",
+        "size_bytes": 298004,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber.shp.xml",
+        "file_name": "weber.shp.xml",
+        "extension": ".xml",
+        "size_bytes": 318824,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber.shx",
+        "file_name": "weber.shx",
+        "extension": ".shx",
+        "size_bytes": 116,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber_merged.cpg",
+        "file_name": "weber_merged.cpg",
+        "extension": ".cpg",
+        "size_bytes": 10,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber_merged.dbf",
+        "file_name": "weber_merged.dbf",
+        "extension": ".dbf",
+        "size_bytes": 78,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber_merged.prj",
+        "file_name": "weber_merged.prj",
+        "extension": ".prj",
+        "size_bytes": 167,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber_merged.shp",
+        "file_name": "weber_merged.shp",
+        "extension": ".shp",
+        "size_bytes": 216204,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/02.input/shape/weber_merged.shx",
+        "file_name": "weber_merged.shx",
+        "extension": ".shx",
+        "size_bytes": 108,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/best_manuall_model.pkl",
+        "file_name": "best_manuall_model.pkl",
+        "extension": ".pkl",
+        "size_bytes": 482927,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/best_model_hyperparameters_xgboost.pkl",
+        "file_name": "best_model_hyperparameters_xgboost.pkl",
+        "extension": ".pkl",
+        "size_bytes": 359806,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/best_model_xgboost.pkl",
+        "file_name": "best_model_xgboost.pkl",
+        "extension": ".pkl",
+        "size_bytes": 354249,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/scaler_x.joblib",
+        "file_name": "scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1959,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/scaler_x_manuall.joblib",
+        "file_name": "scaler_x_manuall.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1959,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/scaler_y.joblib",
+        "file_name": "scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 751,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/scaler_y_manuall.joblib",
+        "file_name": "scaler_y_manuall.joblib",
+        "extension": ".joblib",
+        "size_bytes": 719,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/test_dataset.pkl",
+        "file_name": "test_dataset.pkl",
+        "extension": ".pkl",
+        "size_bytes": 2058214,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/train_dataset.pkl",
+        "file_name": "train_dataset.pkl",
+        "extension": ".pkl",
+        "size_bytes": 5086197,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/x_tes.pkl",
+        "file_name": "x_tes.pkl",
+        "extension": ".pkl",
+        "size_bytes": 1732401,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/03.output/y_test.pkl",
+        "file_name": "y_test.pkl",
+        "extension": ".pkl",
+        "size_bytes": 96661,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "decision_trees/devcon_xgboost.yaml",
+        "file_name": "devcon_xgboost.yaml",
+        "extension": ".yaml",
+        "size_bytes": 8832,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/01.script/01.tutorial_aws_lstm.ipynb",
+        "file_name": "01.tutorial_aws_lstm.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 3348615,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "neural_nets/lstm/01.script/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/01.script/evalaution_table.py",
+        "file_name": "evalaution_table.py",
+        "extension": ".py",
+        "size_bytes": 4505,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/01.script/figure_generator.py",
+        "file_name": "figure_generator.py",
+        "extension": ".py",
+        "size_bytes": 1857,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/01.script/g_evaluation_metric.py",
+        "file_name": "g_evaluation_metric.py",
+        "extension": ".py",
+        "size_bytes": 2326,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/02.input/final_input.parquet",
+        "file_name": "final_input.parquet",
+        "extension": ".parquet",
+        "size_bytes": 3032573,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/model_param_station_10126000",
+        "file_name": "model_param_station_10126000",
+        "extension": "",
+        "size_bytes": 3068894,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10126000_scaler_x.joblib",
+        "file_name": "test_10126000_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10126000_scaler_y.joblib",
+        "file_name": "test_10126000_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10134500_scaler_x.joblib",
+        "file_name": "test_10134500_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10134500_scaler_y.joblib",
+        "file_name": "test_10134500_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10136500_scaler_x.joblib",
+        "file_name": "test_10136500_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10136500_scaler_y.joblib",
+        "file_name": "test_10136500_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10137500_scaler_x.joblib",
+        "file_name": "test_10137500_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10137500_scaler_y.joblib",
+        "file_name": "test_10137500_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10141000_scaler_x.joblib",
+        "file_name": "test_10141000_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10141000_scaler_y.joblib",
+        "file_name": "test_10141000_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10155000_scaler_x.joblib",
+        "file_name": "test_10155000_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10155000_scaler_y.joblib",
+        "file_name": "test_10155000_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10164500_scaler_x.joblib",
+        "file_name": "test_10164500_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/test_10164500_scaler_y.joblib",
+        "file_name": "test_10164500_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10126000_scaler_x.joblib",
+        "file_name": "train_10126000_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10126000_scaler_y.joblib",
+        "file_name": "train_10126000_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10134500_scaler_x.joblib",
+        "file_name": "train_10134500_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10134500_scaler_y.joblib",
+        "file_name": "train_10134500_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10136500_scaler_x.joblib",
+        "file_name": "train_10136500_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10136500_scaler_y.joblib",
+        "file_name": "train_10136500_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10137500_scaler_x.joblib",
+        "file_name": "train_10137500_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10137500_scaler_y.joblib",
+        "file_name": "train_10137500_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10141000_scaler_x.joblib",
+        "file_name": "train_10141000_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10141000_scaler_y.joblib",
+        "file_name": "train_10141000_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10155000_scaler_x.joblib",
+        "file_name": "train_10155000_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10155000_scaler_y.joblib",
+        "file_name": "train_10155000_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10164500_scaler_x.joblib",
+        "file_name": "train_10164500_scaler_x.joblib",
+        "extension": ".joblib",
+        "size_bytes": 1965,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/03.output/train_10164500_scaler_y.joblib",
+        "file_name": "train_10164500_scaler_y.joblib",
+        "extension": ".joblib",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/04.pic/equations.PNG",
+        "file_name": "equations.PNG",
+        "extension": ".png",
+        "size_bytes": 87171,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/04.pic/lstm_model.PNG",
+        "file_name": "lstm_model.PNG",
+        "extension": ".png",
+        "size_bytes": 97794,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "neural_nets/lstm/devcon_aws.yaml",
+        "file_name": "devcon_aws.yaml",
+        "extension": ".yaml",
+        "size_bytes": 5337,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

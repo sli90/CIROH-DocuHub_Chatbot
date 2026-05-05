@@ -1,0 +1,90 @@
+[
+    {
+        "path": ".gitattributes",
+        "file_name": ".gitattributes",
+        "extension": "",
+        "size_bytes": 26,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/ISSUE_TEMPLATE.md",
+        "file_name": "ISSUE_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 186,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "file_name": "PULL_REQUEST_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 1351,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 879,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CHANGELOG.md",
+        "file_name": "CHANGELOG.md",
+        "extension": ".md",
+        "size_bytes": 280,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 1312,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "INSTALL.md",
+        "file_name": "INSTALL.md",
+        "extension": ".md",
+        "size_bytes": 110,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 1080,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 3695,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "SECURITY.md",
+        "file_name": "SECURITY.md",
+        "extension": ".md",
+        "size_bytes": 3303,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "doc/Screenshot.png",
+        "file_name": "Screenshot.png",
+        "extension": ".png",
+        "size_bytes": 156984,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

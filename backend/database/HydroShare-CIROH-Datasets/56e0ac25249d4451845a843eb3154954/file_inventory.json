@@ -1,0 +1,1766 @@
+[
+    {
+        "file_name": "HGID1293_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1293_right.csv",
+        "extension": ".csv",
+        "checksum": "48ec060c5a89c6d1fbd75df4da0132fa"
+    },
+    {
+        "file_name": "HGID1362_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1362_center.csv",
+        "extension": ".csv",
+        "checksum": "00bd6da29f0ed407ec403626de43da04"
+    },
+    {
+        "file_name": "HGID1322_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1322_left.csv",
+        "extension": ".csv",
+        "checksum": "7e2190af4e6b0eb38dcebf4cc6f951e8"
+    },
+    {
+        "file_name": "HGID1302_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1302_center.csv",
+        "extension": ".csv",
+        "checksum": "32c344f50acefc93a159c0fb6209daff"
+    },
+    {
+        "file_name": "HGID1316_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1316_width.txt",
+        "extension": ".txt",
+        "checksum": "5be1f3634d17189123e4eb1ca3d6f9d1"
+    },
+    {
+        "file_name": "HGID1510_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1510_right.csv",
+        "extension": ".csv",
+        "checksum": "2c7fa84f901c1a7ac6e2028fd2d47759"
+    },
+    {
+        "file_name": "HGID836_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID836_center.csv",
+        "extension": ".csv",
+        "checksum": "8ac0b0d271f9181785335f322bd85953"
+    },
+    {
+        "file_name": "HGID82_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID82_right.csv",
+        "extension": ".csv",
+        "checksum": "9d2281a84c4da5f38635ef242cda7727"
+    },
+    {
+        "file_name": "HGID1115_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1115_right.csv",
+        "extension": ".csv",
+        "checksum": "9aff43032b081f504ff172bd881de128"
+    },
+    {
+        "file_name": "HGID646_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID646_center.csv",
+        "extension": ".csv",
+        "checksum": "d6ec61b31eb06741a072207e3ad6fea8"
+    },
+    {
+        "file_name": "HGID1143_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1143_center.csv",
+        "extension": ".csv",
+        "checksum": "632d870f687bce001bbcb6ff80ced495"
+    },
+    {
+        "file_name": "HGID1332_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1332_center.csv",
+        "extension": ".csv",
+        "checksum": "50e84ad344515c80e4238317d6d395f2"
+    },
+    {
+        "file_name": "HGID1337_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1337_width.txt",
+        "extension": ".txt",
+        "checksum": "a62c621074dcaeb63063142b5bff1c02"
+    },
+    {
+        "file_name": "HGID1536_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1536_width.txt",
+        "extension": ".txt",
+        "checksum": "f8c9ca9dfc7c0d8801a53e6f67d49d6e"
+    },
+    {
+        "file_name": "HGID1294_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1294_left.csv",
+        "extension": ".csv",
+        "checksum": "d2c8a84457be895ba8c24a17f4c943e7"
+    },
+    {
+        "file_name": "HGID1559_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1559_right.csv",
+        "extension": ".csv",
+        "checksum": "18ea3dbfd42e370b76b0697ed3aab907"
+    },
+    {
+        "file_name": "HGID11width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID11width.txt",
+        "extension": ".txt",
+        "checksum": "fd6093bac039de3c65ec1227f8efb575"
+    },
+    {
+        "file_name": "HGID836width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID836width.txt",
+        "extension": ".txt",
+        "checksum": "d625a01e82606fa451e6f88291e2ca7f"
+    },
+    {
+        "file_name": "HGID1297_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1297_right.csv",
+        "extension": ".csv",
+        "checksum": "298ee6b06344cfeea90c3458fed24ea7"
+    },
+    {
+        "file_name": "HGID1115_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1115_center.csv",
+        "extension": ".csv",
+        "checksum": "401213f4e4d1467f8ff46c397d1e7038"
+    },
+    {
+        "file_name": "HGID1337_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1337_center.csv",
+        "extension": ".csv",
+        "checksum": "0a8a047ec427dbcbdf1ec1364a755ddd"
+    },
+    {
+        "file_name": "HGID1148_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1148_left.csv",
+        "extension": ".csv",
+        "checksum": "b847ec9500ab6f735fbeab5b935d2a70"
+    },
+    {
+        "file_name": "HGID260_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID260_right.csv",
+        "extension": ".csv",
+        "checksum": "2d918e919190278a58dad9345efdbcc7"
+    },
+    {
+        "file_name": "HGID1516_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1516_center.csv",
+        "extension": ".csv",
+        "checksum": "519c17dbae1c9f232ac1f238e83968d6"
+    },
+    {
+        "file_name": "HGID1115_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1115_left.csv",
+        "extension": ".csv",
+        "checksum": "6ecdf7aa1f0c7c9f14075b85eaabdd6b"
+    },
+    {
+        "file_name": "HGID1651_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1651_right.csv",
+        "extension": ".csv",
+        "checksum": "15afaff8a3e2f512f212b65d9ddae8b1"
+    },
+    {
+        "file_name": "HGID1362_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1362_width.txt",
+        "extension": ".txt",
+        "checksum": "c9426a72714eb54a68cfd5e5397e99c7"
+    },
+    {
+        "file_name": "HGID1242_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1242_center.csv",
+        "extension": ".csv",
+        "checksum": "3832384ac7cfc517d0ff4083bfbafca6"
+    },
+    {
+        "file_name": "HGID113_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID113_right.csv",
+        "extension": ".csv",
+        "checksum": "95bc52768763c25bc27b1229f475dfd3"
+    },
+    {
+        "file_name": "HGID667_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID667_width.txt",
+        "extension": ".txt",
+        "checksum": "d841fd4f7188a55362dd3d02f65edd75"
+    },
+    {
+        "file_name": "HGID1149_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1149_left.csv",
+        "extension": ".csv",
+        "checksum": "b2fdd957e4ff98e1fef255dffdd69399"
+    },
+    {
+        "file_name": "HGID1647_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1647_width.txt",
+        "extension": ".txt",
+        "checksum": "471f2463ce81869009ee4f5c4b8fb7be"
+    },
+    {
+        "file_name": "HGID1316_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1316_right.csv",
+        "extension": ".csv",
+        "checksum": "e0c77d3cad0545c8b68c234e347bc72c"
+    },
+    {
+        "file_name": "HGID82_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID82_left.csv",
+        "extension": ".csv",
+        "checksum": "a6f2f286f5f7703c2ce84f7afc3507d5"
+    },
+    {
+        "file_name": "HGID737width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID737width.txt",
+        "extension": ".txt",
+        "checksum": "db8e13be786eb4ffa665fc1b7a99e41c"
+    },
+    {
+        "file_name": "HGID1143_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1143_left.csv",
+        "extension": ".csv",
+        "checksum": "00c73ad34ffa0c827bbf7af2f6b0fe5a"
+    },
+    {
+        "file_name": "HGID14width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID14width.txt",
+        "extension": ".txt",
+        "checksum": "ffc834ea0124a9463747e1abc1e8d854"
+    },
+    {
+        "file_name": "HGID1255_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1255_width.txt",
+        "extension": ".txt",
+        "checksum": "b385b084ee6b1a922827240e9189e10f"
+    },
+    {
+        "file_name": "HGID171width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID171width.txt",
+        "extension": ".txt",
+        "checksum": "95e3f67252df369cd89cf18d8095ea18"
+    },
+    {
+        "file_name": "HGID1630_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1630_center.csv",
+        "extension": ".csv",
+        "checksum": "1120f2192255892608e2ca8ad68890ab"
+    },
+    {
+        "file_name": "HGID1005_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1005_right.csv",
+        "extension": ".csv",
+        "checksum": "b562ba5e7bb167852456cefb694bf5ab"
+    },
+    {
+        "file_name": "HGID1109_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1109_left.csv",
+        "extension": ".csv",
+        "checksum": "178e44bd2a0f432ab97f8eabe230747c"
+    },
+    {
+        "file_name": "HGID1048_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1048_center.csv",
+        "extension": ".csv",
+        "checksum": "570eddd54fc4b1bc8670ae93cd621e99"
+    },
+    {
+        "file_name": "HGID836_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID836_right.csv",
+        "extension": ".csv",
+        "checksum": "a29d828e8e28c6a77fc5a540a2c7740f"
+    },
+    {
+        "file_name": "HGID1282_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1282_center.csv",
+        "extension": ".csv",
+        "checksum": "bfe670ae169367fc10538deb39e5eb25"
+    },
+    {
+        "file_name": "HGID650_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID650_left.csv",
+        "extension": ".csv",
+        "checksum": "5a489973aef9660756f3c37b7f646b19"
+    },
+    {
+        "file_name": "HGID66_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID66_right.csv",
+        "extension": ".csv",
+        "checksum": "154323352cff809f111a4a377d3f921e"
+    },
+    {
+        "file_name": "HGID1302_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1302_right.csv",
+        "extension": ".csv",
+        "checksum": "b56d57d2a8635f4faab51865aa53751e"
+    },
+    {
+        "file_name": "HGID1576_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1576_center.csv",
+        "extension": ".csv",
+        "checksum": "5be039b573a7d4976684de6ed8a653cd"
+    },
+    {
+        "file_name": "HGID1561_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1561_width.txt",
+        "extension": ".txt",
+        "checksum": "d3c74921396da00083a23695afa48185"
+    },
+    {
+        "file_name": "HGID171_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID171_left.csv",
+        "extension": ".csv",
+        "checksum": "4396b9f973d5700e552b73c192a5ec97"
+    },
+    {
+        "file_name": "HGID1559_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1559_width.txt",
+        "extension": ".txt",
+        "checksum": "7cb5dfe0a3027dad3d3b5d37a56ba13d"
+    },
+    {
+        "file_name": "HGID171_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID171_center.csv",
+        "extension": ".csv",
+        "checksum": "3946d29680020e53ed420f5f060396dc"
+    },
+    {
+        "file_name": "HGID1005_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1005_center.csv",
+        "extension": ".csv",
+        "checksum": "10561f1a02a5981133c8cbe296a560fe"
+    },
+    {
+        "file_name": "HGID1662_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1662_width.txt",
+        "extension": ".txt",
+        "checksum": "2e160b24c49c10169f741dff4392bd93"
+    },
+    {
+        "file_name": "HGID1238_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1238_left.csv",
+        "extension": ".csv",
+        "checksum": "3af45d5d5cdb0c8033ff44f57dce4a48"
+    },
+    {
+        "file_name": "HGID1317_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1317_right.csv",
+        "extension": ".csv",
+        "checksum": "f9acc0fa051c7fb98f1c4e3d7ecd971a"
+    },
+    {
+        "file_name": "HGID1630_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1630_width.txt",
+        "extension": ".txt",
+        "checksum": "07beab97ca6bb77274ed0969b0bad647"
+    },
+    {
+        "file_name": "HGID1662_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1662_center.csv",
+        "extension": ".csv",
+        "checksum": "e88cf50464634edffb57c2097c24b7b8"
+    },
+    {
+        "file_name": "HGID1158_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1158_left.csv",
+        "extension": ".csv",
+        "checksum": "dce068f373c3ef3b5dcce4525980cd58"
+    },
+    {
+        "file_name": "HGID78width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID78width.txt",
+        "extension": ".txt",
+        "checksum": "698477363bf68408ca96fdc5e1153372"
+    },
+    {
+        "file_name": "HGID1651_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1651_left.csv",
+        "extension": ".csv",
+        "checksum": "95bba520d5a26c9343d91850ce5a5a11"
+    },
+    {
+        "file_name": "HGID1317_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1317_left.csv",
+        "extension": ".csv",
+        "checksum": "68fdcb7b0e400fccd9968b77e3e12587"
+    },
+    {
+        "file_name": "HGID1172_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1172_center.csv",
+        "extension": ".csv",
+        "checksum": "c965fcdb37b4980d038f4074876b925e"
+    },
+    {
+        "file_name": "HGID1052_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1052_center.csv",
+        "extension": ".csv",
+        "checksum": "4abd288a198657c25e364cab0dfc3615"
+    },
+    {
+        "file_name": "HGID832_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID832_width.txt",
+        "extension": ".txt",
+        "checksum": "eb51bd1b472c5f41c16f5f7a829e2bfe"
+    },
+    {
+        "file_name": "HGID1151_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1151_center.csv",
+        "extension": ".csv",
+        "checksum": "7a213a867865d3d74e89bd4f19480e45"
+    },
+    {
+        "file_name": "HGID667width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID667width.txt",
+        "extension": ".txt",
+        "checksum": "8535b2ff63f790a5ab16dc99602eb87c"
+    },
+    {
+        "file_name": "HGID1337_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1337_left.csv",
+        "extension": ".csv",
+        "checksum": "95febda448b0e4669a9b2f6f9f591132"
+    },
+    {
+        "file_name": "HGID1322_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1322_width.txt",
+        "extension": ".txt",
+        "checksum": "6f2c9ca0e769003d82fd113d05d0e90a"
+    },
+    {
+        "file_name": "HGID731_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID731_width.txt",
+        "extension": ".txt",
+        "checksum": "070cfb84de6d4a324126477105e77dc9"
+    },
+    {
+        "file_name": "HGID1052_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1052_left.csv",
+        "extension": ".csv",
+        "checksum": "833de9a5fbd739eaa9203be2a2ec6d9d"
+    },
+    {
+        "file_name": "HGID737_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID737_width.txt",
+        "extension": ".txt",
+        "checksum": "ae5e9827b2474e3928d8f8c8b4da151c"
+    },
+    {
+        "file_name": "HGID1335_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1335_width.txt",
+        "extension": ".txt",
+        "checksum": "82780c0a020a414690bf06eb0a6ee585"
+    },
+    {
+        "file_name": "HGID82_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID82_width.txt",
+        "extension": ".txt",
+        "checksum": "46ff0b748f9e397c3f9dec9550f1144f"
+    },
+    {
+        "file_name": "HGID1152_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1152_width.txt",
+        "extension": ".txt",
+        "checksum": "3ac99a2de09eeead4c2e7ea2ecdbb696"
+    },
+    {
+        "file_name": "HGID260width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID260width.txt",
+        "extension": ".txt",
+        "checksum": "8aa34d88fa5be24a107c4692514d2541"
+    },
+    {
+        "file_name": "HGID1332_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1332_width.txt",
+        "extension": ".txt",
+        "checksum": "b2924c7aab111fb07bf1cbce8c3f2180"
+    },
+    {
+        "file_name": "HGID1510_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1510_width.txt",
+        "extension": ".txt",
+        "checksum": "fbb1df789d9f004484f67c601622511f"
+    },
+    {
+        "file_name": "HGID260_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID260_width.txt",
+        "extension": ".txt",
+        "checksum": "b2c7dc2f86543e17b4078a8207f0c02c"
+    },
+    {
+        "file_name": "River_sections_deviations.txt",
+        "file_path": "HighResolution_Sites/River_sections_deviations.txt",
+        "extension": ".txt",
+        "checksum": "1e35af041e91a07ec1687ad7b5ab46ca"
+    },
+    {
+        "file_name": "HGID1604_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1604_right.csv",
+        "extension": ".csv",
+        "checksum": "4913d49ad65331b3612e145beedc0b2f"
+    },
+    {
+        "file_name": "HGID731_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID731_right.csv",
+        "extension": ".csv",
+        "checksum": "5f5aaad7a86745ad8d913be649c88fbb"
+    },
+    {
+        "file_name": "HGID1516_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1516_left.csv",
+        "extension": ".csv",
+        "checksum": "76f8d035dc13d5bcee0be5392f0ce628"
+    },
+    {
+        "file_name": "HGID1219_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1219_center.csv",
+        "extension": ".csv",
+        "checksum": "7f48a42fb69568f2c610bd33be14944e"
+    },
+    {
+        "file_name": "HGID78_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID78_left.csv",
+        "extension": ".csv",
+        "checksum": "9874a84ae152b535cb205208193877dd"
+    },
+    {
+        "file_name": "HGID82_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID82_center.csv",
+        "extension": ".csv",
+        "checksum": "812bade4170114ae3c87a37e5d574459"
+    },
+    {
+        "file_name": "HGID1149_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1149_right.csv",
+        "extension": ".csv",
+        "checksum": "aa2984920db2e3312e5c459a03c320fe"
+    },
+    {
+        "file_name": "HGID1559_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1559_left.csv",
+        "extension": ".csv",
+        "checksum": "ff5f571dc374cc1650b354dbd6d9ebf5"
+    },
+    {
+        "file_name": "HGID1152_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1152_center.csv",
+        "extension": ".csv",
+        "checksum": "89b9c46993b6b629f9a8343a20a51625"
+    },
+    {
+        "file_name": "HGID83_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID83_right.csv",
+        "extension": ".csv",
+        "checksum": "c4950da3e28d9e09c40c4bd7caaa03cc"
+    },
+    {
+        "file_name": "HGID14_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID14_center.csv",
+        "extension": ".csv",
+        "checksum": "904a7e8a488506a051bda5fa68305052"
+    },
+    {
+        "file_name": "HGID1219_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1219_width.txt",
+        "extension": ".txt",
+        "checksum": "b03caa68aa2a936a2b9a69ad29350948"
+    },
+    {
+        "file_name": "HGID1164_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1164_center.csv",
+        "extension": ".csv",
+        "checksum": "8d8f853e214db24f9167b392cbfac723"
+    },
+    {
+        "file_name": "HGID1559_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1559_center.csv",
+        "extension": ".csv",
+        "checksum": "a648a91a5295bdc245f832c88648ad5e"
+    },
+    {
+        "file_name": "HGID14_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID14_right.csv",
+        "extension": ".csv",
+        "checksum": "0b14f16ab7da7181bb1daff3b6f9d602"
+    },
+    {
+        "file_name": "HGID1121_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1121_right.csv",
+        "extension": ".csv",
+        "checksum": "37a81d563e8062f24a3546edde62f751"
+    },
+    {
+        "file_name": "HGID1109_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1109_width.txt",
+        "extension": ".txt",
+        "checksum": "7d373665a8fcaa81133af1711d80d984"
+    },
+    {
+        "file_name": "HGID94_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID94_right.csv",
+        "extension": ".csv",
+        "checksum": "194a054c39a8ef860b92d8184a8c3040"
+    },
+    {
+        "file_name": "HGID1255_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1255_right.csv",
+        "extension": ".csv",
+        "checksum": "284d4ca38922cc97d1ba8d16f9c9bfc8"
+    },
+    {
+        "file_name": "HGID1293_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1293_left.csv",
+        "extension": ".csv",
+        "checksum": "fb32b25dd46d661326bada8b20276e0f"
+    },
+    {
+        "file_name": "HGID1643_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1643_right.csv",
+        "extension": ".csv",
+        "checksum": "e7766b07a77ec83173fbcfebec76a5c9"
+    },
+    {
+        "file_name": "HGID646_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID646_width.txt",
+        "extension": ".txt",
+        "checksum": "21d2e3dd06c8a646b28edc88489abacc"
+    },
+    {
+        "file_name": "HGID1536_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1536_left.csv",
+        "extension": ".csv",
+        "checksum": "19257cc3624e5efd3b683a9f6a8edab9"
+    },
+    {
+        "file_name": "HGID113_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID113_center.csv",
+        "extension": ".csv",
+        "checksum": "25b53da0ed7b66981bf3d2b0bcf8516f"
+    },
+    {
+        "file_name": "HGID650_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID650_right.csv",
+        "extension": ".csv",
+        "checksum": "b311615fa278eb1abd13d32e7237fb0f"
+    },
+    {
+        "file_name": "HGID1536_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1536_center.csv",
+        "extension": ".csv",
+        "checksum": "e38585afc6217cf377e22972bb1add31"
+    },
+    {
+        "file_name": "HGID1143_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1143_right.csv",
+        "extension": ".csv",
+        "checksum": "5e3031cd9f804b0f80866a925c6c5cc0"
+    },
+    {
+        "file_name": "HGID83_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID83_left.csv",
+        "extension": ".csv",
+        "checksum": "5341a823d3918f2f7298563fbd8e6777"
+    },
+    {
+        "file_name": "HGID260_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID260_left.csv",
+        "extension": ".csv",
+        "checksum": "efc2b6ac7bb164bf656b58191a0136ea"
+    },
+    {
+        "file_name": "HGID171_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID171_right.csv",
+        "extension": ".csv",
+        "checksum": "2b487ddae9e3fb34e63f5c00a68c9a0d"
+    },
+    {
+        "file_name": "HGID260_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID260_center.csv",
+        "extension": ".csv",
+        "checksum": "ecbc860edd25d6b262498f8980cc90d0"
+    },
+    {
+        "file_name": "HGID1297_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1297_left.csv",
+        "extension": ".csv",
+        "checksum": "12d33c8e5c7a53ccaf9f010ab50413d2"
+    },
+    {
+        "file_name": "HGID1662_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1662_left.csv",
+        "extension": ".csv",
+        "checksum": "7ce9c7430867a4e863164c1d79e1f1a4"
+    },
+    {
+        "file_name": "HGID1293_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1293_center.csv",
+        "extension": ".csv",
+        "checksum": "e772c0b21e754d2e31d55a2c500bc735"
+    },
+    {
+        "file_name": "HGID1643_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1643_width.txt",
+        "extension": ".txt",
+        "checksum": "e9f0c786ef5fffc548d782c7cc27c0a3"
+    },
+    {
+        "file_name": "HGID1149_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1149_center.csv",
+        "extension": ".csv",
+        "checksum": "1191d2dc49e80dfb0c04c6bbb2e02eb4"
+    },
+    {
+        "file_name": "HGID1519_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1519_right.csv",
+        "extension": ".csv",
+        "checksum": "bf51bf28cebd565ec2781f4a6ee89af2"
+    },
+    {
+        "file_name": "HGID744_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID744_width.txt",
+        "extension": ".txt",
+        "checksum": "0fc2517e5df30c6dd516f0c951ac332f"
+    },
+    {
+        "file_name": "ARC_hydrograph_metrics.txt",
+        "file_path": "Alluvial_River_Compilation/ARC_hydrograph_metrics.txt",
+        "extension": ".txt",
+        "checksum": "c4531f4811e5f44e8a4abf7fd233e41b"
+    },
+    {
+        "file_name": "HGID83_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID83_width.txt",
+        "extension": ".txt",
+        "checksum": "25505bf25a29628fd40853df11a5e2d4"
+    },
+    {
+        "file_name": "HGID1647_Right.CSV",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1647_Right.CSV",
+        "extension": ".CSV",
+        "checksum": "636a9165c1f8e5faca6694c8718f073e"
+    },
+    {
+        "file_name": "HGID1219_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1219_left.csv",
+        "extension": ".csv",
+        "checksum": "d605027a8003035a1dc25a40040ec088"
+    },
+    {
+        "file_name": "HGID1576_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1576_right.csv",
+        "extension": ".csv",
+        "checksum": "a8e38b7be220c9e695bb5b5b9f3d888b"
+    },
+    {
+        "file_name": "HGID737_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID737_center.csv",
+        "extension": ".csv",
+        "checksum": "4385e1546046ab58b724357c2b1bc01e"
+    },
+    {
+        "file_name": "HGID1510_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1510_left.csv",
+        "extension": ".csv",
+        "checksum": "b518def4c2446853acfe6908158994a1"
+    },
+    {
+        "file_name": "HGID1316_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1316_left.csv",
+        "extension": ".csv",
+        "checksum": "98f2f5885dbaaa010aac634eff575299"
+    },
+    {
+        "file_name": "HGID1651_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1651_width.txt",
+        "extension": ".txt",
+        "checksum": "217da1efda44916a15199b969412cd28"
+    },
+    {
+        "file_name": "HGID66_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID66_center.csv",
+        "extension": ".csv",
+        "checksum": "72fe691e4cd2d6d8dddce0d715b370b4"
+    },
+    {
+        "file_name": "HGID1628_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1628_width.txt",
+        "extension": ".txt",
+        "checksum": "bd5a789fbbb8857f9d124264ce6d196e"
+    },
+    {
+        "file_name": "HGID1604_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1604_width.txt",
+        "extension": ".txt",
+        "checksum": "2d39726c18978103ada04e832d76329e"
+    },
+    {
+        "file_name": "Read_me.txt",
+        "file_path": "Read_me.txt",
+        "extension": ".txt",
+        "checksum": "e5d00cb88eda2924a39a8edbe7f43326"
+    },
+    {
+        "file_name": "HGID1335_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1335_center.csv",
+        "extension": ".csv",
+        "checksum": "0552bceeba523d43d52df06f5bc9b801"
+    },
+    {
+        "file_name": "HGID1297_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1297_width.txt",
+        "extension": ".txt",
+        "checksum": "a2cc40ebecf710bbe0f3c051db6bcdd6"
+    },
+    {
+        "file_name": "HGID1172_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1172_left.csv",
+        "extension": ".csv",
+        "checksum": "1791413fa7aa4076407bf3f2ee74e8f7"
+    },
+    {
+        "file_name": "HGID1219_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1219_right.csv",
+        "extension": ".csv",
+        "checksum": "821f401b08a73b01db07beb3848585e1"
+    },
+    {
+        "file_name": "HGID1517_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1517_left.csv",
+        "extension": ".csv",
+        "checksum": "863e8cb9b635d1630a17c2d9d69d374a"
+    },
+    {
+        "file_name": "HGID836_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID836_left.csv",
+        "extension": ".csv",
+        "checksum": "bc0b3b79e1bbdd4668987e51b14cef52"
+    },
+    {
+        "file_name": "HGID94_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID94_center.csv",
+        "extension": ".csv",
+        "checksum": "29c95b0adc0a5457d520fd730a0e3071"
+    },
+    {
+        "file_name": "HGID1161_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1161_center.csv",
+        "extension": ".csv",
+        "checksum": "df44ab8cf056271a287ae5c73a74a504"
+    },
+    {
+        "file_name": "HGID1238_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1238_right.csv",
+        "extension": ".csv",
+        "checksum": "27163ce22e0be1763dc640116f581315"
+    },
+    {
+        "file_name": "HGID646_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID646_right.csv",
+        "extension": ".csv",
+        "checksum": "3651cce4f7e8554e20c5c3370e819e5f"
+    },
+    {
+        "file_name": "HGID667_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID667_right.csv",
+        "extension": ".csv",
+        "checksum": "ff7519684c960d389e3822741d514169"
+    },
+    {
+        "file_name": "HG_Width_from_banks.py",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Scripts/HG_Width_from_banks.py",
+        "extension": ".py",
+        "checksum": "3a06f08029a3c55dfb212eaac49a1308"
+    },
+    {
+        "file_name": "HGID1282_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1282_width.txt",
+        "extension": ".txt",
+        "checksum": "c15f40974149667eee81fd6153a44323"
+    },
+    {
+        "file_name": "HGID917_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID917_left.csv",
+        "extension": ".csv",
+        "checksum": "51891ade1f7a150e22e1a4440a49de54"
+    },
+    {
+        "file_name": "HGID917_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID917_right.csv",
+        "extension": ".csv",
+        "checksum": "1304ac2b954e87490079a9a64ea58271"
+    },
+    {
+        "file_name": "HGID1161_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1161_width.txt",
+        "extension": ".txt",
+        "checksum": "e3537c31019a64a88729025bdffb6335"
+    },
+    {
+        "file_name": "River_Sections.xlsx",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/River_Sections.xlsx",
+        "extension": ".xlsx",
+        "checksum": "714605ec3a3319f0e01861813fc43384"
+    },
+    {
+        "file_name": "HGID78_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID78_width.txt",
+        "extension": ".txt",
+        "checksum": "6470fd5d9bee26b0391d503763a3eccc"
+    },
+    {
+        "file_name": "HGID1121_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1121_left.csv",
+        "extension": ".csv",
+        "checksum": "69463b0112c6caf2b5e4750ac9810192"
+    },
+    {
+        "file_name": "HGID1148_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1148_width.txt",
+        "extension": ".txt",
+        "checksum": "3b491f2c9daa37069079125aa0092b79"
+    },
+    {
+        "file_name": "HGID1161_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1161_left.csv",
+        "extension": ".csv",
+        "checksum": "57e5be92a2107844f92b9907a07f672d"
+    },
+    {
+        "file_name": "HGID1242_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1242_width.txt",
+        "extension": ".txt",
+        "checksum": "f92cb9fc1831f945d6cf0da4cd557c59"
+    },
+    {
+        "file_name": "HG_Width_filter.py",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Scripts/HG_Width_filter.py",
+        "extension": ".py",
+        "checksum": "ae727777dd18e433dd98aba653babcac"
+    },
+    {
+        "file_name": "HGID1297_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1297_center.csv",
+        "extension": ".csv",
+        "checksum": "ebb7b64d72f203791e03340fc8b0c079"
+    },
+    {
+        "file_name": "HGID1151_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1151_left.csv",
+        "extension": ".csv",
+        "checksum": "7650ff6fdb1428b67d5bd357a92217be"
+    },
+    {
+        "file_name": "HGID1651_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1651_center.csv",
+        "extension": ".csv",
+        "checksum": "6f1ec7f120ce92b6dcb32607bd7c49cd"
+    },
+    {
+        "file_name": "HGID1242_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1242_right.csv",
+        "extension": ".csv",
+        "checksum": "d67ae06060867aef5376eaab00c227b5"
+    },
+    {
+        "file_name": "HGID1337_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1337_right.csv",
+        "extension": ".csv",
+        "checksum": "b827bb3cfb717c758f238e6a21c79632"
+    },
+    {
+        "file_name": "HGID1332_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1332_right.csv",
+        "extension": ".csv",
+        "checksum": "77d4fb9be8fbc283ed2d273c73203d6e"
+    },
+    {
+        "file_name": "HGID744width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID744width.txt",
+        "extension": ".txt",
+        "checksum": "939a91fc52f48a101871f12f0883b780"
+    },
+    {
+        "file_name": "HGID1238_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1238_center.csv",
+        "extension": ".csv",
+        "checksum": "3242d58d18b2558fc13840f48851c9dc"
+    },
+    {
+        "file_name": "HGID1335_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1335_right.csv",
+        "extension": ".csv",
+        "checksum": "237b93bc47321c352861f962e6ff82f5"
+    },
+    {
+        "file_name": "HGID78_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID78_center.csv",
+        "extension": ".csv",
+        "checksum": "be4abe0b37383b24e7332f463daae6aa"
+    },
+    {
+        "file_name": "HGID1302_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1302_left.csv",
+        "extension": ".csv",
+        "checksum": "06a069a0e8d0bf1869eba97ccfe2c5fc"
+    },
+    {
+        "file_name": "HG_Width_filter_auto.py",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Scripts/HG_Width_filter_auto.py",
+        "extension": ".py",
+        "checksum": "1f1efbc8016d3f40cfb14f0884703e5e"
+    },
+    {
+        "file_name": "HGID1294_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1294_right.csv",
+        "extension": ".csv",
+        "checksum": "9f79002c2f19dee768dd07b7df5003c4"
+    },
+    {
+        "file_name": "HGID1048_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1048_width.txt",
+        "extension": ".txt",
+        "checksum": "38678d961e58c9b8ff14e9705cdbe6f0"
+    },
+    {
+        "file_name": "HGID1630_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1630_left.csv",
+        "extension": ".csv",
+        "checksum": "4d91a43feb7df26da95a5c0a07819633"
+    },
+    {
+        "file_name": "HGID25_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID25_right.csv",
+        "extension": ".csv",
+        "checksum": "18378aba66e0c9a65bd5d02bddab18d5"
+    },
+    {
+        "file_name": "HGID1517_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1517_right.csv",
+        "extension": ".csv",
+        "checksum": "e53edc712819ad3abeaf0e6e2b45481d"
+    },
+    {
+        "file_name": "HGID66_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID66_left.csv",
+        "extension": ".csv",
+        "checksum": "a65f70f959f70c5621e9c1eac52c27c0"
+    },
+    {
+        "file_name": "HGID744_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID744_left.csv",
+        "extension": ".csv",
+        "checksum": "e8f6c8a71cb84dd74b3610ff8b239697"
+    },
+    {
+        "file_name": "HGID1510_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1510_center.csv",
+        "extension": ".csv",
+        "checksum": "864e53735e95ee4c7713a53041e61882"
+    },
+    {
+        "file_name": "HGID832_Right.CSV",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID832_Right.CSV",
+        "extension": ".CSV",
+        "checksum": "71324c73c4e4b9bf5da0ce5ee5599165"
+    },
+    {
+        "file_name": "HGID1242_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1242_left.csv",
+        "extension": ".csv",
+        "checksum": "9c5438226d0cb99eb22086ab5b2c91a7"
+    },
+    {
+        "file_name": "HGID1255_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1255_center.csv",
+        "extension": ".csv",
+        "checksum": "ceb9ecc6d379a582f3d3d68d1fd7bed3"
+    },
+    {
+        "file_name": "HGID667_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID667_center.csv",
+        "extension": ".csv",
+        "checksum": "142484dd622c3fc56ed056ff4383883b"
+    },
+    {
+        "file_name": "HGID94_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID94_width.txt",
+        "extension": ".txt",
+        "checksum": "d3d4b250571793ac57c45e82824c3770"
+    },
+    {
+        "file_name": "HGID1109_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1109_center.csv",
+        "extension": ".csv",
+        "checksum": "ced6118d30692e1e32308f374170abd6"
+    },
+    {
+        "file_name": "HGID1302_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1302_width.txt",
+        "extension": ".txt",
+        "checksum": "1e71e4f847a82aa6552495d2c815134f"
+    },
+    {
+        "file_name": "HGID1662_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1662_right.csv",
+        "extension": ".csv",
+        "checksum": "2b12fdd76af6915d10ae0ecb12a31d26"
+    },
+    {
+        "file_name": "HGID1151_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1151_width.txt",
+        "extension": ".txt",
+        "checksum": "5601fd7c042498404ed3aef7b4c2535f"
+    },
+    {
+        "file_name": "HGID82width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID82width.txt",
+        "extension": ".txt",
+        "checksum": "54daba5734087c084c8e1c57b6554b96"
+    },
+    {
+        "file_name": "HGID1561_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1561_center.csv",
+        "extension": ".csv",
+        "checksum": "801fbefeac15e53298a7b4e26926a972"
+    },
+    {
+        "file_name": "HGID1052_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1052_width.txt",
+        "extension": ".txt",
+        "checksum": "5accf720786fa8b9654edd6fa5d4453a"
+    },
+    {
+        "file_name": "HGID1516_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1516_width.txt",
+        "extension": ".txt",
+        "checksum": "155b7dc1c40745c2ed9f34686fa7b616"
+    },
+    {
+        "file_name": "HGID1643_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1643_left.csv",
+        "extension": ".csv",
+        "checksum": "55b02c4cf88ea983a4c4de972cd80d66"
+    },
+    {
+        "file_name": "HGID744_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID744_right.csv",
+        "extension": ".csv",
+        "checksum": "c630232b143576b382ac113c11c17e52"
+    },
+    {
+        "file_name": "HGID1647_Left.CSV",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1647_Left.CSV",
+        "extension": ".CSV",
+        "checksum": "d7767fbed359c5896526b2da4893e1ea"
+    },
+    {
+        "file_name": "HGID1317_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1317_center.csv",
+        "extension": ".csv",
+        "checksum": "44b1e9069bbd5589e6817c66edf646f8"
+    },
+    {
+        "file_name": "HRS_hydrograph_metrics.txt",
+        "file_path": "HighResolution_Sites/HRS_hydrograph_metrics.txt",
+        "extension": ".txt",
+        "checksum": "1622f0326329b48122337df91b7500e0"
+    },
+    {
+        "file_name": "HGID1148_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1148_center.csv",
+        "extension": ".csv",
+        "checksum": "ffbc3b9838da06d6e2d27e6ee60a4fee"
+    },
+    {
+        "file_name": "HGID1149_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1149_width.txt",
+        "extension": ".txt",
+        "checksum": "c474dc131f36b2259123df04cfbb467a"
+    },
+    {
+        "file_name": "HGID1113_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1113_center.csv",
+        "extension": ".csv",
+        "checksum": "415e2116d4cb53893990b9fda2329bcb"
+    },
+    {
+        "file_name": "HGID917width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID917width.txt",
+        "extension": ".txt",
+        "checksum": "0400ccac03b8d75b982639abbb2c76d6"
+    },
+    {
+        "file_name": "HGID1628_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1628_left.csv",
+        "extension": ".csv",
+        "checksum": "6e7304508abcbb3411fb5591fa24f879"
+    },
+    {
+        "file_name": "HGID1516_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1516_right.csv",
+        "extension": ".csv",
+        "checksum": "91f0b1cd8f8781d01e46aff5b6cc3bfc"
+    },
+    {
+        "file_name": "HGID1238_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1238_width.txt",
+        "extension": ".txt",
+        "checksum": "241e788c195dc61fcc3f542193f77a4e"
+    },
+    {
+        "file_name": "HGID25_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID25_width.txt",
+        "extension": ".txt",
+        "checksum": "c57b5e6710637da21d2fb5d734dec1ab"
+    },
+    {
+        "file_name": "HGID667_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID667_left.csv",
+        "extension": ".csv",
+        "checksum": "d9433cae06fe42edce424f077413431f"
+    },
+    {
+        "file_name": "HGID1282_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1282_right.csv",
+        "extension": ".csv",
+        "checksum": "c98c4ab01c46032153f95bcb60ad5107"
+    },
+    {
+        "file_name": "HGID1255_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1255_left.csv",
+        "extension": ".csv",
+        "checksum": "1146e6a4a7380df725f173ffd66dec5b"
+    },
+    {
+        "file_name": "HGID646_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID646_left.csv",
+        "extension": ".csv",
+        "checksum": "6f79fe8da813709d960aa87e7b53d328"
+    },
+    {
+        "file_name": "HGID832_Center.CSV",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID832_Center.CSV",
+        "extension": ".CSV",
+        "checksum": "b7b79b185252710798169506bcb63593"
+    },
+    {
+        "file_name": "HGID1536_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1536_right.csv",
+        "extension": ".csv",
+        "checksum": "b3b7d136e01e82e918be3f9671f0741a"
+    },
+    {
+        "file_name": "HGID1164_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1164_left.csv",
+        "extension": ".csv",
+        "checksum": "b2593a05d649b315c61c804796adff8a"
+    },
+    {
+        "file_name": "HGID1322_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1322_right.csv",
+        "extension": ".csv",
+        "checksum": "becc789b73a859f70baf8e38c9684982"
+    },
+    {
+        "file_name": "HGID11_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID11_left.csv",
+        "extension": ".csv",
+        "checksum": "54541c7f20d5baad15bbfa009d692048"
+    },
+    {
+        "file_name": "HGID25_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID25_left.csv",
+        "extension": ".csv",
+        "checksum": "8d0214ce624ab3b43b05df0a3c141723"
+    },
+    {
+        "file_name": "HGID113_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID113_left.csv",
+        "extension": ".csv",
+        "checksum": "7baea302d175e8406ddb199885ddb12f"
+    },
+    {
+        "file_name": "HGID731_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID731_left.csv",
+        "extension": ".csv",
+        "checksum": "5f31059a2f9c53b47bccfb057bc4c048"
+    },
+    {
+        "file_name": "HGID1151_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1151_right.csv",
+        "extension": ".csv",
+        "checksum": "84c271dfa9b555c912760fdf4a183eb4"
+    },
+    {
+        "file_name": "HGID113width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID113width.txt",
+        "extension": ".txt",
+        "checksum": "1e6c241707cd4ca3151ad7b8cc0d3740"
+    },
+    {
+        "file_name": "HGID1519_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1519_left.csv",
+        "extension": ".csv",
+        "checksum": "c280282f04ea93b1e8ba07fb40a3ed68"
+    },
+    {
+        "file_name": "HGID113_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID113_width.txt",
+        "extension": ".txt",
+        "checksum": "6a7a674bfa44b18118705ea59ae58a8a"
+    },
+    {
+        "file_name": "ARC_fullcompilation.txt",
+        "file_path": "Alluvial_River_Compilation/ARC_fullcompilation.txt",
+        "extension": ".txt",
+        "checksum": "c452b68146c343cbd3fc38ba4d3a9838"
+    },
+    {
+        "file_name": "HGID1647_Center.CSV",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1647_Center.CSV",
+        "extension": ".CSV",
+        "checksum": "8ae33b174399b4539995659d943167aa"
+    },
+    {
+        "file_name": "HGID1362_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1362_left.csv",
+        "extension": ".csv",
+        "checksum": "81104903a81287e8cdedbdef7b29840b"
+    },
+    {
+        "file_name": "HGID1604_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1604_center.csv",
+        "extension": ".csv",
+        "checksum": "b025737af6eee10b3b700a6a77a31779"
+    },
+    {
+        "file_name": "HGID836_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID836_width.txt",
+        "extension": ".txt",
+        "checksum": "482990cefffbcb358df3f97897bd24cc"
+    },
+    {
+        "file_name": "HGID1005_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1005_left.csv",
+        "extension": ".csv",
+        "checksum": "34041ae5ecc6fb72ed23b1bc876d3d93"
+    },
+    {
+        "file_name": "HGID1517_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1517_width.txt",
+        "extension": ".txt",
+        "checksum": "896161c3c8939f31766d558cf32766e1"
+    },
+    {
+        "file_name": "HGID1561_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1561_right.csv",
+        "extension": ".csv",
+        "checksum": "cd8fb46ae2ea52782f46ac66d09292ff"
+    },
+    {
+        "file_name": "HGID1362_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1362_right.csv",
+        "extension": ".csv",
+        "checksum": "23c7a8a303fe5414cbc8f7ae8139a226"
+    },
+    {
+        "file_name": "HGID66width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID66width.txt",
+        "extension": ".txt",
+        "checksum": "74a2b875d2b091b723a9f27b34891bf3"
+    },
+    {
+        "file_name": "HGID1048_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1048_right.csv",
+        "extension": ".csv",
+        "checksum": "5d10f13321b04f914ebeeb3ec246ff57"
+    },
+    {
+        "file_name": "HGID78_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID78_right.csv",
+        "extension": ".csv",
+        "checksum": "c326a5dab3f06460a7248b31c7f49b02"
+    },
+    {
+        "file_name": "HGID1121_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1121_center.csv",
+        "extension": ".csv",
+        "checksum": "d9ad161eeefd0d464d1be1deab002e29"
+    },
+    {
+        "file_name": "HGID1005_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1005_width.txt",
+        "extension": ".txt",
+        "checksum": "508ec2e1d1fd64a9d9434cad1f8cac1b"
+    },
+    {
+        "file_name": "HGID1113_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1113_left.csv",
+        "extension": ".csv",
+        "checksum": "92fb074c7ef07e0db51b2a5ea54b2991"
+    },
+    {
+        "file_name": "HGID1143_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1143_width.txt",
+        "extension": ".txt",
+        "checksum": "52444ebb0c02c934540fcec7a5da377d"
+    },
+    {
+        "file_name": "Data_citations.xlsx",
+        "file_path": "Data_citations.xlsx",
+        "extension": ".xlsx",
+        "checksum": "c8aa3d7e3d6c6dd58d30d029acb65f51"
+    },
+    {
+        "file_name": "HGID917_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID917_width.txt",
+        "extension": ".txt",
+        "checksum": "30137207f9734dec6c7598efc19007e3"
+    },
+    {
+        "file_name": "HGID83width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID83width.txt",
+        "extension": ".txt",
+        "checksum": "c56f559c55b604b699038f2b36907b73"
+    },
+    {
+        "file_name": "HGID1519_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1519_center.csv",
+        "extension": ".csv",
+        "checksum": "2d27f546deee38e813d4baa45e9c8dea"
+    },
+    {
+        "file_name": "HGID1172_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1172_right.csv",
+        "extension": ".csv",
+        "checksum": "d3320450370a04c91b26d639519940ab"
+    },
+    {
+        "file_name": "HGID1643_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1643_center.csv",
+        "extension": ".csv",
+        "checksum": "f58819962394de1edf32b42c9916ea05"
+    },
+    {
+        "file_name": "HGID1628_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1628_right.csv",
+        "extension": ".csv",
+        "checksum": "4a031249826b40463fbd347b8999a564"
+    },
+    {
+        "file_name": "HGID1293_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1293_width.txt",
+        "extension": ".txt",
+        "checksum": "7ab9bf2e32e1540fc200fd3afdb3fae5"
+    },
+    {
+        "file_name": "HGID11_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID11_right.csv",
+        "extension": ".csv",
+        "checksum": "2be97a3f69d249e0eeb290c16efb591b"
+    },
+    {
+        "file_name": "HGID731width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/unfiltered_examples/HGID731width.txt",
+        "extension": ".txt",
+        "checksum": "9f829590f13b952725ea3ea7212c7b14"
+    },
+    {
+        "file_name": "HGID1158_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1158_center.csv",
+        "extension": ".csv",
+        "checksum": "5f718acd742b0de0a5e7b2eb78df6c02"
+    },
+    {
+        "file_name": "HGID744_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID744_center.csv",
+        "extension": ".csv",
+        "checksum": "1d4fcca9e4b79c403475f68fe40e8456"
+    },
+    {
+        "file_name": "HGID1316_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1316_center.csv",
+        "extension": ".csv",
+        "checksum": "13d3979da33a158417b7e4f73038500b"
+    },
+    {
+        "file_name": "HGID1317_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1317_width.txt",
+        "extension": ".txt",
+        "checksum": "6baea57586e3099d2da3ad1740226763"
+    },
+    {
+        "file_name": "HGID171_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID171_width.txt",
+        "extension": ".txt",
+        "checksum": "8e5936249af69ecc8bf57e50c1177adf"
+    },
+    {
+        "file_name": "HGID1121_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1121_width.txt",
+        "extension": ".txt",
+        "checksum": "af598eeec604c93600be025d07a27335"
+    },
+    {
+        "file_name": "HGID1335_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1335_left.csv",
+        "extension": ".csv",
+        "checksum": "acd1a52bc92df40250558db7113f95a7"
+    },
+    {
+        "file_name": "HGID25_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID25_center.csv",
+        "extension": ".csv",
+        "checksum": "c2008a436bf71dcf715a1b34ee4784da"
+    },
+    {
+        "file_name": "HGID1576_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1576_left.csv",
+        "extension": ".csv",
+        "checksum": "d97d030e8c2186e637aff325a71ff635"
+    },
+    {
+        "file_name": "HGID1164_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1164_right.csv",
+        "extension": ".csv",
+        "checksum": "943b37bf35b15bc2dd880795c3fde3c7"
+    },
+    {
+        "file_name": "HGID1161_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1161_right.csv",
+        "extension": ".csv",
+        "checksum": "cfb8af9788e9458cbd88a80914a65c0e"
+    },
+    {
+        "file_name": "HGID1294_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1294_width.txt",
+        "extension": ".txt",
+        "checksum": "c1c9712aa22b81b591941db2e666133e"
+    },
+    {
+        "file_name": "HGID1576_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1576_width.txt",
+        "extension": ".txt",
+        "checksum": "09a18db01e915aa2c62c433f5662d367"
+    },
+    {
+        "file_name": "HGID1115_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1115_width.txt",
+        "extension": ".txt",
+        "checksum": "9f1ea1b5ba3b3ee7408725783ddacc8b"
+    },
+    {
+        "file_name": "HGID737_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID737_left.csv",
+        "extension": ".csv",
+        "checksum": "f7ed7652bbbc6825dd9ff4907fffaeb0"
+    },
+    {
+        "file_name": "HGID1628_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1628_center.csv",
+        "extension": ".csv",
+        "checksum": "de80043edad8f593bc1aa1d20d12c22a"
+    },
+    {
+        "file_name": "HGID1052_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1052_right.csv",
+        "extension": ".csv",
+        "checksum": "8cf31fee9da9b9150b5107b971d27ff5"
+    },
+    {
+        "file_name": "HGID1158_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1158_right.csv",
+        "extension": ".csv",
+        "checksum": "4cfc2c539e3ca0573eca4b2fe25dc4fd"
+    },
+    {
+        "file_name": "HGID917_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID917_center.csv",
+        "extension": ".csv",
+        "checksum": "0d0473bd26d56e38d2c9007b06b24360"
+    },
+    {
+        "file_name": "HGID1561_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1561_left.csv",
+        "extension": ".csv",
+        "checksum": "1408304f2022de7c8d239288ecbda3c9"
+    },
+    {
+        "file_name": "HGID1164_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1164_width.txt",
+        "extension": ".txt",
+        "checksum": "4b278074b8572a1f0da7db778cc33a35"
+    },
+    {
+        "file_name": "HGID1322_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1322_center.csv",
+        "extension": ".csv",
+        "checksum": "e615da3d6eb03962d8975eda470ef1c4"
+    },
+    {
+        "file_name": "HGID1113_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1113_width.txt",
+        "extension": ".txt",
+        "checksum": "cd924d29cdbc47ee2528bc12eec8315a"
+    },
+    {
+        "file_name": "HGID1152_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1152_right.csv",
+        "extension": ".csv",
+        "checksum": "188e32db361b99a007340dd5a5e1ec28"
+    },
+    {
+        "file_name": "HGID737_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID737_right.csv",
+        "extension": ".csv",
+        "checksum": "9121cd3a68fc63fbe2dde7b7aa4a9765"
+    },
+    {
+        "file_name": "HGID1294_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1294_center.csv",
+        "extension": ".csv",
+        "checksum": "e41fbfa27937a11028fabccb04d2b0ae"
+    },
+    {
+        "file_name": "HGID1148_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1148_right.csv",
+        "extension": ".csv",
+        "checksum": "988c448ee6448129aaa113808da7188b"
+    },
+    {
+        "file_name": "HGID1048_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1048_left.csv",
+        "extension": ".csv",
+        "checksum": "4c8febf81ba9b69fb664e71cd0be9119"
+    },
+    {
+        "file_name": "HGID1172_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1172_width.txt",
+        "extension": ".txt",
+        "checksum": "343c05818dc2e8ad5786c2b8f5216c08"
+    },
+    {
+        "file_name": "HGID83_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID83_center.csv",
+        "extension": ".csv",
+        "checksum": "e4ba3b48a65c4fb9b7e94e5f7973cec5"
+    },
+    {
+        "file_name": "HGID1152_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1152_left.csv",
+        "extension": ".csv",
+        "checksum": "47fd7c9df603b7733514d6ab4f6a8a62"
+    },
+    {
+        "file_name": "HGID832_Left.CSV",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID832_Left.CSV",
+        "extension": ".CSV",
+        "checksum": "35564e52333b8bb9f13b89df8c5c9be9"
+    },
+    {
+        "file_name": "HGID1332_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1332_left.csv",
+        "extension": ".csv",
+        "checksum": "73cc0c8fa3c5758c16aa1fe4d29e846c"
+    },
+    {
+        "file_name": "HGID66_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID66_width.txt",
+        "extension": ".txt",
+        "checksum": "7f165e16a268dbcece2dcda3a0534eaa"
+    },
+    {
+        "file_name": "HGID1630_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1630_right.csv",
+        "extension": ".csv",
+        "checksum": "d97ac56c89d4d20f0e2c3989dd9d5432"
+    },
+    {
+        "file_name": "HGID94_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID94_left.csv",
+        "extension": ".csv",
+        "checksum": "c00c8fa0eade21abe6939ca902bb36a1"
+    },
+    {
+        "file_name": "HGID650_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID650_center.csv",
+        "extension": ".csv",
+        "checksum": "d58a96b737ae5418210db14f898b7fd4"
+    },
+    {
+        "file_name": "HGID14_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID14_left.csv",
+        "extension": ".csv",
+        "checksum": "ab1ad63b2bf419fc4e4e8b33f4c0f645"
+    },
+    {
+        "file_name": "HGID1109_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1109_right.csv",
+        "extension": ".csv",
+        "checksum": "0e3acf86da4b4efc7090ceceb869f13c"
+    },
+    {
+        "file_name": "HGID11_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID11_center.csv",
+        "extension": ".csv",
+        "checksum": "44bbba06bbd914f9ad223edc9e6c5116"
+    },
+    {
+        "file_name": "HGID1604_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1604_left.csv",
+        "extension": ".csv",
+        "checksum": "aa7ff4a2491cffa4cc1851b45469414b"
+    },
+    {
+        "file_name": "HGID650_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID650_width.txt",
+        "extension": ".txt",
+        "checksum": "402d16c4c9980bf6cd0c377bcc29ef9e"
+    },
+    {
+        "file_name": "HGID1282_left.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1282_left.csv",
+        "extension": ".csv",
+        "checksum": "d65770ea47452a690fa378939de26455"
+    },
+    {
+        "file_name": "HGID1113_right.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1113_right.csv",
+        "extension": ".csv",
+        "checksum": "28b7fb0b9f358001febfbd89ebdb8cf9"
+    },
+    {
+        "file_name": "Site_names_file.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Scripts/Site_names_file.txt",
+        "extension": ".txt",
+        "checksum": "dbbb5e1ebb817b35569538735c76c710"
+    },
+    {
+        "file_name": "HGID1517_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID1517_center.csv",
+        "extension": ".csv",
+        "checksum": "809308a8ea1c07e8feebe076056cd9c1"
+    },
+    {
+        "file_name": "HGID1158_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1158_width.txt",
+        "extension": ".txt",
+        "checksum": "a198487b07e765d408c5253d43a73c95"
+    },
+    {
+        "file_name": "HGID1519_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID1519_width.txt",
+        "extension": ".txt",
+        "checksum": "234a1e224d30997b476252dc8ba989ac"
+    },
+    {
+        "file_name": "HGID731_center.csv",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Raw_data/Stream_profiles/HGID731_center.csv",
+        "extension": ".csv",
+        "checksum": "bd58c4ff2ecf6ae84d5b6e3238860182"
+    },
+    {
+        "file_name": "HGID14_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID14_width.txt",
+        "extension": ".txt",
+        "checksum": "9e42852042822b82c55e677a6f0fe96a"
+    },
+    {
+        "file_name": "HGID11_width.txt",
+        "file_path": "HighResolution_Sites/Riverbank_profiles/Data/Processed_data/Stream_profiles/HGID11_width.txt",
+        "extension": ".txt",
+        "checksum": "312d72513d13b3dfc75c65ee7b0582bd"
+    }
+]

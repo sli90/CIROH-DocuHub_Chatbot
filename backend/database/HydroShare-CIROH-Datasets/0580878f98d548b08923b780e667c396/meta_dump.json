@@ -1,0 +1,160 @@
+{
+    "title": "Enabling Community Research with the Next Generation National Water Modeling Framework on HydroShare-Linked Computing Platforms",
+    "abstract": "Presentation at AWRA 2025 Annual Water Resources Conference, Westminster, Colorado, November 10, 2025 and Jupyter Notebook and Python files for a Tutorial on NextGen Hydrologic modeling using the CIROH 2i2c JupyterHub Community NextGen hub. https://www.awra.org/Members/Events_and_Education/Events/2025%20Landing%20Pages/01_Annual/Annual2025.aspx\r\n\r\nAWRA presentation abstract\r\nThis presentation highlights new capabilities for using computing platforms linked to the Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) HydroShare hydrologic information system to configure, run, and analyze research-scale applications of the Next Generation National Water Model (NextGen). Developed by NOAA\u2019s Office of Water Prediction, NextGen is a modular, interoperable hydrologic modeling framework that uses standardized interfaces such as the Basic Model Interface (BMI) and the Hy_Features data model for representing hydrologic catchments, flowpaths, and nexuses. Despite its strengths, the complexity of NextGen and its supporting cyberinfrastructure (CI) presents significant barriers to researchers. Configuring the computing environment and setting up input data for a modeling domain can be complex, time-consuming and technically demanding. This presentation will discuss the use of JupyterHub computing platforms linked to HydroShare to address these challenges and support collaborative research. Tools developed by the Cooperative Institute for Research to Operations in Hydrology (CIROH) have been deployed in a cloud-based JupyterHub environment to streamline model setup, data preparation, execution, and analysis. With this configuration, researchers can define a spatial domain and time period, generate input files, run the model, and analyze outputs, all within a pre-configured cloud environment. Model results can be compared with operational and retrospective outputs from NOAA\u2019s National Water Model and ground-based observations, providing a foundation for evaluation and improvement. Workflows and results are encapsulated in Jupyter Notebooks and shared via HydroShare to promote accessibility, transparency, and reproducibility. By lowering technical barriers, this approach expands community engagement with NextGen, fosters collaborative hydrologic research, and serves as an entry point for research to improve the National Water Model as it adopts the NextGen framework.",
+    "language": "eng",
+    "subjects": [
+        "Hydrofabric",
+        "ciroh_portal_presentation",
+        "ciroh_hub_notebook",
+        "NextGEN",
+        "CIROH"
+    ],
+    "creators": [
+        {
+            "name": "Tarboton, David",
+            "phone": "+1 (435) 797-3172",
+            "address": "UT, US",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "homepage": "http://hydrology.usu.edu/dtarb",
+            "creator_order": 1,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        },
+        {
+            "name": "Nassar, Ayman",
+            "phone": "4358905557",
+            "organization": "Utah State University",
+            "email": "aymnassar@gmail.com",
+            "creator_order": 2,
+            "hydroshare_user_id": 1981,
+            "identifiers": {}
+        },
+        {
+            "name": "Castronova, Anthony M.",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 3,
+            "hydroshare_user_id": 11,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=ScWTFoQAAAAJ&amp;hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Anthony_Castronova",
+                "ORCID": "https://orcid.org/0000-0002-1341-5681"
+            }
+        },
+        {
+            "name": "Patel, Arpita",
+            "address": "Alabama, US",
+            "organization": "AWI;UA",
+            "email": "apatel54@ua.edu",
+            "creator_order": 4,
+            "hydroshare_user_id": 16622,
+            "identifiers": {}
+        },
+        {
+            "name": "Baig, Furqan",
+            "address": "Illinois, US",
+            "organization": "University of Illinois at Urbana-Champaign",
+            "email": "fbaig@illinois.edu",
+            "creator_order": 5,
+            "hydroshare_user_id": 16982,
+            "identifiers": {}
+        },
+        {
+            "name": "Salehabadi, Homa",
+            "address": "CA, US",
+            "organization": "Utah Sate University",
+            "email": "homa.salehabadi@gmail.com",
+            "homepage": "http://www.linkedin.com/in/homasalehabadi",
+            "creator_order": 6,
+            "hydroshare_user_id": 4484,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=LsGbadwAAAAJ&amp;hl=en",
+                "ORCID": "https://orcid.org/0000-0003-3516-4462"
+            }
+        },
+        {
+            "name": "Abualqumboz, Motasem",
+            "address": "UT, US",
+            "organization": "Utah State University",
+            "email": "mabualqumboz@gmail.com",
+            "creator_order": 7,
+            "hydroshare_user_id": 11006,
+            "identifiers": {}
+        },
+        {
+            "name": "Dash, Pabitra",
+            "address": "VA, US",
+            "organization": "USU",
+            "email": "pabitra.dash@usu.edu",
+            "homepage": "https://usu.edu/pkdash",
+            "creator_order": 8,
+            "hydroshare_user_id": 41,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-5995-9297"
+            }
+        },
+        {
+            "name": "Horsburgh, Jeffery S.",
+            "phone": "+1 (435) 797-2946",
+            "address": "UT, US",
+            "organization": "Utah State University;Utah Water Research Laboratory",
+            "email": "jeff.horsburgh@usu.edu",
+            "homepage": "http://jeffh.usu.edu/",
+            "creator_order": 9,
+            "hydroshare_user_id": 10,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=mu4k534AAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Jeffery_Horsburgh",
+                "ORCID": "https://orcid.org/0000-0002-0768-3196"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource references",
+            "value": "AWRA 2025 Annual Water Resources Conference, Westminster, Colorado, November 10, 2025, https://www.awra.org/Members/Events_and_Education/Events/2025%20Landing%20Pages/01_Annual/Annual2025.aspx"
+        },
+        {
+            "type": "The content of this resource can be executed by",
+            "value": "Patel, A., B. Lee, N. Minor, M. Singh, A. Castronova (2025). CIROH-2i2c JupyterHub, HydroShare, http://www.hydroshare.org/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98"
+        }
+    ],
+    "additional_metadata": {
+        "thumbnail_url": "https://www.hydroshare.org/resource/0580878f98d548b08923b780e667c396/data/contents/Thumbnail.PNG"
+    },
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA), University of Alabama",
+            "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+            "number": "NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University",
+            "funding_agency_url": "https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "name": "CONUS",
+        "northlimit": 49.804,
+        "eastlimit": -65.4594,
+        "southlimit": 24.639,
+        "westlimit": -124.8739,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "citation": "Tarboton, D., A. Nassar, A. M. Castronova, A. Patel, F. Baig, H. Salehabadi, M. Abualqumboz, P. Dash, J. S. Horsburgh (2026). Enabling Community Research with the Next Generation National Water Modeling Framework on HydroShare-Linked Computing Platforms, HydroShare, http://www.hydroshare.org/resource/0580878f98d548b08923b780e667c396",
+    "url": "http://www.hydroshare.org/resource/0580878f98d548b08923b780e667c396",
+    "identifier": "http://www.hydroshare.org/resource/0580878f98d548b08923b780e667c396",
+    "created": "2025-11-03 19:06:41.744487+00:00",
+    "modified": "2026-02-27 14:42:59.408037+00:00",
+    "type": "CompositeResource"
+}

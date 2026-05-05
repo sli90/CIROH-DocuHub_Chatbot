@@ -1,0 +1,40 @@
+[project]
+name = "ngiab-cal"
+version = "0.3.4"
+description = "A Python CLI tool to simplify hydrologic model calibration for NextGen In A Box (NGIAB) workflows."
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = [
+    "NGIAB",
+    "NextGen",
+    "hydrologcal modeling",
+    "model calibration",
+    "ngen-cal",
+    "CFE",
+    "Noah-OWP",
+    "Docker",
+]
+dependencies = [
+    "aiohttp>=3.11.16",
+    "colorama>=0.4.6",
+    "hydrotools-nwis-client>=4.1.0",
+    "pandas>=2.2.3",
+    "rich>=14.0.0",
+]
+
+[project.scripts]
+ngiab-cal = "ngiab_cal.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/CIROH-UA/ngiab-cal"
+Issues = "https://github.com/CIROH-UA/ngiab-cal/issues"
+
+
+[dependency-groups]
+dev = ["ruff>=0.11.6"]
+
+[tool.ruff]
+line-length = 100
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]

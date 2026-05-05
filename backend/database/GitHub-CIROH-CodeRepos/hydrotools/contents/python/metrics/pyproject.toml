@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hydrotools.metrics"
+authors = [
+    {name = "Jason A. Regina", email = "jason.regina@noaa.gov"},
+]
+description = "Variety of standard model evaluation metrics."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Hydrology",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "numpy>=1.20.0",
+    "pandas",
+    "scipy",
+    "arch"
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "hydrotools.metrics._version.__version__"}
+
+[project.optional-dependencies]
+develop = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/NOAA-OWP/hydrotools"
+Documentation = "https://noaa-owp.github.io/hydrotools/hydrotools.metrics.html"
+Repository = "https://github.com/NOAA-OWP/hydrotools/tree/main/python/metrics"
+"Bug Tracker" = "https://github.com/NOAA-OWP/hydrotools/issues"

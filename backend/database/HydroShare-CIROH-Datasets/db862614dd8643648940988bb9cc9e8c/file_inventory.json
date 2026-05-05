@@ -1,0 +1,38 @@
+[
+    {
+        "file_name": "StreamStatsInfo_Cheery-creek_06713500.pdf",
+        "file_path": "StreamStatsInfo_Cheery-creek_06713500.pdf",
+        "extension": ".pdf",
+        "checksum": "bf769b56b5fe73cdbd1d9151620b5a3f"
+    },
+    {
+        "file_name": "annual-peak-streamflow_cheery-creek_06713500.jpeg",
+        "file_path": "annual-peak-streamflow_cheery-creek_06713500.jpeg",
+        "extension": ".jpeg",
+        "checksum": "72ae56316896fcb7f57fb0804fb7cbb6"
+    },
+    {
+        "file_name": "stage-vs-discharge-06713500.jpeg",
+        "file_path": "stage-vs-discharge-06713500.jpeg",
+        "extension": ".jpeg",
+        "checksum": "7daae2f2371dfa45963a9125607f6aa4"
+    },
+    {
+        "file_name": "Disclaimer.txt",
+        "file_path": "basin/Disclaimer.txt",
+        "extension": ".txt",
+        "checksum": "ad8a657d884c17dda5ad3fb2ccaeedd1"
+    },
+    {
+        "file_name": "Cheery-creek_USGS06713500.csv",
+        "file_path": "Cheery-creek_USGS06713500.csv",
+        "extension": ".csv",
+        "checksum": "6251f1b6212f3f59f3a7e7d0632f870b"
+    },
+    {
+        "file_name": "daily-streamflow_cheery-creek_06713500.png",
+        "file_path": "daily-streamflow_cheery-creek_06713500.png",
+        "extension": ".png",
+        "checksum": "932176a48949104e534fb72c771f7e42"
+    }
+]

@@ -1,0 +1,114 @@
+{
+    "id": 634661554,
+    "name": "NGIAB-CloudInfra",
+    "full_name": "CIROH-UA/NGIAB-CloudInfra",
+    "html_url": "https://github.com/CIROH-UA/NGIAB-CloudInfra",
+    "description": "NextGen In A Box: NextGen Generation Water Modeling Framework for Community Release (Docker version) and GitHub Repo for CIROH IT CyberInfrastructure",
+    "homepage": "https://doi.org/10.1016/j.envsoft.2025.106666",
+    "default_branch": "main",
+    "created_at": "2023-04-30T20:55:50Z",
+    "updated_at": "2026-05-01T13:27:16Z",
+    "pushed_at": "2026-05-01T19:25:45Z",
+    "language": "Shell",
+    "topics": [
+        "catchment",
+        "drought",
+        "flooding",
+        "forcings",
+        "nextgen",
+        "nexus",
+        "ngen",
+        "realizations",
+        "t-route"
+    ],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 13793,
+    "stargazers_count": 22,
+    "watchers_count": 22,
+    "forks_count": 34,
+    "open_issues_count": 32,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 20,
+        "top_contributors": [
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 169
+            },
+            {
+                "id": 130000039,
+                "login": "benlee0423",
+                "html_url": "https://github.com/benlee0423",
+                "type": "User",
+                "contributions": 108
+            },
+            {
+                "id": 60660437,
+                "login": "ZacharyWills",
+                "html_url": "https://github.com/ZacharyWills",
+                "type": "User",
+                "contributions": 47
+            },
+            {
+                "id": 26720477,
+                "login": "JoshCu",
+                "html_url": "https://github.com/JoshCu",
+                "type": "User",
+                "contributions": 19
+            },
+            {
+                "id": 5186647,
+                "login": "hellkite500",
+                "html_url": "https://github.com/hellkite500",
+                "type": "User",
+                "contributions": 13
+            },
+            {
+                "id": 69406976,
+                "login": "Sheargrub",
+                "html_url": "https://github.com/Sheargrub",
+                "type": "User",
+                "contributions": 12
+            },
+            {
+                "id": 43544549,
+                "login": "romer8",
+                "html_url": "https://github.com/romer8",
+                "type": "User",
+                "contributions": 10
+            },
+            {
+                "id": 120678271,
+                "login": "manjilasingh",
+                "html_url": "https://github.com/manjilasingh",
+                "type": "User",
+                "contributions": 10
+            },
+            {
+                "id": 53343824,
+                "login": "jameshalgren",
+                "html_url": "https://github.com/jameshalgren",
+                "type": "User",
+                "contributions": 6
+            },
+            {
+                "id": 65355706,
+                "login": "Prajwal2006",
+                "html_url": "https://github.com/Prajwal2006",
+                "type": "User",
+                "contributions": 4
+            }
+        ]
+    }
+}

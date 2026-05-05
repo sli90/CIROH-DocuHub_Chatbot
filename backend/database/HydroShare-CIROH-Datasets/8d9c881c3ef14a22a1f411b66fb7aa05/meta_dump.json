@@ -1,0 +1,50 @@
+{
+    "title": "Drought on the Blue Nile Using SPI",
+    "abstract": "This is a work in progress with data for accessing data for drought index (standard precipitation index) on the Nile.",
+    "language": "eng",
+    "subjects": [
+        "Nile",
+        "HydroBASINS",
+        "HydrSHEDS",
+        "SPI",
+        "Drought"
+    ],
+    "creators": [
+        {
+            "name": "Melesse, Meklit Beriuhn",
+            "organization": "Washington State University",
+            "email": "m.melesse@wsu.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 26858,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [],
+    "spatial_coverage": {
+        "type": "box",
+        "name": "Blue Nile",
+        "northlimit": 16.00833333333341,
+        "eastlimit": 39.80833333333338,
+        "southlimit": 7.7118572658963025,
+        "westlimit": 32.49943271213105,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1981-01-01 00:00:00",
+        "end": "2022-12-31 00:00:00"
+    },
+    "citation": "Melesse, M. B. (2024). Drought on the Blue Nile Using SPI, HydroShare, http://www.hydroshare.org/resource/8d9c881c3ef14a22a1f411b66fb7aa05",
+    "url": "http://www.hydroshare.org/resource/8d9c881c3ef14a22a1f411b66fb7aa05",
+    "identifier": "http://www.hydroshare.org/resource/8d9c881c3ef14a22a1f411b66fb7aa05",
+    "created": "2024-06-19 16:18:54.543166+00:00",
+    "modified": "2024-06-19 16:55:45.421334+00:00",
+    "type": "CompositeResource"
+}

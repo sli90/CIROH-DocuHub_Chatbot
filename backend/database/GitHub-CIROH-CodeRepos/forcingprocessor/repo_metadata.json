@@ -1,0 +1,93 @@
+{
+    "id": 1052799392,
+    "name": "forcingprocessor",
+    "full_name": "CIROH-UA/forcingprocessor",
+    "html_url": "https://github.com/CIROH-UA/forcingprocessor",
+    "description": "ForcingProcessor calculates NextGen catchment-averaged forcings from gridded sources like the National Water Model.",
+    "homepage": "https://docs.ciroh.org/docs/products/research-datastream/forcingprocessor/",
+    "default_branch": "main",
+    "created_at": "2025-09-08T15:04:24Z",
+    "updated_at": "2026-04-28T15:39:21Z",
+    "pushed_at": "2026-04-28T15:31:10Z",
+    "language": "Python",
+    "topics": [
+        "atmospheric",
+        "aws",
+        "boto3",
+        "ciroh",
+        "cloud",
+        "datastream",
+        "docker",
+        "forcings",
+        "geopackage",
+        "geospatial-processing",
+        "high-performance",
+        "multiprocessing",
+        "nrds",
+        "nwm",
+        "precipitation",
+        "python"
+    ],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 7477,
+    "stargazers_count": 2,
+    "watchers_count": 2,
+    "forks_count": 7,
+    "open_issues_count": 7,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 6,
+        "top_contributors": [
+            {
+                "id": 79336055,
+                "login": "JordanLaserGit",
+                "html_url": "https://github.com/JordanLaserGit",
+                "type": "User",
+                "contributions": 315
+            },
+            {
+                "id": 223894814,
+                "login": "harshavemula-ua",
+                "html_url": "https://github.com/harshavemula-ua",
+                "type": "User",
+                "contributions": 108
+            },
+            {
+                "id": 170465264,
+                "login": "quinnylee",
+                "html_url": "https://github.com/quinnylee",
+                "type": "User",
+                "contributions": 5
+            },
+            {
+                "id": 49699333,
+                "login": "dependabot[bot]",
+                "html_url": "https://github.com/apps/dependabot",
+                "type": "Bot",
+                "contributions": 3
+            },
+            {
+                "id": 26720477,
+                "login": "JoshCu",
+                "html_url": "https://github.com/JoshCu",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 19376091,
+                "login": "kamalcou",
+                "html_url": "https://github.com/kamalcou",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

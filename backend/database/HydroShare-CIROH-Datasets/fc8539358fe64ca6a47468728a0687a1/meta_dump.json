@@ -1,0 +1,155 @@
+{
+    "title": "Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial",
+    "abstract": "This tutorial introduces the use of the Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) HydroShare repository and linked CIROH JupyterHub computing platform on 2i2c in support of CIROH collaborative research and NextGen modeling. \r\n\r\nLearning Objectives\r\n\u25cf\tBe able to use JupyterHub computing platforms linked to HydroShare (CIROH Jupyterhub on 2i2c specifically) to access, analyze and work with high community value datasets (AORC, Hydrofabric).\r\n\u25cf\tBe able to set up, run, and analyze the results from a NextGEN model configured for research over a small watershed.\r\n\u25cf\tBe able to create a HydroShare resource, populate it with metadata to share with a colleague or make it public.\r\n\r\nTo do this tutorial download and work through the steps in the Word Document CIROH_HydroShare_Tutorial.docx.\r\n\r\nYou will need to launch this resource into CIROH JupyterHub using Open With to work with the Tutorial Python and Jupyter Notebook files.",
+    "language": "eng",
+    "subjects": [
+        "ciroh",
+        "Hydrofabric",
+        "cirohdevcon25",
+        "NextGEN",
+        "ciroh_hub_notebook",
+        "workflow"
+    ],
+    "creators": [
+        {
+            "name": "Tarboton, David",
+            "phone": "+1 (435) 797-3172",
+            "address": "UT, US",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "homepage": "http://hydrology.usu.edu/dtarb",
+            "creator_order": 1,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        },
+        {
+            "name": "Salehabadi, Homa",
+            "address": "CA, US",
+            "organization": "Utah Sate University",
+            "email": "homa.salehabadi@gmail.com",
+            "homepage": "http://www.linkedin.com/in/homasalehabadi",
+            "creator_order": 2,
+            "hydroshare_user_id": 4484,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=LsGbadwAAAAJ&hl=en",
+                "ORCID": "https://orcid.org/0000-0003-3516-4462"
+            }
+        },
+        {
+            "name": "Nassar, Ayman",
+            "phone": "4358905557",
+            "organization": "Utah State University",
+            "email": "aymnassar@gmail.com",
+            "creator_order": 3,
+            "hydroshare_user_id": 1981,
+            "identifiers": {}
+        },
+        {
+            "name": "Baig, Furqan",
+            "address": "Illinois, US",
+            "organization": "University of Illinois at Urbana-Champaign",
+            "email": "fbaig@illinois.edu",
+            "creator_order": 4,
+            "hydroshare_user_id": 16982,
+            "identifiers": {}
+        },
+        {
+            "name": "Castronova, Anthony M.",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 5,
+            "hydroshare_user_id": 11,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=ScWTFoQAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Anthony_Castronova",
+                "ORCID": "https://orcid.org/0000-0002-1341-5681"
+            }
+        },
+        {
+            "name": "Garousi-Nejad, Irene",
+            "address": "CA, US",
+            "organization": "CUAHSI",
+            "email": "igarousi@cuahsi.org",
+            "creator_order": 6,
+            "hydroshare_user_id": 475,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=dKqI7iAAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Irene_Garousi-Nejad",
+                "ORCID": "https://orcid.org/0000-0003-2929-3946"
+            }
+        },
+        {
+            "name": "Patel, Arpita",
+            "address": "Alabama, US",
+            "organization": "AWI;UA",
+            "email": "apatel54@ua.edu",
+            "creator_order": 7,
+            "hydroshare_user_id": 16622,
+            "identifiers": {}
+        },
+        {
+            "name": "Dash, Pabitra",
+            "address": "VA, US",
+            "organization": "USU",
+            "email": "pabitra.dash@usu.edu",
+            "homepage": "https://usu.edu/pkdash",
+            "creator_order": 8,
+            "hydroshare_user_id": 41,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-5995-9297"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is part of",
+            "value": "Minor, N. (2026). CIROH Portal: Presentation Tab Additions, HydroShare, http://www.hydroshare.org/resource/200fa86bea61438aa862d437103485db"
+        },
+        {
+            "type": "The content of this resource is part of",
+            "value": "Patel, A., J. Halgren (2026). [OLD] CIROH DevCon 2025 Presentations and Workshops, HydroShare, http://www.hydroshare.org/resource/02854a10418a45899c8ed02ff8758f03"
+        },
+        {
+            "type": "The content of this resource is part of",
+            "value": "Patel, A., J. Halgren (2026). CIROH DevCon 2025 Presentations and Workshops, HydroShare, http://www.hydroshare.org/resource/45c063162317402bba4a072c5802f08e"
+        },
+        {
+            "type": "This resource requires",
+            "value": "Salehabadi, H., D. Tarboton, A. Nassar, A. M. Castronova, P. Dash (2025). Jupyter Notebooks for the Retrieval of AORC Data for Hydrologic Analysis, HydroShare, http://www.hydroshare.org/resource/72ea9726187e43d7b50a624f2acf591f"
+        },
+        {
+            "type": "The content of this resource is part of",
+            "value": "Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA), University of Alabama",
+            "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+            "number": "NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University",
+            "funding_agency_url": "https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"
+        }
+    ],
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Tarboton, D., H. Salehabadi, A. Nassar, F. Baig, A. M. Castronova, I. Garousi-Nejad, A. Patel, P. Dash (2026). Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial, HydroShare, https://doi.org/10.4211/hs.fc8539358fe64ca6a47468728a0687a1, DOI for this published resource is pending activation.",
+    "url": "http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1",
+    "identifier": "http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1",
+    "created": "2025-05-26 03:03:11.389648+00:00",
+    "modified": "2026-02-27 14:39:04.321972+00:00",
+    "published": "2025-07-20 22:58:33.196512+00:00",
+    "type": "CompositeResource"
+}

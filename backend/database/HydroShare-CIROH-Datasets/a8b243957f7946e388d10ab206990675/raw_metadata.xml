@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/a8b243957f7946e388d10ab206990675">
+    <dc:subject>stream temperature</dc:subject>
+    <dc:date>
+      <hsterms:published>
+        <rdf:value>2025-02-04T15:44:42.195659+00:00</rdf:value>
+      </hsterms:published>
+    </dc:date>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/a8b243957f7946e388d10ab206990675"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hsterms:creatorOrder>
+        <hsterms:name>Terri S Hogue</hsterms:name>
+        <hsterms:organization>Colorado School of Mines</hsterms:organization>
+        <hsterms:email></hsterms:email>
+        <hsterms:address></hsterms:address>
+      </rdf:Description>
+    </dc:creator>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This resource contains code and data related to the development of the TempEst 2 stream temperature remote sensing model (manuscript in review with Journal of Hydrology).  The code includes the model implementation (model.R), some utility functions (valfn.R), data retrieval scripts for Google Earth Engine (eeretrieval.py and datapts.py), and a reproducible validation notebook (validation.Rmd), along with the knitted PDF of the latter (validation.pdf).  The main data include stream temperature daily mean/max observations retrieved from the USGS NWIS as well as remotely-sensed and gridded observations retrieved using Google Earth Engine from NLDAS, ESA WorldCover, MODIS, ERA5, and EPA Ecoregions (using eeretrieval.py).  These are contained in three files.  AllData.csv includes all observations for mean temperature.  ExtData.csv ("extended data") adds maximum temperature, at the expense of fewer total observations being included.  Ecoregions.csv is not central to the analysis, but includes EPA Level I ecoregion classifications for convenience.&#13;
+&#13;
+Model performance tests can be reproduced using validation.Rmd.  To run validation.Rmd in full, there must be a Data directory with subdirectories Density and TSLen, a Figures directory, at least one of the main data files (AllData.csv, ExtData.csv) or equivalent, and Ecoregions.csv.  A knitted version of the Notebook is included in this resource.  The error map plots also use an EPA Level I Ecoregions (https://gaftp.epa.gov/EPADataCommons/ORD/Ecoregions/cec_na/na_cec_eco_l1.zip) shapefile, which is assumed to be in an Ecoregions subdirectory of the *parent* directory.  This dependency can be removed by replacing the `plot.eco` function with ordinary ggplot plotting.&#13;
+&#13;
+The two rda (RData) files contain different versions of a pre-trained model.  model.rda contains a regular, pre-trained model function that can be used directly to generate predictions.  krigs.rda contains a list of the actual fitted kriging models, which can be used for investigating model components (see demo.pdf).&#13;
+&#13;
+These data and related items of information have not been formally disseminated by NOAA, and do not represent any agency determination, view, or policy.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dcterms:bibliographicCitation>Philippus, D., C. R. Corona, K. Schneider, A. Rust, T. S. Hogue (2025). TempEst 2 Development Data: Observed Stream Temperature, Covariates, Performance Data, and Analysis Notebooks, HydroShare, https://doi.org/10.4211/hs.a8b243957f7946e388d10ab206990675</dcterms:bibliographicCitation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>Colorado School of Mines</hsterms:organization>
+        <hsterms:email></hsterms:email>
+        <hsterms:address></hsterms:address>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hsterms:creatorOrder>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:name>Ashley Rust</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>ungauged modeling</dc:subject>
+    <dc:subject>river temperature</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26228</hsterms:description>
+        <hsterms:email>dphilippus@mines.edu</hsterms:email>
+        <hsterms:organization>Colorado School of Mines</hsterms:organization>
+        <hsterms:name>Philippus, Daniel</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26228</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>Colorado School of Mines</hsterms:organization>
+        <hsterms:email></hsterms:email>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:address></hsterms:address>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:name>Katie Schneider</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>modeling</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:name>Corona, Claudia R</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:email>clco6964@colorado.edu</hsterms:email>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7924</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7924</hsterms:description>
+        <hsterms:organization>University of Colorado, Boulder</hsterms:organization>
+        <hsterms:address>Colorado, US</hsterms:address>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-6447-9175"/>
+      </rdf:Description>
+    </dc:creator>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>name=Contiguous United States; projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=49.0; eastlimit=-67.3; southlimit=25.14; westlimit=-124.06</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-09-16T19:46:55.228660+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-02-04T15:44:41.743406+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=2001-01-02T00:00:00; end=2022-12-31T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:title>TempEst 2 Development Data: Observed Stream Temperature, Covariates, Performance Data, and Analysis Notebooks</dc:title>
+    <dc:subject>contiguous united states</dc:subject>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ror.org/02z5nhe81"/>
+        <hsterms:awardTitle>Cooperative Institute for Research to Operations in Hydrology</hsterms:awardTitle>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <dc:subject>remote sensing</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:doi rdf:resource="https://doi.org/10.4211/hs.a8b243957f7946e388d10ab206990675"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:language>eng</dc:language>
+    <dc:publisher>
+      <rdf:Description>
+        <hsterms:publisherName>Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)</hsterms:publisherName>
+        <hsterms:publisherURL rdf:resource="https://www.cuahsi.org"/>
+      </rdf:Description>
+    </dc:publisher>
+  </hsterms:CompositeResource>
+</rdf:RDF>

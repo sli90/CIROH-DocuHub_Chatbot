@@ -1,0 +1,78 @@
+{
+    "id": 829023140,
+    "name": "Tethys-CSES",
+    "full_name": "CIROH-UA/Tethys-CSES",
+    "html_url": "https://github.com/CIROH-UA/Tethys-CSES",
+    "description": "This repository serves as an interactive evaluation platform to visualize modeled streamflow.",
+    "homepage": "",
+    "default_branch": "main",
+    "created_at": "2024-07-15T15:43:54Z",
+    "updated_at": "2026-01-12T18:54:57Z",
+    "pushed_at": "2026-01-12T18:54:44Z",
+    "language": "Python",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 50612,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 1,
+    "open_issues_count": 0,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 7,
+        "top_contributors": [
+            {
+                "id": 33735397,
+                "login": "whitelightning450",
+                "html_url": "https://github.com/whitelightning450",
+                "type": "User",
+                "contributions": 37
+            },
+            {
+                "id": 5123221,
+                "login": "swainn",
+                "html_url": "https://github.com/swainn",
+                "type": "User",
+                "contributions": 4
+            },
+            {
+                "id": 28275758,
+                "login": "shahab122",
+                "html_url": "https://github.com/shahab122",
+                "type": "User",
+                "contributions": 3
+            },
+            {
+                "id": 120678271,
+                "login": "manjilasingh",
+                "html_url": "https://github.com/manjilasingh",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 1
+            },
+            {
+                "id": 43544549,
+                "login": "romer8",
+                "html_url": "https://github.com/romer8",
+                "type": "User",
+                "contributions": 1
+            },
+            {
+                "id": 12499203,
+                "login": "shawncrawley",
+                "html_url": "https://github.com/shawncrawley",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

@@ -1,0 +1,434 @@
+[
+    {
+        "path": ".github/workflows/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 13401,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/docker_apply_cache.yaml",
+        "file_name": "docker_apply_cache.yaml",
+        "extension": ".yaml",
+        "size_bytes": 7709,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/docker_build_deploy.yaml",
+        "file_name": "docker_build_deploy.yaml",
+        "extension": ".yaml",
+        "size_bytes": 5681,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/docker_pr_receive.yaml",
+        "file_name": "docker_pr_receive.yaml",
+        "extension": ".yaml",
+        "size_bytes": 9493,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/hook-deploy-composite.yaml",
+        "file_name": "hook-deploy-composite.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1456,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-close-signal.yaml",
+        "file_name": "pr-close-signal.yaml",
+        "extension": ".yaml",
+        "size_bytes": 482,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-comment.yaml",
+        "file_name": "pr-comment.yaml",
+        "extension": ".yaml",
+        "size_bytes": 7117,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-post-remove-branch.yaml",
+        "file_name": "pr-post-remove-branch.yaml",
+        "extension": ".yaml",
+        "size_bytes": 870,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pr-preflight.yaml",
+        "file_name": "pr-preflight.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1125,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/update-cache.yaml",
+        "file_name": "update-cache.yaml",
+        "extension": ".yaml",
+        "size_bytes": 6738,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/update-workflows.yaml",
+        "file_name": "update-workflows.yaml",
+        "extension": ".yaml",
+        "size_bytes": 4286,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/workflows-version.txt",
+        "file_name": "workflows-version.txt",
+        "extension": ".txt",
+        "size_bytes": 6,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 711,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "CITATION.cff",
+        "file_name": "CITATION.cff",
+        "extension": ".cff",
+        "size_bytes": 1478,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CODE_OF_CONDUCT.md",
+        "file_name": "CODE_OF_CONDUCT.md",
+        "extension": ".md",
+        "size_bytes": 464,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "CONTRIBUTING.md",
+        "file_name": "CONTRIBUTING.md",
+        "extension": ".md",
+        "size_bytes": 5958,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "LICENSE.md",
+        "file_name": "LICENSE.md",
+        "extension": ".md",
+        "size_bytes": 3382,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 1330,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "config.yaml",
+        "file_name": "config.yaml",
+        "extension": ".yaml",
+        "size_bytes": 2560,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/advanced-topics.md",
+        "file_name": "advanced-topics.md",
+        "extension": ".md",
+        "size_bytes": 6771,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/calibration.md",
+        "file_name": "calibration.md",
+        "extension": ".md",
+        "size_bytes": 4351,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/data-preparation.md",
+        "file_name": "data-preparation.md",
+        "extension": ".md",
+        "size_bytes": 8925,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/data/ngiab-newline-fixer.zip",
+        "file_name": "ngiab-newline-fixer.zip",
+        "extension": ".zip",
+        "size_bytes": 45039,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/evaluation.md",
+        "file_name": "evaluation.md",
+        "extension": ".md",
+        "size_bytes": 4683,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig1-1.png",
+        "file_name": "fig1-1.png",
+        "extension": ".png",
+        "size_bytes": 73240,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig1-2.png",
+        "file_name": "fig1-2.png",
+        "extension": ".png",
+        "size_bytes": 29817,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig1-3.png",
+        "file_name": "fig1-3.png",
+        "extension": ".png",
+        "size_bytes": 33799,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig1-4.png",
+        "file_name": "fig1-4.png",
+        "extension": ".png",
+        "size_bytes": 1020792,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig1-5.png",
+        "file_name": "fig1-5.png",
+        "extension": ".png",
+        "size_bytes": 96334,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig3-1.png",
+        "file_name": "fig3-1.png",
+        "extension": ".png",
+        "size_bytes": 2650506,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig5-1.png",
+        "file_name": "fig5-1.png",
+        "extension": ".png",
+        "size_bytes": 115169,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig6-1.png",
+        "file_name": "fig6-1.png",
+        "extension": ".png",
+        "size_bytes": 157347,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig6-2.png",
+        "file_name": "fig6-2.png",
+        "extension": ".png",
+        "size_bytes": 614231,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig6-3.png",
+        "file_name": "fig6-3.png",
+        "extension": ".png",
+        "size_bytes": 600103,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig6-4.png",
+        "file_name": "fig6-4.png",
+        "extension": ".png",
+        "size_bytes": 597472,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig6-5.png",
+        "file_name": "fig6-5.png",
+        "extension": ".png",
+        "size_bytes": 245062,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig6-6.png",
+        "file_name": "fig6-6.png",
+        "extension": ".png",
+        "size_bytes": 608193,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig6-7.png",
+        "file_name": "fig6-7.png",
+        "extension": ".png",
+        "size_bytes": 544263,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/fig/fig6-8.png",
+        "file_name": "fig6-8.png",
+        "extension": ".png",
+        "size_bytes": 518856,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/installation.md",
+        "file_name": "installation.md",
+        "extension": ".md",
+        "size_bytes": 10523,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/introduction.md",
+        "file_name": "introduction.md",
+        "extension": ".md",
+        "size_bytes": 11456,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/model-execution.md",
+        "file_name": "model-execution.md",
+        "extension": ".md",
+        "size_bytes": 2190,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "episodes/visualization.md",
+        "file_name": "visualization.md",
+        "extension": ".md",
+        "size_bytes": 12880,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "index.md",
+        "file_name": "index.md",
+        "extension": ".md",
+        "size_bytes": 175,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "instructors/instructor-notes.md",
+        "file_name": "instructor-notes.md",
+        "extension": ".md",
+        "size_bytes": 898,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "learners/devcon25js.md",
+        "file_name": "devcon25js.md",
+        "extension": ".md",
+        "size_bytes": 5472,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "learners/fig/fig1-4.png",
+        "file_name": "fig1-4.png",
+        "extension": ".png",
+        "size_bytes": 1020792,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "learners/reference.md",
+        "file_name": "reference.md",
+        "extension": ".md",
+        "size_bytes": 4780,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "learners/setup.md",
+        "file_name": "setup.md",
+        "extension": ".md",
+        "size_bytes": 2701,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "learners/troubleshooting.md",
+        "file_name": "troubleshooting.md",
+        "extension": ".md",
+        "size_bytes": 2516,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "links.md",
+        "file_name": "links.md",
+        "extension": ".md",
+        "size_bytes": 327,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "profiles/learner-profiles.md",
+        "file_name": "learner-profiles.md",
+        "extension": ".md",
+        "size_bytes": 961,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "site/README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 84,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "training-NGIAB-101.Rproj",
+        "file_name": "training-NGIAB-101.Rproj",
+        "extension": ".rproj",
+        "size_bytes": 344,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

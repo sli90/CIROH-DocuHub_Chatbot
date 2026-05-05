@@ -1,0 +1,78 @@
+{
+    "title": "NWM retrospective analysis version 3.0 data retrieval",
+    "abstract": "This HydroShare resource provides Jupyter Notebooks with instructions and code for accessing and subsetting the NOAA National Water Model CONUS Retrospective Dataset. There are two Jupyter Notebooks\r\n1. NWM_output_variable_retrieval_with_FeatureID.ipynb\r\n2. NWM_output_variable_retrieval_with_shapefile.ipynb\r\nThe first retrieves data for one point (feature ID). The second retrieves data for areas specified interactively or via an uploaded shapefile.\r\nThese notebooks programmatically retrieve the data from Amazon Web Services (https://registry.opendata.aws/nwm-archive/), and in the case of Zone data retrieval average the data over the zones specified.\r\nThe notebooks provided are coded to retrieve data from NWM retrospective analysis version 3.0 released in ZARR format in December 2023.\r\nThe NOAA National Water Model Retrospective dataset contains input and output from multi-decade CONUS retrospective simulations (https://registry.opendata.aws/nwm-archive/ ). These simulations used meteorological input from retrospective data. The output frequency and fields available in this historical NWM dataset differ from those contained in the real-time operational NWM forecast model. Additionally, note that no streamflow or other data assimilation is performed within any of the NWM retrospective simulations",
+    "language": "eng",
+    "subjects": [
+        "NWM retrospective analysis 3.0",
+        "ZARR"
+    ],
+    "creators": [
+        {
+            "name": "Nassar, Ayman",
+            "phone": "4358905557",
+            "organization": "Utah State University",
+            "email": "aymnassar@gmail.com",
+            "creator_order": 1,
+            "hydroshare_user_id": 1981,
+            "identifiers": {}
+        },
+        {
+            "name": "Tarboton, David",
+            "phone": "+1 (435) 797-3172",
+            "address": "UT, US",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "homepage": "http://hydrology.usu.edu/dtarb",
+            "creator_order": 2,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        },
+        {
+            "name": "Salehabadi, Homa",
+            "address": "Utah, US",
+            "organization": "Utah Sate University",
+            "email": "homa.salehabadi@gmail.com",
+            "creator_order": 3,
+            "hydroshare_user_id": 4484,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is part of",
+            "value": "Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c"
+        },
+        {
+            "type": "The content of this resource is part of",
+            "value": "Nassar, A., D. Tarboton (2026). Hydrological Data Retrieval Using CIROH JupyterHUB, HydroShare, http://www.hydroshare.org/resource/657ced1716a94ea197d226015136a5db"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 49.1645,
+        "eastlimit": -59.4828,
+        "southlimit": 24.7029,
+        "westlimit": -125.9286,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1979-01-01 00:00:00",
+        "end": "2023-01-31 00:00:00"
+    },
+    "citation": "Nassar, A., D. Tarboton, H. Salehabadi (2026). NWM retrospective analysis version 3.0 data retrieval, HydroShare, http://www.hydroshare.org/resource/6ca065138d764339baf3514ba2f2d72f",
+    "url": "http://www.hydroshare.org/resource/6ca065138d764339baf3514ba2f2d72f",
+    "identifier": "http://www.hydroshare.org/resource/6ca065138d764339baf3514ba2f2d72f",
+    "created": "2024-03-22 23:07:42.827313+00:00",
+    "modified": "2026-01-29 09:48:28.311816+00:00",
+    "type": "CompositeResource"
+}

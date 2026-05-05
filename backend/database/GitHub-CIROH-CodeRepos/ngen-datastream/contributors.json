@@ -1,0 +1,58 @@
+[
+    {
+        "id": 79336055,
+        "login": "JordanLaserGit",
+        "html_url": "https://github.com/JordanLaserGit",
+        "type": "User",
+        "contributions": 1088
+    },
+    {
+        "id": 223894814,
+        "login": "harshavemula-ua",
+        "html_url": "https://github.com/harshavemula-ua",
+        "type": "User",
+        "contributions": 157
+    },
+    {
+        "id": 60660437,
+        "login": "ZacharyWills",
+        "html_url": "https://github.com/ZacharyWills",
+        "type": "User",
+        "contributions": 8
+    },
+    {
+        "id": 49699333,
+        "login": "dependabot[bot]",
+        "html_url": "https://github.com/apps/dependabot",
+        "type": "Bot",
+        "contributions": 8
+    },
+    {
+        "id": 54657,
+        "login": "arpita0911patel",
+        "html_url": "https://github.com/arpita0911patel",
+        "type": "User",
+        "contributions": 4
+    },
+    {
+        "id": 43544549,
+        "login": "romer8",
+        "html_url": "https://github.com/romer8",
+        "type": "User",
+        "contributions": 4
+    },
+    {
+        "id": 26720477,
+        "login": "JoshCu",
+        "html_url": "https://github.com/JoshCu",
+        "type": "User",
+        "contributions": 3
+    },
+    {
+        "id": 170465264,
+        "login": "quinnylee",
+        "html_url": "https://github.com/quinnylee",
+        "type": "User",
+        "contributions": 1
+    }
+]

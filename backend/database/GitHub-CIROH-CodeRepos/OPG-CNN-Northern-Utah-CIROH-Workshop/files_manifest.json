@@ -1,0 +1,258 @@
+[
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 104,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "AI_workshop_convolutional_neural_network.pdf",
+        "file_name": "AI_workshop_convolutional_neural_network.pdf",
+        "extension": ".pdf",
+        "size_bytes": 1978307,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 5954,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "datasets/era5_atmos/IVT_sfc.nc",
+        "file_name": "IVT_sfc.nc",
+        "extension": ".nc",
+        "size_bytes": 11145288,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/era5_atmos/hgt_500.nc",
+        "file_name": "hgt_500.nc",
+        "extension": ".nc",
+        "size_bytes": 5588989,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/era5_atmos/precip_sfc.nc",
+        "file_name": "precip_sfc.nc",
+        "extension": ".nc",
+        "size_bytes": 5588654,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/era5_atmos/shum_700.nc",
+        "file_name": "shum_700.nc",
+        "extension": ".nc",
+        "size_bytes": 5588989,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/era5_atmos/temp_700.nc",
+        "file_name": "temp_700.nc",
+        "extension": ".nc",
+        "size_bytes": 5588989,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/era5_atmos/uwnd_700.nc",
+        "file_name": "uwnd_700.nc",
+        "extension": ".nc",
+        "size_bytes": 5588989,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/era5_atmos/vwnd_700.nc",
+        "file_name": "vwnd_700.nc",
+        "extension": ".nc",
+        "size_bytes": 5588989,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/facets_and_opgs/elevation.csv",
+        "file_name": "elevation.csv",
+        "extension": ".csv",
+        "size_bytes": 177781,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/facets_and_opgs/facet_labels.csv",
+        "file_name": "facet_labels.csv",
+        "extension": ".csv",
+        "size_bytes": 91265,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/facets_and_opgs/facet_orientation.csv",
+        "file_name": "facet_orientation.csv",
+        "extension": ".csv",
+        "size_bytes": 61199,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/facets_and_opgs/lats.csv",
+        "file_name": "lats.csv",
+        "extension": ".csv",
+        "size_bytes": 389843,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/facets_and_opgs/lons.csv",
+        "file_name": "lons.csv",
+        "extension": ".csv",
+        "size_bytes": 492757,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/facets_and_opgs/winter_northernUT_lin_model_opg_y-int.csv",
+        "file_name": "winter_northernUT_lin_model_opg_y-int.csv",
+        "extension": ".csv",
+        "size_bytes": 1881,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/facets_and_opgs/winter_northernUT_opg.csv",
+        "file_name": "winter_northernUT_opg.csv",
+        "extension": ".csv",
+        "size_bytes": 915916,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/facets_and_opgs/winter_northernUT_precip_obs.csv",
+        "file_name": "winter_northernUT_precip_obs.csv",
+        "extension": ".csv",
+        "size_bytes": 1904425,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "datasets/facets_and_opgs/winter_northernUT_precip_obs_latlon.csv",
+        "file_name": "winter_northernUT_precip_obs_latlon.csv",
+        "extension": ".csv",
+        "size_bytes": 9397,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "environment.yml",
+        "file_name": "environment.yml",
+        "extension": ".yml",
+        "size_bytes": 7837,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "figures/atmos_2017-01-07.png",
+        "file_name": "atmos_2017-01-07.png",
+        "extension": ".png",
+        "size_bytes": 237508,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "figures/atmos_2017-01-08.png",
+        "file_name": "atmos_2017-01-08.png",
+        "extension": ".png",
+        "size_bytes": 310958,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "figures/atmos_2017-01-09.png",
+        "file_name": "atmos_2017-01-09.png",
+        "extension": ".png",
+        "size_bytes": 340850,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "figures/atmos_2017-01-10.png",
+        "file_name": "atmos_2017-01-10.png",
+        "extension": ".png",
+        "size_bytes": 322059,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "figures/atmos_2017-01-11.png",
+        "file_name": "atmos_2017-01-11.png",
+        "extension": ".png",
+        "size_bytes": 332295,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "figures/atmos_2017-01-12.png",
+        "file_name": "atmos_2017-01-12.png",
+        "extension": ".png",
+        "size_bytes": 258148,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "figures/facet_orientations.png",
+        "file_name": "facet_orientations.png",
+        "extension": ".png",
+        "size_bytes": 111944,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "figures/opg_timeseries_facet2131.png",
+        "file_name": "opg_timeseries_facet2131.png",
+        "extension": ".png",
+        "size_bytes": 94515,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "scripts/CIROH_CNN.ipynb",
+        "file_name": "CIROH_CNN.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 34611,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "scripts/CIROH_CNN_Evaluation.ipynb",
+        "file_name": "CIROH_CNN_Evaluation.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 47426,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "scripts/CIROH_Datasets.ipynb",
+        "file_name": "CIROH_Datasets.ipynb",
+        "extension": ".ipynb",
+        "size_bytes": 17876,
+        "downloaded": true,
+        "selection_reason": "allowed_semantic_folder"
+    },
+    {
+        "path": "scripts/nclcmaps.py",
+        "file_name": "nclcmaps.py",
+        "extension": ".py",
+        "size_bytes": 602977,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "path": ".github/workflows/build_only.yml",
+        "file_name": "build_only.yml",
+        "extension": ".yml",
+        "size_bytes": 654,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/publish.yml",
+        "file_name": "publish.yml",
+        "extension": ".yml",
+        "size_bytes": 959,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 109,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".python-version",
+        "file_name": ".python-version",
+        "extension": "",
+        "size_bytes": 5,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 10250,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "pyproject.toml",
+        "file_name": "pyproject.toml",
+        "extension": ".toml",
+        "size_bytes": 823,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "src/ngiab_cal/__main__.py",
+        "file_name": "__main__.py",
+        "extension": ".py",
+        "size_bytes": 13247,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/ngiab_cal/arguments.py",
+        "file_name": "arguments.py",
+        "extension": ".py",
+        "size_bytes": 2101,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/ngiab_cal/custom_logging.py",
+        "file_name": "custom_logging.py",
+        "extension": ".py",
+        "size_bytes": 1851,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/ngiab_cal/file_paths.py",
+        "file_name": "file_paths.py",
+        "extension": ".py",
+        "size_bytes": 4435,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "src/ngiab_cal/ngiab_cal_template.yaml",
+        "file_name": "ngiab_cal_template.yaml",
+        "extension": ".yaml",
+        "size_bytes": 2342,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "uv.lock",
+        "file_name": "uv.lock",
+        "extension": ".lock",
+        "size_bytes": 143315,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

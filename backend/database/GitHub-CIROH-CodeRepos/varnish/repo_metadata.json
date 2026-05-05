@@ -1,0 +1,104 @@
+{
+    "id": 1162740271,
+    "name": "varnish",
+    "full_name": "CIROH-UA/varnish",
+    "html_url": "https://github.com/CIROH-UA/varnish",
+    "description": "Template for pkgdown site",
+    "homepage": "https://carpentries.github.io/varnish/",
+    "default_branch": "main",
+    "created_at": "2026-02-20T16:29:19Z",
+    "updated_at": "2026-02-25T02:25:27Z",
+    "pushed_at": "2026-02-25T02:25:21Z",
+    "language": "SCSS",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 10353,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 1,
+    "open_issues_count": 0,
+    "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null
+    },
+    "contributors_summary": {
+        "contributors_count": 19,
+        "top_contributors": [
+            {
+                "id": 3639446,
+                "login": "zkamvar",
+                "html_url": "https://github.com/zkamvar",
+                "type": "User",
+                "contributions": 337
+            },
+            {
+                "id": 65916846,
+                "login": "actions-user",
+                "html_url": "https://github.com/actions-user",
+                "type": "User",
+                "contributions": 104
+            },
+            {
+                "id": 1872302,
+                "login": "froggleston",
+                "html_url": "https://github.com/froggleston",
+                "type": "User",
+                "contributions": 104
+            },
+            {
+                "id": 64108146,
+                "login": "astroDimitrios",
+                "html_url": "https://github.com/astroDimitrios",
+                "type": "User",
+                "contributions": 42
+            },
+            {
+                "id": 170465264,
+                "login": "quinnylee",
+                "html_url": "https://github.com/quinnylee",
+                "type": "User",
+                "contributions": 12
+            },
+            {
+                "id": 9694524,
+                "login": "tobyhodges",
+                "html_url": "https://github.com/tobyhodges",
+                "type": "User",
+                "contributions": 12
+            },
+            {
+                "id": 19176319,
+                "login": "ErinBecker",
+                "html_url": "https://github.com/ErinBecker",
+                "type": "User",
+                "contributions": 9
+            },
+            {
+                "id": 10783929,
+                "login": "Bisaloo",
+                "html_url": "https://github.com/Bisaloo",
+                "type": "User",
+                "contributions": 7
+            },
+            {
+                "id": 742154,
+                "login": "Robadob",
+                "html_url": "https://github.com/Robadob",
+                "type": "User",
+                "contributions": 5
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 4
+            }
+        ]
+    }
+}

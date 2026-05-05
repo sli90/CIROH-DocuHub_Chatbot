@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/88e0ebf2719c492381efcb27fba71032">
+    <dc:subject>National Water Model (NWM)</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dc:language>eng</dc:language>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-09-24T13:49:07.172861+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardTitle></hsterms:awardTitle>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>NOAA Cooperative Institute Program</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL></hsterms:fundingAgencyURL>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:title>Provo River near Woodland (gage-10154200) NGIAB Case Study (calibrated)</dc:title>
+    <dc:subject>NextGen Framework</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/88e0ebf2719c492381efcb27fba71032"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:name>Patel, Arpita</hsterms:name>
+        <hsterms:email>apatel54@ua.edu</hsterms:email>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16622</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16622</hsterms:description>
+        <hsterms:organization>AWI;UA</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+    <dc:publisher>
+      <rdf:Description>
+        <hsterms:publisherName>Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)</hsterms:publisherName>
+        <hsterms:publisherURL rdf:resource="https://www.cuahsi.org"/>
+      </rdf:Description>
+    </dc:publisher>
+    <dc:subject>Community Modeling</dc:subject>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2025-03-25T13:54:06.751768+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=2017-01-01T00:00:00; end=2023-01-02T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:coverage>
+      <dcterms:point>
+        <rdf:value>name=Provo River near Woodland UT; projection=WGS 84 EPSG:4326; east=-111.1687838; north=40.5577278; units=Decimal degrees</rdf:value>
+      </dcterms:point>
+    </dc:coverage>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>The U.S. National Water Model (NWM) provides continental-scale hydrological forecasts, but its complexity makes deployment and customization on researchers' computing resources challenging for local and regional studies. The Next Generation Water Resources Modeling Framework (NextGen) enhances model flexibility and interoperability, yet deploying it independently remains demanding. To address this, we developed the NextGen In A Box (NGIAB) to provide a containerized solution for simplified NextGen deployment on local machines, high-performance computing (HPC) clusters, and cloud environments. NGIAB leverages Docker and Singularity containers, pre-configured with core components expected in forthcoming NWM version 4.0. This integrates input datasets, forcing engines, and necessary libraries, enabling seamless execution. Developed by CIROH and Lynker, NGIAB’s cyberinfrastructure features cloud-based data access, a robust CI/CD pipeline, and streamlined Basic Model Interface (BMI) coupling. By lowering technical barriers, NGIAB enables researchers to efficiently run localized models, promoting community engagement in hydrologic modeling and facilitating research-to-applications pathways.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:doi rdf:resource="https://doi.org/10.4211/hs.88e0ebf2719c492381efcb27fba71032"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dcterms:bibliographicCitation>Patel, A., M. Singh (2025). Provo River near Woodland (gage-10154200) NGIAB Case Study (calibrated), HydroShare, https://doi.org/10.4211/hs.88e0ebf2719c492381efcb27fba71032, DOI for this published resource is pending activation.</dcterms:bibliographicCitation>
+    <dc:subject>DevOps Processes</dc:subject>
+    <dc:date>
+      <hsterms:published>
+        <rdf:value>2025-09-24T13:49:07.589547+00:00</rdf:value>
+      </hsterms:published>
+    </dc:date>
+    <dc:subject>Hydrologic Modeling</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26773</hsterms:description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26773</hsterms:hydroshare_user_id>
+        <hsterms:organization>Alabama Water Institute</hsterms:organization>
+        <hsterms:address>AL, US</hsterms:address>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:name>Singh, Manjila</hsterms:name>
+        <hsterms:email>msingh9@crimson.ua.edu</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+  </hsterms:CompositeResource>
+</rdf:RDF>

@@ -1,0 +1,72 @@
+{
+    "title": "CUAHSI Workshop 3: Configuring and Running a NextGen Simulation and Analyzing Model Outputs",
+    "abstract": "This resource includes materials for the workshop about configuring and running a NextGen simulation and analyzing model outputs, presented during the 2025 NWCSI Bootcamp.",
+    "language": "eng",
+    "subjects": [
+        "NextGen Water Modeling Framework",
+        "folium",
+        "Python",
+        "NWCSI2025",
+        "NGEN-in-a-box",
+        "National Water Center Summer Institute",
+        "NGEN-data-preprocess"
+    ],
+    "creators": [
+        {
+            "name": "Garousi-Nejad, Irene",
+            "organization": "CUAHSI",
+            "email": "igarousi@cuahsi.org",
+            "creator_order": 1,
+            "hydroshare_user_id": 475,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=dKqI7iAAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Irene_Garousi-Nejad",
+                "ORCID": "https://orcid.org/0000-0003-2929-3946"
+            }
+        },
+        {
+            "name": "Castronova, Anthony M.",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 2,
+            "hydroshare_user_id": 11,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=ScWTFoQAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Anthony_Castronova",
+                "ORCID": "https://orcid.org/0000-0002-1341-5681"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is derived from",
+            "value": "Garousi-Nejad, I., A. M. Castronova (2025). CUAHSI Workshop 1: FAIR Data Management & Cloud-Based Simulation Collaboration, HydroShare, http://www.hydroshare.org/resource/1a787a25fb3047d5a6a0291c4a4b6fc2, accessed on: 06/10/2025"
+        },
+        {
+            "type": "The content of this resource is part of",
+            "value": "Garousi-Nejad, I., A. M. Castronova (2025). Collection of Materials for the CUAHSI's Workshops at the National Water Center Bootcamp 2025, HydroShare, http://www.hydroshare.org/resource/bae7841593ec40929a2f6cd6b5871c9c"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA)",
+            "title": "COOPERATIVE INSTITUTE FOR RESEARCH TO OPERATIONS IN HYDROLOGY (CIROH)",
+            "number": "NA22NWS4320003"
+        }
+    ],
+    "citation": "Garousi-Nejad, I., A. M. Castronova (2025). CUAHSI Workshop 3: Configuring and Running a NextGen Simulation and Analyzing Model Outputs, HydroShare, http://www.hydroshare.org/resource/18134d8103d84deeb2a9a5008068158d",
+    "url": "http://www.hydroshare.org/resource/18134d8103d84deeb2a9a5008068158d",
+    "identifier": "http://www.hydroshare.org/resource/18134d8103d84deeb2a9a5008068158d",
+    "created": "2025-06-10 20:50:54.003110+00:00",
+    "modified": "2025-06-25 16:14:22.221649+00:00",
+    "type": "CompositeResource"
+}

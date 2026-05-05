@@ -1,0 +1,123 @@
+{
+    "title": "Demonstration of the National Water Model\u2019s Applicability to Community Resilience Planning: Cincinnati Use Case",
+    "abstract": "This resource provides codes and data to demonstrate a use case for evaluating the National Water Model (NWM) locally and enhancing its accessibility. The objective is to explore how NOAA\u2019s NWM can be utilized by a new audience of potential users. The NWM, managed by NOAA\u2019s National Water Center, is a comprehensive hydrologic model focusing on river and streamflow data. It offers insights into historical water conditions (with a 40-year retrospective capability), current water status, and future projections (ranging from 18 hours to 10-day and 30-day forecasts). Since its initial release in 2016, the NWM has been updated to version 3.0, with several planned enhancements and new services, including the Next Generation Framework and Flood Inundation Mapping, which are expected to be introduced within the next 24 months.\r\n\r\nWorking Group's Project: \u201cEvaluating the NWM as a Data Source for Resilient Transportation Planning\u201d and \u201cBuilding Trust Around Predictive Hydrologic Resources\r\n\r\nFunding for this project was provided by the National Oceanic and Atmospheric Administration (NOAA), awarded to the Cooperative Institute for Research on Hydrology (CIROH) through the NOAA Cooperative Agreement with The University of Alabama, NA22NWS4320003",
+    "language": "eng",
+    "subjects": [
+        "Fowler Creek",
+        "Community Resilience Planning",
+        "FEMA",
+        "National Water Model",
+        "CIROH",
+        "Flood Inundation Mapping",
+        "ciroh_\u00adportal_data"
+    ],
+    "creators": [
+        {
+            "name": "Garousi-Nejad, Irene",
+            "organization": "CUAHSI",
+            "email": "igarousi@cuahsi.org",
+            "creator_order": 1,
+            "hydroshare_user_id": 475,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=dKqI7iAAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Irene_Garousi-Nejad",
+                "ORCID": "https://orcid.org/0000-0003-2929-3946"
+            }
+        },
+        {
+            "name": "Castronova, Anthony M.",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 2,
+            "hydroshare_user_id": 11,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=ScWTFoQAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Anthony_Castronova",
+                "ORCID": "https://orcid.org/0000-0002-1341-5681"
+            }
+        },
+        {
+            "name": "Raub, Kristin B.",
+            "address": "VT, US",
+            "organization": "Global Resilience Institute at Northeastern University",
+            "email": "k.raub@northeastern.edu",
+            "creator_order": 3,
+            "hydroshare_user_id": 10391,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "This resource is referenced by",
+            "value": "https://globalresilience.northeastern.edu/project/cooperative-institute-for-research-to-operations-in-hydrology-ciroh/"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "https://github.com/NOAA-OWP/inundation-mapping"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "Castronova, A. M. (2024). Visualizing NWM Retrospective Streamflow in Python, HydroShare, http://www.hydroshare.org/resource/830b603665cc4ac0893d5449badd422d"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "https://www.sciencebase.gov/catalog/item/577445bee4b07657d1a991b6"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "https://www.epa.gov/waterdata/nhdplus-ohio-data-vector-processing-unit-05"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "https://noaa-nwm-retrospective-3-0-pds.s3.amazonaws.com/index.html"
+        },
+        {
+            "type": "This resource is referenced by",
+            "value": "https://globalresilience.northeastern.edu/wp-content/uploads/2024/06/NWM-Cincinnati.pdf"
+        },
+        {
+            "type": "The content of this resource can be executed by",
+            "value": "Castronova, A. (2024). CIROH Production JupyterHub, HydroShare, http://www.hydroshare.org/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "https://map1.msc.fema.gov/data/21/S/PDF/21117CV000B.pdf?LOC=e9585047242a3b0bfa9097f6cc7ad7e8"
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "https://www.fema.gov/flood-maps/products-tools"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA)",
+            "title": "COOPERATIVE INSTITUTE FOR RESEARCH TO OPERATIONS IN HYDROLOGY (CIROH)",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ci.noaa.gov/locations/ciroh/"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 39.15237917255695,
+        "eastlimit": -82.56522874558439,
+        "southlimit": 37.43234834841422,
+        "westlimit": -84.89620968834959,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "citation": "Garousi-Nejad, I., A. M. Castronova, K. B. Raub (2024). Demonstration of the National Water Model\u2019s Applicability to Community Resilience Planning: Cincinnati Use Case, HydroShare, http://www.hydroshare.org/resource/0ef4366e7711478fa2637f5049b4881a",
+    "url": "http://www.hydroshare.org/resource/0ef4366e7711478fa2637f5049b4881a",
+    "identifier": "http://www.hydroshare.org/resource/0ef4366e7711478fa2637f5049b4881a",
+    "created": "2024-06-13 12:33:23.709305+00:00",
+    "modified": "2024-09-12 19:46:20.846400+00:00",
+    "type": "CompositeResource"
+}

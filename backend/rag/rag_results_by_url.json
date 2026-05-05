@@ -1,0 +1,62 @@
+[
+    {
+        "topic": "Paper questions",
+        "question": "How can a LSTM network be used for ungauged basins streamflow prediction?",
+        "answer": "A long short-term memory (LSTM) network can be used to predict streamflow in **ungauged basins** by learning the rainfall–runoff relationship (and/or correcting a physics model’s output) from data-rich locations and then transferring that learned behavior to locations without stream gauges.\n\nFrom the provided context, there are two main ways this is done:\n\n1. **Train an LSTM on meteorological forcings (and basin attributes) and apply it to ungauged basins**\n   - An LSTM can be trained using **atmospheric forcing inputs** (e.g., precipitation and other weather variables) and often **static basin characteristics** to predict daily streamflow.\n   - After training on gauged basins, the trained model can be run in an ungauged basin using the same types of forcing/attribute inputs.\n   - In the CONUS study described, an LSTM trained **only on atmospheric forcing (LSTM_A)** performed well and **outperformed post-processing approaches in ungauged basins**, indicating that direct forcing-to-flow LSTMs can generalize to ungauged settings.\n\n2. **Use an LSTM with network structure to create “surrogate gauges” in ungauged parts of a basin**\n   - For basins with limited/no upstream observations, the context describes an approach that treats watersheds as **interconnected upstream–downstream systems**.\n   - The LSTM is trained to estimate **historic streamflow in ungauged watersheds**, effectively creating **“surrogate gauges.”**\n   - A key idea is using **downstream flow information to constrain and improve upstream flow estimates**, leveraging the river network connectivity.\n   - This was demonstrated first on synthetic watershed networks (“leaky bucket” models) as a proof of concept, with the intent to generalize to real basins.\n\nA related practical variant is:\n- **LSTM post-processing of a large-scale hydrologic model (e.g., the National Water Model)**\n  - An LSTM can be trained to correct biases/errors in a physics-based model using the model’s outputs (and optionally atmospheric forcings), improving streamflow predictions; this is another pathway for improving predictions where direct gauge data are limited.",
+        "sources": [
+            "A Proof of Concept for Improving Estimates of Ungauged Basin Streamflow via an LSTM‐Based Synthetic Network Simulation Approach",
+            "Post-Processing the National Water Model with Long Short-Term Memory Networks for Streamflow Predictions and Model Diagnostics",
+            "Long short-term memory models to quantify long-term evolution of streamflow discharge and groundwater depth in Alabama",
+            "Deep learning rainfall–runoff predictions of extreme events",
+            "Community Resource Documentation > NextGen In A Box > Community NextGen Repos > lstm",
+            "Ensembling differentiable process-based and data-driven models with diverse meteorological forcing datasets to advance streamflow simulation",
+            "Machine Learning for a Heterogeneous Water Modeling Framework",
+            "The suitability of differentiable, physics-informed machine learning hydrologic models for ungauged regions and climate change impact assessment"
+        ]
+    },
+    {
+        "topic": "Paper questions",
+        "question": "What has happened in the Po River Basin in the last two millenia?",
+        "answer": "Over the last ~2,000 years, the reconstructed April–May–June–July (AMJJ) streamflow record for the Po River Basin indicates repeated multi-year to multi-decadal **deficit (drought)** and **surplus (pluvial)** periods, including episodes of very severe drought.\n\nWithin that longer context, the study highlights that:\n\n- **Several droughts in the ~2,000-year paleo record may have been more severe** than the recent drought spanning **2000–2022**, although **uncertainty increases further back in time**.\n- Even so, the **recent drought ending in 2022** stands out as the **lowest 23-year period in roughly the last ~500 years** (based on the reconstruction, acknowledging increasing uncertainty backward).\n- In the instrumental period, **2022 was identified as the lowest seasonal AMJJ observed streamflow in ~200 years**, and filtering analyses indicated the **late 20th and 21st centuries** show **extreme drought** conditions.\n- Comparing deficit and surplus periods, the record suggests an **increase in “whiplash” events** (rapid shifts between drought and pluvial conditions), which the authors note **may be associated with a changing climate**.",
+        "sources": [
+            "Extraordinary 21st Century Drought in the Po River Basin (Italy)",
+            "Mid-20th century land-use change greatly reduced ood intensity in the Southeastern US",
+            "Human activities change suspended sediment concentration along rivers",
+            "Land-use change as a major driver for mid-20th-century flood intensity reduction in the Southeastern US",
+            "A Paleo-Perspective of 21st Century Drought in the Hron River (Slovakia)",
+            "Machine-Learning-Based Precipitation Reconstructions: A Study on Slovenia's Sava River Basin",
+            "Two Dimensional Model for Backwater Geomorphology: Darby Creek, PA",
+            "Terrain-derived measures for basin conservation and restoration planning"
+        ]
+    },
+    {
+        "topic": "Paper questions",
+        "question": "Are there examples of massive droughts in Europe?",
+        "answer": "Yes. The provided context includes several European examples of extreme (“massive”) drought/low-flow conditions:\n\n- **Hron River (central Slovakia):** Observations over ~90 years show **historically low summer (AMJJAS) streamflow** for the **10-, 20-, and 30-year periods ending in 2020**. Tree-ring/scPDSI-based reconstructions indicate the river experienced **extreme drought in the 21st century**.\n\n- **Po River Basin (Italy):** **2022** was identified as the **lowest seasonal AMJJ observed streamflow** in the **past two centuries**. Reconstruction results indicate the drought ending in 2022 corresponds to the **lowest 23-year period (2000–2022) in ~500 years** (with increasing uncertainty further back).\n\n- **Sava River Basin (Southeastern Europe):** Reconstructions and observations show **2000–2022** ranks as the **lowest 23-year flow interval in the observed record** and **one of the driest over the past ~500 years**.",
+        "sources": [
+            "A Paleo-Perspective of 21st Century Drought in the Hron River (Slovakia)",
+            "Extraordinary 21st Century Drought in the Po River Basin (Italy)",
+            "Testing Machine Learning and Traditional Models for Tree-Ring-Based scPDSI Streamflow Reconstruction: A 1500-Year Record of the French Broad River, Tennessee, USA",
+            "Machine-Learning-Based Precipitation Reconstructions: A Study on Slovenia's Sava River Basin",
+            "Hydrological Dynamics and Climate Variability in the Sava River Basin: Streamflow Reconstructions Using Tree-Ring-Based Paleo Proxies",
+            "Mid-20th century land-use change greatly reduced ood intensity in the Southeastern US",
+            "Land-use change as a major driver for mid-20th-century flood intensity reduction in the Southeastern US",
+            "Snow drought to hydrologic drought progression using machine learning and probabilistic analysis"
+        ]
+    },
+    {
+        "topic": "Paper questions",
+        "question": "Who has used leaky bucket models in hydrology research?",
+        "answer": "In the provided context, the only explicit use of **“leaky bucket” watershed models** is by the **authors of the machine-learning/LSTM “surrogate gauges” study**, who state that they:\n\n- “train and test the LSTM on synthetic networks of conceptual *‘leaky bucket’* watershed models…”\n\nNo author names or specific individuals/institutions are given in the context, so I can’t identify *who* (by name) used leaky bucket models beyond “we” (the study’s researchers).",
+        "sources": [
+            "δHBV2.0: How NGIAB and Wukong HPC Streamlined Advanced Hydrologic Modeling",
+            "A Flexible Framework for Simulating the Water Balance of Lakes and Reservoirs From Local to Global Scales: mizuRoute-Lake",
+            "Coupling Reservoir Operation and Rainfall-Runoff Processes for Streamflow Simulation in Watersheds",
+            "Two Dimensional Model for Backwater Geomorphology: Darby Creek, PA",
+            "Modeling Breach Evolution in Noncohesive Earthen Dams by Overtopping",
+            "A Proof of Concept for Improving Estimates of Ungauged Basin Streamflow via an LSTM‐Based Synthetic Network Simulation Approach",
+            "Do land models miss key soil hydrological processes controlling soil moisture memory?",
+            "Impacts of agriculture and snow dynamics on catchment water balance in the U.S. and Great Britain"
+        ]
+    }
+]

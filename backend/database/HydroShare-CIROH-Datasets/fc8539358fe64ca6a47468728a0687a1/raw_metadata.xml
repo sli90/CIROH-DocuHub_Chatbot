@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1">
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-5995-9297"/>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hsterms:creatorOrder>
+        <hsterms:email>pabitra.dash@usu.edu</hsterms:email>
+        <hsterms:name>Dash, Pabitra</hsterms:name>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</hsterms:description>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:organization>USU</hsterms:organization>
+        <hsterms:homepage rdf:resource="https://usu.edu/pkdash"/>
+        <hsterms:address>VA, US</hsterms:address>
+      </rdf:Description>
+    </dc:creator>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isPartOf>Minor, N. (2026). CIROH Portal: Presentation Tab Additions, HydroShare, http://www.hydroshare.org/resource/200fa86bea61438aa862d437103485db</dcterms:isPartOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:publisher>
+      <rdf:Description>
+        <hsterms:publisherURL rdf:resource="https://www.cuahsi.org"/>
+        <hsterms:publisherName>Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)</hsterms:publisherName>
+      </rdf:Description>
+    </dc:publisher>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hsterms:creatorOrder>
+        <hsterms:organization>AWI;UA</hsterms:organization>
+        <hsterms:address>Alabama, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:email>apatel54@ua.edu</hsterms:email>
+        <hsterms:name>Patel, Arpita</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16622</hsterms:hydroshare_user_id>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16622</hsterms:description>
+        <hsterms:homepage></hsterms:homepage>
+      </rdf:Description>
+    </dc:creator>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:awardTitle>CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare</hsterms:awardTitle>
+        <hsterms:awardNumber>NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University</hsterms:awardNumber>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration (NOAA), University of Alabama</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL rdf:resource="https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"/>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isPartOf>Patel, A., J. Halgren (2026). [OLD] CIROH DevCon 2025 Presentations and Workshops, HydroShare, http://www.hydroshare.org/resource/02854a10418a45899c8ed02ff8758f03</dcterms:isPartOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>ciroh</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>fbaig@illinois.edu</hsterms:email>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16982</hsterms:hydroshare_user_id>
+        <hsterms:organization>University of Illinois at Urbana-Champaign</hsterms:organization>
+        <hsterms:name>Baig, Furqan</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hsterms:creatorOrder>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16982</hsterms:description>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:address>Illinois, US</hsterms:address>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>NextGEN</dc:subject>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2025-05-26T03:03:11.389648+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</hsterms:description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:organization>Utah State University</hsterms:organization>
+        <hsterms:name>Nassar, Ayman</hsterms:name>
+        <hsterms:phone>4358905557</hsterms:phone>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</hsterms:hydroshare_user_id>
+        <hsterms:email>aymnassar@gmail.com</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:doi rdf:resource="https://doi.org/10.4211/hs.fc8539358fe64ca6a47468728a0687a1"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:date>
+      <hsterms:published>
+        <rdf:value>2025-07-20T22:58:33.196512+00:00</rdf:value>
+      </hsterms:published>
+    </dc:date>
+    <dc:subject>ciroh_hub_notebook</dc:subject>
+    <dcterms:bibliographicCitation>Tarboton, D., H. Salehabadi, A. Nassar, F. Baig, A. M. Castronova, I. Garousi-Nejad, A. Patel, P. Dash (2026). Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial, HydroShare, https://doi.org/10.4211/hs.fc8539358fe64ca6a47468728a0687a1, DOI for this published resource is pending activation.</dcterms:bibliographicCitation>
+    <dc:subject>Hydrofabric</dc:subject>
+    <dc:subject>workflow</dc:subject>
+    <dc:language>eng</dc:language>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:description>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Anthony_Castronova"/>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=ScWTFoQAAAAJ&amp;hl=en"/>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:phone>3399334127</hsterms:phone>
+        <hsterms:homepage rdf:resource="http://anthonycastronova.com"/>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1341-5681"/>
+        <hsterms:address>MA, US</hsterms:address>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hsterms:creatorOrder>
+        <hsterms:email>castronova.anthony@gmail.com</hsterms:email>
+        <hsterms:name>Castronova, Anthony M.</hsterms:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isPartOf>Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c</dcterms:isPartOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hsterms:creatorOrder>
+        <hsterms:email>igarousi@cuahsi.org</hsterms:email>
+        <hsterms:address>CA, US</hsterms:address>
+        <hsterms:name>Garousi-Nejad, Irene</hsterms:name>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=dKqI7iAAAAAJ&amp;hl=en"/>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-2929-3946"/>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:hydroshare_user_id>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:description>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Irene_Garousi-Nejad"/>
+      </rdf:Description>
+    </dc:creator>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This tutorial introduces the use of the Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) HydroShare repository and linked CIROH JupyterHub computing platform on 2i2c in support of CIROH collaborative research and NextGen modeling. &#13;
+&#13;
+Learning Objectives&#13;
+●	Be able to use JupyterHub computing platforms linked to HydroShare (CIROH Jupyterhub on 2i2c specifically) to access, analyze and work with high community value datasets (AORC, Hydrofabric).&#13;
+●	Be able to set up, run, and analyze the results from a NextGEN model configured for research over a small watershed.&#13;
+●	Be able to create a HydroShare resource, populate it with metadata to share with a colleague or make it public.&#13;
+&#13;
+To do this tutorial download and work through the steps in the Word Document CIROH_HydroShare_Tutorial.docx.&#13;
+&#13;
+You will need to launch this resource into CIROH JupyterHub using Open With to work with the Tutorial Python and Jupyter Notebook files.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:name>Salehabadi, Homa</hsterms:name>
+        <hsterms:email>homa.salehabadi@gmail.com</hsterms:email>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-3516-4462"/>
+        <hsterms:address>CA, US</hsterms:address>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4484</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:homepage rdf:resource="http://www.linkedin.com/in/homasalehabadi"/>
+        <hsterms:organization>Utah Sate University</hsterms:organization>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=LsGbadwAAAAJ&amp;hl=en"/>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4484</hsterms:description>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:phone>+1 (435) 797-3172</hsterms:phone>
+        <hsterms:name>Tarboton, David</hsterms:name>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1998-3479"/>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:hydroshare_user_id>
+        <hsterms:organization>Utah State University</hsterms:organization>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:description>
+        <hsterms:address>UT, US</hsterms:address>
+        <hsterms:email>dtarb@usu.edu</hsterms:email>
+        <hsterms:homepage rdf:resource="http://hydrology.usu.edu/dtarb"/>
+      </rdf:Description>
+    </dc:creator>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:title>Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub Tutorial</dc:title>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2026-02-27T14:39:04.321972+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isPartOf>Patel, A., J. Halgren (2026). CIROH DevCon 2025 Presentations and Workshops, HydroShare, http://www.hydroshare.org/resource/45c063162317402bba4a072c5802f08e</dcterms:isPartOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>cirohdevcon25</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:requires>Salehabadi, H., D. Tarboton, A. Nassar, A. M. Castronova, P. Dash (2025). Jupyter Notebooks for the Retrieval of AORC Data for Hydrologic Analysis, HydroShare, http://www.hydroshare.org/resource/72ea9726187e43d7b50a624f2acf591f</dcterms:requires>
+      </rdf:Description>
+    </dc:relation>
+  </hsterms:CompositeResource>
+</rdf:RDF>

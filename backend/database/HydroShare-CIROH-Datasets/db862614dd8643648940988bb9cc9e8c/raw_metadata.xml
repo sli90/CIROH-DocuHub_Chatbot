@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+>
+  <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+    <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+    <rdfs:label>Composite Resource</rdfs:label>
+  </rdf:Description>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/db862614dd8643648940988bb9cc9e8c">
+    <dc:title>Streamflow Stats for the USGS Stream Gage Cheery Creek at Denver - USGS Station ID: 06713500</dc:title>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/db862614dd8643648940988bb9cc9e8c"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:email>surabhi_upadhyay@mines.edu</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26854</hsterms:description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:name>Upadhyay, Surabhi</hsterms:name>
+        <hsterms:organization>Colorado School of Mines</hsterms:organization>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26854</hsterms:hydroshare_user_id>
+      </rdf:Description>
+    </dc:creator>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This data contains detailed information about the basin characteristics and streamflow characteristics for the US stream gage Cheery Creek at Denver, Colorado (station ID: 06713500). All data in this resource has been obtained from USGS Streamstats.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=1942-08-09T00:00:00; end=2024-06-16T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:subject>NWCSI2024</dc:subject>
+    <dcterms:bibliographicCitation>Upadhyay, S. (2024). Streamflow Stats for the USGS Stream Gage Cheery Creek at Denver - USGS Station ID: 06713500, HydroShare, http://www.hydroshare.org/resource/db862614dd8643648940988bb9cc9e8c</dcterms:bibliographicCitation>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2024-06-19T16:43:55.832030+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:language>eng</dc:language>
+    <dc:coverage>
+      <dcterms:point>
+        <rdf:value>projection=WGS 84 EPSG:4326; units=Decimal degrees; north=39.743832055664086; east=-105.0001851858894</rdf:value>
+      </dcterms:point>
+    </dc:coverage>
+    <dc:type rdf:resource="http://www.hydroshare.org/terms/CompositeResource"/>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-06-19T16:20:12.742053+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:subject>StreamStats</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dc:subject>Hydrology</dc:subject>
+  </hsterms:CompositeResource>
+</rdf:RDF>

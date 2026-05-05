@@ -1,0 +1,72 @@
+{
+    "title": "Skip the Download: How to Access HydroShare Data Directly from S3 Buckets",
+    "abstract": "This resource provides code examples for working directly with HydroShare S3 buckets (also referred to as HydroShare cloud storage buckets or simply HydroShare buckets) to access and manage resource files, without the need to download them locally first. Working directly with S3 buckets can offer better performance. \r\n\r\nThis resource includes the following notebooks:\r\n1- hydroshare_s3_bucket_access_examples.ipynb:  Examples for working directly with HydroShare S3 buckets to access and manage resource files.\r\n2- hs_bucket_access_gdal_example.ipynb:  Examples for reading raster and shapefile directly from HydroShare S3 buckets using gdal.\r\n3- hs_bucket_access_non_gdal_example.ipynb:  Examples of using h5netcdf and xarray for reading netcdf files, rioxarray for reading raster files, and pandas for reading CSV files, all directly from HydroShare S3 buckets.\r\n\r\nThis research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award NA22NWS4320003 from the NOAA Cooperative Institute Program. The statements, findings, conclusions, and recommendations are those of the author(s) and do not necessarily reflect the opinions of NOAA.",
+    "language": "eng",
+    "subjects": [
+        "buckets",
+        "ciroh_hub_notebook",
+        "ciroh",
+        "notebook",
+        "s3 bucket examples",
+        "hydroshare"
+    ],
+    "creators": [
+        {
+            "name": "Dash, Pabitra",
+            "organization": "USU",
+            "email": "pabitra.dash@usu.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 41,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-5995-9297"
+            }
+        },
+        {
+            "name": "Salehabadi, Homa",
+            "address": "CA, US",
+            "organization": "Utah Sate University",
+            "email": "homa.salehabadi@gmail.com",
+            "homepage": "http://www.linkedin.com/in/homasalehabadi",
+            "creator_order": 2,
+            "hydroshare_user_id": 4484,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=LsGbadwAAAAJ&hl=en",
+                "ORCID": "https://orcid.org/0000-0003-3516-4462"
+            }
+        },
+        {
+            "name": "Tarboton, David",
+            "phone": "+1 (435) 797-3172",
+            "address": "UT, US",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "homepage": "http://hydrology.usu.edu/dtarb",
+            "creator_order": 3,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA), University of Alabama",
+            "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+            "number": "NA22NWS4320003 to University of Alabama, subaward A23-0266-S001 to Utah State University",
+            "funding_agency_url": "https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"
+        }
+    ],
+    "citation": "Dash, P., H. Salehabadi, D. Tarboton (2026). Skip the Download: How to Access HydroShare Data Directly from S3 Buckets, HydroShare, http://www.hydroshare.org/resource/786fbe52dd124c13a319d4bb0c0d9ee4",
+    "url": "http://www.hydroshare.org/resource/786fbe52dd124c13a319d4bb0c0d9ee4",
+    "identifier": "http://www.hydroshare.org/resource/786fbe52dd124c13a319d4bb0c0d9ee4",
+    "created": "2025-09-07 17:17:00.640024+00:00",
+    "modified": "2026-02-27 14:44:50.284091+00:00",
+    "type": "CompositeResource"
+}

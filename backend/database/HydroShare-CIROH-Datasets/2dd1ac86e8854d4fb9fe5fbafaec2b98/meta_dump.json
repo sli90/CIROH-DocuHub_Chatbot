@@ -1,0 +1,102 @@
+{
+    "title": "CIROH-2i2c JupyterHub",
+    "abstract": "CIROH 2i2c JupyterHub - Production Server\r\n\r\nCIROH, in collaboration with 2i2c, offers a dedicated JupyterHub environment on Google Cloud specifically designed for hydrological researchers. 2i2c is a cloud service provider specializing in open-source infrastructure for research and development.\r\n\r\nCIROH 2i2c Production environment - https://ciroh.awi.2i2c.cloud/\r\n\r\nTo gain access to this environment please reach out to ciroh-it-admin@ua.edu\r\n\r\nMore details: https://docs.ciroh.org/docs/services/cloudservices/2i2c/\r\n\r\nThis research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award NA22NWS4320003 from the NOAA Cooperative Institute Program. The statements, findings, conclusions, and recommendations are those of the author(s) and do not necessarily reflect the opinions of NOAA.",
+    "language": "eng",
+    "subjects": [
+        "JupyterHub",
+        "2i2c",
+        "CIROH",
+        "nwm_portal_app"
+    ],
+    "creators": [
+        {
+            "name": "Patel, Arpita",
+            "address": "Alabama, US",
+            "organization": "AWI;UA",
+            "email": "apatel54@ua.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 16622,
+            "identifiers": {}
+        },
+        {
+            "name": "Lee, Benjamin",
+            "address": "AL, US",
+            "organization": "University of Alabama - Tuscaloosa",
+            "email": "blee60@ua.edu",
+            "creator_order": 2,
+            "hydroshare_user_id": 27932,
+            "identifiers": {}
+        },
+        {
+            "name": "Minor, Nia",
+            "address": "AL, US",
+            "organization": "University of Alabama - Tuscaloosa",
+            "email": "ikminor1@crimson.ua.edu",
+            "creator_order": 3,
+            "hydroshare_user_id": 27864,
+            "identifiers": {}
+        },
+        {
+            "name": "Singh, Manjila",
+            "address": "AL, US",
+            "organization": "Alabama Water Institute",
+            "email": "msingh9@crimson.ua.edu",
+            "creator_order": 4,
+            "hydroshare_user_id": 26773,
+            "identifiers": {}
+        },
+        {
+            "name": "Anthony Castronova",
+            "phone": "4357970852",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "creator_order": 5,
+            "hydroshare_user_id": 11,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is derived from",
+            "value": "Castronova, A. (2022). CUAHSI JupyterHub, HydroShare, http://www.hydroshare.org/resource/33c45575b95f45c4bf7335faab67ed36, accessed on: 10/06/2023"
+        },
+        {
+            "type": "The content of this resource is derived from",
+            "value": "http://www.hydroshare.org/resource/7d472293c09a46c59cdef9160665603a"
+        },
+        {
+            "type": "The content of this resource is part of",
+            "value": "Dolinar, J. (2026). CIROH Featured Notebooks, HydroShare, http://www.hydroshare.org/resource/604fa628e3ab4f8e99fa6deb5722e155"
+        },
+        {
+            "type": "The content of this resource is part of",
+            "value": "Dolinar, J. (2026). CIROH Featured Apps, HydroShare, http://www.hydroshare.org/resource/31c3d118380c428f91318b32b7038130"
+        },
+        {
+            "type": "The content of this resource is part of",
+            "value": "Dolinar, J. (2026). CIROH Featured Presentations, HydroShare, http://www.hydroshare.org/resource/ef657f3b6e3844fcb61295f89a5d5776"
+        }
+    ],
+    "additional_metadata": {
+        "thumbnail_url": "https://ciroh.ua.edu/wp-content/uploads/2022/08/CIROHLogo_200x200.png"
+    },
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA)",
+            "title": "Cooperative Institute for Research to Operations in Hydrology",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://www.noaa.gov/"
+        }
+    ],
+    "citation": "Patel, A., B. Lee, N. Minor, M. Singh, A. Castronova (2026). CIROH-2i2c JupyterHub, HydroShare, http://www.hydroshare.org/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98",
+    "url": "http://www.hydroshare.org/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98",
+    "identifier": "http://www.hydroshare.org/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98",
+    "created": "2023-10-06 16:09:04.963912+00:00",
+    "modified": "2026-03-27 19:59:27.206653+00:00",
+    "type": "ToolResource"
+}

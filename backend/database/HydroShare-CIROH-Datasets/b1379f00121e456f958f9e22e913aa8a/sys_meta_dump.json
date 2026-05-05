@@ -1,0 +1,41 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "b1379f00121e456f958f9e22e913aa8a",
+    "resource_title": "Analysis of precipitation data across the Logan River Watershed for the Year 2010",
+    "abstract": "This resource was first created for a live demo during an online I-GUIDE VCO meeting on May 9, 2023. It was then modified for another live demo during the 1st annual CIROH users and developers conference in Salt Lake City, May 16-18. Recently, it was used for the National Water Center Summer Institute 2023. \r\n\r\nIt contains codes and inputs for a precipitation analysis across the Logan River Watershed. In this analysis, we will obtain modeled precipitation from two products: AORC and PRISM, compare the basin's average daily precipitation, and save results back to HydroShare.",
+    "authors": [
+        "Garousi-Nejad, Irene",
+        "Castronova, Anthony M."
+    ],
+    "creator": "Garousi-Nejad, Irene",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2023-05-09T12:44:17.870465Z",
+    "date_last_updated": "2024-05-28T15:54:29.424504Z",
+    "bag_last_downloaded": "2025-12-06T10:38:14.949291Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/b1379f00121e456f958f9e22e913aa8a.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "northlimit": 42.09466879403567,
+                "southlimit": 41.70988903942464,
+                "eastlimit": -111.47159761970573,
+                "westlimit": -111.79572988586932,
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/b1379f00121e456f958f9e22e913aa8a/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/b1379f00121e456f958f9e22e913aa8a/map/",
+    "resource_url": "http://www.hydroshare.org/resource/b1379f00121e456f958f9e22e913aa8a/",
+    "content_types": [
+        "Single File Content",
+        "Geographic Feature Content"
+    ]
+}

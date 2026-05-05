@@ -17,7 +17,8 @@ CREATE TABLE TBLArtifacts (
     summary_data JSONB,
     metadata JSONB,
     embedding vector(1792),
-    last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    isActive BOOLEAN NOT NULL DEFAULT TRUE
 );
 
 -- B-Tree Index for frequent joins and lookups
@@ -43,7 +44,8 @@ CREATE TABLE TBLChunks (
     idChunkParent INTEGER REFERENCES TBLChunks(idChunk) ON DELETE CASCADE,
     "order" INTEGER,
     chunk_text TEXT,
-    embedding vector(1792)
+    embedding vector(1792),
+    metadata JSONB
 );
 
 -- B-Tree Indexes for performance

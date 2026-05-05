@@ -1,0 +1,62 @@
+{
+    "id": 829082151,
+    "name": "SWEML",
+    "full_name": "CIROH-UA/SWEML",
+    "html_url": "https://github.com/CIROH-UA/SWEML",
+    "description": "Deep Learning national scale 1 km resolution SWE prediction model",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2024-07-15T18:07:55Z",
+    "updated_at": "2024-07-15T18:27:11Z",
+    "pushed_at": "2026-04-15T00:08:15Z",
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 1009638,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 1,
+    "open_issues_count": 1,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 4,
+        "top_contributors": [
+            {
+                "id": 33735397,
+                "login": "whitelightning450",
+                "html_url": "https://github.com/whitelightning450",
+                "type": "User",
+                "contributions": 137
+            },
+            {
+                "id": 12688093,
+                "login": "commanderjcc",
+                "html_url": "https://github.com/commanderjcc",
+                "type": "User",
+                "contributions": 8
+            },
+            {
+                "id": 108009095,
+                "login": "dliljest",
+                "html_url": "https://github.com/dliljest",
+                "type": "User",
+                "contributions": 6
+            },
+            {
+                "id": 120678271,
+                "login": "manjilasingh",
+                "html_url": "https://github.com/manjilasingh",
+                "type": "User",
+                "contributions": 5
+            }
+        ]
+    }
+}

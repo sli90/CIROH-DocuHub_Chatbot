@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/c738c05278a34bc9848dd14d61cffab9">
+    <dc:subject>V-Component of Wind</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:language>eng</dc:language>
+    <dc:publisher>
+      <rdf:Description>
+        <hsterms:publisherURL rdf:resource="https://www.cuahsi.org"/>
+        <hsterms:publisherName>Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)</hsterms:publisherName>
+      </rdf:Description>
+    </dc:publisher>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>These data are atmospheric forcings from NOAA's Analysis of Record for Calibration (AORC 2024) summarized over the CAMELS catchments (Addor et al. 2017), however, the delineations over those CAMELS basins were updated by Andy Wood (2024) using the basin boundaries produced for the USGS GagesII effort (Falcone 2011). &#13;
+&#13;
+Data collected using this repository code: https://github.com/jmframe/CIROH_DL_NextGen/tree/main/forcing_prep, which should be somewhat derivative of this: https://github.com/CIROH-UA/ngen-datastream/tree/main/forcingprocessor.&#13;
+&#13;
+There are eight variables representing the meteorological conditions:&#13;
+Total Precipitaion (APCP_surface) - Hourly total precipitation (kgm-2 or mm) for Calibration (AORC) dataset&#13;
+Air Temperature (TMP_2maboveground) - Temperature (at 2 m above-ground-level (AGL)) (K)&#13;
+Specific Humidity (SPFH_2maboveground) - Specific humidity (at 2 m AGL) (g g-1)&#13;
+Downward Long-Wave Radiation Flux (DLWRF_surface) - longwave (infrared) radiation flux (at the surface) (W m-2)&#13;
+Downward Short-Wave Radiation Flux (DSWRF_surface) - Downward shortwave (solar) radiation flux (at the surface) (W m-2)&#13;
+Pressure (PRES_surface) - Air pressure (at the surface) (Pa)&#13;
+U-Component of Wind (UGRD_10maboveground) - (west-east) - components of the wind (at 10 m AGL) (m s-1)&#13;
+V-Component of Wind (VGRD_10maboveground) - (south-north) - components of the wind (at 10 m AGL) (m s-1)&#13;
+&#13;
+The data include a timestamp from Coordinated Universal Time (UTC; AORC 2021).&#13;
+&#13;
+References:&#13;
+Addor, N., Newman, A. J., Mizukami, N., and Clark, M. P.: The CAMELS data set: catchment attributes and meteorology for large-sample studies, Hydrol. Earth Syst. Sci., 21, 5293–5313, https://doi.org/10.5194/hess-21-5293-2017, 2017. &#13;
+AORC. 2021. Analysis of Record for Calibration Version 1.1 - Sources, Methods, and Verification, National Oceanic and Atmospheric Administration (NOAA), National Weather Service (NWS), Office of Water Prediction (OWP), Silver Spring, MD.https://www.weather.gov/media/owp/operations/aorc_v1_1_methods.pd&#13;
+AORC. 2024. NOAA Analysis of Record for Calibration (AORC) Dataset was accessed July 2024 from https://registry.opendata.aws/noaa-nws-aorc. &#13;
+Falcone, J., 2011, GAGES-II: Geospatial Attributes of Gages for Evaluating Streamflow: U.S. Geological Survey data release, https://doi.org/10.5066/P96CPHOT. https://www.sciencebase.gov/catalog/item/631405bbd34e36012efa304a&#13;
+Wood. 2024. CAMELS basins delineation.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=50.2107; eastlimit=-65.7422; southlimit=24.255; westlimit=-126.7383; name=CONUS selected basins (CAMELS)</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:subject>CAMELS US</dc:subject>
+    <dc:subject>Analysis of Record for Calibration (AORC)</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:name>Wood, Andrew W</hsterms:name>
+        <hsterms:address>Colorado (CO), US</hsterms:address>
+        <hsterms:email>andywood@ucar.edu</hsterms:email>
+        <hsterms:organization>NCAR;University of Colorado at Boulder</hsterms:organization>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:hydroshare_user_id>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:description>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:homepage></hsterms:homepage>
+      </rdf:Description>
+    </dc:creator>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:doi rdf:resource="https://doi.org/10.4211/hs.c738c05278a34bc9848dd14d61cffab9"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:subject>Atmospheric forcing</dc:subject>
+    <dc:date>
+      <hsterms:published>
+        <rdf:value>2025-01-06T15:35:49.431349+00:00</rdf:value>
+      </hsterms:published>
+    </dc:date>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:name>Frazier, Nels</hsterms:name>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14954</hsterms:hydroshare_user_id>
+        <hsterms:organization>Lynker;NOAA Affiliate</hsterms:organization>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14954</hsterms:description>
+        <hsterms:address>Alabama, US</hsterms:address>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:email>hellkite500@gmail.com</hsterms:email>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10119</hsterms:hydroshare_user_id>
+        <hsterms:organization>National Water Center;University of Alabama - Tuscaloosa</hsterms:organization>
+        <hsterms:name>Frame, Jonathan Martin</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10119</hsterms:description>
+        <hsterms:email>jonframe@gmail.com</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>Humidity</dc:subject>
+    <dc:subject>Downward Short-Wave Radiation</dc:subject>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=1980-10-01T00:00:00; end=2024-04-01T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:subject>U-Component of Wind</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:name>Frazier, Nels</hsterms:name>
+        <hsterms:email>hellkite500@gmail.com</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14954</hsterms:description>
+        <hsterms:address>Alabama, US</hsterms:address>
+        <hsterms:organization>Lynker;NOAA Affiliate</hsterms:organization>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14954</hsterms:hydroshare_user_id>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:homepage></hsterms:homepage>
+      </rdf:Description>
+    </dc:creator>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-01-06T15:35:48.734696+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyName>NOAA</hsterms:fundingAgencyName>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+        <hsterms:awardTitle>Cooperative Institute for Research to Operations in Hydrology</hsterms:awardTitle>
+        <hsterms:fundingAgencyURL></hsterms:fundingAgencyURL>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dcterms:bibliographicCitation>Frame, J. M., A. W. Wood, N. Frazier (2025). AORC atmospheric forcing data across CAMELS US basins, 1980 - 2024, HydroShare, https://doi.org/10.4211/hs.c738c05278a34bc9848dd14d61cffab9</dcterms:bibliographicCitation>
+    <dc:subject>Precipitaion</dc:subject>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-08-07T00:51:08.090757+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:subject>Air Pressure</dc:subject>
+    <dc:subject>Downward Long-Wave Radiation</dc:subject>
+    <dc:contributor>
+      <rdf:Description>
+        <hsterms:name>Wood, Andrew W</hsterms:name>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:email>andywood@ucar.edu</hsterms:email>
+        <hsterms:address>Colorado (CO), US</hsterms:address>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:hydroshare_user_id>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:organization>NCAR;University of Colorado at Boulder</hsterms:organization>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">824</hsterms:description>
+      </rdf:Description>
+    </dc:contributor>
+    <dc:title>AORC atmospheric forcing data across CAMELS US basins, 1980 - 2024</dc:title>
+    <dc:subject>Temperature</dc:subject>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/c738c05278a34bc9848dd14d61cffab9"/>
+      </rdf:Description>
+    </dc:identifier>
+  </hsterms:CompositeResource>
+</rdf:RDF>

@@ -1,0 +1,20 @@
+[
+    {
+        "file_name": "CFE-ODE-test-run-with-the-best-param-by-Tadd-12July2023.zip",
+        "file_path": "outputs/CFE-ODE-test-run-with-the-best-param-by-Tadd-12July2023.zip",
+        "extension": ".zip",
+        "checksum": "ef5034c684bab55baaddb7333edc1b32-5"
+    },
+    {
+        "file_name": "CFE-classic-test-run-with-the-best-param-by-Soelem-07July2023.zip",
+        "file_path": "outputs/CFE-classic-test-run-with-the-best-param-by-Soelem-07July2023.zip",
+        "extension": ".zip",
+        "checksum": "82d5fa0e4f88b4c1f177d2b4ce9ad471-17"
+    },
+    {
+        "file_name": "CFE_Config_Cver_from_Luciana.zip",
+        "file_path": "config/CFE_Config_Cver_from_Luciana.zip",
+        "extension": ".zip",
+        "checksum": "d62b8d838ffbaca263e2cf98483133d6"
+    }
+]

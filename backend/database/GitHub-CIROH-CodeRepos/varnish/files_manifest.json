@@ -1,0 +1,3050 @@
+[
+    {
+        "path": ".Rbuildignore",
+        "file_name": ".Rbuildignore",
+        "extension": "",
+        "size_bytes": 194,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".Rhistory",
+        "file_name": ".Rhistory",
+        "extension": "",
+        "size_bytes": 0,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".editorconfig",
+        "file_name": ".editorconfig",
+        "extension": "",
+        "size_bytes": 535,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/.gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 7,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/compile-css.yaml",
+        "file_name": "compile-css.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1018,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/pkgdown.yaml",
+        "file_name": "pkgdown.yaml",
+        "extension": ".yaml",
+        "size_bytes": 956,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 32,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "DESCRIPTION",
+        "file_name": "DESCRIPTION",
+        "extension": "",
+        "size_bytes": 2440,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE",
+        "file_name": "LICENSE",
+        "extension": "",
+        "size_bytes": 45,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "LICENSE.md",
+        "file_name": "LICENSE.md",
+        "extension": ".md",
+        "size_bytes": 1074,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "NAMESPACE",
+        "file_name": "NAMESPACE",
+        "extension": "",
+        "size_bytes": 46,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "NEWS.md",
+        "file_name": "NEWS.md",
+        "extension": ".md",
+        "size_bytes": 17569,
+        "downloaded": true,
+        "selection_reason": "allowed_top_level_doc"
+    },
+    {
+        "path": "R/hello.R",
+        "file_name": "hello.R",
+        "extension": ".r",
+        "size_bytes": 27,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "R/varnish-package.R",
+        "file_name": "varnish-package.R",
+        "extension": ".r",
+        "size_bytes": 245,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 5528,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "_pkgdown.yml",
+        "file_name": "_pkgdown.yml",
+        "extension": ".yml",
+        "size_bytes": 396,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/android-chrome-192x192.png",
+        "file_name": "android-chrome-192x192.png",
+        "extension": ".png",
+        "size_bytes": 2103,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/android-chrome-512x512.png",
+        "file_name": "android-chrome-512x512.png",
+        "extension": ".png",
+        "size_bytes": 6231,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/apple-touch-icon.png",
+        "file_name": "apple-touch-icon.png",
+        "extension": ".png",
+        "size_bytes": 2096,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/copybutton.js",
+        "file_name": "copybutton.js",
+        "extension": ".js",
+        "size_bytes": 1907,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Black.eot",
+        "file_name": "Mulish-Black.eot",
+        "extension": ".eot",
+        "size_bytes": 120480,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Black.svg",
+        "file_name": "Mulish-Black.svg",
+        "extension": ".svg",
+        "size_bytes": 591292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Black.ttf",
+        "file_name": "Mulish-Black.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106576,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Black.woff",
+        "file_name": "Mulish-Black.woff",
+        "extension": ".woff",
+        "size_bytes": 55084,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Black.woff2",
+        "file_name": "Mulish-Black.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39388,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BlackItalic.eot",
+        "file_name": "Mulish-BlackItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123372,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BlackItalic.svg",
+        "file_name": "Mulish-BlackItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 608399,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BlackItalic.ttf",
+        "file_name": "Mulish-BlackItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110200,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BlackItalic.woff",
+        "file_name": "Mulish-BlackItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 58392,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BlackItalic.woff2",
+        "file_name": "Mulish-BlackItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 42108,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Bold.eot",
+        "file_name": "Mulish-Bold.eot",
+        "extension": ".eot",
+        "size_bytes": 120312,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Bold.svg",
+        "file_name": "Mulish-Bold.svg",
+        "extension": ".svg",
+        "size_bytes": 587170,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Bold.ttf",
+        "file_name": "Mulish-Bold.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106576,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Bold.woff",
+        "file_name": "Mulish-Bold.woff",
+        "extension": ".woff",
+        "size_bytes": 54668,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Bold.woff2",
+        "file_name": "Mulish-Bold.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39184,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BoldItalic.eot",
+        "file_name": "Mulish-BoldItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123200,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BoldItalic.svg",
+        "file_name": "Mulish-BoldItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 607916,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BoldItalic.ttf",
+        "file_name": "Mulish-BoldItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110260,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BoldItalic.woff",
+        "file_name": "Mulish-BoldItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 57988,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-BoldItalic.woff2",
+        "file_name": "Mulish-BoldItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 41456,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBold.eot",
+        "file_name": "Mulish-ExtraBold.eot",
+        "extension": ".eot",
+        "size_bytes": 120524,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBold.svg",
+        "file_name": "Mulish-ExtraBold.svg",
+        "extension": ".svg",
+        "size_bytes": 581475,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBold.ttf",
+        "file_name": "Mulish-ExtraBold.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106536,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBold.woff",
+        "file_name": "Mulish-ExtraBold.woff",
+        "extension": ".woff",
+        "size_bytes": 55068,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBold.woff2",
+        "file_name": "Mulish-ExtraBold.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39624,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBoldItalic.eot",
+        "file_name": "Mulish-ExtraBoldItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123384,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBoldItalic.svg",
+        "file_name": "Mulish-ExtraBoldItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 600522,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBoldItalic.ttf",
+        "file_name": "Mulish-ExtraBoldItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110256,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBoldItalic.woff",
+        "file_name": "Mulish-ExtraBoldItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 58500,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraBoldItalic.woff2",
+        "file_name": "Mulish-ExtraBoldItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 42252,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLight.eot",
+        "file_name": "Mulish-ExtraLight.eot",
+        "extension": ".eot",
+        "size_bytes": 121852,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLight.svg",
+        "file_name": "Mulish-ExtraLight.svg",
+        "extension": ".svg",
+        "size_bytes": 560237,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLight.ttf",
+        "file_name": "Mulish-ExtraLight.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106380,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLight.woff",
+        "file_name": "Mulish-ExtraLight.woff",
+        "extension": ".woff",
+        "size_bytes": 53980,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLight.woff2",
+        "file_name": "Mulish-ExtraLight.woff2",
+        "extension": ".woff2",
+        "size_bytes": 38176,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLightItalic.eot",
+        "file_name": "Mulish-ExtraLightItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 124640,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLightItalic.svg",
+        "file_name": "Mulish-ExtraLightItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 577607,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLightItalic.ttf",
+        "file_name": "Mulish-ExtraLightItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110000,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLightItalic.woff",
+        "file_name": "Mulish-ExtraLightItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 56860,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-ExtraLightItalic.woff2",
+        "file_name": "Mulish-ExtraLightItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 40368,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Italic-VariableFont_wght.ttf",
+        "file_name": "Mulish-Italic-VariableFont_wght.ttf",
+        "extension": ".ttf",
+        "size_bytes": 219768,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Italic.eot",
+        "file_name": "Mulish-Italic.eot",
+        "extension": ".eot",
+        "size_bytes": 123192,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Italic.svg",
+        "file_name": "Mulish-Italic.svg",
+        "extension": ".svg",
+        "size_bytes": 600891,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Italic.ttf",
+        "file_name": "Mulish-Italic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110060,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Italic.woff",
+        "file_name": "Mulish-Italic.woff",
+        "extension": ".woff",
+        "size_bytes": 58184,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Italic.woff2",
+        "file_name": "Mulish-Italic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 41600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Light.eot",
+        "file_name": "Mulish-Light.eot",
+        "extension": ".eot",
+        "size_bytes": 120600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Light.svg",
+        "file_name": "Mulish-Light.svg",
+        "extension": ".svg",
+        "size_bytes": 567483,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Light.ttf",
+        "file_name": "Mulish-Light.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106572,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Light.woff",
+        "file_name": "Mulish-Light.woff",
+        "extension": ".woff",
+        "size_bytes": 54436,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Light.woff2",
+        "file_name": "Mulish-Light.woff2",
+        "extension": ".woff2",
+        "size_bytes": 38984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-LightItalic.eot",
+        "file_name": "Mulish-LightItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123408,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-LightItalic.svg",
+        "file_name": "Mulish-LightItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 585253,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-LightItalic.ttf",
+        "file_name": "Mulish-LightItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110192,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-LightItalic.woff",
+        "file_name": "Mulish-LightItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 57736,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-LightItalic.woff2",
+        "file_name": "Mulish-LightItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 41496,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Medium.eot",
+        "file_name": "Mulish-Medium.eot",
+        "extension": ".eot",
+        "size_bytes": 120540,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Medium.svg",
+        "file_name": "Mulish-Medium.svg",
+        "extension": ".svg",
+        "size_bytes": 585753,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Medium.ttf",
+        "file_name": "Mulish-Medium.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106568,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Medium.woff",
+        "file_name": "Mulish-Medium.woff",
+        "extension": ".woff",
+        "size_bytes": 55068,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Medium.woff2",
+        "file_name": "Mulish-Medium.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39504,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-MediumItalic.eot",
+        "file_name": "Mulish-MediumItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-MediumItalic.svg",
+        "file_name": "Mulish-MediumItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 605239,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-MediumItalic.ttf",
+        "file_name": "Mulish-MediumItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110160,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-MediumItalic.woff",
+        "file_name": "Mulish-MediumItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 58488,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-MediumItalic.woff2",
+        "file_name": "Mulish-MediumItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 41984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Regular.eot",
+        "file_name": "Mulish-Regular.eot",
+        "extension": ".eot",
+        "size_bytes": 120472,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Regular.svg",
+        "file_name": "Mulish-Regular.svg",
+        "extension": ".svg",
+        "size_bytes": 585912,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Regular.ttf",
+        "file_name": "Mulish-Regular.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106528,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Regular.woff",
+        "file_name": "Mulish-Regular.woff",
+        "extension": ".woff",
+        "size_bytes": 54864,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-Regular.woff2",
+        "file_name": "Mulish-Regular.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39332,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBold.eot",
+        "file_name": "Mulish-SemiBold.eot",
+        "extension": ".eot",
+        "size_bytes": 120564,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBold.svg",
+        "file_name": "Mulish-SemiBold.svg",
+        "extension": ".svg",
+        "size_bytes": 588951,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBold.ttf",
+        "file_name": "Mulish-SemiBold.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106508,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBold.woff",
+        "file_name": "Mulish-SemiBold.woff",
+        "extension": ".woff",
+        "size_bytes": 55100,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBold.woff2",
+        "file_name": "Mulish-SemiBold.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39344,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBoldItalic.eot",
+        "file_name": "Mulish-SemiBoldItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123412,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBoldItalic.svg",
+        "file_name": "Mulish-SemiBoldItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 607370,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBoldItalic.ttf",
+        "file_name": "Mulish-SemiBoldItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110120,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBoldItalic.woff",
+        "file_name": "Mulish-SemiBoldItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 58600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-SemiBoldItalic.woff2",
+        "file_name": "Mulish-SemiBoldItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 42132,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/Mulish-VariableFont_wght.ttf",
+        "file_name": "Mulish-VariableFont_wght.ttf",
+        "extension": ".ttf",
+        "size_bytes": 212500,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/MulishExtraLight-Regular.eot",
+        "file_name": "MulishExtraLight-Regular.eot",
+        "extension": ".eot",
+        "size_bytes": 27692,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/MulishExtraLight-Regular.svg",
+        "file_name": "MulishExtraLight-Regular.svg",
+        "extension": ".svg",
+        "size_bytes": 143626,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/MulishExtraLight-Regular.woff",
+        "file_name": "MulishExtraLight-Regular.woff",
+        "extension": ".woff",
+        "size_bytes": 15908,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/MulishExtraLight-Regular.woff2",
+        "file_name": "MulishExtraLight-Regular.woff2",
+        "extension": ".woff2",
+        "size_bytes": 12248,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/mulish-v5-latin-regular.eot",
+        "file_name": "mulish-v5-latin-regular.eot",
+        "extension": ".eot",
+        "size_bytes": 12924,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/mulish-v5-latin-regular.svg",
+        "file_name": "mulish-v5-latin-regular.svg",
+        "extension": ".svg",
+        "size_bytes": 47552,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/mulish-v5-latin-regular.ttf",
+        "file_name": "mulish-v5-latin-regular.ttf",
+        "extension": ".ttf",
+        "size_bytes": 25836,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/mulish-v5-latin-regular.woff",
+        "file_name": "mulish-v5-latin-regular.woff",
+        "extension": ".woff",
+        "size_bytes": 14344,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/mulish-v5-latin-regular.woff2",
+        "file_name": "mulish-v5-latin-regular.woff2",
+        "extension": ".woff2",
+        "size_bytes": 11292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/mulish-variablefont_wght.woff",
+        "file_name": "mulish-variablefont_wght.woff",
+        "extension": ".woff",
+        "size_bytes": 81560,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/fonts/mulish-variablefont_wght.woff2",
+        "file_name": "mulish-variablefont_wght.woff2",
+        "extension": ".woff2",
+        "size_bytes": 50460,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/carpentries-logo-sm.svg",
+        "file_name": "carpentries-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 1163,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/carpentries-logo.svg",
+        "file_name": "carpentries-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 4960,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/ciroh-logo-sm.svg",
+        "file_name": "ciroh-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 32258,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/ciroh-logo.svg",
+        "file_name": "ciroh-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 44346,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/data-logo-sm.svg",
+        "file_name": "data-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 925,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/data-logo.svg",
+        "file_name": "data-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 927,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/dropdown-arrow.svg",
+        "file_name": "dropdown-arrow.svg",
+        "extension": ".svg",
+        "size_bytes": 398,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/incubator-logo-sm.svg",
+        "file_name": "incubator-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 4208,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/incubator-logo.svg",
+        "file_name": "incubator-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 4226,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/lab-logo-sm.svg",
+        "file_name": "lab-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 4174,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/lab-logo.svg",
+        "file_name": "lab-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 11669,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/library-logo-sm.svg",
+        "file_name": "library-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 11893,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/library-logo.svg",
+        "file_name": "library-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 11919,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/minus.svg",
+        "file_name": "minus.svg",
+        "extension": ".svg",
+        "size_bytes": 261,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/orcid_icon.png",
+        "file_name": "orcid_icon.png",
+        "extension": ".png",
+        "size_bytes": 8423,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/parrot_icon.svg",
+        "file_name": "parrot_icon.svg",
+        "extension": ".svg",
+        "size_bytes": 943,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/parrot_icon_colour.svg",
+        "file_name": "parrot_icon_colour.svg",
+        "extension": ".svg",
+        "size_bytes": 5378,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/plus.svg",
+        "file_name": "plus.svg",
+        "extension": ".svg",
+        "size_bytes": 304,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/software-logo-sm.svg",
+        "file_name": "software-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 1563,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/images/software-logo.svg",
+        "file_name": "software-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 33341,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/scripts.js",
+        "file_name": "scripts.js",
+        "extension": ".js",
+        "size_bytes": 3004145,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/styles.css",
+        "file_name": "styles.css",
+        "extension": ".css",
+        "size_bytes": 546795,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/styles.css.map",
+        "file_name": "styles.css.map",
+        "extension": ".map",
+        "size_bytes": 64500,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/assets/themetoggle.js",
+        "file_name": "themetoggle.js",
+        "extension": ".js",
+        "size_bytes": 2430,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicon-16x16.png",
+        "file_name": "favicon-16x16.png",
+        "extension": ".png",
+        "size_bytes": 424,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicon-32x32.png",
+        "file_name": "favicon-32x32.png",
+        "extension": ".png",
+        "size_bytes": 615,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/apple-touch-icon-114x114.png",
+        "file_name": "apple-touch-icon-114x114.png",
+        "extension": ".png",
+        "size_bytes": 9527,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/apple-touch-icon-120x120.png",
+        "file_name": "apple-touch-icon-120x120.png",
+        "extension": ".png",
+        "size_bytes": 7363,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/apple-touch-icon-144x144.png",
+        "file_name": "apple-touch-icon-144x144.png",
+        "extension": ".png",
+        "size_bytes": 14680,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/apple-touch-icon-152x152.png",
+        "file_name": "apple-touch-icon-152x152.png",
+        "extension": ".png",
+        "size_bytes": 16094,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/apple-touch-icon-57x57.png",
+        "file_name": "apple-touch-icon-57x57.png",
+        "extension": ".png",
+        "size_bytes": 3180,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/apple-touch-icon-60x60.png",
+        "file_name": "apple-touch-icon-60x60.png",
+        "extension": ".png",
+        "size_bytes": 2787,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/apple-touch-icon-72x72.png",
+        "file_name": "apple-touch-icon-72x72.png",
+        "extension": ".png",
+        "size_bytes": 4338,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/apple-touch-icon-76x76.png",
+        "file_name": "apple-touch-icon-76x76.png",
+        "extension": ".png",
+        "size_bytes": 4718,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/favicon-128.png",
+        "file_name": "favicon-128.png",
+        "extension": ".png",
+        "size_bytes": 6528,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/favicon-16x16.png",
+        "file_name": "favicon-16x16.png",
+        "extension": ".png",
+        "size_bytes": 569,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/favicon-196x196.png",
+        "file_name": "favicon-196x196.png",
+        "extension": ".png",
+        "size_bytes": 26095,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/favicon-32x32.png",
+        "file_name": "favicon-32x32.png",
+        "extension": ".png",
+        "size_bytes": 1272,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/favicon-96x96.png",
+        "file_name": "favicon-96x96.png",
+        "extension": ".png",
+        "size_bytes": 6197,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/favicon.ico",
+        "file_name": "favicon.ico",
+        "extension": ".ico",
+        "size_bytes": 34494,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/mstile-144x144.png",
+        "file_name": "mstile-144x144.png",
+        "extension": ".png",
+        "size_bytes": 14680,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/mstile-150x150.png",
+        "file_name": "mstile-150x150.png",
+        "extension": ".png",
+        "size_bytes": 34546,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/mstile-310x150.png",
+        "file_name": "mstile-310x150.png",
+        "extension": ".png",
+        "size_bytes": 73438,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/mstile-310x310.png",
+        "file_name": "mstile-310x310.png",
+        "extension": ".png",
+        "size_bytes": 152844,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/cp/mstile-70x70.png",
+        "file_name": "mstile-70x70.png",
+        "extension": ".png",
+        "size_bytes": 6528,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/apple-touch-icon-114x114.png",
+        "file_name": "apple-touch-icon-114x114.png",
+        "extension": ".png",
+        "size_bytes": 3888,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/apple-touch-icon-120x120.png",
+        "file_name": "apple-touch-icon-120x120.png",
+        "extension": ".png",
+        "size_bytes": 3088,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/apple-touch-icon-144x144.png",
+        "file_name": "apple-touch-icon-144x144.png",
+        "extension": ".png",
+        "size_bytes": 4058,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/apple-touch-icon-152x152.png",
+        "file_name": "apple-touch-icon-152x152.png",
+        "extension": ".png",
+        "size_bytes": 5839,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/apple-touch-icon-57x57.png",
+        "file_name": "apple-touch-icon-57x57.png",
+        "extension": ".png",
+        "size_bytes": 1438,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/apple-touch-icon-60x60.png",
+        "file_name": "apple-touch-icon-60x60.png",
+        "extension": ".png",
+        "size_bytes": 1404,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/apple-touch-icon-72x72.png",
+        "file_name": "apple-touch-icon-72x72.png",
+        "extension": ".png",
+        "size_bytes": 1546,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/apple-touch-icon-76x76.png",
+        "file_name": "apple-touch-icon-76x76.png",
+        "extension": ".png",
+        "size_bytes": 1934,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/favicon-128.png",
+        "file_name": "favicon-128.png",
+        "extension": ".png",
+        "size_bytes": 2525,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/favicon-16x16.png",
+        "file_name": "favicon-16x16.png",
+        "extension": ".png",
+        "size_bytes": 398,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/favicon-196x196.png",
+        "file_name": "favicon-196x196.png",
+        "extension": ".png",
+        "size_bytes": 9560,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/favicon-32x32.png",
+        "file_name": "favicon-32x32.png",
+        "extension": ".png",
+        "size_bytes": 699,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/favicon-96x96.png",
+        "file_name": "favicon-96x96.png",
+        "extension": ".png",
+        "size_bytes": 1839,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/favicon.ico",
+        "file_name": "favicon.ico",
+        "extension": ".ico",
+        "size_bytes": 34494,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/mstile-144x144.png",
+        "file_name": "mstile-144x144.png",
+        "extension": ".png",
+        "size_bytes": 4058,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/mstile-150x150.png",
+        "file_name": "mstile-150x150.png",
+        "extension": ".png",
+        "size_bytes": 16349,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/mstile-310x150.png",
+        "file_name": "mstile-310x150.png",
+        "extension": ".png",
+        "size_bytes": 25258,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/mstile-310x310.png",
+        "file_name": "mstile-310x310.png",
+        "extension": ".png",
+        "size_bytes": 60282,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/dc/mstile-70x70.png",
+        "file_name": "mstile-70x70.png",
+        "extension": ".png",
+        "size_bytes": 2525,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/apple-touch-icon-114x114.png",
+        "file_name": "apple-touch-icon-114x114.png",
+        "extension": ".png",
+        "size_bytes": 6851,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/apple-touch-icon-120x120.png",
+        "file_name": "apple-touch-icon-120x120.png",
+        "extension": ".png",
+        "size_bytes": 5646,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/apple-touch-icon-144x144.png",
+        "file_name": "apple-touch-icon-144x144.png",
+        "extension": ".png",
+        "size_bytes": 10064,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/apple-touch-icon-152x152.png",
+        "file_name": "apple-touch-icon-152x152.png",
+        "extension": ".png",
+        "size_bytes": 11313,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/apple-touch-icon-57x57.png",
+        "file_name": "apple-touch-icon-57x57.png",
+        "extension": ".png",
+        "size_bytes": 2426,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/apple-touch-icon-60x60.png",
+        "file_name": "apple-touch-icon-60x60.png",
+        "extension": ".png",
+        "size_bytes": 2216,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/apple-touch-icon-72x72.png",
+        "file_name": "apple-touch-icon-72x72.png",
+        "extension": ".png",
+        "size_bytes": 3170,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/apple-touch-icon-76x76.png",
+        "file_name": "apple-touch-icon-76x76.png",
+        "extension": ".png",
+        "size_bytes": 3650,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/favicon-128.png",
+        "file_name": "favicon-128.png",
+        "extension": ".png",
+        "size_bytes": 4763,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/favicon-16x16.png",
+        "file_name": "favicon-16x16.png",
+        "extension": ".png",
+        "size_bytes": 458,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/favicon-196x196.png",
+        "file_name": "favicon-196x196.png",
+        "extension": ".png",
+        "size_bytes": 17613,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/favicon-32x32.png",
+        "file_name": "favicon-32x32.png",
+        "extension": ".png",
+        "size_bytes": 998,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/favicon-96x96.png",
+        "file_name": "favicon-96x96.png",
+        "extension": ".png",
+        "size_bytes": 4583,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/favicon.ico",
+        "file_name": "favicon.ico",
+        "extension": ".ico",
+        "size_bytes": 34494,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/mstile-144x144.png",
+        "file_name": "mstile-144x144.png",
+        "extension": ".png",
+        "size_bytes": 10064,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/mstile-150x150.png",
+        "file_name": "mstile-150x150.png",
+        "extension": ".png",
+        "size_bytes": 25278,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/mstile-310x150.png",
+        "file_name": "mstile-310x150.png",
+        "extension": ".png",
+        "size_bytes": 56617,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/mstile-310x310.png",
+        "file_name": "mstile-310x310.png",
+        "extension": ".png",
+        "size_bytes": 117944,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/lc/mstile-70x70.png",
+        "file_name": "mstile-70x70.png",
+        "extension": ".png",
+        "size_bytes": 4763,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/apple-touch-icon-114x114.png",
+        "file_name": "apple-touch-icon-114x114.png",
+        "extension": ".png",
+        "size_bytes": 9156,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/apple-touch-icon-120x120.png",
+        "file_name": "apple-touch-icon-120x120.png",
+        "extension": ".png",
+        "size_bytes": 6887,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/apple-touch-icon-144x144.png",
+        "file_name": "apple-touch-icon-144x144.png",
+        "extension": ".png",
+        "size_bytes": 14431,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/apple-touch-icon-152x152.png",
+        "file_name": "apple-touch-icon-152x152.png",
+        "extension": ".png",
+        "size_bytes": 15451,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/apple-touch-icon-57x57.png",
+        "file_name": "apple-touch-icon-57x57.png",
+        "extension": ".png",
+        "size_bytes": 2944,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/apple-touch-icon-60x60.png",
+        "file_name": "apple-touch-icon-60x60.png",
+        "extension": ".png",
+        "size_bytes": 2593,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/apple-touch-icon-72x72.png",
+        "file_name": "apple-touch-icon-72x72.png",
+        "extension": ".png",
+        "size_bytes": 4119,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/apple-touch-icon-76x76.png",
+        "file_name": "apple-touch-icon-76x76.png",
+        "extension": ".png",
+        "size_bytes": 4379,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/favicon-128.png",
+        "file_name": "favicon-128.png",
+        "extension": ".png",
+        "size_bytes": 6298,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/favicon-16x16.png",
+        "file_name": "favicon-16x16.png",
+        "extension": ".png",
+        "size_bytes": 557,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/favicon-196x196.png",
+        "file_name": "favicon-196x196.png",
+        "extension": ".png",
+        "size_bytes": 25107,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/favicon-32x32.png",
+        "file_name": "favicon-32x32.png",
+        "extension": ".png",
+        "size_bytes": 1181,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/favicon-96x96.png",
+        "file_name": "favicon-96x96.png",
+        "extension": ".png",
+        "size_bytes": 6269,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/favicon.ico",
+        "file_name": "favicon.ico",
+        "extension": ".ico",
+        "size_bytes": 34494,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/mstile-144x144.png",
+        "file_name": "mstile-144x144.png",
+        "extension": ".png",
+        "size_bytes": 14431,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/mstile-150x150.png",
+        "file_name": "mstile-150x150.png",
+        "extension": ".png",
+        "size_bytes": 33163,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/mstile-310x150.png",
+        "file_name": "mstile-310x150.png",
+        "extension": ".png",
+        "size_bytes": 77018,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/mstile-310x310.png",
+        "file_name": "mstile-310x310.png",
+        "extension": ".png",
+        "size_bytes": 162023,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/favicons/swc/mstile-70x70.png",
+        "file_name": "mstile-70x70.png",
+        "extension": ".png",
+        "size_bytes": 6298,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/mstile-150x150.png",
+        "file_name": "mstile-150x150.png",
+        "extension": ".png",
+        "size_bytes": 1465,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/safari-pinned-tab.svg",
+        "file_name": "safari-pinned-tab.svg",
+        "extension": ".svg",
+        "size_bytes": 4503,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/assets/site.webmanifest",
+        "file_name": "site.webmanifest",
+        "extension": ".webmanifest",
+        "size_bytes": 456,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/config-docsearch.json",
+        "file_name": "config-docsearch.json",
+        "extension": ".json",
+        "size_bytes": 2091,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/content-chapter.html",
+        "file_name": "content-chapter.html",
+        "extension": ".html",
+        "size_bytes": 5163,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/content-citation.html",
+        "file_name": "content-citation.html",
+        "extension": ".html",
+        "size_bytes": 721,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/content-extra.html",
+        "file_name": "content-extra.html",
+        "extension": ".html",
+        "size_bytes": 1306,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/content-overview.html",
+        "file_name": "content-overview.html",
+        "extension": ".html",
+        "size_bytes": 1241,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/content-syllabus.html",
+        "file_name": "content-syllabus.html",
+        "extension": ".html",
+        "size_bytes": 2612,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/docsearch.html",
+        "file_name": "docsearch.html",
+        "extension": ".html",
+        "size_bytes": 725,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/footer.html",
+        "file_name": "footer.html",
+        "extension": ".html",
+        "size_bytes": 2357,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/head.html",
+        "file_name": "head.html",
+        "extension": ".html",
+        "size_bytes": 2534,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/header.html",
+        "file_name": "header.html",
+        "extension": ".html",
+        "size_bytes": 13858,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/layout.html",
+        "file_name": "layout.html",
+        "extension": ".html",
+        "size_bytes": 495,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "inst/pkgdown/templates/navbar.html",
+        "file_name": "navbar.html",
+        "extension": ".html",
+        "size_bytes": 11089,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "man/figures/logo.png",
+        "file_name": "logo.png",
+        "extension": ".png",
+        "size_bytes": 148744,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "man/varnish-package.Rd",
+        "file_name": "varnish-package.Rd",
+        "extension": ".rd",
+        "size_bytes": 1815,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "package-lock.json",
+        "file_name": "package-lock.json",
+        "extension": ".json",
+        "size_bytes": 123542,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "package.json",
+        "file_name": "package.json",
+        "extension": ".json",
+        "size_bytes": 454,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pkgdown/favicon/apple-touch-icon-120x120.png",
+        "file_name": "apple-touch-icon-120x120.png",
+        "extension": ".png",
+        "size_bytes": 17060,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pkgdown/favicon/apple-touch-icon-152x152.png",
+        "file_name": "apple-touch-icon-152x152.png",
+        "extension": ".png",
+        "size_bytes": 23262,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pkgdown/favicon/apple-touch-icon-180x180.png",
+        "file_name": "apple-touch-icon-180x180.png",
+        "extension": ".png",
+        "size_bytes": 29141,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pkgdown/favicon/apple-touch-icon-60x60.png",
+        "file_name": "apple-touch-icon-60x60.png",
+        "extension": ".png",
+        "size_bytes": 6564,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pkgdown/favicon/apple-touch-icon-76x76.png",
+        "file_name": "apple-touch-icon-76x76.png",
+        "extension": ".png",
+        "size_bytes": 9138,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pkgdown/favicon/apple-touch-icon.png",
+        "file_name": "apple-touch-icon.png",
+        "extension": ".png",
+        "size_bytes": 29141,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pkgdown/favicon/favicon-16x16.png",
+        "file_name": "favicon-16x16.png",
+        "extension": ".png",
+        "size_bytes": 1469,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pkgdown/favicon/favicon-32x32.png",
+        "file_name": "favicon-32x32.png",
+        "extension": ".png",
+        "size_bytes": 2828,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pkgdown/favicon/favicon.ico",
+        "file_name": "favicon.ico",
+        "extension": ".ico",
+        "size_bytes": 15086,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "postinstall.sh",
+        "file_name": "postinstall.sh",
+        "extension": ".sh",
+        "size_bytes": 1063,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Black.eot",
+        "file_name": "Mulish-Black.eot",
+        "extension": ".eot",
+        "size_bytes": 120480,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Black.svg",
+        "file_name": "Mulish-Black.svg",
+        "extension": ".svg",
+        "size_bytes": 591292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Black.ttf",
+        "file_name": "Mulish-Black.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106576,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Black.woff",
+        "file_name": "Mulish-Black.woff",
+        "extension": ".woff",
+        "size_bytes": 55084,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Black.woff2",
+        "file_name": "Mulish-Black.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39388,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BlackItalic.eot",
+        "file_name": "Mulish-BlackItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123372,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BlackItalic.svg",
+        "file_name": "Mulish-BlackItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 608399,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BlackItalic.ttf",
+        "file_name": "Mulish-BlackItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110200,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BlackItalic.woff",
+        "file_name": "Mulish-BlackItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 58392,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BlackItalic.woff2",
+        "file_name": "Mulish-BlackItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 42108,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Bold.eot",
+        "file_name": "Mulish-Bold.eot",
+        "extension": ".eot",
+        "size_bytes": 120312,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Bold.svg",
+        "file_name": "Mulish-Bold.svg",
+        "extension": ".svg",
+        "size_bytes": 587170,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Bold.ttf",
+        "file_name": "Mulish-Bold.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106576,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Bold.woff",
+        "file_name": "Mulish-Bold.woff",
+        "extension": ".woff",
+        "size_bytes": 54668,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Bold.woff2",
+        "file_name": "Mulish-Bold.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39184,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BoldItalic.eot",
+        "file_name": "Mulish-BoldItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123200,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BoldItalic.svg",
+        "file_name": "Mulish-BoldItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 607916,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BoldItalic.ttf",
+        "file_name": "Mulish-BoldItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110260,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BoldItalic.woff",
+        "file_name": "Mulish-BoldItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 57988,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-BoldItalic.woff2",
+        "file_name": "Mulish-BoldItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 41456,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBold.eot",
+        "file_name": "Mulish-ExtraBold.eot",
+        "extension": ".eot",
+        "size_bytes": 120524,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBold.svg",
+        "file_name": "Mulish-ExtraBold.svg",
+        "extension": ".svg",
+        "size_bytes": 581475,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBold.ttf",
+        "file_name": "Mulish-ExtraBold.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106536,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBold.woff",
+        "file_name": "Mulish-ExtraBold.woff",
+        "extension": ".woff",
+        "size_bytes": 55068,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBold.woff2",
+        "file_name": "Mulish-ExtraBold.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39624,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBoldItalic.eot",
+        "file_name": "Mulish-ExtraBoldItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123384,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBoldItalic.svg",
+        "file_name": "Mulish-ExtraBoldItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 600522,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBoldItalic.ttf",
+        "file_name": "Mulish-ExtraBoldItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110256,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBoldItalic.woff",
+        "file_name": "Mulish-ExtraBoldItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 58500,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraBoldItalic.woff2",
+        "file_name": "Mulish-ExtraBoldItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 42252,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLight.eot",
+        "file_name": "Mulish-ExtraLight.eot",
+        "extension": ".eot",
+        "size_bytes": 121852,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLight.svg",
+        "file_name": "Mulish-ExtraLight.svg",
+        "extension": ".svg",
+        "size_bytes": 560237,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLight.ttf",
+        "file_name": "Mulish-ExtraLight.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106380,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLight.woff",
+        "file_name": "Mulish-ExtraLight.woff",
+        "extension": ".woff",
+        "size_bytes": 53980,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLight.woff2",
+        "file_name": "Mulish-ExtraLight.woff2",
+        "extension": ".woff2",
+        "size_bytes": 38176,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLightItalic.eot",
+        "file_name": "Mulish-ExtraLightItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 124640,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLightItalic.svg",
+        "file_name": "Mulish-ExtraLightItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 577607,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLightItalic.ttf",
+        "file_name": "Mulish-ExtraLightItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110000,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLightItalic.woff",
+        "file_name": "Mulish-ExtraLightItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 56860,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-ExtraLightItalic.woff2",
+        "file_name": "Mulish-ExtraLightItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 40368,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Italic-VariableFont_wght.ttf",
+        "file_name": "Mulish-Italic-VariableFont_wght.ttf",
+        "extension": ".ttf",
+        "size_bytes": 219768,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Italic.eot",
+        "file_name": "Mulish-Italic.eot",
+        "extension": ".eot",
+        "size_bytes": 123192,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Italic.svg",
+        "file_name": "Mulish-Italic.svg",
+        "extension": ".svg",
+        "size_bytes": 600891,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Italic.ttf",
+        "file_name": "Mulish-Italic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110060,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Italic.woff",
+        "file_name": "Mulish-Italic.woff",
+        "extension": ".woff",
+        "size_bytes": 58184,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Italic.woff2",
+        "file_name": "Mulish-Italic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 41600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Light.eot",
+        "file_name": "Mulish-Light.eot",
+        "extension": ".eot",
+        "size_bytes": 120600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Light.svg",
+        "file_name": "Mulish-Light.svg",
+        "extension": ".svg",
+        "size_bytes": 567483,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Light.ttf",
+        "file_name": "Mulish-Light.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106572,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Light.woff",
+        "file_name": "Mulish-Light.woff",
+        "extension": ".woff",
+        "size_bytes": 54436,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Light.woff2",
+        "file_name": "Mulish-Light.woff2",
+        "extension": ".woff2",
+        "size_bytes": 38984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-LightItalic.eot",
+        "file_name": "Mulish-LightItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123408,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-LightItalic.svg",
+        "file_name": "Mulish-LightItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 585253,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-LightItalic.ttf",
+        "file_name": "Mulish-LightItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110192,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-LightItalic.woff",
+        "file_name": "Mulish-LightItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 57736,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-LightItalic.woff2",
+        "file_name": "Mulish-LightItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 41496,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Medium.eot",
+        "file_name": "Mulish-Medium.eot",
+        "extension": ".eot",
+        "size_bytes": 120540,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Medium.svg",
+        "file_name": "Mulish-Medium.svg",
+        "extension": ".svg",
+        "size_bytes": 585753,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Medium.ttf",
+        "file_name": "Mulish-Medium.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106568,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Medium.woff",
+        "file_name": "Mulish-Medium.woff",
+        "extension": ".woff",
+        "size_bytes": 55068,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Medium.woff2",
+        "file_name": "Mulish-Medium.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39504,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-MediumItalic.eot",
+        "file_name": "Mulish-MediumItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123416,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-MediumItalic.svg",
+        "file_name": "Mulish-MediumItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 605239,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-MediumItalic.ttf",
+        "file_name": "Mulish-MediumItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110160,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-MediumItalic.woff",
+        "file_name": "Mulish-MediumItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 58488,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-MediumItalic.woff2",
+        "file_name": "Mulish-MediumItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 41984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Regular.eot",
+        "file_name": "Mulish-Regular.eot",
+        "extension": ".eot",
+        "size_bytes": 120472,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Regular.svg",
+        "file_name": "Mulish-Regular.svg",
+        "extension": ".svg",
+        "size_bytes": 585912,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Regular.ttf",
+        "file_name": "Mulish-Regular.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106528,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Regular.woff",
+        "file_name": "Mulish-Regular.woff",
+        "extension": ".woff",
+        "size_bytes": 54864,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-Regular.woff2",
+        "file_name": "Mulish-Regular.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39332,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBold.eot",
+        "file_name": "Mulish-SemiBold.eot",
+        "extension": ".eot",
+        "size_bytes": 120564,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBold.svg",
+        "file_name": "Mulish-SemiBold.svg",
+        "extension": ".svg",
+        "size_bytes": 588951,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBold.ttf",
+        "file_name": "Mulish-SemiBold.ttf",
+        "extension": ".ttf",
+        "size_bytes": 106508,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBold.woff",
+        "file_name": "Mulish-SemiBold.woff",
+        "extension": ".woff",
+        "size_bytes": 55100,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBold.woff2",
+        "file_name": "Mulish-SemiBold.woff2",
+        "extension": ".woff2",
+        "size_bytes": 39344,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBoldItalic.eot",
+        "file_name": "Mulish-SemiBoldItalic.eot",
+        "extension": ".eot",
+        "size_bytes": 123412,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBoldItalic.svg",
+        "file_name": "Mulish-SemiBoldItalic.svg",
+        "extension": ".svg",
+        "size_bytes": 607370,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBoldItalic.ttf",
+        "file_name": "Mulish-SemiBoldItalic.ttf",
+        "extension": ".ttf",
+        "size_bytes": 110120,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBoldItalic.woff",
+        "file_name": "Mulish-SemiBoldItalic.woff",
+        "extension": ".woff",
+        "size_bytes": 58600,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-SemiBoldItalic.woff2",
+        "file_name": "Mulish-SemiBoldItalic.woff2",
+        "extension": ".woff2",
+        "size_bytes": 42132,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/Mulish-VariableFont_wght.ttf",
+        "file_name": "Mulish-VariableFont_wght.ttf",
+        "extension": ".ttf",
+        "size_bytes": 212500,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/MulishExtraLight-Regular.eot",
+        "file_name": "MulishExtraLight-Regular.eot",
+        "extension": ".eot",
+        "size_bytes": 27692,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/MulishExtraLight-Regular.svg",
+        "file_name": "MulishExtraLight-Regular.svg",
+        "extension": ".svg",
+        "size_bytes": 143626,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/MulishExtraLight-Regular.woff",
+        "file_name": "MulishExtraLight-Regular.woff",
+        "extension": ".woff",
+        "size_bytes": 15908,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/MulishExtraLight-Regular.woff2",
+        "file_name": "MulishExtraLight-Regular.woff2",
+        "extension": ".woff2",
+        "size_bytes": 12248,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/mulish-v5-latin-regular.eot",
+        "file_name": "mulish-v5-latin-regular.eot",
+        "extension": ".eot",
+        "size_bytes": 12924,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/mulish-v5-latin-regular.svg",
+        "file_name": "mulish-v5-latin-regular.svg",
+        "extension": ".svg",
+        "size_bytes": 47552,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/mulish-v5-latin-regular.ttf",
+        "file_name": "mulish-v5-latin-regular.ttf",
+        "extension": ".ttf",
+        "size_bytes": 25836,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/mulish-v5-latin-regular.woff",
+        "file_name": "mulish-v5-latin-regular.woff",
+        "extension": ".woff",
+        "size_bytes": 14344,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/mulish-v5-latin-regular.woff2",
+        "file_name": "mulish-v5-latin-regular.woff2",
+        "extension": ".woff2",
+        "size_bytes": 11292,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/mulish-variablefont_wght.woff",
+        "file_name": "mulish-variablefont_wght.woff",
+        "extension": ".woff",
+        "size_bytes": 81560,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/fonts/mulish-variablefont_wght.woff2",
+        "file_name": "mulish-variablefont_wght.woff2",
+        "extension": ".woff2",
+        "size_bytes": 50460,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/carpentries-logo-sm.svg",
+        "file_name": "carpentries-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 1163,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/carpentries-logo.svg",
+        "file_name": "carpentries-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 4960,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/data-logo-sm.svg",
+        "file_name": "data-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 925,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/data-logo.svg",
+        "file_name": "data-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 927,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/dropdown-arrow.svg",
+        "file_name": "dropdown-arrow.svg",
+        "extension": ".svg",
+        "size_bytes": 398,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/incubator-logo-sm.svg",
+        "file_name": "incubator-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 4208,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/incubator-logo.svg",
+        "file_name": "incubator-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 4226,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/lab-logo-sm.svg",
+        "file_name": "lab-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 4174,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/lab-logo.svg",
+        "file_name": "lab-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 11669,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/library-logo-sm.svg",
+        "file_name": "library-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 11893,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/library-logo.svg",
+        "file_name": "library-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 11919,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/minus.svg",
+        "file_name": "minus.svg",
+        "extension": ".svg",
+        "size_bytes": 261,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/orcid_icon.png",
+        "file_name": "orcid_icon.png",
+        "extension": ".png",
+        "size_bytes": 8423,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/parrot_icon.svg",
+        "file_name": "parrot_icon.svg",
+        "extension": ".svg",
+        "size_bytes": 943,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/parrot_icon_colour.svg",
+        "file_name": "parrot_icon_colour.svg",
+        "extension": ".svg",
+        "size_bytes": 5378,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/plus.svg",
+        "file_name": "plus.svg",
+        "extension": ".svg",
+        "size_bytes": 304,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/software-logo-sm.svg",
+        "file_name": "software-logo-sm.svg",
+        "extension": ".svg",
+        "size_bytes": 1563,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/images/software-logo.svg",
+        "file_name": "software-logo.svg",
+        "extension": ".svg",
+        "size_bytes": 33341,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/javascripts/.gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 27,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/javascripts/custom/copybutton.js",
+        "file_name": "copybutton.js",
+        "extension": ".js",
+        "size_bytes": 1817,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/javascripts/custom/menu.js",
+        "file_name": "menu.js",
+        "extension": ".js",
+        "size_bytes": 10649,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/javascripts/custom/mermaid.js",
+        "file_name": "mermaid.js",
+        "extension": ".js",
+        "size_bytes": 3290,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/javascripts/custom/tabs.js",
+        "file_name": "tabs.js",
+        "extension": ".js",
+        "size_bytes": 2806,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/javascripts/custom/themetoggle.js",
+        "file_name": "themetoggle.js",
+        "extension": ".js",
+        "size_bytes": 3664,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/javascripts/scripts.js",
+        "file_name": "scripts.js",
+        "extension": ".js",
+        "size_bytes": 203,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/.gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 11,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/callouts.scss",
+        "file_name": "callouts.scss",
+        "extension": ".scss",
+        "size_bytes": 4970,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/codeblocks.scss",
+        "file_name": "codeblocks.scss",
+        "extension": ".scss",
+        "size_bytes": 2137,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/dark.scss",
+        "file_name": "dark.scss",
+        "extension": ".scss",
+        "size_bytes": 19990,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/footer.scss",
+        "file_name": "footer.scss",
+        "extension": ".scss",
+        "size_bytes": 215,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/header.scss",
+        "file_name": "header.scss",
+        "extension": ".scss",
+        "size_bytes": 7872,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/instructornotes.scss",
+        "file_name": "instructornotes.scss",
+        "extension": ".scss",
+        "size_bytes": 1306,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/overview.scss",
+        "file_name": "overview.scss",
+        "extension": ".scss",
+        "size_bytes": 1187,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/schedule.scss",
+        "file_name": "schedule.scss",
+        "extension": ".scss",
+        "size_bytes": 290,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/sidenav.scss",
+        "file_name": "sidenav.scss",
+        "extension": ".scss",
+        "size_bytes": 2852,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/skiplinks.scss",
+        "file_name": "skiplinks.scss",
+        "extension": ".scss",
+        "size_bytes": 200,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/styles.css.scss",
+        "file_name": "styles.css.scss",
+        "extension": ".scss",
+        "size_bytes": 10133,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/syntax-highlighting.scss",
+        "file_name": "syntax-highlighting.scss",
+        "extension": ".scss",
+        "size_bytes": 2640,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/tabs.scss",
+        "file_name": "tabs.scss",
+        "extension": ".scss",
+        "size_bytes": 1320,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/themetoggle.scss",
+        "file_name": "themetoggle.scss",
+        "extension": ".scss",
+        "size_bytes": 1793,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "source/stylesheets/variables.scss",
+        "file_name": "variables.scss",
+        "extension": ".scss",
+        "size_bytes": 1229,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "squash-a-script.sh",
+        "file_name": "squash-a-script.sh",
+        "extension": ".sh",
+        "size_bytes": 586,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "squash-sass.sh",
+        "file_name": "squash-sass.sh",
+        "extension": ".sh",
+        "size_bytes": 303,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "varnish.Rproj",
+        "file_name": "varnish.Rproj",
+        "extension": ".rproj",
+        "size_bytes": 414,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

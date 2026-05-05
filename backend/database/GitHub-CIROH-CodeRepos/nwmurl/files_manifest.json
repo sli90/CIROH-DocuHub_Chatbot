@@ -1,0 +1,378 @@
+[
+    {
+        "path": ".github/workflows/secrets.yaml",
+        "file_name": "secrets.yaml",
+        "extension": ".yaml",
+        "size_bytes": 1152,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".github/workflows/test-python-publish.yml",
+        "file_name": "test-python-publish.yml",
+        "extension": ".yml",
+        "size_bytes": 1359,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": ".gitignore",
+        "file_name": ".gitignore",
+        "extension": "",
+        "size_bytes": 4762,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "LICENSE.txt",
+        "file_name": "LICENSE.txt",
+        "extension": ".txt",
+        "size_bytes": 1062,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "README.md",
+        "file_name": "README.md",
+        "extension": ".md",
+        "size_bytes": 6790,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "nwmurl/Readme_validation_testcase.txt",
+        "file_name": "Readme_validation_testcase.txt",
+        "extension": ".txt",
+        "size_bytes": 731,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "nwmurl/__init__.py",
+        "file_name": "__init__.py",
+        "extension": ".py",
+        "size_bytes": 104,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "nwmurl/urlgennwm.py",
+        "file_name": "urlgennwm.py",
+        "extension": ".py",
+        "size_bytes": 25919,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "nwmurl/validation_util.py",
+        "file_name": "validation_util.py",
+        "extension": ".py",
+        "size_bytes": 1559,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "pytest.ini",
+        "file_name": "pytest.ini",
+        "extension": ".ini",
+        "size_bytes": 24,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "requirements.txt",
+        "file_name": "requirements.txt",
+        "extension": ".txt",
+        "size_bytes": 61,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "setup.py",
+        "file_name": "setup.py",
+        "extension": ".py",
+        "size_bytes": 1520,
+        "downloaded": true,
+        "selection_reason": "allowed_exact_filename"
+    },
+    {
+        "path": "test/test_analysisAssim.py",
+        "file_name": "test_analysisAssim.py",
+        "extension": ".py",
+        "size_bytes": 2758,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_analysisAssimExtend.py",
+        "file_name": "test_analysisAssimExtend.py",
+        "extension": ".py",
+        "size_bytes": 2892,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_analysisAssimExtendNoDa.py",
+        "file_name": "test_analysisAssimExtendNoDa.py",
+        "extension": ".py",
+        "size_bytes": 2988,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_analysisAssimHawaii.py",
+        "file_name": "test_analysisAssimHawaii.py",
+        "extension": ".py",
+        "size_bytes": 2788,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_analysisAssimHawaiiNoDa.py",
+        "file_name": "test_analysisAssimHawaiiNoDa.py",
+        "extension": ".py",
+        "size_bytes": 2904,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_analysisAssimNoDa.py",
+        "file_name": "test_analysisAssimNoDa.py",
+        "extension": ".py",
+        "size_bytes": 2874,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_analysisAssimPuertorico.py",
+        "file_name": "test_analysisAssimPuertorico.py",
+        "extension": ".py",
+        "size_bytes": 2920,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_analysisAssimPuertoricoNoDa.py",
+        "file_name": "test_analysisAssimPuertoricoNoDa.py",
+        "extension": ".py",
+        "size_bytes": 3036,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_cases.py",
+        "file_name": "test_cases.py",
+        "extension": ".py",
+        "size_bytes": 7748,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_forcingAnalysisAssim.py",
+        "file_name": "test_forcingAnalysisAssim.py",
+        "extension": ".py",
+        "size_bytes": 2823,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_forcingAnalysisAssimExtend.py",
+        "file_name": "test_forcingAnalysisAssimExtend.py",
+        "extension": ".py",
+        "size_bytes": 2956,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_forcingAnalysisAssimHawaii.py",
+        "file_name": "test_forcingAnalysisAssimHawaii.py",
+        "extension": ".py",
+        "size_bytes": 2908,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_forcingAnalysisAssimPuertorico.py",
+        "file_name": "test_forcingAnalysisAssimPuertorico.py",
+        "extension": ".py",
+        "size_bytes": 2984,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_forcingMediumRange.py",
+        "file_name": "test_forcingMediumRange.py",
+        "extension": ".py",
+        "size_bytes": 2841,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_forcingShortRange.py",
+        "file_name": "test_forcingShortRange.py",
+        "extension": ".py",
+        "size_bytes": 2759,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_forcingShortRangeAssimHawaii.py",
+        "file_name": "test_forcingShortRangeAssimHawaii.py",
+        "extension": ".py",
+        "size_bytes": 2869,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_forcingShortRangeAssimPuertorico.py",
+        "file_name": "test_forcingShortRangeAssimPuertorico.py",
+        "extension": ".py",
+        "size_bytes": 2942,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_longRangeMem1.py",
+        "file_name": "test_longRangeMem1.py",
+        "extension": ".py",
+        "size_bytes": 2762,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_longRangeMem2.py",
+        "file_name": "test_longRangeMem2.py",
+        "extension": ".py",
+        "size_bytes": 2762,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_longRangeMem3.py",
+        "file_name": "test_longRangeMem3.py",
+        "extension": ".py",
+        "size_bytes": 2762,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_longRangeMem4.py",
+        "file_name": "test_longRangeMem4.py",
+        "extension": ".py",
+        "size_bytes": 2762,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_mediumRangeMem1.py",
+        "file_name": "test_mediumRangeMem1.py",
+        "extension": ".py",
+        "size_bytes": 2792,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_mediumRangeMem2.py",
+        "file_name": "test_mediumRangeMem2.py",
+        "extension": ".py",
+        "size_bytes": 2792,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_mediumRangeMem3.py",
+        "file_name": "test_mediumRangeMem3.py",
+        "extension": ".py",
+        "size_bytes": 2792,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_mediumRangeMem4.py",
+        "file_name": "test_mediumRangeMem4.py",
+        "extension": ".py",
+        "size_bytes": 2792,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_mediumRangeMem5.py",
+        "file_name": "test_mediumRangeMem5.py",
+        "extension": ".py",
+        "size_bytes": 2792,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_mediumRangeMem6.py",
+        "file_name": "test_mediumRangeMem6.py",
+        "extension": ".py",
+        "size_bytes": 2792,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_mediumRangeMemNoDa.py",
+        "file_name": "test_mediumRangeMemNoDa.py",
+        "extension": ".py",
+        "size_bytes": 2795,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_mediumRangeNoDa.py",
+        "file_name": "test_mediumRangeNoDa.py",
+        "extension": ".py",
+        "size_bytes": 2956,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_shortRange.py",
+        "file_name": "test_shortRange.py",
+        "extension": ".py",
+        "size_bytes": 2702,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_shortRangeAssimHawaii.py",
+        "file_name": "test_shortRangeAssimHawaii.py",
+        "extension": ".py",
+        "size_bytes": 2749,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_shortRangeAssimPuertorico.py",
+        "file_name": "test_shortRangeAssimPuertorico.py",
+        "extension": ".py",
+        "size_bytes": 2881,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_shortRangeAssimPuertoricoNoDa.py",
+        "file_name": "test_shortRangeAssimPuertoricoNoDa.py",
+        "extension": ".py",
+        "size_bytes": 2997,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test/test_validations.py",
+        "file_name": "test_validations.py",
+        "extension": ".py",
+        "size_bytes": 4520,
+        "downloaded": false,
+        "selection_reason": null
+    },
+    {
+        "path": "test_module_valid.py",
+        "file_name": "test_module_valid.py",
+        "extension": ".py",
+        "size_bytes": 156,
+        "downloaded": false,
+        "selection_reason": null
+    }
+]

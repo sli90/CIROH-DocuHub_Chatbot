@@ -1,0 +1,49 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "a8b243957f7946e388d10ab206990675",
+    "resource_title": "TempEst 2 Development Data: Observed Stream Temperature, Covariates, Performance Data, and Analysis Notebooks",
+    "abstract": "This resource contains code and data related to the development of the TempEst 2 stream temperature remote sensing model (manuscript in review with Journal of Hydrology).  The code includes the model implementation (model.R), some utility functions (valfn.R), data retrieval scripts for Google Earth Engine (eeretrieval.py and datapts.py), and a reproducible validation notebook (validation.Rmd), along with the knitted PDF of the latter (validation.pdf).  The main data include stream temperature daily mean/max observations retrieved from the USGS NWIS as well as remotely-sensed and gridded observations retrieved using Google Earth Engine from NLDAS, ESA WorldCover, MODIS, ERA5, and EPA Ecoregions (using eeretrieval.py).  These are contained in three files.  AllData.csv includes all observations for mean temperature.  ExtData.csv (\"extended data\") adds maximum temperature, at the expense of fewer total observations being included.  Ecoregions.csv is not central to the analysis, but includes EPA Level I ecoregion classifications for convenience.\r\n\r\nModel performance tests can be reproduced using validation.Rmd.  To run validation.Rmd in full, there must be a Data directory with subdirectories Density and TSLen, a Figures directory, at least one of the main data files (AllData.csv, ExtData.csv) or equivalent, and Ecoregions.csv.  A knitted version of the Notebook is included in this resource.  The error map plots also use an EPA Level I Ecoregions (https://gaftp.epa.gov/EPADataCommons/ORD/Ecoregions/cec_na/na_cec_eco_l1.zip) shapefile, which is assumed to be in an Ecoregions subdirectory of the *parent* directory.  This dependency can be removed by replacing the `plot.eco` function with ordinary ggplot plotting.\r\n\r\nThe two rda (RData) files contain different versions of a pre-trained model.  model.rda contains a regular, pre-trained model function that can be used directly to generate predictions.  krigs.rda contains a list of the actual fitted kriging models, which can be used for investigating model components (see demo.pdf).\r\n\r\nThese data and related items of information have not been formally disseminated by NOAA, and do not represent any agency determination, view, or policy.",
+    "authors": [
+        "Philippus, Daniel",
+        "Corona, Claudia R",
+        "Katie Schneider",
+        "Ashley Rust",
+        "Terri S Hogue"
+    ],
+    "creator": "Philippus, Daniel",
+    "doi": "10.4211/hs.a8b243957f7946e388d10ab206990675",
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": true,
+    "published": true,
+    "date_created": "2024-09-16T19:46:55.228660Z",
+    "date_last_updated": "2025-02-04T15:44:41.743406Z",
+    "bag_last_downloaded": "2025-12-06T10:19:06.073944Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/a8b243957f7946e388d10ab206990675.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "name": "Contiguous United States",
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 49.0,
+                "eastlimit": -67.3,
+                "southlimit": 25.14,
+                "westlimit": -124.06
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "2001-01-02",
+                "end": "2022-12-31"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/a8b243957f7946e388d10ab206990675/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/a8b243957f7946e388d10ab206990675/map/",
+    "resource_url": "http://www.hydroshare.org/resource/a8b243957f7946e388d10ab206990675/",
+    "content_types": []
+}

@@ -1,0 +1,56 @@
+[
+    {
+        "file_name": "readme.md",
+        "file_path": "readme.md",
+        "extension": ".md",
+        "checksum": "8558b7c4e13679a7a20311f87c664e57"
+    },
+    {
+        "file_name": "utils.py",
+        "file_path": "utils.py",
+        "extension": ".py",
+        "checksum": "ab6a57c87eda2d4a25f2d41a0ee47a9c"
+    },
+    {
+        "file_name": "modify-parameters-and-execute-cfe.ipynb",
+        "file_path": "modify-parameters-and-execute-cfe.ipynb",
+        "extension": ".ipynb",
+        "checksum": "b3d8739f96c0f1f4ee4268c1055310dd"
+    },
+    {
+        "file_name": "execute-cfe-in-the-cloud.ipynb",
+        "file_path": "execute-cfe-in-the-cloud.ipynb",
+        "extension": ".ipynb",
+        "checksum": "d0be1d1db601a81e90524fc04eae4a8a"
+    },
+    {
+        "file_name": "2024-CIROH-Cloud-Workflows-Workshop-Slides.pptx",
+        "file_path": "2024-CIROH-Cloud-Workflows-Workshop-Slides.pptx",
+        "extension": ".pptx",
+        "checksum": "c0747bf6c54dbcc21758f992bdc9154d"
+    },
+    {
+        "file_name": "vpu-16.png",
+        "file_path": "img/vpu-16.png",
+        "extension": ".png",
+        "checksum": "af6a7520bb8897f49b2ef9c05048dfb6"
+    },
+    {
+        "file_name": "requirements.txt",
+        "file_path": "requirements.txt",
+        "extension": ".txt",
+        "checksum": "49d11e7f1bb147ddeb58e423223610e5"
+    },
+    {
+        "file_name": "nextgen_16.gpkg",
+        "file_path": "nextgen_16.gpkg",
+        "extension": ".gpkg",
+        "checksum": "93a243e088223a4ac8c48e586c7c3b97-9"
+    },
+    {
+        "file_name": "helpers.py",
+        "file_path": "helpers.py",
+        "extension": ".py",
+        "checksum": "2bb76a809f24c483de7ca41979e1bb01"
+    }
+]

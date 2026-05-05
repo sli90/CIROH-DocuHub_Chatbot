@@ -1,0 +1,71 @@
+{
+    "id": 800093880,
+    "name": "ngiab-client",
+    "full_name": "CIROH-UA/ngiab-client",
+    "html_url": "https://github.com/CIROH-UA/ngiab-client",
+    "description": "NGIAB Visualizer",
+    "homepage": "",
+    "default_branch": "main",
+    "created_at": "2024-05-13T17:31:02Z",
+    "updated_at": "2025-12-11T16:59:38Z",
+    "pushed_at": "2026-04-24T21:47:19Z",
+    "language": "JavaScript",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 6949,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "forks_count": 3,
+    "open_issues_count": 12,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 6,
+        "top_contributors": [
+            {
+                "id": 43544549,
+                "login": "romer8",
+                "html_url": "https://github.com/romer8",
+                "type": "User",
+                "contributions": 190
+            },
+            {
+                "id": 49699333,
+                "login": "dependabot[bot]",
+                "html_url": "https://github.com/apps/dependabot",
+                "type": "Bot",
+                "contributions": 31
+            },
+            {
+                "id": 2021244,
+                "login": "aaronjstewart",
+                "html_url": "https://github.com/aaronjstewart",
+                "type": "User",
+                "contributions": 4
+            },
+            {
+                "id": 120678271,
+                "login": "manjilasingh",
+                "html_url": "https://github.com/manjilasingh",
+                "type": "User",
+                "contributions": 3
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 130000039,
+                "login": "benlee0423",
+                "html_url": "https://github.com/benlee0423",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

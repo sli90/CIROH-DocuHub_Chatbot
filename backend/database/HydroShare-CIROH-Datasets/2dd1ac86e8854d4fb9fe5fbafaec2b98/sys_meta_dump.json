@@ -1,0 +1,29 @@
+{
+    "resource_type": "ToolResource",
+    "resource_id": "2dd1ac86e8854d4fb9fe5fbafaec2b98",
+    "resource_title": "CIROH-2i2c JupyterHub",
+    "abstract": "CIROH 2i2c JupyterHub - Production Server\r\n\r\nCIROH, in collaboration with 2i2c, offers a dedicated JupyterHub environment on Google Cloud specifically designed for hydrological researchers. 2i2c is a cloud service provider specializing in open-source infrastructure for research and development.\r\n\r\nCIROH 2i2c Production environment - https://ciroh.awi.2i2c.cloud/\r\n\r\nTo gain access to this environment please reach out to ciroh-it-admin@ua.edu\r\n\r\nMore details: https://docs.ciroh.org/docs/services/cloudservices/2i2c/\r\n\r\nThis research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award NA22NWS4320003 from the NOAA Cooperative Institute Program. The statements, findings, conclusions, and recommendations are those of the author(s) and do not necessarily reflect the opinions of NOAA.",
+    "authors": [
+        "Patel, Arpita",
+        "Lee, Benjamin",
+        "Minor, Nia",
+        "Singh, Manjila",
+        "Anthony Castronova"
+    ],
+    "creator": "Patel, Arpita",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2023-10-06T16:09:04.963912Z",
+    "date_last_updated": "2026-03-27T19:59:27.206653Z",
+    "bag_last_downloaded": "2026-03-30T05:00:34.449091Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/2dd1ac86e8854d4fb9fe5fbafaec2b98.zip",
+    "coverages": [],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98/map/",
+    "resource_url": "http://www.hydroshare.org/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98/",
+    "content_types": []
+}

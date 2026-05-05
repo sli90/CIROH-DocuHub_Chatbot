@@ -1,0 +1,66 @@
+{
+    "title": "Basin Characteristics and Streamflow Statistics for the USGS Stream Gage Chester C at Arctic Boulevard at Anchorage AK \u2013 15275100 Watershed",
+    "abstract": "This resource contains detailed information about the basin characteristics and streamflow statistics for the USGS stream gage Chester C at Arctic Boulevard in Anchorage, Alaska (Station ID: 15275100). These data have been obtained from the USGS StreamStats web application on June 19, 2024. This resource was created during the demo session of the National Water Center Summer Institute Program and the goal was to access data, share it on HydroShare and describe it.",
+    "language": "eng",
+    "subjects": [
+        "NWCSI2024",
+        "Streamflow",
+        "Peak-Flow Statistics",
+        "StreamStats",
+        "Anchorage"
+    ],
+    "creators": [
+        {
+            "name": "Garousi-Nejad, Irene",
+            "organization": "CUAHSI",
+            "email": "igarousi@cuahsi.org",
+            "creator_order": 1,
+            "hydroshare_user_id": 475,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=dKqI7iAAAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Irene_Garousi-Nejad",
+                "ORCID": "https://orcid.org/0000-0003-2929-3946"
+            }
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource references",
+            "value": "https://streamstats.usgs.gov/ss/"
+        }
+    ],
+    "additional_metadata": {
+        "Mean Annual Precipitation": "17 inches computed based on PRISM from 1971 to 2000",
+        "USGS Station Number": "15275100"
+    },
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration (NOAA)",
+            "number": "NA22NWS4320003"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 61.22944095043106,
+        "eastlimit": -149.58936998417602,
+        "southlimit": 61.15691356564258,
+        "westlimit": -149.8979017892175,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1966-06-01 00:00:00",
+        "end": "2024-06-19 00:00:00"
+    },
+    "citation": "Garousi-Nejad, I. (2024). Basin Characteristics and Streamflow Statistics for the USGS Stream Gage Chester C at Arctic Boulevard at Anchorage AK \u2013 15275100 Watershed, HydroShare, http://www.hydroshare.org/resource/807458c515eb400dadb9dce5db30399c",
+    "url": "http://www.hydroshare.org/resource/807458c515eb400dadb9dce5db30399c",
+    "identifier": "http://www.hydroshare.org/resource/807458c515eb400dadb9dce5db30399c",
+    "created": "2024-06-19 15:54:22.076827+00:00",
+    "modified": "2024-06-19 16:22:36.465021+00:00",
+    "type": "CompositeResource"
+}

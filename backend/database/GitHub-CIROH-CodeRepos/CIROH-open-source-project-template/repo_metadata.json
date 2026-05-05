@@ -1,0 +1,69 @@
+{
+    "id": 767718206,
+    "name": "CIROH-open-source-project-template",
+    "full_name": "CIROH-UA/CIROH-open-source-project-template",
+    "html_url": "https://github.com/CIROH-UA/CIROH-open-source-project-template",
+    "description": "CIROH open source project template ",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2024-03-05T19:21:03Z",
+    "updated_at": "2025-04-23T19:57:47Z",
+    "pushed_at": "2025-04-23T19:57:43Z",
+    "language": "Shell",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 178,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 2,
+    "open_issues_count": 1,
+    "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null
+    },
+    "contributors_summary": {
+        "contributors_count": 5,
+        "top_contributors": [
+            {
+                "id": 112987653,
+                "login": "sepehrkrz",
+                "html_url": "https://github.com/sepehrkrz",
+                "type": "User",
+                "contributions": 9
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 130000039,
+                "login": "benlee0423",
+                "html_url": "https://github.com/benlee0423",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 53343824,
+                "login": "jameshalgren",
+                "html_url": "https://github.com/jameshalgren",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 7992111,
+                "login": "chp2001",
+                "html_url": "https://github.com/chp2001",
+                "type": "User",
+                "contributions": 2
+            }
+        ]
+    }
+}

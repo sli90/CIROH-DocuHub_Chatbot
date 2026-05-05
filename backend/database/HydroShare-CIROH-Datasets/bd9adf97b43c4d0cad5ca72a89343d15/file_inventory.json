@@ -1,0 +1,164 @@
+[
+    {
+        "file_name": "basic-fim-mapping.ipynb",
+        "file_path": "basic-fim-mapping.ipynb",
+        "extension": ".ipynb",
+        "checksum": "ce32d6c8bbbb7a1f937d74d8f636f236"
+    },
+    {
+        "file_name": "getData.py",
+        "file_path": "getData.py",
+        "extension": ".py",
+        "checksum": "a70fec366bd005aac171a27cad46fb7a"
+    },
+    {
+        "file_name": "gw_catchments_reaches_filtered_addedAttributes_crosswalked_0.gpkg",
+        "file_path": "nwm_utils/tests/test-data/gw_catchments_reaches_filtered_addedAttributes_crosswalked_0.gpkg",
+        "extension": ".gpkg",
+        "checksum": "cb5cedd86263075b63b5602af09139a5"
+    },
+    {
+        "file_name": "vpu-16.png",
+        "file_path": "img/vpu-16.png",
+        "extension": ".png",
+        "checksum": "af6a7520bb8897f49b2ef9c05048dfb6"
+    },
+    {
+        "file_name": "data-flow-analysis.csv",
+        "file_path": "sample-data/data-flow-analysis.csv",
+        "extension": ".csv",
+        "checksum": "12c387c78c8fd2ac95245bfa8c9b193b"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "nwm_utils/tests/__init__.py",
+        "extension": ".py",
+        "checksum": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+        "file_name": "demDerived_reaches_split_filtered_addedAttributes_crosswalked_0.gpkg",
+        "file_path": "sample-data/demDerived_reaches_split_filtered_addedAttributes_crosswalked_0.gpkg",
+        "extension": ".gpkg",
+        "checksum": "ef233cb9f9e4ed88a2c042028122f54c-2"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "nwm_utils/fim/__init__.py",
+        "extension": ".py",
+        "checksum": "20ece41d6679ed5548484a79f67a0a58"
+    },
+    {
+        "file_name": "subset.py",
+        "file_path": "subset.py",
+        "extension": ".py",
+        "checksum": "bc0257a43c7d1745616350ee4d75b3cf"
+    },
+    {
+        "file_name": "gw_catchments_reaches_filtered_addedAttributes_crosswalked_0.gpkg",
+        "file_path": "sample-data/gw_catchments_reaches_filtered_addedAttributes_crosswalked_0.gpkg",
+        "extension": ".gpkg",
+        "checksum": "7c28e9fc7a3a23eb518442db8fe3adf2-3"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "nwm_utils/__init__.py",
+        "extension": ".py",
+        "checksum": "78fd2714d8180a8153adf11e4cb10e8a"
+    },
+    {
+        "file_name": "__init__.py",
+        "file_path": "nwm_utils/retrospective/__init__.py",
+        "extension": ".py",
+        "checksum": "25265edb04e7df1ee310ff8c3b2023f5"
+    },
+    {
+        "file_name": "utils.py",
+        "file_path": "nwm_utils/fim/utils.py",
+        "extension": ".py",
+        "checksum": "6480ab54a98cc998a282d82a913d3b4f"
+    },
+    {
+        "file_name": "readme.md",
+        "file_path": "readme.md",
+        "extension": ".md",
+        "checksum": "c14037e5ccbe0c695ae834f9beeb8a85"
+    },
+    {
+        "file_name": "xfim.py",
+        "file_path": "nwm_utils/fim/xfim.py",
+        "extension": ".py",
+        "checksum": "67e19eb75e406de3d3d00fa315ee5e4b"
+    },
+    {
+        "file_name": "hydroTable_0.csv",
+        "file_path": "sample-data/hydroTable_0.csv",
+        "extension": ".csv",
+        "checksum": "18f336d7309cbcb6dfbd2cc647d6d58b-11"
+    },
+    {
+        "file_name": "v3.py",
+        "file_path": "nwm_utils/retrospective/v3.py",
+        "extension": ".py",
+        "checksum": "596b4e8e2b8e22866576359379ac4b39"
+    },
+    {
+        "file_name": "map.py",
+        "file_path": "nwm_utils/fim/map.py",
+        "extension": ".py",
+        "checksum": "39316b894db88c721382e1503675df2c"
+    },
+    {
+        "file_name": "test_xfim.py",
+        "file_path": "nwm_utils/tests/test_xfim.py",
+        "extension": ".py",
+        "checksum": "9dedaaf200862c51bf08fc7c66c47f31"
+    },
+    {
+        "file_name": "xfimdask.py",
+        "file_path": "nwm_utils/fim/xfimdask.py",
+        "extension": ".py",
+        "checksum": "1f42911ca072a7f8d206484850826a98"
+    },
+    {
+        "file_name": "ngen-hydrofabric-subset.ipynb",
+        "file_path": "ngen-hydrofabric-subset.ipynb",
+        "extension": ".ipynb",
+        "checksum": "4141ce09417f5c10bac55270d6979c39"
+    },
+    {
+        "file_name": "flow-duration-analysis.ipynb",
+        "file_path": "flow-duration-analysis.ipynb",
+        "extension": ".ipynb",
+        "checksum": "c6c976d30574866f08081c863b7d1911"
+    },
+    {
+        "file_name": "collect-aorc-v1.1.ipynb",
+        "file_path": "collect-aorc-v1.1.ipynb",
+        "extension": ".ipynb",
+        "checksum": "7e9574ff5c5f4ef87bfb6a41bfb9680b"
+    },
+    {
+        "file_name": "test_fim_utils.py",
+        "file_path": "nwm_utils/tests/test_fim_utils.py",
+        "extension": ".py",
+        "checksum": "d643313004e36c27be979cc31f7b5732"
+    },
+    {
+        "file_name": "snow-retrieval-workflow.ipynb",
+        "file_path": "snow-retrieval-workflow.ipynb",
+        "extension": ".ipynb",
+        "checksum": "5817e0f169c775fd64abc4d92e2509c0"
+    },
+    {
+        "file_name": "hydroTable_0.csv",
+        "file_path": "nwm_utils/tests/test-data/hydroTable_0.csv",
+        "extension": ".csv",
+        "checksum": "000124960788e5c93c22969cd419e247-3"
+    },
+    {
+        "file_name": "BearRiverWBD-Huc8-16010203.qmd",
+        "file_path": "sample-data/BearRiverWBD-Huc8-16010203.qmd",
+        "extension": ".qmd",
+        "checksum": "1bdf180b5f7eca0519ce472a9e728208"
+    }
+]

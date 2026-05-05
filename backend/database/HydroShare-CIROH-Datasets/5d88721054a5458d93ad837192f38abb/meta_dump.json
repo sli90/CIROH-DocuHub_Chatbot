@@ -1,0 +1,67 @@
+{
+    "title": "High Water Marks July and December 2023 Vermont Floods - UVM Floodplains",
+    "abstract": "This dataset represents high-water mark observations made following widespread flooding in Vermont on July 10-11 and December 18, 2023. Sites visited following flood recession are part of a long-term floodplain monitoring network maintained by the University of Vermont. Immediately after the floods, field teams flagged high water marks, took photos, and marked the locations with smart phone GPS. Subsequently a survey team revisited the sites with an RTK-GPS to more precisely capture the location and elevation and post-processed through NOAA's OPUS. \r\n\r\nData quality is noted based on the following:\r\nField Rating: Based on initial site visits. Field personnel noted their confidence level in the indicators of the high water marks. High confidence are noted as \"Good\", and lower confidence points are noted as \"Fair\" or \"Poor\"\r\nGPS Quality: Based on RTK-GPS survey quality. More information can be found in accompanying txt file.",
+    "language": "eng",
+    "subjects": [
+        "flood",
+        "floodplain research",
+        "high water marks",
+        "Vermont"
+    ],
+    "creators": [
+        {
+            "name": "Diehl, Rebecca",
+            "organization": "University of Vermont",
+            "email": "Rebecca.Diehl@uvm.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 4814,
+            "identifiers": {}
+        },
+        {
+            "name": "Kenneth Johnston",
+            "organization": "Univeristy of Vermont",
+            "email": "Kenneth.Johnston@uvm.edu",
+            "creator_order": 2,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "Lake Champlain Sea Grant",
+            "funding_agency_url": "https://ror.org/05k70qf45"
+        },
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration",
+            "title": "Cooperative Institute for Research to Operations in Hydrology (CIROH)",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ror.org/02z5nhe81"
+        }
+    ],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 45.0134,
+        "eastlimit": -72.4054,
+        "southlimit": 44.0738,
+        "westlimit": -73.4052,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Diehl, R., K. Johnston (2024). High Water Marks July and December 2023 Vermont Floods - UVM Floodplains, HydroShare, https://doi.org/10.4211/hs.5d88721054a5458d93ad837192f38abb",
+    "url": "http://www.hydroshare.org/resource/5d88721054a5458d93ad837192f38abb",
+    "identifier": "http://www.hydroshare.org/resource/5d88721054a5458d93ad837192f38abb",
+    "created": "2024-09-06 11:56:23.819263+00:00",
+    "modified": "2024-09-09 13:01:43.894242+00:00",
+    "published": "2024-09-09 13:01:32.256071+00:00",
+    "type": "CompositeResource"
+}

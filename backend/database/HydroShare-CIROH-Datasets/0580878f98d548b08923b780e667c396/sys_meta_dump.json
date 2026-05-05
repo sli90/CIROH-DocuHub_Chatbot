@@ -1,0 +1,46 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "0580878f98d548b08923b780e667c396",
+    "resource_title": "Enabling Community Research with the Next Generation National Water Modeling Framework on HydroShare-Linked Computing Platforms",
+    "abstract": "Presentation at AWRA 2025 Annual Water Resources Conference, Westminster, Colorado, November 10, 2025 and Jupyter Notebook and Python files for a Tutorial on NextGen Hydrologic modeling using the CIROH 2i2c JupyterHub Community NextGen hub. https://www.awra.org/Members/Events_and_Education/Events/2025%20Landing%20Pages/01_Annual/Annual2025.aspx\r\n\r\nAWRA presentation abstract\r\nThis presentation highlights new capabilities for using computing platforms linked to the Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) HydroShare hydrologic information system to configure, run, and analyze research-scale applications of the Next Generation National Water Model (NextGen). Developed by NOAA\u2019s Office of Water Prediction, NextGen is a modular, interoperable hydrologic modeling framework that uses standardized interfaces such as the Basic Model Interface (BMI) and the Hy_Features data model for representing hydrologic catchments, flowpaths, and nexuses. Despite its strengths, the complexity of NextGen and its supporting cyberinfrastructure (CI) presents significant barriers to researchers. Configuring the computing environment and setting up input data for a modeling domain can be complex, time-consuming and technically demanding. This presentation will discuss the use of JupyterHub computing platforms linked to HydroShare to address these challenges and support collaborative research. Tools developed by the Cooperative Institute for Research to Operations in Hydrology (CIROH) have been deployed in a cloud-based JupyterHub environment to streamline model setup, data preparation, execution, and analysis. With this configuration, researchers can define a spatial domain and time period, generate input files, run the model, and analyze outputs, all within a pre-configured cloud environment. Model results can be compared with operational and retrospective outputs from NOAA\u2019s National Water Model and ground-based observations, providing a foundation for evaluation and improvement. Workflows and results are encapsulated in Jupyter Notebooks and shared via HydroShare to promote accessibility, transparency, and reproducibility. By lowering technical barriers, this approach expands community engagement with NextGen, fosters collaborative hydrologic research, and serves as an entry point for research to improve the National Water Model as it adopts the NextGen framework.",
+    "authors": [
+        "Tarboton, David",
+        "Nassar, Ayman",
+        "Castronova, Anthony M.",
+        "Patel, Arpita",
+        "Baig, Furqan",
+        "Salehabadi, Homa",
+        "Abualqumboz, Motasem",
+        "Dash, Pabitra",
+        "Horsburgh, Jeffery S."
+    ],
+    "creator": "Tarboton, David",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2025-11-03T19:06:41.744487Z",
+    "date_last_updated": "2026-02-27T14:42:59.408037Z",
+    "bag_last_downloaded": "2025-12-17T11:43:41.086458Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/0580878f98d548b08923b780e667c396.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "name": "CONUS",
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 49.804,
+                "eastlimit": -65.4594,
+                "southlimit": 24.639,
+                "westlimit": -124.8739
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/0580878f98d548b08923b780e667c396/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/0580878f98d548b08923b780e667c396/map/",
+    "resource_url": "http://www.hydroshare.org/resource/0580878f98d548b08923b780e667c396/",
+    "content_types": []
+}

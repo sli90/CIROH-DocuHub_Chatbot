@@ -1,0 +1,56 @@
+{
+    "title": "Python Notebook for Retrieving Retrospective National Water Model Forecasts",
+    "abstract": "This python notebook demonstrates a simple method for retrieving time series data from the Amazon Web Services (AWS) archive of the U.S. National Water Model retrospective streamflow forecasts for one or more reach id's (also known as COMIDs) for a specified date range. Note that this notebook uses the 42-year (February 1979 through December 2020) retrospective simulation using version 2.1 of the National Water Model. The AWS archive and description of the data can be found here: https://registry.opendata.aws/nwm-archive/. This notebook uses the xarray library to connect to the data store as an anonymous user. The connection results in a zarr store from which data can be extracted using the method shown in the script. This method is not optimized for parallel computing so it will be slow if you specify a lot of reach ids. The results are written to a local CSV file that can be opened in Excel or another spreadsheet. There are many optimizations that can be done to improve data access, but this notebook is intentionally simple for the novice user who is trying to work with National Water Model retrospective data stored in AWS.",
+    "language": "eng",
+    "subjects": [
+        "streamflow",
+        "aws",
+        "nwm",
+        "national water model",
+        "retrospective",
+        "ciroh",
+        "forecast"
+    ],
+    "creators": [
+        {
+            "name": "Ames, Dan",
+            "organization": "Brigham Young University",
+            "email": "dan.ames@byu.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 30,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource is part of",
+            "value": "Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c"
+        }
+    ],
+    "additional_metadata": {},
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [],
+    "spatial_coverage": {
+        "type": "box",
+        "northlimit": 48.8412,
+        "eastlimit": -48.6914,
+        "southlimit": 23.7728,
+        "westlimit": -137.8125,
+        "units": "Decimal degrees",
+        "projection": "WGS 84 EPSG:4326"
+    },
+    "period_coverage": {
+        "start": "1979-02-01 00:00:00",
+        "end": "2020-12-31 00:00:00"
+    },
+    "citation": "Ames, D. (2026). Python Notebook for Retrieving Retrospective National Water Model Forecasts, HydroShare, http://www.hydroshare.org/resource/5caaa9919c2e490eb735aebc5e741c35",
+    "url": "http://www.hydroshare.org/resource/5caaa9919c2e490eb735aebc5e741c35",
+    "identifier": "http://www.hydroshare.org/resource/5caaa9919c2e490eb735aebc5e741c35",
+    "created": "2023-11-17 22:34:55.378489+00:00",
+    "modified": "2026-01-29 04:15:23.389071+00:00",
+    "type": "CompositeResource"
+}

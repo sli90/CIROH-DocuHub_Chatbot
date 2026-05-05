@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/6ca065138d764339baf3514ba2f2d72f">
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:name>Nassar, Ayman</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:organization>Utah State University</hsterms:organization>
+        <hsterms:email>aymnassar@gmail.com</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</hsterms:description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</hsterms:hydroshare_user_id>
+        <hsterms:phone>4358905557</hsterms:phone>
+      </rdf:Description>
+    </dc:creator>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4484</hsterms:description>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4484</hsterms:hydroshare_user_id>
+        <hsterms:email>homa.salehabadi@gmail.com</hsterms:email>
+        <hsterms:name>Salehabadi, Homa</hsterms:name>
+        <hsterms:address>Utah, US</hsterms:address>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hsterms:creatorOrder>
+        <hsterms:organization>Utah Sate University</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>ZARR</dc:subject>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=49.1645; eastlimit=-59.4828; southlimit=24.7029; westlimit=-125.9286</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isPartOf>Ames, D. (2026). Curated List of Datasets for the CIROH Portal, HydroShare, http://www.hydroshare.org/resource/302dcbef13614ac486fb260eaa1ca87c</dcterms:isPartOf>
+      </rdf:Description>
+    </dc:relation>
+    <dcterms:bibliographicCitation>Nassar, A., D. Tarboton, H. Salehabadi (2026). NWM retrospective analysis version 3.0 data retrieval, HydroShare, http://www.hydroshare.org/resource/6ca065138d764339baf3514ba2f2d72f</dcterms:bibliographicCitation>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-03-22T23:07:42.827313+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:title>NWM retrospective analysis version 3.0 data retrieval</dc:title>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/6ca065138d764339baf3514ba2f2d72f"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This HydroShare resource provides Jupyter Notebooks with instructions and code for accessing and subsetting the NOAA National Water Model CONUS Retrospective Dataset. There are two Jupyter Notebooks&#13;
+1. NWM_output_variable_retrieval_with_FeatureID.ipynb&#13;
+2. NWM_output_variable_retrieval_with_shapefile.ipynb&#13;
+The first retrieves data for one point (feature ID). The second retrieves data for areas specified interactively or via an uploaded shapefile.&#13;
+These notebooks programmatically retrieve the data from Amazon Web Services (https://registry.opendata.aws/nwm-archive/), and in the case of Zone data retrieval average the data over the zones specified.&#13;
+The notebooks provided are coded to retrieve data from NWM retrospective analysis version 3.0 released in ZARR format in December 2023.&#13;
+The NOAA National Water Model Retrospective dataset contains input and output from multi-decade CONUS retrospective simulations (https://registry.opendata.aws/nwm-archive/ ). These simulations used meteorological input from retrospective data. The output frequency and fields available in this historical NWM dataset differ from those contained in the real-time operational NWM forecast model. Additionally, note that no streamflow or other data assimilation is performed within any of the NWM retrospective simulations</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=1979-01-01T00:00:00; end=2023-01-31T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:subject>NWM retrospective analysis 3.0</dc:subject>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isPartOf>Nassar, A., D. Tarboton (2026). Hydrological Data Retrieval Using CIROH JupyterHUB, HydroShare, http://www.hydroshare.org/resource/657ced1716a94ea197d226015136a5db</dcterms:isPartOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:name>Tarboton, David</hsterms:name>
+        <hsterms:address>UT, US</hsterms:address>
+        <hsterms:email>dtarb@usu.edu</hsterms:email>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:description>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:hydroshare_user_id>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:homepage rdf:resource="http://hydrology.usu.edu/dtarb"/>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1998-3479"/>
+        <hsterms:phone>+1 (435) 797-3172</hsterms:phone>
+        <hsterms:organization>Utah State University</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+    <dc:language>eng</dc:language>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2026-01-29T09:48:28.311816+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+  </hsterms:CompositeResource>
+</rdf:RDF>

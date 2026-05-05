@@ -1,0 +1,55 @@
+{
+    "id": 917331426,
+    "name": "LSTM-Tutorials",
+    "full_name": "CIROH-UA/LSTM-Tutorials",
+    "html_url": "https://github.com/CIROH-UA/LSTM-Tutorials",
+    "description": "Developing a LSTM from Scratch",
+    "homepage": null,
+    "default_branch": "main",
+    "created_at": "2025-01-15T19:30:56Z",
+    "updated_at": "2025-01-15T19:30:56Z",
+    "pushed_at": "2025-01-15T19:31:53Z",
+    "language": null,
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 7904,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 0,
+    "open_issues_count": 1,
+    "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit"
+    },
+    "contributors_summary": {
+        "contributors_count": 3,
+        "top_contributors": [
+            {
+                "id": 33735397,
+                "login": "whitelightning450",
+                "html_url": "https://github.com/whitelightning450",
+                "type": "User",
+                "contributions": 21
+            },
+            {
+                "id": 28275758,
+                "login": "shahab122",
+                "html_url": "https://github.com/shahab122",
+                "type": "User",
+                "contributions": 1
+            },
+            {
+                "id": 67179927,
+                "login": "savalann",
+                "html_url": "https://github.com/savalann",
+                "type": "User",
+                "contributions": 1
+            }
+        ]
+    }
+}

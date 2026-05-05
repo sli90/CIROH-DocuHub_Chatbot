@@ -1,0 +1,209 @@
+{
+    "title": "The CUAHSI HydroShare Platform for Hydrology Data and Model Sharing",
+    "abstract": "Poster for AGU Fall Meeting, December 11, 2023  \r\nhttps://agu.confex.com/agu/fm23/meetingapp.cgi/Paper/1336263\r\n\r\nHydroShare (http://www.hydroshare.org) is a web-based repository and hydrologic information system operated by the Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI) that enables users to share, collaborate around, and publish data, models, scripts, and applications associated with water related research to meet Findable, Accessible, Interoperable, and Reusable (FAIR) open data mandates. The HydroShare repository also links with connected computational systems, enabling users to reproducibly run models and analyses and share documented workflows.  This presentation will overview the capabilities and best practices developed for collaboration and sharing of data and other research products along with the use of HydroShare and linked computing. It will focus on successes and challenges in engaging scholars, researchers, and practitioners as individuals and as communities, including lessons learned in sharing data across large scientific communities such as the Critical Zone Collaborative Network. It will also include collaboration functions being developed for the Institute for Geospatial Understanding through an Integrative Discovery Environment (I-GUIDE) and Cooperative Institute for Research to Operations in Hydrology (CIROH), where challenges associated with large scale input/output data preparation, staging, and sub setting along with execution of large-scale models and data are faced.",
+    "language": "eng",
+    "subjects": [
+        "CIROH",
+        "Data Sharing",
+        "I-GUIDE",
+        "Model Sharing",
+        "agu2023",
+        "ciroh_portal_data"
+    ],
+    "creators": [
+        {
+            "name": "David Tarboton",
+            "phone": "4357973172",
+            "organization": "Utah State University",
+            "email": "dtarb@usu.edu",
+            "creator_order": 1,
+            "hydroshare_user_id": 2,
+            "identifiers": {
+                "ORCID": "https://orcid.org/0000-0002-1998-3479"
+            }
+        },
+        {
+            "name": "Jeffery S. Horsburgh",
+            "phone": "(435) 797-2946",
+            "address": "Utah, US",
+            "organization": "Utah State University",
+            "email": "jeff.horsburgh@usu.edu",
+            "homepage": "http://jeffh.usu.edu/",
+            "creator_order": 2,
+            "hydroshare_user_id": 10,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=mu4k534AAAAJ&hl=en",
+                "ResearchGateID": "https://www.researchgate.net/profile/Jeffery_Horsburgh",
+                "ORCID": "https://orcid.org/0000-0002-0768-3196"
+            }
+        },
+        {
+            "name": "Dan Ames",
+            "organization": "Brigham Young University",
+            "email": "dan.ames@byu.edu",
+            "creator_order": 3,
+            "hydroshare_user_id": 30,
+            "identifiers": {}
+        },
+        {
+            "name": "Jonathan Goodall",
+            "address": "Virginia, US",
+            "organization": "University of Virginia",
+            "email": "goodall@virginia.edu",
+            "creator_order": 4,
+            "hydroshare_user_id": 440,
+            "identifiers": {}
+        },
+        {
+            "name": "Wang, Shaowen",
+            "email": "wangshaowen.uiuc@gmail.com",
+            "creator_order": 5,
+            "hydroshare_user_id": 1385,
+            "identifiers": {}
+        },
+        {
+            "name": "Hong Yi",
+            "address": "NC, US",
+            "organization": "RENCI at University of North Carolina at Chapel Hill",
+            "email": "hongyi@renci.org",
+            "creator_order": 6,
+            "hydroshare_user_id": 12,
+            "identifiers": {}
+        },
+        {
+            "name": "Anthony Michael Castronova",
+            "phone": "3399334127",
+            "address": "MA, US",
+            "organization": "CUAHSI",
+            "email": "castronova.anthony@gmail.com",
+            "homepage": "http://anthonycastronova.com/",
+            "creator_order": 7,
+            "hydroshare_user_id": 11,
+            "identifiers": {}
+        },
+        {
+            "name": "Seul, Martin",
+            "phone": "(339) 933-4656",
+            "address": "Massachusetts, US",
+            "organization": "cuahsi",
+            "email": "mseul@cuahsi.org",
+            "homepage": "http://www.cuahsi.org/",
+            "creator_order": 8,
+            "hydroshare_user_id": 230,
+            "identifiers": {}
+        },
+        {
+            "name": "Ramirez, Mauriel",
+            "phone": "(435) 363-5910",
+            "organization": "Utah State University",
+            "email": "mauriel.ramirez@gmail.com",
+            "creator_order": 9,
+            "hydroshare_user_id": 194,
+            "identifiers": {
+                "GoogleScholarID": "https://scholar.google.com/citations?user=JeOgD_wAAAAJ&amp;amp;amp;amp;amp;amp;amp;hl=en"
+            }
+        },
+        {
+            "name": "Black, Scott",
+            "organization": "USU",
+            "email": "scott.s.black@live.com",
+            "creator_order": 10,
+            "hydroshare_user_id": 2359,
+            "identifiers": {}
+        },
+        {
+            "name": "Pabitra Dash",
+            "phone": "701-456-8907",
+            "organization": "USU",
+            "email": "pabitra.dash@usu.edu",
+            "creator_order": 11,
+            "hydroshare_user_id": 41,
+            "identifiers": {}
+        },
+        {
+            "name": "Calloway, Chris",
+            "address": "NC, US",
+            "organization": "RENCI",
+            "email": "cbc@renci.org",
+            "creator_order": 12,
+            "hydroshare_user_id": 1682,
+            "identifiers": {}
+        },
+        {
+            "name": "Read, Jordan Stuart",
+            "address": "Wisconsin, US",
+            "organization": "CUAHSI",
+            "email": "jread@cuahsi.org",
+            "creator_order": 13,
+            "hydroshare_user_id": 18538,
+            "identifiers": {}
+        },
+        {
+            "organization": "HydroShare Development Team",
+            "homepage": "https://www.hydroshare.org/group/2",
+            "creator_order": 14,
+            "identifiers": {}
+        }
+    ],
+    "contributors": [],
+    "relations": [
+        {
+            "type": "The content of this resource references",
+            "value": "Horsburgh, J. S., M. M. Morsy, A. M. Castronova, J. L. Goodall, T. Gan, H. Yi, M. J. Stealey and D. G. Tarboton, (2016), \"HydroShare: Sharing Diverse Environmental Data Types and Models as Social Objects with Application to the Hydrology Domain,\" JAWRA Journal of the American Water Resources Association, 52(4): 873-889, http://dx.doi.org/10.1111/1752-1688.12363."
+        },
+        {
+            "type": "This resource is a different format of",
+            "value": "Tarboton, D., J. S. Horsburh, D. P. Ames, J. L. Goodall, S. Wang, H. Yi, A. Castronova, M. Seul, M. Ramirez, S. Black, P. Dash, C. Calloway, J. Read and HydroShare development team, (2023), \"The CUAHSI HydroShare Platform for Hydrology Data and Model Sharing,\" Presentation IN13D-0604 at 2023 American Geophysical Union Fall Meeting, San Francisco, https://agu.confex.com/agu/fm23/meetingapp.cgi/Paper/1336263, https://agu23.ipostersessions.com/Default.aspx?s=5F-CE-F2-25-22-63-E9-F9-25-49-D8-FE-88-62-71-F8."
+        },
+        {
+            "type": "The content of this resource references",
+            "value": "Tarboton, D. G., D. P. Ames, J. S. Horsburgh, J. L. Goodall, A. Couch, R. Hooper, J. Bales, S. Wang, A. Castronova, M. Seul, R. Idaszak, Z. Li, P. Dash, S. Black, M. Ramirez, H. Yi, C. Calloway and C. Cogswell, (2024), \"HydroShare retrospective: Science and technology advances of a comprehensive data and model publication environment for the water science domain,\" Environmental Modelling & Software, 172: 105902, https://doi.org/10.1016/j.envsoft.2023.105902."
+        }
+    ],
+    "additional_metadata": {
+        "home_page_url": "http://www.hydroshare.org",
+        "app_icon": "https://www.hydroshare.org/resource/23b51cb99b5445a1af740a21c5acaecb/data/contents/AGU2023-CIROH-Portal-Icon.png",
+        "help_page_url": "https://help.hydroshare.org/"
+    },
+    "rights": {
+        "statement": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    "awards": [
+        {
+            "funding_agency_name": "University of Alabama, Cooperative Institute for Research to Operations in Hydrology",
+            "title": "CIROH: Enabling collaboration through data and model sharing with CUAHSI HydroShare",
+            "number": "Subaward number A23-0266-s001",
+            "funding_agency_url": "https://ciroh.ua.edu/research-projects/enabling-collaboration-through-data-and-model-sharing-with-cuahsi-hydroshare/"
+        },
+        {
+            "funding_agency_name": "National Oceanic and Atmospheric Administration",
+            "title": "Cooperative Institute for Research to Operations in Hydrology",
+            "number": "NA22NWS4320003",
+            "funding_agency_url": "https://ror.org/02z5nhe81"
+        },
+        {
+            "funding_agency_name": "National Science Foundation",
+            "title": "Collaborative Research: SI2-SSI: Cyberinfrastructure for Advancing Hydrologic Knowledge through Collaborative Integration of Data Science, Modeling and Analysis",
+            "number": "ACI 1664061, 1664018, 1664119",
+            "funding_agency_url": "https://nsf.gov/awardsearch/showAward?AWD_ID=1664061"
+        },
+        {
+            "funding_agency_name": "National Science Foundation",
+            "title": "HDR Institute: Geospatial Understanding through an Integrative Discovery Environment",
+            "number": "2118329",
+            "funding_agency_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2118329"
+        }
+    ],
+    "publisher": {
+        "name": "Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI)",
+        "url": "https://www.cuahsi.org/"
+    },
+    "citation": "Tarboton, D., J. S. Horsburgh, D. Ames, J. Goodall, S. Wang, H. Yi, A. M. Castronova, M. Seul, M. Ramirez, S. Black, P. Dash, C. Calloway, J. S. Read, HydroShare Development Team (2024). The CUAHSI HydroShare Platform for Hydrology Data and Model Sharing, HydroShare, https://doi.org/10.4211/hs.4b5d7c4a47da4e05bc6507b3071d1c82",
+    "url": "http://www.hydroshare.org/resource/4b5d7c4a47da4e05bc6507b3071d1c82",
+    "identifier": "http://www.hydroshare.org/resource/4b5d7c4a47da4e05bc6507b3071d1c82",
+    "created": "2023-12-05 21:18:42.097251+00:00",
+    "modified": "2024-08-26 13:16:26.803098+00:00",
+    "published": "2024-08-26 13:16:20.624816+00:00",
+    "type": "CompositeResource"
+}

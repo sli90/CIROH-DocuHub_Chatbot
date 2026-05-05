@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/bd9adf97b43c4d0cad5ca72a89343d15">
+    <dc:title>Materials for the CUAHSI's Workshops at the National Water Center Bootcamp 2024</dc:title>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This resource includes materials for two workshops: (1) FAIR Data Management and (2) Advanced Application of Python for Hydrology and Scientific Storytelling, both prepared for presentation at the NWC Summer Institute BootCamp 2024.</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:subject>Dask</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Anthony_Castronova"/>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:hydroshare_user_id>
+        <hsterms:phone>3399334127</hsterms:phone>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=ScWTFoQAAAAJ&amp;hl=en"/>
+        <hsterms:email>castronova.anthony@gmail.com</hsterms:email>
+        <hsterms:homepage rdf:resource="http://anthonycastronova.com"/>
+        <hsterms:name>Castronova, Anthony M.</hsterms:name>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:address>MA, US</hsterms:address>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1341-5681"/>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>Data Management</dc:subject>
+    <dc:subject>Leaflet</dc:subject>
+    <dc:coverage>
+      <dcterms:point>
+        <rdf:value>name=National Water Center The University of Alabama; projection=WGS 84 EPSG:4326; east=-87.54156; north=33.21841; units=Decimal degrees</rdf:value>
+      </dcterms:point>
+    </dc:coverage>
+    <dc:subject>NWCSI2024</dc:subject>
+    <dcterms:bibliographicCitation>Garousi-Nejad, I., A. M. Castronova (2024). Materials for the CUAHSI's Workshops at the National Water Center Bootcamp 2024, HydroShare, http://www.hydroshare.org/resource/bd9adf97b43c4d0cad5ca72a89343d15</dcterms:bibliographicCitation>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2024-06-17T14:38:52.593511+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/bd9adf97b43c4d0cad5ca72a89343d15"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:relation>
+      <rdf:Description>
+        <hsterms:isExecutedBy>Castronova, A. (2024). CIROH Production JupyterHub, HydroShare, http://www.hydroshare.org/resource/2dd1ac86e8854d4fb9fe5fbafaec2b98</hsterms:isExecutedBy>
+      </rdf:Description>
+    </dc:relation>
+    <hsterms:awardInfo>
+      <rdf:Description>
+        <hsterms:fundingAgencyURL rdf:resource="https://ci.noaa.gov/locations/ciroh/"/>
+        <hsterms:fundingAgencyName>National Oceanic and Atmospheric Administration (NOAA)</hsterms:fundingAgencyName>
+        <hsterms:awardTitle>COOPERATIVE INSTITUTE FOR RESEARCH TO OPERATIONS IN HYDROLOGY (CIROH)</hsterms:awardTitle>
+        <hsterms:awardNumber>NA22NWS4320003</hsterms:awardNumber>
+      </rdf:Description>
+    </hsterms:awardInfo>
+    <dc:subject>FAIR Principles</dc:subject>
+    <dc:subject>Xarray</dc:subject>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:label>Composite Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+      </rdf:Description>
+    </dc:type>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://github.com/NOAA-OWP/inundation-mapping</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://streamstats.usgs.gov/ss/</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:language>eng</dc:language>
+    <dc:coverage>
+      <dcterms:period>
+        <rdf:value>start=2024-06-19T00:00:00; end=2024-06-21T00:00:00</rdf:value>
+      </dcterms:period>
+    </dc:coverage>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:source>https://github.com/CUAHSI/notebooks</dcterms:source>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>Python</dc:subject>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2024-07-12T18:20:08.195594+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:hydroshare_user_id>
+        <hsterms:email>igarousi@cuahsi.org</hsterms:email>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Irene_Garousi-Nejad"/>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=dKqI7iAAAAAJ&amp;hl=en"/>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:description>
+        <hsterms:name>Garousi-Nejad, Irene</hsterms:name>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-2929-3946"/>
+      </rdf:Description>
+    </dc:creator>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://github.com/egagli/snotel_ccss_stations</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>https://noaa-nwm-retrospective-3-0-pds.s3.amazonaws.com/index.html</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>National Water Center Summer Institute</dc:subject>
+    <dc:subject>Object Storage</dc:subject>
+  </hsterms:CompositeResource>
+</rdf:RDF>

@@ -1,0 +1,31 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "5c2380ae118c4f10912d46753ba13393",
+    "resource_title": "Water: Harnessing Machine Learned Emulator Models to Discover Teleconnections and Quantify Uncertainty in Process-Based Models of Coupled Human and Natural Systems",
+    "abstract": "Traditional approaches to quantify uncertainty & explore teleconnections in process-based models of coupled natural and human systems (CHANS) range from global sensitivity analysis of model parameters to Monte Carlo simulation experiments, decom-position analyses and propagation of errors analysis. We hypothesize that the application of machine learned emulator models to simulate process-based CHANS enables discovery of teleconnections & quantification of relative importance of natural versus human drivers of change in CHANS. We test this hypothesis by applying machine learning algorithms (Random Forest Models) to the simulation outputs derived from 332 scenarios of an integrated process-based CHANS model that predicts water quality in Missisquoi Bay of Lake Cham-plain under alternate hydro-climatic, and nutrient management scenarios for the 2001-2047 timeframe. Relative importance and partial dependence plots are derived from Random Forest models to quantify relative uncertainty & importance of (external to lake) climatic, hydrological, nutrient management and (internal to lake) P and N sediment re-lease drivers of Harmful Algal Blooms (HABs) in Missisquoi Bay. We discover that predictor variables representing snow, evaporation and transpiration dynamics tele-connect hydro-climatic processes occurring in terrestrial watersheds with the biogeochemical processes occurring in the freshwater lakes. We find that 14 predictors, representing both internal and external to lake processes, successfully predict four alternate trophic states of the Missisquoi Bay with ~93% accuracy rate.",
+    "authors": [
+        "Zia, Asim",
+        "Clemins, Patrick John",
+        "Muhammad Adil",
+        "Andrew Schroth",
+        "Donna RIzzo",
+        "Oikonomou, Panagiotis",
+        "Safwan Wshah"
+    ],
+    "creator": "Zia, Asim",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2025-10-03T18:06:11.917207Z",
+    "date_last_updated": "2025-10-06T17:53:10.451591Z",
+    "bag_last_downloaded": "2026-03-13T22:05:12.691505Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/5c2380ae118c4f10912d46753ba13393.zip",
+    "coverages": [],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/5c2380ae118c4f10912d46753ba13393/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/5c2380ae118c4f10912d46753ba13393/map/",
+    "resource_url": "http://www.hydroshare.org/resource/5c2380ae118c4f10912d46753ba13393/",
+    "content_types": []
+}

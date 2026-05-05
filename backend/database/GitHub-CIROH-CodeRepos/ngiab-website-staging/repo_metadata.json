@@ -1,0 +1,57 @@
+{
+    "id": 1079878533,
+    "name": "ngiab-website-staging",
+    "full_name": "CIROH-UA/ngiab-website-staging",
+    "html_url": "https://github.com/CIROH-UA/ngiab-website-staging",
+    "description": null,
+    "homepage": "http://docs.ciroh.org/ngiab-website-staging/",
+    "default_branch": "main",
+    "created_at": "2025-10-20T14:22:59Z",
+    "updated_at": "2025-11-10T17:40:10Z",
+    "pushed_at": "2026-03-30T16:20:48Z",
+    "language": "JavaScript",
+    "topics": [],
+    "fork": true,
+    "archived": false,
+    "disabled": false,
+    "visibility": "public",
+    "size_kb": 266698,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "forks_count": 1,
+    "open_issues_count": 5,
+    "license": null,
+    "contributors_summary": {
+        "contributors_count": 4,
+        "top_contributors": [
+            {
+                "id": 120678271,
+                "login": "manjilasingh",
+                "html_url": "https://github.com/manjilasingh",
+                "type": "User",
+                "contributions": 108
+            },
+            {
+                "id": 69406976,
+                "login": "Sheargrub",
+                "html_url": "https://github.com/Sheargrub",
+                "type": "User",
+                "contributions": 12
+            },
+            {
+                "id": 54657,
+                "login": "arpita0911patel",
+                "html_url": "https://github.com/arpita0911patel",
+                "type": "User",
+                "contributions": 2
+            },
+            {
+                "id": 49699333,
+                "login": "dependabot[bot]",
+                "html_url": "https://github.com/apps/dependabot",
+                "type": "Bot",
+                "contributions": 1
+            }
+        ]
+    }
+}

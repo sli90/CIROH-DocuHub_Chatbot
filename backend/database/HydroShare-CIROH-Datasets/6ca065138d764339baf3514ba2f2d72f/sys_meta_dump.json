@@ -1,0 +1,48 @@
+{
+    "resource_type": "CompositeResource",
+    "resource_id": "6ca065138d764339baf3514ba2f2d72f",
+    "resource_title": "NWM retrospective analysis version 3.0 data retrieval",
+    "abstract": "This HydroShare resource provides Jupyter Notebooks with instructions and code for accessing and subsetting the NOAA National Water Model CONUS Retrospective Dataset. There are two Jupyter Notebooks\r\n1. NWM_output_variable_retrieval_with_FeatureID.ipynb\r\n2. NWM_output_variable_retrieval_with_shapefile.ipynb\r\nThe first retrieves data for one point (feature ID). The second retrieves data for areas specified interactively or via an uploaded shapefile.\r\nThese notebooks programmatically retrieve the data from Amazon Web Services (https://registry.opendata.aws/nwm-archive/), and in the case of Zone data retrieval average the data over the zones specified.\r\nThe notebooks provided are coded to retrieve data from NWM retrospective analysis version 3.0 released in ZARR format in December 2023.\r\nThe NOAA National Water Model Retrospective dataset contains input and output from multi-decade CONUS retrospective simulations (https://registry.opendata.aws/nwm-archive/ ). These simulations used meteorological input from retrospective data. The output frequency and fields available in this historical NWM dataset differ from those contained in the real-time operational NWM forecast model. Additionally, note that no streamflow or other data assimilation is performed within any of the NWM retrospective simulations",
+    "authors": [
+        "Nassar, Ayman",
+        "Tarboton, David",
+        "Salehabadi, Homa"
+    ],
+    "creator": "Nassar, Ayman",
+    "doi": null,
+    "public": true,
+    "discoverable": true,
+    "shareable": true,
+    "immutable": false,
+    "published": false,
+    "date_created": "2024-03-22T23:07:42.827313Z",
+    "date_last_updated": "2026-01-29T09:48:28.311816Z",
+    "bag_last_downloaded": "2026-02-14T21:08:49.550938Z",
+    "bag_url": "http://www.hydroshare.org/django_irods/download/bags/6ca065138d764339baf3514ba2f2d72f.zip",
+    "coverages": [
+        {
+            "type": "box",
+            "value": {
+                "projection": "WGS 84 EPSG:4326",
+                "units": "Decimal degrees",
+                "northlimit": 49.1645,
+                "eastlimit": -59.4828,
+                "southlimit": 24.7029,
+                "westlimit": -125.9286
+            }
+        },
+        {
+            "type": "period",
+            "value": {
+                "start": "1979-01-01",
+                "end": "2023-01-31"
+            }
+        }
+    ],
+    "science_metadata_url": "http://www.hydroshare.org/hsapi/resource/6ca065138d764339baf3514ba2f2d72f/scimeta/",
+    "resource_map_url": "http://www.hydroshare.org/hsapi/resource/6ca065138d764339baf3514ba2f2d72f/map/",
+    "resource_url": "http://www.hydroshare.org/resource/6ca065138d764339baf3514ba2f2d72f/",
+    "content_types": [
+        "Geographic Feature Content"
+    ]
+}
