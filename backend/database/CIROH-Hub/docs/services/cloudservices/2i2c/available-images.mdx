@@ -1,0 +1,140 @@
+---
+sidebar_position: 03
+title: "List of Available Images"
+description: "Explore CIROH's available image configurations."
+tags: [CIROH, Services, Cloud Services, JupyterHub, 2i2c, Google Cloud, Education]
+Last updated date: "06/26/2026"
+path: "docs/services/cloudservices/2i2c/available-images"
+
+---
+
+{/*
+    SIDEBAR POSITION INDEXING
+    00-09: Base-level information
+    10-19: Integrations with outside cloud providers
+    20-29: Custom image information
+    30-39: Miscellaneous/Troubleshooting
+*/}
+
+Server image configurations are options for what software environment you want your Jupyter Notebook server to run in.
+
+import GitHubWikiPage from '@site/src/components/GitHubHandling/GitHubWikiPage';
+
+<GitHubWikiPage username="CIROH-UA" repo="awi-ciroh-image" path="2i2c-image-list" />
+
+> Content rendered from https://github.com/CIROH-UA/awi-ciroh-image/wiki/2i2c-image-list
+
+### New Pangeo Notebook base image 2024.04.08
+The default image for CIROH-2i2c image computing. Comes with built-in support for common hydrological libraries, along with integration with Hydroshare.
+
+_The timestamp in the name refers to the version of the Pangeo Notebook base image that this image is built from._
+
+- Branch: main [(pinned to a commit from February 12th, 2026)](https://github.com/CIROH-UA/awi-ciroh-image/tree/d86a62ae0b855c82991706bac2de19a313272b4b)
+- Pull target: `quay.io/2i2c/awi-ciroh-image:d86a62ae0b85`
+
+### Original Pangeo Notebook base image 2023.09.11
+An older image retained for compatibility.
+
+_The timestamp in the name refers to the version of the Pangeo Notebook base image that this image is built from._
+
+- Branch: main [(pinned to a commit from March 20th, 2024)](https://github.com/CIROH-UA/awi-ciroh-image/tree/d9f753c83a6b508527f24b22845c393dd7a3c04e)
+- Pull target: `quay.io/2i2c/awi-ciroh-image:d9f753c83a6b`
+
+### Notebook with R and Python kernel
+An image designed to be better-suited for R, including a fully-configured R environment and some useful hydrology libraries.
+
+- Branch: [r-python](https://github.com/CIROH-UA/awi-ciroh-image/tree/r-python)
+- Pull target: `quay.io/2i2c/awi-ciroh-image:f7f6aa41555b`
+
+### NGIAB Data Preprocessor
+An image containing dependencies of the NGIAB Data Preprocess software. Note that the *CIROH Community NextGen Hub* image provides a superset of these dependencies and may be preferable for more general use cases.
+
+- Branch: [ngiab_datapreprocess](https://github.com/CIROH-UA/awi-ciroh-image/tree/ngiab_datapreprocess)
+- Pull target: `quay.io/awiciroh/devcon25:ngiab_datapreprocess`
+
+### CIROH Community NextGen Hub
+A specialized image for using the NextGen framework. For more information on how to use this image, please see the [NextGen on 2i2c](https://hub.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/) page on CIROH Hub.
+
+To provide direct support for the NextGen framework, this image uses a unique environment configuration that can be fragile. If you are having issues with this image's Hydroshare integration, consider removing any user-installed libraries from `pip` and restarting your server.
+
+- Branch: [ngen-2i2c](https://github.com/CIROH-UA/awi-ciroh-image/tree/ngen-2i2c)
+- Pull target: `quay.io/awiciroh/ngiab-2i2c:v1.2.3`
+
+### Community Assets Computation Hub
+
+Contains dependencies for the [SYMFLUENCE](https://symfluence.org/) Earth-system modeling framework.
+
+- Branch: [symfluence](https://github.com/CIROH-UA/awi-ciroh-image/tree/symfluence)
+- Pull target: `quay.io/awiciroh/quay.io/awiciroh/symfluence:v1.0.0`
+
+### SI 2026 Bootcamp
+A collection of hydroinformatics utilities used for CUAHSI's workshop at CIROH DevCon 2026 and Summer Institute 2026.
+
+- Branch: [devcon26-cuahsi](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon26-cuahsi)
+- Pull target: quay.io/awiciroh/devcon26:devcon26-cuahsi
+
+## Devcon 25 images
+### USGS Surface Water Tools
+
+- Branch: [devcon25-usgs](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon25-usgs)
+- Pull target: `quay.io/awiciroh/devcon25:devcon25-usgs`
+
+### SHAP for ML Interpretation
+
+- Branch: [devcon25-shap](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon25-shap)
+- Pull target: `quay.io/awiciroh/devcon25:devcon25-shap`
+
+### TEVA for Feature Selection
+
+- Branch: [devcon25-teva](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon25-teva)
+- Pull target: `quay.io/awiciroh/devcon25:devcon25-teva`
+
+### LightGBM for Forecast
+
+- Branch: [devcon25-forecasting](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon25-forecasting)
+- Pull target: `quay.io/awiciroh/devcon25:devcon25-forecasting`
+
+### ML for Hydro Model Outputs
+
+- Branch: [sneisary_d25](https://github.com/CIROH-UA/awi-ciroh-image/tree/sneisary_d25)
+- Pull target: `quay.io/awiciroh/devcon25:sneisary_d25`
+
+### HydroGeoSpatial Modeling
+
+- Branch: [jmframe_d25](https://github.com/CIROH-UA/awi-ciroh-image/tree/jmframe_d25)
+- Pull target: `quay.io/awiciroh/devcon25:jmframe_d25`
+    
+## DevCon 2026 images
+### INFLECT FIM
+
+- Branch: [devcon26-inflect](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon26-inflect)
+- Pull target: `quay.io/awiciroh/devcon26:devcon26-inflect`
+
+### HydroServer
+
+- Branch: [devcon26-hydroserver](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon26-hydroserver)
+- Pull target: `quay.io/awiciroh/devcon26:devcon26-hydroserver`
+
+### Hillslope Water Quality Prediction
+
+- Branch: [devcon26-hillslope](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon26-hillslope)
+- Pull target: `quay.io/awiciroh/devcon26:devcon26-hillslope`
+
+### ML Emulator Models
+
+- Branch: [devcon26-emulator](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon26-emulator)
+- Pull target: `quay.io/awiciroh/devcon26:devcon26-emulator`
+
+### Satellite Data Projection
+
+- Branch: [devcon26-satellite](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon26-satellite)
+- Pull target: `quay.io/awiciroh/devcon26:devcon26-satellite`
+
+### CUAHSI Hydroinformatics
+
+> Renamed to [SI 2026 Bootcamp](#si-2026-bootcamp).
+
+### Foundations of ML
+
+- Branch: [devcon26-foundations](https://github.com/CIROH-UA/awi-ciroh-image/tree/devcon26-foundations)
+- Pull target: `quay.io/awiciroh/devcon26:devcon26-foundations`

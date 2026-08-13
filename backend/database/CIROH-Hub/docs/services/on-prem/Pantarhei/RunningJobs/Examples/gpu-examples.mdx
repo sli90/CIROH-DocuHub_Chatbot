@@ -1,0 +1,471 @@
+---
+sidebar_position: 8
+
+title: "GPU Job Examples"
+description: "GPU job examples for Pantarhei using CUDA C and Python (CuPy, PyTorch) on the gpu and gpu-more-time partitions."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, GPU, CUDA]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/gpu-examples"
+
+---
+
+## GPU Job Examples
+
+This page covers GPU job examples for Pantarhei using CUDA C and Python GPU libraries (CuPy and PyTorch). GPU jobs must be submitted to the `gpu` or `gpu-more-time` partition, and you must request the GPU resource explicitly with `--gpus-per-task=1`.
+
+Pantarhei has one GPU node (`gpu001`) with 40 CPU cores and one GPU:
+
+```
+gpu001   gpu   idle   40   2:20:1   384000
+```
+
+Check current GPU node status with:
+
+```bash
+sinfo -p gpu
+```
+
+---
+
+## CUDA C — Vector Addition
+
+This example allocates two large arrays on the GPU, adds them element-wise in a CUDA kernel, and copies the result back to the host.
+
+**CUDA program (vector_add.cu):**
+
+```c
+// vector_add.cu
+#include <stdio.h>
+#include <cuda_runtime.h>
+
+#define N (1 << 24)   /* 16 million elements */
+
+__global__ void vector_add(const float *a, const float *b, float *c, int n) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    if (i < n)
+        c[i] = a[i] + b[i];
+}
+
+int main(void) {
+    size_t bytes = N * sizeof(float);
+
+    float *h_a = (float *)malloc(bytes);
+    float *h_b = (float *)malloc(bytes);
+    float *h_c = (float *)malloc(bytes);
+
+    for (int i = 0; i < N; i++) { h_a[i] = 1.0f; h_b[i] = 2.0f; }
+
+    float *d_a, *d_b, *d_c;
+    cudaMalloc(&d_a, bytes);
+    cudaMalloc(&d_b, bytes);
+    cudaMalloc(&d_c, bytes);
+
+    cudaMemcpy(d_a, h_a, bytes, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_b, h_b, bytes, cudaMemcpyHostToDevice);
+
+    int threads = 256;
+    int blocks  = (N + threads - 1) / threads;
+
+    cudaEvent_t start, stop;
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+    cudaEventRecord(start);
+
+    vector_add<<<blocks, threads>>>(d_a, d_b, d_c, N);
+
+    cudaEventRecord(stop);
+    cudaEventSynchronize(stop);
+    float ms = 0;
+    cudaEventElapsedTime(&ms, start, stop);
+
+    cudaMemcpy(h_c, d_c, bytes, cudaMemcpyDeviceToHost);
+
+    /* Verify first and last element */
+    printf("c[0]      = %.1f  (expected 3.0)\n", h_c[0]);
+    printf("c[N-1]    = %.1f  (expected 3.0)\n", h_c[N - 1]);
+    printf("Kernel time: %.3f ms  (%d elements)\n", ms, N);
+
+    cudaFree(d_a); cudaFree(d_b); cudaFree(d_c);
+    free(h_a); free(h_b); free(h_c);
+    return 0;
+}
+```
+
+**Job submission script (cuda_vector_add.sh):**
+
+```bash
+#!/bin/bash
+# cuda_vector_add.sh
+#SBATCH -J cuda_vector_add
+#SBATCH -p gpu
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --gpus-per-task=1
+#SBATCH --output=cuda_vector_add_%j.out
+
+module purge
+module load CUDA
+
+# Compile and run
+nvcc vector_add.cu -o vector_add
+./vector_add
+```
+
+Submit the job:
+
+```bash
+sbatch cuda_vector_add.sh
+```
+
+**Key points:**
+- `--gpus-per-task=1` is required — without it Slurm does not reserve a GPU for your job.
+- `-p gpu` submits to the GPU partition (max 12-hour wall time); use `-p gpu-more-time` for up to 5 days.
+- `cudaEventElapsedTime` measures only kernel execution time, excluding data transfer.
+
+---
+
+## CUDA C — Matrix Multiplication
+
+Matrix multiplication is a classic GPU benchmark. This example uses shared memory tiling to reduce global memory traffic.
+
+**CUDA program (matmul.cu):**
+
+```c
+// matmul.cu
+#include <stdio.h>
+#include <cuda_runtime.h>
+#include <stdlib.h>
+
+#define TILE 16
+#define M    1024   /* matrix dimension M x M */
+
+__global__ void matmul(const float *A, const float *B, float *C, int n) {
+    __shared__ float sA[TILE][TILE];
+    __shared__ float sB[TILE][TILE];
+
+    int row = blockIdx.y * TILE + threadIdx.y;
+    int col = blockIdx.x * TILE + threadIdx.x;
+    float val = 0.0f;
+
+    for (int t = 0; t < n / TILE; t++) {
+        sA[threadIdx.y][threadIdx.x] = A[row * n + t * TILE + threadIdx.x];
+        sB[threadIdx.y][threadIdx.x] = B[(t * TILE + threadIdx.y) * n + col];
+        __syncthreads();
+
+        for (int k = 0; k < TILE; k++)
+            val += sA[threadIdx.y][k] * sB[k][threadIdx.x];
+        __syncthreads();
+    }
+
+    if (row < n && col < n)
+        C[row * n + col] = val;
+}
+
+int main(void) {
+    int n = M;
+    size_t bytes = (size_t)n * n * sizeof(float);
+
+    float *h_A = (float *)malloc(bytes);
+    float *h_B = (float *)malloc(bytes);
+    float *h_C = (float *)malloc(bytes);
+
+    for (int i = 0; i < n * n; i++) { h_A[i] = 1.0f; h_B[i] = 1.0f; }
+
+    float *d_A, *d_B, *d_C;
+    cudaMalloc(&d_A, bytes);
+    cudaMalloc(&d_B, bytes);
+    cudaMalloc(&d_C, bytes);
+    cudaMemcpy(d_A, h_A, bytes, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_B, h_B, bytes, cudaMemcpyHostToDevice);
+
+    dim3 threads(TILE, TILE);
+    dim3 blocks(n / TILE, n / TILE);
+
+    cudaEvent_t start, stop;
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+    cudaEventRecord(start);
+
+    matmul<<<blocks, threads>>>(d_A, d_B, d_C, n);
+
+    cudaEventRecord(stop);
+    cudaEventSynchronize(stop);
+    float ms = 0;
+    cudaEventElapsedTime(&ms, start, stop);
+
+    cudaMemcpy(h_C, d_C, bytes, cudaMemcpyDeviceToHost);
+
+    printf("C[0][0]   = %.1f  (expected %d.0)\n", h_C[0], n);
+    printf("Kernel time: %.3f ms  (%dx%d matrix)\n", ms, n, n);
+
+    cudaFree(d_A); cudaFree(d_B); cudaFree(d_C);
+    free(h_A); free(h_B); free(h_C);
+    return 0;
+}
+```
+
+**Job submission script (cuda_matmul.sh):**
+
+```bash
+#!/bin/bash
+# cuda_matmul.sh
+#SBATCH -J cuda_matmul
+#SBATCH -p gpu
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --gpus-per-task=1
+#SBATCH --output=cuda_matmul_%j.out
+
+module purge
+module load CUDA
+
+nvcc -O2 matmul.cu -o matmul
+./matmul
+```
+
+Submit the job:
+
+```bash
+sbatch cuda_matmul.sh
+```
+
+**Key points:**
+- Shared memory (`__shared__`) reduces global memory accesses by a factor of `TILE`.
+- `__syncthreads()` ensures all threads finish loading a tile before computation starts.
+- Adjust `M` and `TILE` to benchmark different problem sizes.
+
+---
+
+## Python GPU — CuPy
+
+CuPy is a NumPy-compatible GPU array library. It is the fastest way to accelerate existing NumPy code without writing CUDA kernels.
+
+**Python script (cupy_example.py):**
+
+```python
+# cupy_example.py
+import cupy as cp
+import numpy as np
+import time
+
+N = 50_000_000
+
+# Generate data on the GPU directly
+x = cp.linspace(0, 100, N, dtype=cp.float64)
+
+# Warm-up pass
+_ = cp.sum(cp.sin(x) * cp.exp(-x / 50.0))
+cp.cuda.Stream.null.synchronize()
+
+# Timed pass
+t0 = time.perf_counter()
+result = cp.sum(cp.sin(x) * cp.exp(-x / 50.0))
+cp.cuda.Stream.null.synchronize()
+t1 = time.perf_counter()
+
+print(f"Result (GPU): {float(result):.6f}")
+print(f"GPU time    : {(t1 - t0) * 1000:.2f} ms  ({N:,} elements)")
+
+# Compare with NumPy on CPU
+x_cpu = np.linspace(0, 100, N, dtype=np.float64)
+t0 = time.perf_counter()
+result_cpu = np.sum(np.sin(x_cpu) * np.exp(-x_cpu / 50.0))
+t1 = time.perf_counter()
+
+print(f"Result (CPU): {result_cpu:.6f}")
+print(f"CPU time    : {(t1 - t0) * 1000:.2f} ms")
+```
+
+**Job submission script (cupy_job.sh):**
+
+```bash
+#!/bin/bash
+# cupy_job.sh
+#SBATCH -J cupy_example
+#SBATCH -p gpu
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --gpus-per-task=1
+#SBATCH --output=cupy_%j.out
+
+module purge
+module load Python/3.10.8-GCCcore-12.2.0
+
+# pip install --upgrade pip
+
+# Install CuPy with compatible dependencies (run once)
+pip install cupy-cuda12x scipy numpy -q
+
+python cupy_example.py
+```
+
+Submit the job:
+
+```bash
+sbatch cupy_job.sh
+```
+
+**Key points:**
+- Replace `cp` with `np` and the code runs on the CPU — the API is identical.
+- `cp.cuda.Stream.null.synchronize()` ensures the GPU kernel completes before measuring time.
+- Choose the correct CuPy wheel (`cupy-cuda12x`, `cupy-cuda11x`, etc.) based on the CUDA version loaded.
+
+---
+
+## Python GPU — PyTorch
+
+PyTorch is widely used for deep learning and general-purpose GPU tensor operations.
+
+**Python script (pytorch_example.py):**
+
+```python
+# pytorch_example.py
+"""
+PyTorch GPU Benchmark - Tensor Operations on Pantarhei
+=======================================================
+This script demonstrates GPU-accelerated tensor computation using PyTorch.
+It performs an element-wise mathematical operation (sin * exp) over 50 million
+floating-point values and compares wall-clock time between the GPU and CPU.
+
+Workflow:
+  1. Detect whether a CUDA GPU is available; fall back to CPU if not.
+  2. Allocate a tensor of 50M evenly-spaced values directly on the GPU.
+  3. Run a warm-up pass so CUDA JIT compilation does not skew timing.
+  4. Time the GPU computation and print the result.
+  5. Move the tensor to CPU and repeat the same computation for comparison.
+
+Expected output (on a V100):
+  Using device: cuda
+  GPU         : Tesla V100-SXM2-16GB
+  Result (GPU): <value>
+  GPU time    : ~30–60 ms   (50,000,000 elements)
+  Result (CPU): <value>
+  CPU time    : ~800–1200 ms
+
+Usage:
+  Load a CUDA module and a Python/Anaconda module, then:
+    python pytorch_example.py
+"""
+import torch
+import time
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
+if device.type == "cuda":
+    print(f"GPU         : {torch.cuda.get_device_name(0)}")
+
+N = 50_000_000
+
+x = torch.linspace(0, 100, N, dtype=torch.float64, device=device)
+
+# Warm-up
+_ = torch.sum(torch.sin(x) * torch.exp(-x / 50.0))
+torch.cuda.synchronize()
+
+# Timed pass
+t0 = time.perf_counter()
+result = torch.sum(torch.sin(x) * torch.exp(-x / 50.0))
+torch.cuda.synchronize()
+t1 = time.perf_counter()
+
+print(f"Result (GPU): {result.item():.6f}")
+print(f"GPU time    : {(t1 - t0) * 1000:.2f} ms  ({N:,} elements)")
+
+# CPU comparison
+x_cpu = x.cpu()
+t0 = time.perf_counter()
+result_cpu = torch.sum(torch.sin(x_cpu) * torch.exp(-x_cpu / 50.0))
+t1 = time.perf_counter()
+
+print(f"Result (CPU): {result_cpu.item():.6f}")
+print(f"CPU time    : {(t1 - t0) * 1000:.2f} ms")
+```
+
+**Job submission script (pytorch_job.sh):**
+
+```bash
+#!/bin/bash
+# pytorch_job.sh
+#SBATCH -J pytorch_example
+#SBATCH -p gpu
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --gpus-per-task=1
+#SBATCH --output=pytorch_%j.out
+
+module purge
+module load Python/3.10.8-GCCcore-12.2.0
+
+# Install PyTorch if not already available (run once)
+pip install --user torch --index-url https://download.pytorch.org/whl/cu121
+
+python pytorch_example.py
+```
+
+Submit the job:
+
+```bash
+sbatch pytorch_job.sh
+```
+
+**Key points:**
+- `torch.cuda.is_available()` confirms a GPU was allocated; the script falls back to CPU if not.
+- `torch.cuda.synchronize()` is required before timing — GPU operations are asynchronous by default.
+- `torch.cuda.get_device_name(0)` prints the GPU model to the output file for record-keeping.
+
+---
+
+## Monitoring GPU Usage
+
+To check whether your GPU job is actually using the GPU, SSH to the allocated compute node while the job is running and run:
+
+```bash
+nvidia-smi
+```
+
+Example output:
+
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.85.12    Driver Version: 525.85.12    CUDA Version: 12.0    |
+|-------------------------------|------------------|--------------------------|
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================|==================|==========================|
+|   0  Tesla V100-SXM2...  Off  | 00000000:00:1E.0 Off |                    0 |
+| N/A   45C    P0    98W / 300W |   1024MiB / 16160MiB |     92%      Default |
++-----------------------------------------------------------------------------+
+```
+
+Key columns:
+- **GPU-Util** — percentage of time the GPU was executing a kernel (aim for > 80 %)
+- **Memory-Usage** — GPU VRAM consumed; ensure you stay well under the limit
+- **Pwr:Usage** — actual power draw; a value near the cap means the GPU is working hard
+
+To find which node your job landed on:
+
+```bash
+squeue -u $USER
+# Note the NODELIST value, e.g. gpu001
+ssh gpu001
+nvidia-smi
+```
+
+---
+
+## Quick Reference
+
+| Example | Language | Partition | `--gpus-per-task` | Use when |
+|---------|----------|-----------|-------------------|----------|
+| Vector addition | CUDA C | gpu | 1 | Learning CUDA basics |
+| Matrix multiplication | CUDA C | gpu | 1 | Benchmarking shared-memory tiling |
+| CuPy array ops | Python | gpu | 1 | Accelerating NumPy-style code |
+| PyTorch tensor ops | Python | gpu | 1 | Deep learning or tensor workloads |
+
+For jobs that combine GPU acceleration with MPI across nodes, see the [MPI job examples](./mpi-examples) page.
+
+## Additional Resources
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

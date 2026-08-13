@@ -1,0 +1,163 @@
+---
+sidebar_position: 1
+
+title: "Interactive Node"
+description: "Request an interactive compute node on Pantarhei using salloc for testing, debugging, and exploratory work."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, Interactive, Slurm]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/interactive-node"
+
+---
+
+## Interactive Node
+
+An interactive node gives you a live shell directly on a compute node. Use it when you need to test a script, debug a job, compile code, or explore data before submitting a full batch job. All computationally intensive work must run on compute nodes — not on the login node.
+
+## Requesting an Interactive Node
+
+Use `salloc` to request an allocation:
+
+```bash
+salloc --nodes 1 --partition normal --time 00:10:00
+```
+
+Slurm queues the request and reports progress until the node is ready:
+
+```
+salloc: Pending job allocation 25724
+salloc: job 25724 queued and waiting for resources
+salloc: job 25724 has been allocated resources
+salloc: Granted job allocation 25724
+salloc: Waiting for resource configuration
+salloc: Nodes compute004 are ready for job
+```
+
+Once granted, verify the allocation and note the assigned node:
+
+```bash
+squeue --me
+```
+
+```
+JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+25724    normal interact username  R       0:07      1 compute004
+```
+
+Then SSH directly into the allocated node:
+
+```bash
+ssh compute004
+```
+
+```
+Last login: Thu Jun  4 17:06:16 2026 from 172.16.0.1
+(base) [usernameury@compute004 ~]$
+```
+
+The prompt changes to the compute node name, confirming you are now on `compute004`.
+
+## Common Options
+
+| Option | Example | Purpose |
+|--------|---------|---------|
+| `--nodes` | `--nodes 1` | Number of nodes to allocate |
+| `--partition` | `--partition normal` | Queue to use — see `sinfo` for available partitions |
+| `--time` | `--time 00:10:00` | Wall-time limit (HH:MM:SS) |
+| `--ntasks` | `--ntasks 4` | Number of tasks (MPI ranks) |
+| `--cpus-per-task` | `--cpus-per-task 8` | CPU cores per task |
+| `--mem` | `--mem 32G` | Total memory for the session |
+| `--gres` | `--gres gpu:1` | Request a GPU (use with `-p gpu`) |
+
+## Examples
+
+**Interactive session on the normal partition (10 minutes, 1 node):**
+
+```bash
+salloc --nodes 1 --partition normal --time 00:10:00
+```
+
+**Interactive session with 4 CPUs for 1 hour:**
+
+```bash
+salloc --nodes 1 --partition normal --ntasks 1 --cpus-per-task 4 --time 01:00:00
+```
+
+**Interactive session on the GPU partition:**
+
+```bash
+salloc --nodes 1 --partition gpu --ntasks 1 --cpus-per-task 10 --gpus-per-task 1 --time 01:00:00
+```
+
+**Interactive session with specific memory:**
+
+```bash
+salloc --nodes 1 --partition normal --ntasks 1 --mem 64G --time 02:00:00
+```
+
+## Using the Interactive Session
+
+Once on the compute node, load modules and run commands exactly as you would in a batch script:
+
+```bash
+module load Python/3.10.8-GCCcore-12.2.0
+python -c "print('Hello world..')"
+```
+
+```
+Hello world..
+```
+
+```bash
+python my_script.py
+```
+
+Or compile and test a C program:
+
+```bash
+module load MVAPICH
+mpicc my_program.c -o my_program -lm
+mpiexec -n 4 ./my_program
+```
+
+Check which node you are on at any time:
+
+```bash
+hostname
+```
+
+```
+compute004.ual-ciroh.cluster
+```
+
+Check available resources on the node:
+
+```bash
+nproc          # number of CPU cores
+free -h        # available memory
+nvidia-smi     # GPU status (GPU nodes only)
+```
+
+## Ending the Session
+
+Type `exit` or press `Ctrl-D` to release the allocation and return to the login node:
+
+```bash
+exit
+```
+
+```
+salloc: Relinquishing job allocation 412
+[username@pantarhei ~]$
+```
+
+The prompt returns to the login node, confirming the compute node has been released.
+
+:::tip
+Keep interactive sessions short and release the allocation as soon as you are done. Holding an allocation idle prevents other users from accessing those resources.
+:::
+
+## Additional Resources
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

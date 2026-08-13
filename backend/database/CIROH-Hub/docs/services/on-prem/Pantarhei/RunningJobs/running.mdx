@@ -1,0 +1,484 @@
+---
+sidebar_position: 3
+
+title: "Running Jobs on Compute Nodes"
+description: "Submitting and managing jobs on Pantarhei using Slurm"
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/running"
+
+---
+
+## Running Jobs at Pantarhei
+
+All computational work on Pantarhei systems—including simulations, data analysis, and AI/ML training—is managed by the Slurm Workload Manager. This page provides a comprehensive overview of how to submit, monitor, and manage your jobs.
+
+## Overview / Slurm Basics
+
+Pantarhei uses the [Slurm Workload Manager](https://slurm.schedmd.com/) for job scheduling and management. With Slurm, a user requests resources and submits a job to a queue. The system then allocates the necessary compute nodes and executes the job when resources become available.
+
+### Login Nodes vs. Compute Nodes
+
+When you SSH into Pantarhei (`<username>@pantarhei.ua.edu`), you land on a login node. **Slurm should always be used to submit work as a job rather than running computationally intensive tasks directly on a login node.**
+
+Running heavy computations on login nodes is against Pantarhei policy and negatively impacts all users' ability to access the system. The login node is shared by all users—only submit short test jobs there.
+
+### How Slurm Works
+
+When you submit a job, you tell the scheduler:
+
+- How many resources you need (cores, GPUs, memory, etc.)
+- How long the job will run
+- What type of hardware you need (standard CPU nodes, GPU nodes, AMD nodes, etc.)
+
+The scheduler places your job in the appropriate queue and runs it when the requested resources become available.
+
+### Pantarhei Queues
+
+Different queues exist for different types of jobs. Some queues have longer time limits for extended simulations, others are optimized for GPU work. Choosing the right queue helps the system run efficiently and fairly for all users.
+
+## Pantarhei Queues (Partitions)
+
+Below is a reference table of available queues on Pantarhei:
+
+| Partition | Purpose | Max Time Limit | Max Nodes | Typical Use |
+|-----------|---------|----------------|-----------|------------|
+| normal | Standard CPU jobs | 7 days | 1-5 | General-purpose computing |
+| normal-more-time | CPU jobs needing longer runtime | 42 days | 1-5 | Extended simulations |
+| long | Long-running CPU jobs | 7 days | 4 | Sequential or loosely-coupled workloads |
+| long-more-time | Long-running CPU jobs with extended time | 42 days | 4 | Extended research computations |
+| amd | AMD-based CPU nodes | 7 days | 1 | AMD-specific optimizations |
+| gpu | GPU acceleration (short) | 12 hours | 1 | GPU workloads requiring quick turnaround |
+| gpu-more-time | GPU acceleration (extended) | 5 days | 1 | Longer GPU-based computations |
+
+**Choosing a Queue:**
+- Use **normal** for most jobs (up to 7 days runtime)
+- Use **long** or **long-more-time** for extended research that exceeds 7 days
+- Use **gpu** or **gpu-more-time** for GPU-accelerated workloads
+- Use **amd** if your code is optimized for AMD processors
+- Use **normal-more-time** or **long-more-time** if you need runtime beyond 7 days
+
+To display all Slurm partitions and their current status, run:
+
+```bash
+sinfo
+```
+
+Example output:
+
+```text
+PARTITION        AVAIL  TIMELIMIT  NODES  STATE NODELIST
+normal              up 7-00:00:00      2    mix compute004,fpga001
+normal              up 7-00:00:00      1  alloc compute001
+normal              up 7-00:00:00      3   idle compute[002-003,005]
+normal-more-time    up 42-00:00:0      2    mix compute004,fpga001
+normal-more-time    up 42-00:00:0      1  alloc compute001
+normal-more-time    up 42-00:00:0      3   idle compute[002-003,005]
+long*               up 7-00:00:00      3 drain* compute[007-009]
+long*               up 7-00:00:00      1    mix compute006
+long-more-time      up 42-00:00:0      3 drain* compute[007-009]
+long-more-time      up 42-00:00:0      1    mix compute006
+gpu                 up   12:00:00      1   idle gpu001
+gpu-more-time       up 5-00:00:00      1   idle gpu001
+```
+
+**Node states:**
+- `mix` — node is partially allocated (some cores in use, some free)
+- `alloc` — node is fully allocated to running jobs
+- `idle` — node is free and available
+- `drain*` — node is draining (no new jobs accepted); existing jobs finish normally
+
+A more detailed node-level listing is available with `sinfo -N -l`.
+
+```bash
+sinfo -N -l
+```
+
+```text
+Thu Jun 04 12:22:32 2026
+NODELIST       NODES        PARTITION       STATE CPUS    S:C:T MEMORY TMP_DISK WEIGHT AVAIL_FE REASON              
+amdcompute001      1             amd*        idle 256    2:64:2 514000        0      0      cpu none                
+compute001         1           normal       alloc 40     2:20:1 384000        0      0      cpu none                
+compute001         1 normal-more-time       alloc 40     2:20:1 384000        0      0      cpu none                
+compute002         1           normal        idle 40     2:20:1 384000        0      0      cpu none                
+compute002         1 normal-more-time        idle 40     2:20:1 384000        0      0      cpu none                
+compute003         1           normal        idle 40     2:20:1 384000        0      0      cpu none                
+compute003         1 normal-more-time        idle 40     2:20:1 384000        0      0      cpu none                
+compute004         1           normal       mixed 40     2:20:1 384000        0      0      cpu none                
+compute004         1 normal-more-time       mixed 40     2:20:1 384000        0      0      cpu none                
+compute005         1           normal        idle 40     2:20:1 384000        0      0      cpu none                
+compute005         1 normal-more-time        idle 40     2:20:1 384000        0      0      cpu none                
+compute006         1             long       mixed 64     2:16:2 256000        0      0      cpu none                
+compute006         1   long-more-time       mixed 64     2:16:2 256000        0      0      cpu none                
+compute007         1             long      drain* 64     2:16:2 256000        0      0      cpu not_responding      
+compute007         1   long-more-time      drain* 64     2:16:2 256000        0      0      cpu not_responding      
+compute008         1             long      drain* 64     2:16:2 256000        0      0      cpu not_responding      
+compute008         1   long-more-time      drain* 64     2:16:2 256000        0      0      cpu not_responding      
+compute009         1             long      drain* 64     2:16:2 256000        0      0      cpu not_responding      
+compute009         1   long-more-time      drain* 64     2:16:2 256000        0      0      cpu not_responding      
+fpga001            1           normal       mixed 40     2:20:1 384000        0   1000     fpga none                
+fpga001            1 normal-more-time       mixed 40     2:20:1 384000        0   1000     fpga none                
+gpu001             1              gpu        idle 40     2:20:1 384000        0   2000      gpu none                
+gpu001             1    gpu-more-time        idle 40     2:20:1 384000        0   2000      gpu none 
+```
+
+### Understanding the `sinfo -N -l` output
+
+- `NODELIST`: node name or node range.
+- `NODES`: number of matching node entries.
+- `PARTITION`: the Slurm partition(s) the node belongs to.
+- `STATE`: whether the node is `idle`, `mixed`, or in another state.
+- `CPUS`: total CPU slots available on that node.
+- `S:C:T`: sockets:cores:threads layout.
+- `MEMORY`: node memory in megabytes.
+- `TMP_DISK`: temporary disk space available on the node.
+- `WEIGHT`: scheduler weight for that node.
+- `AVAIL_FE`: available features such as `cpu`, `gpu`, or `fpga`.
+- `REASON`: why a node is unavailable, if applicable.
+
+In this example, `compute001` appears twice because it is listed for both the `normal` and `normal-more-time` partitions. The `mixed` state means some tasks are already allocated on that node while other CPUs remain available.
+
+## Running Jobs
+
+### Job Submission Script
+
+To submit work to a Slurm queue, you must first create a job submission file. This job submission file is essentially a simple shell script containing `#SBATCH` directives. These directives tell Slurm what resources your job requires.
+
+Here is a basic example:
+
+```bash
+#!/bin/bash
+#SBATCH -A <account>
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=40
+#SBATCH --job-name my_job
+#SBATCH -t 01:30:00
+
+# Load necessary modules
+module load python
+
+# Change to the directory from which you originally submitted this job
+cd $SLURM_SUBMIT_DIR
+
+# Run your application
+python my_script.py
+```
+
+### Mandatory SBATCH Fields
+
+You must at a minimum specify:
+
+1. **Account (-A or --account)**: Your allocation account. Check with your administrator or use your default account.
+2. **Partition (-p)**: The queue to submit to. Run `sinfo` to view all available partitions. If no partition is specified, the job will be directed to the default partition.
+
+### Common SBATCH Directives
+
+| Directive | Description | Example |
+|-----------|-------------|---------|
+| `-J` or `--job-name` | Give your job a descriptive name | `#SBATCH -J my_analysis` |
+| `-p` or `--partition` | Specify the queue | `#SBATCH -p normal` |
+| `--nodes` | Number of compute nodes | `#SBATCH --nodes=2` |
+| `--ntasks` | Total number of MPI tasks | `#SBATCH --ntasks=80` |
+| `--tasks-per-node` | MPI tasks per node | `#SBATCH --tasks-per-node=40` |
+| `--cpus-per-task` | CPU cores per task | `#SBATCH --cpus-per-task=2` |
+| `--mem` | Total memory for the job | `#SBATCH --mem=64G` |
+| `--gres` | Generic resources (e.g., GPUs) | `#SBATCH --gres=gpu:1` |
+| `-t` or `--time` | Wall time limit (HH:MM:SS) | `#SBATCH -t 02:00:00` |
+| `-o` or `--output` | Output file for stdout | `#SBATCH -o job_output.log` |
+| `-e` or `--error` | Output file for stderr | `#SBATCH -e job_error.log` |
+
+### Job Script Environment Variables
+
+The following standard Slurm environment variables are available in your job script:
+
+| Variable | Description |
+|----------|-------------|
+| `SLURM_SUBMIT_DIR` | Absolute path of the working directory when you submitted the job |
+| `SLURM_JOBID` | Job ID number assigned by the batch system |
+| `SLURM_JOB_NAME` | Job name supplied by the user |
+| `SLURM_JOB_NODELIST` | Names of nodes assigned to this job |
+| `SLURM_SUBMIT_HOST` | Hostname where you submitted the job |
+| `SLURM_JOB_PARTITION` | Name of the queue to which you submitted the job |
+| `SLURM_NTASKS` | Total number of tasks in the job |
+| `SLURM_NPROCS` | Total number of processors in the job |
+
+### Submitting a Job
+
+Once you have created a job submission file, submit it to Slurm using the `sbatch` command:
+
+```bash
+sbatch my_job_script.sh
+```
+
+You can also override values in your script from the command line:
+
+```bash
+sbatch --nodes=2 --ntasks=80 -t 03:00:00 my_job_script.sh
+```
+
+**Command-line options take precedence over #SBATCH directives in your script.**
+
+### Job Defaults
+
+- **Time limit**: 30 minutes of wall time (if not specified)
+- **Nodes**: 1 node
+
+### Multi-Node Jobs
+
+Each compute node in Pantarhei has multiple processor cores. To utilize multiple nodes effectively, your program must be specifically designed for multi-node execution, typically using MPI (Message Passing Interface).
+
+To request 3 compute nodes with 120 total MPI tasks:
+
+```bash
+sbatch --nodes=3 --ntasks=120 my_job_script.sh
+```
+
+### Sample batch script to check
+
+```bash
+#!/bin/bash
+
+## Example of MPI job that uses 64 tasks over 2 nodes
+
+#SBATCH -J system-info
+#SBATCH -p normal
+#SBATCH --ntasks=64  # Total number of MPI tasks (processes) for the job
+#SBATCH --tasks-per-node=32  # Number of tasks per node
+#SBATCH --cpus-per-task=1  # Number of CPUs allocated per task
+#SBATCH -t 1:00:00
+
+# Load application environment
+
+module purge
+
+module list
+
+echo "Cluster name: $SLURM_CLUSTER_NAME"
+echo "Tasks per node: $SLURM_TASKS_PER_NODE"
+echo "CPUs per task: $SLURM_CPUS_PER_TASK"
+echo "CPUs on node: $SLURM_CPUS_ON_NODE"
+echo "Total tasks: $SLURM_NTASKS"
+echo "Allocated nodes: $SLURM_NODELIST"
+echo "Number of nodes: $SLURM_NNODES"
+echo "Allocated GPUs: $CUDA_VISIBLE_DEVICES"
+```
+
+Example output:
+
+```text
+No modules loaded
+Cluster name: ual-ciroh
+Tasks per node: 32(x2)
+CPUs per task: 1
+CPUs on node: 32
+Total tasks: 64
+Allocated nodes: compute[001-002]
+Number of nodes: 2
+Allocated GPUs: 
+```
+
+### What this output means
+
+- `No modules loaded`
+  - The `module list` command shows no modules loaded after `module purge`.
+- `Cluster name: ual-ciroh`
+  - The job is running on the `ual-ciroh` Slurm cluster.
+- `Tasks per node: 32(x2)`
+  - Slurm allocated 32 MPI tasks on each node, and there are 2 nodes in the job.
+- `CPUs per task: 1`
+  - Each MPI task is assigned a single CPU core.
+- `CPUs on node: 32`
+  - Each node provides 32 CPU cores for the job, matching the 32 tasks on that node.
+- `Total tasks: 64`
+  - The job is using 64 MPI tasks in total.
+- `Allocated nodes: compute[001-002]`
+  - The job is running on nodes `compute001` and `compute002`.
+- `Number of nodes: 2`
+  - The job spans 2 compute nodes.
+- `Allocated GPUs:`
+  - No GPUs were assigned to this job, so that field is empty.
+
+**Note:** Simply requesting more nodes will not make your work run faster unless your code is parallelized to use all the cores.
+
+### Interactive Jobs
+
+In addition to batch submission, you can run interactive jobs to obtain a shell on allocated compute resources. This is useful for debugging, development, or exploratory work.
+
+To submit an interactive job using `srun`:
+
+```bash
+srun -p normal -N 1 -n 40 -t 02:00:00 --pty bash
+```
+
+This allocates 1 node with 40 tasks for 2 hours and provides an interactive bash shell.
+
+To quit your interactive job, type `exit` or press `Ctrl-D`.
+
+### Redirecting Job Output
+
+By default, Slurm captures the standard output and standard error (what would be printed to your screen) and writes it to a file in your submission directory named `slurm-<JOBID>.out`.
+
+You can specify custom output and error files using the `--output` and `--error` directives:
+
+```bash
+#!/bin/bash
+#SBATCH --output=/path/to/my_job.out
+#SBATCH --error=/path/to/my_job.err
+
+# Your job commands here
+echo "Hello World"
+```
+
+If you do not specify separate files, both stdout and stderr will be written to the same file (the `--output` file).
+
+### Holding a Job
+
+Sometimes you may want to submit a job but not have it run immediately. You can place a hold on a job using `scontrol`:
+
+```bash
+scontrol hold job <jobid>
+```
+
+Once a job has started running, it cannot be placed on hold. To release a held job:
+
+```bash
+scontrol release job <jobid>
+```
+
+## Monitoring Jobs
+
+### Canceling a Job
+
+To stop a job before it finishes or remove it from the queue, use the `scancel` command:
+
+```bash
+scancel <jobid>
+```
+
+To cancel all your jobs at once:
+
+```bash
+scancel -u $USER
+```
+
+### Checking Job Status
+
+Once a job is submitted, use `squeue` to check the status of your jobs:
+
+```bash
+squeue -u $USER
+```
+
+Example output:
+
+```
+JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+  189      normal     job1 username  R       0:14      2 compute[002-003]
+  190      normal     job2 username  PD       0:00      1 (None)
+```
+
+**Job States:**
+- `PD` (Pending): Waiting in the queue
+- `R` (Running): Currently executing
+- `CA` (Cancelled): User cancelled the job
+- `CD` (Completed): Job finished
+- `F` (Failed): Job failed
+
+For more detailed information about a specific job, use `scontrol show job`:
+
+```bash
+scontrol show job <jobid>
+```
+
+Example output snippet:
+
+```
+JobId=189 JobName=job1
+UserId=username
+Account=myaccount
+Partition=normal
+Priority=103076
+JobState=RUNNING
+Reason=None
+RunTime=00:01:28
+TimeLimit=02:00:00
+SubmitTime=2026-05-05T14:59:52
+StartTime=2026-05-05T14:59:52
+EndTime=2026-05-05T16:59:52
+```
+
+### Checking Job Output
+
+Once a job starts running, it writes its output to files. By default, this file is named `slurm-<JOBID>.out` in the directory where you submitted the job.
+
+To view the output:
+
+```bash
+cat slurm-189.out
+```
+
+To monitor output in real-time as the job runs:
+
+```bash
+tail -f slurm-189.out
+```
+
+For jobs that have completed, use `sacct` to query job accounting data:
+
+```bash
+sacct -j <jobid>
+```
+
+### Job Dependencies
+
+Job dependencies allow you to create a chain of jobs where one job waits for another to reach a certain state before starting.
+
+To run a job after another job has started:
+
+```bash
+sbatch --dependency=after:<jobid> my_job_script.sh
+```
+
+To run a job after another job completes successfully (exit code 0):
+
+```bash
+sbatch --dependency=afterok:<jobid> my_job_script.sh
+```
+
+To run a job after another job ends (with or without errors):
+
+```bash
+sbatch --dependency=afterany:<jobid> my_job_script.sh
+```
+
+To set dependencies on multiple jobs:
+
+```bash
+sbatch --dependency=afterok:189:190 my_job_script.sh
+```
+
+## Example Job Scripts
+
+The example job scripts are now split into dedicated pages so you can review the language-specific examples more easily:
+
+- [Python job examples](./Examples/python-examples)
+- [C job examples](./Examples/c-examples)
+
+Each example page contains complete Slurm submission scripts, serial and parallel versions, and MPI-enabled examples.
+
+## Quick Start Reference
+
+Once familiar with the detailed sections above, use this table as a quick reference:
+
+| Command | Purpose | Example |
+|---------|---------|---------|
+| `sbatch` | Submit a batch job script | `sbatch my_job.sh` |
+| `srun` | Request interactive compute shell | `srun -p normal -N 1 -n 40 -t 02:00:00 --pty bash` |
+| `squeue` | View your jobs in the queue | `squeue -u $USER` |
+| `scancel` | Cancel a running or pending job | `scancel 189` |
+| `scontrol` | View detailed job information | `scontrol show job 189` |
+| `sacct` | Query accounting data for past jobs | `sacct -j 189` |
+| `sinfo` | Display all queues and status | `sinfo` |
+| `scontrol hold` | Hold a job from running | `scontrol hold job 189` |
+| `scontrol release` | Release a held job | `scontrol release job 189` |

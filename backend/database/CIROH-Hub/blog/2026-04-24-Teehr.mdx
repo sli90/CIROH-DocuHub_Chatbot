@@ -1,0 +1,157 @@
+---
+title: "TEEHR and CIROH Advance Cloud-Based Hydrologic Model Evaluation into a New Era"
+description: "TEEHR advances hydrologic model evaluation at scale by combining a cloud-based data platform and a Python analytics package built for large, iterative analysis across models, locations, and time periods"
+slug: teehr-april-2026
+tags: [CIROH, TEEHR]
+authors: [sam-lamont, matt-denno, katie-van-werkhoven, sam-landsteiner]
+image: /img/blog/2026-04-teehr/fig5.png
+Last updated date: "06/24/2026"
+path: "blog/2026-04-24-Teehr"
+
+---
+
+<!-- generated-local-content -->
+
+## Authors
+
+- **Sam Lamont** - Lead Software Developer, RTI International ([Profile](https://www.linkedin.com/in/sam-lamont-3a972813/))
+- **Matthew Denno** - Lead Software Developer, RTI International ([Profile](https://www.linkedin.com/in/matthew-denno-pe-9b9316a/))
+- **Katie van Werkhoven** - Lead Science Advisor, RTI International ([Profile](https://www.linkedin.com/in/katievanwerkhoven/))
+- **Sam Landsteiner** - Software Developer, RTI International ([Profile](https://www.linkedin.com/in/sam-landsteiner-00752913/))
+
+import useBaseUrl from "@docusaurus/useBaseUrl"
+import ProfileCards from '/src/components/ProfileCards';
+
+export const teehrProfiles = [
+  {
+    name: 'Matthew Denno (PI)',
+    title: 'Lead Software Developer',
+    organization: 'RTI International',
+    email: 'mdenno@rti.org',
+    imagePath: '/img/profiles/Matthew_Denno.jpg',
+  },
+  {
+    name: 'Katie van Werkhoven',
+    title: 'Lead Science Advisor',
+    organization: 'RTI International',
+    email: 'kvanwerkhoven@rti.org',
+    imagePath: '/img/profiles/Katie_Werkhoven.jpg',
+  },
+  {
+    name: 'Sam Lamont',
+    title: 'Lead Software Developer',
+    organization: 'RTI International',
+    email: 'slamont@rti.org',
+    imagePath: '/img/profiles/Sam_Lamont.jpg',
+  },
+  {
+    name: 'Sam Landsteiner',
+    title: 'Software Developer',
+    organization: 'RTI International',
+    email: 'slandsteiner@rti.org',
+    imagePath: '/img/profiles/Sam_Landsteiner.png',
+  },
+]
+
+CIROH is advancing hydrologic model evaluation into a new era. Led by a core team of developers and scientists at RTI, with testing and contributions from others across the consortium, we've built TEEHR — a system purpose-built for evaluating models at scale. Combining novel approaches to data analytics with cutting-edge open data infrastructure, TEEHR enables a truly complete picture of model and forecast performance across datasets, sites, historical time periods, and forecast horizons. 
+
+## Why do we need TEEHR?
+
+TEEHR is built on a fundamental question: “Which hydrologic model is better?”. At its simplest, this can seem trivial; the model simulation is paired with observations, a few performance metrics are calculated, and you're on your way to a common performance analysis. Things can start to get more complicated if want to go larger, dig deeper or ask more nuanced questions:
+
+-	What if we want to compare many models against each other?
+-	What if we want to analyze thousands of locations with 40-years of hourly timestep data at the continental scale?
+-	What if we want to interrogate the data with questions like:
+    -	“How does performance during high-flow events compare to low-flow events?”
+    -	“How does model performance relate to physical basin attributes?”
+    -	“What's the uncertainty associated with the resulting metrics?”
+-	What if we want to make the data easily accessible to the hydrologic community to support both historical and near-real time analyses?
+
+These are the challenges TEEHR is designed to address.
+
+
+<figure style={{ textAlign: "center" }}>
+  <img
+   class="dark-mode-white-bg"
+   src={useBaseUrl('/img/blog/2026-04-teehr/fig1.png')}
+   width='100%'
+   alt="TEEHR is optimized for large-scale iterative model interrogation and data management."
+   />
+  <figcaption><em>TEEHR is optimized for large-scale iterative model interrogation and data management</em></figcaption>
+</figure>
+
+{/* truncate */}
+
+## What is TEEHR?
+### The TEEHR Framework
+TEEHR began as a Python package enabling robust and iterative evaluation of hydrologic models.  It has since expanded into a cloud-based platform (TEEHR-Cloud) consisting of a high-performance data warehouse optimized for huge analytic tables, a suite of cloud-based services supporting data exploration, automated processing and data ingests, and web-hosted interactive dashboards. 
+
+<figure style={{ textAlign: "center" }}>
+  <img
+   class="dark-mode-white-bg"
+   src={useBaseUrl('/img/blog/2026-04-teehr/fig2.png')}
+   width='60%'
+   alt="The TEEHR-Cloud framework consists of a high-performance data warehouse, cloud-based evaluation manager, and an installable Python package"
+   />
+  <figcaption><em>The TEEHR-Cloud framework consists of a high-performance data warehouse, cloud-based evaluation manager, and an installable Python package</em></figcaption>
+</figure>
+
+### TEEHR-Cloud
+TEEHR-Cloud delivers evaluation-ready insights and datasets that are publicly available and continuously updated — including 40 years of hourly retrospective streamflow simulations across more than 8,000 gage sites, model forcings summarized to drainage basins (mean areal precipitation and temperature), and a real-time evaluation manager for live data ingestion and analysis of operational NWM, RFC forecasts and CIROH’s NextGen Research Data Stream (NRDS). It's all built on Apache Iceberg, an open table format designed for the demands of big data at scale and proven by well-known big data industries (e.g., Netflix).
+
+
+<figure style={{ textAlign: "center" }}>
+  <img
+   class="dark-mode-white-bg"
+   src={useBaseUrl('/img/blog/2026-04-teehr/fig3.png')}
+   width='100%'
+   alt="A suite of services in the evaluation manager enables real-time ingests, web-based dashboards, interactive exploration, and more."
+   />
+  <figcaption><em>A suite of services in the evaluation manager enables real-time ingests, web-based dashboards, interactive exploration, and more.</em></figcaption>
+</figure>
+
+### TEEHR-Python
+TEEHR-Python is the analytics engine that puts this data to work. Powered by PySpark for scalable, distributed compute and Apache Iceberg for robust data management — including time travel, upsert/append/delete operations, schema evolution, and ACID transactions — it gives analysts the full power of modern data engineering in a hydrologic context. An ever-growing suite of signature, deterministic, and probabilistic metrics, with sampling uncertainty estimation built-in, means users can interrogate model performance in ways that simply weren't easily accessible before.  TEEHR-Python is still a Python package that users can install in their own environment via `pip install teehr` to use with their own data and to access datasets in the TEEHR-Cloud data warehouse.
+
+<figure style={{ textAlign: "center"}}>
+  <img
+   class="dark-mode-white-bg"
+   src={useBaseUrl('/img/blog/2026-04-teehr/fig4.png')}
+   width='100%'
+   alt="TEEHR-Python consists of tools supporting data fetching and loading, validation and storage, and robust analytics."
+   />
+  <figcaption><em>TEEHR-Python consists of tools supporting data fetching and loading, validation and storage, and robust analytics.</em></figcaption>
+</figure>
+
+### What are the TEEHR-Cloud Dashboards?
+
+Several web-based dashboards, currently in development, allow users to view and interact with the data warehouse from application-specific perspectives. The two active dashboards include more general retrospective model comparisons and forecast analysis, while other, more application-specific, dashboards in development will focus on:
+-	Operational forecast (NWM, RFC) diagnostic and event-based evaluation
+-	Multi-model intercomparison to baselines with uncertainty
+-	Ensemble water supply forecasts
+-	Forecast Informed Reservoir Operations (FIRO)
+-	Flash flood forecasts
+-	Low flow forecasts
+<figure style={{ textAlign: "center" }}>
+  <img
+   class="dark-mode-white-bg"
+   src={useBaseUrl('/img/blog/2026-04-teehr/fig5.png')}
+   width='100%'
+   alt="Screen capture of the retrospective model comparison dashboard"
+   />
+  <figcaption><em>Screen capture of the retrospective model comparison dashboard</em></figcaption>
+</figure>
+## Summary
+
+The TEEHR framework is under active development, as we continue to expand historical and real-time data ingests, application-specific dashboards, and core TEEHR-Python functionality. To learn more about TEEHR, the [documentation](https://rtiinternational.github.io/teehr/) is a good place to start (link below). If you want to ask a question, request a change or new feature, or report a bug, you can reach out through the CIROH #teehr slack channel, by creating an issue on the [TEEHR GitHub repos](https://GitHub.com/RTIInternational/teehr), or by contacting us directly. Thanks for reading!
+
+### Additional Links:
+- Documentation: https://hub.ciroh.org/docs/products/evaluation/rtiteehr/
+- TEEHR documentation: https://rtiinternational.github.io/teehr/
+- Dashboards (in-development): https://dashboards.teehr.rtiamanzi.org/
+- TEEHR repo: https://github.com/RTIInternational/teehr
+- TEEHR-Cloud repo: https://github.com/RTIInternational/teehr-hub
+
+## Our Team
+
+<ProfileCards profiles={teehrProfiles} />

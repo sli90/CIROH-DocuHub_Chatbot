@@ -1,0 +1,107 @@
+---
+title: "Expanding Access to NextGen Research through the CIROH Community NextGen Hub (CCNH) in Cloud"
+description: "A cloud-based, ready-to-use environment that simplifies access to the NextGen water modeling framework for researchers."
+slug: ciroh-ccnh-nextgen-march-2026
+tags: [CIROH, NextGen, NGIAB, Cloud Computing, Hydrology, National Water Model, Open Source, DevOps, Cyberinfrastructure]
+authors: [ayman, david, arpita-2025, furqan-baig, homa, benjamin-lee, josh]
+image: /img/blog/2026-03-ccnh/diagram.png
+Last updated date: "06/24/2026"
+path: "blog/2026-03-24-CCNH-in-Cloud"
+
+---
+
+<!-- generated-local-content -->
+
+## Authors
+
+- **Ayman Nassar** - Postdoctoral Researcher, Utah State University ([Profile](https://www.linkedin.com/in/ayman-nassar-24a92723/))
+- **David Tarboton** - Professor, Utah Water Research Laboratory ([Profile](https://www.linkedin.com/in/dtarb/))
+- **Arpita Patel** - Assistant Director, IT and DevOps, Alabama Water Institute ([Profile](https://github.com/arpita0911patel))
+- **Furqan Baig** - Research Programmer, University of Illinois at Urbana-Champaign ([Profile](https://www.linkedin.com/in/furqanbaig/))
+- **Homa Salehabadi** - Postdoctoral Researcher, Utah State University ([Profile](https://www.linkedin.com/in/homasalehabadi/))
+- **Benjamin Lee** - Development Operations Engineer, Alabama Water Institute ([Profile](https://www.linkedin.com/in/seungchanlee/))
+- **Josh Cunningham** - Software Engineer, Alabama Water Institute ([Profile](https://www.linkedin.com/in/josh-cunningham-6906a7108/))
+
+import useBaseUrl from "@docusaurus/useBaseUrl"
+
+## Opening New Doors for Research with the NextGen Framework
+
+The NextGen framework holds great potential for hydrologic modeling, but is often inaccessible due to its strenuous setup and requirements. As such, embedding it within a cloud-based framework offers a natural solution to this problem by removing some of the administrative and technical requirements for compute resource setup and computational library configuration, thus opening the door for a wider audience to tke advantage of the strengths of the framework.
+
+With the **CIROH Community NextGen Hub (CCNH)**, we’ve created a cloud-based environment that addresses exactly those setup challenges, so users can focus on science instead of software.
+
+## A Preconfigured, Ready-to-Use Cloud Environment
+CCNH is a containerized, cloud-based modeling environment hosted on the [CIROH-2i2c JupyterHub](https://ciroh.awi.2i2c.cloud/). It packages everything a researcher needs to run end-to-end NextGen workflows — from input preprocessing through model execution, calibration, evaluation, and output visualization — into a single, ready-to-use JupyterHub image.
+Built on the same containerization patterns as NGIAB, CCNH leverages a Pangeo base image and includes:
+
+- **Pre-compiled NextGen framework binaries** from NGIAB based docker image
+- **NGIAB data preprocessing tools** for automated retrieval and subsetting of hydrofabric and meteorological forcing datasets
+- **T-Route** routing components for streamflow simulation
+- **SPOTPY**(Statistical Parameter Optimization Tool for Python) for model calibration
+- **TEEHR**(Tools for Exploratory Evaluation in Hydrologic Research) for performance evaluation
+- **PyNGIAB**, a Python wrapper that lets you run NextGen simulations directly from Jupyter notebooks
+- **HydroShare integration tools** (nbfetch, hs_files-jupyter, hsclient) for seamless data exchange to save results in HydroShare for collaboration, reproducibility and publishing 
+- **JupyterLab** with distributed computing capabilities for interactive, scalable workflows
+
+<figure style={{ textAlign: "center" }}>
+  <img
+   class="dark-mode-white-bg"
+   src={useBaseUrl('/img/blog/2026-03-ccnh/diagram.png')}
+   width='60%'
+   alt="Diagram illustrating how HydroShare resources, 2i2c JupyterHub, and S3 Object Store interact to enable streamlined NextGen workflows in the cloud."
+   />
+  <figcaption><em>Diagram illustrating how HydroShare resources, 2i2c JupyterHub, and S3 Object Store interact to enable streamlined NextGen workflows in the cloud.</em></figcaption>
+</figure>
+The result: researchers can go from zero to running a calibrated NextGen simulation in a fraction of the time previously required.
+
+{/* truncate */}
+
+## Streamlined Workflow, Clear Results
+Through guided notebooks, users can:
+
+- Prepare and subset input data  
+- Run simulations  
+- Calibrate models  
+- Evaluate performance  
+- Explore outputs interactively  
+
+...all within a single environment designed for efficiency and discovery.
+
+## Why It Matters
+By lowering technical barriers and using a cloud-based approach, CCNH makes NextGen accessible to a broader research community.
+It allows scientists to spend less time on setup and more time advancing hydrologic understanding.
+
+## How to Access CCNH
+<img
+  src={useBaseUrl('/img/blog/2026-03-ccnh/screenshot.png')}
+  width='100%'
+  alt="Picture of the CIROH-2i2c JupyterHub interface showing the Server Options page where users can select compute profiles and the CCNH image to launch a NextGen modeling environment in the cloud."
+/>
+There are two primary ways to launch CCNH in the CIROH-2i2c JupyterHub environment:
+
+### Option 1: Launch Directly from CIROH-2i2c JupyterHub
+1. Go to: https://ciroh.awi.2i2c.cloud/  
+2. Click **“Login to continue”** and authenticate with your CIROH credentials. (If this is your first time, you may be prompted to authorize access through GitHub.) 
+3. On the **Server Options** page:
+   - Select the desired compute profile (Small, Medium, Large, or Huge).
+   - Select the **CIROH Community NextGen Hub image**.
+4. Click **Start** to launch the JupyterHub.
+
+You are now inside a CIROH 2i2c JupyterHub session running the CCNH image, which provides a fully configured NextGen modeling environment.
+
+### Option 2: Launch from a HydroShare Resource (“Open With”)
+One of the most powerful features of CIROH-2i2c JupyterHub is its [integration with HydroShare](https://hub.ciroh.org/ciroh_hub_staging/docs/services/cloudservices/2i2c/hydroshare-integration). You can open a HydroShare resource directly in a CIROH-2i2c JupyterHub session running the CCNH image:
+1. Navigate to a HydroShare resource. (for example: https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c/)  
+2. Click **Open With**  (top-right of the resource page) and select **CIROH-2i2c JupyterHub**. 
+3. Click **“Login to continue”** and authenticate with your CIROH credentials. (If this is your first time, you may be prompted to authorize access through GitHub.) 
+4. On the **Server Options** page:
+   - Select the desired compute profile (Small, Medium, Large, or Huge).
+   - Select the **CIROH Community NextGen Hub** image.
+5. Click **Start** to launch the JupyterHub.
+6. (If you did this with the example resource above, click on and launch one of the Jupyter Notebooks to step through the NextGen workflows.)
+
+## References
+- Nassar, A., Tarboton, D., Baig, F., Cunningham, J., Patel, A., Halgren, J., Lee, B., Salehabadi, H., Castronova, A., and Garousi-Nejad, I. "Accelerating community research applications of the NextGen water modeling framework through CUAHSI HydroShare linked with CIROH-2i2c JupyterHub." *Environmental Modelling & Software*. (In-review)
+- Nassar, A., Tarboton, D., Baig, F., Patel, A., Cunningham, J., and Salehabadi, H. (2026). NextGen Water Modeling Workflow for Research-Scale Applications. https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c  
+- I-GUIDE VCO: [Enabling Community Research with the Next Generation National Water Modeling Framework](https://i-guide.io/i-guide-vco/enabling-community-research-with-the-next-generation-national-water-modeling-framework-through-streamlined-workflows-on-ciroh-jupyterhub/)
+- CIROH Hub: https://hub.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/

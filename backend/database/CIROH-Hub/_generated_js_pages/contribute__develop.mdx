@@ -1,0 +1,77 @@
+---
+title: "Develop with Tethys"
+description: "Use Tethys Platform to create dynamic web interfaces."
+Last updated date: "04/02/2026"
+path: "contribute/develop"
+generated_from_js: true
+source_path: "src/pages/contribute/develop.js"
+---
+
+# Develop with Tethys
+
+- Use Tethys Platform to create dynamic web interfaces.
+- Develop with Tethys Platform
+- Tethys CIROH Portal
+- Tethys Documentation
+- Geospatial and scientific web applications for the 21st century
+- Tethys is an open-source Python-based framework designed specifically for developing geospatial web applications. It simplifies the creation of apps that process, visualize, and analyze spatial data.
+- Explore real-world Tethys apps built by the CIROH community on the
+- CIROH Tethys Portal
+
+## Develop applications with Tethys
+
+- CIROH application example interface
+- Install WSL
+- Install Miniconda
+- Refresh and Init your Terminal
+- Create an Environment
+- Activate Environment
+- Start Developing
+- Write your code
+- home
+- Install tethys-platform
+- Windows
+- Linux/macOS
+- Pip
+- Install Tethys
+- Tutorials
+
+```text
+$ source ~/miniconda3/bin/activate
+$ conda init --all
+```
+
+```text
+from tethys_sdk.layouts import MapLayout
+from tethys_sdk.routing import controller
+from .app import App
+
+
+@controller(name="home")
+class HomeMap(MapLayout):
+    app = App
+    base_template = f'{App.package}/base.html'
+    map_title = 'Dam Inventory'
+    map_subtitle = 'Tutorial'
+    basemaps = ['OpenStreetMap', 'ESRI']
+```
+
+```text
+$ source ~/miniconda3/bin/activate
+$ conda init --all
+```
+
+```text
+from tethys_sdk.layouts import MapLayout
+from tethys_sdk.routing import controller
+from .app import App
+
+
+@controller(name="home")
+class HomeMap(MapLayout):
+    app = App
+    base_template = f'{App.package}/base.html'
+    map_title = 'Dam Inventory'
+    map_subtitle = 'Tutorial'
+    basemaps = ['OpenStreetMap', 'ESRI']
+```

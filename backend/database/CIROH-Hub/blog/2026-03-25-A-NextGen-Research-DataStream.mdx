@@ -1,0 +1,124 @@
+---
+title: "The NextGen Research DataStream (NRDS): A Reproducible Numerical Prediction System for Accelerating Research to Operations in Hydrology"
+description: "An open, cloud-based numerical prediction system enabling rapid, reproducible research-to-operations workflows in hydrology using NextGen."
+slug: nextgen-research-datastream-april-2026
+tags: [CIROH, NextGen, NGIAB, NRDS, AWS, Hydrology, National Water Model, Open Source, Cloud Computing, DevOps, R2O, Numerical Prediction]
+authors: [jordan, arpita-2025, harsha-vemula]
+image: /img/blog/2026-03-nrds/T2D_2_TMP_2maboveground_cali.gif
+Last updated date: "06/24/2026"
+path: "blog/2026-03-25-A-NextGen-Research-DataStream"
+
+---
+
+<!-- generated-local-content -->
+
+## Authors
+
+- **Jordan Laser** - Software Engineer, Lynker ([Profile](https://github.com/JordanLaserGit))
+- **Arpita Patel** - Assistant Director, IT and DevOps, Alabama Water Institute ([Profile](https://github.com/arpita0911patel))
+- **Harsha Vemula** - DevOps Engineer, Alabama Water Institute ([Profile](https://github.com/harshavemula-ua))
+
+import useBaseUrl from "@docusaurus/useBaseUrl"
+
+Technological advances are evolving water prediction capabilities at a ludicrous pace. From revolutionary machine learning algorithms to dramatic advances in computational hardware, the potential for making accurate hydrologic predictions has never been higher. To meet this new potential, the hydrologic community continuously generates models and approaches based on cutting edge research that could potentially benefit operational systems. However, many of these innovations lack a path to operational deployment.
+
+**The NextGen Research Datastream (NRDS) provides a mechanism by which these ideas can be refined and make their way into operations.**
+
+Developed by Lynker and the Alabama Water Institute (a Cooperative Institute for Research to Operations in Hydrology partnership), the NRDS facilitates the actualization a research idea from the community in a scalable and deployable numerical prediction system. 
+To evaluate each of these modeling concepts, NRDS deploys prototype models to generate a continuous “datastream”. These outputs can then be evaluated and made more accurate. This cycle of streamlined deployment and iterative design lets these prototypes mature into a product that can be picked up by an operational forecasting team.
+
+To enable this process to be done rapidly and smoothly, the entire system is designed with reproducibility and iterative improvement as core principles.
+The NRDS is an automated numerical prediction system generating regular stream flow forecasts that uses the NextGen Water Resources Modeling Framework (NextGen) as the core modeling engine and NextGen In A Box (NGIAB) as the simulation environment. This system generates forecasts across the contiguous United States (CONUS) on CIROH's operational cyberinfrastructure backbone: the research-to-operations (R2O) Hybrid Cloud (R2OHC) platform, with deployment on the AWS cloud. What makes the NRDS exciting is that the entire system is open-sourced, reproducible, publicly browsable, and potentially editable by anyone in the hydrologic community.
+
+{/* truncate */}
+
+## Why the NRDS Matters
+
+For decades, operational hydrologic modeling has been a largely closed process. National-scale models like the National Water Model (NWM) are developed and maintained by federal agencies where HPC access is limited. While these models frequently produce insights and forecasts of excellent quality, the simulations themselves have proven difficult to reproduce and improve upon from within the hydrologic research community, hindering the knowledge flow from research to operations. By contrast, the NRDS is totally public and open. This provides both researchers and national agencies with immediate access, reducing the latency between the discovery of new and potentially valuable knowledge and its operational implementation.
+
+Deployed on AWS cloud from the [ngen-datastream repository](https://github.com/CIROH-UA/ngen-datastream), the NRDS regularly ingests meteorological forcing data, processes it through the NextGen framework using community-configured parameters, and produces streamflow predictions for river reaches across the country. The forcing data, model configuration, infrastructure, and simulation outputs are all publicly available through the [NRDS S3 data portal](https://datastream.ciroh.org/index.html) and the [NRDS visualizer](http://nrds.ciroh.org/). Researchers can browse the results, compare them against observations, and reproduce or run their own simulations with the exact tooling that supports the NRDS. This transparency and usability enables researchers to readily propose improvements to any component of the NRDS system stack.
+
+This is a fundamentally new paradigm for how national-scale water prediction can work: an open, iterative, community-driven feedback loop where regional expertise flows directly into an operational-like system.
+
+
+<figure style={{ textAlign: "center" }}>
+  <img
+    src={useBaseUrl('/img/blog/2026-03-nrds/architecture.png')}
+    alt="Figure 1. An overview diagram of the NRDS architecture. NWM data from the NOAA is used as a forcing source, which is converted into catchment-averaged forcing files by the Forcing Processor. Meanwhile, DattreamCLI draws from the Community Hydrofabric and community parameters to generate BMI configurations. Together, these are used to execute a model run in NextGen in a Box, the outputs of which are stored in an AWS S3 bucket for browsing via datastream.ciroh.org."
+  />
+  <figcaption><em>Figure 1. An overview diagram of the NRDS architecture.</em></figcaption>
+</figure>
+
+## How the Community Can Contribute
+
+This open contribution model is perhaps the most exciting aspect of the NRDS. The configuration files and NextGen model formulation that drive the daily simulations are publicly hosted and directly referenced during every execution. This means that community-proposed improvements to parameterization can flow directly into the operational system just by modifying these files.
+
+The process is intentionally straightforward. A researcher who has improved upon the parameterization of a particular VPU realization file can navigate to the [ngen-datastream Issues page](https://github.com/CIROH-UA/ngen-datastream/issues) on GitHub, open a new issue using the dedicated "Propose NRDS/NextGen Research DataStream parameter update" template, and submit their updated configuration along with supporting evidence. The CIROH team then reviews these contributions; once validated, they are merged and deployed into the live NRDS system.
+
+This contribution pathway was a central theme at the [2025 CIROH Developers Conference (DevCon 2025)](https://ciroh.ua.edu/devconference/2025-ciroh-developers-conference/), where a dedicated workshop walked participants through the complete process of proposing a configuration change. Attendees received access to virtual machines on NSF JetStream2 with pre-installed tooling, enabling them to run local simulations, compare results, and prepare a contribution — all within a single workshop session.
+
+The NRDS is not designed to be a product delivered by a central team. It is a platform designed to absorb and amplify the collective expertise of the hydrologic community.
+
+## Multiple Datastreams Live and Scaling
+
+The long-term potential of the NRDS is further amplified by its scalability in deploying additional model formulations to generate regular forecasts. The system now runs multiple concurrent datastreams, each using a different hydrologic modeling approach within the NextGen framework to generate streamflow forecasts.
+
+Currently, the NRDS operates a CFE-NOM datastream across all CONUS and parallelized across Vector Processing Units (VPUs), which pairs the Conceptual Functional Equivalent (CFE) rainfall-runoff model with the Noah-OWP-Modular land surface model. Alongside this, an LSTM DataStream has been deployed for all CONUS, bringing cutting-edge machine learning-based streamflow prediction into an operational-like system. Both of these datastreams route the NextGen outputs using T-Route.
+
+The most recent release, [v2.2.0](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v2.2.0) (February 2026), deployed the LSTM model into the production NRDS system — a milestone that brings differentiable and machine learning-based hydrology into an automated, cloud-based production environment. This builds on the broader CIROH effort to integrate models like δHBV 2.0 from Penn State's MHPI group. 
+
+There is also a Routing-Only DataStream for VPU 03W. This datastream focuses on channel routing NWM outputs using T-Route only, a novel experiment by [Quinn Lee](https://github.com/quinnylee).
+
+## The Broader Ecosystem
+
+The NRDS is deeply interconnected with the broader suite of CIROH tools that are making NextGen modeling accessible. NextGen In A Box (NGIAB) provides the containerized runtime environment that researchers can use locally to test configurations before proposing them to the NRDS. The DataStreamCLI (now in its [own repository](https://github.com/CIROH-UA/datastreamcli)) automates the complete workflow from data preprocessing to NextGen execution. The ForcingProcessor (also [split out](https://github.com/CIROH-UA/forcingprocessor)) handles the conversion of gridded meteorological data into the catchment-averaged forcings that NextGen requires. Once the model outputs are generated, TEEHR (Tools for Exploratory Evaluation in Hydrologic Research) provides standardized evaluation capabilities for comparing model outputs against observations (dashboard available [here](https://dashboards.teehr.rtiamanzi.org/forecast)).
+
+Together, these tools form a coherent pipeline: prepare data with the ForcingProcessor and DataStreamCLI, run simulations locally with NGIAB, evaluate results with TEEHR, and — if improvements are found — contribute them back to the NRDS for operational deployment. 
+
+## What's Next
+
+The trajectory of the NRDS points toward an increasingly capable and diverse operational system. Active development efforts include implementing the hourly, deep learning-based differentiable model δHBV 2.0 MTS, which was recently embedded into the NGIAB-NRDS ecosystem through a collaboration between Penn State and the Alabama Water Institute. This model has demonstrated continental-scale streamflow forecasting capabilities that rival the current National Water Model.
+
+There is also ongoing work to make the NRDS outputs more accessible and useful to downstream consumers. The [NRDS Visualizer](http://nrds.ciroh.org/) now provides a web-based interface for browsing and exploring daily simulation results. The [TEEHR Evaluation Dashboard](https://dashboards.teehr.rtiamanzi.org/forecast) now provides rapid evaluation of these simulation results, enabling researchers to gauge model performance as events are occurring and weigh the performance of each datastream (NextGen model-formulation) relative to other datastreams.
+
+With NRDS ecosystem quickly reaching maturity, now is the time for hydrologic researchers to put their research ideas to the test and deploy them in this operational-like environment. 
+
+## Get Involved
+
+The NextGen Research DataStream represents a new kind of infrastructure for water science: one that is as much a social and organizational innovation as it is a technical one. By making national-scale hydrologic simulations open, reproducible, and community-editable, the NRDS creates the conditions for a distributed network of research hydrologists to incrementally improve the accuracy and reliability of streamflow predictions across the country.
+
+Whether you are a graduate student exploring NextGen for the first time, a river forecast center hydrologist with deep regional expertise, or a researcher developing novel modeling approaches, the NRDS offers a concrete pathway from your work to operational impact.
+
+Here's how to get started:
+- NRDS on the NextGen in a Box product portfolio website: [ngiab.ciroh.org/#/nrds](https://ngiab.ciroh.org/#/nrds)
+- Explore the data: Browse daily outputs at [datastream.ciroh.org](https://datastream.ciroh.org/) or the [NRDS Visualizer](http://nrds.ciroh.org/)
+- Examine the NRDS deployment status timeline to see which datastreams have been deployed, when, and at what scale: [NRDS Status](https://github.com/CIROH-UA/ngen-datastream/blob/main/docs/nrds/STATUS_AND_METADATA.md)
+- Propose an improvement: Use the [NRDS Issues page](https://github.com/CIROH-UA/ngen-datastream/issues) to submit your idea for a new datastream or an edit to an existing deployment.
+- Join the conversation: Participate in [GitHub Discussions](https://github.com/CIROH-UA/ngen-datastream/discussions) to connect with the community
+- Read the documentation: Visit the [CIROH Hub NRDS page](https://hub.ciroh.org/docs/products/research-datastream/) for comprehensive documentation on the NRDS system and broader ecosystem.
+- Try out NRDS tools: Clone the various NRDS repositories to experiment with the NRDS workflow.
+  - [DataStreamCLI](https://github.com/CIROH-UA/datastreamcli) *(Figure 2)*: the on-server workflow tool used in NRDS simulations. This tool offers the ability to reproduce NRDS simulations, with a modular design for integrating research configurations and processing components.
+  - [ForcingProcessor](https://github.com/CIROH-UA/forcingprocessor/) *(Figure 3)*: a scalable tool for processing NWM operational data files into NextGen inputs. This tool provides the processing to generate NRDS forcings. 
+
+
+<figure style={{ textAlign: "center" }}>
+  <img
+    src={useBaseUrl('/img/blog/2026-03-nrds/datastreamcli.jpg')}
+    alt="Figure 2. The DataStreamCLI workflow. From left to right: 'LynkerSpatial Hydrofabric via hfsubset', 'National Water Model Forcings processing', 'NextGen and BMI config file generation', 'File and directory validation', 'NextGen in a Box', 'Data file hashing and metadata', 'Evaluation by TEEHR'."
+  />
+  <figcaption><em>Figure 2. The DataStreamCLI workflow.</em></figcaption>
+</figure>
+
+<figure style={{ textAlign: "center" }}>
+  <img
+    src={useBaseUrl('/img/blog/2026-03-nrds/T2D_2_TMP_2maboveground_cali.gif')}
+    alt="Figure 3. An animated gif depicting forcing data before and after subsetting via ForcingProcessor. On the right, the processed data visibly matches the NWM original, but is neatly cut out to match the boundaries of the NGEN run."
+  />
+  <figcaption><em>Figure 3. Forcing data before and after subsetting via ForcingProcessor.</em></figcaption>
+</figure>
+
+### The future of water prediction is open. Come build it with us.
+
+---
+
+*The NextGen Research DataStream is developed and maintained by CIROH at the University of Alabama, with funding under award NA22NWS4320003 from the NOAA Cooperative Institute Program. Learn more at [ciroh.ua.edu](https://ciroh.ua.edu/).*

@@ -1,0 +1,233 @@
+---
+sidebar_position: 6
+
+title: "VSCode Tunneling on Pantarhei"
+description: "Run a VSCode tunnel on a Pantarhei compute node and connect from your local machine using the VS Code Remote Tunnels extension."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, VSCode]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/vscode-tunnel"
+
+---
+
+## VSCode Tunneling on Pantarhei
+
+VS Code Remote Tunnels let you connect your local VS Code instance directly to a Pantarhei compute node. Once the tunnel is running, you get a full IDE experience—file editing, terminal access, extensions, and debugger—over a secure connection, without needing an open inbound port or a VPN.
+
+Compute nodes have direct internet access, so the tunnel can reach Microsoft's relay servers without a proxy.
+
+## Prerequisites
+
+- A Pantarhei account with access to the `normal` partition
+- [Visual Studio Code](https://code.visualstudio.com/) installed on your local machine
+- The **Remote - Tunnels** extension installed in your local VS Code (`ms-vscode.remote-server`)
+- A GitHub or Microsoft account (used to authenticate the tunnel on first use)
+
+## Job Script
+
+Save the following script as `vscode.job` in your Pantarhei home directory:
+
+```bash
+#!/bin/bash
+# vscode.job
+#SBATCH --job-name=VSCode
+#SBATCH --output=VSCode-%J.txt
+#SBATCH --nodes=1
+#SBATCH --ntasks=32
+#SBATCH --partition=normal
+#SBATCH --time=00:30:00
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=your_email@example.com
+
+# Compute nodes have direct internet access.
+# Unset proxy variables in case they are inherited from the login node.
+unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+echo "Cluster:      $SLURM_CLUSTER_NAME"
+echo "Tasks/node:   $SLURM_TASKS_PER_NODE"
+echo "CPUs/task:    $SLURM_CPUS_PER_TASK"
+echo "CPUs on node: $SLURM_CPUS_ON_NODE"
+echo "Total tasks:  $SLURM_NTASKS"
+echo "Nodes:        $SLURM_NODELIST"
+echo "Num nodes:    $SLURM_NNODES"
+echo "GPUs:         $CUDA_VISIBLE_DEVICES"
+
+module load VSCode
+
+code tunnel --verbose --accept-server-license-terms
+```
+
+Replace `your_email@example.com` with your actual email address so Slurm can send you job notifications.
+
+### Script Explanation
+
+**SBATCH directives**
+
+| Directive | Value | Purpose |
+|-----------|-------|---------|
+| `--job-name=VSCode` | VSCode | Name shown in `squeue` output |
+| `--output=VSCode-%J.txt` | VSCode-\<jobid\>.txt | Captures all stdout/stderr; `%J` is replaced with the job ID at runtime |
+| `--nodes=1` | 1 | Requests a single compute node — a tunnel only needs one |
+| `--ntasks=32` | 32 | Number of CPU tasks available to your session |
+| `--partition=normal` | normal | Submits to the standard CPU queue |
+| `--time=00:30:00` | 30 min | Wall-time limit; the tunnel stops when this expires |
+| `--mail-type=ALL` | ALL | Sends email when the job starts, ends, or fails |
+| `--mail-user` | your email | Address that receives the Slurm notifications |
+
+**Proxy variables**
+
+```bash
+unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy
+```
+
+Login nodes may set proxy environment variables for outbound HTTP traffic. Compute nodes have direct internet access, so those proxies are not needed and can actually block the tunnel from reaching Microsoft's relay servers. This block removes them explicitly.
+
+**OpenMP thread count**
+
+```bash
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+```
+
+Sets the number of OpenMP threads to match the CPUs allocated per task, preventing accidental over-subscription if you run multithreaded code inside the VS Code terminal.
+
+**Diagnostic echo statements**
+
+```bash
+echo "Cluster:      $SLURM_CLUSTER_NAME"
+echo "Tasks/node:   $SLURM_TASKS_PER_NODE"
+...
+```
+
+These lines print key Slurm environment variables to the output file (`VSCode-<jobid>.txt`). They are useful for confirming which node and resources were actually allocated to your job.
+
+**Module load**
+
+```bash
+module load VSCode
+```
+
+Loads the VS Code CLI (`code`) into `PATH` using Pantarhei's module system. Without this, the `code` command would not be found on the compute node.
+
+**Tunnel command**
+
+```bash
+code tunnel --verbose --accept-server-license-terms
+```
+
+| Flag | Purpose |
+|------|---------|
+| `tunnel` | Starts a VS Code Remote Tunnel that relays traffic through Microsoft's servers |
+| `--verbose` | Writes detailed status messages to the output file, including the authentication URL and tunnel name |
+| `--accept-server-license-terms` | Non-interactively accepts the VS Code Server license so the job does not stall waiting for keyboard input |
+
+## Submitting the Job
+
+Submit the job from the Pantarhei login node:
+
+```bash
+sbatch vscode.job
+```
+
+Slurm will return a job ID, for example:
+
+```
+Submitted batch job 312
+```
+
+## First-Time Authentication
+
+The first time `code tunnel` runs it needs to authenticate against a Microsoft or GitHub account. The authentication link is written to the job's output file.
+
+Check the output file (replace `312` with your job ID):
+
+```bash
+cat VSCode-312.txt
+```
+
+Look for a line like:
+
+```
+To grant access to the server, please log into https://github.com/login/device and use code XXXX-XXXX
+```
+
+Open that URL in your browser, enter the device code, and complete the sign-in. The tunnel will start automatically once authentication succeeds. Subsequent job runs on the same account do not require this step.
+
+## Connecting from Your Local Machine
+
+After authentication, the output file will show the tunnel name and connection URL, for example:
+
+```
+Open this link in your browser https://vscode.dev/tunnel/<tunnel-name>/
+```
+
+**Option 1 — Browser:** Open the URL directly in a browser for a web-based VS Code session.
+
+**Option 2 — Local VS Code:**
+
+1. Open VS Code on your local machine.
+2. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS) to open the Command Palette.
+3. Run **Remote Tunnels: Connect to Tunnel**. If the **Remote - Tunnels** extension is not installed, install it first from the Extensions marketplace.
+4. Sign in with the same GitHub or Microsoft account used on the cluster.
+5. Select the tunnel named after your Pantarhei session.
+
+You now have a full VS Code window connected to the compute node. The integrated terminal runs directly on the node, so you can run scripts, inspect files, and use all installed modules.
+
+## Monitoring the Job
+
+Check whether the tunnel job is still running:
+
+```bash
+squeue -u $USER
+```
+
+View live output from the job:
+
+```bash
+tail -f VSCode-<JOBID>.txt
+```
+
+## Ending the Session
+
+The tunnel stops when the Slurm job ends (after the 4-hour wall time) or when you cancel it manually:
+
+```bash
+scancel <JOBID>
+```
+
+You can also stop the tunnel from within VS Code by running **Remote Tunnels: Close Remote Connection** from the Command Palette.
+
+## Adjusting Resources
+
+The default script requests 32 tasks for up to 4 hours on the `normal` partition. Adjust the `#SBATCH` directives to match your workload:
+
+| Directive | Default | Notes |
+|-----------|---------|-------|
+| `--ntasks` | 32 | Reduce if you only need a light editing session |
+| `--time` | 00:30:00 | Maximum on `normal` is 7 days |
+| `--partition` | normal | Use `gpu` or `gpu-more-time` for GPU work |
+| `--mem` | (not set) | Add `--mem=64G` if your work is memory-intensive |
+
+## Troubleshooting
+
+**Tunnel URL does not appear in the output file**
+
+The job may still be starting. Wait a moment and re-run `tail -f VSCode-<JOBID>.txt`. If nothing appears after a few minutes, check that the `VSCode` module loaded successfully and that no proxy variables interfered.
+
+**Authentication prompt does not appear**
+
+If you have authenticated before, the tunnel skips the prompt and starts immediately. Look for the `Open this link` line instead of the device-code line.
+
+**Connection drops after a short time**
+
+The tunnel stays alive as long as the Slurm job is running. If the job hits its wall-time limit (`--time`), the tunnel will close. Increase `--time` or resubmit the job.
+
+**`module load VSCode` fails**
+
+Run `module avail VSCode` on the login node to confirm the module name. Contact your system administrator if the module is not listed.
+
+## Additional Resources
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

@@ -1,0 +1,363 @@
+---
+sidebar_position: 7
+
+title: "MPI Job Examples"
+description: "MPI job examples for Pantarhei covering single-node, multi-node, and hybrid MPI+OpenMP patterns in C and Python."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, MPI]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/mpi-examples"
+
+---
+
+## MPI Job Examples
+
+This page covers MPI (Message Passing Interface) job examples for Pantarhei. MPI distributes work across multiple processes that may span several compute nodes, each communicating by passing messages. Use MPI when your workload is too large for a single node or when you need the fastest possible inter-process communication.
+
+Pantarhei uses [MVAPICH](https://mvapich.cse.ohio-state.edu/) as its MPI implementation. Load it with:
+
+```bash
+module load MVAPICH
+```
+
+For Python-based MPI, load `mpi4py` alongside a Python module:
+
+```bash
+module load Python/3.10.8-GCCcore-12.2.0
+module load mpi4py/3.1.4-gompi-2022b
+```
+
+---
+
+## Single-Node MPI (C)
+
+This example performs a parallel numerical integration using the trapezoidal rule. Each MPI rank computes a portion of the integral and the results are summed on rank 0 with `MPI_Reduce`.
+
+**C program (mpi_integrate.c):**
+
+```c
+// mpi_integrate.c
+#include <mpi.h>
+#include <stdio.h>
+#include <math.h>
+
+/* Integrand: sin(x) * exp(-x / 50) */
+double f(double x) {
+    return sin(x) * exp(-x / 50.0);
+}
+
+int main(int argc, char **argv) {
+    int rank, size;
+    long N = 100000000L;   /* total number of trapezoids */
+    double a = 0.0, b = 100.0;
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    double h = (b - a) / N;
+    long local_n = N / size;
+    double local_a = a + rank * local_n * h;
+    double local_b = local_a + local_n * h;
+
+    double local_sum = 0.5 * (f(local_a) + f(local_b));
+    for (long i = 1; i < local_n; i++)
+        local_sum += f(local_a + i * h);
+    local_sum *= h;
+
+    double total = 0.0;
+    MPI_Barrier(MPI_COMM_WORLD);
+    double t0 = MPI_Wtime();
+    MPI_Reduce(&local_sum, &total, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    double t1 = MPI_Wtime();
+
+    if (rank == 0) {
+        printf("Integral result : %.10f\n", total);
+        printf("Wall time       : %.4f s  (ranks: %d)\n", t1 - t0, size);
+    }
+
+    MPI_Finalize();
+    return 0;
+}
+```
+
+**Job submission script (mpi_single_node.sh):**
+
+```bash
+#!/bin/bash
+# mpi_single_node.sh
+#SBATCH -J mpi_integrate
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --cpus-per-task=1
+#SBATCH -t 00:30:00
+#SBATCH --output=mpi_single-%J.txt
+
+module purge
+module load MVAPICH
+
+mpicc mpi_integrate.c -o mpi_integrate -lm
+
+mpiexec -n 8 ./mpi_integrate
+```
+
+Submit the job:
+
+```bash
+sbatch mpi_single_node.sh
+```
+
+**Key points:**
+- `--ntasks=8` launches 8 MPI ranks on one node.
+- `MPI_Reduce` gathers partial results to rank 0 with a single collective call.
+- `MPI_Barrier` synchronizes all ranks before timing begins.
+
+---
+
+## Multi-Node MPI (C)
+
+Scaling across multiple nodes requires only changing the SBATCH directives — the C code stays the same. Pantarhei's MVAPICH installation handles inter-node communication over the fabric automatically.
+
+**Job submission script (mpi_multi_node.sh):**
+
+```bash
+#!/bin/bash
+# mpi_multi_node.sh
+#SBATCH -J mpi_multinode
+#SBATCH -p normal
+#SBATCH --nodes=2
+#SBATCH --ntasks=80           # 40 tasks per node (full node)
+#SBATCH --ntasks-per-node=40
+#SBATCH --cpus-per-task=1
+#SBATCH -t 00:30:00
+#SBATCH --output=mpi_multi-%J.txt
+
+
+echo "Name of the cluster on which the job is executing." $SLURM_CLUSTER_NAME
+echo "Number of tasks to be initiated on each node." $SLURM_TASKS_PER_NODE
+echo "Number of cpus requested per task." $SLURM_CPUS_PER_TASK
+echo "Number of CPUS on the allocated node." $SLURM_CPUS_ON_NODE
+echo "Total number of processes in the current job." $SLURM_NTASKS
+echo "List of nodes allocated to the job" $SLURM_NODELIST
+echo "Total number of nodes in the job's resource allocation." $SLURM_NNODES
+echo "List of allocated GPUs." $CUDA_VISIBLE_DEVICES
+
+
+module purge
+module load MVAPICH
+
+# Compile on the first allocated node
+mpicc mpi_integrate.c -o mpi_integrate -lm
+
+mpiexec -n 80 ./mpi_integrate
+```
+
+Submit the job:
+
+```bash
+sbatch mpi_multi_node.sh
+```
+
+**Key points:**
+- `--nodes=2` requests two compute nodes; `--ntasks-per-node=40` pins 40 ranks per node.
+- The binary compiled on the login node is visible on all compute nodes via the shared filesystem — no need to copy it manually.
+- Increase `--nodes` and `--ntasks` together to scale further.
+
+---
+
+## Hybrid MPI + OpenMP (C)
+
+Combining MPI ranks with OpenMP threads is useful when each node has many cores and the communication overhead of one MPI rank per core is too high. The pattern is: one MPI rank per node, and OpenMP threads fill the cores within each node.
+
+**C program (mpi_omp_integrate.c):**
+
+```c
+// mpi_omp_integrate.c
+#include <mpi.h>
+#include <omp.h>
+#include <stdio.h>
+#include <math.h>
+
+double f(double x) { return sin(x) * exp(-x / 50.0); }
+
+int main(int argc, char **argv) {
+    int rank, size;
+    long N = 200000000L;
+    double a = 0.0, b = 100.0;
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    double h = (b - a) / N;
+    long local_n = N / size;
+    double local_a = a + rank * local_n * h;
+
+    double local_sum = 0.0;
+
+    #pragma omp parallel for reduction(+:local_sum)
+    for (long i = 0; i < local_n; i++)
+        local_sum += f(local_a + (i + 0.5) * h);
+    local_sum *= h;
+
+    double total = 0.0;
+    MPI_Barrier(MPI_COMM_WORLD);
+    double t0 = MPI_Wtime();
+    MPI_Reduce(&local_sum, &total, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+    double t1 = MPI_Wtime();
+
+    if (rank == 0) {
+        printf("Integral result : %.10f\n", total);
+        printf("Wall time       : %.4f s  (MPI ranks: %d, OMP threads: %d)\n",
+               t1 - t0, size, omp_get_max_threads());
+    }
+
+    MPI_Finalize();
+    return 0;
+}
+```
+
+**Job submission script (mpi_omp_job.sh):**
+
+```bash
+#!/bin/bash
+# mpi_omp_job.sh
+#SBATCH -J mpi_omp
+#SBATCH -p normal
+#SBATCH --nodes=2
+#SBATCH --ntasks=2            # one MPI rank per node
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=20    # 20 OpenMP threads per rank
+#SBATCH -t 00:30:00
+#SBATCH --output=mpi_omp-%J.txt
+
+echo "Name of the cluster on which the job is executing." $SLURM_CLUSTER_NAME
+echo "Number of tasks to be initiated on each node." $SLURM_TASKS_PER_NODE
+echo "Number of cpus requested per task." $SLURM_CPUS_PER_TASK
+echo "Number of CPUS on the allocated node." $SLURM_CPUS_ON_NODE
+echo "Total number of processes in the current job." $SLURM_NTASKS
+echo "List of nodes allocated to the job" $SLURM_NODELIST
+echo "Total number of nodes in the job's resource allocation." $SLURM_NNODES
+echo "List of allocated GPUs." $CUDA_VISIBLE_DEVICES
+
+module purge
+module load MVAPICH
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+mpicc -fopenmp mpi_omp_integrate.c -o mpi_omp_integrate -lm
+
+mpiexec -n 2 ./mpi_omp_integrate
+```
+
+Submit the job:
+
+```bash
+sbatch mpi_omp_job.sh
+```
+
+**Key points:**
+- `--ntasks-per-node=1` and `--cpus-per-task=20` give each MPI rank 20 cores for OpenMP threads.
+- `OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK` ensures OpenMP uses exactly the cores Slurm allocated.
+- Compile with `-fopenmp` to enable OpenMP directives.
+
+---
+
+## MPI with Python (mpi4py)
+
+For Python workloads that need distributed memory parallelism, `mpi4py` provides the same MPI primitives (`send`, `recv`, `bcast`, `reduce`, `gather`) as the C API.
+
+**Python script (mpi_reduce.py):**
+
+```python
+# mpi_reduce.py
+from mpi4py import MPI
+import numpy as np
+import time
+
+comm = MPI.COMM_WORLD
+rank = comm.Get_rank()
+size = comm.Get_size()
+
+N = 100_000_000
+a, b = 0.0, 100.0
+
+h = (b - a) / N
+local_n = N // size
+local_a = a + rank * local_n * h
+
+x = np.linspace(local_a + 0.5 * h, local_a + (local_n - 0.5) * h, local_n)
+local_sum = float(np.sum(np.sin(x) * np.exp(-x / 50.0)) * h)
+
+comm.Barrier()
+t0 = MPI.Wtime()
+total = comm.reduce(local_sum, op=MPI.SUM, root=0)
+t1 = MPI.Wtime()
+
+if rank == 0:
+    print(f"Integral result : {total:.10f}")
+    print(f"Wall time       : {t1 - t0:.4f} s  (ranks: {size})")
+```
+
+**Job submission script (mpi_python_job.sh):**
+
+```bash
+#!/bin/bash
+# mpi_python_job.sh
+#SBATCH -J mpi_python
+#SBATCH -p normal
+#SBATCH --nodes=2
+#SBATCH --ntasks=8
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=1
+#SBATCH -t 00:30:00
+#SBATCH --output=mpi_python-%J.txt
+
+
+echo "Name of the cluster on which the job is executing." $SLURM_CLUSTER_NAME
+echo "Number of tasks to be initiated on each node." $SLURM_TASKS_PER_NODE
+echo "Number of cpus requested per task." $SLURM_CPUS_PER_TASK
+echo "Number of CPUS on the allocated node." $SLURM_CPUS_ON_NODE
+echo "Total number of processes in the current job." $SLURM_NTASKS
+echo "List of nodes allocated to the job" $SLURM_NODELIST
+echo "Total number of nodes in the job's resource allocation." $SLURM_NNODES
+echo "List of allocated GPUs." $CUDA_VISIBLE_DEVICES
+
+
+
+module purge
+module load Python/3.10.8-GCCcore-12.2.0
+module load mpi4py/3.1.4-gompi-2022b
+
+mpiexec -n 8 python mpi_reduce.py
+```
+
+Submit the job:
+
+```bash
+sbatch mpi_python_job.sh
+```
+
+**Key points:**
+- `comm.reduce` mirrors `MPI_Reduce` — only rank 0 receives the final result.
+- NumPy vectorization keeps the per-rank computation fast without nested Python loops.
+- `mpi4py` must be loaded as a module (or installed via `pip`) in the same environment as Python.
+
+---
+
+## Quick Reference
+
+| Pattern | Nodes | `--ntasks` | `--cpus-per-task` | Use when |
+|---------|-------|------------|-------------------|----------|
+| Single-node MPI | 1 | 8–40 | 1 | Fits in one node's memory |
+| Multi-node MPI | 2+ | multiples of node core count | 1 | Needs more memory or cores than one node provides |
+| Hybrid MPI+OpenMP | 1+ | 1 per node | 4–20 | Per-rank communication overhead is high |
+| Python mpi4py | 1+ | any | 1 | Python workloads needing distributed memory |
+
+For MPI jobs that also need GPU acceleration, see the [GPU job examples](./gpu-examples) page.
+
+## Additional Resources
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

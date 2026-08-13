@@ -1,0 +1,550 @@
+---
+sidebar_position: 5
+
+title: "Hydrologist Python Job Examples"
+description: "Hydrologic Python examples for Pantarhei, including time-series processing, watershed metrics, and MPI-enabled analysis."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, Hydrology]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/hydrologist-python-examples"
+
+---
+
+## Hydrologist Python Job Examples
+
+This page contains Python examples tailored to hydrologic analysis on Pantarhei, including a simple streamflow summary, a parallel watershed metric calculation, and an MPI-enabled basin aggregation workflow.
+
+
+
+### Hydrology Toy Example
+
+This example demonstrates hydrologic calculations using the SCS Curve Number method for runoff estimation with compute-heavy operations including Clark routing, baseflow separation, and peak discharge calculation. It processes 50,000 synthetic data points to demonstrate performance on larger datasets.
+
+**Step 1: Generate synthetic data (generate_hydrology_data.py):**
+
+```python
+# generate_hydrology_data.py
+"""
+Generate synthetic hydrology data for the toy example.
+Creates a CSV file with 50,000 records including SCS Curve Number parameters
+for compute-heavy hydrologic calculations.
+"""
+
+import pandas as pd
+import numpy as np
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Generate 50,000 synthetic data points
+dataset_size = 50000
+
+# Generate precipitation values (mm) - realistic range for daily precipitation
+precipitation_mm = np.random.uniform(0, 100, dataset_size)
+
+# Generate SCS Curve Numbers (40=forest, 65=grassland, 90=urban)
+curve_numbers = np.random.randint(40, 95, dataset_size)
+
+# Generate time of concentration (minutes) - watershed flow time
+time_concentration = np.random.uniform(10, 120, dataset_size)
+
+# Generate contributing watershed area (km²)
+contributing_area = np.random.uniform(0.1, 50, dataset_size)
+
+# Generate antecedent moisture condition (0-1, where 1 = saturated)
+antecedent_moisture = np.random.uniform(0.3, 0.8, dataset_size)
+
+# Create DataFrame with all parameters for SCS method
+df = pd.DataFrame({
+    'precipitation_mm': precipitation_mm,
+    'curve_number': curve_numbers,
+    'time_concentration': time_concentration,
+    'contributing_area': contributing_area,
+    'antecedent_moisture': antecedent_moisture
+})
+
+# Save to CSV
+output_file = 'hydrology_data_50k.csv'
+df.to_csv(output_file, index=False)
+
+print(f"Generated {dataset_size:,} synthetic data points")
+print(f"Saved to {output_file}")
+print(f"\nData preview:")
+print(df.head())
+print(f"\nStatistics:")
+print(f"Precipitation - Mean: {df['precipitation_mm'].mean():.2f} mm, Max: {df['precipitation_mm'].max():.2f} mm")
+print(f"Curve Number - Mean: {df['curve_number'].mean():.0f}, Range: {df['curve_number'].min()}-{df['curve_number'].max()}")
+print(f"Time of Concentration - Mean: {df['time_concentration'].mean():.2f} min, Max: {df['time_concentration'].max():.2f} min")
+print(f"Contributing Area - Mean: {df['contributing_area'].mean():.2f} km², Max: {df['contributing_area'].max():.2f} km²")
+print(f"Antecedent Moisture - Mean: {df['antecedent_moisture'].mean():.3f}, Max: {df['antecedent_moisture'].max():.3f}")
+```
+
+**Step 2: Calculate runoff (hydrology_toy_example.py):**
+
+```python
+# hydrology_toy_example.py
+"""
+Hydrology Toy Example - SCS Curve Number Runoff Calculation
+Demonstrates the SCS Curve Number method for runoff estimation with intensive computations.
+"""
+
+import pandas as pd
+import numpy as np
+import time
+
+
+def scs_runoff(P, CN):
+    """
+    Calculate surface runoff using SCS Curve Number method.
+    
+    Equation: Q = (P - Ia)² / (P - Ia + S), where Ia = 0.2 * S
+    
+    Parameters
+    ----------
+    P : float
+        Rainfall depth (mm)
+    CN : int
+        Curve Number (e.g. 40=forest, 65=grassland, 90=urban)
+    
+    Returns
+    -------
+    Q : float
+        Direct runoff depth (mm)
+    """
+    S = (25400 / CN) - 254   # max retention (mm)
+    Ia = 0.2 * S              # initial abstraction
+    if P <= Ia:
+        return 0.0
+    return (P - Ia)**2 / (P - Ia + S)
+
+
+def clark_routing(runoff, time_concentration, duration_step=1):
+    """
+    Apply Clark's time-area method for runoff routing (compute-heavy operation).
+    Simulates streamflow translation through a watershed.
+    
+    Parameters
+    ----------
+    runoff : float
+        Direct runoff depth (mm)
+    time_concentration : float
+        Time of concentration (minutes)
+    duration_step : float
+        Time step duration (minutes)
+    
+    Returns
+    -------
+    float
+        Routed discharge contribution
+    """
+    # Simulate routing through multiple reaches
+    routed = runoff
+    num_reaches = max(2, int(time_concentration / duration_step))
+    
+    for i in range(num_reaches):
+        # Storage routing calculation
+        storage_coeff = time_concentration / num_reaches
+        routed = routed * (1 - np.exp(-duration_step / storage_coeff))
+    
+    return routed
+
+
+def baseflow_separation(total_runoff, antecedent_moisture=0.5):
+    """
+    Separate baseflow from total runoff using exponential decay method.
+    Compute-heavy operation that iterates multiple recession curves.
+    
+    Parameters
+    ----------
+    total_runoff : float
+        Total runoff depth (mm)
+    antecedent_moisture : float
+        Antecedent moisture condition (0-1)
+    
+    Returns
+    -------
+    tuple
+        (direct_runoff, baseflow, recession_index)
+    """
+    # Simulate multiple recession curve iterations
+    recession_constant = 0.95 - (antecedent_moisture * 0.3)
+    
+    direct_runoff = total_runoff * (1 - antecedent_moisture)
+    baseflow = total_runoff * antecedent_moisture
+    
+    # Iterative recession calculation
+    recession_index = 0.0
+    for day in range(1, 31):  # 30-day recession
+        recession_index += baseflow * (recession_constant ** day)
+    
+    return direct_runoff, baseflow, recession_index
+
+
+def calculate_peak_discharge(runoff, contributing_area_sqkm, time_concentration):
+    """
+    Calculate peak discharge using rational method with intensity.
+    Uses nested computations to increase computational load.
+    
+    Parameters
+    ----------
+    runoff : float
+        Direct runoff depth (mm)
+    contributing_area_sqkm : float
+        Contributing watershed area (km²)
+    time_concentration : float
+        Time of concentration (minutes)
+    
+    Returns
+    -------
+    float
+        Peak discharge (m³/s)
+    """
+    # Rainfall intensity approximation
+    intensity = 100 / (time_concentration + 10) ** 0.7
+    
+    # Convert units and calculate peak
+    area_m2 = contributing_area_sqkm * 1e6
+    runoff_m3 = (runoff / 1000) * area_m2
+    
+    # Time distribution computation
+    peak_factor = 0.0
+    for t in np.linspace(0, time_concentration, 50):
+        peak_factor += np.sin(np.pi * t / time_concentration) * intensity / 50
+    
+    return (runoff_m3 * peak_factor) / (time_concentration * 60)
+
+
+def main():
+    """Run compute-heavy SCS runoff calculation on 50k dataset."""
+    print("=" * 60)
+    print("Hydrology Toy Example - SCS Curve Number Calculation")
+    print("=" * 60)
+    
+    # Read the 50k synthetic data from CSV
+    input_file = 'hydrology_data_50k.csv'
+    print(f"\nReading data from {input_file}...")
+    
+    start_time = time.time()
+    df = pd.read_csv(input_file)
+    read_time = time.time() - start_time
+    
+    print(f"Loaded {len(df):,} data points in {read_time:.4f} seconds")
+    print(f"\nData preview:")
+    print(df.head())
+    
+    # Calculate runoff using SCS Curve Number method
+    print(f"\nCalculating runoff using SCS Curve Number: Q = (P - Ia)² / (P - Ia + S)")
+    calc_start = time.time()
+    
+    # Vectorized SCS calculation
+    df['runoff_scs'] = df.apply(
+        lambda row: scs_runoff(row['precipitation_mm'], row['curve_number']), 
+        axis=1
+    )
+    
+    # Apply Clark routing (compute-heavy)
+    df['routed_runoff'] = df.apply(
+        lambda row: clark_routing(row['runoff_scs'], row['time_concentration']), 
+        axis=1
+    )
+    
+    # Separate baseflow from total runoff (compute-heavy)
+    baseflow_results = df.apply(
+        lambda row: baseflow_separation(row['routed_runoff'], row['antecedent_moisture']), 
+        axis=1,
+        result_type='expand'
+    )
+    df['direct_runoff'] = baseflow_results[0]
+    df['baseflow'] = baseflow_results[1]
+    df['recession_index'] = baseflow_results[2]
+    
+    # Calculate peak discharge (compute-heavy)
+    df['peak_discharge'] = df.apply(
+        lambda row: calculate_peak_discharge(
+            row['direct_runoff'], 
+            row['contributing_area'], 
+            row['time_concentration']
+        ), 
+        axis=1
+    )
+    
+    calc_time = time.time() - calc_start
+    
+    # Display results
+    print(f"\nResults:")
+    print(f"Total records processed: {len(df):,}")
+    print(f"Mean precipitation: {df['precipitation_mm'].mean():.2f} mm")
+    print(f"Mean SCS runoff: {df['runoff_scs'].mean():.2f} mm")
+    print(f"Mean routed runoff: {df['routed_runoff'].mean():.2f} mm")
+    print(f"Mean direct runoff: {df['direct_runoff'].mean():.2f} mm")
+    print(f"Mean baseflow: {df['baseflow'].mean():.2f} mm")
+    print(f"Mean peak discharge: {df['peak_discharge'].mean():.4f} m³/s")
+    print(f"Max peak discharge: {df['peak_discharge'].max():.4f} m³/s")
+    print(f"\nComputation time: {calc_time:.4f} seconds")
+    print(f"Average time per record: {(calc_time / len(df)) * 1000:.4f} ms")
+    
+    # Save results
+    output_file = 'hydrology_results_50k.csv'
+    df.to_csv(output_file, index=False)
+    print(f"\nResults saved to {output_file}")
+    
+    total_time = time.time() - start_time
+    print("\n" + "=" * 60)
+    print(f"Total time: {total_time:.4f} seconds")
+    print("Example completed!")
+    print("=" * 60)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+**Job submission script (hydrology_toy_job.sh):**
+
+```bash
+#!/bin/bash
+# hydrology_toy_job.sh
+#SBATCH -J hydrology_toy
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH -t 00:30:00
+
+# Load Python module
+module load Python/3.10.8-GCCcore-12.2.0
+
+# Install required packages if needed
+# python -m pip install --user pandas numpy
+
+# Step 1: Generate synthetic data
+python generate_hydrology_data.py
+
+# Step 2: Calculate runoff using the SCS Curve Number method
+python hydrology_toy_example.py
+```
+
+Submit the job:
+
+```bash
+sbatch hydrology_toy_job.sh
+```
+
+### Hydrology MPI Example
+
+This example demonstrates a parallel hydrologic post-processing workflow using MPI (Message Passing Interface) with mpi4py. It reads the synthetic dataset `hydrology_data_50k.csv` and distributes compute-heavy metric calculation across multiple MPI processes.
+
+**MPI post-processing script (hydrology_toy_example_mpi.py):**
+
+```python
+# hydrology_toy_example_mpi.py
+"""
+Hydrology MPI Example - Parallel SCS runoff workflow
+Reads hydrology_data_50k.csv and performs MPI-enabled hydrologic processing across partitions.
+"""
+
+from mpi4py import MPI
+import pandas as pd
+import numpy as np
+import time
+
+
+def scs_runoff(P, CN):
+    """
+    Calculate surface runoff using the SCS Curve Number method.
+
+    Equation: Q = (P - Ia)^2 / (P - Ia + S), where Ia = 0.2 * S
+    """
+    S = (25400.0 / CN) - 254.0
+    Ia = 0.2 * S
+    if P <= Ia:
+        return 0.0
+    return (P - Ia) ** 2 / (P - Ia + S)
+
+
+def clark_routing(runoff, time_concentration, duration_step=1):
+    """
+    Apply Clark's time-area method for runoff routing.
+    """
+    routed = runoff
+    num_reaches = max(2, int(time_concentration / duration_step))
+    for _ in range(num_reaches):
+        storage_coeff = time_concentration / num_reaches
+        routed = routed * (1 - np.exp(-duration_step / storage_coeff))
+    return routed
+
+
+def baseflow_separation(total_runoff, antecedent_moisture=0.5):
+    """
+    Separate baseflow from total runoff using exponential recession.
+    """
+    recession_constant = 0.95 - (antecedent_moisture * 0.3)
+    direct_runoff = total_runoff * (1 - antecedent_moisture)
+    baseflow = total_runoff * antecedent_moisture
+    recession_index = 0.0
+    for day in range(1, 31):
+        recession_index += baseflow * (recession_constant ** day)
+    return direct_runoff, baseflow, recession_index
+
+
+def calculate_peak_discharge(runoff, contributing_area_sqkm, time_concentration):
+    """
+    Calculate peak discharge using a rational-style intensity approximation.
+    """
+    intensity = 100.0 / (time_concentration + 10.0) ** 0.7
+    area_m2 = contributing_area_sqkm * 1e6
+    runoff_m3 = (runoff / 1000.0) * area_m2
+    peak_factor = 0.0
+    for t in np.linspace(0.0, time_concentration, 50):
+        peak_factor += np.sin(np.pi * t / time_concentration) * intensity / 50.0
+    return (runoff_m3 * peak_factor) / (time_concentration * 60.0)
+
+
+def compute_partition_metrics(df):
+    """Compute the full hydrology workflow on a dataframe partition."""
+    df['runoff_scs'] = df.apply(
+        lambda row: scs_runoff(row['precipitation_mm'], row['curve_number']),
+        axis=1
+    )
+    df['routed_runoff'] = df.apply(
+        lambda row: clark_routing(row['runoff_scs'], row['time_concentration']),
+        axis=1
+    )
+    baseflow_results = df.apply(
+        lambda row: baseflow_separation(row['routed_runoff'], row['antecedent_moisture']),
+        axis=1,
+        result_type='expand'
+    )
+    df['direct_runoff'] = baseflow_results[0]
+    df['baseflow'] = baseflow_results[1]
+    df['recession_index'] = baseflow_results[2]
+    df['peak_discharge'] = df.apply(
+        lambda row: calculate_peak_discharge(
+            row['direct_runoff'],
+            row['contributing_area'],
+            row['time_concentration']
+        ),
+        axis=1
+    )
+    return df
+
+
+def main():
+    comm = MPI.COMM_WORLD
+    rank = comm.Get_rank()
+    size = comm.Get_size()
+
+    if rank == 0:
+        print("=" * 60)
+        print("Hydrology MPI Example - Parallel SCS Runoff Workflow")
+        print(f"Running on {size} processes")
+        print("=" * 60)
+
+        input_file = 'hydrology_data_50k.csv'
+        print(f"\nReading data from {input_file}...")
+
+        start_time = time.time()
+        df = pd.read_csv(input_file)
+        read_time = time.time() - start_time
+
+        print(f"Loaded {len(df):,} data points in {read_time:.4f} seconds")
+        print(f"\nData preview:")
+        print(df.head())
+    else:
+        df = None
+
+    df = comm.bcast(df, root=0)
+
+    rows_per_process = len(df) // size
+    remainder = len(df) % size
+    start_idx = rank * rows_per_process + min(rank, remainder)
+    end_idx = start_idx + rows_per_process + (1 if rank < remainder else 0)
+
+    local_df = df.iloc[start_idx:end_idx].copy()
+
+    if rank == 0:
+        print(f"\nDistributing {len(df):,} rows across {size} ranks")
+        calc_start = time.time()
+
+    local_df = compute_partition_metrics(local_df)
+
+    all_results = comm.gather(local_df, root=0)
+
+    if rank == 0:
+        calc_time = time.time() - calc_start
+        df = pd.concat(all_results, ignore_index=True)
+
+        print(f"\nResults:")
+        print(f"Total records processed: {len(df):,}")
+        print(f"Mean SCS runoff: {df['runoff_scs'].mean():.2f} mm")
+        print(f"Mean routed runoff: {df['routed_runoff'].mean():.2f} mm")
+        print(f"Mean direct runoff: {df['direct_runoff'].mean():.2f} mm")
+        print(f"Mean baseflow: {df['baseflow'].mean():.2f} mm")
+        print(f"Mean peak discharge: {df['peak_discharge'].mean():.4f} m³/s")
+        print(f"Max peak discharge: {df['peak_discharge'].max():.4f} m³/s")
+        print(f"\nComputation time: {calc_time:.4f} seconds")
+
+        output_file = 'hydrology_results_50k_mpi.csv'
+        df.to_csv(output_file, index=False)
+        print(f"\nResults saved to {output_file}")
+
+        total_time = time.time() - start_time
+        print("\n" + "=" * 60)
+        print(f"Total time: {total_time:.4f} seconds")
+        print(f"Dataset size: {len(df):,} points")
+        print(f"MPI ranks used: {size}")
+        print("MPI Example completed!")
+        print("=" * 60)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+**Job submission script (hydrology_mpi_job.sh):**
+
+```bash
+#!/bin/bash
+# hydrology_mpi_job.sh
+#SBATCH -J hydrology_mpi
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=1
+#SBATCH -t 00:30:00
+
+# Load Python and MPI modules
+module load Python/3.10.8-GCCcore-12.2.0
+module load mpi4py/3.1.4-gompi-2022b
+
+# Install required packages if needed
+# python -m pip install --user pandas numpy mpi4py
+
+echo "Use the data already generated ...\n"
+echo "No need to generate again.. Use hydrology_data_50k.csv"
+
+# Step 1: Calculate runoff using SCS Curve Number method with MPI parallelization
+echo "Starting MPI SCS runoff calculation..."
+mpirun -np 4 python hydrology_toy_example_mpi.py
+
+echo "MPI job completed!"
+```
+
+Submit the job:
+
+```bash
+sbatch hydrology_mpi_job.sh
+```
+
+Key differences between serial and MPI examples:
+
+- **Data Distribution**: MPI scatters data generation across processes, then gathers results on rank 0
+- **Load Balancing**: Each process handles approximately equal number of records
+- **Communication**: Uses `comm.gather()` to collect results and `comm.bcast()` to distribute data
+- **Performance**: With proper MPI implementation and interconnects, the MPI version can significantly reduce computation time on large datasets across multiple nodes
+- **Scalability**: Can be scaled to hundreds of processes by adjusting `--ntasks-per-node` and `--nodes` in the SLURM script
+
+## Additional Resources
+
+For complete examples and source code, visit the hydrology toy examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

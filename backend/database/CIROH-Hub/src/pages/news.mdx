@@ -1,0 +1,1431 @@
+---
+title: Community NextGen Updates
+hide_table_of_contents: true
+tags: [CIROH, NGIAB, NextGen]
+Last updated date: "06/29/2026"
+path: "news"
+
+---
+
+import News from '../components/News/news-js';
+import styles from '../components/News/NewsPage.module.css';
+
+<div className={styles.newsPageContainer}>
+  <div className={styles.pageHeader}>
+    <h1 className={styles.pageTitle}>Community NextGen Updates</h1>
+    <p className={styles.pageSubtitle}>Stay connected with the latest developments in NextGen water modeling! This news hub brings you updates, breakthroughs, and opportunities from across our community of practice.</p>
+  </div>
+
+  <hr className={styles.divider} />
+
+  <News/>
+
+<!-- generated-local-content -->
+
+## NextGen news
+
+#### June 2026 Update
+
+##### Milestone: NGIAB reaches 15,000 pulls!
+
+The NGIAB-CloudInfra Docker image has reached 15,000 pulls! We're grateful that the CIROH community has made such effective use of the NGIAB ecosystem so far, and we hope to continue expanding NGIAB's capabilities for operations-ready modeling.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://ngiab.ciroh.org/)
+##### NGIAB-CloudInfra
+
+This release enhances the platform with model version support, Snow-17 integration, and SAC-SMA build capabilities to improve model development and execution. It also includes updated scripts for compatibility with the Podman container manager, enabling simulations without requiring root permissions, and the latest TEEHR updates, providing the latest improvements in evaluation capabilities.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.9.0)
+- **Release Date:** 06/11/2026
+- **Version:** v1.9.0
+- **Contributors:** 4
+##### NGIAB-HPCInfra
+
+This release ensures parity with v1.9.0 of NGIAB-CloudInfra, notably featuring Snow-17 integration and SAC-SMA build capabilities.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/releases/tag/v1.4.0)
+- **Release Date:** 06/12/2026
+- **Version:** v1.4.0
+- **Contributors:** 1
+##### NGIAB_data_preprocess
+
+This month's Data Preprocessor updates include new support for Snow17 and SAC-SMA and updated support for dHBV2.0. It also includes upgrades to dependencies, stability, and documentation.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.9.1)
+- **Release Date:** 06/05/2026
+- **Version:** v4.9.1
+- **Contributors:** 2
+##### ngiab-teehr
+
+NGIAB's TEEHR integration has been updated to the latest version of TEEHR, which includes Apache Iceberg integration and pulls data from the TEEHR-Cloud data warehouse, along with adding new options for multi-input configurations. Note that this update alters the format of TEEHR output folders; related tools like the Visualizer have been updated accordingly.
+
+- **Type:** TEEHR
+- **Link:** [Link](https://github.com/CIROH-UA/ngiab-teehr/pull/8)
+- **Release Date:** 05/06/2026
+- **Contributors:** 1
+##### ngiab-client
+
+The visualizer now supports the latest expansions to the NGIAB ecosystem, including support for TEEHR's updated output directories and the Podman container manager.
+
+- **Type:** NGIAB
+**Links:**
+
+- [Links](https://github.com/CIROH-UA/ngiab-client/pull/59)
+- [Links](https://github.com/CIROH-UA/ngiab-client/pull/61)
+
+- **Release Date:** 05/20/2026
+- **Contributors:** 1
+##### NGIAB Website Update
+
+The NGIAB website now features more up-to-date information on NRDS, including links to data buckets and the new QKrig datastream.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/ngiab-website/pull/76)
+- **Release Date:** 05/23/2026
+- **Contributors:** 1
+##### NGIAB Documentation Updated — Build Information
+
+NGIAB's documentation now includes a full account of how the container is built.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/pull/487)
+- **Release Date:** 06/26/2026
+- **Contributors:** 1
+##### Ngen-DataStream
+
+The NextGen DataStream now runs USGS streamflow kriging, providing live simulation outputs for yet another datastream.
+
+- **Type:** NRDS
+**Links:**
+
+- [Links](https://github.com/CIROH-UA/ngen-datastream/pull/364)
+- [Links](https://github.com/CIROH-UA/ngen-datastream/pull/366)
+
+- **Release Date:** 05/22/2026
+- **Contributors:** 2
+##### New Events portal on Hub
+
+CIROH Hub now has a [dedicated Events page](/events)! This portal surfaces HydroShare collections of CIROH resources related to conferences and other events.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ciroh_hub/pull/125)
+- **Release Date:** 06/29/2026
+- **Contributors:** 1
+##### CIROH Hub — Streamflow Kriging Blog Released
+
+[This new blog post introduces kriging-based streamflow simulation, along with its integration into NRDS.](/blog/continental-scale-streamflow-kriging-ngiab-nrds)
+
+- **Type:** blog
+- **Link:** [Link](https://github.com/CIROH-UA/ciroh_hub/pull/120)
+- **Release Date:** 06/08/2026
+- **Version:** v20260608-135146
+- **Contributors:** 6
+##### CIROH Hub — DevCon 2026 Cyberinfrastructure Blog Released
+
+CIROH DevCon 2026 was made possible by a concerted effort by the CyberInfrastructure team to prepare resources and JupyterHub environments for workshop attendees. [This blog post highlights the behind-the-scenes engineering of this year's DevCon.](/blog/devcon26-infra)
+
+- **Type:** blog
+- **Link:** [Link](https://github.com/CIROH-UA/ciroh_hub/pull/140)
+- **Release Date:** 06/29/2026
+- **Contributors:** 5
+##### Extended Pantarhei Documentation — Now on CIROH Hub
+
+Extended tutorials and examples have been added to our Pantarhei documentation! [Access them here.](/docs/services/on-prem/Pantarhei/RunningJobs/)
+
+- **Type:** pantarhei
+- **Links:** [Links](https://github.com/CIROH-UA/ciroh_hub/pull/136)
+- **Release Date:** 06/29/2026
+- **Contributors:** 1
+##### New images on CIROH-2i2c JupyterHub
+
+CIROH-2i2c JupyterHub has been updated with [new images from CIROH DevCon 2026](/docs/services/cloudservices/2i2c/available-images)! Additionally, its documentation has now been [updated with image creation instructions and image descriptions](/docs/services/cloudservices/2i2c/available-images).
+
+- **Type:** 2i2c
+- **Links:** [Links](https://github.com/CIROH-UA/awi-ciroh-image)
+#### April 2026 Update
+
+##### CIROH Hub featured in AWI News
+
+The Alabama Water Institute featured the CIROH Hub launch in [a news article](https://awi.ua.edu/2026/04/01/new-ciroh-hub-to-streamline-access-to-water-research-tools-and-data/), spotlighting how the new platform unifies CIROH's research tools, data and community resources at hub.ciroh.org, replacing the legacy CIROH Portal and DocuHub.
+
+- **Type:** update
+- **Links:** [Links](https://awi.ua.edu/2026/04/01/new-ciroh-hub-to-streamline-access-to-water-research-tools-and-data/)
+- **Release Date:** 04/01/2026
+##### NGIAB-CCNH-NRDS Demo to NOAA-OWP: Presentation Slides
+
+Erin White and Fred Ogden invited to share an NGIAB-CCNH-NRDS demo, and [Arpita Patel](https://github.com/arpita0911patel) and [Joshua Cunningham](https://github.com/JoshCu) pulled together informative presentation that's available online at [GitHub Repository](https://github.com/CIROH-UA/Conferences/blob/main/OWP_Demo/NGIAB_NRDS_Demo_April2026.pdf). The presentation covers an overview of the NGIAB ecosystem, a live demo of the CCNH and NRDS tools, and a discussion on how these resources can support NOAA-OWP's mission and goals. This provided NGIAB team with good feedback and insights from the NOAA-OWP team to further align NGIAB and NRDS development with the needs of the broader water modeling and prediction community.
+
+- **Type:** R20
+- **Release Date:** 04/16/2026
+##### NGIAB Website Update
+
+Updated NGIAB product porfolio website to include NRDS and CCNH information. New Status Dashboard and Data Visualizers links are added.
+
+- **Type:** update
+**Links:**
+
+- [Links](https://github.com/CIROH-UA/ngiab-website/releases/tag/v1.3.0)
+
+- **Release Date:** 04/16/2026
+- **Contributors:** 2
+##### CIROH Hub — April Content Update
+
+This update features an updated Cyberinfrastructure forms for better user experience, a fully revamped [NextGen on CIROH-2i2c JupyterHub tutorial](/docs/products/ngiab/distributions/nextgen-2i2c/) and adds [featured resource carousels to Research Portal pages](/apps).
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ciroh_hub/releases/tag/v20260416-161726)
+- **Release Date:** 04/16/2026
+- **Version:** v20260416-161726
+- **Contributors:** 4
+##### NGIAB Workshop at EWRI 2026 Conference
+
+[Sifan Koriche](https://github.com/skoriche) and [Joshua Cunningham](https://github.com/JoshCu) presented at the [EWRI 2026 NextGen Workshop](https://www.ewricongress.org/program/technical-workshops#:~:text=Oregon%20State%20University-,Technical%20Workshop,-%3A%20Application%20of%20NOAA). The workshop covered an end-to-end exploration of the broader NextGen Framework and a hands-on session on hydrological model calibration within the NGIAB ecosystem. The presentation slides are now available on [EWRI2026_NextGen_Workshop Repository](https://github.com/skoriche/EWRI2026_NextGen_Workshop).
+
+- **Type:** update
+- **Release Date:** 04/27/2026
+- **Contributors:** 2
+##### Stevens River Ice Mapping System - Added to CIROH Hub
+
+The Stevens River Ice Mapping System has been added to the [CIROH Hub apps list](/apps). Want to add your app to the portal? Tag your HydroShare resource with `ciroh_hub_app`. If you have datasets, notebooks, presentation or publications and want to learn more about how to contribute, visit [hub.ciroh.org/contribute](/contribute).
+
+- **Type:** update
+- **Release Date:** 04/27/2026
+- **Contributors:** 1
+##### CIROH Hub — April Blog Update
+
+This update adds a new blog post covering the [TEEHR cloud-based evaluation system running on CIROH Cyberinfrastructure and it's integration with the NGIAB-NRDS ecosystem](/blog/teehr-april-2026).
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ciroh_hub/pull/120)
+- **Release Date:** 03/31/2026
+- **Version:** v20260331-163535
+- **Contributors:** 3
+##### Ngen-DataStream
+
+This release deploys a new Troute restart datastream that seeds the routing-only model with initial NWM channel routing outputs, improving NextGen stream flow prediction accuracy. Contributors also delivered AMI updates for the DAILY resolution fix and added streamcommander support for ANALYSIS_ASSIM_RESTART_CHRT forcing source.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v3.1.0)
+- **Release Date:** 04/27/2026
+- **Version:** v3.1.0
+- **Contributors:** 3
+##### DataStreamCLI
+
+This release patches Troute restart DAILY path resolution and upgrades the integrated NGIAB image to v1.8.0, which adds SUMMA integration, a model form UI, and support for hourly/daily δHBV2. CI/CD workflows were migrated from static AWS keys to OIDC for improved security compliance.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/datastreamcli/releases/tag/v1.7.1)
+- **Release Date:** 04/24/2026
+- **Version:** v1.7.1
+- **Contributors:** 3
+##### ForcingProcessor
+
+This release patches Troute restart tooling and corrects the NRDS output time axis by adjusting t0 by one hour; an S3 reading bug was fixed and the palisade.gpkg URL was updated to the community bucket. AWS CI/CD workflows were also migrated to OIDC in adherence with CIROH's AWS policy.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/forcingprocessor/releases/tag/v.2.1.1)
+- **Release Date:** 04/24/2026
+- **Version:** v2.1.1
+- **Contributors:** 3
+##### TEEHR
+
+This release adds two new threshold-based event detection calculated fields, improves write performance via partition filtering and additional write method arguments for non-core tables, and tunes the default Spark shuffle partition count. It also fixes two bugs affecting NWM data fetching for Hawaii and kerchunk-based file naming.
+
+- **Type:** TEEHR
+- **Link:** [Link](https://github.com/RTIInternational/teehr/releases/tag/v0.6.2)
+- **Release Date:** 04/14/2026
+- **Version:** v0.6.2
+- **Contributors:** 1
+##### ngen-cal
+
+This release rebuilds ngen-cal against the latest NGIAB base image to stay synchronized with upstream NextGen model infrastructure updates and ensure compatibility with current tooling.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-cal/releases/tag/v0.2.0)
+- **Release Date:** 04/22/2026
+- **Version:** v0.2.0
+- **Contributors:** 1
+#### March 2026 Update
+
+##### CIROH DocuHub and Portal Redirect
+
+CIROH DocuHub and Portal now redirect to Hub. All existing links to DocuHub and Portal remain fully functional and will redirect to the corresponding page on the Hub.
+
+- **Type:** update
+**Links:**
+
+- [Links](https://github.com/CIROH-UA/ciroh-ua_website/pull/557)
+- [Links](https://github.com/CIROH-UA/ciroh-portal/pull/46)
+
+- **Release Date:** 03/27/2026
+- **Contributors:** 1
+##### ForcingProcessor
+
+In this latest release, forcingprocessor has been enhanced with the capability of generating NextGen troute restart files from NWM standard analysis/assimilation outputs, a novel feature by [Quinn Lee](https://github.com/quinnylee). Additional changes focus on implementation of the uv package manager and python version upgrade to 3.11 by [Kamal Chowdhury](https://github.com/kamalcou) and [Harsha Vemula](https://github.com/harshavemula-ua).
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/forcingprocessor/releases/tag/v2.1.0)
+- **Release Date:** 03/25/2026
+- **Contributors:** 4
+##### DataStreamCLI
+
+The updates this release focus on enhancements to the routing-only tooling by adding file/path validation and improving resource usage through tuning t-route run parameters.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/datastreamcli/releases/tag/v1.6.0)
+- **Release Date:** 03/26/2026
+- **Contributors:** 3
+##### Ngen-DataStream
+
+In the most important release yet, The NRDS system has successfully implemented GitHub Actions workflows to deploy the CFE NOM NextGen hydrologic simulation datastream using an automated pipeline. This new CI/CD capability has since allowed for the rapid deployment of three additional datastreams: the NWM->NextGen forcing processing, routing-only, and lstm_0 datastreams. These first datastream deployments demonstrates the uniquely powerful ability to modify and scale the NRDS numerical prediction system just through individual pull requests to this repository.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v3.0.0)
+- **Release Date:** 03/25/2026
+- **Contributors:** 2
+##### TEEHR
+
+This release introduces major architectural changes and new features. A core change in this release is the integration of Apache Iceberg as the underlying table format for TEEHR evaluations. In addition to local warehouse support, users now have access to the TEEHR-Cloud data warehouse hosted on AWS S3 via the download methods, which provides CONUS-scale historical and real-time NWM simulations and forecasts ready for evaluation. For more information, please visit the [TEEHR Release Notes](https://rtiinternational.github.io/teehr/changelog/index.html#id1).
+
+- **Type:** TEEHR
+- **Link:** [Link](https://github.com/RTIInternational/teehr/releases/tag/v0.6.0)
+- **Release Date:** 03/19/2026
+- **Contributors:** 3
+##### NGIAB Website
+
+This release adds a new 'Five Ways to Run NGIAB' section, a homepage stat fix, and includes CI/CD changes along with updated copyright notices.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/ngiab-website/releases/tag/v1.2.0)
+- **Release Date:** 03/27/2026
+- **Contributors:** 3
+##### CIROH 2i2c JupyterHub - CIROH Community NextGen Hub (CCNH) image
+
+This PR updates pandas version to 2.0 to resolve compatibility errors during forcings generation.
+
+- **Type:** CCNH
+- **Link:** [Link](https://github.com/CIROH-UA/awi-ciroh-image/pull/101)
+- **Release Date:** 03/12/2026
+- **Contributors:** 1
+#### February 2026 Update
+
+##### CIROH Hub
+
+CIROH Hub is live now.  Check out [latest blogs](/blog) to learn more about the new Hub. To learn about how to contribute, please visit our [Contribute page](/contribute).
+
+- **Type:** update
+##### NGIAB-data-preprocess
+
+New release of NGIAB data preprocess, [v4.8.2](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.8.2), is now available which includes two major model integrations: [SUMMA](https://github.com/CH-Earth/summa) and [δHBV2](https://github.com/mhpi/dhbv2) (daily and hourly) in NGIAB data preprocessing workflows.
+
+- **Type:** NGIAB
+**Links:**
+
+- [Links](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.8.2)
+- [Links](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.8.1)
+- [Links](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.8.0)
+- [Links](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.7.0)
+
+- **Release Date:** 02/18/2026
+- **Contributors:** 2
+##### 🎉Differentiable HBV 2.0 (δHBV 2.0) and SUMMA integrated in NGIAB
+
+[δHBV 2.0](https://github.com/mhpi/dhbv2) is a differentiable Hydrologiska Byråns Vattenbalansavdelning (HBV) model, using an LSTM and multilayer perceptron (MLP) to learn parameters. Both the hourly and daily variants are now integrated in the new release of NGIAB. More details on the δHBV work can be found in this blog post: [Hourly Differentiable Modeling Arrives in the NGIAB-NRDS NextGen Ecosystem](/blog/awi-psu-collab2). 
+
+In addition, this release also includes [SUMMA](https://github.com/CH-Earth/summa) integration to enhance modeling capabilities. Background on the SUMMA integration effort is available here: [Moving Hydrologic Prediction Forward — A software integration meeting at the Alabama Water Institute](/blog/software-integration-meeting).
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.8.0)
+- **Release Date:** 02/17/2026
+- **Contributors:** 3
+##### NGIAB-HPCInfra
+
+The latest release is now synced with NGIAB-CloudInfra, aligning with Docker [commit 2c3baae](https://github.com/CIROH-UA/NGIAB-CloudInfra/commit/2c3baae9bcdcc169fe0a3d3b8bf93cdbc5062be4). This update introduces support for SUMMA and δHBV models.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/releases/tag/v1.3.0)
+- **Release Date:** 02/19/2026
+- **Contributors:** 1
+##### ForcingProcessor
+
+This latest release continues to improve forcingprocessor through CI/CD enhancements and minor bug fixes.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/forcingprocessor/releases/tag/v2.0.1)
+- **Release Date:** 02/19/2026
+- **Contributors:** 3
+##### DataStreamCLI
+
+DataStreamCLI has undergone major new additions. Learn more about the latest updates.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/datastreamcli/releases/tag/v1.5.0)
+- **Release Date:** 02/20/2026
+- **Contributors:** 3
+##### Ngen-DataStream
+
+As documented in the [NRDS status page](https://github.com/CIROH-UA/ngen-datastream/blob/main/docs/nrds/STATUS_AND_METADATA.md), LSTM_0 datastream has been manually deployed.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v2.2.0)
+- **Release Date:** 02/20/2026
+- **Contributors:** 2
+##### NRDS Visualizer (nrds-client)
+
+Version 1.1.1 now supports S3 Parquet output, while still being compatible with the legacy NetCDF format.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/nrds-client/releases/tag/v1.1.1)
+- **Release Date:** 02/19/2026
+- **Contributors:** 1
+##### NGIAB Website
+
+NGIAB website has been updated to include NRDS Status Dashboard and [Data Visualizers](https://ngiab.ciroh.org/#/nrds).
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/ngiab-website/releases/tag/v1.1.0)
+- **Release Date:** 02/20/2026
+- **Contributors:** 2
+##### CIROH 2i2c JupyterHub
+
+Default pangeo image, along with CIROH Community NextGen Hub image, has been updated to the latest dask version.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/awi-ciroh-image/releases/tag/v1.2.2)
+- **Release Date:** 02/10/2026
+- **Contributors:** 2
+##### DevCon Workshops IT needs - Due on April 1st, 2026❗
+
+If you are planning a workshop for DevCon, please submit your IT requirements using the [workshop IT request form](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/new?assignees=&projects=&template=workshop_IT_request.md).
+
+- **Type:** update
+#### January 2026 Update
+
+##### CIROH Hub
+
+📣 Development is underway for CIROH Hub—an integrated CIROH DocuHub and Portal experience. Coming February 2026! An announcement banner in DocuHub and Portal linking to an FAQ. Join the Community Resources Working Group to share your input and feedback.
+
+- **Type:** update
+- **Contributors:** 0
+##### CIROH R2OHC Platform (Research to Operations Hybrid Cloud Platform)
+
+Latest IT requests and updates for the CIROH R2OHC Platform can be found on the [R2OHC Project Board](https://github.com/orgs/CIROH-UA/projects/10).
+
+- **Type:** R2OHC
+**Links:**
+
+- [Links](https://github.com/orgs/CIROH-UA/projects/10)
+
+- **Release Date:** 01/25/2026
+- **Contributors:** 0
+##### NGIAB Ecosystem Project Board
+
+Stay updated with the latest features, bug fixes, and improvements across the NGIAB ecosystem by visiting the [NGIAB Ecosystem Project Board](https://github.com/orgs/CIROH-UA/projects/11).
+
+- **Type:** NGIAB Ecosystem
+**Links:**
+
+- [Links](https://github.com/orgs/CIROH-UA/projects/11)
+
+- **Release Date:** 01/25/2026
+- **Contributors:** 0
+##### NextGen Research Datastream (NRDS) Project Board
+
+Stay updated with the latest features, bug fixes, and improvements across the NGIAB ecosystem by visiting the [NGIAB Ecosystem Project Board](https://github.com/orgs/CIROH-UA/projects/11).
+
+- **Type:** NRDS
+**Links:**
+
+- [Links](https://github.com/orgs/CIROH-UA/projects/2)
+
+- **Release Date:** 01/25/2026
+- **Contributors:** 0
+##### NGIAB + NRDS Product portfolio website
+
+The NGIAB NRDS Website v1.0.0 is live! Visit [https://ngiab.ciroh.org/](https://ngiab.ciroh.org/) to explore all NGIAB and NRDS tools, documentation, and resources all in one place. Visit [https://ngiab.ciroh.org/#/nrds](https://ngiab.ciroh.org/#/nrds) to learn more about NextGen Research DataStream.
+
+- **Type:** NGIAB NRDS Website (v1.0.0)
+**Links:**
+
+- [Links](https://github.com/CIROH-UA/ngiab-website/releases/tag/v1.0.0)
+
+- **Release Date:** 01/25/2026
+- **Contributors:** 0
+##### NGIAB-data-preprocess
+
+New releases (v4.6.7 and v4.6.8) include improvements to data handling and pipeline efficiency in NGIAB data preprocessing workflows.
+
+- **Type:** NGIAB
+**Links:**
+
+- [Links](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.6.8)
+- [Links](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.6.7)
+
+- **Release Date:** 01/25/2026
+- **Contributors:** 0
+##### NGIAB-CloudInfra
+
+Want to integrate a model into NGIAB? Use the [Model Integration Template](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/new?template=model_integration_request.md) to submit your request. See the [Add dHBV2.0 MTS (hourly)](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/385) as an example.
+
+- **Type:** NGIAB
+- **Contributors:** 0
+##### ForcingProcessor (v1.3.0)
+
+This release of forcingprocessor contains a major new feature! Checkout [here](https://github.com/CIROH-UA/forcingprocessor/releases/tag/v1.3.0).
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/forcingprocessor/releases/tag/v1.3.0)
+- **Release Date:** 01/29/2026
+- **Contributors:** 0
+##### DataStreamCLI (v1.3.0)
+
+This release focus on transformations to v2.2 hydrofabric variables used for calculating model variables in BMI config files.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/datastreamcli/releases/tag/v1.3.0)
+- **Release Date:** 01/29/2026
+- **Contributors:** 0
+##### Ngen-DataStream
+
+NextGen Research DataStream runs hourly on AWS! Now featuring LSTM DataStream (VPU 09), CFE NOM DataStream (all VPUs and Routing-Only Datastream (VPU 03W). View [latest status](https://github.com/CIROH-UA/ngen-datastream/blob/main/docs/nrds/STATUS_AND_METADATA.md), explore parameters at [datastream.ciroh.org](https://datastream.ciroh.org/index.html), and contribute via the [Parameter Update Template](https://github.com/CIROH-UA/ngen-datastream/issues/new?template=nrds-parameter-proposal.md).
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v2.1.0)
+- **Contributors:** 0
+##### NRDS Visualizer (nrds-client) (v1.1.0)
+
+The NRDS Visualizer is now publicly available at [https://nrds.ciroh.org/](https://nrds.ciroh.org/)! Latest release info [here](https://github.com/CIROH-UA/nrds-client/releases/tag/v1.1.0). Explore NextGen Research DataStream runs in action.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/nrds-client/releases/tag/v1.1.0)
+- **Contributors:** 0
+#### November 2025 Update
+
+##### NGIAB-data-preprocess
+
+- **Type:** NGIAB
+**Links:**
+
+- [Links](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.6.6)
+- [Links](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.6.5)
+
+- **Release Date:** 11/24/2025
+- **Contributors:** 3
+##### NGIAB-CloudInfra
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.7.0)
+- **Release Date:** 11/25/2025
+- **Contributors:** 1
+##### NGIAB-HPCInfra
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/releases/tag/v1.2.1)
+- **Release Date:** 11/25/2025
+- **Contributors:** 1
+##### ngiab-client
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/ngiab-client/releases/tag/0.1.5)
+- **Release Date:** 11/25/2025
+- **Contributors:** 3
+##### rust-lstm
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/rust-lstm/releases/tag/v0.1.2)
+- **Release Date:** 11/21/2025
+- **Contributors:** 1
+##### NGEN-DataStream
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v2.0.2)
+- **Release Date:** 11/26/2025
+- **Contributors:** 2
+##### ForcingProcessor
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/forcingprocessor/releases/tag/v1.2.3)
+- **Release Date:** 11/26/2025
+- **Contributors:** 2
+##### DataStreamCLI
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/datastreamcli/releases/tag/v1.2.0)
+- **Release Date:** 11/26/2025
+- **Contributors:** 2
+##### t-route
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/t-route/releases/tag/v0.3.0)
+- **Release Date:** 11/25/2025
+- **Contributors:** 3
+#### October 2025 Update
+
+##### rust-lstm
+
+The first working Rust-based version of the LSTM BMI module is now available!
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/rust-lstm-1025/releases/tag/v0.1.0)
+##### NGIAB-data-preprocess
+
+Version v4.6.4 is now available with dependency fixes. This update resolves compatibility issues and adds LSTM documentation to the README. NGIAB-data-preprocess now introduces the --lstm_rust option that allows users to select between Rust-based and Python-based LSTM implementations.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.6.4)
+##### NGIAB-CloudInfra
+
+NGIAB version 1.6.0 has been released! This update integrates the Rust-based LSTM implementation for improved performance.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.6.0)
+##### NGEN-DataStream
+
+Version v2.0.1 completes the repository split. With datastreamcli and forcingprocessor now fully separated, ngen-datastream focuses exclusively on NextGen Research DataStream infrastructure, deployment tooling, and community documentation.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v2.0.1)
+##### ForcingProcessor
+
+ForcingProcessor version v1.1.2 is now available! Following the repository split, comprehensive CI/CD workflows have been implemented with unit tests and in-container testing on both ARM and x86 architectures.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/forcingprocessor/releases/tag/v1.1.2)
+##### DataStreamCLI
+
+DataStreamCLI version v1.1.2 is now available! Following the repository split, all documentation links have been updated to reflect the current repository and directory structure.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/datastreamcli/releases/tag/v1.1.2)
+##### CIROH DocuHub
+
+DocuHub has been updated! This month's updates feature an overhaul of the [Infrastructure Access page](/docs/services/access), making it easier than ever to request access to CIROH CyberInfrastructure, alongside a [new blog post](/blog/ciroh-psu-collab) highlighting collaboration between the Alabama Water Institute and Pennsylvania State University.
+
+- **Type:** update
+- **Link:** [Link](release-notes/v20251103)
+##### CIROH Portal
+
+The CIROH Portal has a few updates this month. New search and sort functionality has been added to Apps, Datasets, Presentations, and Courses pages with filtering, sort options and live results counters. HydroShare resource input forms have been improved with better authentication handling, reordered inputs for better user experience, and a new authors field. Additionally, a Community Impact page has been added showcasing CIROH's reach with statistics on products, datasets, presentations, publications, courses, and infrastructure services across AWS, GCP, HPC, and NSF ACCESS platforms.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ciroh-portal/commits/main/?since=2025-10-01&until=2025-10-29)
+##### NGIAB Website
+
+A new community spotlight video featuring Leo Lonzarich from Pennsylvania State University has been added!
+
+- **Type:** update
+- **Link:** [Link](https://ngiab.ciroh.org)
+##### t-route
+
+For this month, we primarily focused on documentation improvements. The installation documentation has been clarified with clearer instructions and typo corrections for better readability.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/t-route/)
+##### ngen
+
+A new partitioning script, round_robin.py, has been added to the ngen repository.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ngen/commit/9175b640a4e6f1d90e58e0a65662174d08f052ef)
+#### September 2025 Update
+
+##### NGIAB-data-preprocess
+
+Version v4.6.0 is now available with more web app improvements! Key enhancements include a progress bar for forcing generation, improved map preview that reflects the actual subset area, and the addition of a Rust LSTM option.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.6.0)
+##### NGIAB-CloudInfra
+
+NGIAB version 1.5.1 has been released! This update delivers significant LSTM speedup improvements from [this PR](https://github.com/CIROH-UA/lstm/pull/3).
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.5.1)
+##### NGIAB-HPCInfra
+
+NGIAB-HPCInfra version 1.1.1 is available now. This update mirrors NGIAB-CloudInfra's latest changes, including LSTM speedup improvements.
+
+- **Type:** NGIAB
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/releases/tag/v1.1.1)
+##### NGEN-DataStream
+
+🎉Major milestone for the NextGen Research DataStream! Version v2.0.0 marks a significant reorganization with the ngen-datastream repository splitting into modular components:
+
+**[DataStreamCLI](https://github.com/CIROH-UA/datastreamcli)** and **[ForcingProcessor](https://github.com/CIROH-UA/forcingprocessor)** are now independent repositories. This structures the infrastructure for the NRDS in a more conventional way in order to facilitate CI/CD. Going forward, ngen-datastream repository will continue to hold NRDS infrastructure, deployment tooling, and documentation.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v2.0.0)
+##### ForcingProcessor
+
+ForcingProcessor version v1.1.1 launches as an independent repository!This repository has been created from the forcingprocessor module within the NextGen Research DataStream's repository ngen-datastream. All related tooling is planned to be removed from the ngen-datastream repository. Future development on forcingprocessor will occur only in this repository. Since the split, primarily CI/CD and directory structure changes have been made. The tooling remains unchanged.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/forcingprocessor/releases/tag/v1.1.1)
+##### DataStreamCLI
+
+DataStreamCLI debuts as a standalone repository with version v1.1.1! This repository has been created from the DataStreamCLI module within the NextGen Research DataStream's repository ngen-datastream. Since the split, only directory structure changes have been made. The tooling remains unchanged.
+
+- **Type:** NRDS
+- **Link:** [Link](https://github.com/CIROH-UA/datastreamcli/releases/tag/v1.1.1)
+##### CIROH-UA/lstm
+
+Significant performance improvements have been merged into the LSTM module. This update delivers approximately 2x speedup. More information can be found in [this PR](https://github.com/CIROH-UA/lstm/pull/3).
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/lstm/pull/3)
+##### "From Research to Impact: CIROH Science Meeting 2025 Resources and Reflections"
+
+Over four days, our community showed how scientific innovation translates into tools and systems that support communities, enhance resilience, and improve decision-making across the nation. From AI advances in water prediction to flood inundation mapping, this blog post discusses the presentations and discussions that demonstrated the collaborative, open-science approach that defines CIROH.
+
+- **Type:** blog
+- **Link:** [Link](/blog/science-meeting-2025)
+##### "Focusing on Streamflow Data: New Software for Camera-Based Hydrologic Modeling"
+
+Camera-based monitoring offers a promising, non-contact alternative to or augmentation of traditional streamflow gages. However, broad use of camera-based streamflow monitoring has been limited by operational challenges including how to collect, store, manage, and process the large volume of image and video data produced by monitoring cameras. Read how researchers at Utah State University utilized CIROH cyberinfrastructure to advance camera-based hydrologic monitoring.
+
+- **Type:** blog
+- **Link:** [Link](/blog/streamflow-data-camera-based-hydrologic-modeling-software)
+#### August 2025 Update
+
+##### NGIAB Journal Paper
+
+🎉We are excited to announce that our NGIAB paper 'NextGen In A Box (NGIAB): Open-Source Containerization of the NextGen Framework to Enable Community-Driven Hydrology Modeling' has been accepted for publication in Environmental Modelling and Software! 
+
+The paper is now available online and can be accessed [here](https://www.sciencedirect.com/science/article/pii/S1364815225003500).
+
+- **Type:** announcement
+- **Link:** [Link](https://www.sciencedirect.com/science/article/pii/S1364815225003500)
+##### NGIAB-data-preprocess
+
+A new release of ngiab_data_preprocess, version v4.5.0, is now available! Preprocessing support for the LSTM model has now been integrated, making LSTM-based NGIAB configurations far more accessible.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.5.0)
+##### NGIAB-CloudInfra
+
+NGIAB version 1.5.0 is available now. This update restricts searches for realization.json to the config folder. Additionally, the LSTM model has been integrated into the NGIAB image, enabling AI-powered hydrologic prediction.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.5.0)
+##### NGIAB-HPCInfra
+
+NGIAB-HPCInfra version 1.1.0 is available now. This update brings parity with NGIAB-CloudInfra's recent changes, including full support for LSTM-based models.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/releases/tag/1.1.0)
+##### ngen-datastream
+
+ngen-datastream is now known as the **NextGen Research DataStream (NRDS)**! We hope to continue using this platform to advance the boundaries of continental-scale modeling.
+
+Release v1.1.0 recently released! Major enhancements include implementation of medium range ensemble members in DataStreamCLI and NRDS infrastructure, enhanced metadata and CI/CD with semantic versioning implementation, development towards automated testing and production deployment, the DataStreamCLI skip feature, increased test coverage, and documentation updates.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v1.1.0)
+##### CIROH-UA/ngen
+
+Upstream updates to BMI submodules have been merged! The CFE module has fixes to volume start and pointer handling, and the LSTM module has been updated to fully incorporate the CIROH community fork.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ngen/commits/ngiab/?since=2025-08-01&until=2025-08-29)
+##### CIROH-UA/t-route
+
+Version v0.2.0 of CIROH-UA/t-route is available now. This marks the formal release of last month's memory and performance improvements.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/t-route/releases/tag/v0.2.0)
+#### July 2025 Update
+
+##### NGIAB-data-preprocess
+
+A new release of ngiab_data_preprocess, version v4.4.0, is now available!🎉 This update includes several improvements and bug fixes. Notable changes include a warning prompt that now displays when attempting to overwrite subset gpkg files, and the graph pickle file download has been integrated with the hf download process. Additionally, a missing scipy dependency has been added. Performance enhancements include estimating t-route RAM usage to create parquet files accordingly, and forcing interpolation now works without requiring a dask cluster. The CLI experience has also been improved with the download dashboard URL now being printed during execution.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.4.0)
+##### NGIAB-CloudInfra
+
+This month's updates for NGIAB-CloudInfra consist mostly of documentation improvements. The primary focus was updating information on the Provo River basin case study, with comprehensive details including calibration files, input data, and setup information now accessible through the [HydroShare resource page](https://www.hydroshare.org/resource/88e0ebf2719c492381efcb27fba71032/). New documentation has been added to the [docs folder](https://github.com/CIROH-UA/NGIAB-CloudInfra/tree/main/docs). Additionally, the output folder path description in `runteehr.sh` has been corrected to improve clarity. This month also saw significant activity with the docker pull count for awiciroh/ciroh-ngen-image, though many of these pulls are attributed to internal runs due to frequent building and updates of the image.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/commits/main/?since=2025-07-01&until=2025-07-31)
+##### ngen-datastream
+
+Release 1.0.0 and Release 1.0.1 recently released in July! Initial stable release of the Research DataStream infrastructure and DataStreamCLI workflow tool for automated NextGen hydrologic simulations. Release 1.0.1 captures metadata related improvements. Moreover, July's developments were focused on reproducibility by implementing the creation of two files on each execution. The first file, datastream.env, can be used to identically reproduce a datastream execution via the CONF_FILE argument and the second file, datastream_steps.txt, lists every relevant internal command datastream makes. The intention for these files is to make it easier for community members to first reproduce research datastream executions and then begin improving the NextGen configuration and contributing their findings back to the system.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/releases/tag/v1.0.1)
+##### ngiab-cal
+
+A new release of ngiab-cal, version v0.3.3, is now available. This update includes several important fixes and improvements. The observation unit has been corrected to cms, and the system now prevents auto-running when the configuration has not been updated. Additionally, build and release GitHub actions have been added to streamline the development workflow.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngiab-cal/releases)
+##### CIROH-UA/t-route
+
+This month's updates for T-route focused on performance optimization. Memory usage has been reduced by 30% when writing output, which means it is less likely to crash during large runs that don't use intermediate parquet files.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/t-route/commits/ngiab/?since=2025-07-01&until=2025-07-31)
+#### June 2025 Update
+
+##### NGIAB-data-preprocess
+
+A new release of ngiab_data_preprocess, version **v4.3.0**, is now available. This update primarily includes small improvements and bug fixes. Among the more noticeable changes, the map application can now display data source chunking. Additionally, missing values in the AORC forcing data will now be filled using interpolation. 
+ 
+ Beyond these changes, an **'alias'** for ngiab_data_preprocess has been created. This allows users to execute the command-line interface (CLI) more concisely, for example, using `uvx ngiab-prep -i cat-123` instead of the longer `uvx --from ngiab_data_preprocess cli -i cat-123`. This alias functions as a separate pip package that simply depends on ngiab_data_preprocess.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/releases/tag/v4.3.0)
+##### ngen-datastream
+
+For this month, we primarily focused on cleaning up the code and updating to the **latest Python version, 3.12**. In terms of system operations, we have scaled back to **VPU16** and are now exclusively running only VPU16. 
+ 
+ It's been observed that the NWM analysis_assim_extend forcings are intermittent, which is causing similar intermittent behavior in the analogous datastream runs.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/commits/main/?since=2025-06-01&until=2025-06-30)
+#### May 2025 Update
+
+##### CIROH Developer's Conference 2025: NextGen Workshops
+
+📚 Content from many of DevCon2025's workshops has been made publicly available! Links to several of them are provided below.
+
+> *Note that some workshops made use of resources that were deployed specifically during DevCon. However, their steps should still work when adapted for local installations.*
+
+- [Navigating the NextGen Ecosystem and NextGen In A Box (NGIAB)](https://github.com/CIROH-UA/Conferences/blob/main/CIROHDevCon2025/CIROH%20Community%20NextGen%202025_Final.pdf)
+- [BMI Basics for NGIAB](https://github.com/CIROH-UA/Conferences/blob/main/CIROHDevCon2025/BMI%20Basics%20Workshop.md)
+- [Output visualization through Tethys and evaluation customization using TEEHR](https://github.com/CIROH-UA/Conferences/blob/main/CIROHDevCon2025/OutputVisualizationThroughTethysAndTEEHREvaluation_DevCon2025_IntroSlides.pdf)
+- [NextGen Calibration Workshop](https://github.com/skoriche/NGIAB-Calibration-DevCon25/blob/main/README.md)
+- [NextGen Research Datastream: How to Contribute to Improving NextGen Forecasts](https://github.com/CIROH-UA/Conferences/blob/main/CIROHDevCon2025/ResearchDataStream_workshop.md) ([Slides](https://github.com/CIROH-UA/Conferences/blob/main/CIROHDevCon2025/ResearchDataStream_presentation.pdf))
+- [Working with HydroShare, AORC data, HydroFabric and NextGen on CIROH JupyterHub](https://www.hydroshare.org/resource/fc8539358fe64ca6a47468728a0687a1/)
+
+- **Type:** news
+##### CIROH-2i2c JupyterHub: New NextGen National Water Model Image
+
+🚀 The NextGen In A Box ecosystem is now available for use on CIROH-2i2c JupyterHub! Select the "NextGen National Water Model (NWM)" image to get started.
+
+- **Type:** feature
+- **Link:** [Link](https://ciroh.awi.2i2c.cloud/)
+#### April 2025 Update
+
+##### New NGIAB-Calibration Feature🎉
+
+⚙️ Major update to NextGen In A Box! It now supports extended calibration for CFE and NOAA OWP modules. The new calibration framework provides more flexible parameter tuning and improved model performance.
+
+👨‍💻 Uses ngen-cal branch: [https://github.com/CIROH-UA/ngen-cal/tree/ngiab_cal](https://github.com/CIROH-UA/ngen-cal/tree/ngiab_cal) 
+
+📖 For detailed instructions on how to use the new calibration capabilities, please check out: [https://github.com/CIROH-UA/ngen-cal/tree/ngiab_cal#how-to-use-this](https://github.com/CIROH-UA/ngen-cal/tree/ngiab_cal#how-to-use-this)
+![A snaphot of the NGIAB CLI's "guide.sh" script.](/img/news/April-2025-ngiab-cli.png)
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngiab_cal)
+##### New NextGen In A Box Product Website
+
+🎉 We're excited to announce the launch of our new NGIAB dedicated website! Visit our NGIAB webiste at [https://ngiab.ciroh.org/](https://ngiab.ciroh.org/) to explore all NGIAB tools, documentation, and resources all in one place.
+ 
+ ![NGIAB Website Image](/img/news/April-2025-ngiab-website.png)
+
+- **Type:** news
+- **Link:** [Link](https://ngiab.ciroh.org/)
+##### NGIAB 101 Training Module Now Available
+
+📚 The new NGIAB 101 training module is now available with comprehensive documentation, installation guides, and step-by-step instructions for the complete NGIAB end-to-end workflow. It is perfect for new users and those looking to deepen their understanding of the platform. 
+ 
+ ![NGIAB 101 Image](/img/news/April-2025-ngiab-101.png)
+
+- **Type:** news
+- **Link:** [Link](https://docs.ciroh.org/training-NGIAB-101)
+##### Datastream Visualization: NGIAB-client (Visualizer) v0.1.3 released
+
+🚀 The visualizer now includes DataStream S3 bucket visualization, which allows users to download data from DataStream S3 bucket and visualize data directly. The new update improves time series data handling, fixes some graph display issues and ensures proper datastream-ensemble associations. 
+ 
+ ![Datastream Visualization](/img/news/April-2025-datastream-vis.png)
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngiab-client/commits/main/?since=2025-04-01&until=2025-04-30)
+##### NGIAB-CloudInfra: New and improved shell scripts
+
+✨ The shell scripts in NGIAB have gotten a new look! The entire NGIAB workflow has been polished for a clean, intuitive experience.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/commits/main/?since=2025-04-01&until=2025-04-30)
+#### March 2025 Update
+
+##### NGIAB-data-preprocess
+
+#### 🚀 New Release v4.0.5!
+ 
+ This month's update focuses on speed and reliability! We've improved initial setup times by switching to `boto3` for slightly faster S3 hydrofabric downloads. Plus, we've resolved map display issues by updating our JavaScript dependencies. 
+ 
+ 🔥A new image of NGIAB-data-preprocess is now available in the [CIROH 2i2c JupyterHub](https://ciroh.awi.2i2c.cloud/hub/login) production environment. 
+ 
+ ![NGIAB-Preprocess Image](/img/news/March-2025-ngiab-preprocess-jupyterhub-image.png)
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/commits/main/?since=2025-03-01&until=2025-04-02)
+##### NGIAB-CloudInfra: NGIAB Docker Image
+
+#### ⚡New Release v1.4.3!
+ 
+New calibrated dataset added for Provo River near Woodland, UT AWI_16_10154200_009.tar.gz in README at the link below. Also available in HydroShare!!! 
+ 
+  The new script - runTeehr.sh now available to run NGIAB-TEEHR Evaluation on both ARM64 and AMD64 platforms.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/blob/main/README.md)
+##### Updated Community NextGen Documentation Page
+
+📢 We've new updates under Community NextGen products tab. 📚 This comprehensive resource includes an overview of NGIAB and its extensions.
+ - 🔍 Learn more about Data Preprocess, TEEHR Evaluation, Data Visualizer, and DataStreamCLI. 
+ - 🛠️ Key features, Capabilities and Access Method are included. 
+ 
+ 
+ 🔗 Visit the new Community Hydrologic Modeling Framework documentation page [here](/docs/products/ngiab/):
+
+- **Type:** news
+- **Link:** [Link](https://hub.ciroh.org/docs/products/ngiab/)
+#####  ngen-datastream
+
+✨ Added CIROH Community Hydrofabric Testing! Automated CI tests are added for each VPU to ensure the geopackage is compatible with DataStreamCLI, NextGen and NGIAB.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/commits/main/?since=2025-03-01&until=2025-04-02)
+##### NGIAB-HPCInfra: NGIAB Singularity Image for HPC!
+
+✨ March updates include 2 PRs: 
+ - New calibrated dataset added for Provo River near Woodland, UT AWI_16_10154200_009.tar.gz in README at the link below. 
+ - Synced the NGIAB HPC singularity image with the latest features from NGIAB docker image .
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/commits/main/?since=2025-03-01&until=2025-04-02)
+##### Community FIM Documentation on DocuHub
+
+📢 Both FIM as a service (FIMserv) and FIM Evaluation Framework (FIMPEF) documentation now available on DocuHub!! Go to Products tab -> Community Flood Inundation Mapping
+
+- **Type:** news
+- **Link:** [Link](/docs/products/Community%20Flood%20Inundation%20Mapping/FIM%20as%20a%20Service/)
+##### CIROH Portal New Look!!
+
+📢 BYU Team released newer version of CIROH Portal using docusaurus framework. This brings consistency with CIROH DocuHub!
+
+- **Type:** news
+- **Link:** [Link](https://portal.ciroh.org/)
+##### DocuHub Contribute page Updated
+
+📢 For more ways to contribute to DocuHub. Read below
+
+- **Type:** news
+- **Link:** [Link](/docs/contribute)
+#### February 2025 Update
+
+##### NGIAB-data-preprocess
+
+🚀 New Release v4.0.3! February brings exciting enhancements to our data preprocessing tool! We've now integrated AORC as an additional data source option for forcings. The codebase has been thoroughly refactored to simplify future integration of new gridded data sources. This architectural improvement makes the tool more extensible and easier to maintain going forward.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/commits/main/?since=2025-01-01&until=2025-02-28)
+##### NGIAB-CloudInfra: NGIAB Docker Image
+
+🔥 New Release v1.4.2! Our February update delivers significant improvements to the NGIAB Docker image! The container now incorporates the latest code from CIROH-UA/ngen:ngiab and CIROH-UA/t-route:ngiab branches. We've updated CFE and Noah-OWP-Modular to their latest versions, removed the GDAL dependency to streamline the image, and implemented remoteless partitioning for enhanced parallel performance.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/commits/main/?since=2025-01-01&until=2025-02-28)
+##### ngen-datastream
+
+✨ Community Research Tools Now Public! The terraform configurations and executions for the community Research Datastream in AWS are now publicly available in the ngen-datastream repository (path: research_datastream/terraform_community). We've also added an interactive text-based graphical interface script to guide new users through the Datastream CLI tool (path: scripts/datastream_guide), making the onboarding experience more intuitive.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/commits/main/?since=2025-01-01&until=2025-02-28)
+##### NGIAB-HPCInfra: NGIAB Singularity Image
+
+⚡ Critical HPC Fix Deployed! The NGIAB Singularity Image now leverages the latest code from CIROH-UA/ngen:ngiab and CIROH-UA/t-route:ngiab branches. A critical pull request was merged to resolve the 'srun permission denied' issue on HPC compute nodes by transitioning to OpenMPI. This fix has been successfully validated on both the Pantarhei and Anvil clusters, ensuring smooth operation in HPC environments.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/commits/main/?since=2025-01-01&until=2025-02-28)
+##### CIROH-UA/ngen:ngiab
+
+✨ Performance Optimization Update! The NGIAB-CloudInfra and NGIAB-HPCInfra containers now utilize our optimized ngiab branch of CIROH-UA/ngen. T-route performance has been significantly enhanced for parallel execution with an alternative partitioning scheme specifically optimized for single-machine parallel runs. Additionally, we've introduced new configuration options that allow users to disable netCDF forcing caching and catchment output writing for more flexible deployment scenarios.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ngen/commits/ngiab/?since=2025-01-01&until=2025-02-28)
+##### CIROH-UA/t-route:ngiab
+
+✨ 3x Faster Performance! The NGIAB-CloudInfra and NGIAB-HPCInfra containers now incorporate our optimized ngiab branch of CIROH-UA/t-route. We've drastically improved t-route output writing efficiency, resulting in approximately three times faster performance. This enhancement significantly reduces processing time for hydrological simulations.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/t-route/commits/ngiab/?since=2025-01-01&until=2025-02-28)
+#### December 2024 Update
+
+##### NGIAB-data-preprocess
+
+Pro Tip: The data-preprocess tool offers VPU subsetting capabilities and can generate configuration files for empirical models like the 'Demonstration LSTM'. Check out these and other new features in the latest release! Discover more updates here.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/commits/main/?since=2024-12-01&until=2024-12-20)
+##### NGIAB-CloudInfra: NGIAB Docker Image
+
+Version 1.4.0 is now available! This release introduces the “demonstration LSTM” within NGIAB, along with sample AWI-008 input data. The LSTM model serves as an educational example to help users get started, though it’s not optimized for maximum prediction accuracy.” Explore more updates here.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.4.0)
+##### ngen-datastream
+
+Important Update: Datastream has been upgraded to v2.2 hydrofabric and now generates both NextGen outputs and forcings for VPUs 02, 03W, and 16. For more details, visit the Datastream portal at https://datastream.ciroh.org/index.html
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/blob/main/docs/AGU_2024_Poster_FINAL.jpg)
+##### NGIAB-HPCInfra: NGIAB Singularity Image
+
+December updates include 4 PRs adding 'Demostration LSTM' in NGIAB-HPCInfra. Learn more about the updates here.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/commits/main/?since=2024-12-01&until=2024-12-20)
+##### NWM BigQuery API Update
+
+Access NWM streamflow prediction data directly through BigQuery instead of downloading netCDF files. Learn more about this efficient data access method in our documentation here:
+
+- **Type:** update
+- **Link:** [Link](https://hub.ciroh.org/docs/products/data-management/bigquery-api/)
+#### November 2024 Update
+
+##### NGIAB-CloudInfra: NGIAB Docker Image
+
+Release v1.3.0 has been released with several significant improvements: * Integration of forked ngen and t-route repositories from CIROH-UA's GitHub. * Updated sample input data based on hydrofabric v2.2 * 15 PRs merged * TEEHR integration * CI pipeline improvements with unified Dockerfile * Enhanced NGIAB Visualizer. Explore more updates here.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.3.0)
+##### NGIAB-HPCInfra: NGIAB Singularity Image
+
+November updates include: * 4 PRs updating singularity image to use CIROH-UA repositories * Updated README with new sample input data for hydrofabric v2.2 * Alignment with Docker image modifications
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/commits/main/?since=2024-11-01&until=2024-11-25)
+##### ngen-datastream
+
+22 new commits pushed to the main repository
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/commits/main/?since=2024-11-01&until=2024-11-25)
+##### NGIAB-data-preprocess
+
+Version 3.1.2 released featuring: * 7 PRs merged * Major update for compatibility with hydrofabric v2.2. Discover more updates here.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/commits/main/?since=2024-11-01&until=2024-11-25)
+##### Hydrofabric v2.2
+
+The latest Hydrofabric v2.2 data model is now available.
+
+- **Type:** feature
+- **Link:** [Link](https://lynker-spatial.s3-us-west-2.amazonaws.com/hydrofabric/v2.2/hfv2.2-data_model.html)
+##### NextGen Model Framework (CIROH-UA/ngen) - fork of NOAA-OWP/ngen
+
+NGIAB-CloudInfra and NGIAB-HPCInfra now utilize the main branch of CIROH-UA/ngen.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngen)
+##### T-route (CIROH-UA/t-route) - fork of NOAA-OWP/t-route
+
+NGIAB-CloudInfra and NGIAB-HPCInfra now utilize the datastream branch of CIROH-UA/t-route. Main branch is in sync with NOAA-OWP/t-route
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/t-route)
+#### September 2024 Update
+
+##### Best Practice Guide for NextGen Framework
+
+Technical guidance for the inclusion of models/modules in the NextGen Water Resources Modeling Framework is now available in DocuHub.
+
+- **Type:** news
+- **Link:** [Link](https://hub.ciroh.org/docs/policies/NextGen/)
+##### NextGen Model Framework (NOAA-OWP/ngen)
+
+2 PRs merged in September. Explore more updates here.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/NOAA-OWP/ngen/commits/master/?since=2024-09-01&until=2024-09-26)
+##### T-route (NOAA-OWP/t-route)
+
+4 PRs were merged in September.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/NOAA-OWP/t-route/commits/master/?since=2024-09-01&until=2024-09-26)
+##### NextGen Community Office Hours
+
+We are excited to invite you to join our NextGen Community Office Hours. It is an excellent opportunity for everyone to stay up to date with the latest developments in hydrologic modeling at CIROH. Join us to engage with the team and learn more about ongoing projects and advancements.
+
+- **Type:** news
+- **Link:** [Link](https://hub.ciroh.org/docs/products/ngiab/office-hours)
+##### NGIAB-CloudInfra : NGIAB Docker Image
+
+We are happy to announce that NGIAB version 1.2.1 has been released, available for both ARM and x86 architectures. This release is up to date with the latest ngen commit ID: f321889 and t-route commit ID: d0982a5. Learn more about the updates here.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.2.1)
+##### ngen-datastream
+
+In September, 10 pull requests were merged.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/commits/main/?since=2024-09-01&until=2024-09-26)
+##### NGIAB-data-preprocess
+
+5 PRs were merged in September.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/commits/main/?since=2024-09-01&until=2024-09-26)
+#### August 2024 Update
+
+##### NextGen Model Framework (NOAA-OWP/ngen)
+
+Five PRs merged in August. Explore more updates here.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/NOAA-OWP/ngen/commits/master/?since=2024-08-01&until=2024-08-29)
+##### T-route (NOAA-OWP/t-route)
+
+Eight PRs were merged in August.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/NOAA-OWP/t-route/commits/master/?since=2024-08-01&until=2024-08-29)
+##### NGIAB-CloudInfra : NGIAB Docker Image
+
+NGIAB version 1.2.0 has been released, available for both ARM and X86 architectures. This release is up to date with the latest ngen commit ID: 2ffedf8 and t-route commit ID: 9d9d711
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/commits/main/?since=2024-08-01&until=2024-08-29)
+##### NGIAB-HPCInfra: NGIAB Singularity Image
+
+In August, a new Singularity image was released for NGIAB-HPCInfra. Learn more about the updates here.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra/commits/main/?since=2024-08-01&until=2024-08-29)
+##### ngen-datastream
+
+In August, nine pull requests were merged. These include the addition of the forcingprocessor feature, increased test coverage, updates to the research datastream Terraform, and new documentation.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream/commits/main/?since=2024-08-01&until=2024-08-29)
+##### NGIAB-data-preprocess
+
+Five PRs were merged in August. We are excited to announce the new release v2.0.0! This release uses catchment ids in place of waterbody ids.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB_data_preprocess/commits/main/?since=2024-08-01&until=2024-08-29)
+#### July 2024 Update
+
+##### NextGen Model Framework (ngen)
+
+Four PRs merged in July. Explore more updates here.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/NOAA-OWP/ngen)
+##### NGIAB-CloudInfra
+
+In July, one PR was merged. We are preparing to present "Advancing Hydrological Modeling: CIROH’s NextGen In A Box (NGIAB) and Enhanced Tools for Community-Driven Research" at AGU24. You can find more updates here.
+
+- **Type:** update
+- **Link:** [Link](https://agu.confex.com/agu/agu24/prelim.cgi/Paper/1697622)
+##### ngen-DataStream
+
+In July, 6 PRs were merged. We are also presenting "NextGen National Water Model Framework Datastream" paper at AGU24. More updates can be found here.
+
+- **Type:** update
+- **Link:** [Link](https://agu.confex.com/agu/agu24/prelim.cgi/Paper/1589746)
+##### NGIAB-data-preprocessor
+
+Nine PRs were merged in July.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/AlabamaWaterInstitute/NGIAB_data_preprocess)
+##### T-route
+
+Five PRs were merged in July.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/NOAA-OWP/t-route)
+#### June 2024 Update
+
+##### ngen-DataStream
+
+In June, 9 PRs were merged. Ngen-datastream was updated to be compatible with the new hydrofabric data format provided by hfsubset version 2.1.1.
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream)
+##### NGIAB-data-preprocessor
+
+Four PRs were merged in June. We are happy to announce the new release v1.0.1. This release includes various improvements and bug fixes.
+
+- **Type:** news
+- **Link:** [Link](https://github.com/AlabamaWaterInstitute/NGIAB_data_preprocess)
+##### NextGen Model Framework (ngen)
+
+Eleven PRs merged in June. Explore more updates here.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/NOAA-OWP/ngen)
+##### CIROH DevCon24 Conference Slides
+
+Access the slides from the 8 NextGen Track workshops held at CIROH DevCon24. Slides can be found here.
+
+- **Type:** news
+- **Link:** [Link](https://hydroshare.org/resource/99a1bdcc97af4d159f1116e2573a12ba/)
+#### May 2024 Update
+
+##### NGIAB-CloudInfra
+
+The NextGen In A Box (NGIAB) workshop last week at CIROH DevCon24 was a huge success. New sample dataset is created “AWI-006”. We had 50+ attendees and most of them were successfully able to run NGIAB on their local machine. For those without the admin access, we provided them the AWS instances for the workshop. This workshop introduced a new geospatial visualization tool for visualizing outputs from NGIAB runs. During May, 16 PRs were merged. Slides can be found at:
+
+- **Type:** news
+- **Link:** [Link](https://github.com/CIROH-UA/Conferences/tree/main/CIROHDevCon2024/NextGenTrack)
+##### NGIAB-HPCInfra
+
+Run NGIAB on HPC using NGIAB-HPCInfra. This repo is upgraded to use AWI-006 dataset. For more details, please refer README at
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra)
+##### ngen-DataStream
+
+NextGen Simulation Development Tools workshop was a huge success. It provided attendees with a hands-on experience using the ngen-datastream tool. In May, 21 PRs were merged. Explore the updates. Slides for the DevCon can be found at:
+
+- **Type:** news
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream)
+##### NGIAB-data-preprocessor
+
+The NextGen Simulation Development Tools workshop at CIROH DevCon24 showcased the tool's capabilites of simplifying data preparation for next-gen simulations.
+
+- **Type:** news
+- **Link:** [Link](https://github.com/AlabamaWaterInstitute/NGIAB_data_preprocess)
+##### NextGen Model Framework (ngen)
+
+3 PRs merged in May. Explore more updates here.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/NOAA-OWP/ngen)
+#### April 2024 Update
+
+##### NGIAB-data-preprocessor
+
+Introducing a tool for NGIAB data preparation.  A workshop is planned for CIROH DevCon24 under NextGen Simulation Development Tools.
+
+- **Type:** news
+- **Link:** [Link](https://github.com/AlabamaWaterInstitute/NGIAB_data_preprocess)
+##### NGIAB-CloudInfra
+
+In April, we are gearing up to present the NextGen In A Box (NGIAB) workshop at CIROH DevCon24
+
+- **Type:** news
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra)
+##### NGIAB-HPCInfra
+
+Here is the updated link to NGIAB-HPCInfra
+
+- **Type:** update
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra)
+##### ngen-DataStream
+
+In April, we are getting ready to present NextGen DataStream at CIROH DevCon24. A workshop is planned under NextGen Simulation Development Tools
+
+- **Type:** news
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream)
+##### NextGen Model Framework (ngen)
+
+Thirteen PRs merged in April. Explore the updates.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/NOAA-OWP/ngen)
+#### March 2024 Update
+
+##### Improvement of NGIAB HPCInfra Repositories
+
+Automating build of NGIAB HPCInfra using GitHub Actions
+
+- **Type:** news
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-HPCInfra)
+##### ngen-DataStream
+
+In March, the python internal to the datastream was containerized. This included implementing catchment-specific configuration for PET, CFE, and Noah OWP (https://github.com/CIROH-UA/ngen-datastream/pull/46). The scripts and plotting tools were developed to perform benchmarking and preliminary results have been collected.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream)
+##### NextGen Model Framework (ngen)
+
+Seven PRs merged in March.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/NOAA-OWP/ngen)
+#### Feb 2024 Update
+
+##### Improvement of NGIAB CI Pipeline for Pull Requests from Forked Repositories
+
+Three pull requests have been successfully merged. Pull requests submitted using forked repositories are now automatically tested in the CI Pipeline. Upon merging changes to the main repository, another CI pipeline is triggered to retest the build and push the image to DockerHub. Additionally, new AWI_004 sample data is now available for 09 VPU for unit testing.
+
+- **Type:** news
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra)
+##### ngen-DataStream
+
+In February, two pull requests were merged. For small runs, you can access ngen-DataStream at: https://github.com/CIROH-UA/ngen-datastream/tree/main/examples
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream)
+##### NextGen Model Framework (ngen)
+
+Nine PRs merged in February.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/NOAA-OWP/ngen)
+##### T-route
+
+Twelve PRs merged in February.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/NOAA-OWP/t-route)
+#### Jan 2024 Update
+
+##### Run NextGen In A Box(NGIAB) with Singularity on HPC without docker support!!! 
+
+If you want to use NGIAB on HPC that does not support docker, we have a solution for you. Please follow the steps at this link.
+
+- **Type:** news
+- **Link:** [Link](https://github.com/CIROH-UA/Ngen-Singularity)
+##### NextGen In A Box (NGIAB)
+
+We have made some improvements to NGIAB: 10 PRs merged. Sample input data updated to use AWI_003(with new data provider names). Boost upgraded to v1.79. Self-hosted Runner can start and stop automatically with GitHub Actions. NGIAB image can run in auto mode. Geopackage support added. Documentation available at CIROH DocuHub
+
+- **Type:** news
+- **Link:** [Link](https://hub.ciroh.org/docs/products/ngiab/distributions/ngiab-docker)
+##### ngen-DataStream
+
+3 PRs merged in January. Documentation available at: /products/Hydrologic%20Modeling%20Framework/nextgenDatastream/
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/CIROH-UA/ngen-datastream)
+##### NextGen Model Framework (ngen)
+
+6 PRs merged in January.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/NOAA-OWP/ngen)
+##### T-route
+
+3 PRs merged in January.
+
+- **Type:** feature
+- **Link:** [Link](https://github.com/NOAA-OWP/t-route)
+#### Dec 2023 Update
+
+##### NGIAB presentation at AGU!!! 
+
+NextGen In A Box: Advancing Collaborative Modeling for Enhanced Water Resource Management presented by Arpita. We had a full house!
+
+- **Type:** news
+- **Link:** [Link](Conference%20Material#agu-2023)
+##### NextGen In A Box
+
+NGIAB Updates: Merged CI pipeline changes PR#74 by Benjamin Lee, Added case study map and a plot with output results PR#72 by Shahab Alam, PR#70 by Josh Cu
+
+- **Type:** news
+##### NextGen Model Framework
+
+5 PRs merged in December.
+
+- **Type:** feature
+##### T-route
+
+12 PRs merged in December.
+
+- **Type:** feature
+##### Hydrofabric
+
+Lynker is proud to support CIROH with a freely accessable resource for geospatial data: https://www.lynker-spatial.com/. Updated transects/cross section runners
+
+- **Type:** feature
+##### NextGen Framework Forcings
+
+December updates include an (almost) complete stream script that will produce daily ngen outputs. Documentation (readme) included. ngen-datastream/subsetting has been deprecated and hfsubset integrated into the stream. Benchmarking has begun.
+
+- **Type:** feature
+##### Community Support
+
+December is always an AGU Month! San Francisco (the traditional home of AGU) brings us to the season where we reflect on our own work for the year and finally learn what our coworkers have been doing all this time! Checkout the presentation slides from CIROH at below link.
+
+- **Type:** note
+- **Link:** [Link](https://github.com/CIROH-UA/Conferences)
+##### NOAA-OWP AGU Presentations
+
+NOAA-OWP AGU Presentations
+
+- **Type:** note
+- **Link:** [Link](https://github.com/NOAA-OWP/OWP-Presentations/tree/main/AGU/AGU_2023)
+#### Nov 2023 Update
+
+##### NGIAB Updates
+
+NGIAB v1.1.0 Release!
+
+- **Type:** news
+- **Link:** [Link](https://github.com/CIROH-UA/NGIAB-CloudInfra/releases/tag/v1.1.0)
+##### NextGen Research Lightning Talk
+
+Presented at CIROH NextGen Research Lightning Talk Webinar
+
+- **Type:** news
+- **Link:** [Link](Conference%20Material#community-nextgen-advancement-lightning-talk---nov-2023)
+##### NextGen Model Framework
+
+14 PRs merged in November. Adding new tests for sqlite and new geopackage-based hydrofabric support.
+
+- **Type:** feature
+##### T-route
+
+13 PRs merged in November. Added additional json/geojson support
+
+- **Type:** feature
+##### Hydrofabric
+
+Lynker is proud to support CIROH with a freely accessable resource for geospatial data: https://www.lynker-spatial.com/. Updated hfsubset to support using the v2.0 hydrofabric by default. Added Cross-section support to the hydrofabric. 13 PRs merged in November. Added additional json/geojson support
+
+- **Type:** feature
+##### NextGen Framework Forcings
+
+14 PRs merged towards the Research Data Stream. Fixed lingering pyarrow issues. Added new support for all segments to be dockerized. Added S3 support with regards to the control flow design, to support one reusable, configurable  sequence
+
+- **Type:** feature
+##### Community Support
+
+Singularity support is coming to AWI for HPC users that are able to run Singularity builds. Work on serialization (passing from one run to the next with model states still in memory or imported from a file) is ongoing, relative temporal configurations of NextGen with consideration to model configuration changes between timesteps, and better general support for framework polymorphism.
+
+- **Type:** note
+#### Oct 2023 Update
+
+##### NGIAB Updates
+
+15 runs of the whole build process, 7 successful, and 2 pending. Over 550 pulls of the container image, number of 'canonical' runs (uploading their metadata and results) is coming in a future version.
+
+- **Type:** note
+##### NextGen Model Framework
+
+Updates to SUMMA candidate model, performance improvements for memory usage and spatial domain tooling to decouple the currently used geojson Feature and geometry classes into their own simple features interface. This is an abstract interface, with a coupled Boost.Geometry backend that will be used as the default backend.
+
+- **Type:** feature
+##### T-route
+
+22 Pull Requests were worked on in October with 11 merged, and a focus on testing and getting the compiling process to be tested and reliable particularly for downstream NGIAB and HPC usage of t-route
+
+- **Type:** note
+
+
+  <div className="tw-mt-8 tw-text-center">
+    <h2 className="tw-text-2xl tw-font-bold tw-text-black dark:tw-text-white tw-mb-4">Contributors</h2>
+    <p className="tw-text-gray-600 dark:tw-text-gray-300 tw-mb-4">This news section is maintained by the CIROH community. Special thanks to our contributors:</p>
+    <div className="tw-flex tw-flex-wrap tw-justify-center tw-gap-4">
+      <span className="tw-bg-blue-100 dark:tw-bg-cyan-800 tw-text-blue-800 dark:tw-text-cyan-200 tw-px-3 tw-py-1 tw-rounded-full tw-text-sm">Arpita Patel</span>
+      <span className="tw-bg-blue-100 dark:tw-bg-cyan-800 tw-text-blue-800 dark:tw-text-cyan-200 tw-px-3 tw-py-1 tw-rounded-full tw-text-sm">Manjila Singh</span>
+      <span className="tw-bg-blue-100 dark:tw-bg-cyan-800 tw-text-blue-800 dark:tw-text-cyan-200 tw-px-3 tw-py-1 tw-rounded-full tw-text-sm">Nia Minor</span>
+      {/* Add more contributors as needed */}
+    </div>
+  </div>
+</div>
