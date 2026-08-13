@@ -9,3 +9,7 @@ __pycache__/
 CIROH-DocuHub_old/
 CIROH-Hub_old/
 *_old.*
+
+# Local testing files
+GitHubTest/
+*_test.*
