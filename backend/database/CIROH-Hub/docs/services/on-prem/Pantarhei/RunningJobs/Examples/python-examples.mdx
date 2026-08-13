@@ -1,0 +1,209 @@
+---
+sidebar_position: 4
+
+title: "Pantarhei Python Job Examples"
+description: "Python example job scripts for Pantarhei using Slurm"
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/python-examples"
+
+---
+
+## Python Job Examples
+
+This page contains Python job examples for Pantarhei, including serial execution, multi-core parallel execution, and MPI-enabled execution with `mpi4py`.
+
+### Python Job
+
+Here is a simple example of a Python job. This example measures elapsed time so you can compare the serial and parallel versions.
+
+**Python script (myscript.py):**
+
+```python
+# myscript.py
+import time
+import numpy as np
+
+for N in [20_000_000, 40_000_000, 80_000_000, 160_000_000]:
+    x = np.linspace(0, 100, N, dtype=np.float64)
+
+    start = time.perf_counter()
+    result = np.sum(np.sin(x) * np.exp(-x / 50.0))
+    end = time.perf_counter()
+
+    print(f"Computed result for {N:,} values: {result:.6f}")
+    print(f"Elapsed time: {end - start:.4f} seconds")
+```
+
+**Job submission script (python_serial_job.sh):**
+
+```bash
+#!/bin/bash
+# python_serial_job.sh
+#SBATCH -J python_job
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH -t 00:30:00
+
+# Load Python module
+module load Python/3.10.8-GCCcore-12.2.0
+
+# If numpy is not available in this Python environment, install it for your user:
+# python -m pip install --user numpy
+
+# Run the Python script
+python myscript.py
+```
+
+Submit the job:
+
+```bash
+sbatch python_serial_job.sh
+```
+
+### Parallel Python Job
+
+If your Python code can use multiple cores on a single node, you can make it parallel with Python's `multiprocessing` module and request more CPUs per task. The job script below requests 4 cores and runs a Python script that divides work across them.
+
+**Parallel Python script (myscript_parallel.py):**
+
+```python
+# myscript_parallel.py
+import time
+from multiprocessing import Pool
+import numpy as np
+
+CHUNKS = 4
+
+def chunk_ranges(n, chunks):
+    size = n // chunks
+    ranges = []
+    for i in range(chunks):
+        start = i * size
+        end = n if i == chunks - 1 else (i + 1) * size
+        ranges.append((start, end))
+    return ranges
+
+def work(args):
+    range_pair, N = args
+    start, end = range_pair
+    x = np.linspace(start * 100.0 / N, end * 100.0 / N, end - start, dtype=np.float64)
+    return np.sum(np.sin(x) * np.exp(-x / 50.0))
+
+if __name__ == '__main__':
+    for N in [20_000_000, 40_000_000, 80_000_000, 160_000_000]:
+        ranges = chunk_ranges(N, CHUNKS)
+        start = time.perf_counter()
+        with Pool(processes=CHUNKS) as pool:
+            partial_sums = pool.map(work, [(r, N) for r in ranges])
+        total = sum(partial_sums)
+        end = time.perf_counter()
+        print(f"Computed result for {N:,} values: {total:.6f}")
+        print(f"Elapsed time: {end - start:.4f} seconds")
+```
+
+**Job submission script (python_parallel_job.sh):**
+
+```bash
+#!/bin/bash
+# python_parallel_job.sh
+#SBATCH -J python_parallel_job
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH -t 00:30:00
+
+# Load Python module
+module load Python/3.10.8-GCCcore-12.2.0
+
+# Set the number of threads for Python
+export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+
+# Run the parallel Python script
+python myscript_parallel.py
+```
+
+Submit the job:
+
+```bash
+sbatch python_parallel_job.sh
+```
+
+### MPI4Py Parallel Python Job
+
+For multi-node or distributed parallel Python, use `mpi4py` with multiple tasks. The following example performs the same work using MPI ranks instead of `multiprocessing`.
+
+**MPI4Py script (myscript_mpi4py.py):**
+
+```python
+# myscript_mpi4py.py
+import time
+from mpi4py import MPI
+import numpy as np
+
+comm = MPI.COMM_WORLD
+rank = comm.Get_rank()
+size = comm.Get_size()
+
+def work(start, end, N):
+    x = np.linspace(start * 100.0 / N, end * 100.0 / N, end - start, dtype=np.float64)
+    return np.sum(np.sin(x) * np.exp(-x / 50.0))
+
+if __name__ == '__main__':
+    for N in [20_000_000, 40_000_000, 80_000_000, 160_000_000]:
+        chunk_size = N // size
+        start_idx = rank * chunk_size
+        end_idx = N if rank == size - 1 else (rank + 1) * chunk_size
+
+        comm.Barrier()
+        start = time.perf_counter()
+        local_sum = work(start_idx, end_idx, N)
+        total_sum = comm.reduce(local_sum, op=MPI.SUM, root=0)
+        end = time.perf_counter()
+
+        if rank == 0:
+            print(f"Computed result for {N:,} values: {total_sum:.6f}")
+            print(f"Elapsed time: {end - start:.4f} seconds")
+```
+
+**Job submission script (python_mpi4py_job.sh):**
+
+```bash
+#!/bin/bash
+# python_mpi4py_job.sh
+#SBATCH -J python_mpi4py_job
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=1
+#SBATCH -t 00:30:00
+
+# Load Python module and mpi4py if needed
+module load Python/3.10.8-GCCcore-12.2.0
+module load mpi4py/3.1.4-gompi-2022b
+
+# Run the MPI-enabled Python script
+mpiexec -n 4 python myscript_mpi4py.py
+```
+
+Submit the job:
+
+```bash
+sbatch python_mpi4py_job.sh
+```
+
+**Key points:**
+- `--ntasks=4` launches 4 MPI ranks.
+- `mpiexec -n 4` starts the MPI-enabled Python program across all ranks.
+- Use `mpi4py` for distributed parallelism across cores or nodes.
+- **Required packages**: Make sure `numpy` and `mpi4py` are installed in your Python environment before running this job.
+
+## Additional Resources
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

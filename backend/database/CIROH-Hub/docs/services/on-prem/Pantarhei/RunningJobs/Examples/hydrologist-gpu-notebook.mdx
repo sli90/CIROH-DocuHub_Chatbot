@@ -1,0 +1,288 @@
+---
+sidebar_position: 12
+
+title: "Hydrologist GPU Notebook Example"
+description: "GPU-accelerated SCS Curve Number hydrologic workflow using CuPy inside a Jupyter session on Pantarhei's GPU partition."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, Hydrology, GPU, CUDA, Jupyter, CuPy]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/hydrologist-gpu-notebook"
+
+---
+
+## Hydrologist GPU Notebook Example
+
+This page contains ready-to-run Jupyter notebook cells that accelerate the SCS Curve Number hydrologic workflow — the same calculations from the [Hydrologist Python examples](./hydrologist-python-examples) — using CuPy for GPU-accelerated array operations on Pantarhei's GPU node.
+
+Before running these cells, start a GPU Jupyter session by submitting the [GPU Jupyter job script](./jupyter-notebook-gpu) and connecting via the SSH tunnel.
+
+---
+
+### Cell 1 — Install and verify CuPy
+
+This cell creates an isolated conda environment for CuPy so that numpy upgrades do not affect other packages in the base Anaconda environment.
+
+```python
+# Cell 1 — create an isolated conda environment for CuPy and verify GPU
+import sys, subprocess, os
+
+CONDA_ENV = "cupy_env"
+
+# Check whether the conda environment already exists
+env_list = subprocess.run(
+    ["conda", "env", "list"], capture_output=True, text=True, check=True
+).stdout
+
+if CONDA_ENV not in env_list:
+    # Create a fresh conda environment with Python 3.11
+    subprocess.run(
+        ["conda", "create", "-n", CONDA_ENV, "python=3.11", "-y", "-q"],
+        check=True
+    )
+    print(f"Created conda env: {CONDA_ENV}")
+else:
+    print(f"Reusing existing conda env: {CONDA_ENV}")
+
+# Install CuPy via pip inside the conda env — isolated from the base environment
+subprocess.run(
+    ["conda", "run", "-n", CONDA_ENV, "pip", "install", "cupy-cuda12x", "-q"],
+    check=True
+)
+print("CuPy installed in conda env")
+
+# Dynamically resolve the env's site-packages path and inject into this kernel
+site_pkgs = subprocess.run(
+    ["conda", "run", "-n", CONDA_ENV,
+     "python", "-c", "import site; print(site.getsitepackages()[0])"],
+    capture_output=True, text=True, check=True
+).stdout.strip()
+
+if site_pkgs not in sys.path:
+    sys.path.insert(0, site_pkgs)
+    print(f"Added to sys.path: {site_pkgs}")
+
+import cupy as cp
+print(f"CuPy version : {cp.__version__}")
+print(f"GPU detected : {cp.cuda.runtime.getDeviceCount()} device(s)")
+print(f"GPU name     : {cp.cuda.runtime.getDeviceProperties(0)['name'].decode()}")
+```
+
+:::note Prefer pip?
+If you prefer pip over conda, use this alternative Cell 1 instead. It creates an isolated virtual environment so numpy upgrades from CuPy do not affect other packages in the base environment.
+
+```python
+# Cell 1 (pip alternative) — create an isolated venv for CuPy and verify GPU
+import sys, subprocess, os
+
+VENV = os.path.expanduser("~/cupy_env")
+
+# Create the venv if it does not already exist
+if not os.path.exists(VENV):
+    subprocess.run([sys.executable, "-m", "venv", VENV], check=True)
+    print(f"Created venv: {VENV}")
+else:
+    print(f"Reusing existing venv: {VENV}")
+
+# Install CuPy inside the venv only — base environment packages are untouched
+pip = os.path.join(VENV, "bin", "pip")
+subprocess.run([pip, "install", "--upgrade", "pip", "-q"], check=True)
+subprocess.run([pip, "install", "cupy-cuda12x", "-q"], check=True)
+print("CuPy installed in venv")
+
+# Inject the venv's site-packages into this kernel session
+py_ver    = f"python{sys.version_info.major}.{sys.version_info.minor}"
+site_pkgs = os.path.join(VENV, "lib", py_ver, "site-packages")
+if site_pkgs not in sys.path:
+    sys.path.insert(0, site_pkgs)
+    print(f"Added to sys.path: {site_pkgs}")
+
+import cupy as cp
+print(f"CuPy version : {cp.__version__}")
+print(f"GPU detected : {cp.cuda.runtime.getDeviceCount()} device(s)")
+print(f"GPU name     : {cp.cuda.runtime.getDeviceProperties(0)['name'].decode()}")
+```
+:::
+
+---
+
+### Cell 2 — Generate synthetic hydrology data on the GPU
+
+```python
+# Cell 2 — generate 50,000 synthetic records directly on the GPU
+import cupy as cp
+
+cp.random.seed(42)
+N = 50_000
+
+precipitation_mm    = cp.random.uniform(0, 100, N)      # mm
+curve_numbers       = cp.random.randint(40, 95, N)      # SCS CN
+time_concentration  = cp.random.uniform(10, 120, N)     # minutes
+contributing_area   = cp.random.uniform(0.1, 50, N)     # km²
+antecedent_moisture = cp.random.uniform(0.3, 0.8, N)    # 0–1
+
+print(f"Generated {N:,} synthetic records on the GPU")
+print(f"Mean precipitation      : {float(precipitation_mm.mean()):.2f} mm")
+print(f"Mean curve number       : {float(curve_numbers.mean()):.1f}")
+print(f"Mean time concentration : {float(time_concentration.mean()):.2f} min")
+```
+
+---
+
+### Cell 3 — SCS Curve Number runoff (GPU-vectorized)
+
+```python
+# Cell 3 — vectorized SCS runoff on the GPU
+import cupy as cp
+import time
+
+def scs_runoff_gpu(P, CN):
+    """Q = (P - Ia)^2 / (P - Ia + S),  Ia = 0.2 * S,  S = 25400/CN - 254"""
+    S  = (25400.0 / CN) - 254.0
+    Ia = 0.2 * S
+    Q  = cp.where(P > Ia, (P - Ia)**2 / (P - Ia + S), 0.0)
+    return Q
+
+t0 = time.perf_counter()
+runoff_scs = scs_runoff_gpu(precipitation_mm, curve_numbers)
+cp.cuda.Stream.null.synchronize()
+t1 = time.perf_counter()
+
+print(f"SCS runoff computed in : {(t1 - t0)*1000:.2f} ms  ({N:,} records)")
+print(f"Mean SCS runoff        : {float(runoff_scs.mean()):.4f} mm")
+print(f"Max  SCS runoff        : {float(runoff_scs.max()):.4f} mm")
+```
+
+---
+
+### Cell 4 — Baseflow separation and peak discharge (GPU-vectorized)
+
+```python
+# Cell 4 — baseflow separation and peak discharge on the GPU
+import cupy as cp
+import time
+
+def baseflow_separation_gpu(total_runoff, antecedent_moisture):
+    """Exponential recession over 30 days — fully vectorized."""
+    recession_constant = 0.95 - antecedent_moisture * 0.3
+    direct_runoff = total_runoff * (1.0 - antecedent_moisture)
+    baseflow      = total_runoff * antecedent_moisture
+    days = cp.arange(1, 31, dtype=cp.float64)              # shape (30,)
+    # recession_index: sum over 30 days for each record
+    recession_index = (baseflow[:, None] * recession_constant[:, None] ** days).sum(axis=1)
+    return direct_runoff, baseflow, recession_index
+
+def peak_discharge_gpu(direct_runoff, contributing_area, tc):
+    """Rational-style peak discharge — vectorized over 50 time steps."""
+    intensity = 100.0 / (tc + 10.0) ** 0.7
+    area_m2   = contributing_area * 1e6
+    runoff_m3 = (direct_runoff / 1000.0) * area_m2
+    t_steps = cp.linspace(0, 1, 50, dtype=cp.float64)     # normalised 0→1
+    # peak_factor: sum of sin curve over 50 steps for each record
+    peak_factor = (cp.sin(cp.pi * t_steps) * intensity[:, None] / 50.0).sum(axis=1)
+    return runoff_m3 * peak_factor / (tc * 60.0)
+
+t0 = time.perf_counter()
+
+direct_runoff, baseflow, recession_index = baseflow_separation_gpu(
+    runoff_scs, antecedent_moisture)
+
+peak_discharge = peak_discharge_gpu(
+    direct_runoff, contributing_area, time_concentration)
+
+cp.cuda.Stream.null.synchronize()
+t1 = time.perf_counter()
+
+print(f"Baseflow + peak discharge computed in : {(t1 - t0)*1000:.2f} ms  ({N:,} records)")
+print(f"Mean direct runoff   : {float(direct_runoff.mean()):.4f} mm")
+print(f"Mean baseflow        : {float(baseflow.mean()):.4f} mm")
+print(f"Mean peak discharge  : {float(peak_discharge.mean()):.6f} m³/s")
+print(f"Max  peak discharge  : {float(peak_discharge.max()):.6f} m³/s")
+```
+
+---
+
+### Cell 5 — GPU vs CPU timing comparison
+
+```python
+# Cell 5 — compare GPU and CPU computation time
+import cupy as cp
+import numpy as np
+import time
+
+# --- GPU ---
+cp.cuda.Stream.null.synchronize()
+t0 = time.perf_counter()
+runoff_gpu = scs_runoff_gpu(precipitation_mm, curve_numbers)
+cp.cuda.Stream.null.synchronize()
+gpu_time = (time.perf_counter() - t0) * 1000
+
+# --- CPU (NumPy) ---
+P_cpu  = cp.asnumpy(precipitation_mm)
+CN_cpu = cp.asnumpy(curve_numbers)
+
+t0 = time.perf_counter()
+S_cpu  = (25400.0 / CN_cpu) - 254.0
+Ia_cpu = 0.2 * S_cpu
+runoff_cpu = np.where(P_cpu > Ia_cpu, (P_cpu - Ia_cpu)**2 / (P_cpu - Ia_cpu + S_cpu), 0.0)
+cpu_time = (time.perf_counter() - t0) * 1000
+
+print(f"GPU time  : {gpu_time:.2f} ms")
+print(f"CPU time  : {cpu_time:.2f} ms")
+print(f"Speedup   : {cpu_time / gpu_time:.1f}×")
+```
+
+---
+
+### Cell 6 — Save results to CSV
+
+```python
+# Cell 6 — transfer results from GPU to CPU and save to CSV
+# Uses Python's built-in csv module to avoid the pandas/pyarrow + numpy 2.x conflict
+import csv
+import cupy as cp
+
+# Transfer all arrays from GPU memory to CPU (numpy)
+results = {
+    "precipitation_mm"    : cp.asnumpy(precipitation_mm),
+    "curve_number"        : cp.asnumpy(curve_numbers),
+    "time_concentration"  : cp.asnumpy(time_concentration),
+    "contributing_area"   : cp.asnumpy(contributing_area),
+    "antecedent_moisture" : cp.asnumpy(antecedent_moisture),
+    "runoff_scs"          : cp.asnumpy(runoff_scs),
+    "direct_runoff"       : cp.asnumpy(direct_runoff),
+    "baseflow"            : cp.asnumpy(baseflow),
+    "recession_index"     : cp.asnumpy(recession_index),
+    "peak_discharge"      : cp.asnumpy(peak_discharge),
+}
+
+output_file = "hydrology_gpu_results.csv"
+
+with open(output_file, "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(results.keys())           # header row
+    writer.writerows(zip(*results.values()))  # data rows
+
+n = len(results["precipitation_mm"])
+print(f"Saved {n:,} records to {output_file}")
+
+# Preview first 3 rows
+header = f"{'precipitation_mm':>20} {'curve_number':>12} {'runoff_scs':>12} {'peak_discharge':>15}"
+print(f"\n{header}")
+print("-" * len(header))
+for i in range(3):
+    print(f"{results['precipitation_mm'][i]:>20.4f} "
+          f"{results['curve_number'][i]:>12.0f} "
+          f"{results['runoff_scs'][i]:>12.4f} "
+          f"{results['peak_discharge'][i]:>15.6f}")
+```
+
+:::tip
+`cp.asnumpy()` copies a CuPy array from GPU memory back to a NumPy array on the CPU so it can be written to disk or used with other libraries. Pandas is intentionally avoided here — it imports pyarrow internally, which was compiled against NumPy 1.x and crashes when NumPy 2.x is on `sys.path` from the CuPy environment. Python's built-in `csv` module has no such dependency.
+:::
+
+---
+
+## Additional Resources
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

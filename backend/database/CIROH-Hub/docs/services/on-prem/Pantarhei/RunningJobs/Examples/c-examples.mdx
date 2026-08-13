@@ -1,0 +1,179 @@
+---
+sidebar_position: 5
+
+title: "Pantarhei C Job Examples"
+description: "C example job scripts for Pantarhei using Slurm"
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/c-examples"
+
+---
+
+## C Job Examples
+
+This page contains C job examples for Pantarhei, including a serial C job and a parallel MPI-enabled C job.
+
+### Serial C Job
+
+Here is a simple example of a serial C job that performs the same numerical computation as the Python example.
+
+**C program (serial_compute.c):**
+
+```c
+// serial_compute.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+int main() {
+    int N_values[] = {20000000, 40000000, 80000000, 160000000};
+    int num_tests = sizeof(N_values) / sizeof(N_values[0]);
+    
+    for (int test = 0; test < num_tests; test++) {
+        int N = N_values[test];
+        double result = 0.0;
+        clock_t start, end;
+        
+        start = clock();
+        
+        for (int i = 0; i < N; i++) {
+            double x = (double)i * 100.0 / N;
+            result += sin(x) * exp(-x / 50.0);
+        }
+        
+        end = clock();
+        double elapsed_time = (double)(end - start) / CLOCKS_PER_SEC;
+        
+        printf("Computed result for %d values: %.6f\n", N, result);
+        printf("Elapsed time: %.4f seconds\n", elapsed_time);
+    }
+    
+    return 0;
+}
+```
+
+**Job submission script (c_serial_job.sh):**
+
+```bash
+#!/bin/bash
+# c_serial_job.sh
+#SBATCH -J serial_c_job
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH -t 00:30:00
+
+# Compile the C program
+gcc serial_compute.c -o serial_compute -lm
+
+# Run the compiled program
+./serial_compute
+```
+
+Submit the job:
+
+```bash
+sbatch c_serial_job.sh
+```
+
+### Parallel C MPI Job
+
+Here is an example of a parallel MPI job in C that performs the same numerical computation as the Python examples (computing the sum of sin(x) * exp(-x/50.0) for 20 million points).
+
+**C MPI program (mpi_compute.c):**
+
+```c
+// mpi_compute.c
+#include <mpi.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(int argc, char** argv) {
+    int rank, size;
+    int N_values[] = {20000000, 40000000, 80000000, 160000000};
+    int num_tests = sizeof(N_values) / sizeof(N_values[0]);
+    
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    
+    for (int test = 0; test < num_tests; test++) {
+        int N = N_values[test];
+        double local_sum = 0.0, total_sum = 0.0;
+        double start_time, end_time;
+        
+        // Divide work among ranks
+        int chunk_size = N / size;
+        int start_idx = rank * chunk_size;
+        int end_idx = (rank == size - 1) ? N : (rank + 1) * chunk_size;
+        
+        // Synchronize before timing
+        MPI_Barrier(MPI_COMM_WORLD);
+        start_time = MPI_Wtime();
+        
+        // Compute local sum
+        for (int i = start_idx; i < end_idx; i++) {
+            double x = (double)i * 100.0 / N;
+            local_sum += sin(x) * exp(-x / 50.0);
+        }
+        
+        // Reduce all local sums to total sum on rank 0
+        MPI_Reduce(&local_sum, &total_sum, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+        
+        end_time = MPI_Wtime();
+        
+        if (rank == 0) {
+            printf("Computed result for %d values: %.6f\n", N, total_sum);
+            printf("Elapsed time: %.4f seconds\n", end_time - start_time);
+        }
+    }
+    
+    MPI_Finalize();
+    return 0;
+}
+```
+
+**Job submission script (mpi_c_job.sh):**
+
+```bash
+#!/bin/bash
+# mpi_c_job.sh
+#SBATCH -J mpi_c_job
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=1
+#SBATCH -t 00:30:00
+
+# Load necessary modules
+module purge
+module load MVAPICH
+
+# Compile the C MPI program
+mpicc mpi_compute.c -o mpi_compute -lm
+
+# Run the MPI application
+mpiexec -n 4 ./mpi_compute
+```
+
+Submit the job:
+
+```bash
+sbatch mpi_c_job.sh
+```
+
+**Key points:**
+- `--ntasks=4` launches 4 MPI ranks on 1 node.
+- `mpicc` compiles the C program with MPI support.
+- `mpiexec -n 4` starts the MPI-enabled C program across all ranks.
+- Use MPI for distributed parallelism across cores or nodes.
+- The C program performs the same computation as the Python examples for comparison.
+
+## Additional Resources
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

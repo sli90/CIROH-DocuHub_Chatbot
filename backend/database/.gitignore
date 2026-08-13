@@ -4,3 +4,8 @@
 # Python cache
 __pycache__/
 *.pyc
+
+# Backup files
+CIROH-DocuHub_old/
+CIROH-Hub_old/
+*_old.*

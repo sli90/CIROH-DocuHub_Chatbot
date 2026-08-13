@@ -1,0 +1,290 @@
+---
+sidebar_position: 10
+
+title: "Jupyter Notebook (GPU Partition)"
+description: "Run a GPU-enabled Jupyter Lab or Jupyter Notebook server on a Pantarhei GPU compute node and connect from your local browser via SSH tunneling."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, Jupyter, GPU, CUDA]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/jupyter-notebook-gpu"
+
+---
+
+## Jupyter Notebook on the GPU Partition
+
+This page explains how to launch a GPU-enabled Jupyter Lab (or Jupyter Notebook) server on a Pantarhei GPU compute node. The workflow is the same SSH-tunnel approach as the [CPU version](./jupyter-notebook-normal), with the addition of GPU resource allocation and an `nvidia-smi` check to confirm the GPU is visible inside the session.
+
+Use this when your notebook needs GPU acceleration — for example, PyTorch, TensorFlow, CuPy, or RAPIDS workflows.
+
+## Prerequisites
+
+- SSH access to `pantarhei.ua.edu`
+- A terminal on your local machine capable of SSH (macOS/Linux terminal, Windows Terminal, or Git Bash)
+- Anaconda3 module available on Pantarhei (loaded in the job script)
+- A web browser on your local machine
+
+## Job Script
+
+Save the following script as `jupyter_notebook_gpu.job` in your Pantarhei home or working directory:
+
+```bash
+#!/bin/bash
+# jupyter_notebook_gpu.job
+#SBATCH -J gpu_jupyter_test_job
+#SBATCH -p gpu
+#SBATCH --output=gpu_%j.out
+#SBATCH --time=04:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --gpus-per-task=1
+
+# Run application commands
+nvidia-smi
+
+## Printing information about the Slurm Job
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+echo "Name of the cluster on which the job is executing." $SLURM_CLUSTER_NAME
+echo "Number of tasks to be initiated on each node." $SLURM_TASKS_PER_NODE
+echo "Number of cpus requested per task." $SLURM_CPUS_PER_TASK
+echo "Number of CPUS on the allocated node." $SLURM_CPUS_ON_NODE
+echo "Total number of processes in the current job." $SLURM_NTASKS
+echo "List of nodes allocated to the job" $SLURM_NODELIST
+echo "Total number of nodes in the job's resource allocation." $SLURM_NNODES
+echo "List of allocated GPUs." $SLURM_JOB_GPUS
+
+## Load any module that you need
+module load Anaconda3
+
+## Run any specific environment you have
+#source activate DeepBioComp
+
+## get tunneling info
+XDG_RUNTIME_DIR=""
+ipnport=$(shuf -i8000-9999 -n1)
+ipnip=$(hostname -i)
+
+## print tunneling instructions to gpu_{jobid}.out
+echo -e "\n\n   Copy/Paste this in your local terminal to ssh tunnel with remote  "
+echo        "   ------------------------------------------------------------------"
+echo        "   ssh -N -L $ipnport:$ipnip:$ipnport $USER@pantarhei.ua.edu         "
+echo        "   ------------------------------------------------------------------"
+echo -e "\n\n   Then open a browser on your local machine to the following address"
+echo        "   ------------------------------------------------------------------"
+echo        "   localhost:$ipnport                                                "
+echo -e     "   ------------------------------------------------------------------\n\n"
+sleep 1
+
+## start an ipcluster instance and launch jupyter server
+
+## For Jupyter Notebook
+#jupyter-notebook --no-browser --port=$ipnport --ip=$ipnip
+
+## For Jupyter Lab
+jupyter-lab --no-browser --port=$ipnport --ip=$ipnip
+```
+
+To run Jupyter Notebook instead of Jupyter Lab, comment out the `jupyter-lab` line and uncomment the `jupyter-notebook` line near the bottom.
+
+### Script Explanation
+
+**SBATCH directives**
+
+| Directive | Value | Purpose |
+|-----------|-------|---------|
+| `-J` | gpu_jupyter_test_job | Label shown in `squeue` |
+| `-p` | gpu | GPU partition (max wall time 12 hours); use `gpu-more-time` for up to 5 days |
+| `--output` | gpu_%j.out | Log file; `%j` is replaced with the job ID — the SSH tunnel command is printed here |
+| `--time` | 04:00:00 | Session length; 4 hours is a reasonable default for interactive GPU work |
+| `--ntasks` | 1 | Single task — Jupyter runs as one process |
+| `--cpus-per-task` | 10 | CPU cores available inside the notebook for data loading and preprocessing |
+| `--gpus-per-task` | 1 | Allocates one GPU to the task — required for GPU-accelerated libraries |
+
+**`nvidia-smi`**
+
+Runs immediately after the job starts and prints the GPU hardware summary to the log file:
+
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.85.12    Driver Version: 525.85.12    CUDA Version: 12.0    |
+| GPU  Name              | Memory-Usage | GPU-Util |
+|   0  Tesla V100-SXM2   |   0MiB / 16160MiB |     0%   |
++-----------------------------------------------------------------------------+
+```
+
+This confirms that a GPU was allocated before you spend time connecting. If `nvidia-smi` is not in the log, the GPU was not reserved.
+
+**Diagnostic echo statements**
+
+Prints key Slurm variables — including `SLURM_JOB_GPUS` — so you can verify which GPU index was assigned to the job. `SLURM_JOB_GPUS` is the reliable variable to use with `--gpus-per-task`; `CUDA_VISIBLE_DEVICES` is not consistently set by Slurm when using that directive.
+
+**`module load Anaconda3`**
+
+Makes `jupyter-lab`, `jupyter-notebook`, and the base conda environment available on the GPU compute node. If you have a custom conda environment with GPU libraries (e.g., PyTorch, TensorFlow), uncomment and edit the `source activate` line:
+
+```bash
+source activate my_gpu_env
+```
+
+**Tunneling setup**
+
+```bash
+XDG_RUNTIME_DIR=""
+ipnport=$(shuf -i8000-9999 -n1)
+ipnip=$(hostname -i)
+```
+
+- `XDG_RUNTIME_DIR=""` suppresses a Jupyter warning about a missing runtime directory on compute nodes.
+- `shuf -i8000-9999 -n1` picks a random port in the 8000–9999 range to avoid collisions with other users.
+- `hostname -i` gets the GPU node's internal IP address required for the tunnel.
+
+The `echo` block prints the exact SSH command and browser URL you need to connect.
+
+**`sleep 1`**
+
+Gives the echo output a moment to flush to the log file before Jupyter starts writing its own output.
+
+**Jupyter server command**
+
+```bash
+jupyter-lab --no-browser --port=$ipnport --ip=$ipnip
+```
+
+- `--no-browser` prevents Jupyter from trying to open a browser on the headless compute node.
+- `--port` and `--ip` bind the server to the randomly chosen port on the GPU node's IP.
+
+---
+
+## Submitting the Job
+
+```bash
+sbatch jupyter_notebook_gpu.job
+```
+
+Slurm returns a job ID, for example:
+
+```
+Submitted batch job 318
+```
+
+---
+
+## Connecting from Your Local Machine
+
+**Step 1 — Verify the GPU and find the SSH command**
+
+Poll the log file until the GPU summary and tunnel instructions appear:
+
+```bash
+tail -f gpu_318.out
+```
+
+Confirm `nvidia-smi` output appears first, then look for the tunnel block:
+
+```
+   Copy/Paste this in your local terminal to ssh tunnel with remote
+   ------------------------------------------------------------------
+   ssh -N -L 9134:10.0.0.6:9134 jsmith@pantarhei.ua.edu
+   ------------------------------------------------------------------
+
+   Then open a browser on your local machine to the following address
+   ------------------------------------------------------------------
+   localhost:9134
+   ------------------------------------------------------------------
+```
+
+**Step 2 — Open the SSH tunnel on your local machine**
+
+Open a new terminal on your laptop and run the command from the log:
+
+```bash
+ssh -N -L 9134:10.0.0.6:9134 jsmith@pantarhei.ua.edu
+```
+
+This command will appear to hang — that is normal. Leave it running.
+
+**Step 3 — Open Jupyter in your browser**
+
+Navigate to the address printed in the log:
+
+```
+localhost:9134
+```
+
+If prompted for a token, find the full URL (including `?token=...`) in the log file and paste it directly into the browser address bar.
+
+---
+
+## Verifying GPU Access Inside the Notebook
+
+Once connected, open a new notebook cell and run:
+
+```python
+import torch
+print(torch.cuda.is_available())        # True
+print(torch.cuda.get_device_name(0))    # e.g. Tesla V100-SXM2-16GB
+```
+
+Or with CuPy:
+
+```python
+import cupy as cp
+print(cp.cuda.runtime.getDeviceCount())  # 1
+```
+
+---
+
+## Ending the Session
+
+Close the browser tab, then cancel the Slurm job:
+
+```bash
+scancel 318
+```
+
+Press `Ctrl-C` in the terminal running the SSH tunnel to close it.
+
+---
+
+## Comparing Normal vs GPU Partition
+
+| Setting | Normal (`jupyter_notebook.job`) | GPU (`jupyter_notebook_gpu.job`) |
+|---------|--------------------------------|----------------------------------|
+| Partition | `normal` | `gpu` |
+| `--cpus-per-task` | 2 | 10 |
+| `--gpus-per-task` | not set | 1 |
+| `--time` | 01:00:00 | 04:00:00 |
+| GPU check (`nvidia-smi`) | not present | yes, at job start |
+| Output file | `jupyter-notebook-%J.log` | `gpu_%j.out` |
+
+Use the normal partition for pure Python/NumPy/pandas work. Use the GPU partition when your notebook uses PyTorch, TensorFlow, CuPy, or any other CUDA-backed library.
+
+---
+
+## Troubleshooting
+
+**`nvidia-smi` output is missing from the log**
+
+The GPU was not allocated. Confirm `--gpus-per-task=1` is present in the script and resubmit.
+
+**`torch.cuda.is_available()` returns `False` inside the notebook**
+
+The GPU libraries in your active conda environment may not match the CUDA version on the node. Check the CUDA version from `nvidia-smi` and reinstall PyTorch with the matching CUDA wheel.
+
+**The log file shows no tunnel instructions**
+
+Check whether the job is still queued (`squeue -u $USER`). The tunnel block only appears after Anaconda3 loads and the port is selected, which can take 30–60 seconds after the job starts.
+
+**Browser shows "Unable to connect"**
+
+Confirm the SSH tunnel terminal is still running. If it exited, re-run the `ssh -N -L ...` command from the log file.
+
+---
+
+For CPU-only Jupyter sessions, see the [Jupyter Notebook (Normal Partition)](./jupyter-notebook-normal) page.
+
+For GPU-accelerated hydrologic analysis using CuPy inside your Jupyter session, see the [Hydrologist GPU Notebook Example](./hydrologist-gpu-notebook) page.
+
+## Additional Resources
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

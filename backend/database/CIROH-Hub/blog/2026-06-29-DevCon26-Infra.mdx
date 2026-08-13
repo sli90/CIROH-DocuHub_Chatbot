@@ -1,0 +1,128 @@
+---
+title: "Powering CIROH DevCon 2026: How CIROH and 2i2c Ran Cloud Computing at Scale"
+description: Our Research Cyberinfrastructure team provisioned cloud resources for 15 hands-on workshops across three days in close collaboration with our partners at 2i2c. Here's what we ran, and how.
+slug: devcon26-infra
+authors: [arpita-2025, april-johnson, benjamin-lee, nia-minor, harsha-vemula]
+tags: [Blog, CIROH, Conference, CIROH DevCon, Services, NSF, NSF Access, 2i2c, JetStream2, AWS, Google Cloud, HPC, Wukong, Pantarhei, On-Premises Services]
+hide_table_of_contents: false
+Last updated date: "06/29/2026"
+path: "blog/2026-06-29-DevCon26-Infra"
+
+---
+
+<!-- generated-local-content -->
+
+## Authors
+
+- **Arpita Patel** - Assistant Director, IT and DevOps, Alabama Water Institute ([Profile](https://github.com/arpita0911patel))
+- **April Johnson** - Community and People Lead, 2i2c ([Profile](https://2i2c.org/author/april-johnson/))
+- **Benjamin Lee** - Development Operations Engineer, Alabama Water Institute ([Profile](https://www.linkedin.com/in/seungchanlee/))
+- **Nia Minor** - Graduate Research Assistant, Alabama Water Institute ([Profile](https://github.com/sheargrub))
+- **Harsha Vemula** - DevOps Engineer, Alabama Water Institute ([Profile](https://github.com/harshavemula-ua))
+
+
+import useBaseUrl from "@docusaurus/useBaseUrl"
+
+At the [2026 CIROH Developers Conference](https://ciroh.ua.edu/devconference-2026-ciroh-developers-conference/)
+(University of Utah, May 27–29) participants used a variety of tools and models on cloud infrastructure
+they'd never had to install, configure, or even think about. To enable that seamless experience,
+our Research Cyberinfrastructure team provisioned cloud resources for **15 hands-on workshops**
+across three days in close collaboration with our partners at 2i2c. Here's what we ran, and how.
+
+## What we provisioned, by the numbers
+
+Running an event of this scale requires more than just a single cloud context, as each workshop posed
+its own computing and data access requirements. CIROH Cyberinfrastructure met this challenge via a
+coordinated stack spanning multiple cloud providers and services. Across the
+[15 workshops](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues?q=is%3Aissue%20state%3Aclosed%20label%3ADevCon2026)
+that needed infrastructure (14 requests), the R2OHC cloud provisioned the following:
+
+| Provider                  | Workshops | What it carried |
+|---------------------------|-----------|-----------------|
+| 2i2c JupyterHub on GCP    | 12        | A mix of Small, Medium, Large, and GPU servers; **9 workshops ran on custom-built images** |
+| AWS                       | 3         | NRDS, HydroServer, TEEHR |
+| Google NWM BigQuery API   | 2         | Input data for Flood Inundation Mapping (multi-source DB / HAND visualization) and Hydroinformatics (Essential Geospatial Skills) |
+| NSF Access                | 1         | GPU-powered VMs for the "Talk to NRDS" LLM workshop |
+
+## One link, no setup: the Workshop Hub
+
+For 12 of these workshops, their backbone was the **CIROH–2i2c JupyterHub**, a managed JupyterHub
+environment that 2i2c operates on Google Cloud. For the conference, we provisioned a dedicated
+**Workshop Hub**: an ephemeral environment that lives only for the duration of the event and then spins back down.
+
+## The work that happens before anyone logs in: custom images
+
+**Nine of the twelve JupyterHub workshops needed a custom software image** to support their unique computing needs.
+Sessions covering topics like the Community Asset Computation Hub (CCNH), Foundations of Machine Learning,
+CUAHSI Hydroinformatics, HydroServer, INFLECT-based Flood Inundation Mapping, Satellite Data Projection,
+Machine-Learned Model Emulators, and Water Quality Modeling from Hillslope to Watershed Scales each had distinct dependency stacks.
+
+That's a coordination problem, and it was solved weeks before the conference. Workshop leads told us what their sessions needed,
+we defined those environments in our public [`awi-ciroh-image` repository on GitHub](https://github.com/CIROH-UA/awi-ciroh-image),
+and 2i2c deployed them. By the time attendees arrived, the right libraries were already in place, all but eliminating the usual
+loop of haggling with installations and configurations that “work on my machine”. Instead, there were reproducible environments,
+ready and consistent on day one, demonstrating clear evidence of how tightly the CIROH and 2i2c teams work together.
+
+<figure style={{ textAlign: "center" }}>
+  <img
+   class="dark-mode-white-bg"
+   src={useBaseUrl('/img/blog/2026-06-devcon/devcon26-usage.png')}
+   width='100%'
+   alt="A line graph showing usage of CIROH-2i2c JupyterHub environments over time. A spike in usage occurs on May 27th, peaking on the 27th at 132 workshop users, before leveling back off to near-zero levels after the conference's end on June 1st."
+   />
+  <figcaption><em>During DevCon, as many as 132 participants were logged into CIROH-2i2c JupyterHub per day.</em></figcaption>
+</figure>
+
+## CCNH: Instant Access to NextGen in JupyterHub
+
+Two of the twelve workshops also marked the first appearance of the
+[**CIROH Community NextGen Hub** (**CCNH**)](https://hub.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/)
+at a DevCon event! This JupyterHub image contains all of the dependencies
+required to run the NextGen Framework, bypassing the framework's notorious
+complexity. CCNH represents a new paradigm where the NextGen framework can
+be run entirely from the comfort of a web browser, further extending its
+accessibility and expanding the potential for research and development with
+the framework.
+
+## DevCon 2026 workshops using CIROH Cyberinfrastructure
+
+-	**[#463 — Hands-on LSTM and Transformer for Operational Streamflow Prediction](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/463)** (Penn State): Brings state-of-the-art deep-learning sequence models into an operational streamflow forecasting workflow. This workshop made use of **2i2c GPU servers** to enable its cutting-edge approach.
+-	**[#462 — Foundations of ML: From Architecture to Optimization](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/462)** (UA): Entry-level on-ramp giving hydrology researchers the core building blocks of machine learning workflow.
+-	**[#460 — Machine Learning: Satellite Data Projection and Georeferencing with Satpy](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/460)** (Stevens): Teaches the remote-sensing preprocessing (projection/georeferencing of polar-orbiting data) needed to feed satellite inputs into models.
+-	**[#458 — Essential Geospatial Data and Coding Skills for CIROH Researchers / CUAHSI Hydroinformatics](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/458)** (CUAHSI): Establishes the baseline geospatial-data and coding literacy that underpins nearly every other track.
+-	**[#455 — Physics-Based Framework to Predict Water Quality from Hillslope to Watershed Scales](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/455)** (U. Iowa): Applies a physics-first modeling approach to demonstrate the design decisions that go into scaling a model from local to regional contexts.
+-	**[#449 — Topographically Derived High Flow Thresholds for Flood Inundation Mapping](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/449)** (USU): Demonstrates an approach to improve flood-inundation mapping by deriving high-flow thresholds directly from terrain.
+-	**[#441 — Temporary API Key for CIROH NWM API](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/441)**: Two workshops queried large hydrologic datasets directly through the **Google BigQuery API**, one in Flood Inundation Mapping and one in Hydroinformatics.
+-	**[#411 — Talk to NRDS: LLM Chat for TethysDash to Explore the NextGen Research Data Stream](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/411)** (BYU/Aquaveo): Demonstrates a natural-language/LLM interface for querying NRDS outputs, lowering the barrier to exploring the data stream. (Notably, this workshop used **50 custom-provisioned VMs** on the JetStream2 cloud to handle the heightened GPU requirements of this novel technology.)
+-	**[#410 — Machine-Learned Emulator Models for Water-Quality Uncertainty](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/410)** (UVM): Trains ML emulators on the output of baseline models to quantify predictive uncertainty cheaply, replacing expensive repeated runs of in-depth physical simulations.
+-	**[#408 — Integrating Models in NGIAB, NRDS](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/408)** (UA): The core research-to-operations session covering the model-integration lifecycle from BMI into NGIAB and onward to NRDS.
+-	**[#389 — Managing and Standards-Based Sharing of Hydrologic Observations Using HydroServer](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/389)** (USU): Standardizes how observational data is collected, organized, and shared via built-for-purpose software, solidifying the evaluation/ground-truth side of modeling.
+-	**[#388 — Orchestrating End-to-End Reproducible NextGen Workflows](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/388)** (U. Calgary): Focuses on reproducibility, chaining NextGen and adjacent steps into repeatable, shareable workflows. This session made use of both a single "Community Asset" image and a **shared storage** volume, with input data pre-staged in a common folder so dozens of users could work against the same datasets across both sessions.
+-	**[#383 — Uncertainty Analysis for Extreme Event Hydrometry](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/383)** (U. Iowa): Provides the theory and tools for quantifying uncertainty specifically in extreme-event measurement.
+-	**[#379 — Interactive CIROH Research Apps with Python-only Tethys Component Apps](https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/379)** (Aquaveo/BYU): Lets researchers build interactive web apps for their results in pure Python, without the overhead of learning unwieldy front-end frameworks.
+
+## HydroShare integration: from a resource to a running notebook
+
+Many workshop materials were published as HydroShare resources and launched straight into the Workshop Hub via a single link, pulling notebooks and data into the user's environment automatically. What might otherwise have been an onerous process of managing cluttered Downloads folders and local directory structures was instead compressed into a single click.
+
+## Why the 2i2c partnership matters
+
+2i2c's significance in this process went far beyond just hosting the JupyterHub. 2i2c specializes in open-source cloud infrastructure for research, and that shared commitment shaped our collaboration. Our entire stack — JupyterHub, the container images, the HydroShare connector — is open source and lives in public repositories. Another institution could easily read our Dockerfiles or dependency configurations to launch similar environments.
+
+The operational model matters too. 2i2c manages JupyterHubs for many science communities, and what they learn from one community gets shared quickly with others. Our pre-conference testing and prep was informed by dashboards 2i2c built for EarthScope's computing-intense workshops, and the temporary storage approach 2i2c and CIROH used at DevCon is now being re-used with other communities (including EarthScope). 
+
+## Lessons we're carrying forward
+
+**Pre-event automation is everything.** Nine custom images don't build themselves on the morning of a workshop. Front-loading that work meant we could focus on people, not infrastructure, during the event.
+
+**Treat infrastructure as tracked engineering.** Thirteen GitHub issues turned a sprawling set of requests into an auditable plan — and a head start on next year.
+
+**Reproducibility scales.** Version-controlled environment images are the difference between 15 consistent workshops and 15 individual troubleshooting sessions — and they let any of these workshops be re-run on the mainline (NM2.1) 2i2c JupyterHub environment.
+
+**Open-source, public-private partnerships work.** Corporate cloud providers (AWS/Google Cloud), an NSF-funded computing resource, a mission-driven infrastructure partner with 2i2c, and a university research institute (CIROH) all contributed aspects of the DevCon experience. The result was a unified experience across every workshop. That's the model we want to keep building on.
+
+To our partners at 2i2c, and to the providers and resources that backed DevCon 2026: thank you. To our DevCon networking sponsors — Lynker, Google Cloud, Civil and Environmental Engineering at The University of Utah — thank you.
+
+And to everyone who logged in, ran the notebooks, and pushed their work forward — that's exactly what this infrastructure is for.
+
+Interested in CIROH's cloud resources? Learn more at [hub.ciroh.org/docs/services/intro](/docs/services/intro) or reach the CIROH Cyberinfrastructure team at [ciroh-it-support@ua.edu](mailto:ciroh-it-support@ua.edu).

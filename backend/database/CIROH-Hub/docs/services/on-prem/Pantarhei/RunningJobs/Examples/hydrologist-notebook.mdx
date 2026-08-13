@@ -1,0 +1,235 @@
+---
+sidebar_position: 11
+
+title: "Hydrologist Notebook Example (Normal Partition)"
+description: "SCS Curve Number hydrologic workflow using NumPy and Matplotlib inside a Jupyter session on Pantarhei's normal CPU partition."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, Hydrology, Jupyter, Python, NumPy]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/hydrologist-notebook"
+
+---
+
+## Hydrologist Notebook Example (Normal Partition)
+
+This page contains ready-to-run Jupyter notebook cells implementing the SCS Curve Number hydrologic workflow — the same calculations from the [Hydrologist Python examples](./hydrologist-python-examples) — using NumPy for vectorized computation inside a CPU Jupyter session.
+
+Before running these cells, start a Jupyter session by submitting the [normal partition Jupyter job script](./jupyter-notebook-normal) and connecting via the SSH tunnel.
+
+No extra package installation is needed — NumPy and Matplotlib are included in the Anaconda3 module loaded by the job script.
+
+---
+
+### Cell 1 — Import libraries and verify environment
+
+```python
+# Cell 1 — import libraries and verify the environment
+import numpy as np
+import matplotlib.pyplot as plt
+import csv
+import time
+import sys
+
+print(f"Python  : {sys.version.split()[0]}")
+print(f"NumPy   : {np.__version__}")
+print(f"Ready to run the SCS Curve Number hydrologic workflow.")
+```
+
+---
+
+### Cell 2 — Generate synthetic hydrology data
+
+```python
+# Cell 2 — generate 50,000 synthetic hydrology records
+rng = np.random.default_rng(seed=42)
+N = 50_000
+
+precipitation_mm    = rng.uniform(0.0, 100.0, N)     # mm, daily precipitation
+curve_numbers       = rng.integers(40, 95, N)         # SCS CN (40=forest, 90+=urban)
+time_concentration  = rng.uniform(10.0, 120.0, N)     # minutes
+contributing_area   = rng.uniform(0.1, 50.0, N)       # km²
+antecedent_moisture = rng.uniform(0.3, 0.8, N)        # 0–1, antecedent saturation
+
+print(f"Generated {N:,} synthetic records")
+print(f"Mean precipitation      : {precipitation_mm.mean():.2f} mm")
+print(f"Mean curve number       : {curve_numbers.mean():.1f}")
+print(f"Mean time concentration : {time_concentration.mean():.2f} min")
+print(f"Mean contributing area  : {contributing_area.mean():.2f} km²")
+print(f"Mean antecedent moisture: {antecedent_moisture.mean():.3f}")
+```
+
+---
+
+### Cell 3 — SCS Curve Number runoff (vectorized)
+
+```python
+# Cell 3 — vectorized SCS Curve Number runoff
+# Equation: Q = (P - Ia)^2 / (P - Ia + S),  Ia = 0.2*S,  S = 25400/CN - 254
+
+t0 = time.perf_counter()
+
+S  = (25400.0 / curve_numbers) - 254.0    # maximum retention (mm)
+Ia = 0.2 * S                               # initial abstraction (mm)
+runoff_scs = np.where(
+    precipitation_mm > Ia,
+    (precipitation_mm - Ia)**2 / (precipitation_mm - Ia + S),
+    0.0
+)
+
+elapsed = (time.perf_counter() - t0) * 1000
+
+print(f"SCS runoff computed in : {elapsed:.2f} ms  ({N:,} records)")
+print(f"Mean SCS runoff        : {runoff_scs.mean():.4f} mm")
+print(f"Max  SCS runoff        : {runoff_scs.max():.4f} mm")
+print(f"Zero-runoff records    : {(runoff_scs == 0).sum():,}  (P ≤ Ia)")
+```
+
+---
+
+### Cell 4 — Clark routing (vectorized)
+
+```python
+# Cell 4 — Clark routing through storage reaches (vectorized)
+
+t0 = time.perf_counter()
+
+num_reaches = np.maximum(2, (time_concentration / 1.0).astype(int))  # duration_step = 1 min
+storage_coeff = time_concentration / num_reaches
+
+routed_runoff = runoff_scs.copy()
+max_reaches = int(num_reaches.max())
+
+for i in range(max_reaches):
+    # Only update records whose num_reaches > i
+    mask = num_reaches > i
+    routed_runoff[mask] *= (1.0 - np.exp(-1.0 / storage_coeff[mask]))
+
+elapsed = (time.perf_counter() - t0) * 1000
+
+print(f"Clark routing computed in : {elapsed:.2f} ms  ({N:,} records)")
+print(f"Mean routed runoff        : {routed_runoff.mean():.4f} mm")
+print(f"Max  routed runoff        : {routed_runoff.max():.4f} mm")
+```
+
+---
+
+### Cell 5 — Baseflow separation and peak discharge (vectorized)
+
+```python
+# Cell 5 — baseflow separation and peak discharge (vectorized)
+
+t0 = time.perf_counter()
+
+# --- Baseflow separation ---
+recession_constant = 0.95 - antecedent_moisture * 0.3
+direct_runoff = routed_runoff * (1.0 - antecedent_moisture)
+baseflow      = routed_runoff * antecedent_moisture
+
+# Recession index: sum of baseflow * recession_constant^day for days 1..30
+days = np.arange(1, 31)                                 # shape (30,)
+recession_index = (baseflow[:, None] * recession_constant[:, None] ** days).sum(axis=1)
+
+# --- Peak discharge ---
+intensity = 100.0 / (time_concentration + 10.0) ** 0.7
+area_m2   = contributing_area * 1e6
+runoff_m3 = (direct_runoff / 1000.0) * area_m2
+
+t_steps    = np.linspace(0, 1, 50)                      # normalised 0→1
+peak_factor = (np.sin(np.pi * t_steps) * intensity[:, None] / 50.0).sum(axis=1)
+peak_discharge = runoff_m3 * peak_factor / (time_concentration * 60.0)
+
+elapsed = (time.perf_counter() - t0) * 1000
+
+print(f"Baseflow + peak discharge computed in : {elapsed:.2f} ms  ({N:,} records)")
+print(f"Mean direct runoff   : {direct_runoff.mean():.4f} mm")
+print(f"Mean baseflow        : {baseflow.mean():.4f} mm")
+print(f"Mean peak discharge  : {peak_discharge.mean():.6f} m³/s")
+print(f"Max  peak discharge  : {peak_discharge.max():.6f} m³/s")
+```
+
+---
+
+### Cell 6 — Summary statistics and visualisation
+
+```python
+# Cell 6 — summary statistics and plots
+fig, axes = plt.subplots(2, 3, figsize=(15, 8))
+fig.suptitle("SCS Curve Number Hydrologic Workflow — Summary", fontsize=14)
+
+datasets = [
+    (precipitation_mm, "Precipitation (mm)",    "skyblue"),
+    (runoff_scs,       "SCS Runoff (mm)",        "steelblue"),
+    (routed_runoff,    "Routed Runoff (mm)",      "royalblue"),
+    (direct_runoff,    "Direct Runoff (mm)",      "darkorange"),
+    (baseflow,         "Baseflow (mm)",           "green"),
+    (peak_discharge,   "Peak Discharge (m³/s)",   "crimson"),
+]
+
+for ax, (data, label, color) in zip(axes.flat, datasets):
+    ax.hist(data, bins=60, color=color, edgecolor="white", alpha=0.85)
+    ax.set_title(label)
+    ax.set_xlabel(label)
+    ax.set_ylabel("Count")
+    ax.axvline(data.mean(), color="black", linestyle="--", linewidth=1.2,
+               label=f"Mean: {data.mean():.3f}")
+    ax.legend(fontsize=8)
+
+plt.tight_layout()
+plt.savefig("hydrology_summary.png", dpi=150)
+plt.show()
+print("Plot saved to hydrology_summary.png")
+```
+
+---
+
+### Cell 7 — Save results to CSV
+
+```python
+# Cell 7 — save all results to CSV using the built-in csv module
+import csv
+
+results = {
+    "precipitation_mm"    : precipitation_mm,
+    "curve_number"        : curve_numbers,
+    "time_concentration"  : time_concentration,
+    "contributing_area"   : contributing_area,
+    "antecedent_moisture" : antecedent_moisture,
+    "runoff_scs"          : runoff_scs,
+    "routed_runoff"       : routed_runoff,
+    "direct_runoff"       : direct_runoff,
+    "baseflow"            : baseflow,
+    "recession_index"     : recession_index,
+    "peak_discharge"      : peak_discharge,
+}
+
+output_file = "hydrology_notebook_results.csv"
+
+with open(output_file, "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(results.keys())
+    writer.writerows(zip(*results.values()))
+
+print(f"Saved {N:,} records to {output_file}")
+
+# Preview first 3 rows
+header = f"{'precip_mm':>10} {'CN':>4} {'runoff_scs':>12} {'baseflow':>10} {'peak_Q':>12}"
+print(f"\n{header}")
+print("-" * len(header))
+for i in range(3):
+    print(f"{results['precipitation_mm'][i]:>10.4f} "
+          f"{results['curve_number'][i]:>4d} "
+          f"{results['runoff_scs'][i]:>12.4f} "
+          f"{results['baseflow'][i]:>10.4f} "
+          f"{results['peak_discharge'][i]:>12.6f}")
+```
+
+---
+
+## Additional Resources
+
+- For the same workflow on the GPU partition with CuPy, see the [Hydrologist GPU Notebook Example](./hydrologist-gpu-notebook)
+- For batch (non-interactive) hydrology jobs, see the [Hydrologist Python Job Examples](./hydrologist-python-examples)
+- For the C implementation of the same workflow, see the [Hydrologist C Job Examples](./hydrologist-c-examples)
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

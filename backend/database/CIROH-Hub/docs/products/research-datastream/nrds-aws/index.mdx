@@ -1,0 +1,46 @@
+---
+sidebar_position: 1
+title: "NextGen Research Datastream"
+description: "Infrastructure-as-Code for the NextGen Research Datastream, ready to be deployed anywhere via Terraform."
+tags: [Products, CIROH, NGIAB, NextGen Datastream, AWS, National Water Model]
+Last updated date: "11/26/2025"
+path: "docs/products/research-datastream/nrds-aws/index"
+
+---
+
+:::info
+Page under construction.
+:::
+
+import GitHubReadme from '@site/src/components/GitHubHandling/GitHubReadme';
+
+<GitHubReadme username="CIROH-UA" repo="ngen-datastream" readmeFileName="README.md" trimTitle="true"/>
+
+# NextGen Research DataStream
+The NextGen Research DataStream is an array of daily [NextGen](https://github.com/NOAA-OWP/ngen)-based hydrolgic simulations in the AWS cloud. An exciting aspect of the Research DataStream is the NextGen configuration is [open-sourced](https://datastream.ciroh.org/) and [community editable](https://github.com/CIROH-UA/ngen-datastream/blob/main/docs/nrds/CONTRIBUTE.md), which allows any member of the hydrologic community to contribute to improving streamflow predictions. By making the NextGen forcings, outputs, and configuration publicly available, it is now possible to leverage regional expertise and incrementally improve streamflow predictions configured with the NextGen Framework. 
+See the Research DataStream related documentation:
+* **Find daily output data at:** https://datastream.ciroh.org/index.html
+* **Make improvements to NextGen configuration:**
+Find out how you can contribute [here](https://github.com/CIROH-UA/ngen-datastream/blob/main/docs/nrds/CONTRIBUTE.md)!
+* **Current status and configuration:** Read [here](https://github.com/CIROH-UA/ngen-datastream/blob/main/docs/nrds/STATUS_AND_METADATA.md)!
+* **Infrastructure as Code:** See the NRDS AWS architecture [here](https://github.com/CIROH-UA/ngen-datastream/blob/main/infra/aws/terraform/docs/ARCHITECTURE.md). 
+* **Open Discussions**: Check out our discussions [here](https://github.com/CIROH-UA/ngen-datastream/discussions)! Feel free to start your own discussion, or participate in any that are ongoing. 
+
+# ForcingProcessor
+ForcingProcessor has moved to https://github.com/CIROH-UA/forcingprocessor
+
+# DataStreamCLI
+DataStreamCLI has moved to https://github.com/CIROH-UA/datastreamcli
+
+## License
+The entirety of `ngen-datastream` is distributed under [GNU General Public License v3.0 or later](LICENSE.md)
+
+
+<GitHubReadme username="CIROH-UA" repo="ngen-datastream" readmeFileName="docs/nrds/CONTRIBUTE.md" trimTitle="true"/>
+
+The current configuration of the NextGen Research DataStream (NRDS) is public [here](https://datastream.ciroh.org/index.html#realizations/). These files are picked up directly during the NextGen executions in AWS Cloud. 
+
+To contribute to this realization file follow these steps.
+1) Improve upon parameterization in the VPU realization file
+2) Go to Issues and click on New Issue. Select "Propose NRDS/NextGen Research DataStream parameter update" template.
+3) Add details in the issue containing your updated NextGen configuration and add the label "NRDS Community Contributions"

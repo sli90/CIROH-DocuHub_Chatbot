@@ -1,0 +1,557 @@
+---
+sidebar_position: 6
+
+title: "Hydrologist C Job Examples"
+description: "Hydrologic C examples for Pantarhei, including SCS Curve Number runoff estimation, Clark routing, baseflow separation, and an MPI-enabled parallel version."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, Hydrology, C, MPI]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/hydrologist-c-examples"
+
+---
+
+## Hydrologist C Job Examples
+
+This page contains C examples tailored to hydrologic analysis on Pantarhei, implementing the same SCS Curve Number workflow as the [Python hydrology examples](./hydrologist-python-examples) — data generation, runoff estimation, Clark routing, baseflow separation, and peak discharge — and an MPI-enabled parallel version that distributes rows across ranks using `MPI_Scatterv` and `MPI_Gatherv`.
+
+### Hydrology Toy Example
+
+This example demonstrates hydrologic calculations using the SCS Curve Number method in C. It processes 50,000 synthetic data points with the same compute-heavy operations as the Python version so you can directly compare serial performance between the two languages.
+
+---
+
+**Step 1: Generate synthetic data (generate_hydrology_data.c):**
+
+```c
+// generate_hydrology_data.c
+/*
+ * Generate synthetic hydrology data for the toy example.
+ * Creates hydrology_data_50k.csv with 50,000 records including
+ * SCS Curve Number parameters for compute-heavy hydrologic calculations.
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+#define N 50000
+
+/* Uniform random value in [lo, hi) */
+static double rand_uniform(double lo, double hi) {
+    return lo + (hi - lo) * ((double)rand() / RAND_MAX);
+}
+
+int main(void) {
+    srand(42);   /* fixed seed for reproducibility */
+
+    FILE *fp = fopen("hydrology_data_50k.csv", "w");
+    if (!fp) { perror("fopen"); return 1; }
+
+    /* Write CSV header */
+    fprintf(fp, "precipitation_mm,curve_number,time_concentration,"
+                "contributing_area,antecedent_moisture\n");
+
+    for (int i = 0; i < N; i++) {
+        double precip   = rand_uniform(0.0, 100.0);   /* mm, daily precipitation */
+        int    cn       = 40 + rand() % 55;            /* 40=forest, 65=grassland, 90+=urban */
+        double tc       = rand_uniform(10.0, 120.0);   /* minutes */
+        double area     = rand_uniform(0.1, 50.0);     /* km² */
+        double moisture = rand_uniform(0.3, 0.8);      /* 0–1, antecedent saturation */
+
+        fprintf(fp, "%.4f,%d,%.4f,%.4f,%.4f\n",
+                precip, cn, tc, area, moisture);
+    }
+
+    fclose(fp);
+    printf("Generated %d synthetic data points\n", N);
+    printf("Saved to hydrology_data_50k.csv\n");
+    return 0;
+}
+```
+
+**Step 2: Calculate runoff (hydrology_toy_c.c):**
+
+```c
+// hydrology_toy_c.c
+/*
+ * Hydrology Toy Example - SCS Curve Number Runoff Calculation in C
+ * Reads hydrology_data_50k.csv and performs SCS runoff, Clark routing,
+ * baseflow separation, and peak discharge on every record.
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+#define MAX_ROWS 50000
+#define LINE_LEN 256
+
+typedef struct {
+    double precipitation_mm;
+    int    curve_number;
+    double time_concentration;
+    double contributing_area;
+    double antecedent_moisture;
+} HydroInput;
+
+typedef struct {
+    double runoff_scs;
+    double routed_runoff;
+    double direct_runoff;
+    double baseflow;
+    double recession_index;
+    double peak_discharge;
+} HydroResult;
+
+/*
+ * SCS Curve Number runoff: Q = (P - Ia)^2 / (P - Ia + S)
+ * where S = (25400/CN) - 254  and  Ia = 0.2 * S
+ */
+double scs_runoff(double P, int CN) {
+    double S  = (25400.0 / CN) - 254.0;
+    double Ia = 0.2 * S;
+    if (P <= Ia) return 0.0;
+    return (P - Ia) * (P - Ia) / (P - Ia + S);
+}
+
+/* Clark routing through storage reaches */
+double clark_routing(double runoff, double tc, double duration_step) {
+    int num_reaches = (int)(tc / duration_step);
+    if (num_reaches < 2) num_reaches = 2;
+    double routed = runoff;
+    for (int i = 0; i < num_reaches; i++) {
+        double storage_coeff = tc / num_reaches;
+        routed *= (1.0 - exp(-duration_step / storage_coeff));
+    }
+    return routed;
+}
+
+/* Baseflow separation using 30-day exponential recession */
+void baseflow_separation(double total_runoff, double antecedent_moisture,
+                         double *direct_runoff, double *baseflow,
+                         double *recession_index) {
+    double recession_constant = 0.95 - (antecedent_moisture * 0.3);
+    *direct_runoff   = total_runoff * (1.0 - antecedent_moisture);
+    *baseflow        = total_runoff * antecedent_moisture;
+    *recession_index = 0.0;
+    for (int day = 1; day <= 30; day++)
+        *recession_index += (*baseflow) * pow(recession_constant, day);
+}
+
+/* Peak discharge using rational-style intensity approximation */
+double calculate_peak_discharge(double runoff, double area_sqkm, double tc) {
+    double intensity = 100.0 / pow(tc + 10.0, 0.7);
+    double area_m2   = area_sqkm * 1e6;
+    double runoff_m3 = (runoff / 1000.0) * area_m2;
+    double peak_factor = 0.0;
+    for (int k = 0; k < 50; k++) {
+        double t = tc * k / 49.0;
+        peak_factor += sin(M_PI * t / tc) * intensity / 50.0;
+    }
+    return (runoff_m3 * peak_factor) / (tc * 60.0);
+}
+
+int main(void) {
+    printf("============================================================\n");
+    printf("Hydrology Toy Example - SCS Curve Number Calculation (C)\n");
+    printf("============================================================\n");
+
+    /* Read CSV */
+    FILE *fp = fopen("hydrology_data_50k.csv", "r");
+    if (!fp) { perror("fopen"); return 1; }
+
+    HydroInput  *inputs  = malloc(MAX_ROWS * sizeof(HydroInput));
+    HydroResult *results = malloc(MAX_ROWS * sizeof(HydroResult));
+    if (!inputs || !results) { fprintf(stderr, "malloc failed\n"); return 1; }
+
+    char line[LINE_LEN];
+    fgets(line, LINE_LEN, fp);   /* skip header */
+
+    int n = 0;
+    while (n < MAX_ROWS && fgets(line, LINE_LEN, fp)) {
+        sscanf(line, "%lf,%d,%lf,%lf,%lf",
+               &inputs[n].precipitation_mm,
+               &inputs[n].curve_number,
+               &inputs[n].time_concentration,
+               &inputs[n].contributing_area,
+               &inputs[n].antecedent_moisture);
+        n++;
+    }
+    fclose(fp);
+    printf("Loaded %d data points\n\n", n);
+
+    /* Process every record */
+    clock_t t0 = clock();
+
+    for (int i = 0; i < n; i++) {
+        HydroInput  *in  = &inputs[i];
+        HydroResult *out = &results[i];
+
+        out->runoff_scs    = scs_runoff(in->precipitation_mm, in->curve_number);
+        out->routed_runoff = clark_routing(out->runoff_scs, in->time_concentration, 1.0);
+        baseflow_separation(out->routed_runoff, in->antecedent_moisture,
+                            &out->direct_runoff, &out->baseflow, &out->recession_index);
+        out->peak_discharge = calculate_peak_discharge(
+                out->direct_runoff, in->contributing_area, in->time_concentration);
+    }
+
+    double elapsed = (double)(clock() - t0) / CLOCKS_PER_SEC;
+
+    /* Summary statistics */
+    double sum_precip = 0, sum_scs = 0, sum_routed = 0;
+    double sum_direct = 0, sum_base = 0, sum_peak = 0, max_peak = 0;
+    for (int i = 0; i < n; i++) {
+        sum_precip += inputs[i].precipitation_mm;
+        sum_scs    += results[i].runoff_scs;
+        sum_routed += results[i].routed_runoff;
+        sum_direct += results[i].direct_runoff;
+        sum_base   += results[i].baseflow;
+        sum_peak   += results[i].peak_discharge;
+        if (results[i].peak_discharge > max_peak)
+            max_peak = results[i].peak_discharge;
+    }
+
+    printf("Results:\n");
+    printf("  Total records processed : %d\n",      n);
+    printf("  Mean precipitation      : %.2f mm\n", sum_precip / n);
+    printf("  Mean SCS runoff         : %.2f mm\n", sum_scs    / n);
+    printf("  Mean routed runoff      : %.2f mm\n", sum_routed / n);
+    printf("  Mean direct runoff      : %.2f mm\n", sum_direct / n);
+    printf("  Mean baseflow           : %.2f mm\n", sum_base   / n);
+    printf("  Mean peak discharge     : %.4f m3/s\n", sum_peak / n);
+    printf("  Max  peak discharge     : %.4f m3/s\n", max_peak);
+    printf("\nComputation time  : %.4f s\n", elapsed);
+    printf("Average per record: %.4f ms\n", elapsed / n * 1000.0);
+
+    /* Write results CSV */
+    FILE *out_fp = fopen("hydrology_results_50k_c.csv", "w");
+    if (out_fp) {
+        fprintf(out_fp, "precipitation_mm,curve_number,runoff_scs,routed_runoff,"
+                        "direct_runoff,baseflow,recession_index,peak_discharge\n");
+        for (int i = 0; i < n; i++)
+            fprintf(out_fp, "%.4f,%d,%.4f,%.4f,%.4f,%.4f,%.4f,%.6f\n",
+                    inputs[i].precipitation_mm, inputs[i].curve_number,
+                    results[i].runoff_scs,      results[i].routed_runoff,
+                    results[i].direct_runoff,   results[i].baseflow,
+                    results[i].recession_index, results[i].peak_discharge);
+        fclose(out_fp);
+        printf("Results saved to hydrology_results_50k_c.csv\n");
+    }
+
+    free(inputs);
+    free(results);
+    printf("============================================================\n");
+    printf("Example completed!\n");
+    printf("============================================================\n");
+    return 0;
+}
+```
+
+**Job submission script (hydrology_toy_c_job.sh):**
+
+```bash
+#!/bin/bash
+# hydrology_toy_c_job.sh
+#SBATCH -J hydrology_toy_c
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH -t 00:30:00
+#SBATCH --output=hydrology_toy_c-%J.txt
+
+module purge
+
+# Step 1: Compile both programs
+gcc -O2 -o generate_hydrology_data generate_hydrology_data.c
+gcc -O2 -o hydrology_toy_c         hydrology_toy_c.c -lm
+
+# Step 2: Generate synthetic data
+./generate_hydrology_data
+
+# Step 3: Run SCS runoff calculation
+./hydrology_toy_c
+```
+
+Submit the job:
+
+```bash
+sbatch hydrology_toy_c_job.sh
+```
+
+---
+
+### Hydrology MPI C Example
+
+This example implements the same SCS Curve Number workflow in parallel using MPI. Rank 0 reads the CSV and distributes rows to all ranks with `MPI_Scatterv`. Each rank processes its local chunk independently, then `MPI_Gatherv` collects results on rank 0.
+
+**MPI program (hydrology_mpi_c.c):**
+
+```c
+// hydrology_mpi_c.c
+/*
+ * Hydrology MPI Example - Parallel SCS Runoff Calculation in C
+ * Reads hydrology_data_50k.csv, scatters rows across MPI ranks,
+ * and gathers results on rank 0.
+ */
+#include <mpi.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+
+#define MAX_ROWS 50000
+#define LINE_LEN 256
+
+/* Store curve_number as double so the struct maps cleanly to 5 MPI_DOUBLEs */
+typedef struct {
+    double precipitation_mm;
+    double curve_number;
+    double time_concentration;
+    double contributing_area;
+    double antecedent_moisture;
+} HydroInput;
+
+typedef struct {
+    double runoff_scs;
+    double routed_runoff;
+    double direct_runoff;
+    double baseflow;
+    double recession_index;
+    double peak_discharge;
+} HydroResult;
+
+double scs_runoff(double P, int CN) {
+    double S  = (25400.0 / CN) - 254.0;
+    double Ia = 0.2 * S;
+    if (P <= Ia) return 0.0;
+    return (P - Ia) * (P - Ia) / (P - Ia + S);
+}
+
+double clark_routing(double runoff, double tc, double ds) {
+    int nr = (int)(tc / ds);
+    if (nr < 2) nr = 2;
+    double r = runoff;
+    for (int i = 0; i < nr; i++)
+        r *= (1.0 - exp(-ds / (tc / nr)));
+    return r;
+}
+
+void baseflow_separation(double total, double moisture,
+                         double *dr, double *bf, double *ri) {
+    double rc = 0.95 - moisture * 0.3;
+    *dr = total * (1.0 - moisture);
+    *bf = total * moisture;
+    *ri = 0.0;
+    for (int d = 1; d <= 30; d++) *ri += (*bf) * pow(rc, d);
+}
+
+double calculate_peak_discharge(double runoff, double area_sqkm, double tc) {
+    double intensity = 100.0 / pow(tc + 10.0, 0.7);
+    double rm3 = (runoff / 1000.0) * area_sqkm * 1e6;
+    double pf  = 0.0;
+    for (int k = 0; k < 50; k++) {
+        double t = tc * k / 49.0;
+        pf += sin(M_PI * t / tc) * intensity / 50.0;
+    }
+    return rm3 * pf / (tc * 60.0);
+}
+
+void compute_rows(HydroInput *in, HydroResult *out, int n) {
+    for (int i = 0; i < n; i++) {
+        out[i].runoff_scs    = scs_runoff(in[i].precipitation_mm, (int)in[i].curve_number);
+        out[i].routed_runoff = clark_routing(out[i].runoff_scs, in[i].time_concentration, 1.0);
+        baseflow_separation(out[i].routed_runoff, in[i].antecedent_moisture,
+                            &out[i].direct_runoff, &out[i].baseflow, &out[i].recession_index);
+        out[i].peak_discharge = calculate_peak_discharge(
+                out[i].direct_runoff, in[i].contributing_area, in[i].time_concentration);
+    }
+}
+
+int main(int argc, char **argv) {
+    MPI_Init(&argc, &argv);
+    int rank, size;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    /* Contiguous MPI types for HydroInput (5 doubles) and HydroResult (6 doubles) */
+    MPI_Datatype mpi_input, mpi_result;
+    MPI_Type_contiguous(5, MPI_DOUBLE, &mpi_input);
+    MPI_Type_contiguous(6, MPI_DOUBLE, &mpi_result);
+    MPI_Type_commit(&mpi_input);
+    MPI_Type_commit(&mpi_result);
+
+    HydroInput  *all_in  = NULL;
+    HydroResult *all_out = NULL;
+    int total = 0;
+
+    if (rank == 0) {
+        printf("============================================================\n");
+        printf("Hydrology MPI Example - Parallel SCS Runoff (C)\n");
+        printf("Running on %d MPI ranks\n", size);
+        printf("============================================================\n");
+
+        FILE *fp = fopen("hydrology_data_50k.csv", "r");
+        if (!fp) { perror("fopen"); MPI_Abort(MPI_COMM_WORLD, 1); }
+
+        all_in  = malloc(MAX_ROWS * sizeof(HydroInput));
+        all_out = malloc(MAX_ROWS * sizeof(HydroResult));
+
+        char line[LINE_LEN];
+        fgets(line, LINE_LEN, fp);   /* skip header */
+        while (total < MAX_ROWS && fgets(line, LINE_LEN, fp)) {
+            int cn;
+            sscanf(line, "%lf,%d,%lf,%lf,%lf",
+                   &all_in[total].precipitation_mm, &cn,
+                   &all_in[total].time_concentration,
+                   &all_in[total].contributing_area,
+                   &all_in[total].antecedent_moisture);
+            all_in[total].curve_number = (double)cn;
+            total++;
+        }
+        fclose(fp);
+        printf("Loaded %d data points\n", total);
+        printf("Distributing %d rows across %d ranks\n\n", total, size);
+    }
+
+    /* Broadcast total row count to all ranks */
+    MPI_Bcast(&total, 1, MPI_INT, 0, MPI_COMM_WORLD);
+
+    /* Build per-rank chunk sizes and displacements */
+    int *sendcounts = malloc(size * sizeof(int));
+    int *displs     = malloc(size * sizeof(int));
+    int offset = 0;
+    for (int r = 0; r < size; r++) {
+        sendcounts[r] = total / size + (r < total % size ? 1 : 0);
+        displs[r]     = offset;
+        offset       += sendcounts[r];
+    }
+
+    int local_n    = sendcounts[rank];
+    HydroInput  *local_in  = malloc(local_n * sizeof(HydroInput));
+    HydroResult *local_out = malloc(local_n * sizeof(HydroResult));
+
+    /* Scatter input rows */
+    MPI_Scatterv(all_in, sendcounts, displs, mpi_input,
+                 local_in, local_n, mpi_input, 0, MPI_COMM_WORLD);
+
+    MPI_Barrier(MPI_COMM_WORLD);
+    double t0 = MPI_Wtime();
+
+    compute_rows(local_in, local_out, local_n);
+
+    MPI_Barrier(MPI_COMM_WORLD);
+    double elapsed = MPI_Wtime() - t0;
+
+    /* Gather results back to rank 0 */
+    MPI_Gatherv(local_out, local_n, mpi_result,
+                all_out, sendcounts, displs, mpi_result, 0, MPI_COMM_WORLD);
+
+    if (rank == 0) {
+        double sum_scs = 0, sum_routed = 0, sum_direct = 0;
+        double sum_base = 0, sum_peak = 0, max_peak = 0;
+        for (int i = 0; i < total; i++) {
+            sum_scs    += all_out[i].runoff_scs;
+            sum_routed += all_out[i].routed_runoff;
+            sum_direct += all_out[i].direct_runoff;
+            sum_base   += all_out[i].baseflow;
+            sum_peak   += all_out[i].peak_discharge;
+            if (all_out[i].peak_discharge > max_peak)
+                max_peak = all_out[i].peak_discharge;
+        }
+
+        printf("Results:\n");
+        printf("  Total records processed : %d\n",      total);
+        printf("  Mean SCS runoff         : %.2f mm\n", sum_scs    / total);
+        printf("  Mean routed runoff      : %.2f mm\n", sum_routed / total);
+        printf("  Mean direct runoff      : %.2f mm\n", sum_direct / total);
+        printf("  Mean baseflow           : %.2f mm\n", sum_base   / total);
+        printf("  Mean peak discharge     : %.4f m3/s\n", sum_peak / total);
+        printf("  Max  peak discharge     : %.4f m3/s\n", max_peak);
+        printf("\nComputation time: %.4f s  (MPI ranks: %d)\n", elapsed, size);
+
+        FILE *out_fp = fopen("hydrology_results_50k_mpi_c.csv", "w");
+        if (out_fp) {
+            fprintf(out_fp, "runoff_scs,routed_runoff,direct_runoff,"
+                            "baseflow,recession_index,peak_discharge\n");
+            for (int i = 0; i < total; i++)
+                fprintf(out_fp, "%.4f,%.4f,%.4f,%.4f,%.4f,%.6f\n",
+                        all_out[i].runoff_scs,    all_out[i].routed_runoff,
+                        all_out[i].direct_runoff, all_out[i].baseflow,
+                        all_out[i].recession_index, all_out[i].peak_discharge);
+            fclose(out_fp);
+            printf("Results saved to hydrology_results_50k_mpi_c.csv\n");
+        }
+
+        free(all_in);
+        free(all_out);
+        printf("============================================================\n");
+        printf("MPI C Example completed!\n");
+        printf("============================================================\n");
+    }
+
+    free(sendcounts); free(displs);
+    free(local_in);   free(local_out);
+    MPI_Type_free(&mpi_input);
+    MPI_Type_free(&mpi_result);
+    MPI_Finalize();
+    return 0;
+}
+```
+
+**Job submission script (hydrology_mpi_c_job.sh):**
+
+```bash
+#!/bin/bash
+# hydrology_mpi_c_job.sh
+#SBATCH -J hydrology_mpi_c
+#SBATCH -p normal
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=1
+#SBATCH -t 00:30:00
+#SBATCH --output=hydrology_mpi_c-%J.txt
+
+module purge
+module load MVAPICH
+
+echo "Use the CSV already generated by the serial job."
+echo "No need to regenerate — hydrology_data_50k.csv is reused."
+
+# Compile MPI program
+mpicc -O2 -o hydrology_mpi_c hydrology_mpi_c.c -lm
+
+# Run with 4 MPI ranks
+echo "Starting MPI SCS runoff calculation..."
+mpirun -np 4 ./hydrology_mpi_c
+
+echo "MPI C job completed!"
+```
+
+Submit the job:
+
+```bash
+sbatch hydrology_mpi_c_job.sh
+```
+
+---
+
+Key differences between the serial and MPI C examples:
+
+- **Data Distribution**: `MPI_Scatterv` distributes rows unevenly-safe (handles remainders) — each rank receives `total/size` or `total/size + 1` rows
+- **MPI Derived Types**: `MPI_Type_contiguous` maps each struct to a block of `MPI_DOUBLE` values, letting `MPI_Scatterv`/`MPI_Gatherv` transfer entire records in one call
+- **Timing**: `MPI_Wtime()` measures wall-clock time across all ranks (more accurate than `clock()` for parallel code)
+- **Load Balancing**: Remainder rows are distributed one-per-rank to ranks 0 through `total % size − 1`
+- **Scalability**: Increase `--ntasks-per-node` and `--nodes` to scale further; the computation is embarrassingly parallel — no inter-rank communication during processing
+
+Key differences between C and Python versions:
+
+- **No CSV library**: C reads and parses each line manually with `fgets` + `sscanf`
+- **Explicit memory management**: `malloc`/`free` for input and result arrays; Python handles this automatically
+- **Output file**: C writes `hydrology_results_50k_c.csv` (serial) and `hydrology_results_50k_mpi_c.csv` (MPI) to distinguish from the Python output files
+- **Performance**: The C serial version is typically 5–20× faster than the row-by-row Python `apply` loop for the same dataset
+
+## Additional Resources
+
+For the Python equivalent of these examples, see the [Hydrologist Python Job Examples](./hydrologist-python-examples) page.
+
+For complete source code and dataset generation scripts, visit the hydrology toy examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)

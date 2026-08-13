@@ -1,0 +1,243 @@
+---
+sidebar_position: 9
+
+title: "Jupyter Notebook (Normal Partition)"
+description: "Run a Jupyter Lab or Jupyter Notebook server on a Pantarhei CPU compute node and connect from your local browser via SSH tunneling."
+tags: [CIROH, Services, On-Premises Services, Pantarhei, HPC, Jupyter]
+Last updated date: "06/05/2026"
+path: "docs/services/on-prem/Pantarhei/RunningJobs/Examples/jupyter-notebook-normal"
+
+---
+
+## Jupyter Notebook on the Normal Partition
+
+This page explains how to launch a Jupyter Lab (or Jupyter Notebook) server on a Pantarhei CPU compute node and connect to it from your local browser using an SSH tunnel. Because compute nodes are not directly reachable from the internet, the tunnel forwards a port from your laptop through the login node to the compute node.
+
+## Prerequisites
+
+- SSH access to `pantarhei.ua.edu`
+- A terminal on your local machine capable of SSH (macOS/Linux terminal, Windows Terminal, or Git Bash)
+- Anaconda3 module available on Pantarhei (loaded in the job script)
+- A web browser on your local machine
+
+## Job Script
+
+Save the following script as `jupyter_notebook.job` in your Pantarhei home or working directory:
+
+```bash
+#!/bin/bash
+# jupyter_notebook.job
+#SBATCH --job-name=jupyter_test_Job
+#SBATCH --output=jupyter-notebook-%J.log
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --partition=normal
+#SBATCH --time=04:00:00
+#SBATCH --cpus-per-task=2
+##SBATCH --mail-type=ALL
+##SBATCH --mail-user=<ENTER_YOUR_USERNAME>@crimson.ua.edu
+
+## Printing information about the Slurm Job
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+echo "Name of the cluster on which the job is executing." $SLURM_CLUSTER_NAME
+echo "Number of tasks to be initiated on each node." $SLURM_TASKS_PER_NODE
+echo "Number of cpus requested per task." $SLURM_CPUS_PER_TASK
+echo "Number of CPUS on the allocated node." $SLURM_CPUS_ON_NODE
+echo "Total number of processes in the current job." $SLURM_NTASKS
+echo "List of nodes allocated to the job" $SLURM_NODELIST
+echo "Total number of nodes in the job's resource allocation." $SLURM_NNODES
+echo "List of allocated GPUs." $CUDA_VISIBLE_DEVICES
+
+## Load any module that you need
+module load Anaconda3
+
+## Run any specific environment you have
+#source activate DeepBioComp
+
+## get tunneling info
+XDG_RUNTIME_DIR=""
+ipnport=$(shuf -i8000-9999 -n1)
+ipnip=$(hostname -i)
+
+## print tunneling instructions to jupyter-notebook-{jobid}.log
+echo -e "\n\n   Copy/Paste this in your local terminal to ssh tunnel with remote  "
+echo        "   ------------------------------------------------------------------"
+echo        "   ssh -N -L $ipnport:$ipnip:$ipnport $USER@pantarhei.ua.edu         "
+echo        "   ------------------------------------------------------------------"
+echo -e "\n\n   Then open a browser on your local machine to the following address"
+echo        "   ------------------------------------------------------------------"
+echo        "   localhost:$ipnport                                                "
+echo -e     "   ------------------------------------------------------------------\n\n"
+sleep 1
+
+## start an ipcluster instance and launch jupyter server
+
+## For Jupyter Notebook
+#jupyter-notebook --no-browser --port=$ipnport --ip=$ipnip
+
+## For Jupyter Lab
+jupyter-lab --no-browser --port=$ipnport --ip=$ipnip
+```
+
+To enable email notifications, uncomment the two `##SBATCH --mail-*` lines and replace the placeholder with your email address.
+
+To run Jupyter Notebook instead of Jupyter Lab, comment out the `jupyter-lab` line and uncomment the `jupyter-notebook` line near the bottom of the script.
+
+### Script Explanation
+
+**SBATCH directives**
+
+| Directive | Value | Purpose |
+|-----------|-------|---------|
+| `--job-name` | jupyter_test_Job | Label shown in `squeue` |
+| `--output` | jupyter-notebook-%J.log | Log file; `%J` is replaced with the job ID — this is where the SSH tunnel command will be printed |
+| `--nodes` | 1 | One compute node is enough for a notebook server |
+| `--ntasks` | 1 | Single task — Jupyter runs as one process |
+| `--partition` | normal | Standard CPU queue |
+| `--time` | 04:00:00 | Session length; increase if you need longer (max 7 days on `normal`) |
+| `--cpus-per-task` | 2 | CPU cores available inside the notebook; increase for parallel computation |
+
+**Diagnostic echo statements**
+
+Prints key Slurm environment variables to the log file so you can confirm which node and resources were allocated.
+
+**`module load Anaconda3`**
+
+Makes `jupyter-lab` and `jupyter-notebook` available on the compute node. If you have a custom conda environment, uncomment and edit the `source activate` line below it.
+
+**Tunneling setup**
+
+```bash
+XDG_RUNTIME_DIR=""
+ipnport=$(shuf -i8000-9999 -n1)
+ipnip=$(hostname -i)
+```
+
+- `XDG_RUNTIME_DIR=""` prevents a Jupyter warning about a missing runtime directory on compute nodes.
+- `shuf -i8000-9999 -n1` picks a random port in the 8000–9999 range to avoid collisions with other users' sessions.
+- `hostname -i` gets the compute node's internal IP address, which is needed for the SSH tunnel.
+
+The `echo` block that follows writes the exact SSH command and browser URL to the log file — you copy these values to connect.
+
+**`sleep 1`**
+
+Gives the echo output a moment to flush to the log file before Jupyter starts writing its own output.
+
+**Jupyter server command**
+
+```bash
+jupyter-lab --no-browser --port=$ipnport --ip=$ipnip
+```
+
+- `--no-browser` prevents Jupyter from trying to open a browser on the (headless) compute node.
+- `--port` and `--ip` bind the server to the randomly chosen port on the compute node's IP.
+
+---
+
+## Submitting the Job
+
+```bash
+sbatch jupyter_notebook.job
+```
+
+Slurm returns a job ID, for example:
+
+```
+Submitted batch job 215
+```
+
+---
+
+## Connecting from Your Local Machine
+
+**Step 1 — Wait for the job to start and find the SSH command**
+
+Poll the log file until the tunnel instructions appear:
+
+```bash
+tail -f jupyter-notebook-215.log
+```
+
+Look for a block like this:
+
+```
+   Copy/Paste this in your local terminal to ssh tunnel with remote
+   ------------------------------------------------------------------
+   ssh -N -L 8742:10.0.0.5:8742 jsmith@pantarhei.ua.edu
+   ------------------------------------------------------------------
+
+   Then open a browser on your local machine to the following address
+   ------------------------------------------------------------------
+   localhost:8742
+   ------------------------------------------------------------------
+```
+
+**Step 2 — Open the SSH tunnel on your local machine**
+
+Open a new terminal on your laptop and run the command from the log file:
+
+```bash
+ssh -N -L 8742:10.0.0.5:8742 jsmith@pantarhei.ua.edu
+```
+
+This command will appear to hang — that is normal. It keeps the tunnel open. Leave it running.
+
+**Step 3 — Open Jupyter in your browser**
+
+Navigate to the address printed in the log file:
+
+```
+localhost:8742
+```
+
+Jupyter Lab will load in your browser. If prompted for a token, find it in the log file — Jupyter prints it when it starts.
+
+---
+
+## Ending the Session
+
+Close the browser tab and cancel the Slurm job when you are finished:
+
+```bash
+scancel 215
+```
+
+Then press `Ctrl-C` in the terminal running the SSH tunnel to close it.
+
+---
+
+## Troubleshooting
+
+**The log file shows no tunnel instructions**
+
+The job may still be queued. Check its status:
+
+```bash
+squeue -u $USER
+```
+
+Wait until `ST` shows `R` (running), then re-check the log.
+
+**"Address already in use" error in the log**
+
+The randomly selected port was already taken on the compute node. Cancel the job and resubmit — a new random port will be chosen.
+
+**Browser shows "Unable to connect"**
+
+Confirm the SSH tunnel terminal is still running (it should appear to hang). If it exited, re-run the `ssh -N -L ...` command from the log file.
+
+**Token or password prompt in the browser**
+
+Copy the full Jupyter URL including the `?token=...` part from the log file and paste it directly into the browser address bar.
+
+---
+
+For a GPU-accelerated Jupyter session, see the [Jupyter Notebook (GPU Partition)](./jupyter-notebook-gpu) page.
+
+For hydrologic analysis using NumPy and Matplotlib inside your Jupyter session, see the [Hydrologist Notebook Example](./hydrologist-notebook) page.
+
+## Additional Resources
+
+For complete example scripts and job files, visit the Pantarhei examples repository:
+
+[https://github.com/kamalcou/pantarhei-examples](https://github.com/kamalcou/pantarhei-examples)
