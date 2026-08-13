@@ -5,5 +5,6 @@
 __pycache__/
 *.pyc
 
-# Testing files
-Similarity_Testing.ipynb
+# Backup files
+Copy_RAG_Pipeline.ipynb
+*_v*.json
