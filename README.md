@@ -27,6 +27,8 @@ backend/
     ├── rag_results_topdown.json
     ├── rag_results_bottomup.json
     └── ...
+
+frontend/          # React chat UI copied from main (not yet wired to a v2 API)
 ```
 
 At this stage:
@@ -39,7 +41,7 @@ At this stage:
 - initial retrieval outputs for both strategies are available;
 - Hybrid retrieval is defined conceptually but not yet implemented;
 - an API layer has not yet been created;
-- the frontend is not currently included in this branch;
+- the user frontend from `main` is included, but it still expects a `POST /ask` API that is not implemented on this branch;
 - automatic source synchronization is not yet integrated into the current ingestion workflow.
 
 ---
@@ -646,8 +648,8 @@ The exact routing logic and combination mechanism are still under development.
 - Combined retrieval for mixed or ambiguous queries
 - Automatic artifact synchronization
 - Conversion of notebook logic into production-oriented modules/scripts
-- Backend API
-- Frontend integration
+- Backend API that wraps `RAG_Pipeline.ipynb` for the existing frontend
+- Wiring the included frontend to that API
 - End-to-end deployment workflow
 
 ---
