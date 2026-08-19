@@ -4,7 +4,61 @@ CIROH AI Bot v2 is a multi-source Retrieval-Augmented Generation (RAG) system de
 
 The current repository contains the backend work completed to date. It includes the pipelines used to collect and structure the source data, create the database content, generate summaries and embeddings, and implement two complementary hierarchical retrieval strategies: **Top-down RAG** and **Bottom-up RAG**.
 
-A third **Hybrid RAG** strategy is planned and is currently the next retrieval component under development.
+A draft **Hybrid RAG** path now routes each question to top-down, bottom-up, or both, behind a FastAPI service and a docked chat UI.
+
+---
+
+## How to run locally
+
+You need Python 3.12, Node.js 18+, the shared Azure `ciroh` database, and an OpenAI key.
+
+### 1. Environment
+
+Create a `.env` file in the repo root **and** copy it to `backend/rag/.env`:
+
+```env
+POSTGRES_HOST=c-ciroh-cluster.6cijvkzzmrtw2p.postgres.cosmos.azure.com
+POSTGRES_DB=ciroh
+POSTGRES_SCHEMA=CIROH_AIBot
+POSTGRES_USER=raguser
+POSTGRES_PASSWORD=your-password
+PGSSLMODE=require
+OPENAI_API_KEY=sk-...
+EMBEDDING_MODEL=text-embedding-3-large
+```
+
+`.env` is gitignored. Ask a teammate for the `raguser` password if you do not have it.
+
+### 2. Backend API
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r backend/requirements.txt
+cd backend/rag
+uvicorn main:app --reload --port 8000
+```
+
+The API is at http://127.0.0.1:8000 (`POST /ask`).
+
+CLI check without the UI:
+
+```bash
+cd backend/rag
+python ask.py "What is NextGen In A Box?"
+```
+
+### 3. Frontend
+
+In a second terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:3000. The chat starts as a small icon. Click it to dock a side panel. Answers can take a while on the first hybrid/`gpt-5.5` call.
 
 ---
 
@@ -39,7 +93,7 @@ At this stage:
 - Top-down retrieval is implemented;
 - Bottom-up retrieval is implemented;
 - initial retrieval outputs for both strategies are available;
-- Hybrid retrieval is defined conceptually but not yet implemented;
+- a draft hybrid router chooses top-down, bottom-up, or both;
 - a draft FastAPI layer wraps `backend/rag/ask.py` (`POST /ask`, hybrid routing, token/cost);
 - the user frontend is a closed icon that docks as a side panel and persists the conversation locally;
 - automatic source synchronization is not yet integrated into the current ingestion workflow.
@@ -638,14 +692,15 @@ The exact routing logic and combination mechanism are still under development.
 - Chunk embeddings
 - Top-down RAG
 - Bottom-up RAG
+- Draft hybrid routing (`ask.py` + `POST /ask`)
+- Per-question token and estimated-cost reporting
+- Docked chat frontend with local conversation persistence
 - Initial results for both retrieval strategies
 - `isActive` support in retrieval
 
 ### In Progress / Planned
 
-- Hybrid query-adaptive retrieval
-- Systematic routing between Top-down and Bottom-up
-- Combined retrieval for mixed or ambiguous queries
+- Hardening hybrid routing and merging both paths
 - Automatic artifact synchronization
 - Conversion of remaining notebook expansion helpers into `ask.py`
 - Hardening hybrid routing and cost estimates
@@ -679,15 +734,15 @@ flowchart TD
 
     R --> TD[Top-down RAG]
     R --> BU[Bottom-up RAG]
-    R -. planned .-> HY[Hybrid query-adaptive RAG]
+    R --> HY[Hybrid query-adaptive RAG]
 
     TD --> C[Context construction]
     BU --> C
-    HY -. planned .-> C
+    HY --> C
 
     C --> L[LLM response]
-    L -. planned .-> API[Backend API]
-    API -. planned .-> F[Frontend]
+    L --> API[Backend API]
+    API --> F[Frontend]
 
     SYNC[Automatic source synchronization] -. planned .-> I
     DB --> V[Artifact version history via isActive]

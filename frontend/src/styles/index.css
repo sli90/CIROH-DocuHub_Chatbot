@@ -89,6 +89,19 @@
     max-width: 100%;
   }
 
+  .chat-message strong {
+    @apply font-semibold;
+  }
+
+  .chat-message em {
+    @apply italic;
+  }
+
+  .chat-message code {
+    @apply text-xs px-1 py-0.5 rounded bg-black/10;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
   .chat-sources {
     @apply break-words;
     word-break: break-word;
