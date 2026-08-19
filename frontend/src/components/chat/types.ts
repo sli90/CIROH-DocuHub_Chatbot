@@ -1,3 +1,12 @@
+export interface UsageInfo {
+  embedding_tokens?: number;
+  input_tokens?: number;
+  output_tokens?: number;
+  total_tokens?: number;
+  estimated_usd?: number;
+  estimated?: boolean;
+}
+
 export interface Message {
   id: string;
   text: string;
@@ -5,11 +14,16 @@ export interface Message {
   timestamp: Date;
   sources?: string | string[];
   links?: string | string[];
+  route?: string;
+  routeReason?: string;
+  usage?: UsageInfo;
 }
 
 export interface ChatPanelProps {
   isOpen: boolean;
+  expanded: boolean;
   onClose: () => void;
+  onToggleExpand: () => void;
 }
 
 export interface ExampleQuestion {
@@ -35,10 +49,12 @@ export interface ExampleQuestionsProps {
 
 export interface ChatHeaderProps {
   showExamples: boolean;
+  expanded: boolean;
   onShowExamples: () => void;
   onShowChat: () => void;
   onClearChat: () => void;
   onClose: () => void;
+  onToggleExpand: () => void;
   isDarkMode: boolean;
   onToggleDarkMode: () => void;
 }

@@ -28,7 +28,7 @@ backend/
     ├── rag_results_bottomup.json
     └── ...
 
-frontend/          # React chat UI copied from main (not yet wired to a v2 API)
+frontend/          # Docked DocuHub chat UI (talks to backend/rag FastAPI)
 ```
 
 At this stage:
@@ -40,8 +40,8 @@ At this stage:
 - Bottom-up retrieval is implemented;
 - initial retrieval outputs for both strategies are available;
 - Hybrid retrieval is defined conceptually but not yet implemented;
-- an API layer has not yet been created;
-- the user frontend from `main` is included, but it still expects a `POST /ask` API that is not implemented on this branch;
+- a draft FastAPI layer wraps `backend/rag/ask.py` (`POST /ask`, hybrid routing, token/cost);
+- the user frontend is a closed icon that docks as a side panel and persists the conversation locally;
 - automatic source synchronization is not yet integrated into the current ingestion workflow.
 
 ---
@@ -647,9 +647,9 @@ The exact routing logic and combination mechanism are still under development.
 - Systematic routing between Top-down and Bottom-up
 - Combined retrieval for mixed or ambiguous queries
 - Automatic artifact synchronization
-- Conversion of notebook logic into production-oriented modules/scripts
-- Backend API that wraps `RAG_Pipeline.ipynb` for the existing frontend
-- Wiring the included frontend to that API
+- Conversion of remaining notebook expansion helpers into `ask.py`
+- Hardening hybrid routing and cost estimates
+- Authenticated telemetry (who is using the bot)
 - End-to-end deployment workflow
 
 ---

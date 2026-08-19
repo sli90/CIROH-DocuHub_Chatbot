@@ -8,23 +8,28 @@ import {
   Moon,
   Sun,
   MessageCircle,
+  Maximize2,
+  Minimize2,
 } from 'lucide-react';
 import { ChatHeaderProps } from './types';
 
 export function ChatHeader({
   showExamples,
+  expanded,
   onShowExamples,
   onShowChat,
   onClearChat,
   onClose,
+  onToggleExpand,
   isDarkMode,
   onToggleDarkMode,
 }: ChatHeaderProps) {
   return (
-    // --- CHANGED: Removed explicit background color to allow frosted glass effect ---
     <div
-      className={`px-4 py-3 border-b flex items-center justify-between drag-handle cursor-grab ${
-        isDarkMode ? 'border-white/10' : 'border-black/10'
+      className={`px-4 py-3 border-b flex items-center justify-between ${
+        isDarkMode
+          ? 'border-gray-700 bg-gray-900'
+          : 'border-gray-200 bg-white'
       }`}
     >
       <div className="flex items-center space-x-3">
@@ -96,6 +101,24 @@ export function ChatHeader({
             <MessageCircle className="h-5 w-5 transition-transform duration-200 hover:scale-110" />
           </button>
         )}
+        <button
+          onClick={e => {
+            e.stopPropagation();
+            onToggleExpand();
+          }}
+          className={`p-2 rounded-full transition-colors ${
+            isDarkMode
+              ? 'hover:bg-white/10 text-gray-300'
+              : 'hover:bg-black/10 text-gray-600'
+          }`}
+          title={expanded ? 'Dock to side panel' : 'Expand chat'}
+        >
+          {expanded ? (
+            <Minimize2 className="h-5 w-5 transition-transform duration-200 hover:scale-110" />
+          ) : (
+            <Maximize2 className="h-5 w-5 transition-transform duration-200 hover:scale-110" />
+          )}
+        </button>
         <button
           onClick={e => {
             e.stopPropagation();

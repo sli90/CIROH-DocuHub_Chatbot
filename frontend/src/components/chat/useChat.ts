@@ -1,12 +1,34 @@
 import { useState, useEffect, useRef } from 'react';
 import { Message } from './types';
 import { chatAPI } from '../../services/api';
+import { trackEvent } from '../../services/telemetry';
+
+const MESSAGES_KEY = 'ciroh_chat_messages';
+
+function loadMessages(): Message[] {
+  try {
+    const raw = localStorage.getItem(MESSAGES_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as Array<Omit<Message, 'timestamp'> & { timestamp: string }>;
+    return parsed.map(msg => ({ ...msg, timestamp: new Date(msg.timestamp) }));
+  } catch {
+    return [];
+  }
+}
+
+function saveMessages(messages: Message[]): void {
+  try {
+    localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+  } catch {
+    // Ignore quota / private-mode failures.
+  }
+}
 
 export function useChat() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>(() => loadMessages());
   const [inputValue, setInputValue] = useState('');
   const [isBotResponding, setIsBotResponding] = useState(false);
-  const [showExamples, setShowExamples] = useState(true);
+  const [showExamples, setShowExamples] = useState(() => loadMessages().length === 0);
   const [expandedCategories, setExpandedCategories] = useState<Set<number>>(
     new Set()
   );
@@ -35,6 +57,10 @@ export function useChat() {
     return () => clearTimeout(timeoutId);
   }, [messages, isBotResponding]);
 
+  useEffect(() => {
+    saveMessages(messages);
+  }, [messages]);
+
   // Hide examples when user starts chatting
   useEffect(() => {
     if (messages.length > 0) {
@@ -56,6 +82,7 @@ export function useChat() {
     setInputValue('');
     setIsBotResponding(true);
     setLastError(null);
+    trackEvent('question_asked', { length: text.trim().length });
 
     try {
       // Send question to API
@@ -68,8 +95,17 @@ export function useChat() {
         timestamp: new Date(),
         sources: response.sources,
         links: response.links,
+        route: response.route,
+        routeReason: response.route_reason,
+        usage: response.usage,
       };
       setMessages(prev => [...prev, botMessage]);
+      trackEvent('question_answered', {
+        route: response.route,
+        estimated_usd: response.usage?.estimated_usd,
+        total_tokens: response.usage?.total_tokens,
+        success: response.success,
+      });
       
       // Clear any previous errors on successful response
       if (response.success) {
@@ -97,6 +133,8 @@ export function useChat() {
     setMessages([]);
     setShowExamples(true);
     setLastError(null);
+    saveMessages([]);
+    trackEvent('chat_cleared');
   };
 
   const handleRetryLastMessage = () => {

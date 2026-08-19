@@ -14,7 +14,7 @@ export function ChatInput({
     // --- CHANGED: Differentiated background for input area ---
     <div
       className={`border-t p-4 ${
-        isDarkMode ? 'border-white/10 bg-black/10' : 'border-black/10 bg-black/5'
+        isDarkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'
       }`}
     >
       <div className="flex items-center space-x-3">

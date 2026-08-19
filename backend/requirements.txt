@@ -1,0 +1,10 @@
+python-dotenv
+psycopg2-binary
+openai
+jupyter
+ipykernel
+pandas
+requests
+fastapi
+uvicorn[standard]
+pydantic
