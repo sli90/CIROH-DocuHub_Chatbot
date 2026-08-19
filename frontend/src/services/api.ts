@@ -1,4 +1,6 @@
 import { API_CONFIG, getApiUrl } from '../config/api';
+import { getSessionId } from './telemetry';
+import type { UsageInfo } from '../components/chat/types';
 
 export interface ChatRequest {
   text: string;
@@ -10,6 +12,9 @@ export interface ChatResponse {
   links?: string | string[];
   success: boolean;
   error?: string;
+  route?: string;
+  route_reason?: string;
+  usage?: UsageInfo;
 }
 
 export class ChatAPI {
@@ -74,14 +79,25 @@ export class ChatAPI {
   async sendQuestion(request: ChatRequest): Promise<ChatResponse> {
     try {
       const data = await this.retryRequest(async () => {
-        return await this.makeRequest<{ answer?: string; sources?: string | string[]; links?: string | string[] }>(
+        return await this.makeRequest<{
+          answer?: string;
+          sources?: string | string[];
+          links?: string | string[];
+          route?: string;
+          route_reason?: string;
+          usage?: UsageInfo;
+        }>(
           getApiUrl(API_CONFIG.ENDPOINTS.CHAT),
           {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify(request),
+            body: JSON.stringify({
+              ...request,
+              session_id: getSessionId(),
+              mode: 'hybrid',
+            }),
           }
         );
       });
@@ -111,6 +127,9 @@ export class ChatAPI {
         sources: formattedSources,
         links: formattedLinks,
         success: true,
+        route: data.route,
+        route_reason: data.route_reason,
+        usage: data.usage,
       };
     } catch (error) {
       console.error('Chat API error:', error);

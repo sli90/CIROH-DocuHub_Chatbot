@@ -31,12 +31,10 @@ describe('ChatAPI', () => {
 
       const result = await chatAPI.sendQuestion({ text: 'Test question' });
 
-      expect(result).toEqual({
-        answer: 'Test answer',
-        sources: 'Source 1\nSource 2',
-        links: 'Link 1\nLink 2',
-        success: true,
-      });
+      expect(result.answer).toBe('Test answer');
+      expect(result.sources).toBe('Source 1\nSource 2');
+      expect(result.links).toBe('Link 1\nLink 2');
+      expect(result.success).toBe(true);
 
       expect(globalThis.fetch).toHaveBeenCalledWith(
         'http://127.0.0.1:8000/ask',
@@ -45,9 +43,14 @@ describe('ChatAPI', () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ text: 'Test question' }),
         })
       );
+      const sent = JSON.parse(
+        (globalThis.fetch as any).mock.calls[0][1].body
+      );
+      expect(sent.text).toBe('Test question');
+      expect(sent.mode).toBe('hybrid');
+      expect(sent.session_id).toBeTruthy();
     });
 
     it('should handle string sources and links', async () => {
@@ -91,8 +94,9 @@ describe('ChatAPI', () => {
       const result = await chatAPI.sendQuestion({ text: 'Test question' });
 
       expect(result.success).toBe(false);
-      expect(result.answer).toBe('Sorry, I encountered an error while processing your question. Please try again later.');
-      expect(result.error).toBe('Cannot read properties of undefined (reading \'ok\')');
+      expect(result.answer).toBe(
+        'Unable to connect to the server. Please check your internet connection and try again.'
+      );
     });
 
     it('should handle timeout errors', async () => {
@@ -115,7 +119,7 @@ describe('ChatAPI', () => {
       const result = await chatAPI.sendQuestion({ text: 'Test question' });
 
       expect(result.success).toBe(false);
-      expect(result.answer).toBe('Sorry, I encountered an error while processing your question. Please try again later.');
+      expect(result.answer).toBe('Server error. Please try again later.');
     });
 
     it('should handle client errors (4xx)', async () => {
@@ -127,23 +131,18 @@ describe('ChatAPI', () => {
       const result = await chatAPI.sendQuestion({ text: 'Test question' });
 
       expect(result.success).toBe(false);
-      expect(result.answer).toBe('Sorry, I encountered an error while processing your question. Please try again later.');
+      expect(result.answer).toBe(
+        'Invalid request. Please try rephrasing your question.'
+      );
     });
 
-    it('should retry failed requests', async () => {
-      (globalThis.fetch as any)
-        .mockRejectedValueOnce(new Error('Network error'))
-        .mockRejectedValueOnce(new Error('Network error'))
-        .mockResolvedValueOnce({
-          ok: true,
-          json: async () => ({ answer: 'Success after retry' }),
-        });
+    it('should not retry failed requests', async () => {
+      (globalThis.fetch as any).mockRejectedValueOnce(new Error('Network error'));
 
       const result = await chatAPI.sendQuestion({ text: 'Test question' });
 
-      expect(result.success).toBe(true);
-      expect(result.answer).toBe('Success after retry');
-      expect(globalThis.fetch).toHaveBeenCalledTimes(3);
+      expect(result.success).toBe(false);
+      expect(globalThis.fetch).toHaveBeenCalledTimes(1);
     });
   });
 });

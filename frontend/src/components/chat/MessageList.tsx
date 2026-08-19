@@ -63,7 +63,7 @@ export function MessageList({
                 }}
               />
               {message.isBot &&
-                message.sources &&
+                (message.sources || message.route || message.usage) &&
                 !message.text
                   .toLowerCase()
                   .includes(
@@ -72,20 +72,52 @@ export function MessageList({
                   <div
                     className={`text-xs mt-3 p-2 rounded border-l-2 w-full message-container ${
                       isDarkMode
-                        ? 'bg-gray-800/50 border-gray-500 text-gray-300'
+                        ? 'bg-gray-800 border-gray-500 text-gray-300'
                         : 'bg-gray-50 border-gray-300 text-gray-600'
                     }`}
                   >
-                    <div className="font-medium mb-1">Sources:</div>
-                    <div
-                      className="chat-sources"
-                      dangerouslySetInnerHTML={{
-                        __html: formatSourcesAsHtml(
-                          message.sources,
-                          message.links
-                        ),
-                      }}
-                    />
+                    {message.sources && (
+                      <>
+                        <div className="font-medium mb-1">Sources:</div>
+                        <div
+                          className="chat-sources"
+                          dangerouslySetInnerHTML={{
+                            __html: formatSourcesAsHtml(
+                              message.sources,
+                              message.links
+                            ),
+                          }}
+                        />
+                      </>
+                    )}
+                    {(message.route || message.usage) && (
+                      <div
+                        className={`pt-2 ${
+                          message.sources
+                            ? `mt-2 border-t ${
+                                isDarkMode ? 'border-gray-600' : 'border-gray-200'
+                              }`
+                            : ''
+                        }`}
+                      >
+                        {message.route && (
+                          <div>
+                            Path: {message.route.replace('_', '-')}
+                            {message.routeReason
+                              ? ` — ${message.routeReason}`
+                              : ''}
+                          </div>
+                        )}
+                        {message.usage && (
+                          <div>
+                            Tokens: {message.usage.total_tokens ?? 0}
+                            {typeof message.usage.estimated_usd === 'number'
+                              ? ` · ~$${message.usage.estimated_usd.toFixed(4)}`
+                              : ''}
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                 )}
             </div>

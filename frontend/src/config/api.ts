@@ -8,13 +8,12 @@ export const API_CONFIG = {
     CHAT: '/ask',
   },
   
-  // Request timeout in milliseconds
-  TIMEOUT: 30000,
-  
-  // Retry configuration
+  // Hybrid RAG + gpt-5.x often exceeds 30s. Do not retry a timed-out ask.
+  TIMEOUT: 180000,
+
   RETRY: {
-    MAX_ATTEMPTS: 3,
-    DELAY: 1000, // Initial delay in milliseconds
+    MAX_ATTEMPTS: 1,
+    DELAY: 1000,
   },
 } as const;
 
