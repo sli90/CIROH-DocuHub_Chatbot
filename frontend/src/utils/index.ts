@@ -33,40 +33,58 @@ export function formatSourcesAsHtml(sources: string | string[], links?: string |
   }).join('\n');
 }
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function withPlaceholders(html: string, pattern: RegExp): { html: string; slots: string[] } {
+  const slots: string[] = [];
+  const replaced = html.replace(pattern, match => {
+    slots.push(match);
+    return `\u0000${slots.length - 1}\u0000`;
+  });
+  return { html: replaced, slots };
+}
+
+function restorePlaceholders(html: string, slots: string[]): string {
+  return html.replace(/\u0000(\d+)\u0000/g, (_, index) => slots[Number(index)] ?? '');
+}
+
 export function formatUrlsAsHtml(text: string): string {
   if (!text) return '';
-  
-  // Skip if text already contains HTML tags (already processed)
-  if (text.includes('<') && text.includes('>')) {
-    return text;
-  }
-  
-  // Skip if text contains any HTML attributes (already processed)
-  if (text.includes('class=') || text.includes('href=') || text.includes('target=') || 
-      text.includes('rel=') || text.includes('mailto:')) {
-    return text;
-  }
-  
-  // Skip if text contains HTML fragments (already processed)
-  if (text.includes('" class=') || text.includes('">') || text.includes('</a>') ||
-      text.includes('target="_blank"') || text.includes('rel="noopener noreferrer"')) {
-    return text;
-  }
-  
-  let formattedText = text;
-  
-  // First, convert email addresses to clickable mailto links
-  const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g;
-  formattedText = formattedText.replace(emailRegex, (email) => {
-    return `<a href="mailto:${email}" class="text-blue-400 hover:text-blue-300 underline">${email}</a>`;
-  });
-  
-  // Then, convert https:// URLs to clickable links
-  const httpsUrlRegex = /(https?:\/\/[^\s<>]+)/g;
-  formattedText = formattedText.replace(httpsUrlRegex, (url) => {
-    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">${url}</a>`;
-  });
-  
-  
-  return formattedText;
+
+  let formattedText = escapeHtml(text);
+
+  // Markdown that the RAG model commonly emits
+  formattedText = formattedText.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  formattedText = formattedText.replace(/__(.+?)__/g, '<strong>$1</strong>');
+  formattedText = formattedText.replace(
+    /(^|[^\*])\*([^*\n]+)\*(?!\*)/g,
+    '$1<em>$2</em>'
+  );
+  formattedText = formattedText.replace(/`([^`]+)`/g, '<code>$1</code>');
+  formattedText = formattedText.replace(
+    /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">$1</a>'
+  );
+
+  const saved = withPlaceholders(formattedText, /<a\b[^>]*>.*?<\/a>/gi);
+  formattedText = saved.html;
+
+  formattedText = formattedText.replace(
+    /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g,
+    email =>
+      `<a href="mailto:${email}" class="text-blue-400 hover:text-blue-300 underline">${email}</a>`
+  );
+
+  formattedText = formattedText.replace(
+    /(https?:\/\/[^\s<>]+)/g,
+    url =>
+      `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">${url}</a>`
+  );
+
+  return restorePlaceholders(formattedText, saved.slots);
 }
