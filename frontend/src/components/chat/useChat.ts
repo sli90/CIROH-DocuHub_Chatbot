@@ -96,6 +96,7 @@ export function useChat() {
         sources: response.sources,
         links: response.links,
         route: response.route,
+        questionType: response.question_type,
         routeReason: response.route_reason,
         usage: response.usage,
       };

@@ -3,6 +3,7 @@
 import { Bot, User } from 'lucide-react';
 import { MessageListProps } from './types';
 import { formatUrlsAsHtml, formatSourcesAsHtml } from '../../utils';
+import { questionTypeLabel } from '../../services/api';
 
 export function MessageList({
   messages,
@@ -100,12 +101,12 @@ export function MessageList({
                             : ''
                         }`}
                       >
-                        {message.route && (
+                        {(message.questionType || message.route) && (
                           <div>
-                            Path: {message.route.replace('_', '-')}
-                            {message.routeReason
-                              ? ` — ${message.routeReason}`
-                              : ''}
+                            {questionTypeLabel(
+                              message.route,
+                              message.questionType
+                            )}
                           </div>
                         )}
                         {message.usage && (
