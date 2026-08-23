@@ -13,8 +13,17 @@ export interface ChatResponse {
   success: boolean;
   error?: string;
   route?: string;
+  question_type?: string;
   route_reason?: string;
   usage?: UsageInfo;
+}
+
+export function questionTypeLabel(route?: string, questionType?: string): string {
+  if (questionType) return questionType;
+  if (route === 'top_down') return 'Overview Question';
+  if (route === 'bottom_up') return 'Specific Question';
+  if (route === 'both') return 'Overview Question / Specific Question';
+  return '';
 }
 
 export class ChatAPI {
@@ -84,6 +93,7 @@ export class ChatAPI {
           sources?: string | string[];
           links?: string | string[];
           route?: string;
+          question_type?: string;
           route_reason?: string;
           usage?: UsageInfo;
         }>(
@@ -128,6 +138,7 @@ export class ChatAPI {
         links: formattedLinks,
         success: true,
         route: data.route,
+        question_type: data.question_type,
         route_reason: data.route_reason,
         usage: data.usage,
       };

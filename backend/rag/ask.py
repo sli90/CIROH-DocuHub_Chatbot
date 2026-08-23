@@ -58,6 +58,12 @@ HYBRID_ROUTER_MSG = (
     "Choose exactly one retrieval path."
 )
 
+QUESTION_TYPE_LABELS = {
+    "top_down": "Overview Question",
+    "bottom_up": "Specific Question",
+    "both": "Overview Question / Specific Question",
+}
+
 
 class UsageMeter:
     """Accumulate OpenAI token usage and an estimated USD cost."""
@@ -570,6 +576,7 @@ def answer_question(question, mode="hybrid", model=None):
         "sources": [s["title"] for s in sources],
         "links": [s["url"] for s in sources],
         "route": route,
+        "question_type": QUESTION_TYPE_LABELS.get(route, "Overview Question / Specific Question"),
         "route_reason": route_info.get("reason") or "",
         "usage": usage,
         "success": True,
@@ -593,7 +600,8 @@ def main():
     print("=" * 60)
     print(result["answer"])
     print("=" * 60)
-    print(f"\nRoute: {result['route']} — {result['route_reason']}")
+    print(f"\nQuestion type: {result['question_type']}")
+    print(f"Retrieval: {result['route']} — {result['route_reason']}")
     usage = result["usage"]
     print(
         f"Tokens: embed={usage['embedding_tokens']} "

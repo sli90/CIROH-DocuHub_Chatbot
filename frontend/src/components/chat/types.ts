@@ -15,6 +15,7 @@ export interface Message {
   sources?: string | string[];
   links?: string | string[];
   route?: string;
+  questionType?: string;
   routeReason?: string;
   usage?: UsageInfo;
 }
