@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parent.parent
 REPO_DIR = ROOT / "ciroh_hub"
 MIXED_DOCS = ROOT / "local_change_dashboard" / "mixed_docs"
 EXTERNAL_REPOS_JSON = ROOT / "local_change_dashboard" / "external_repos.json"
-BASE_URL = "https://docs.ciroh.org"
+BASE_URL = "https://hub.ciroh.org"
 
 SKIP_DIRS = {".github", "node_modules", "__pycache__", ".git"}
 SKIP_FILES = {

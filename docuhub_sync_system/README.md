@@ -172,6 +172,25 @@ timestamped for audit history and are not automatically pruned. Establish a
 retention policy for long-running installations rather than committing these
 files to Git.
 
+## One-time legacy URL migration
+
+Installations that still have active `docs.ciroh.org` DocuHub rows can audit a
+domain migration with:
+
+```bash
+python Andres_implementation/migrate_docuhub_urls.py
+```
+
+Apply it only after reviewing the counts:
+
+```bash
+python Andres_implementation/migrate_docuhub_urls.py --apply
+```
+
+The migration creates a targeted backup, updates only active DocuHub artifact
+URLs and legacy links inside their summaries/chunks, and verifies that inactive
+history and all existing embeddings remain unchanged.
+
 ## Output order
 
 Artifacts are emitted deterministically by DocuHub section, hierarchy, and
