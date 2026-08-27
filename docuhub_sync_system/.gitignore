@@ -1,0 +1,42 @@
+# Secrets and local environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Frontend dependencies and builds
+dashboard/frontend/node_modules/
+dashboard/frontend/dist/
+dashboard/frontend/.env
+dashboard/frontend/.env.*
+!dashboard/frontend/.env.example
+
+# Synced upstream repository and checkpoints
+ciroh_hub/
+ciroh_hub_sync.json
+
+# Runtime document caches
+local_change_dashboard/changes.json
+local_change_dashboard/external_repos.json
+local_change_dashboard/external_repo_files/
+local_change_dashboard/local_docs_products/
+local_change_dashboard/mixed_docs/
+local_change_dashboard/mixed_docs_manifest.json
+local_change_dashboard/full_docuhub_refresh/
+local_change_dashboard/docuhub_refresh_*/
+
+# Generated RAG/DB payloads and synchronization reports
+dashboard/formated_files/*
+!dashboard/formated_files/.gitkeep
+
+# Logs and local handoff archives
+*.log
+*.zip

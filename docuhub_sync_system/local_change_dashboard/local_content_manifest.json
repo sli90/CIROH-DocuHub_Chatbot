@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "excluded_prefixes": [
+    "docs/publications/",
+    "src/pages/publications/"
+  ],
+  "pages": [
+    {
+      "target": "src/pages/contribute/index.js",
+      "sources": [
+        {
+          "path": "src/components/HydroShareCard/index.js",
+          "kind": "jsx",
+          "title": "Contribute HydroShare resources"
+        }
+      ]
+    },
+    {
+      "target": "src/pages/contribute/develop.js",
+      "sources": [
+        {
+          "path": "src/components/TethysSection/index.js",
+          "kind": "jsx",
+          "title": "Develop applications with Tethys"
+        }
+      ]
+    },
+    {
+      "target": "src/pages/impact.mdx",
+      "component": "CommunityImpact",
+      "sources": [
+        {
+          "path": "src/components/CommunityImpact/CommunityImpactComponent.js",
+          "kind": "jsx",
+          "title": "Community impact"
+        },
+        {
+          "path": "src/data/communityImpactData.js",
+          "kind": "js_data",
+          "title": "Community impact data"
+        }
+      ]
+    },
+    {
+      "target": "src/pages/working-groups/index.js",
+      "sources": [
+        {
+          "path": "src/data/workingGroupsData.js",
+          "kind": "js_data",
+          "title": "Working groups"
+        }
+      ]
+    },
+    {
+      "target": "src/pages/news.mdx",
+      "component": "News",
+      "sources": [
+        {
+          "path": "src/components/News/news-js.jsx",
+          "kind": "dependency"
+        },
+        {
+          "path": "src/data/nextgen-news.json",
+          "kind": "json",
+          "title": "NextGen news"
+        }
+      ]
+    },
+    {
+      "target": "docs/products/intro.mdx",
+      "component": "ProductCards",
+      "sources": [
+        {
+          "path": "src/components/Product/ProductCards.js",
+          "kind": "dependency"
+        },
+        {
+          "path": "src/data/products.json",
+          "kind": "json",
+          "title": "CIROH products"
+        }
+      ]
+    },
+    {
+      "target": "src/pages/index.js",
+      "sources": [
+        {
+          "path": "src/components/HomepageFeatures/ExploreFeature/ExploreHeader.js",
+          "kind": "jsx",
+          "title": "Explore CIROH Hub"
+        },
+        {
+          "path": "src/components/HomepageFeatures/ExploreFeature/cardList.js",
+          "kind": "js_data",
+          "title": "Explore CIROH resources"
+        },
+        {
+          "path": "src/components/HomepageFeatures/FeedbackFeature/index.js",
+          "kind": "jsx",
+          "title": "Community feedback"
+        },
+        {
+          "path": "src/components/HomepageFeatures/InfrastructureFeature/index.js",
+          "kind": "jsx",
+          "title": "Cyberinfrastructure"
+        },
+        {
+          "path": "src/data/communityImpactData.js",
+          "kind": "js_data",
+          "title": "Cyberinfrastructure impact"
+        },
+        {
+          "path": "src/components/HomepageFeatures/OfficeHoursFeature/index.js",
+          "kind": "jsx",
+          "title": "Community office hours"
+        },
+        {
+          "path": "src/components/HomepageFeatures/TeamGallery/LeadList.js",
+          "kind": "js_data",
+          "title": "CIROH Hub leadership"
+        },
+        {
+          "path": "src/components/HomepageFeatures/TeamGallery/MemberList.js",
+          "kind": "js_data",
+          "title": "CIROH Hub team"
+        },
+        {
+          "path": "src/components/HomepageFeatures/TestimonialGallery/index.js",
+          "kind": "jsx",
+          "title": "Community testimonials"
+        },
+        {
+          "path": "src/components/HomepageFeatures/TestimonialGallery/testimonialList.js",
+          "kind": "js_data",
+          "title": "Testimonials"
+        },
+        {
+          "path": "src/components/HomepageFeatures/OrgGallery/MemberList.js",
+          "kind": "js_data",
+          "title": "Member institutions"
+        },
+        {
+          "path": "src/components/HomepageFeatures/OrgGallery/PartnerList.js",
+          "kind": "js_data",
+          "title": "Community partners"
+        },
+        {
+          "path": "src/components/HomepageFeatures/OrgGallery/SponsorList.js",
+          "kind": "js_data",
+          "title": "Sponsors"
+        }
+      ]
+    }
+  ],
+  "blog_authors": {
+    "source": "blog/authors.yaml",
+    "target_prefix": "blog/",
+    "title": "Authors"
+  }
+}
