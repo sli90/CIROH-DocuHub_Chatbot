@@ -407,6 +407,25 @@
   font-size: 11px;
 }
 
+.sync-option {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  margin: 0 0 18px;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  color: var(--text-soft);
+  background: rgba(255, 255, 255, 0.018);
+  cursor: pointer;
+}
+
+.sync-option input { margin: 2px 0 0; accent-color: var(--blue); }
+.sync-option span { display: grid; gap: 4px; }
+.sync-option strong { font-size: 12px; }
+.sync-option small { color: var(--muted); font-size: 10px; line-height: 1.5; }
+
 .field-label {
   display: flex;
   justify-content: space-between;
@@ -504,6 +523,7 @@
 
 .detail-section h3 { margin: 0; font-size: 14px; }
 .detail-section .detail-metrics { margin-top: 10px; }
+.detail-note { margin: 10px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
 
 .step-list {
   display: flex;

@@ -6,6 +6,8 @@ from sync_pipeline import (
     SyncStep,
     SyncStepError,
     generation_step,
+    github_repository_database_step,
+    github_repository_generation_step,
     repository_sync_steps,
     run_sync_steps,
 )
@@ -85,6 +87,32 @@ class SyncPipelineTests(unittest.TestCase):
             ],
             command,
         )
+
+    @patch("sync_pipeline.subprocess.run")
+    def test_github_repository_step_is_explicitly_guarded(self, run):
+        run.return_value = SimpleNamespace(returncode=0)
+        step = github_repository_generation_step(
+            python_executable="python", summarize=True
+        )
+        run_sync_steps([step])
+        self.assertEqual(
+            ["python", "run_github_repository_sync.py", "--execute"],
+            run.call_args.args[0],
+        )
+
+    @patch("sync_pipeline.subprocess.run")
+    def test_github_repository_database_step_is_scoped_and_incremental(self, run):
+        run.return_value = SimpleNamespace(returncode=0)
+        step = github_repository_database_step(
+            8, root="system", python_executable="python"
+        )
+        run_sync_steps([step])
+        command = run.call_args.args[0]
+        self.assertIn("--expected-artifact-type", command)
+        self.assertIn("--reconcile-snapshot-artifact-type", command)
+        self.assertIn("--ensure-repository-chunk-types", command)
+        self.assertIn("--require-summaries", command)
+        self.assertIn("github_repository_db_update_result.json", command)
 
 
 if __name__ == "__main__":

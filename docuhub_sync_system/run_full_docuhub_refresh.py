@@ -18,6 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
+from prepared_sync import PREPARED_DIRECTORY, create_prepared_bundle
 from sync_accounting import (
     build_synchronization_report,
     new_sync_id,
@@ -28,6 +29,7 @@ from sync_pipeline import (
     callback_step,
     database_step,
     generation_step,
+    github_repository_generation_step,
     repository_sync_steps,
     run_sync_steps,
 )
@@ -36,6 +38,10 @@ ROOT = Path(__file__).resolve().parent
 FORMATTED_DIR = ROOT / "dashboard" / "formated_files"
 ARTIFACTS_JSON = FORMATTED_DIR / "artifacts.json"
 CHUNKS_JSON = FORMATTED_DIR / "content_chunks.json"
+GITHUB_REPOSITORY_REPORT = FORMATTED_DIR / "github_repository_generation_report.json"
+GITHUB_REPOSITORY_DB_REPORT = (
+    FORMATTED_DIR / "github_repository_db_update_result.json"
+)
 REFRESH_ROOT = ROOT / "local_change_dashboard" / "full_docuhub_refresh"
 
 DOCUHUB_ARTIFACT_TYPE_ID = 1
@@ -194,12 +200,26 @@ def write_completed_sync_report(
     sync_id: str,
     started_at: str,
     include_db: bool,
+    include_github_repositories: bool,
     metadata: dict,
 ) -> Path:
     generation_report = load_json(FORMATTED_DIR / "generation_report.json")
     db_report = None
     if include_db:
         db_report = load_json(FORMATTED_DIR / "db_update_result.json")
+    github_report = None
+    github_db_report = None
+    if include_github_repositories:
+        github_report = load_json(GITHUB_REPOSITORY_REPORT)
+        if include_db:
+            github_db_report = load_json(GITHUB_REPOSITORY_DB_REPORT)
+        metadata["github_repositories"] = github_repository_report_summary(
+            github_report, github_db_report
+        )
+        metadata["github_repository_database_update_performed"] = bool(
+            github_db_report
+            and github_db_report.get("status") == "completed"
+        )
     report = build_synchronization_report(
         sync_id=sync_id,
         mode="full_docuhub_refresh",
@@ -208,6 +228,10 @@ def write_completed_sync_report(
         status="completed",
         generation_report=generation_report,
         db_report=db_report,
+        additional_usage_reports=[
+            github_report.get("openai_usage") if github_report else None,
+            github_db_report.get("openai_usage") if github_db_report else None,
+        ],
         metadata=metadata,
     )
     history_path = write_synchronization_report(FORMATTED_DIR, report)
@@ -228,6 +252,44 @@ def _mtime_ns(path: Path) -> int | None:
         return None
 
 
+def github_repository_report_summary(
+    report: dict, db_report: dict | None = None
+) -> dict:
+    db_report = db_report or {}
+    return {
+        "requested": True,
+        "status": report.get("status"),
+        "total_artifacts": report.get("total_artifacts", 0),
+        "total_chunks": report.get("total_chunks", 0),
+        "new_count": report.get("new_count", 0),
+        "updated_count": report.get("updated_count", 0),
+        "deleted_count": report.get("deleted_count", 0),
+        "summarized_count": report.get("summarized_count", 0),
+        "reused_summary_count": report.get("reused_summary_count", 0),
+        "chunked_repository_count": report.get("chunked_repository_count", 0),
+        "reused_chunk_repository_count": report.get(
+            "reused_chunk_repository_count", 0
+        ),
+        "chunk_classification_error_count": len(
+            report.get("chunk_classification_errors") or []
+        ),
+        "pending_summary_count": len(report.get("pending_summaries") or []),
+        "database_update_performed": db_report.get("status") == "completed",
+        "database": {
+            "status": db_report.get("status"),
+            "upserted_artifacts": db_report.get("upserted_artifacts", 0),
+            "deactivated_artifacts": db_report.get("deactivated_artifacts", 0),
+            "chunks_inserted": db_report.get("chunks_inserted", 0),
+            "unchanged_artifacts": (
+                (db_report.get("reconciliation") or {}).get(
+                    "unchanged_artifacts", 0
+                )
+            ),
+        },
+        "chunk_generation_status": report.get("chunk_generation_status"),
+    }
+
+
 def write_failed_sync_report(error: BaseException) -> Path | None:
     """Write partial usage only from reports changed by the current run."""
     if not _SYNC_CONTEXT:
@@ -235,8 +297,12 @@ def write_failed_sync_report(error: BaseException) -> Path | None:
 
     generation_report = None
     db_report = None
+    github_report = None
+    github_db_report = None
     generation_path = FORMATTED_DIR / "generation_report.json"
     db_path = FORMATTED_DIR / "db_update_result.json"
+    github_path = GITHUB_REPOSITORY_REPORT
+    github_db_path = GITHUB_REPOSITORY_DB_REPORT
     if _mtime_ns(generation_path) != _SYNC_CONTEXT.get("generation_mtime_ns"):
         try:
             generation_report = load_json(generation_path)
@@ -250,6 +316,40 @@ def write_failed_sync_report(error: BaseException) -> Path | None:
             db_report = load_json(db_path)
         except (OSError, json.JSONDecodeError):
             pass
+    if (
+        _SYNC_CONTEXT.get("include_github_repositories")
+        and _mtime_ns(github_path) != _SYNC_CONTEXT.get("github_report_mtime_ns")
+    ):
+        try:
+            github_report = load_json(github_path)
+        except (OSError, json.JSONDecodeError):
+            pass
+    if (
+        _SYNC_CONTEXT.get("include_db")
+        and _SYNC_CONTEXT.get("include_github_repositories")
+        and _mtime_ns(github_db_path)
+        != _SYNC_CONTEXT.get("github_db_report_mtime_ns")
+    ):
+        try:
+            github_db_report = load_json(github_db_path)
+        except (OSError, json.JSONDecodeError):
+            pass
+
+    failure_metadata = {
+        "database_update_requested": _SYNC_CONTEXT.get("include_db", False),
+        "github_repository_artifacts_requested": _SYNC_CONTEXT.get(
+            "include_github_repositories", False
+        ),
+        "github_repository_database_update_performed": bool(
+            github_db_report
+            and github_db_report.get("status") == "completed"
+        ),
+        "prepared_bundle": _SYNC_CONTEXT.get("prepared_bundle"),
+    }
+    if github_report:
+        failure_metadata["github_repositories"] = github_repository_report_summary(
+            github_report, github_db_report
+        )
 
     report = build_synchronization_report(
         sync_id=_SYNC_CONTEXT["sync_id"],
@@ -259,8 +359,12 @@ def write_failed_sync_report(error: BaseException) -> Path | None:
         status="failed",
         generation_report=generation_report,
         db_report=db_report,
+        additional_usage_reports=[
+            github_report.get("openai_usage") if github_report else None,
+            github_db_report.get("openai_usage") if github_db_report else None,
+        ],
         error=str(error),
-        metadata={"database_update_requested": _SYNC_CONTEXT.get("include_db", False)},
+        metadata=failure_metadata,
     )
     history_path = write_synchronization_report(FORMATTED_DIR, report)
     print(f"[report] failed synchronization: {history_path}", file=sys.stderr)
@@ -271,6 +375,14 @@ def main() -> int:
     global _SYNC_CONTEXT
     parser = argparse.ArgumentParser(
         description="Refresh DocuHub repo, external README content, and JSON artifacts."
+    )
+    parser.add_argument(
+        "--include-github-repositories",
+        action="store_true",
+        help=(
+            "Also generate type-4 GitHub repository artifacts and LLM descriptions. "
+            "With --update-db, also reconcile them into the database."
+        ),
     )
     parser.add_argument(
         "--update-db",
@@ -304,8 +416,12 @@ def main() -> int:
         "sync_id": sync_id,
         "started_at": started_at,
         "include_db": args.update_db,
+        "include_github_repositories": args.include_github_repositories,
         "generation_mtime_ns": _mtime_ns(FORMATTED_DIR / "generation_report.json"),
         "db_mtime_ns": _mtime_ns(FORMATTED_DIR / "db_update_result.json"),
+        "github_report_mtime_ns": _mtime_ns(GITHUB_REPOSITORY_REPORT),
+        "github_db_report_mtime_ns": _mtime_ns(GITHUB_REPOSITORY_DB_REPORT),
+        "prepared_bundle": None,
     }
 
     if not args.use_github_token:
@@ -363,36 +479,87 @@ def main() -> int:
             "summary_errors": summary_errors,
         }
 
-    steps = [
-        *repository_sync_steps(root=ROOT),
-        callback_step(
-            4, "merge_documents", "Merging documents...", merge_documents
-        ),
-        generation_step(
-            5,
-            mixed_docs=lambda: state["mixed_docs"],
-            output_dir=FORMATTED_DIR,
-            summarize=not args.skip_summarize,
-            root=ROOT,
-        ),
-        callback_step(
-            6,
-            "validate_generated_json",
-            "Validating generated DocuHub JSON...",
-            validate_generated_json,
-        ),
-    ]
+    prepared_bundle_path = ROOT / PREPARED_DIRECTORY / sync_id
+
+    def freeze_generated_outputs() -> dict:
+        bundle = create_prepared_bundle(
+            ROOT,
+            sync_id=sync_id,
+            include_github_repositories=args.include_github_repositories,
+            allow_pending_summaries=args.allow_pending_summaries,
+        )
+        state["prepared_bundle"] = bundle
+        _SYNC_CONTEXT["prepared_bundle"] = str(bundle)
+        print(f"[prepared] immutable synchronization bundle: {bundle}")
+        return {"bundle": str(bundle), "sync_id": sync_id}
+
+    steps = [*repository_sync_steps(root=ROOT)]
+    next_step = 4
+    if args.include_github_repositories:
+        steps.append(
+            github_repository_generation_step(
+                next_step,
+                summarize=not args.skip_summarize,
+                root=ROOT,
+            )
+        )
+        next_step += 1
+    steps.extend(
+        [
+            callback_step(
+                next_step, "merge_documents", "Merging documents...", merge_documents
+            ),
+            generation_step(
+                next_step + 1,
+                mixed_docs=lambda: state["mixed_docs"],
+                output_dir=FORMATTED_DIR,
+                summarize=not args.skip_summarize,
+                root=ROOT,
+            ),
+            callback_step(
+                next_step + 2,
+                "validate_generated_json",
+                "Validating generated DocuHub JSON...",
+                validate_generated_json,
+            ),
+            callback_step(
+                next_step + 3,
+                "prepare_sync_bundle",
+                "Freezing validated synchronization data...",
+                freeze_generated_outputs,
+            ),
+        ]
+    )
     if args.update_db:
         steps.append(
             database_step(
-                7,
-                artifacts=ARTIFACTS_JSON,
-                chunks=CHUNKS_JSON,
-                deactivate_active_artifact_type=DOCUHUB_ARTIFACT_TYPE_ID,
+                next_step + 4,
+                artifacts=prepared_bundle_path / "docuhub_artifacts.json",
+                chunks=prepared_bundle_path / "docuhub_chunks.json",
+                expected_artifact_type=DOCUHUB_ARTIFACT_TYPE_ID,
+                reconcile_snapshot_artifact_type=DOCUHUB_ARTIFACT_TYPE_ID,
+                require_summaries=not args.allow_pending_summaries,
                 skip_embeddings=args.skip_embeddings,
                 root=ROOT,
             )
         )
+        if args.include_github_repositories:
+            steps.append(
+                database_step(
+                    next_step + 5,
+                    artifacts=prepared_bundle_path / "github_artifacts.json",
+                    chunks=prepared_bundle_path / "github_chunks.json",
+                    expected_artifact_type=4,
+                    reconcile_snapshot_artifact_type=4,
+                    ensure_repository_chunk_types=True,
+                    skip_embeddings=args.skip_embeddings,
+                    require_summaries=not args.allow_pending_summaries,
+                    result_file="github_repository_db_update_result.json",
+                    key="update_github_repository_database",
+                    label="Updating GitHub repository database rows & embeddings...",
+                    root=ROOT,
+                )
+            )
 
     run_sync_steps(
         steps,
@@ -400,19 +567,26 @@ def main() -> int:
     )
 
     if not args.update_db:
-        print("[db] skipped. Pass --update-db to refresh DocuHub DB rows.")
+        print("[db] skipped. Apply the saved data later with:")
+        print(f"     python apply_prepared_sync.py --bundle {sync_id} --execute")
 
     write_completed_sync_report(
         sync_id=sync_id,
         started_at=started_at,
         include_db=args.update_db,
+        include_github_repositories=args.include_github_repositories,
         metadata={
             "database_update_requested": args.update_db,
+            "github_repository_artifacts_requested": args.include_github_repositories,
+            "github_repository_database_update_performed": (
+                args.update_db and args.include_github_repositories
+            ),
             "summarization_requested": not args.skip_summarize,
             "embeddings_requested": args.update_db and not args.skip_embeddings,
             "mixed_docs": str(state["mixed_docs"]),
             "mixed_doc_counts": state["mixed_counts"],
             "validation": state["validation"],
+            "prepared_bundle": str(state["prepared_bundle"]),
         },
     )
     return 0

@@ -21,18 +21,90 @@ The dashboard's **Run synchronization** action executes these steps in order:
    the token/cost report.
 6. Apply the delta to PostgreSQL and generate embeddings.
 
+The confirmation dialog also offers an opt-in **Synchronize GitHub repository
+artifacts & chunks** workflow. When selected, the system discovers public repositories in
+`CIROH-UA`, stores selected documentation/tutorial files at an immutable commit
+SHA, and creates one type-4 artifact with an LLM-generated `summary_data`
+description plus RAG chunks per new or changed repository. Obvious chunk types
+are classified deterministically; ambiguous documentation sections use the LLM.
+This option is off by default.
+
+Repository artifacts and chunks are first written as deterministic JSON
+snapshots, then reconciled with active `idArtifactType = 4` rows. The loader
+resolves each symbolic `chunk_type_name` against `tblChunkTypes` by name and
+creates missing approved type-4 names idempotently. It versions only new or
+changed repositories, deactivates removed repositories, embeds inserted rows,
+and leaves unchanged rows untouched.
+
 If a command-level step fails, later pipeline steps do not start. Existing
 database versions are soft-deactivated rather than deleted, so their artifact
-rows and chunks remain available as history.
+rows and chunks remain available as history. Future deactivations record their
+timestamp in `metadata.sync.deactivated_at`; older inactive rows predate this
+tracking and do not have a reliable deactivation time.
 
 Other entry points intentionally behave differently:
 
 - `python run_weekly_scan.py` refreshes sources and JSON but does **not** update
   PostgreSQL.
+- `python run_weekly_scan.py --include-github-repositories` also refreshes the
+  repository artifact/chunk snapshots and LLM descriptions/classifications,
+  still without a DB update.
 - `python run_full_docuhub_refresh.py` creates and validates a full snapshot but
-  does **not** update PostgreSQL unless `--update-db` is provided.
-- `python run_full_docuhub_refresh.py --update-db` deactivates the active
-  DocuHub set and loads the validated full snapshot.
+  does **not** update PostgreSQL. It freezes the validated output into a
+  checksum-protected prepared bundle that can be applied later.
+- `python run_full_docuhub_refresh.py --include-github-repositories` adds the
+  repository artifact/description/chunk stage. It remains JSON-only unless
+  `--update-db` is also supplied.
+- `python run_full_docuhub_refresh.py --include-github-repositories --update-db`
+  freezes the generated data before reconciling and embedding both the type-1
+  DocuHub and type-4 repository snapshots. For production, prefer the separate
+  prepare/apply commands below so the bundle can be reviewed first.
+
+## Safe two-phase full synchronization
+
+Prepare the complete DocuHub and GitHub-repository synchronization without
+touching PostgreSQL:
+
+```bash
+python run_full_docuhub_refresh.py --include-github-repositories --use-github-token
+```
+
+Repository work is checkpointed after every completed repository. If the
+process is interrupted, run the same command again: valid downloaded commit
+snapshots are reused, and repositories already stored in the compatible
+checkpoint do not repeat their description/chunk LLM calls. The checkpoint is
+removed only after the final repository JSON files are written successfully.
+
+After all validation succeeds, the command creates:
+
+```text
+local_change_dashboard/prepared_syncs/<sync-id>/
+```
+
+That directory contains exact copies of the artifacts, chunks, and generation
+reports plus a `manifest.json` with file sizes and SHA-256 hashes. The data files
+are not modified during a database attempt. Preview and revalidate the latest
+bundle without connecting to PostgreSQL:
+
+```bash
+python apply_prepared_sync.py
+```
+
+Apply a specific prepared bundle only after it has been reviewed:
+
+```bash
+python apply_prepared_sync.py --bundle <sync-id> --execute
+```
+
+The apply command performs no GitHub downloads and no summary/classification
+calls. It validates every saved hash before connecting, then reconciles type 1
+and type 4 by active URL/content fingerprint. Existing versions are
+soft-deactivated and replacements are inserted; unchanged versions are left
+alone. Each database stage is transactional. If an apply attempt fails, fix the
+database or connection issue and run the same command with the same sync ID;
+the generation phase does not have to be repeated, and a successfully applied
+earlier stage is recognized as unchanged. Attempt reports are retained under
+the bundle's `applications/` directory.
 
 ## Prerequisites
 
@@ -91,25 +163,29 @@ create the `vector` extension:
 psql -d ciroh -f "Andres_implementation/schema 1.sql"
 ```
 
-Then seed the names expected by the delta processor:
+If an existing application database is used, apply its normal migrations
+instead and verify that DocuHub has `idArtifactType = 1`, GitHub Repository has
+`idArtifactType = 4`, and the URL uniqueness rule applies only to active rows.
+The included schema seeds the required names. During a repository DB run, the
+loader also adds any missing approved type-4 chunk names without relying on
+environment-specific numeric chunk IDs. The embedding columns must be
+`vector(1792)` to match the current processor.
 
-```sql
-INSERT INTO tblartifacttypes (idartifacttype, typename)
-VALUES (1, 'DocuHub')
-ON CONFLICT DO NOTHING;
+### Azure active-URL migration
 
-INSERT INTO tblchunktypes (idartifacttype, typename)
-VALUES
-  (1, 'Section'),
-  (1, 'Subsection'),
-  (1, 'Subsubsection')
-ON CONFLICT DO NOTHING;
+Older Azure backups use a global `UNIQUE(url)` constraint, which prevents an
+inactive historical row and its active replacement from sharing a URL. After
+taking a fresh Azure backup, run the transactional migration through pgAdmin's
+Query Tool or `psql`:
+
+```bash
+psql "$AZURE_DATABASE_URL" -f "Andres_implementation/migrations/001_active_url_versioning.sql"
 ```
 
-If an existing application database is used, apply its normal migrations
-instead and verify that DocuHub has `idArtifactType = 1` and the three chunk
-types above exist. The embedding columns must be `vector(1792)` to match the
-current processor.
+The migration validates that active URLs are not duplicated, drops only the
+legacy `tblartifacts_url_key` constraint, and creates
+`idx_artifact_url_active` with `WHERE isActive = TRUE`. If validation or index
+creation fails, PostgreSQL rolls the complete migration back.
 
 ## 4. Install the frontend
 
@@ -145,6 +221,23 @@ Select **Run synchronization** and confirm the operation. A first run is a
 baseline run and can take considerably longer because it clones the upstream
 repository, summarizes the complete corpus, and creates embeddings.
 
+Leave **Synchronize GitHub repository artifacts & chunks** unchecked to preserve
+the existing six-step behavior. Selecting it adds repository generation and
+database reconciliation as stages seven and eight, and may make
+one OpenAI summary request per new or changed repository plus classification
+requests for ambiguous regenerated chunks. Unchanged repository chunks and
+descriptions are reused without another OpenAI call.
+
+The repository-only stage can also be invoked directly, but requires an
+explicit safety flag:
+
+```bash
+python run_github_repository_sync.py --execute
+```
+
+Without `--execute`, it exits before making GitHub or OpenAI calls. The direct
+command never updates PostgreSQL.
+
 ## Generated files and persistence
 
 Generated data is intentionally excluded from Git. On a normal local install,
@@ -156,21 +249,32 @@ durable storage for the following state:
 - `local_change_dashboard/external_repo_files/`
 - `local_change_dashboard/mixed_docs/`
 - `local_change_dashboard/mixed_docs_manifest.json`
+- `local_change_dashboard/github_repository_sync.json`
+- `local_change_dashboard/github_repository_corpus/`
 - `dashboard/formated_files/_hashes.json`
 - `dashboard/formated_files/artifacts.json`
 - `dashboard/formated_files/content_chunks.json`
+- `dashboard/formated_files/coderepo_artifacts.json`
+- `dashboard/formated_files/coderepo_chunks.json`
+- `dashboard/formated_files/github_repository_generation_report.json`
+- `dashboard/formated_files/github_repository_db_update_result.json`
 - `dashboard/formated_files/synchronization_reports/`
 
 `_hashes.json` is required to detect updates and deletions. The previous
 `artifacts.json` is also used to carry summaries forward for unchanged pages.
+Likewise, `github_repository_sync.json`, `coderepo_artifacts.json`,
+`coderepo_chunks.json`, and the repository corpus preserve stable repository
+and chunk IDs and allow unchanged descriptions/chunks to be reused without
+another OpenAI call.
 If this state is discarded on every run, the system can classify the corpus as
 new, repeat OpenAI work, and fail to identify documents deleted since the last
 run.
 
-Current full snapshots are overwritten. Delta and synchronization reports are
-timestamped for audit history and are not automatically pruned. Establish a
-retention policy for long-running installations rather than committing these
-files to Git.
+The mutable working snapshots are overwritten. Prepared bundles, delta files,
+and synchronization/application reports are retained for recovery and audit
+and are not automatically pruned. Establish a retention and backup policy for
+long-running installations rather than committing these generated files to
+Git.
 
 ## Output order
 
@@ -179,13 +283,22 @@ path. Chunks follow artifact and heading order. Generated numeric source IDs
 can shift when documents are inserted earlier in that order, so URLs—not JSON
 array positions or generated IDs—should be treated as stable identities.
 
+GitHub repository artifacts are emitted alphabetically by `full_name`.
+Previously assigned repository artifact IDs are preserved by `full_name`; new
+repositories receive the next available ID. Old immutable commit snapshots are
+kept in the local corpus, while removed repositories are omitted from the new
+JSON and their active database rows are soft-deactivated during reconciliation.
+Repository chunks follow repository, source-file, and section order. Chunks for
+unchanged commit SHAs retain their IDs; chunks rebuilt for an updated repository
+receive new, non-recycled IDs so parent references remain unambiguous.
+
 ## Token and cost accounting
 
-Each synchronization report separates summarization and embedding usage and
-records input, cached-input, output, reasoning, and total tokens when returned
-by the OpenAI API. It also records an estimated USD cost and the pricing source
-date. Pricing can be overridden with the optional variables shown in
-`.env.example`.
+Each synchronization report separates DocuHub summarization, repository
+summarization, repository chunk classification, and embedding usage. It records
+input, cached-input, output, reasoning, and total tokens when returned by the
+OpenAI API, plus an estimated USD cost and pricing source date. Pricing can be
+overridden with the optional variables shown in `.env.example`.
 
 The latest report is written to:
 
@@ -198,6 +311,14 @@ Historical reports are written under:
 ```text
 dashboard/formated_files/synchronization_reports/
 ```
+
+A fresh clone also includes a few lightweight, sanitized run summaries under
+`dashboard/bootstrap/synchronization_reports/`. They let teammates see the
+existing dashboard history without receiving a database dump, artifact/chunk
+payloads, embeddings, prepared bundles, or credentials. The backend merges the
+bundled summaries with locally generated reports by `sync_id`; the local report
+wins when both sources contain the same run. Reading this history does not
+connect to or update PostgreSQL or Azure.
 
 ## Verification
 
@@ -229,6 +350,8 @@ npm run build
   `X-CIROH-Operator-Key` or `Authorization: Bearer <token>`.
 - Database versions are retained with `isActive = FALSE`; plan a separate data
   retention policy if indefinite history is not required.
-- The current database helper commits its operations in batches. Run database
-  backups and monitoring for production schedules because a late failure is
-  not a single all-or-nothing transaction.
+- Each database synchronization runs as one transaction. A failed insert,
+  chunk mapping, or embedding write rolls back the corresponding deactivation
+  and replacement operations together.
+- Keep the prepared bundle until the database update has been verified and
+  backed up. Its manifest detects accidental changes before any retry.

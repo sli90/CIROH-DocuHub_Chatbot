@@ -4,6 +4,7 @@ import { Icon } from "./Common.jsx";
 
 export function SyncConfirmationDialog({ open, operatorMode, onCancel, onConfirm }) {
   const [operatorKey, setOperatorKey] = useState("");
+  const [includeGitHubRepositories, setIncludeGitHubRepositories] = useState(false);
   const cancelRef = useRef(null);
 
   useEffect(() => {
@@ -30,13 +31,17 @@ export function SyncConfirmationDialog({ open, operatorMode, onCancel, onConfirm
           <li>Token usage and estimated cost will be recorded in the run report.</li>
           <li>A failed prerequisite will stop its dependent steps.</li>
         </ul>
+        <label className="sync-option">
+          <input type="checkbox" checked={includeGitHubRepositories} onChange={(event) => setIncludeGitHubRepositories(event.target.checked)} />
+          <span><strong>Synchronize GitHub repository artifacts &amp; chunks</strong><small>For public CIROH-UA repositories, refreshes selected files, creates repository descriptions and chunks, then incrementally updates type-4 database rows and embeddings. Unchanged rows are kept as-is; replaced or removed rows are deactivated, never deleted.</small></span>
+        </label>
         <label className="field-label" htmlFor="operator-key">
           Operator key {tokenRequired ? <strong>Required</strong> : <span>Not required for local use</span>}
         </label>
         <input id="operator-key" className="text-input" type="password" autoComplete="off" value={operatorKey} onChange={(event) => setOperatorKey(event.target.value)} placeholder={tokenRequired ? "Enter the configured operator key" : "Optional"} />
         <div className="modal-actions">
           <button ref={cancelRef} className="button button-secondary" type="button" onClick={onCancel}>Cancel</button>
-          <button className="button button-primary" type="button" onClick={() => onConfirm(operatorKey)} disabled={tokenRequired && !operatorKey.trim()}><Icon name="play" /> Run synchronization</button>
+          <button className="button button-primary" type="button" onClick={() => onConfirm(operatorKey, { includeGitHubRepositories })} disabled={tokenRequired && !operatorKey.trim()}><Icon name="play" /> Run synchronization</button>
         </div>
       </section>
     </div>
@@ -56,6 +61,8 @@ export function SyncDetailDialog({ run, detail, loading, error, onClose }) {
   const usage = detail?.openai_usage || {};
   const database = detail?.database || {};
   const metadata = detail?.metadata || {};
+  const githubRepositories = metadata.github_repositories || {};
+  const githubDatabase = githubRepositories.database || {};
 
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
@@ -76,6 +83,7 @@ export function SyncDetailDialog({ run, detail, loading, error, onClose }) {
             {detail.error && <div className="run-error-detail"><strong>{metadata.failed_label || "Synchronization failed"}</strong><span>{detail.error}</span></div>}
             <div className="detail-section"><h3>Content</h3><dl className="detail-metrics"><div><dt>Artifacts</dt><dd>{formatNumber(content.total_artifacts)}</dd></div><div><dt>New</dt><dd>{formatNumber(content.new_count)}</dd></div><div><dt>Updated</dt><dd>{formatNumber(content.updated_count)}</dd></div><div><dt>Deleted</dt><dd>{formatNumber(content.deleted_count)}</dd></div><div><dt>Chunks</dt><dd>{formatNumber(content.total_chunks)}</dd></div></dl></div>
             <div className="detail-section"><h3>OpenAI usage</h3><dl className="detail-metrics"><div><dt>Input</dt><dd>{formatNumber(usage.input_tokens)}</dd></div><div><dt>Cached input</dt><dd>{formatNumber(usage.cached_input_tokens)}</dd></div><div><dt>Output</dt><dd>{formatNumber(usage.output_tokens)}</dd></div><div><dt>Total tokens</dt><dd>{formatNumber(usage.total_tokens)}</dd></div><div><dt>Estimated cost</dt><dd>{usage.estimated_cost_usd == null ? "Unavailable" : `$${Number(usage.estimated_cost_usd).toFixed(4)}`}</dd></div></dl></div>
+            {metadata.github_repository_artifacts_requested && <div className="detail-section"><h3>GitHub repository artifacts &amp; chunks</h3>{Object.keys(githubRepositories).length > 0 ? <><dl className="detail-metrics"><div><dt>Artifacts</dt><dd>{formatNumber(githubRepositories.total_artifacts)}</dd></div><div><dt>Chunks</dt><dd>{formatNumber(githubRepositories.total_chunks)}</dd></div><div><dt>Summarized</dt><dd>{formatNumber(githubRepositories.summarized_count)}</dd></div><div><dt>Repos re-chunked</dt><dd>{formatNumber(githubRepositories.chunked_repository_count)}</dd></div><div><dt>Repos reused</dt><dd>{formatNumber(githubRepositories.reused_chunk_repository_count)}</dd></div><div><dt>DB upserted</dt><dd>{formatNumber(githubDatabase.upserted_artifacts)}</dd></div><div><dt>DB deactivated</dt><dd>{formatNumber(githubDatabase.deactivated_artifacts)}</dd></div><div><dt>DB unchanged</dt><dd>{formatNumber(githubDatabase.unchanged_artifacts)}</dd></div><div><dt>DB chunks</dt><dd>{formatNumber(githubDatabase.chunks_inserted)}</dd></div><div><dt>Pending summaries</dt><dd>{formatNumber(githubRepositories.pending_summary_count)}</dd></div><div><dt>Classification errors</dt><dd>{formatNumber(githubRepositories.chunk_classification_error_count)}</dd></div></dl><p className="detail-note">{githubRepositories.database_update_performed ? "The type-4 snapshot was reconciled with the database. Historical artifacts and their chunks were preserved." : "The repository database stage was not completed."}</p></> : <p className="detail-note">The repository artifact/chunk stage was requested but did not produce a report.</p>}</div>}
             {Object.keys(database).length > 0 && <div className="detail-section"><h3>Database</h3><dl className="detail-metrics"><div><dt>Upserted</dt><dd>{formatNumber(database.upserted_artifacts)}</dd></div><div><dt>Deactivated</dt><dd>{formatNumber(database.deactivated_artifacts)}</dd></div><div><dt>Chunks inserted</dt><dd>{formatNumber(database.chunks_inserted)}</dd></div></dl></div>}
             <div className="detail-section"><h3>Completed steps</h3><div className="step-list">{(metadata.completed_steps || []).length ? metadata.completed_steps.map((step) => <code key={step}>{step}</code>) : <span className="muted-text">No completed steps recorded.</span>}</div></div>
           </>

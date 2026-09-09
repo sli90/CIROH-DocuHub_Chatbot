@@ -165,6 +165,24 @@ class UsageAccumulator:
     def record_error(self) -> None:
         self.errors += 1
 
+    def add_report(self, report: dict | None) -> None:
+        """Restore previously checkpointed usage into this accumulator."""
+        if not isinstance(report, dict):
+            return
+        operation = report.get("operation")
+        model = report.get("model")
+        if operation and operation != self.operation:
+            raise ValueError(
+                f"Cannot restore {operation!r} usage into {self.operation!r}"
+            )
+        if model and model != self.model:
+            raise ValueError(f"Cannot restore {model!r} usage into {self.model!r}")
+        self.requests += _as_int(report.get("requests"))
+        self.responses_with_usage += _as_int(report.get("responses_with_usage"))
+        self.errors += _as_int(report.get("errors"))
+        for field in TOKEN_FIELDS:
+            self.tokens[field] += _as_int(report.get(field))
+
     def report(self) -> dict:
         rates, overrides = pricing_for(self.model, self.operation)
         priced_quantities = {
@@ -201,7 +219,15 @@ class UsageAccumulator:
 
 
 def aggregate_usage(operation_reports: Iterable[dict | None]) -> dict:
-    operations = [report for report in operation_reports if isinstance(report, dict)]
+    operations: list[dict] = []
+    for report in operation_reports:
+        if not isinstance(report, dict):
+            continue
+        nested = report.get("operations")
+        if not report.get("operation") and isinstance(nested, list):
+            operations.extend(item for item in nested if isinstance(item, dict))
+        else:
+            operations.append(report)
     totals = {field: 0 for field in TOKEN_FIELDS}
     total_requests = 0
     total_errors = 0
@@ -240,6 +266,7 @@ def build_synchronization_report(
     status: str,
     generation_report: dict | None = None,
     db_report: dict | None = None,
+    additional_usage_reports: Iterable[dict | None] | None = None,
     error: str | None = None,
     metadata: dict | None = None,
 ) -> dict:
@@ -248,6 +275,7 @@ def build_synchronization_report(
     operations = [generation_report.get("openai_usage")]
     if db_report:
         operations.append(db_report.get("openai_usage"))
+    operations.extend(additional_usage_reports or [])
 
     duration_seconds = None
     try:

@@ -38,6 +38,10 @@ EXCLUDED_CONTENT_PREFIXES = {
 
 PATH_ALIASES = {
     ("CIROH-UA/datastreamCLI", "python_tools/README.md"): "src/datastreamcli/README.md",
+    (
+        "CIROH-UA/ngen-datastream",
+        "docs/nrds/CONTRIBUTE.md",
+    ): "docs/nrds/contribute/CONTRIBUTING.md",
 }
 
 

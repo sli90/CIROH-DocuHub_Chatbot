@@ -60,14 +60,35 @@ CREATE INDEX idx_chunk_type ON TBLChunks(idChunkType);
 -- HNSW index for granular vector search
 CREATE INDEX ON TBLChunks USING hnsw (embedding vector_cosine_ops);
 
--- Seed the identifiers and names expected by process_delta.py.
+-- Seed the identifiers and names used by the Azure-aligned schema.
 INSERT INTO TBLArtifactTypes (idArtifactType, TypeName)
-VALUES (1, 'DocuHub')
+VALUES
+    (1, 'DocuHub Page'),
+    (2, 'Publication'),
+    (3, 'Dataset'),
+    (4, 'GitHub Repository'),
+    (5, 'Course'),
+    (6, 'Presentation')
 ON CONFLICT DO NOTHING;
+
+SELECT setval(
+    pg_get_serial_sequence('tblartifacttypes', 'idartifacttype'),
+    (SELECT MAX(idArtifactType) FROM TBLArtifactTypes)
+);
 
 INSERT INTO TBLChunkTypes (idArtifactType, TypeName)
 VALUES
     (1, 'Section'),
     (1, 'Subsection'),
-    (1, 'Subsubsection')
+    (1, 'Subsubsection'),
+    (4, 'Project Overview'),
+    (4, 'Installation Setup'),
+    (4, 'Usage Examples'),
+    (4, 'Repository Structure'),
+    (4, 'Contributing Guidelines'),
+    (4, 'License Citation'),
+    (4, 'Documentation Section'),
+    (4, 'Notebook Section'),
+    (4, 'Configuration / Deployment'),
+    (4, 'Change Log / Release Notes')
 ON CONFLICT DO NOTHING;

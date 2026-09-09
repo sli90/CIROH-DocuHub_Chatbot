@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "history_seed_version": 1,
+  "sync_id": "20260902T211950_564459Z",
+  "mode": "full_docuhub_refresh",
+  "status": "completed",
+  "started_at": "2026-09-02T21:19:50.564459+00:00",
+  "completed_at": "2026-09-02T23:01:52.314193+00:00",
+  "duration_seconds": 6121.75,
+  "content": {
+    "total_artifacts": 249,
+    "total_chunks": 2009,
+    "new_count": 67,
+    "updated_count": 62,
+    "deleted_count": 60,
+    "summarized_count": 249,
+    "summary_error_count": 0,
+    "pending_summary_count": 0
+  },
+  "openai_usage": {
+    "requests": 2028,
+    "errors": 0,
+    "input_tokens": 1708945,
+    "cached_input_tokens": 242816,
+    "output_tokens": 260382,
+    "reasoning_tokens": 18216,
+    "total_tokens": 1969327,
+    "estimated_cost_usd": 6.25356655,
+    "currency": "USD",
+    "cost_is_estimate": true
+  },
+  "metadata": {
+    "shared_history_seed": true,
+    "database_update_requested": false,
+    "github_repository_artifacts_requested": true,
+    "github_repository_database_update_performed": false,
+    "superseded_by": "20260902T230635_304461Z"
+  }
+}

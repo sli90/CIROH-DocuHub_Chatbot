@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "history_seed_version": 1,
+  "sync_id": "20260902T233830_249071Z",
+  "mode": "prepared_bundle_apply",
+  "status": "completed",
+  "started_at": "2026-09-02T23:38:30.249071+00:00",
+  "completed_at": "2026-09-03T00:00:46.175993+00:00",
+  "duration_seconds": 1335.927,
+  "content": {
+    "total_artifacts": 302,
+    "total_chunks": 5395,
+    "new_count": 0,
+    "updated_count": 302,
+    "deleted_count": 54,
+    "summarized_count": 0,
+    "summary_error_count": 0,
+    "pending_summary_count": 0
+  },
+  "openai_usage": {
+    "operation": "embeddings",
+    "requests": 5454,
+    "errors": 0,
+    "input_tokens": 1059906,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_tokens": 0,
+    "total_tokens": 1059906,
+    "estimated_cost_usd": 0.13778778,
+    "currency": "USD",
+    "cost_is_estimate": true
+  },
+  "database": {
+    "status": "completed",
+    "upserted_artifacts": 302,
+    "deactivated_artifacts": 293,
+    "chunks_inserted": 5395
+  },
+  "metadata": {
+    "shared_history_seed": true,
+    "source_sync_id": "20260902T230635_304461Z",
+    "database_schema": "CIROH_AIBot",
+    "database_update_requested": true,
+    "github_repository_artifacts_requested": true,
+    "github_repository_database_update_performed": true,
+    "completed_steps": ["docuhub", "github_repositories"]
+  }
+}

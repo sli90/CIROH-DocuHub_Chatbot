@@ -3,4 +3,5 @@ openai>=1.66
 psycopg2-binary>=2.9
 python-dotenv>=1.0
 PyYAML>=6.0
+requests>=2.31
 uvicorn[standard]>=0.27

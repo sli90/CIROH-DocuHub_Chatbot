@@ -36,6 +36,8 @@ from sync_pipeline import (  # noqa: E402
     callback_step,
     database_step,
     generation_step,
+    github_repository_database_step,
+    github_repository_generation_step,
     repository_sync_steps,
     run_sync_steps,
 )
@@ -52,6 +54,9 @@ DEFAULT_LOCAL_CONTENT_MANIFEST = os.path.join(
 SYNCHRONIZATION_OUTPUT_DIR = os.path.join(ROOT, "dashboard", "formated_files")
 SYNCHRONIZATION_HISTORY_DIR = os.path.join(
     SYNCHRONIZATION_OUTPUT_DIR, "synchronization_reports"
+)
+BOOTSTRAP_SYNCHRONIZATION_HISTORY_DIR = os.path.join(
+    ROOT, "dashboard", "bootstrap", "synchronization_reports"
 )
 MIXED_EXPORT_VERSION = 3
 CHANGES_PATH = os.environ.get("CHANGES_JSON_PATH", DEFAULT_CHANGES)
@@ -1901,6 +1906,7 @@ _pipeline_state: dict = {
     "completed_at": None,
     "failed_step": None,
     "failed_label": None,
+    "options": {"include_github_repositories": False},
 }
 _pipeline_lock = threading.Lock()
 
@@ -1921,18 +1927,29 @@ def _merge_dashboard_documents():
     )
 
 
-def _dashboard_pipeline_steps():
-    return [
-        *repository_sync_steps(root=ROOT),
+def _dashboard_pipeline_steps(include_github_repositories=False):
+    steps = [*repository_sync_steps(root=ROOT)]
+    next_step = 4
+    if include_github_repositories:
+        steps.append(github_repository_generation_step(next_step, root=ROOT))
+        next_step += 1
+    steps.extend([
         callback_step(
-            4,
+            next_step,
             "merge_documents",
             "Merging documents...",
             _merge_dashboard_documents,
         ),
-        generation_step(5, root=ROOT, summarize=True),
-        database_step(6, root=ROOT),
-    ]
+        generation_step(next_step + 1, root=ROOT, summarize=True),
+        database_step(
+            next_step + 2, expected_artifact_type=1, root=ROOT
+        ),
+    ])
+    if include_github_repositories:
+        steps.append(
+            github_repository_database_step(next_step + 3, root=ROOT)
+        )
+    return steps
 
 
 def _load_pipeline_report(filename):
@@ -1945,11 +1962,19 @@ def _load_pipeline_report(filename):
         return {}
 
 
+def _pipeline_report_mtime_ns(filename):
+    try:
+        return os.stat(os.path.join(SYNCHRONIZATION_OUTPUT_DIR, filename)).st_mtime_ns
+    except OSError:
+        return None
+
+
 def _synchronization_summary(report):
     content = report.get("content") or {}
     usage = report.get("openai_usage") or {}
     database = report.get("database") or {}
     metadata = report.get("metadata") or {}
+    github_repositories = metadata.get("github_repositories") or {}
     duration_seconds = report.get("duration_seconds")
     if duration_seconds is None:
         try:
@@ -1979,30 +2004,42 @@ def _synchronization_summary(report):
         "failed_step": metadata.get("failed_step"),
         "failed_label": metadata.get("failed_label"),
         "completed_steps": metadata.get("completed_steps") or [],
+        "github_artifacts": github_repositories.get("total_artifacts", 0),
+        "github_repositories_requested": metadata.get(
+            "github_repository_artifacts_requested", False
+        ),
         "error": report.get("error"),
     }
 
 
 def _load_synchronization_history(limit=20):
-    try:
-        filenames = [
-            name
-            for name in os.listdir(SYNCHRONIZATION_HISTORY_DIR)
-            if name.startswith("sync_") and name.endswith(".json")
-        ]
-    except OSError:
-        return []
-
-    reports = []
-    for filename in filenames:
-        path = os.path.join(SYNCHRONIZATION_HISTORY_DIR, filename)
+    reports_by_id = {}
+    # Bundled history makes a fresh clone useful immediately. Runtime reports
+    # are loaded last so a teammate's local copy wins for the same sync ID.
+    for history_dir in (
+        BOOTSTRAP_SYNCHRONIZATION_HISTORY_DIR,
+        SYNCHRONIZATION_HISTORY_DIR,
+    ):
         try:
-            with open(path, "r", encoding="utf-8") as handle:
-                report = json.load(handle)
-            if isinstance(report, dict):
-                reports.append(_synchronization_summary(report))
-        except (OSError, json.JSONDecodeError):
+            filenames = [
+                name
+                for name in os.listdir(history_dir)
+                if name.startswith("sync_") and name.endswith(".json")
+            ]
+        except OSError:
             continue
+        for filename in filenames:
+            path = os.path.join(history_dir, filename)
+            try:
+                with open(path, "r", encoding="utf-8") as handle:
+                    report = json.load(handle)
+                if isinstance(report, dict):
+                    summary = _synchronization_summary(report)
+                    key = summary.get("sync_id") or filename
+                    reports_by_id[key] = summary
+            except (OSError, json.JSONDecodeError):
+                continue
+    reports = list(reports_by_id.values())
     reports.sort(
         key=lambda report: report.get("completed_at") or report.get("started_at") or "",
         reverse=True,
@@ -2013,18 +2050,85 @@ def _load_synchronization_history(limit=20):
 def _load_synchronization_detail(sync_id):
     if not re.fullmatch(r"[A-Za-z0-9_.-]{1,120}", sync_id or ""):
         return None
-    path = os.path.join(SYNCHRONIZATION_HISTORY_DIR, f"sync_{sync_id}.json")
-    try:
-        with open(path, "r", encoding="utf-8") as handle:
-            report = json.load(handle)
-        return report if isinstance(report, dict) else None
-    except (OSError, json.JSONDecodeError):
-        return None
+    # Prefer runtime detail, then fall back to the read-only bundled seed.
+    for history_dir in (
+        SYNCHRONIZATION_HISTORY_DIR,
+        BOOTSTRAP_SYNCHRONIZATION_HISTORY_DIR,
+    ):
+        path = os.path.join(history_dir, f"sync_{sync_id}.json")
+        try:
+            with open(path, "r", encoding="utf-8") as handle:
+                report = json.load(handle)
+            if isinstance(report, dict):
+                return report
+        except (OSError, json.JSONDecodeError):
+            continue
+    return None
 
 
-def _finalize_dashboard_pipeline(sync_id, started_at, completed_steps):
+def _github_repository_report_summary(report, db_report=None):
+    db_report = db_report or {}
+    database_completed = db_report.get("status") == "completed"
+    return {
+        "requested": True,
+        "status": report.get("status"),
+        "total_artifacts": report.get("total_artifacts", 0),
+        "total_chunks": report.get("total_chunks", 0),
+        "new_count": report.get("new_count", 0),
+        "updated_count": report.get("updated_count", 0),
+        "deleted_count": report.get("deleted_count", 0),
+        "summarized_count": report.get("summarized_count", 0),
+        "reused_summary_count": report.get("reused_summary_count", 0),
+        "chunked_repository_count": report.get("chunked_repository_count", 0),
+        "reused_chunk_repository_count": report.get(
+            "reused_chunk_repository_count", 0
+        ),
+        "chunk_classification_error_count": len(
+            report.get("chunk_classification_errors") or []
+        ),
+        "pending_summary_count": len(report.get("pending_summaries") or []),
+        "database_update_performed": database_completed,
+        "database": {
+            "status": db_report.get("status"),
+            "upserted_artifacts": db_report.get("upserted_artifacts", 0),
+            "deactivated_artifacts": db_report.get("deactivated_artifacts", 0),
+            "chunks_inserted": db_report.get("chunks_inserted", 0),
+            "unchanged_artifacts": (
+                (db_report.get("reconciliation") or {}).get(
+                    "unchanged_artifacts", 0
+                )
+            ),
+        },
+        "chunk_generation_status": report.get("chunk_generation_status"),
+    }
+
+
+def _finalize_dashboard_pipeline(
+    sync_id, started_at, completed_steps, include_github_repositories=False
+):
     generation_report = _load_pipeline_report("generation_report.json")
     db_report = _load_pipeline_report("db_update_result.json")
+    github_db_report = (
+        _load_pipeline_report("github_repository_db_update_result.json")
+        if include_github_repositories
+        else {}
+    )
+    github_report = (
+        _load_pipeline_report("github_repository_generation_report.json")
+        if include_github_repositories
+        else {}
+    )
+    metadata = {
+        "completed_steps": sorted(completed_steps),
+        "github_repository_artifacts_requested": include_github_repositories,
+        "github_repository_database_update_performed": (
+            github_db_report.get("status") == "completed"
+        ),
+    }
+    if github_report:
+        metadata["github_repositories"] = _github_repository_report_summary(
+            github_report, github_db_report
+        )
     completed_at = utc_now_iso()
     sync_report = build_synchronization_report(
         sync_id=sync_id,
@@ -2034,7 +2138,11 @@ def _finalize_dashboard_pipeline(sync_id, started_at, completed_steps):
         status="completed",
         generation_report=generation_report,
         db_report=db_report,
-        metadata={"completed_steps": sorted(completed_steps)},
+        additional_usage_reports=[
+            github_report.get("openai_usage"),
+            github_db_report.get("openai_usage"),
+        ],
+        metadata=metadata,
     )
     sync_report_path = write_synchronization_report(
         SYNCHRONIZATION_OUTPUT_DIR, sync_report
@@ -2044,11 +2152,17 @@ def _finalize_dashboard_pipeline(sync_id, started_at, completed_steps):
     return result
 
 
-def _run_pipeline():
+def _run_pipeline(include_github_repositories=False):
     sync_id = new_sync_id()
     started_at = utc_now_iso()
     completed_steps = set()
-    steps = _dashboard_pipeline_steps()
+    github_report_filename = "github_repository_generation_report.json"
+    github_report_mtime_ns = _pipeline_report_mtime_ns(github_report_filename)
+    github_db_report_filename = "github_repository_db_update_result.json"
+    github_db_report_mtime_ns = _pipeline_report_mtime_ns(
+        github_db_report_filename
+    )
+    steps = _dashboard_pipeline_steps(include_github_repositories)
     _pipeline_state.update(
         sync_id=sync_id,
         started_at=started_at,
@@ -2056,6 +2170,7 @@ def _run_pipeline():
         failed_step=None,
         failed_label=None,
         total=len(steps),
+        options={"include_github_repositories": include_github_repositories},
     )
 
     def on_step_start(step):
@@ -2084,9 +2199,53 @@ def _run_pipeline():
         )
         db_report = (
             _load_pipeline_report("db_update_result.json")
-            if exc.step.key == "update_database"
+            if (
+                "update_database" in completed_steps
+                or exc.step.key == "update_database"
+            )
             else {}
         )
+        github_report = (
+            _load_pipeline_report(github_report_filename)
+            if include_github_repositories
+            and (
+                "generate_github_repository_artifacts" in completed_steps
+                or (
+                    exc.step.key == "generate_github_repository_artifacts"
+                    and _pipeline_report_mtime_ns(github_report_filename)
+                    != github_report_mtime_ns
+                )
+            )
+            else {}
+        )
+        github_db_report = (
+            _load_pipeline_report(github_db_report_filename)
+            if include_github_repositories
+            and (
+                "update_github_repository_database" in completed_steps
+                or (
+                    exc.step.key == "update_github_repository_database"
+                    and _pipeline_report_mtime_ns(github_db_report_filename)
+                    != github_db_report_mtime_ns
+                )
+            )
+            else {}
+        )
+        failure_metadata = {
+            "completed_steps": sorted(completed_steps),
+            "failed_step": exc.step.key,
+            "failed_label": exc.step.label,
+            "github_repository_artifacts_requested": include_github_repositories,
+            "github_repository_database_update_performed": (
+                github_db_report.get("status") == "completed"
+            ),
+        }
+        if github_report:
+            failure_metadata["github_repositories"] = (
+                _github_repository_report_summary(
+                    github_report, github_db_report
+                )
+            )
         failed_report = build_synchronization_report(
             sync_id=sync_id,
             mode="dashboard_pipeline",
@@ -2095,12 +2254,12 @@ def _run_pipeline():
             status="failed",
             generation_report=generation_report,
             db_report=db_report,
+            additional_usage_reports=[
+                github_report.get("openai_usage"),
+                github_db_report.get("openai_usage"),
+            ],
             error=error,
-            metadata={
-                "completed_steps": sorted(completed_steps),
-                "failed_step": exc.step.key,
-                "failed_label": exc.step.label,
-            },
+            metadata=failure_metadata,
         )
         try:
             write_synchronization_report(
@@ -2113,18 +2272,45 @@ def _run_pipeline():
     except Exception as exc:
         error = str(exc)
         completed_at = utc_now_iso()
+        github_report = (
+            _load_pipeline_report(github_report_filename)
+            if include_github_repositories
+            and "generate_github_repository_artifacts" in completed_steps
+            else {}
+        )
+        github_db_report = (
+            _load_pipeline_report(github_db_report_filename)
+            if include_github_repositories
+            and "update_github_repository_database" in completed_steps
+            else {}
+        )
+        failure_metadata = {
+            "completed_steps": sorted(completed_steps),
+            "failed_step": "unexpected_error",
+            "failed_label": "Unexpected pipeline error",
+            "github_repository_artifacts_requested": include_github_repositories,
+            "github_repository_database_update_performed": (
+                github_db_report.get("status") == "completed"
+            ),
+        }
+        if github_report:
+            failure_metadata["github_repositories"] = (
+                _github_repository_report_summary(
+                    github_report, github_db_report
+                )
+            )
         failed_report = build_synchronization_report(
             sync_id=sync_id,
             mode="dashboard_pipeline",
             started_at=started_at,
             completed_at=completed_at,
             status="failed",
+            additional_usage_reports=[
+                github_report.get("openai_usage"),
+                github_db_report.get("openai_usage"),
+            ],
             error=error,
-            metadata={
-                "completed_steps": sorted(completed_steps),
-                "failed_step": "unexpected_error",
-                "failed_label": "Unexpected pipeline error",
-            },
+            metadata=failure_metadata,
         )
         try:
             write_synchronization_report(SYNCHRONIZATION_OUTPUT_DIR, failed_report)
@@ -2141,7 +2327,10 @@ def _run_pipeline():
 
     try:
         _pipeline_state["result"] = _finalize_dashboard_pipeline(
-            sync_id, started_at, completed_steps
+            sync_id,
+            started_at,
+            completed_steps,
+            include_github_repositories,
         )
         _pipeline_state["completed_at"] = _pipeline_state["result"].get("completed_at")
         _pipeline_state["label"] = "Done"
@@ -2152,7 +2341,7 @@ def _run_pipeline():
 
 
 @app.post("/api/run-pipeline")
-def run_pipeline(request: Request):
+def run_pipeline(request: Request, include_github_repositories: bool = False):
     _require_operator(request)
     with _pipeline_lock:
         if _pipeline_state["running"]:
@@ -2161,12 +2350,20 @@ def run_pipeline(request: Request):
                 content={"status": "already_running", "step": _pipeline_state["step"],
                          "label": _pipeline_state["label"]},
             )
+        pipeline_total = len(
+            _dashboard_pipeline_steps(include_github_repositories)
+        )
         _pipeline_state.update(
-            running=True, step=0, total=6, label="Starting...",
+            running=True, step=0, total=pipeline_total, label="Starting...",
             error=None, result=None, sync_id=None, started_at=None,
             completed_at=None, failed_step=None, failed_label=None,
+            options={"include_github_repositories": include_github_repositories},
         )
-    t = threading.Thread(target=_run_pipeline, daemon=True)
+    t = threading.Thread(
+        target=_run_pipeline,
+        args=(include_github_repositories,),
+        daemon=True,
+    )
     t.start()
     return {"status": "started"}
 

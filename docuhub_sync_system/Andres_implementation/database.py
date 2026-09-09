@@ -41,11 +41,20 @@ class DatabaseManager:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         """
-        Automatically closes the session connection upon exiting the 'with' block.
+        Commit the complete session only when every operation succeeded.
+
+        Deactivating an old artifact and inserting its replacement must
+        succeed or fail together.
         """
         if self._conn:
-            self._conn.close()
-            self._conn = None
+            try:
+                if exc_type is None:
+                    self._conn.commit()
+                else:
+                    self._conn.rollback()
+            finally:
+                self._conn.close()
+                self._conn = None
 
     def execute_query(self, query, params=None, fetch=False):
         """
@@ -65,12 +74,12 @@ class DatabaseManager:
                 #if fetch:
                 #    return cur.fetchall()
 
-            conn.commit()
+            if is_temporary:
+                conn.commit()
             return result
         except Exception as e:
             conn.rollback()
-            print(f"Database Error: {e}")
-            return None
+            raise RuntimeError(f"Database query failed: {e}") from e
         finally:
             # Only close the connection if it was created specifically for this query
             if is_temporary:
@@ -85,13 +94,14 @@ class DatabaseManager:
         conn = self._conn if not is_temporary else self._create_connection()
 
         try:
-            with conn:
-                with conn.cursor() as cur:
-                    # execute_values is significantly faster than executing in a loop
-                    execute_values(cur, query, data_list, page_size=page_size)
+            with conn.cursor() as cur:
+                # execute_values is significantly faster than executing in a loop
+                execute_values(cur, query, data_list, page_size=page_size)
+            if is_temporary:
+                conn.commit()
         except Exception as e:
             conn.rollback()
-            print(f"Batch Database Error: {e}")
+            raise RuntimeError(f"Database batch failed: {e}") from e
         finally:
             if is_temporary:
                 conn.close()

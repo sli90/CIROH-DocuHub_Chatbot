@@ -153,12 +153,42 @@ def generation_step(
     )
 
 
+def github_repository_generation_step(
+    number: int = 4,
+    *,
+    summarize: bool = True,
+    force: bool = False,
+    root: Path | str = ROOT,
+    python_executable: str = sys.executable,
+) -> SyncStep:
+    """Build type-4 repository artifacts/chunks without updating the database."""
+    command = [python_executable, "run_github_repository_sync.py", "--execute"]
+    if not summarize:
+        command.append("--skip-summaries")
+    if force:
+        command.append("--force")
+    return command_step(
+        number,
+        "generate_github_repository_artifacts",
+        "Generating GitHub repository artifacts, descriptions & chunks...",
+        command,
+        cwd=root,
+    )
+
+
 def database_step(
     number: int = 6,
     *,
     artifacts: Path | str | None = None,
     chunks: Path | str | None = None,
     deactivate_active_artifact_type: int | None = None,
+    expected_artifact_type: int | None = None,
+    reconcile_snapshot_artifact_type: int | None = None,
+    ensure_repository_chunk_types: bool = False,
+    require_summaries: bool = False,
+    result_file: Path | str = "db_update_result.json",
+    key: str = "update_database",
+    label: str = "Updating database (embeddings)...",
     skip_embeddings: bool = False,
     root: Path | str = ROOT,
     python_executable: str = sys.executable,
@@ -172,14 +202,56 @@ def database_step(
         command.extend(
             ["--deactivate-active-artifact-type", str(deactivate_active_artifact_type)]
         )
+    if expected_artifact_type is not None:
+        command.extend(["--expected-artifact-type", str(expected_artifact_type)])
+    if reconcile_snapshot_artifact_type is not None:
+        command.extend(
+            [
+                "--reconcile-snapshot-artifact-type",
+                str(reconcile_snapshot_artifact_type),
+            ]
+        )
+    if ensure_repository_chunk_types:
+        command.append("--ensure-repository-chunk-types")
+    if require_summaries:
+        command.append("--require-summaries")
+    command.extend(["--result-file", str(result_file)])
     if skip_embeddings:
         command.append("--skip-embeddings")
     return command_step(
         number,
-        "update_database",
-        "Updating database (embeddings)...",
+        key,
+        label,
         command,
         cwd=root,
+    )
+
+
+def github_repository_database_step(
+    number: int,
+    *,
+    root: Path | str = ROOT,
+    python_executable: str = sys.executable,
+    skip_embeddings: bool = False,
+    require_summaries: bool = True,
+) -> SyncStep:
+    """Incrementally reconcile the generated type-4 snapshot with PostgreSQL."""
+    root_path = Path(root)
+    formatted = root_path / "dashboard" / "formated_files"
+    return database_step(
+        number,
+        artifacts=formatted / "coderepo_artifacts.json",
+        chunks=formatted / "coderepo_chunks.json",
+        expected_artifact_type=4,
+        reconcile_snapshot_artifact_type=4,
+        ensure_repository_chunk_types=True,
+        require_summaries=require_summaries,
+        result_file="github_repository_db_update_result.json",
+        key="update_github_repository_database",
+        label="Updating GitHub repository database rows & embeddings...",
+        skip_embeddings=skip_embeddings,
+        root=root_path,
+        python_executable=python_executable,
     )
 
 

@@ -3,7 +3,11 @@ import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from sync_accounting import UsageAccumulator, aggregate_usage
+from sync_accounting import (
+    UsageAccumulator,
+    aggregate_usage,
+    build_synchronization_report,
+)
 
 
 class SyncAccountingTests(unittest.TestCase):
@@ -56,6 +60,37 @@ class SyncAccountingTests(unittest.TestCase):
         self.assertEqual(0, combined["total_tokens"])
         self.assertEqual(0, combined["estimated_cost_usd"])
         self.assertEqual(2, len(combined["operations"]))
+        flattened = aggregate_usage([combined])
+        self.assertEqual(2, len(flattened["operations"]))
+        self.assertEqual(0, flattened["total_tokens"])
+
+    def test_synchronization_report_includes_additional_stage_usage(self):
+        repository_usage = UsageAccumulator(
+            "github_repository_summarization", "gpt-5.2"
+        )
+        repository_usage.record_request()
+        repository_usage.add_response(
+            SimpleNamespace(
+                usage=SimpleNamespace(
+                    input_tokens=100,
+                    output_tokens=10,
+                    total_tokens=110,
+                )
+            )
+        )
+        report = build_synchronization_report(
+            sync_id="test",
+            mode="test",
+            started_at="2026-09-01T00:00:00+00:00",
+            completed_at="2026-09-01T00:00:01+00:00",
+            status="completed",
+            additional_usage_reports=[repository_usage.report()],
+        )
+        self.assertEqual(110, report["openai_usage"]["total_tokens"])
+        self.assertEqual(
+            "github_repository_summarization",
+            report["openai_usage"]["operations"][0]["operation"],
+        )
 
 
 if __name__ == "__main__":

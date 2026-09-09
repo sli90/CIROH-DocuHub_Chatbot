@@ -172,16 +172,19 @@ export default function DashboardApp() {
     finally { setTypeFilesLoading(false); }
   };
 
-  const startSynchronization = async (operatorKey) => {
+  const startSynchronization = async (operatorKey, options = {}) => {
+    const includeGitHubRepositories = Boolean(options.includeGitHubRepositories);
     setConfirmationOpen(false);
     setPipelineStarting(true);
     setPipelineError("");
     setPipelineResult(null);
     setPipelineStep(0);
+    setPipelineTotal(includeGitHubRepositories ? 8 : 6);
     setPipelineLabel("Starting synchronization");
     try {
       const headers = operatorKey?.trim() ? { "X-CIROH-Operator-Key": operatorKey.trim() } : {};
-      const response = await fetch(`${API_BASE}/api/run-pipeline`, { method: "POST", cache: "no-store", headers });
+      const query = includeGitHubRepositories ? "?include_github_repositories=true" : "";
+      const response = await fetch(`${API_BASE}/api/run-pipeline${query}`, { method: "POST", cache: "no-store", headers });
       const payload = await response.json().catch(() => ({}));
       if (response.status !== 409 && !response.ok) throw new Error(payload.detail || "Start request failed");
       setPipelineRunning(true);
