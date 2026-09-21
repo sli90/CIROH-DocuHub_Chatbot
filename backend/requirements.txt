@@ -8,3 +8,5 @@ requests
 fastapi
 uvicorn[standard]
 pydantic
+boto3
+mangum

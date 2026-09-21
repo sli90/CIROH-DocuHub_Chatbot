@@ -1,0 +1,24 @@
+{
+  "app": "python app.py",
+  "watch": {
+    "include": ["**"],
+    "exclude": ["README.md", "cdk*.json", "requirements*.txt", "**/__pycache__", "**/.venv", "tests"]
+  },
+  "context": {
+    "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+    "@aws-cdk/core:checkSecretUsage": true,
+    "@aws-cdk/core:target-partitions": ["aws", "aws-cn"],
+    "@aws-cdk/aws-iam:minimizePolicies": true,
+    "@aws-cdk/core:validateSnapshotRemovalPolicy": true,
+    "@aws-cdk/aws-s3:createDefaultLoggingPolicy": true,
+    "@aws-cdk/aws-rds:databaseProxyUniqueResourceId": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+
+    "project_name": "CIROH-DocuHub",
+    "env_name": "dev",
+    "aurora_min_acu": 0,
+    "aurora_max_acu": 4,
+    "budget_monthly_usd": 60,
+    "budget_alert_email": ""
+  }
+}

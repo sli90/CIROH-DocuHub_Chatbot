@@ -1,0 +1,10 @@
+psycopg2-binary
+python-dotenv
+openai
+pandas
+requests
+nbformat
+hsclient
+rdflib
+jupyter
+ipykernel

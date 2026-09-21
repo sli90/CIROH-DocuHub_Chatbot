@@ -13,3 +13,6 @@ CIROH-Hub_old/
 # Local testing files
 GitHubTest/
 *_test.*
+
+# Corpus re-embed migration checkpoint (backend/database/migrate_to_bedrock.py)
+migrate_to_bedrock.checkpoint.json
