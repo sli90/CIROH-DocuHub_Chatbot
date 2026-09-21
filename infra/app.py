@@ -1,0 +1,138 @@
+#!/usr/bin/env python3
+"""CDK app entry point.
+
+Everything lives in one CloudFormation stack (CirohStack below), assembled
+from the Construct-level building blocks in stacks/*.py. For a project this
+size, one stack means one atomic `cdk deploy`, no cross-stack exports/
+imports to manage, and no deploy-ordering to get right by hand - the
+Python-level dependencies between the building blocks (Frontend needs the
+Backend's API domain, Backend optionally needs the Guardrail's id) are just
+plain attribute references, resolved automatically at synth time.
+
+See docs/AWS_DEPLOYMENT.md for the full deploy walkthrough. Quick start:
+
+    cd infra
+    python -m venv .venv && .venv/Scripts/activate  # or source .venv/bin/activate
+    pip install -r requirements.txt
+    cdk bootstrap
+    cdk deploy CirohStack -c budget_alert_email=you@example.com
+"""
+
+from __future__ import annotations
+
+import os
+from pathlib import Path
+
+import aws_cdk as cdk
+from aws_cdk import RemovalPolicy, Tags
+from constructs import Construct
+
+from stacks.backend_stack import BackendStack
+from stacks.database_stack import DatabaseStack
+from stacks.frontend_stack import FrontendStack
+from stacks.guardrail_stack import GuardrailStack
+from stacks.ingestion_stack import IngestionStack
+from stacks.network_stack import NetworkStack
+from stacks.observability_stack import ObservabilityStack
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+BACKEND_DIR = str(REPO_ROOT / "backend")
+FRONTEND_DIST_DIR = REPO_ROOT / "frontend" / "dist"
+
+
+class CirohStack(cdk.Stack):
+    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
+
+        project_name = self.node.try_get_context("project_name") or "CIROH-DocuHub"
+        env_name = self.node.try_get_context("env_name") or "dev"
+        is_prod = env_name == "prod"
+        min_acu = float(self.node.try_get_context("aurora_min_acu") or 0)
+        max_acu = float(self.node.try_get_context("aurora_max_acu") or 4)
+        budget_usd = float(self.node.try_get_context("budget_monthly_usd") or 60)
+        alert_email = self.node.try_get_context("budget_alert_email") or None
+        # Set once the frontend's real domain is known (either a manually
+        # supplied custom domain, or the CloudFront domain from a first
+        # deploy's output) - see docs/AWS_DEPLOYMENT.md, "Two-phase deploy".
+        allowed_origins = self.node.try_get_context("allowed_origins") or "http://localhost:5173"
+
+        network = NetworkStack(self, "Network", project_name=project_name)
+
+        database = DatabaseStack(
+            self,
+            "Database",
+            project_name=project_name,
+            vpc=network.vpc,
+            security_group=network.aurora_security_group,
+            min_acu=min_acu,
+            max_acu=max_acu,
+            removal_policy=RemovalPolicy.SNAPSHOT if is_prod else RemovalPolicy.DESTROY,
+        )
+
+        guardrail = GuardrailStack(self, "Guardrail", project_name=project_name)
+
+        backend = BackendStack(
+            self,
+            "Backend",
+            project_name=project_name,
+            backend_source_dir=BACKEND_DIR,
+            aurora_cluster_arn=database.cluster_arn,
+            aurora_secret_arn=database.secret_arn,
+            aurora_database=database.database_name,
+            allowed_origins=allowed_origins,
+            guardrail_id=guardrail.guardrail_id,
+            guardrail_version=guardrail.guardrail_version,
+        )
+
+        frontend = FrontendStack(
+            self,
+            "Frontend",
+            project_name=project_name,
+            api_domain_name=backend.api_domain_name,
+            frontend_dist_dir=str(FRONTEND_DIST_DIR) if FRONTEND_DIST_DIR.exists() else None,
+            removal_policy=RemovalPolicy.RETAIN if is_prod else RemovalPolicy.DESTROY,
+        )
+
+        ingestion = IngestionStack(
+            self,
+            "Ingestion",
+            project_name=project_name,
+            vpc=network.vpc,
+            security_group=network.ingestion_security_group,
+            repo_root=str(REPO_ROOT),
+            aurora_cluster_arn=database.cluster_arn,
+            aurora_secret_arn=database.secret_arn,
+            aurora_database=database.database_name,
+        )
+
+        ObservabilityStack(
+            self,
+            "Observability",
+            project_name=project_name,
+            function=backend.function,
+            http_api_id=backend.http_api.http_api_id,
+            monthly_budget_usd=budget_usd,
+            alert_email=alert_email,
+        )
+
+        cdk.CfnOutput(self, "ApiDomainName", value=backend.api_domain_name)
+        cdk.CfnOutput(self, "FrontendDomainName", value=frontend.domain_name)
+        cdk.CfnOutput(self, "AuroraClusterArn", value=database.cluster_arn)
+        cdk.CfnOutput(self, "AuroraSecretArn", value=database.secret_arn)
+        cdk.CfnOutput(self, "GuardrailId", value=guardrail.guardrail_id)
+        cdk.CfnOutput(self, "IngestionClusterName", value=ingestion.cluster.cluster_name)
+
+        # Cost allocation tags (Section 6.2 and 8.2): every resource in this
+        # stack rolls up under one Cost Explorer / Budgets tag, independent
+        # of any other workload in the same AWS account.
+        Tags.of(self).add("Project", project_name)
+        Tags.of(self).add("Environment", env_name)
+
+
+app = cdk.App()
+env = cdk.Environment(
+    account=os.getenv("CDK_DEFAULT_ACCOUNT"),
+    region=os.getenv("CDK_DEFAULT_REGION", "us-east-1"),
+)
+CirohStack(app, "CirohStack", env=env)
+app.synth()

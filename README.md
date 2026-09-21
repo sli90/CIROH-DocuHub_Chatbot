@@ -62,27 +62,56 @@ Open http://localhost:3000. The chat starts as a small icon. Click it to dock a 
 
 ---
 
+## AWS deployment
+
+The backend also runs on Bedrock/Aurora instead of OpenAI/Azure - the same
+`backend/rag/ask.py` code path, switched by two environment variables:
+
+```env
+LLM_PROVIDER=bedrock       # default: openai
+DB_BACKEND=rds_data_api    # default: psycopg2
+```
+
+Full deployment guide, architecture reference, and infrastructure-as-code:
+
+- [docs/AWS_DEPLOYMENT.md](docs/AWS_DEPLOYMENT.md) - step-by-step: prerequisites, CDK deploy, corpus re-embedding, cutover
+- [docs/AWS_ARCHITECTURE.md](docs/AWS_ARCHITECTURE.md) - component mapping, request flow, known limitations
+- [docs/GUARDRAILS_AND_COST.md](docs/GUARDRAILS_AND_COST.md) - scope/cost guardrails and what to tune before trusting the defaults
+- [infra/](infra/) - AWS CDK (Python) app provisioning the whole stack
+
+---
+
 ## 1. Current Repository Scope
 
 The current `v2-dev` branch primarily contains the backend implementation.
 
 ```text
 backend/
+├── aws/
+│   └── bedrock_client.py      # Bedrock (Claude Haiku 4.5 + Titan Embed V2), used when LLM_PROVIDER=bedrock
 ├── database/
 │   ├── CIROH-Hub/
 │   ├── json/
 │   ├── GitHub_CodeRepos.ipynb
 │   ├── HydroShare_Datasets.ipynb
 │   ├── PopulateDB.ipynb
+│   ├── db_factory.py          # picks DatabaseManager (psycopg2) vs RdsDataApiManager
+│   ├── rds_data_client.py     # Aurora via the RDS Data API, used when DB_BACKEND=rds_data_api
+│   ├── schema_aws.sql         # Aurora-targeted schema (vector(1024) for Titan)
+│   ├── migrate_to_bedrock.py  # one-time corpus re-embed: Azure/OpenAI -> Aurora/Titan
 │   └── ...
 │
 └── rag/
     ├── RAG_Pipeline.ipynb
     ├── rag_results_topdown.json
     ├── rag_results_bottomup.json
+    ├── lambda_handler.py      # Mangum-wrapped FastAPI app, the Lambda entry point
     └── ...
 
 frontend/          # Docked DocuHub chat UI (talks to backend/rag FastAPI)
+infra/              # AWS CDK (Python) app - see docs/AWS_DEPLOYMENT.md
+docs/               # AWS_DEPLOYMENT.md, AWS_ARCHITECTURE.md, GUARDRAILS_AND_COST.md
+scripts/            # check_bedrock_access.py, deploy_frontend.py
 ```
 
 At this stage:
@@ -697,6 +726,7 @@ The exact routing logic and combination mechanism are still under development.
 - Docked chat frontend with local conversation persistence
 - Initial results for both retrieval strategies
 - `isActive` support in retrieval
+- AWS serverless deployment path (Bedrock + Aurora Serverless v2 + Lambda + CDK), see [AWS deployment](#aws-deployment) - opt-in via `LLM_PROVIDER`/`DB_BACKEND`, existing OpenAI/Azure path unchanged by default
 
 ### In Progress / Planned
 
@@ -705,7 +735,7 @@ The exact routing logic and combination mechanism are still under development.
 - Conversion of remaining notebook expansion helpers into `ask.py`
 - Hardening hybrid routing and cost estimates
 - Authenticated telemetry (who is using the bot)
-- End-to-end deployment workflow
+- Converting the notebook-driven ingestion pipeline to scripts, so the AWS ingestion Fargate task (`infra/stacks/ingestion_stack.py`) can run it on a schedule instead of manually
 
 ---
 

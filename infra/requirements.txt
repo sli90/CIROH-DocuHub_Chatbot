@@ -1,0 +1,6 @@
+# Pin aws-cdk-lib and the alpha PythonFunction construct together - the
+# alpha package version must match the core version exactly (the "a0"
+# suffix), so bump both at once when upgrading.
+aws-cdk-lib==2.269.0
+aws-cdk.aws-lambda-python-alpha==2.269.0a0
+constructs>=10.0.0,<11.0.0

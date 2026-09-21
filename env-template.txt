@@ -1,0 +1,58 @@
+# Rename this file to ".env" (in the repo root) and fill in the values below.
+# .env is already excluded via .gitignore, so it will never be committed.
+
+# PostgreSQL (pgvector) connection - ask Shenglin/Arpita for the dev database credentials
+POSTGRES_HOST=
+POSTGRES_DB=
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_SCHEMA=public
+
+# OpenAI (used for embeddings + summaries + RAG generation)
+OPENAI_API_KEY=
+EMBEDDING_MODEL=
+
+# GitHub ingestion (backend/database/GitHub_CodeRepos.ipynb)
+GITHUB_TOKEN=
+
+# HydroShare ingestion (backend/database/HydroShare_Datasets.ipynb)
+HYDROSHARE_USERNAME=
+HYDROSHARE_PASSWORD=
+
+# --- AWS migration (see docs/AWS_DEPLOYMENT.md) -----------------------------
+# Leave this whole section blank for local dev against Azure/OpenAI - the
+# defaults (LLM_PROVIDER=openai, DB_BACKEND=psycopg2) keep today's behavior
+# unchanged. Only fill these in to run backend/rag against Bedrock/Aurora
+# from your own machine (e.g. to test before a Lambda deploy).
+
+# "openai" (default) or "bedrock"
+LLM_PROVIDER=
+
+# "psycopg2" (default, direct TCP - Azure or any Postgres) or
+# "rds_data_api" (Aurora Serverless v2 over HTTPS, no VPC access needed)
+DB_BACKEND=
+
+# Required only when DB_BACKEND=rds_data_api (infra/app.py CfnOutputs after deploy)
+AURORA_CLUSTER_ARN=
+AURORA_SECRET_ARN=
+AURORA_DATABASE=
+AURORA_REGION=
+
+# Required only when LLM_PROVIDER=bedrock. Needs AWS credentials
+# (aws configure / SSO) with bedrock:InvokeModel in this account+region.
+BEDROCK_REGION=
+BEDROCK_CHAT_MODEL_ID=anthropic.claude-haiku-4-5-v1:0
+BEDROCK_EMBED_MODEL_ID=amazon.titan-embed-text-v2:0
+BEDROCK_EMBED_DIMENSIONS=1024
+# Optional: from infra/app.py's GuardrailId output, once deployed
+BEDROCK_GUARDRAIL_ID=
+BEDROCK_GUARDRAIL_VERSION=
+
+# Cosine-distance cutoff for the retrieval-gate guardrail (0=identical,
+# 2=opposite) - tune against your corpus before relying on it, see
+# docs/GUARDRAILS_AND_COST.md
+RETRIEVAL_SIMILARITY_THRESHOLD=0.7
+
+# Comma-separated CORS origins for backend/rag/main.py; irrelevant in
+# production once served through the CloudFront distribution (same-origin)
+ALLOWED_ORIGINS=

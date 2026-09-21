@@ -1,0 +1,16 @@
+# Minimal dependency set for the Lambda deployment package (infra/stacks/backend_stack.py).
+#
+# Deliberately excludes jupyter/ipykernel/pandas/hsclient/rdflib and other
+# notebook/ingestion-only dependencies in backend/requirements.txt - those
+# belong to the offline Fargate ingestion task (Appendix A / Section 10,
+# step 6: "now a plain zip, since psycopg2's native extension is no longer
+# needed"), not the live /ask request path.
+#
+# boto3 is present in the Lambda Python runtime already; it is pinned here
+# too so `sam local` / manual zip builds outside that runtime still work.
+
+fastapi
+mangum
+pydantic
+boto3
+python-dotenv
