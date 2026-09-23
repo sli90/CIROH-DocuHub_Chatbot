@@ -18,10 +18,13 @@ from functools import lru_cache
 from typing import Any, Optional
 
 import boto3
+from botocore.config import Config
 
 BEDROCK_REGION = os.getenv("BEDROCK_REGION") or os.getenv("AWS_REGION", "us-east-1")
 
-CHAT_MODEL_ID = os.getenv("BEDROCK_CHAT_MODEL_ID", "anthropic.claude-haiku-4-5-v1:0")
+# Claude Haiku 4.5 is only invocable on-demand through a cross-region
+# inference profile (the "us." prefix), not by its bare foundation-model ID.
+CHAT_MODEL_ID = os.getenv("BEDROCK_CHAT_MODEL_ID", "us.anthropic.claude-haiku-4-5-20251001-v1:0")
 EMBED_MODEL_ID = os.getenv("BEDROCK_EMBED_MODEL_ID", "amazon.titan-embed-text-v2:0")
 EMBED_DIMENSIONS = int(os.getenv("BEDROCK_EMBED_DIMENSIONS", "1024"))
 
@@ -38,7 +41,10 @@ def _runtime_client():
     Cached at module scope so a warm Lambda execution environment (or a
     long-running local process) does not re-create a client per request.
     """
-    return boto3.client("bedrock-runtime", region_name=BEDROCK_REGION)
+    # Adaptive retries absorb ThrottlingException bursts (the bulk corpus
+    # re-embed runs many embedding calls in parallel).
+    config = Config(retries={"max_attempts": 8, "mode": "adaptive"}, read_timeout=60)
+    return boto3.client("bedrock-runtime", region_name=BEDROCK_REGION, config=config)
 
 
 def get_embedding(
@@ -94,22 +100,35 @@ def converse_text(
     max_tokens: int = 500,
     temperature: float = 0.2,
     model_id: Optional[str] = None,
+    guarded_text: Optional[str] = None,
 ) -> dict[str, Any]:
     """Plain-text answer generation via Bedrock Converse.
+
+    `guarded_text`, if given, is appended after `user_message`. When a
+    Guardrail is configured it is sent as a guardContent block, so the
+    Guardrail's input policies evaluate only that text (the user's question)
+    rather than the whole message (retrieved context included).
 
     Returns {"text", "usage", "blocked", "stop_reason"}. `blocked` is True
     when a configured Guardrail intervened, in which case `text` is a
     placeholder and the caller should show a generic refusal, not the
     (potentially partial) model output.
     """
+    guardrail = _guardrail_config()
+    if guarded_text is None:
+        content: list[dict[str, Any]] = [{"text": user_message}]
+    elif guardrail:
+        content = [{"text": user_message}, {"guardContent": {"text": {"text": guarded_text}}}]
+    else:
+        content = [{"text": f"{user_message}\n{guarded_text}"}]
+
     kwargs: dict[str, Any] = {
         "modelId": model_id or CHAT_MODEL_ID,
-        "messages": [{"role": "user", "content": [{"text": user_message}]}],
+        "messages": [{"role": "user", "content": content}],
         "inferenceConfig": {"maxTokens": max_tokens, "temperature": temperature},
     }
     if system_prompt:
         kwargs["system"] = [{"text": system_prompt}]
-    guardrail = _guardrail_config()
     if guardrail:
         kwargs["guardrailConfig"] = guardrail
 

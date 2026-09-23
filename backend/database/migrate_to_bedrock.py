@@ -16,31 +16,33 @@ are inserted in parent-before-child order (a topological sort on the
 self-referencing FK) since the destination is a real foreign key, not a
 deferred one.
 
-Usage:
-    python migrate_to_bedrock.py --dry-run
-    python migrate_to_bedrock.py --limit 50              # smoke test
-    python migrate_to_bedrock.py --concurrency 8
-    python migrate_to_bedrock.py --resume                # skip already-loaded rows
-    python migrate_to_bedrock.py --validate               # spot-check retrieval only
+Usage (in order - see docs/AWS_DEPLOYMENT.md, Part 5):
+    python migrate_to_bedrock.py --apply-schema          # create tables in Aurora (safe to re-run)
+    python migrate_to_bedrock.py --dry-run               # count source rows, no writes
+    python migrate_to_bedrock.py --limit 20              # smoke test: 20 artifacts + their chunks
+    python migrate_to_bedrock.py                         # full run (re-runnable; skips rows already loaded)
+    python migrate_to_bedrock.py --validate --sample-question "What is NextGen In A Box?"
+
+Every write is INSERT ... ON CONFLICT DO NOTHING and progress is
+checkpointed after each batch, so an interrupted run can simply be started
+again with the same command.
 
 Required environment (see env-template.txt):
     Source (Azure, read-only):   POSTGRES_HOST/DB/USER/PASSWORD/SCHEMA
-    Destination (Aurora):        AURORA_CLUSTER_ARN, AURORA_SECRET_ARN,
-                                  AURORA_DATABASE, AURORA_REGION
-    Bedrock:                     AWS credentials with bedrock:InvokeModel
-                                  (BEDROCK_EMBED_MODEL_ID, BEDROCK_EMBED_DIMENSIONS
-                                  optional, default amazon.titan-embed-text-v2:0 / 1024)
-
-Run `schema_aws.sql` against the destination cluster first (Section 10, step 3).
+    Destination (Aurora):        read automatically from the deployed
+                                 CirohStack's outputs, or set
+                                 AURORA_CLUSTER_ARN, AURORA_SECRET_ARN explicitly
+    Bedrock:                     AWS credentials (aws sso login / aws configure)
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -50,16 +52,27 @@ from dotenv import load_dotenv  # noqa: E402
 
 load_dotenv(HERE.parent.parent / ".env")
 
+from aws.stack_outputs import load_stack_outputs_into_env  # noqa: E402
+
+load_stack_outputs_into_env()
+
 from aws.bedrock_client import get_embedding  # noqa: E402
-from database.database import DatabaseManager  # noqa: E402
 from database.rds_data_client import RdsDataApiManager  # noqa: E402
 
 CHECKPOINT_PATH = HERE / "migrate_to_bedrock.checkpoint.json"
+SCHEMA_PATH = HERE / "schema_aws.sql"
+
+# Titan Text Embeddings V2 accepts up to 8,192 tokens (~50,000 characters).
+MAX_EMBED_CHARS = 30000
+BATCH_SIZE = 200
 
 
-def _source_db() -> DatabaseManager:
+def _source_db():
     # Always psycopg2, regardless of DB_BACKEND: the source is the existing
-    # Azure database, which has no Data API of its own.
+    # Azure database, which has no Data API of its own. Imported here so
+    # --apply-schema / --validate work without psycopg2 or Azure access.
+    from database.database import DatabaseManager
+
     return DatabaseManager()
 
 
@@ -73,8 +86,10 @@ def _load_checkpoint() -> dict:
     return {"artifact_ids_done": [], "chunk_ids_done": []}
 
 
-def _save_checkpoint(state: dict) -> None:
-    CHECKPOINT_PATH.write_text(json.dumps(state))
+def _save_checkpoint(done_artifacts: set, done_chunks: set) -> None:
+    CHECKPOINT_PATH.write_text(
+        json.dumps({"artifact_ids_done": sorted(done_artifacts), "chunk_ids_done": sorted(done_chunks)})
+    )
 
 
 def _topological_order(rows: list[dict], id_key: str, parent_key: str) -> list[dict]:
@@ -83,22 +98,43 @@ def _topological_order(rows: list[dict], id_key: str, parent_key: str) -> list[d
     ordered: list[dict] = []
     placed: set = set()
 
-    def place(row):
-        rid = row[id_key]
-        if rid in placed:
-            return
-        parent_id = row.get(parent_key)
-        if parent_id is not None and parent_id in by_id and parent_id not in placed:
-            place(by_id[parent_id])
-        placed.add(rid)
-        ordered.append(row)
-
     for row in rows:
-        place(row)
+        # Walk up the parent chain iteratively (a recursive version can hit
+        # Python's recursion limit on deep hierarchies), then place the
+        # chain top-down.
+        chain = []
+        seen = set()
+        current = row
+        while current is not None and current[id_key] not in placed and current[id_key] not in seen:
+            seen.add(current[id_key])
+            chain.append(current)
+            parent_id = current.get(parent_key)
+            current = by_id.get(parent_id) if parent_id is not None else None
+        for item in reversed(chain):
+            placed.add(item[id_key])
+            ordered.append(item)
     return ordered
 
 
-def fetch_artifact_types(source: DatabaseManager) -> list[dict]:
+def apply_schema(dest: RdsDataApiManager) -> None:
+    """Run schema_aws.sql one statement at a time (the Data API does not
+    accept multiple statements in one call). Every statement is
+    IF NOT EXISTS, so this is safe to re-run."""
+    sql = SCHEMA_PATH.read_text(encoding="utf-8")
+    sql = "\n".join(line for line in sql.splitlines() if not line.strip().startswith("--"))
+    statements = [s.strip() for s in sql.split(";") if s.strip()]
+    print(
+        f"Applying {len(statements)} statements from {SCHEMA_PATH.name} "
+        "(the first one may wait ~15s while Aurora wakes up)..."
+    )
+    for statement in statements:
+        preview = re.sub(r"\s+", " ", statement)[:70]
+        print(f"  {preview}")
+        dest.execute_ddl(statement)
+    print("Schema ready.")
+
+
+def fetch_artifact_types(source) -> list[dict]:
     with source as db:
         return db.execute_query(
             "SELECT idArtifactType, TypeName FROM TBLArtifactTypes ORDER BY idArtifactType",
@@ -106,7 +142,7 @@ def fetch_artifact_types(source: DatabaseManager) -> list[dict]:
         ) or []
 
 
-def fetch_chunk_types(source: DatabaseManager) -> list[dict]:
+def fetch_chunk_types(source) -> list[dict]:
     with source as db:
         return db.execute_query(
             "SELECT idChunkType, idArtifactType, TypeName FROM TBLChunkTypes ORDER BY idChunkType",
@@ -114,7 +150,7 @@ def fetch_chunk_types(source: DatabaseManager) -> list[dict]:
         ) or []
 
 
-def fetch_artifacts(source: DatabaseManager, limit: int | None) -> list[dict]:
+def fetch_artifacts(source, limit: int | None) -> list[dict]:
     # Note: Postgres folds unquoted identifiers to lowercase, so
     # RealDictCursor rows come back with lowercase keys (idartifact, title,
     # ...) regardless of how the columns are capitalized in schema.sql or
@@ -124,21 +160,35 @@ def fetch_artifacts(source: DatabaseManager, limit: int | None) -> list[dict]:
         "summary_data, metadata, last_updated, isActive FROM TBLArtifacts "
         "ORDER BY idArtifact"
     )
-    if limit:
-        query += f" LIMIT {int(limit)}"
     with source as db:
-        return db.execute_query(query, fetch=True) or []
+        rows = db.execute_query(query, fetch=True) or []
+    if not limit:
+        return rows
+    # A smoke test still needs every parent of the artifacts it loads, or
+    # the idArtifactParent foreign key rejects the insert.
+    by_id = {r["idartifact"]: r for r in rows}
+    keep: dict = {}
+    for row in rows[:limit]:
+        current = row
+        while current is not None and current["idartifact"] not in keep:
+            keep[current["idartifact"]] = current
+            current = by_id.get(current.get("idartifactparent"))
+    return list(keep.values())
 
 
-def fetch_chunks(source: DatabaseManager, limit: int | None) -> list[dict]:
+def fetch_chunks(source, artifact_ids: list[int] | None) -> list[dict]:
+    """All chunks, or (for a --limit smoke test) only those of the given artifacts."""
     query = (
         'SELECT idChunk, idArtifact, idChunkType, idChunkParent, "order", '
-        "chunk_text, metadata FROM TBLChunks ORDER BY idChunk"
+        "chunk_text, metadata FROM TBLChunks"
     )
-    if limit:
-        query += f" LIMIT {int(limit)}"
+    params = None
+    if artifact_ids is not None:
+        query += " WHERE idArtifact = ANY(%s)"
+        params = (list(artifact_ids),)
+    query += " ORDER BY idChunk"
     with source as db:
-        return db.execute_query(query, fetch=True) or []
+        return db.execute_query(query, params=params, fetch=True) or []
 
 
 def _artifact_embedding_text(row: dict) -> str:
@@ -155,46 +205,52 @@ def _artifact_embedding_text(row: dict) -> str:
     return "\n".join(p for p in parts if p)
 
 
-def _embed_many(texts: list[str], concurrency: int) -> list[list[float]]:
-    results: list[list[float] | None] = [None] * len(texts)
+def _embed_one(text: str):
+    text = (text or "").strip()[:MAX_EMBED_CHARS]
+    if not text:
+        return None  # Titan rejects empty input; store a NULL embedding instead.
+    vector, _usage = get_embedding(text)
+    return vector
+
+
+def _embed_many(texts: list[str], concurrency: int) -> list:
     with ThreadPoolExecutor(max_workers=concurrency) as pool:
-        futures = {pool.submit(get_embedding, text): i for i, text in enumerate(texts)}
-        for future in as_completed(futures):
-            idx = futures[future]
-            vector, _usage = future.result()
-            results[idx] = vector
-    return results  # type: ignore[return-value]
+        return list(pool.map(_embed_one, texts))
+
+
+def _json_or_none(value):
+    return json.dumps(value) if value is not None else None
 
 
 def load_artifact_types(dest: RdsDataApiManager, rows: list[dict]) -> None:
     if not rows:
         return
-    query = "INSERT INTO TBLArtifactTypes (idArtifactType, TypeName) VALUES (%s, %s)"
-    with dest as db:
-        db.execute_batch(query, [(r["idartifacttype"], r["typename"]) for r in rows])
+    query = (
+        "INSERT INTO TBLArtifactTypes (idArtifactType, TypeName) VALUES (%s, %s) "
+        "ON CONFLICT DO NOTHING"
+    )
+    dest.execute_batch(query, [(r["idartifacttype"], r["typename"]) for r in rows])
 
 
 def load_chunk_types(dest: RdsDataApiManager, rows: list[dict]) -> None:
     if not rows:
         return
-    query = "INSERT INTO TBLChunkTypes (idChunkType, idArtifactType, TypeName) VALUES (%s, %s, %s)"
-    with dest as db:
-        db.execute_batch(
-            query, [(r["idchunktype"], r["idartifacttype"], r["typename"]) for r in rows]
-        )
+    query = (
+        "INSERT INTO TBLChunkTypes (idChunkType, idArtifactType, TypeName) VALUES (%s, %s, %s) "
+        "ON CONFLICT DO NOTHING"
+    )
+    dest.execute_batch(query, [(r["idchunktype"], r["idartifacttype"], r["typename"]) for r in rows])
 
 
-def load_artifacts(dest: RdsDataApiManager, rows: list[dict], embeddings: list[list[float]]) -> None:
-    if not rows:
-        return
+def load_artifacts(dest: RdsDataApiManager, rows: list[dict], embeddings: list) -> None:
+    # jsonb and vector are sent as text and cast in SQL (Section 5.3).
     query = (
         "INSERT INTO TBLArtifacts "
         "(idArtifact, idArtifactType, Title, URL, idArtifactParent, summary_data, "
         "metadata, embedding, isActive) "
-        "VALUES (%s, %s, %s, %s, %s, %s, %s, %s::vector, %s)"
+        "VALUES (%s, %s, %s, %s, %s, %s::jsonb, %s::jsonb, %s::vector, %s) "
+        "ON CONFLICT DO NOTHING"
     )
-    rows_ordered = _topological_order(rows, "idartifact", "idartifactparent")
-    embed_by_id = {r["idartifact"]: e for r, e in zip(rows, embeddings)}
     params = [
         (
             r["idartifact"],
@@ -202,27 +258,23 @@ def load_artifacts(dest: RdsDataApiManager, rows: list[dict], embeddings: list[l
             r["title"],
             r["url"],
             r["idartifactparent"],
-            json.dumps(r["summary_data"]) if r.get("summary_data") is not None else None,
-            json.dumps(r["metadata"]) if r.get("metadata") is not None else None,
-            embed_by_id[r["idartifact"]],
+            _json_or_none(r.get("summary_data")),
+            _json_or_none(r.get("metadata")),
+            e,
             bool(r["isactive"]),
         )
-        for r in rows_ordered
+        for r, e in zip(rows, embeddings)
     ]
-    with dest as db:
-        db.execute_batch(query, params)
+    dest.execute_batch(query, params)
 
 
-def load_chunks(dest: RdsDataApiManager, rows: list[dict], embeddings: list[list[float]]) -> None:
-    if not rows:
-        return
+def load_chunks(dest: RdsDataApiManager, rows: list[dict], embeddings: list) -> None:
     query = (
         "INSERT INTO TBLChunks "
         '(idChunk, idArtifact, idChunkType, idChunkParent, "order", chunk_text, embedding, metadata) '
-        "VALUES (%s, %s, %s, %s, %s, %s, %s::vector, %s)"
+        "VALUES (%s, %s, %s, %s, %s, %s, %s::vector, %s::jsonb) "
+        "ON CONFLICT DO NOTHING"
     )
-    rows_ordered = _topological_order(rows, "idchunk", "idchunkparent")
-    embed_by_id = {r["idchunk"]: e for r, e in zip(rows, embeddings)}
     params = [
         (
             r["idchunk"],
@@ -231,33 +283,43 @@ def load_chunks(dest: RdsDataApiManager, rows: list[dict], embeddings: list[list
             r["idchunkparent"],
             r.get("order"),
             r.get("chunk_text"),
-            embed_by_id[r["idchunk"]],
-            json.dumps(r["metadata"]) if r.get("metadata") is not None else None,
+            e,
+            _json_or_none(r.get("metadata")),
         )
-        for r in rows_ordered
+        for r, e in zip(rows, embeddings)
     ]
-    with dest as db:
-        db.execute_batch(query, params)
+    dest.execute_batch(query, params)
+
+
+def _migrate_in_batches(label, rows, id_key, text_fn, load_fn, dest, done, save, concurrency):
+    """Embed + load `rows` BATCH_SIZE at a time, checkpointing after each batch."""
+    pending = [r for r in rows if r[id_key] not in done]
+    print(f"{label}: {len(rows) - len(pending)} already loaded, {len(pending)} to go.")
+    started = time.time()
+    for start in range(0, len(pending), BATCH_SIZE):
+        batch = pending[start : start + BATCH_SIZE]
+        embeddings = _embed_many([text_fn(r) for r in batch], concurrency)
+        load_fn(dest, batch, embeddings)
+        done.update(r[id_key] for r in batch)
+        save()
+        print(
+            f"  {min(start + BATCH_SIZE, len(pending))}/{len(pending)} "
+            f"({time.time() - started:.0f}s elapsed)"
+        )
 
 
 def reset_sequences(dest: RdsDataApiManager) -> None:
     """Explicit-PK inserts don't advance the SERIAL sequences; fix them up
     so future ingestion runs (PopulateDB.ipynb) don't collide with migrated ids."""
-    with dest as db:
-        db.execute_query(
-            "SELECT setval('tblartifacttypes_idartifacttype_seq', "
-            "COALESCE((SELECT MAX(idArtifactType) FROM TBLArtifactTypes), 1))"
-        )
-        db.execute_query(
-            "SELECT setval('tblchunktypes_idchunktype_seq', "
-            "COALESCE((SELECT MAX(idChunkType) FROM TBLChunkTypes), 1))"
-        )
-        db.execute_query(
-            "SELECT setval('tblartifacts_idartifact_seq', "
-            "COALESCE((SELECT MAX(idArtifact) FROM TBLArtifacts), 1))"
-        )
-        db.execute_query(
-            "SELECT setval('tblchunks_idchunk_seq', COALESCE((SELECT MAX(idChunk) FROM TBLChunks), 1))"
+    for table, column in (
+        ("tblartifacttypes", "idartifacttype"),
+        ("tblchunktypes", "idchunktype"),
+        ("tblartifacts", "idartifact"),
+        ("tblchunks", "idchunk"),
+    ):
+        dest.execute_query(
+            f"SELECT setval(pg_get_serial_sequence('{table}', '{column}'), "
+            f"COALESCE((SELECT MAX({column}) FROM {table}), 1))"
         )
 
 
@@ -265,46 +327,50 @@ def validate(dest: RdsDataApiManager, sample_questions: list[str] | None = None)
     """Spot-check retrieval quality post-migration (Section 11: "spot-check
     answers against known-good questions before cutover"). This checks
     counts and that vector search returns rows at all; it intentionally
-    does not call the LLM (fast, free, run it as often as you like)."""
-    with dest as db:
-        artifact_count = db.execute_query("SELECT COUNT(*) AS n FROM TBLArtifacts", fetch=True)
-        chunk_count = db.execute_query("SELECT COUNT(*) AS n FROM TBLChunks", fetch=True)
-        orphan_chunks = db.execute_query(
-            "SELECT COUNT(*) AS n FROM TBLChunks c "
-            "LEFT JOIN TBLArtifacts a ON a.idArtifact = c.idArtifact WHERE a.idArtifact IS NULL",
-            fetch=True,
-        )
-        null_embeddings = db.execute_query(
-            "SELECT COUNT(*) AS n FROM TBLArtifacts WHERE embedding IS NULL", fetch=True
-        )
-    print(f"Artifacts: {artifact_count[0]['n'] if artifact_count else '?'}")
-    print(f"Chunks:    {chunk_count[0]['n'] if chunk_count else '?'}")
-    print(f"Orphan chunks (no matching artifact): {orphan_chunks[0]['n'] if orphan_chunks else '?'}")
-    print(f"Artifacts with NULL embedding: {null_embeddings[0]['n'] if null_embeddings else '?'}")
-    if orphan_chunks and orphan_chunks[0]["n"]:
+    does not call the LLM (fast, nearly free, run it as often as you like)."""
+    dest.ping(wait_seconds=60)
+
+    def count(sql):
+        rows = dest.execute_query(sql, fetch=True)
+        return rows[0]["n"] if rows else "?"
+
+    orphans = count(
+        "SELECT COUNT(*) AS n FROM TBLChunks c "
+        "LEFT JOIN TBLArtifacts a ON a.idArtifact = c.idArtifact WHERE a.idArtifact IS NULL"
+    )
+    print(f"Artifacts: {count('SELECT COUNT(*) AS n FROM TBLArtifacts')}")
+    print(f"Chunks:    {count('SELECT COUNT(*) AS n FROM TBLChunks')}")
+    print(f"Orphan chunks (no matching artifact): {orphans}")
+    print(
+        "Artifacts with NULL embedding: "
+        f"{count('SELECT COUNT(*) AS n FROM TBLArtifacts WHERE embedding IS NULL')}"
+    )
+    if orphans not in (0, "?"):
         print("WARNING: orphan chunks found - check topological load order / source FK integrity.")
 
     for question in sample_questions or []:
         vector, _usage = get_embedding(question)
-        with dest as db:
-            rows = db.execute_query(
-                "SELECT idArtifact, Title, (embedding <=> %s::vector) AS distance "
-                "FROM TBLArtifacts WHERE embedding IS NOT NULL "
-                "ORDER BY embedding <=> %s::vector LIMIT 3",
-                params=(vector, vector),
-                fetch=True,
-            )
+        rows = dest.execute_query(
+            "SELECT idArtifact, Title, (embedding <=> %s::vector) AS distance "
+            "FROM TBLArtifacts WHERE embedding IS NOT NULL "
+            "ORDER BY embedding <=> %s::vector LIMIT 3",
+            params=(vector, vector),
+            fetch=True,
+        )
         print(f"\nQ: {question}")
         for row in rows or []:
             print(f"  distance={row['distance']:.4f}  {row['title']}")
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--dry-run", action="store_true", help="Count rows only, no embedding/writes.")
-    parser.add_argument("--limit", type=int, default=None, help="Cap rows fetched, for a smoke test.")
+    parser = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    parser.add_argument("--apply-schema", action="store_true", help="Create the tables in Aurora, then exit.")
+    parser.add_argument("--dry-run", action="store_true", help="Count source rows only, no embedding/writes.")
+    parser.add_argument("--limit", type=int, default=None, help="Only migrate N artifacts (+ their chunks).")
     parser.add_argument("--concurrency", type=int, default=8, help="Parallel Bedrock embedding calls.")
-    parser.add_argument("--resume", action="store_true", help="Skip rows already in the checkpoint file.")
+    parser.add_argument("--restart", action="store_true", help="Ignore the checkpoint file and start over.")
     parser.add_argument("--validate", action="store_true", help="Run post-load validation only.")
     parser.add_argument(
         "--sample-question",
@@ -312,61 +378,73 @@ def main() -> None:
         default=[],
         help="Question(s) to spot-check retrieval against (repeatable). Used with --validate.",
     )
+    # Kept for backwards compatibility: resuming is now the default behavior.
+    parser.add_argument("--resume", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
+    dest = _dest_db()
+
+    if args.apply_schema:
+        apply_schema(dest)
+        return
+
     if args.validate:
-        validate(_dest_db(), sample_questions=args.sample_question)
+        validate(dest, sample_questions=args.sample_question)
         return
 
     source = _source_db()
-    dest = _dest_db()
-
     print("Fetching source rows from Azure...")
     artifact_types = fetch_artifact_types(source)
     chunk_types = fetch_chunk_types(source)
     artifacts = fetch_artifacts(source, args.limit)
-    chunks = fetch_chunks(source, args.limit)
+    chunks = fetch_chunks(source, [a["idartifact"] for a in artifacts] if args.limit else None)
     print(
         f"  {len(artifact_types)} artifact types, {len(chunk_types)} chunk types, "
         f"{len(artifacts)} artifacts, {len(chunks)} chunks"
     )
+    if not artifacts:
+        sys.exit("No artifacts read from the source database - check the POSTGRES_* values in .env.")
 
     if args.dry_run:
         print("Dry run: no embeddings computed, no writes made.")
         return
 
-    checkpoint = _load_checkpoint() if args.resume else {"artifact_ids_done": [], "chunk_ids_done": []}
+    checkpoint = {"artifact_ids_done": [], "chunk_ids_done": []} if args.restart else _load_checkpoint()
     done_artifacts = set(checkpoint["artifact_ids_done"])
     done_chunks = set(checkpoint["chunk_ids_done"])
 
-    pending_artifacts = [a for a in artifacts if a["idartifact"] not in done_artifacts]
-    pending_chunks = [c for c in chunks if c["idchunk"] not in done_chunks]
+    def save():
+        _save_checkpoint(done_artifacts, done_chunks)
+
+    print("Waking Aurora (up to ~15s if it was paused)...")
+    dest.ping(wait_seconds=60)
 
     print("Loading reference tables...")
     load_artifact_types(dest, artifact_types)
     load_chunk_types(dest, chunk_types)
 
-    print(f"Embedding {len(pending_artifacts)} artifacts with Titan Text Embeddings V2...")
-    started = time.time()
-    artifact_texts = [_artifact_embedding_text(a) for a in pending_artifacts]
-    artifact_embeddings = _embed_many(artifact_texts, args.concurrency)
-    print(f"  done in {time.time() - started:.1f}s")
-
-    print("Loading artifacts into Aurora...")
-    load_artifacts(dest, pending_artifacts, artifact_embeddings)
-    done_artifacts.update(a["idartifact"] for a in pending_artifacts)
-    _save_checkpoint({"artifact_ids_done": sorted(done_artifacts), "chunk_ids_done": sorted(done_chunks)})
-
-    print(f"Embedding {len(pending_chunks)} chunks with Titan Text Embeddings V2...")
-    started = time.time()
-    chunk_texts = [c.get("chunk_text") or "" for c in pending_chunks]
-    chunk_embeddings = _embed_many(chunk_texts, args.concurrency)
-    print(f"  done in {time.time() - started:.1f}s")
-
-    print("Loading chunks into Aurora...")
-    load_chunks(dest, pending_chunks, chunk_embeddings)
-    done_chunks.update(c["idchunk"] for c in pending_chunks)
-    _save_checkpoint({"artifact_ids_done": sorted(done_artifacts), "chunk_ids_done": sorted(done_chunks)})
+    _migrate_in_batches(
+        "Artifacts",
+        _topological_order(artifacts, "idartifact", "idartifactparent"),
+        "idartifact",
+        _artifact_embedding_text,
+        load_artifacts,
+        dest,
+        done_artifacts,
+        save,
+        args.concurrency,
+    )
+    _migrate_in_batches(
+        "Chunks",
+        _topological_order(chunks, "idchunk", "idchunkparent"),
+        "idchunk",
+        lambda c: c.get("chunk_text") or "",
+        load_chunks,
+        dest,
+        done_chunks,
+        save,
+        args.concurrency,
+    )
 
     print("Resetting sequences...")
     reset_sequences(dest)

@@ -15,6 +15,11 @@ CORS (backend_stack.py) only matters for local dev and any direct,
 cross-origin calls to the API Gateway domain - not for normal production
 traffic.
 
+AWS WAF (rate limit per viewer IP + AWS managed common rules) is attached
+here, to the distribution, because WAF cannot protect API Gateway HTTP APIs
+directly. CloudFront-scoped web ACLs must be created in us-east-1, so WAF
+is only added when the stack is deployed there (the default region).
+
 Deploy this after backend_stack.py (it takes the API's domain name as an
 input) and build the frontend with VITE_API_BASE_URL="" so requests go to
 same-origin relative paths (see docs/AWS_DEPLOYMENT.md).
@@ -27,6 +32,7 @@ from aws_cdk import aws_cloudfront as cloudfront
 from aws_cdk import aws_cloudfront_origins as origins
 from aws_cdk import aws_s3 as s3
 from aws_cdk import aws_s3_deployment as s3_deployment
+from aws_cdk import aws_wafv2 as wafv2
 from constructs import Construct
 
 
@@ -40,8 +46,14 @@ class FrontendStack(Construct):
         api_domain_name: str,
         frontend_dist_dir: str | None = None,
         removal_policy: RemovalPolicy = RemovalPolicy.RETAIN,
+        enable_waf: bool = True,
+        waf_rate_limit_per_5min: int = 500,
     ) -> None:
         super().__init__(scope, construct_id)
+
+        self.web_acl = (
+            self._web_acl(project_name, waf_rate_limit_per_5min) if enable_waf else None
+        )
 
         self.bucket = s3.Bucket(
             self,
@@ -84,15 +96,10 @@ class FrontendStack(Construct):
                 "/ask": api_behavior,
                 "/telemetry": api_behavior,
             },
-            error_responses=[
-                # Client-side routed SPA: unknown paths fall back to index.html.
-                cloudfront.ErrorResponse(
-                    http_status=403, response_http_status=200, response_page_path="/index.html"
-                ),
-                cloudfront.ErrorResponse(
-                    http_status=404, response_http_status=200, response_page_path="/index.html"
-                ),
-            ],
+            # No SPA error_responses (403/404 -> index.html): the frontend has
+            # no client-side routes, and those rewrites are distribution-wide,
+            # so they would also turn API/WAF errors on /ask into an HTML page.
+            web_acl_id=self.web_acl.attr_arn if self.web_acl else None,
         )
 
         if frontend_dist_dir:
@@ -106,3 +113,62 @@ class FrontendStack(Construct):
             )
 
         self.domain_name = self.distribution.distribution_domain_name
+
+    def _web_acl(self, project_name: str, rate_limit_per_5min: int) -> wafv2.CfnWebACL:
+        """Section 4 step 3 / 8.4: per-IP rate limit + AWS managed common rules."""
+
+        def visibility(metric: str) -> wafv2.CfnWebACL.VisibilityConfigProperty:
+            return wafv2.CfnWebACL.VisibilityConfigProperty(
+                sampled_requests_enabled=True,
+                cloud_watch_metrics_enabled=True,
+                metric_name=metric,
+            )
+
+        return wafv2.CfnWebACL(
+            self,
+            "WebAcl",
+            name=f"{project_name}-waf",
+            scope="CLOUDFRONT",
+            default_action=wafv2.CfnWebACL.DefaultActionProperty(allow={}),
+            visibility_config=visibility(f"{project_name}-waf"),
+            rules=[
+                # Only /ask and /telemetry reach Lambda/Bedrock, so only they
+                # are rate limited; static page loads are cheap CDN hits.
+                wafv2.CfnWebACL.RuleProperty(
+                    name="RateLimitApiPerIp",
+                    priority=0,
+                    action=wafv2.CfnWebACL.RuleActionProperty(block={}),
+                    statement=wafv2.CfnWebACL.StatementProperty(
+                        rate_based_statement=wafv2.CfnWebACL.RateBasedStatementProperty(
+                            limit=rate_limit_per_5min,
+                            aggregate_key_type="IP",
+                            scope_down_statement=wafv2.CfnWebACL.StatementProperty(
+                                byte_match_statement=wafv2.CfnWebACL.ByteMatchStatementProperty(
+                                    field_to_match=wafv2.CfnWebACL.FieldToMatchProperty(uri_path={}),
+                                    positional_constraint="STARTS_WITH",
+                                    search_string="/ask",
+                                    text_transformations=[
+                                        wafv2.CfnWebACL.TextTransformationProperty(
+                                            priority=0, type="LOWERCASE"
+                                        )
+                                    ],
+                                )
+                            ),
+                        )
+                    ),
+                    visibility_config=visibility(f"{project_name}-rate-limit"),
+                ),
+                wafv2.CfnWebACL.RuleProperty(
+                    name="AWSManagedCommonRuleSet",
+                    priority=1,
+                    override_action=wafv2.CfnWebACL.OverrideActionProperty(none={}),
+                    statement=wafv2.CfnWebACL.StatementProperty(
+                        managed_rule_group_statement=wafv2.CfnWebACL.ManagedRuleGroupStatementProperty(
+                            vendor_name="AWS",
+                            name="AWSManagedRulesCommonRuleSet",
+                        )
+                    ),
+                    visibility_config=visibility(f"{project_name}-common-rules"),
+                ),
+            ],
+        )

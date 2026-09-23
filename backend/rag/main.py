@@ -50,10 +50,32 @@ class TelemetryEvent(BaseModel):
     payload: dict[str, Any] = Field(default_factory=dict)
 
 
+# Lambda's code directory is read-only, so there telemetry goes to stdout
+# (CloudWatch Logs, searchable with Logs Insights) instead of a local file.
+IS_LAMBDA = bool(os.getenv("AWS_LAMBDA_FUNCTION_NAME"))
+
+
 def _append_telemetry(record: dict[str, Any]) -> None:
     record = {"ts": datetime.now(timezone.utc).isoformat(), **record}
+    line = json.dumps(record, ensure_ascii=False)
+    if IS_LAMBDA:
+        print(f"TELEMETRY {line}")
+        return
     with TELEMETRY_PATH.open("a", encoding="utf-8") as handle:
-        handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+        handle.write(line + "\n")
+
+
+def _warm_database() -> None:
+    """Start resuming a scaled-to-zero Aurora cluster without waiting for it.
+
+    Called when the chat panel opens, so the ~15s resume overlaps with the
+    user typing their first question instead of delaying the answer.
+    """
+    if os.getenv("DB_BACKEND", "").lower() != "rds_data_api":
+        return
+    from database.rds_data_client import RdsDataApiManager
+
+    RdsDataApiManager().ping(wait_seconds=0)
 
 
 @app.get("/", tags=["Health Check"])
@@ -78,5 +100,7 @@ def ask_ai(question: Question):
 
 @app.post("/telemetry", tags=["Telemetry"])
 def record_telemetry(event: TelemetryEvent):
+    if event.event == "chat_open":
+        _warm_database()
     _append_telemetry(event.model_dump())
     return {"ok": True}

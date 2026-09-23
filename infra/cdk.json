@@ -19,6 +19,9 @@
     "aurora_min_acu": 0,
     "aurora_max_acu": 4,
     "budget_monthly_usd": 60,
-    "budget_alert_email": ""
+    "budget_alert_email": "",
+    "enable_budgets": true,
+    "retrieval_similarity_threshold": 0.7,
+    "enable_ingestion": false
   }
 }

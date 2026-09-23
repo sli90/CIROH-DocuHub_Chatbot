@@ -1,7 +1,11 @@
 // API Configuration
 export const API_CONFIG = {
-  // Default API base URL - can be overridden by environment variables
-  BASE_URL: (import.meta as any).env?.VITE_API_BASE_URL || 'http://127.0.0.1:8000',
+  // VITE_API_BASE_URL overrides everything (an empty value means same-origin).
+  // Otherwise production builds call same-origin (CloudFront routes /ask and
+  // /telemetry to the API) and `npm run dev` calls the local FastAPI server.
+  BASE_URL:
+    (import.meta as any).env?.VITE_API_BASE_URL ??
+    ((import.meta as any).env?.PROD ? '' : 'http://127.0.0.1:8000'),
   
   // API endpoints
   ENDPOINTS: {

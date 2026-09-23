@@ -13,21 +13,46 @@ parameters ("execute_statement" takes a `parameters` list of
 translates "%s" -> ":pN" positionally and builds the matching named
 parameter list, so query strings do not need to change between backends.
 
-Embeddings are the one case that needs special handling: pgvector's
-`vector` type is not a native Data API type. Per Section 5.3, an embedding
-list[float] is passed as a stringified array and cast in SQL
-(e.g. "%s::vector" -> ":p0::vector"), not as a Data API arrayValue.
+Two Data API limitations shape the translation (Section 5.3):
+- pgvector's `vector` type (and jsonb) are not native Data API types, and
+  array parameters are not supported at all. Such values are sent as text
+  and cast in SQL. "%s::vector" / "%s::jsonb" / "%s::int[]" are rewritten to
+  "CAST(:pN AS vector)" etc., since the Data API's parser does not reliably
+  accept a "::" cast directly after a named parameter.
+- With scale-to-zero, the first call after idle fails fast with
+  DatabaseResumingException while the cluster wakes up (~15s). Calls retry
+  until it is back, instead of silently returning no rows.
 """
 
 from __future__ import annotations
 
+import json
 import os
 import re
+import time
+from functools import lru_cache
 from typing import Any, Optional
 
 import boto3
+from botocore.config import Config
 
-_PLACEHOLDER = re.compile(r"%s")
+# "%s" optionally followed by a "::type" cast, e.g. "%s::vector", "%s::int[]".
+_PLACEHOLDER = re.compile(r"%s(?:::(\w+(?:\[\])?))?")
+
+# How long to keep retrying while a paused cluster resumes. Kept under the
+# Lambda's 28s timeout so a resume still leaves time to answer.
+RESUME_WAIT_SECONDS = float(os.getenv("AURORA_RESUME_WAIT_SECONDS", "20"))
+
+
+@lru_cache(maxsize=None)
+def _client(region: str):
+    config = Config(retries={"max_attempts": 5, "mode": "standard"}, read_timeout=45)
+    return boto3.client("rds-data", region_name=region, config=config)
+
+
+def _is_resuming(exc: Exception) -> bool:
+    code = getattr(exc, "response", {}).get("Error", {}).get("Code", "")
+    return code == "DatabaseResumingException" or "resuming" in str(exc).lower()
 
 
 class RdsDataApiManager:
@@ -37,35 +62,42 @@ class RdsDataApiManager:
         self.cluster_arn = os.environ["AURORA_CLUSTER_ARN"]
         self.secret_arn = os.environ["AURORA_SECRET_ARN"]
         self.database = os.environ["AURORA_DATABASE"]
-        self.schema = os.getenv("POSTGRES_SCHEMA", "public")
         region = os.getenv("AURORA_REGION") or os.getenv("AWS_REGION", "us-east-1")
-        self._client = boto3.client("rds-data", region_name=region)
-        self._in_session = False
+        self._client = _client(region)
 
     def __enter__(self):
         # The Data API is a stateless HTTP call per statement; there is no
-        # persistent connection to open. `_in_session` only exists so the
-        # `with` block matches DatabaseManager's context-manager shape.
-        self._in_session = True
+        # persistent connection to open. The `with` block only exists to
+        # match DatabaseManager's context-manager shape.
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self._in_session = False
+        return None
 
-    def _execute(self, sql: str, params: Optional[Any] = None, include_metadata: bool = False):
-        named_sql, parameters = _to_named_parameters(sql, params)
-        kwargs = dict(
-            resourceArn=self.cluster_arn,
-            secretArn=self.secret_arn,
-            database=self.database,
-            sql=named_sql,
-            parameters=parameters,
-            formatRecordsAs="JSON",
-            includeResultMetadata=include_metadata,
-        )
-        if self.schema:
-            kwargs["schema"] = self.schema
-        return self._client.execute_statement(**kwargs)
+    def _call(self, fn, wait_seconds: float = RESUME_WAIT_SECONDS, **kwargs):
+        deadline = time.monotonic() + wait_seconds
+        while True:
+            try:
+                return fn(
+                    resourceArn=self.cluster_arn,
+                    secretArn=self.secret_arn,
+                    database=self.database,
+                    **kwargs,
+                )
+            except Exception as e:  # noqa: BLE001 - re-raised unless it is a resume
+                if not _is_resuming(e) or time.monotonic() >= deadline:
+                    raise
+                time.sleep(2)
+
+    def ping(self, wait_seconds: float = 0) -> bool:
+        """Cheap `SELECT 1`. With wait_seconds=0 this just kicks off a resume
+        of a paused cluster without waiting for it (used by /telemetry when
+        the chat panel opens, so the database is warm by the first question)."""
+        try:
+            self._call(self._client.execute_statement, wait_seconds=wait_seconds, sql="SELECT 1")
+            return True
+        except Exception:  # noqa: BLE001
+            return False
 
     def execute_query(self, query, params=None, fetch=False):
         """Same signature as DatabaseManager.execute_query.
@@ -75,8 +107,14 @@ class RdsDataApiManager:
         helpers assume a query that fails returns an empty/None result
         instead of crashing the whole /ask request.
         """
+        named_sql, parameters = _to_named_parameters(query, params)
         try:
-            resp = self._execute(query, params)
+            resp = self._call(
+                self._client.execute_statement,
+                sql=named_sql,
+                parameters=parameters,
+                formatRecordsAs="JSON",
+            )
         except Exception as e:  # noqa: BLE001 - intentionally broad, see docstring
             print(f"RDS Data API error: {e}")
             return None
@@ -85,12 +123,14 @@ class RdsDataApiManager:
         formatted = resp.get("formattedRecords")
         if not formatted:
             return []
-        import json
-
         return json.loads(formatted)
 
-    def execute_batch(self, query, param_rows, page_size=100):
-        """Bulk insert/update via BatchExecuteStatement.
+    def execute_ddl(self, sql: str) -> None:
+        """Run one statement and raise on failure (schema setup, migrations)."""
+        self._call(self._client.execute_statement, wait_seconds=120, sql=sql)
+
+    def execute_batch(self, query, param_rows, page_size=25):
+        """Bulk insert/update via BatchExecuteStatement. Raises on failure.
 
         NOTE - different calling convention than DatabaseManager.execute_batch:
         DatabaseManager mirrors psycopg2's execute_values (one "%s" standing
@@ -104,6 +144,8 @@ class RdsDataApiManager:
         and `param_rows` is a list of tuples, one per row, each matching
         the "%s" count in `query`. This is the convention the corpus
         migration script (backend/database/migrate_to_bedrock.py) uses.
+        page_size is small because each row can carry a 1024-float vector
+        plus chunk text, and Data API requests are size-limited.
         """
         if not param_rows:
             return
@@ -111,11 +153,9 @@ class RdsDataApiManager:
         for start in range(0, len(param_rows), page_size):
             batch = param_rows[start : start + page_size]
             parameter_sets = [_to_named_parameters(query, row)[1] for row in batch]
-            self._client.batch_execute_statement(
-                resourceArn=self.cluster_arn,
-                secretArn=self.secret_arn,
-                database=self.database,
-                schema=self.schema,
+            self._call(
+                self._client.batch_execute_statement,
+                wait_seconds=120,
                 sql=named_sql,
                 parameterSets=parameter_sets,
             )
@@ -129,10 +169,11 @@ def _to_named_parameters(sql: str, params: Optional[Any]):
         params = ()
     counter = {"i": 0}
 
-    def _replace(_match):
+    def _replace(match):
         idx = counter["i"]
         counter["i"] += 1
-        return f":p{idx}"
+        cast = match.group(1)
+        return f"CAST(:p{idx} AS {cast})" if cast else f":p{idx}"
 
     named_sql = _PLACEHOLDER.sub(_replace, sql)
     parameters = [_to_data_api_value(f"p{i}", value) for i, value in enumerate(params)]
@@ -149,20 +190,20 @@ def _to_data_api_value(name: str, value: Any) -> dict[str, Any]:
     if isinstance(value, float):
         return {"name": name, "value": {"doubleValue": value}}
     if isinstance(value, (list, tuple)):
-        return _to_data_api_array_value(name, value)
+        return {"name": name, "value": {"stringValue": _array_literal(value)}}
     return {"name": name, "value": {"stringValue": str(value)}}
 
 
-def _to_data_api_array_value(name: str, value) -> dict[str, Any]:
+def _array_literal(value) -> str:
+    """Text form of a list, for a SQL-side CAST (the Data API has no array params).
+
+    A list of ints becomes a Postgres array literal "{1,2,3}" (for
+    `%s::int[]`); anything else is treated as an embedding vector and
+    becomes pgvector's "[0.1,0.2,...]" (for `%s::vector`).
+    """
+    if value and all(isinstance(v, int) and not isinstance(v, bool) for v in value):
+        return "{" + ",".join(str(v) for v in value) + "}"
     if not value:
-        return {"name": name, "value": {"arrayValue": {"longValues": []}}}
-    if all(isinstance(v, bool) for v in value):
-        return {"name": name, "value": {"arrayValue": {"booleanValues": list(value)}}}
-    if all(isinstance(v, int) for v in value):
-        # Native int array (e.g. `unnest(:pN::int[])` for artifact-id lookups).
-        return {"name": name, "value": {"arrayValue": {"longValues": list(value)}}}
-    # A list of floats is treated as an embedding vector: pgvector has no
-    # native Data API type, so it is passed as a stringified array and cast
-    # in SQL via "::vector" (Section 5.3), not as a Data API arrayValue.
-    stringified = "[" + ",".join(repr(float(v)) for v in value) + "]"
-    return {"name": name, "value": {"stringValue": stringified}}
+        return "{}"
+    # 8 significant digits is float32 precision, which is what pgvector stores.
+    return "[" + ",".join(f"{float(v):.8g}" for v in value) + "]"

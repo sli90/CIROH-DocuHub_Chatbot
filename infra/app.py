@@ -16,6 +16,9 @@ See docs/AWS_DEPLOYMENT.md for the full deploy walkthrough. Quick start:
     pip install -r requirements.txt
     cdk bootstrap
     cdk deploy CirohStack -c budget_alert_email=you@example.com
+
+No Docker needed by default. The Fargate ingestion task (a container image)
+is opt-in with `-c enable_ingestion=true`, which does need Docker running.
 """
 
 from __future__ import annotations
@@ -51,10 +54,27 @@ class CirohStack(cdk.Stack):
         max_acu = float(self.node.try_get_context("aurora_max_acu") or 4)
         budget_usd = float(self.node.try_get_context("budget_monthly_usd") or 60)
         alert_email = self.node.try_get_context("budget_alert_email") or None
+        # Some university/organization accounts block AWS Budgets via a
+        # service control policy; -c enable_budgets=false skips them.
+        enable_budgets = str(self.node.try_get_context("enable_budgets")).lower() != "false"
+        # Retrieval-gate cosine-distance cutoff (docs/GUARDRAILS_AND_COST.md).
+        similarity_threshold = float(self.node.try_get_context("retrieval_similarity_threshold") or 0.7)
         # Set once the frontend's real domain is known (either a manually
         # supplied custom domain, or the CloudFront domain from a first
         # deploy's output) - see docs/AWS_DEPLOYMENT.md, "Two-phase deploy".
         allowed_origins = self.node.try_get_context("allowed_origins") or "http://localhost:5173"
+        # The Fargate ingestion task is built from a Docker image, so it is
+        # opt-in: the one-time corpus migration runs fine from a laptop
+        # (docs/AWS_DEPLOYMENT.md), and the recurring ingestion it exists for
+        # is still notebook-driven (README, "In Progress / Planned").
+        enable_ingestion = str(self.node.try_get_context("enable_ingestion")).lower() == "true"
+        # CloudFront-scoped WAF web ACLs can only be created in us-east-1.
+        enable_waf = self.region == "us-east-1"
+        if not enable_waf:
+            cdk.Annotations.of(self).add_warning(
+                f"Region is {self.region}, not us-east-1: CloudFront WAF skipped. "
+                "API Gateway throttling and Budgets still apply."
+            )
 
         network = NetworkStack(self, "Network", project_name=project_name)
 
@@ -82,6 +102,7 @@ class CirohStack(cdk.Stack):
             allowed_origins=allowed_origins,
             guardrail_id=guardrail.guardrail_id,
             guardrail_version=guardrail.guardrail_version,
+            retrieval_similarity_threshold=similarity_threshold,
         )
 
         frontend = FrontendStack(
@@ -91,19 +112,22 @@ class CirohStack(cdk.Stack):
             api_domain_name=backend.api_domain_name,
             frontend_dist_dir=str(FRONTEND_DIST_DIR) if FRONTEND_DIST_DIR.exists() else None,
             removal_policy=RemovalPolicy.RETAIN if is_prod else RemovalPolicy.DESTROY,
+            enable_waf=enable_waf,
         )
 
-        ingestion = IngestionStack(
-            self,
-            "Ingestion",
-            project_name=project_name,
-            vpc=network.vpc,
-            security_group=network.ingestion_security_group,
-            repo_root=str(REPO_ROOT),
-            aurora_cluster_arn=database.cluster_arn,
-            aurora_secret_arn=database.secret_arn,
-            aurora_database=database.database_name,
-        )
+        if enable_ingestion:
+            ingestion = IngestionStack(
+                self,
+                "Ingestion",
+                project_name=project_name,
+                vpc=network.vpc,
+                security_group=network.ingestion_security_group,
+                repo_root=str(REPO_ROOT),
+                aurora_cluster_arn=database.cluster_arn,
+                aurora_secret_arn=database.secret_arn,
+                aurora_database=database.database_name,
+            )
+            cdk.CfnOutput(self, "IngestionClusterName", value=ingestion.cluster.cluster_name)
 
         ObservabilityStack(
             self,
@@ -113,14 +137,15 @@ class CirohStack(cdk.Stack):
             http_api_id=backend.http_api.http_api_id,
             monthly_budget_usd=budget_usd,
             alert_email=alert_email,
+            enable_budgets=enable_budgets,
         )
 
+        cdk.CfnOutput(self, "FrontendUrl", value=f"https://{frontend.domain_name}")
         cdk.CfnOutput(self, "ApiDomainName", value=backend.api_domain_name)
         cdk.CfnOutput(self, "FrontendDomainName", value=frontend.domain_name)
         cdk.CfnOutput(self, "AuroraClusterArn", value=database.cluster_arn)
         cdk.CfnOutput(self, "AuroraSecretArn", value=database.secret_arn)
         cdk.CfnOutput(self, "GuardrailId", value=guardrail.guardrail_id)
-        cdk.CfnOutput(self, "IngestionClusterName", value=ingestion.cluster.cluster_name)
 
         # Cost allocation tags (Section 6.2 and 8.2): every resource in this
         # stack rolls up under one Cost Explorer / Budgets tag, independent
@@ -130,9 +155,12 @@ class CirohStack(cdk.Stack):
 
 
 app = cdk.App()
+# Pinned to us-east-1 rather than following the CLI profile's region: the
+# CloudFront WAF requires it, and the local scripts default to it too.
+# Override with `-c region=...` only if you know you need another region.
 env = cdk.Environment(
     account=os.getenv("CDK_DEFAULT_ACCOUNT"),
-    region=os.getenv("CDK_DEFAULT_REGION", "us-east-1"),
+    region=app.node.try_get_context("region") or "us-east-1",
 )
 CirohStack(app, "CirohStack", env=env)
 app.synth()

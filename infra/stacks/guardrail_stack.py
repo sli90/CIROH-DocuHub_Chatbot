@@ -5,8 +5,15 @@ Backs the second and third layers of the off-topic/misuse defense-in-depth
 table in Section 9.1 (the retrieval-gate similarity threshold is the first
 layer, implemented in backend/rag/ask.py, not here): a denied-topics policy
 for homework/essay/code-generation requests, the built-in prompt-attack
-filter for direct injection, and a contextual grounding check for indirect
-injection via retrieved documentation content (Section 9.2).
+filter for direct injection (Section 9.2).
+
+The guardrail evaluates only the user's question (backend/aws/bedrock_client.py
+sends it as a guardContent block), not the retrieved documentation, which
+legitimately contains code and commands. Section 9.2's contextual grounding
+check is not enabled yet: it needs the context and question tagged as
+grounding_source/query and a threshold tuned on real answers, or it
+rejects correct but synthesized answers. Indirect injection is handled by
+the system prompt and <context> delimiting in backend/rag/ask.py.
 
 Optional by design: backend_stack.py accepts guardrail_id=None and simply
 skips passing guardrailConfig to Bedrock calls, so a deployment can ship
@@ -27,10 +34,10 @@ class GuardrailStack(Construct):
             self,
             "Guardrail",
             name=f"{project_name}-scope-guardrail",
+            # CloudFormation caps this at 200 characters.
             description=(
-                "CIROH DocuHub assistant: refuse general homework help, essay/creative "
-                "writing, unrelated code generation, and open-ended off-topic requests; "
-                "defend against direct and indirect (retrieved-content) prompt injection."
+                "CIROH DocuHub assistant: refuse homework help, essay writing, unrelated "
+                "code generation and off-topic requests; block prompt-injection attempts."
             ),
             blocked_input_messaging=(
                 "This assistant only answers questions about CIROH DocuHub content."
@@ -86,18 +93,6 @@ class GuardrailStack(Construct):
                         type="PROMPT_ATTACK",
                         input_strength="HIGH",
                         output_strength="NONE",
-                    ),
-                ]
-            ),
-            contextual_grounding_policy_config=bedrock.CfnGuardrail.ContextualGroundingPolicyConfigProperty(
-                filters_config=[
-                    bedrock.CfnGuardrail.ContextualGroundingFilterConfigProperty(
-                        type="GROUNDING",
-                        threshold=0.5,
-                    ),
-                    bedrock.CfnGuardrail.ContextualGroundingFilterConfigProperty(
-                        type="RELEVANCE",
-                        threshold=0.5,
                     ),
                 ]
             ),

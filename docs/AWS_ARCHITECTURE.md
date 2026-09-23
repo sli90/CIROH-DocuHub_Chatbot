@@ -21,9 +21,9 @@ AWS invoice via Bedrock, cost/scope guardrails - is unchanged.
 | OpenAI `text-embedding-3-large` (1792-dim) | Amazon Bedrock, Titan Text Embeddings V2 (1024-dim) | [`backend/aws/bedrock_client.py`](../backend/aws/bedrock_client.py) |
 | Notebook-driven scraper/populate scripts | On-demand/scheduled ECS Fargate task | [`backend/ingestion.Dockerfile`](../backend/ingestion.Dockerfile), [`infra/stacks/ingestion_stack.py`](../infra/stacks/ingestion_stack.py) |
 | React/Vite SPA, served by `npm run dev` | S3 + CloudFront | [`infra/stacks/frontend_stack.py`](../infra/stacks/frontend_stack.py) |
-| (none today) | AWS WAF + API Gateway throttling | [`infra/stacks/backend_stack.py`](../infra/stacks/backend_stack.py) |
+| (none today) | AWS WAF (on CloudFront) + API Gateway throttling | [`infra/stacks/frontend_stack.py`](../infra/stacks/frontend_stack.py), [`infra/stacks/backend_stack.py`](../infra/stacks/backend_stack.py) |
 | (none today) | AWS Budgets + CloudWatch alarms | [`infra/stacks/observability_stack.py`](../infra/stacks/observability_stack.py) |
-| (none today) | Amazon Bedrock Guardrails (denied topics, prompt-attack, contextual grounding) | [`infra/stacks/guardrail_stack.py`](../infra/stacks/guardrail_stack.py) |
+| (none today) | Amazon Bedrock Guardrails (denied topics, prompt-attack) | [`infra/stacks/guardrail_stack.py`](../infra/stacks/guardrail_stack.py) |
 
 ## How a request flows (production)
 
@@ -33,9 +33,12 @@ AWS invoice via Bedrock, cost/scope guardrails - is unchanged.
    `/ask` and `/telemetry` cache behaviors and forwards to the API Gateway
    origin instead of S3 - **same-origin**, so browser CORS doesn't apply to
    normal production traffic.
-3. AWS WAF (`infra/stacks/backend_stack.py`) evaluates the request: a
-   rate-based rule (requests per 5-minute window per IP) and the AWS Managed
-   Common Rule Set run before it reaches API Gateway.
+3. AWS WAF, attached to the CloudFront distribution
+   (`infra/stacks/frontend_stack.py`), evaluates the request: a rate-based
+   rule on `/ask` (requests per 5-minute window per viewer IP) and the AWS
+   Managed Common Rule Set. WAF sits on CloudFront rather than on API
+   Gateway because WAF cannot be attached to HTTP APIs, and at CloudFront it
+   sees the real viewer IP.
 4. API Gateway (HTTP API) applies its own throttle (steady-state + burst) and
    invokes the Lambda function synchronously.
 5. Lambda (`rag/lambda_handler.py`, Mangum-wrapped FastAPI app) runs
@@ -60,7 +63,7 @@ AWS invoice via Bedrock, cost/scope guardrails - is unchanged.
       the user message) and the retrieved context wrapped in
       `<context>...</context>` tags (indirect prompt-injection defense).
 7. Lambda returns `{ answer, sources, links, route, usage, ... }` through API
-   Gateway, WAF, and CloudFront back to the browser.
+   Gateway and CloudFront back to the browser.
 8. CloudWatch (Lambda logs, API Gateway access logs, Bedrock invocation
    metrics) feeds the alarms and budgets in
    `infra/stacks/observability_stack.py`.
@@ -104,7 +107,7 @@ vectors and Titan's vectors are not comparable - see
 
 | Model | Role | Notes |
 |---|---|---|
-| `anthropic.claude-haiku-4-5-v1:0` | Answer generation | Fast/cheap; confirm the exact model ID available in your target region in the Bedrock console before deploy |
+| `us.anthropic.claude-haiku-4-5-20251001-v1:0` | Answer generation | Fast/cheap. The `us.` prefix is a cross-region inference profile, which Haiku 4.5 requires for on-demand use |
 | `amazon.titan-embed-text-v2:0` | Embeddings (query + corpus) | 1024 dimensions (configurable via `BEDROCK_EMBED_DIMENSIONS`) |
 
 Both are read from environment variables
@@ -130,15 +133,26 @@ not a code change.
   construct, so it isn't implemented speculatively here.
 - **`RETRIEVAL_SIMILARITY_THRESHOLD` (default `0.7`) is a starting guess**,
   not a tuned value - see [GUARDRAILS_AND_COST.md](./GUARDRAILS_AND_COST.md).
-- **Bedrock model access is a manual, per-model, per-region console step**
-  (or `aws bedrock` CLI) that must happen before first deploy, easy to
-  forget until the first Lambda invocation fails - see
-  [AWS_DEPLOYMENT.md](./AWS_DEPLOYMENT.md).
+- **Anthropic models need a one-time, per-account setup by a person**
+  (use-case form + one playground invocation, which creates the AWS
+  Marketplace subscription) before the Lambda role can call them - see
+  [AWS_DEPLOYMENT.md, Part 3](./AWS_DEPLOYMENT.md#part-3---turn-on-the-bedrock-models-console-5-minutes).
+- **Aurora scale-to-zero:** the first query after ~5 idle minutes gets
+  `DatabaseResumingException` while the cluster wakes (~15s).
+  `rds_data_client.py` retries through it, and `/telemetry`'s `chat_open`
+  event starts the resume when a user opens the chat panel, so it usually
+  overlaps with typing the first question.
+- **Contextual grounding (Section 9.2) is not enabled yet.** The Guardrail
+  evaluates only the user's question (sent as a `guardContent` block), since
+  retrieved docs legitimately contain code that would trip the
+  "unrelated code" topic. Grounding needs the context/question tagged as
+  `grounding_source`/`query` and a threshold tuned on real answers.
 - **The day-to-day ingestion pipeline is still notebook-driven** in this
   branch (`PopulateDB.ipynb`, `GitHub_CodeRepos.ipynb`,
   `HydroShare_Datasets.ipynb` - see README, "In Progress / Planned").
-  `infra/stacks/ingestion_stack.py` provisions a working Fargate task
-  runner and `backend/database/migrate_to_bedrock.py` is ready to run
+  `infra/stacks/ingestion_stack.py` defines a Fargate task runner (opt-in
+  with `-c enable_ingestion=true`, since building its image needs Docker)
+  and `backend/database/migrate_to_bedrock.py` runs fine from a laptop
   today, but recurring automated ingestion needs those notebooks converted
   to scripts first; the EventBridge schedule is created disabled for this
   reason.
