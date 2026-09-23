@@ -1,10 +1,12 @@
 """Verify Bedrock model access is enabled before deploying.
 
-Model access is a manual, per-model, per-region console opt-in that's easy
-to forget until the first Lambda invocation fails (AWS Migration Plan,
-Section 11 / docs/AWS_DEPLOYMENT.md, step 0). This makes that failure
-happen here, with a clear message, instead of as a cryptic AccessDenied
-deep in a CloudWatch log after a full deploy.
+Anthropic models on Bedrock need a one-time setup per AWS account (the
+"use case details" form, plus an AWS Marketplace subscription that is
+created automatically the first time *a person* invokes the model). The
+deployed Lambda's role cannot do that first-time subscription itself, so
+run this script as yourself once, before deploying (docs/AWS_DEPLOYMENT.md,
+Part 3). It makes any access problem show up here, with a clear message,
+instead of as a cryptic AccessDenied deep in a CloudWatch log.
 
 Usage:
     python scripts/check_bedrock_access.py
@@ -32,7 +34,7 @@ def _check_invoke_model(runtime, model_id: str) -> tuple[bool, str]:
     except ClientError as e:
         code = e.response.get("Error", {}).get("Code", "")
         if code == "AccessDeniedException":
-            return False, "access not granted - enable it in Bedrock console > Model access"
+            return False, f"access denied - {e.response.get('Error', {}).get('Message', '')}"
         if code == "ValidationException":
             # Reached the model but sent it embeddings-shaped input; access is fine.
             return True, "ok (reachable)"
@@ -49,8 +51,11 @@ def _check_converse(runtime, model_id: str) -> tuple[bool, str]:
         return True, "ok"
     except ClientError as e:
         code = e.response.get("Error", {}).get("Code", "")
+        msg = e.response.get("Error", {}).get("Message", "")
+        if code == "ResourceNotFoundException" and "use case" in msg.lower():
+            return False, "Anthropic use-case form not submitted yet (see below)"
         if code == "AccessDeniedException":
-            return False, "access not granted - enable it in Bedrock console > Model access"
+            return False, f"access denied - {msg}"
         return False, f"{code}: {e.response.get('Error', {}).get('Message', '')}"
 
 
@@ -58,7 +63,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--region", default=os.getenv("BEDROCK_REGION") or os.getenv("AWS_REGION", "us-east-1"))
     parser.add_argument(
-        "--chat-model", default=os.getenv("BEDROCK_CHAT_MODEL_ID", "anthropic.claude-haiku-4-5-v1:0")
+        "--chat-model", default=os.getenv("BEDROCK_CHAT_MODEL_ID", "us.anthropic.claude-haiku-4-5-20251001-v1:0")
     )
     parser.add_argument(
         "--embed-model", default=os.getenv("BEDROCK_EMBED_MODEL_ID", "amazon.titan-embed-text-v2:0")
@@ -80,10 +85,14 @@ def main() -> int:
         return 0
 
     print(
-        "\nOne or more models are not accessible yet. In the Bedrock console for "
-        f"{args.region}: Model access > Manage model access > request the models above. "
-        "Approval can take a few minutes to a few hours the first time an account requests "
-        "Anthropic models."
+        "\nOne or more models are not accessible yet. Fixes, in order of likelihood:\n"
+        f"  1. Bedrock console ({args.region}) > Model catalog > Claude Haiku 4.5: if a\n"
+        "     'Submit use case details' prompt appears, submit it, wait ~5 minutes, re-run.\n"
+        "  2. Open the model in the Bedrock Playground (Chat) and send one message as\n"
+        "     yourself - this creates the one-time AWS Marketplace subscription.\n"
+        "  3. An AccessDenied that mentions a service control policy, organization, or\n"
+        "     Marketplace means your university's AWS admins restrict Bedrock/Marketplace\n"
+        "     on this subaccount - send them the error text above."
     )
     return 1
 

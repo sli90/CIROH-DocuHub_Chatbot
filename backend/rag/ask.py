@@ -24,7 +24,6 @@ from pathlib import Path
 from statistics import median
 
 from dotenv import load_dotenv
-from openai import OpenAI
 
 HERE = Path(__file__).resolve().parent
 load_dotenv(HERE / ".env")
@@ -39,7 +38,14 @@ from database.db_factory import get_db_manager  # noqa: E402
 # which one a given deployment calls. See docs/AWS_DEPLOYMENT.md.
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai").lower()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY")) if LLM_PROVIDER != "bedrock" else None
+# openai is imported lazily: the Lambda package (requirements-lambda.txt)
+# does not ship it, since the AWS deployment only ever uses Bedrock.
+if LLM_PROVIDER != "bedrock":
+    from openai import OpenAI
+
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+else:
+    client = None
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 DEFAULT_MODEL = os.getenv("ANSWER_MODEL", "gpt-5.5")
 BEDROCK_EMBED_DIMENSIONS = int(os.getenv("BEDROCK_EMBED_DIMENSIONS", "1024"))
@@ -410,6 +416,12 @@ def build_artifact_context_block(row):
     if row.get("summary"):
         parts.append(f"Artifact summary:\n{row['summary']}")
     keywords = row.get("keywords") or []
+    if isinstance(keywords, str):
+        # The RDS Data API returns jsonb columns as JSON text, not parsed lists.
+        try:
+            keywords = json.loads(keywords)
+        except json.JSONDecodeError:
+            keywords = []
     if isinstance(keywords, list) and keywords:
         parts.append("Keywords: " + ", ".join(str(k) for k in keywords if k))
     if row.get("retrieval_metadata_text"):
@@ -630,8 +642,12 @@ def get_rag_answer(question, context_blocks, meter=None, model=None):
     if LLM_PROVIDER == "bedrock":
         from aws.bedrock_client import converse_text
 
+        # The question is passed separately so the Guardrail evaluates only
+        # the user's text, not retrieved docs (which legitimately contain
+        # code and would otherwise trip the "unrelated code" denied topic).
         result = converse_text(
-            user_message,
+            f"<context>\n{context_str}\n</context>\n\nQUESTION:",
+            guarded_text=question,
             system_prompt=SYSTEM_MSG,
             max_tokens=MAX_ANSWER_TOKENS,
             temperature=0.2,

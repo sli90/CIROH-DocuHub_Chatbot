@@ -13,10 +13,10 @@ trusting the defaults.
 | 3. System-role scope lock | Domain/refusal rules sent via Bedrock Converse's dedicated `system` parameter, not blended into the user message | `SYSTEM_MSG`, `get_rag_answer()`, `backend/rag/ask.py` | "Ignore your instructions" style direct injection |
 | 4. Bedrock Guardrails (denied topics + prompt-attack) | Managed policy checked on every Converse call | `infra/stacks/guardrail_stack.py`, wired via `BEDROCK_GUARDRAIL_ID` | Homework/essay/code requests that survive layer 2 (e.g. share vocabulary with hydrology docs) |
 | 5. Context delimiting | Retrieved content wrapped in `<context>...</context>` | `get_rag_answer()`, `backend/rag/ask.py` | Gives the model a structural signal for where untrusted retrieved text starts/ends |
-| 6. Contextual grounding check | Bedrock Guardrails' RAG-specific grounding/relevance filters | `infra/stacks/guardrail_stack.py` | Indirect injection via scraped content: output that drifts from what was actually retrieved |
+| 6. Contextual grounding check | *Not enabled yet* - needs grounding_source/query tagging and a tuned threshold (see AWS_ARCHITECTURE.md, Known limitations) | - | Indirect injection via scraped content: output that drifts from what was actually retrieved |
 | 7. Output token cap | `maxTokens` on every Converse call (`MAX_ANSWER_TOKENS`, default 500) | `bedrock_client.converse_text()` | Caps how much "work" even a successful jailbreak can extract per request |
 | 8. Input length validation | `Field(max_length=2000)` on the question | `backend/rag/main.py` | Oversized payloads padding token cost or attempting length-based injection |
-| 9. WAF rate limit + managed rules | Rate-based rule (per-IP, 5-min window) + AWS Managed Common Rule Set | `infra/stacks/backend_stack.py` | Volume abuse, independent of what any single request asks for |
+| 9. WAF rate limit + managed rules | Rate-based rule on `/ask` (per viewer IP, 5-min window) + AWS Managed Common Rule Set, on CloudFront | `infra/stacks/frontend_stack.py` | Volume abuse, independent of what any single request asks for |
 | 10. API Gateway throttling | Steady-state/burst request limits | `infra/stacks/backend_stack.py` | Same, a second layer |
 | 11. AWS Budgets | 50/80/100% alarms, scoped to Bedrock specifically and to the project cost tag overall | `infra/stacks/observability_stack.py` | A runaway bill actually reaching the invoice before anyone notices |
 
@@ -29,7 +29,8 @@ Every default here is a starting guess (mirrors the source plan's own
 framing, Section 11: "starting guess; plan to tune... in the first few
 weeks"), not a validated value:
 
-- **`RETRIEVAL_SIMILARITY_THRESHOLD` (default `0.7`)** - pgvector cosine
+- **`RETRIEVAL_SIMILARITY_THRESHOLD` (default `0.7`; set it with
+  `retrieval_similarity_threshold` in `infra/cdk.json`)** - pgvector cosine
   distance, 0 = identical, 2 = opposite. Run a batch of known-on-topic and
   known-off-topic questions through `backend/rag/ask.py`'s
   `answer_question()` (or hit `/ask` directly) and look at the `route`
@@ -37,9 +38,9 @@ weeks"), not a validated value:
   is too strict; off-topic questions that get a real answer mean it's too
   loose. Tune per corpus, not per deploy - a larger, denser corpus tends to
   score real matches slightly further from center too.
-- **WAF `waf_rate_limit_per_5min` (default `1000`) and API Gateway
-  `rate_limit`/`burst_limit` (default `50`/`100`)**
-  (`infra/stacks/backend_stack.py`) - set from nothing (no current
+- **WAF `waf_rate_limit_per_5min` (default `500`, `infra/stacks/frontend_stack.py`)
+  and API Gateway `rate_limit`/`burst_limit` (default `50`/`100`,
+  `infra/stacks/backend_stack.py`)** - set from nothing (no current
   production traffic to measure), tune against real usage.
 - **`MAX_ANSWER_TOKENS` (default `500`)** - the source plan's Section 6.3
   worked example (1,500 input + 300 output tokens ≈ $0.003/question on

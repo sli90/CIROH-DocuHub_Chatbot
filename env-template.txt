@@ -32,16 +32,17 @@ LLM_PROVIDER=
 # "rds_data_api" (Aurora Serverless v2 over HTTPS, no VPC access needed)
 DB_BACKEND=
 
-# Required only when DB_BACKEND=rds_data_api (infra/app.py CfnOutputs after deploy)
+# Optional: the migration script and scripts/*.py read these from the
+# deployed CirohStack automatically when left blank.
 AURORA_CLUSTER_ARN=
 AURORA_SECRET_ARN=
 AURORA_DATABASE=
-AURORA_REGION=
+AURORA_REGION=us-east-1
 
 # Required only when LLM_PROVIDER=bedrock. Needs AWS credentials
 # (aws configure / SSO) with bedrock:InvokeModel in this account+region.
-BEDROCK_REGION=
-BEDROCK_CHAT_MODEL_ID=anthropic.claude-haiku-4-5-v1:0
+BEDROCK_REGION=us-east-1
+BEDROCK_CHAT_MODEL_ID=us.anthropic.claude-haiku-4-5-20251001-v1:0
 BEDROCK_EMBED_MODEL_ID=amazon.titan-embed-text-v2:0
 BEDROCK_EMBED_DIMENSIONS=1024
 # Optional: from infra/app.py's GuardrailId output, once deployed

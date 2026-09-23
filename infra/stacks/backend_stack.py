@@ -1,4 +1,9 @@
-"""Lambda (FastAPI + Mangum) behind API Gateway HTTP API, fronted by WAF.
+"""Lambda (FastAPI + Mangum) behind API Gateway HTTP API.
+
+AWS WAF sits in front of this on the CloudFront distribution
+(frontend_stack.py), not here: WAF cannot be attached to API Gateway HTTP
+APIs (only REST APIs), and at CloudFront it also sees the real viewer IP
+for its per-IP rate limit.
 
 AWS Migration Plan, Section 3.2 and Section 4: "Same application code; runs
 only per-request, scales to zero, scales out automatically." No VPC
@@ -22,35 +27,93 @@ speculatively.
 
 from __future__ import annotations
 
+import shutil
+import subprocess
+import sys
+from pathlib import Path
 from typing import Optional
 
-from aws_cdk import BundlingOptions, Duration, Fn
+import jsii
+from aws_cdk import BundlingOptions, Duration, Fn, ILocalBundling
 from aws_cdk import aws_apigatewayv2 as apigwv2
 from aws_cdk import aws_apigatewayv2_integrations as apigwv2_integrations
 from aws_cdk import aws_iam as iam
 from aws_cdk import aws_lambda as _lambda
 from aws_cdk import aws_logs as logs
-from aws_cdk import aws_wafv2 as wafv2
 from constructs import Construct
 
 # backend/ has three sibling packages the Lambda needs together (rag/,
-# database/, aws/) but only one of them (rag/) is the API entry point, and
-# backend/requirements.txt is the full local-dev dependency set (jupyter,
-# pandas, hsclient, ...) that Appendix A explicitly says the Lambda package
-# no longer needs. aws_lambda_python_alpha.PythonFunction auto-detects a
-# requirements.txt sitting directly in `entry` with no way to point it at a
-# different file, which does not fit this layout - so this bundles with a
-# plain lambda.Function + an explicit Docker bundling command instead,
-# installing from requirements-lambda.txt and copying just the three
-# packages this app actually needs at runtime.
+# database/, aws/), but also ~70 MB of scraped source data, notebooks and
+# JSON that the /ask path never reads, and backend/requirements.txt is the
+# full local-dev dependency set (jupyter, pandas, hsclient, ...) that
+# Appendix A says the Lambda package no longer needs. So the package is
+# built explicitly: dependencies from requirements-lambda.txt, plus only
+# the .py files of those three packages.
+_LAMBDA_PACKAGES = ("rag", "database", "aws")
+_LAMBDA_PYTHON_VERSION = "3.12"
+
+# Excluded from the asset's source hash, so editing a notebook or re-scraping
+# data does not trigger a Lambda redeploy.
+_ASSET_EXCLUDE = [
+    "**/__pycache__",
+    "**/*.ipynb",
+    "**/*.json",
+    "**/*.csv",
+    "**/.env",
+    "database/CIROH-Hub",
+    "database/GitHub-CIROH-CodeRepos",
+    "database/HydroShare-CIROH-Datasets",
+    "database/json",
+    "node_modules",
+]
+
+# Docker fallback, only used if the local build below fails.
 _BUNDLE_COMMAND = [
     "bash",
     "-c",
     (
         "pip install --no-cache-dir -r requirements-lambda.txt -t /asset-output "
-        "&& cp -r rag database aws /asset-output/"
+        "&& for p in rag database aws; do mkdir -p /asset-output/$p && cp $p/*.py /asset-output/$p/; done"
     ),
 ]
+
+
+@jsii.implements(ILocalBundling)
+class _LocalPipBundler:
+    """Builds the Lambda package with the local pip instead of Docker.
+
+    pip downloads Linux (manylinux) wheels for Lambda's Python version, so
+    this works from Windows/macOS without Docker Desktop. Returning False
+    makes CDK fall back to the Docker build above.
+    """
+
+    def __init__(self, source_dir: str) -> None:
+        self.source_dir = Path(source_dir)
+
+    def try_bundle(self, output_dir: str, options: BundlingOptions) -> bool:  # noqa: ARG002
+        out = Path(output_dir)
+        cmd = [
+            sys.executable, "-m", "pip", "install",
+            "-r", str(self.source_dir / "requirements-lambda.txt"),
+            "-t", str(out),
+            "--platform", "manylinux2014_x86_64",
+            "--implementation", "cp",
+            "--python-version", _LAMBDA_PYTHON_VERSION,
+            "--only-binary=:all:",
+            "--upgrade",
+            "--quiet",
+            "--disable-pip-version-check",
+        ]
+        print("Bundling Lambda package with local pip (no Docker needed)...")
+        if subprocess.run(cmd, check=False).returncode != 0:
+            print("Local pip bundling failed; falling back to Docker bundling.")
+            return False
+        for package in _LAMBDA_PACKAGES:
+            dest = out / package
+            dest.mkdir(parents=True, exist_ok=True)
+            for py_file in (self.source_dir / package).glob("*.py"):
+                shutil.copy2(py_file, dest / py_file.name)
+        return True
 
 
 class BackendStack(Construct):
@@ -67,11 +130,10 @@ class BackendStack(Construct):
         allowed_origins: str,
         guardrail_id: Optional[str] = None,
         guardrail_version: Optional[str] = None,
-        bedrock_chat_model_id: str = "anthropic.claude-haiku-4-5-v1:0",
+        bedrock_chat_model_id: str = "us.anthropic.claude-haiku-4-5-20251001-v1:0",
         bedrock_embed_model_id: str = "amazon.titan-embed-text-v2:0",
         bedrock_embed_dimensions: int = 1024,
         retrieval_similarity_threshold: float = 0.7,
-        waf_rate_limit_per_5min: int = 1000,
     ) -> None:
         super().__init__(scope, construct_id)
 
@@ -102,9 +164,11 @@ class BackendStack(Construct):
             handler="rag.lambda_handler.handler",
             code=_lambda.Code.from_asset(
                 backend_source_dir,
+                exclude=_ASSET_EXCLUDE,
                 bundling=BundlingOptions(
                     image=runtime.bundling_image,
                     command=_BUNDLE_COMMAND,
+                    local=_LocalPipBundler(backend_source_dir),
                 ),
             ),
             timeout=Duration.seconds(28),  # stay under API Gateway's fixed 29s cap
@@ -118,14 +182,15 @@ class BackendStack(Construct):
             ),
         )
 
-        # Least-privilege IAM (Section 9.3: "no wildcard resource
-        # permissions"). Bedrock model invocation is scoped to the account's
-        # models generally (Bedrock foundation-model ARNs are not
-        # account-owned resources, so this cannot be scoped further); Data
-        # API and Secrets Manager access is scoped to this cluster/secret only.
+        # Least-privilege IAM (Section 9.3). Bedrock is scoped by action, not
+        # resource: Claude Haiku 4.5 runs through a cross-region inference
+        # profile, which needs InvokeModel on the profile *and* on the
+        # foundation model in every region it may route to. Converse is
+        # authorized by bedrock:InvokeModel (there is no separate action).
+        # Data API and Secrets Manager access is scoped to this cluster/secret.
         self.function.add_to_role_policy(
             iam.PolicyStatement(
-                actions=["bedrock:InvokeModel", "bedrock:Converse", "bedrock:ApplyGuardrail"],
+                actions=["bedrock:InvokeModel", "bedrock:ApplyGuardrail"],
                 resources=["*"],
             )
         )
@@ -175,91 +240,8 @@ class BackendStack(Construct):
             ),
         )
 
-        self.web_acl = wafv2.CfnWebACL(
-            self,
-            "WebAcl",
-            name=f"{project_name}-api-waf",
-            scope="REGIONAL",
-            default_action=wafv2.CfnWebACL.DefaultActionProperty(allow={}),
-            visibility_config=wafv2.CfnWebACL.VisibilityConfigProperty(
-                sampled_requests_enabled=True,
-                cloud_watch_metrics_enabled=True,
-                metric_name=f"{project_name}-api-waf",
-            ),
-            rules=[
-                wafv2.CfnWebACL.RuleProperty(
-                    name="RateLimitPerIp",
-                    priority=0,
-                    action=wafv2.CfnWebACL.RuleActionProperty(block={}),
-                    statement=wafv2.CfnWebACL.StatementProperty(
-                        rate_based_statement=wafv2.CfnWebACL.RateBasedStatementProperty(
-                            limit=waf_rate_limit_per_5min,
-                            aggregate_key_type="IP",
-                        )
-                    ),
-                    visibility_config=wafv2.CfnWebACL.VisibilityConfigProperty(
-                        sampled_requests_enabled=True,
-                        cloud_watch_metrics_enabled=True,
-                        metric_name=f"{project_name}-rate-limit",
-                    ),
-                ),
-                wafv2.CfnWebACL.RuleProperty(
-                    name="AWSManagedCommonRuleSet",
-                    priority=1,
-                    override_action=wafv2.CfnWebACL.OverrideActionProperty(none={}),
-                    statement=wafv2.CfnWebACL.StatementProperty(
-                        managed_rule_group_statement=wafv2.CfnWebACL.ManagedRuleGroupStatementProperty(
-                            vendor_name="AWS",
-                            name="AWSManagedRulesCommonRuleSet",
-                        )
-                    ),
-                    visibility_config=wafv2.CfnWebACL.VisibilityConfigProperty(
-                        sampled_requests_enabled=True,
-                        cloud_watch_metrics_enabled=True,
-                        metric_name=f"{project_name}-common-rules",
-                    ),
-                ),
-                # Optional, extra cost (~$10/month): AWS Managed Bot Control.
-                # Uncomment if scraper/bot abuse becomes a real problem
-                # (Section 9.1 is about *scope*, not just cost, but bot
-                # traffic is a volume concern this rule targets directly).
-                # wafv2.CfnWebACL.RuleProperty(
-                #     name="AWSManagedBotControl",
-                #     priority=2,
-                #     override_action=wafv2.CfnWebACL.OverrideActionProperty(none={}),
-                #     statement=wafv2.CfnWebACL.StatementProperty(
-                #         managed_rule_group_statement=wafv2.CfnWebACL.ManagedRuleGroupStatementProperty(
-                #             vendor_name="AWS", name="AWSManagedRulesBotControlRuleSet"
-                #         )
-                #     ),
-                #     visibility_config=wafv2.CfnWebACL.VisibilityConfigProperty(
-                #         sampled_requests_enabled=True, cloud_watch_metrics_enabled=True,
-                #         metric_name=f"{project_name}-bot-control",
-                #     ),
-                # ),
-            ],
-        )
-
-        self.web_acl_association = wafv2.CfnWebACLAssociation(
-            self,
-            "WebAclAssociation",
-            resource_arn=self._stage_arn(),
-            web_acl_arn=self.web_acl.attr_arn,
-        )
-
         # Host-only form of api_endpoint (a CloudFormation-resolved Token,
         # not a plain Python string - Fn.select/Fn.split is the safe way to
         # pick the host out of it) for FrontendStack's CloudFront origin
         # (Section 4, step 2: CloudFront routes /ask to the API origin).
         self.api_domain_name = Fn.select(2, Fn.split("/", self.http_api.api_endpoint))
-
-    def _stage_arn(self) -> str:
-        # HTTP API stage ARN format WAFv2 expects:
-        # arn:aws:apigateway:{region}::/apis/{api-id}/stages/{stage-name}
-        from aws_cdk import Stack
-
-        stack = Stack.of(self)
-        return (
-            f"arn:aws:apigateway:{stack.region}::/apis/"
-            f"{self.http_api.http_api_id}/stages/{self.stage.stage_name}"
-        )

@@ -39,6 +39,7 @@ class ObservabilityStack(Construct):
         http_api_id: str,
         monthly_budget_usd: float,
         alert_email: Optional[str] = None,
+        enable_budgets: bool = True,
     ) -> None:
         super().__init__(scope, construct_id)
 
@@ -56,18 +57,8 @@ class ObservabilityStack(Construct):
             )
         )
 
-        self._budget(
-            "ProjectBudget",
-            f"{project_name}-monthly-total",
-            monthly_budget_usd,
-            cost_filters={"TagKeyValue": [f"user:Project${project_name}"]},
-        )
-        self._budget(
-            "BedrockBudget",
-            f"{project_name}-monthly-bedrock",
-            monthly_budget_usd * 0.6,  # Bedrock is the most volatile line item; tighter cap
-            cost_filters={"Service": ["Amazon Bedrock"]},
-        )
+        if enable_budgets:
+            self._budgets(project_name, monthly_budget_usd)
 
         cloudwatch.Alarm(
             self,
@@ -95,6 +86,24 @@ class ObservabilityStack(Construct):
             evaluation_periods=1,
             comparison_operator=cloudwatch.ComparisonOperator.GREATER_THAN_OR_EQUAL_TO_THRESHOLD,
         ).add_alarm_action(cw_actions.SnsAction(self.alert_topic))
+
+    def _budgets(self, project_name: str, monthly_budget_usd: float) -> None:
+        # The tag-scoped budget only sees spend once the "Project" cost
+        # allocation tag is activated in Billing (from the organization's
+        # management account, for a member/sub account). The Bedrock one
+        # works immediately.
+        self._budget(
+            "ProjectBudget",
+            f"{project_name}-monthly-total",
+            monthly_budget_usd,
+            cost_filters={"TagKeyValue": [f"user:Project${project_name}"]},
+        )
+        self._budget(
+            "BedrockBudget",
+            f"{project_name}-monthly-bedrock",
+            monthly_budget_usd * 0.6,  # Bedrock is the most volatile line item; tighter cap
+            cost_filters={"Service": ["Amazon Bedrock"]},
+        )
 
     def _budget(self, construct_id: str, name: str, amount: float, cost_filters: dict) -> None:
         notifications = []
