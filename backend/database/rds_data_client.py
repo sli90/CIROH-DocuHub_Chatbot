@@ -43,6 +43,16 @@ _PLACEHOLDER = re.compile(r"%s(?:::(\w+(?:\[\])?))?")
 # Lambda's 28s timeout so a resume still leaves time to answer.
 RESUME_WAIT_SECONDS = float(os.getenv("AURORA_RESUME_WAIT_SECONDS", "20"))
 
+# Optional absolute (time.monotonic) cutoff for waiting on a resume, shared
+# by every query in one request. Set by rag/ask.py per question so the
+# waits of several queries can't add up past API Gateway's 29s limit.
+_request_deadline: Optional[float] = None
+
+
+def set_request_deadline(seconds_from_now: Optional[float]) -> None:
+    global _request_deadline
+    _request_deadline = None if seconds_from_now is None else time.monotonic() + seconds_from_now
+
 
 @lru_cache(maxsize=None)
 def _client(region: str):
@@ -50,9 +60,24 @@ def _client(region: str):
     return boto3.client("rds-data", region_name=region, config=config)
 
 
+class DatabaseUnavailableError(RuntimeError):
+    """The cluster is paused/resuming and did not come back in time.
+
+    Raised instead of returning an empty result, so callers can tell the
+    user "try again in a moment" rather than "nothing found".
+    """
+
+
+# Error codes / message fragments the Data API returns while a scaled-to-zero
+# cluster is waking up (or briefly unreachable during a scaling event).
+_RESUME_CODES = {"DatabaseResumingException", "DatabaseUnavailableException", "ServiceUnavailableError"}
+_RESUME_TEXT = ("resuming", "communications link failure", "is not available", "unavailable")
+
+
 def _is_resuming(exc: Exception) -> bool:
     code = getattr(exc, "response", {}).get("Error", {}).get("Code", "")
-    return code == "DatabaseResumingException" or "resuming" in str(exc).lower()
+    text = str(exc).lower()
+    return code in _RESUME_CODES or any(t in text for t in _RESUME_TEXT)
 
 
 class RdsDataApiManager:
@@ -76,6 +101,8 @@ class RdsDataApiManager:
 
     def _call(self, fn, wait_seconds: float = RESUME_WAIT_SECONDS, **kwargs):
         deadline = time.monotonic() + wait_seconds
+        if _request_deadline is not None:
+            deadline = min(deadline, _request_deadline)
         while True:
             try:
                 return fn(
@@ -117,6 +144,10 @@ class RdsDataApiManager:
             )
         except Exception as e:  # noqa: BLE001 - intentionally broad, see docstring
             print(f"RDS Data API error: {e}")
+            if _is_resuming(e):
+                # Not "no rows": the database is still waking up. Surfacing
+                # this lets /ask say so instead of claiming nothing matched.
+                raise DatabaseUnavailableError(str(e)) from e
             return None
         if not fetch:
             return None

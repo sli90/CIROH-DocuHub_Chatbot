@@ -67,5 +67,5 @@ class NetworkStack(Construct):
         self.aurora_security_group.add_ingress_rule(
             self.ingestion_security_group,
             ec2.Port.tcp(5432),
-            "Fargate ingestion task -> Aurora (direct psql, migration scripts)",
+            "Fargate ingestion task to Aurora (direct psql, migration scripts)",
         )

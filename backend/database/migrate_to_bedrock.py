@@ -23,6 +23,13 @@ Usage (in order - see docs/AWS_DEPLOYMENT.md, Part 5):
     python migrate_to_bedrock.py                         # full run (re-runnable; skips rows already loaded)
     python migrate_to_bedrock.py --validate --sample-question "What is NextGen In A Box?"
 
+Source: the Azure database (POSTGRES_* in .env), or - when the Azure DB
+is not reachable from where this runs (e.g. AWS CloudShell) - a corpus file
+exported from a machine that can reach it:
+    python migrate_to_bedrock.py --export corpus_export.json.gz   # on your laptop, no AWS needed
+    python migrate_to_bedrock.py --from-file corpus_export.json.gz ...
+If corpus_export.json.gz sits next to this script it is used automatically.
+
 Every write is INSERT ... ON CONFLICT DO NOTHING and progress is
 checkpointed after each batch, so an interrupted run can simply be started
 again with the same command.
@@ -38,6 +45,7 @@ Required environment (see env-template.txt):
 from __future__ import annotations
 
 import argparse
+import gzip
 import json
 import re
 import sys
@@ -46,20 +54,20 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-sys.path.append(str(HERE.parent))
+# Insert (not append): this folder contains database.py, which would
+# otherwise shadow the `database` package for `from database.x import`.
+sys.path.insert(0, str(HERE.parent))
 
 from dotenv import load_dotenv  # noqa: E402
 
 load_dotenv(HERE.parent.parent / ".env")
 
 from aws.stack_outputs import load_stack_outputs_into_env  # noqa: E402
-
-load_stack_outputs_into_env()
-
 from aws.bedrock_client import get_embedding  # noqa: E402
 from database.rds_data_client import RdsDataApiManager  # noqa: E402
 
 CHECKPOINT_PATH = HERE / "migrate_to_bedrock.checkpoint.json"
+DEFAULT_EXPORT_PATH = HERE / "corpus_export.json.gz"
 SCHEMA_PATH = HERE / "schema_aws.sql"
 
 # Titan Text Embeddings V2 accepts up to 8,192 tokens (~50,000 characters).
@@ -77,6 +85,8 @@ def _source_db():
 
 
 def _dest_db() -> RdsDataApiManager:
+    # Aurora ARNs come from the deployed stack's outputs unless set in .env.
+    load_stack_outputs_into_env()
     return RdsDataApiManager()
 
 
@@ -162,6 +172,10 @@ def fetch_artifacts(source, limit: int | None) -> list[dict]:
     )
     with source as db:
         rows = db.execute_query(query, fetch=True) or []
+    return _limit_artifacts(rows, limit)
+
+
+def _limit_artifacts(rows: list[dict], limit: int | None) -> list[dict]:
     if not limit:
         return rows
     # A smoke test still needs every parent of the artifacts it loads, or
@@ -191,18 +205,79 @@ def fetch_chunks(source, artifact_ids: list[int] | None) -> list[dict]:
         return db.execute_query(query, params=params, fetch=True) or []
 
 
+def read_source(limit: int | None, from_file: Path | None) -> dict[str, list[dict]]:
+    """All source rows, from Azure or from an exported corpus file."""
+    if from_file:
+        print(f"Reading source rows from {from_file}...")
+        with gzip.open(from_file, "rt", encoding="utf-8") as fh:
+            data = json.load(fh)
+        artifacts = _limit_artifacts(data["artifacts"], limit)
+        chunks = data["chunks"]
+        if limit:
+            keep = {a["idartifact"] for a in artifacts}
+            chunks = [c for c in chunks if c["idartifact"] in keep]
+        return {
+            "artifact_types": data["artifact_types"],
+            "chunk_types": data["chunk_types"],
+            "artifacts": artifacts,
+            "chunks": chunks,
+        }
+
+    print("Fetching source rows from Azure...")
+    source = _source_db()
+    artifacts = fetch_artifacts(source, limit)
+    return {
+        "artifact_types": fetch_artifact_types(source),
+        "chunk_types": fetch_chunk_types(source),
+        "artifacts": artifacts,
+        "chunks": fetch_chunks(source, [a["idartifact"] for a in artifacts] if limit else None),
+    }
+
+
+def export_corpus(path: Path) -> None:
+    """Write the whole Azure corpus (no embeddings) to a gzipped JSON file."""
+    data = read_source(limit=None, from_file=None)
+    if not data["artifacts"]:
+        sys.exit("No artifacts read from the source database - check the POSTGRES_* values in .env.")
+    with gzip.open(path, "wt", encoding="utf-8") as fh:
+        json.dump(data, fh, default=str)
+    print(
+        f"Exported {len(data['artifacts'])} artifacts and {len(data['chunks'])} chunks "
+        f"to {path} ({path.stat().st_size / 1e6:.1f} MB)."
+    )
+
+
 def _artifact_embedding_text(row: dict) -> str:
-    summary = (row.get("summary_data") or {}).get("summary_text") or ""
-    keywords = (row.get("summary_data") or {}).get("keywords") or []
+    """Same text PopulateDB.ipynb embeds (SELECT_ARTIFACTS_SQL). Artifacts
+    without summary_data get no embedding there either (returns "")."""
+    summary_data = row.get("summary_data")
+    if summary_data is None:
+        return ""
+    keywords = ", ".join(str(k) for k in summary_data.get("keywords") or [])
+    text = f"{row.get('title') or ''}:\n\n{summary_data.get('summary_text') or ''}\n\nKeywords: {keywords}"
     metadata_text = (row.get("metadata") or {}).get("retrieval_metadata_text") or ""
-    parts = [row.get("title") or ""]
-    if summary:
-        parts.append(summary)
-    if keywords:
-        parts.append("Keywords: " + ", ".join(str(k) for k in keywords))
     if metadata_text:
-        parts.append(metadata_text)
-    return "\n".join(p for p in parts if p)
+        text += f"\n\n{metadata_text}"
+    return text
+
+
+def _chunk_text_fn(chunk_types: list[dict]):
+    """Same text PopulateDB.ipynb embeds for chunks (chunk_preprocessor):
+    "Chunk type: X / Section: Y" prefix, then the chunk text."""
+    type_names = {t["idchunktype"]: t["typename"] for t in chunk_types}
+
+    def text_fn(chunk: dict) -> str:
+        if chunk.get("chunk_text") is None:
+            return ""
+        prefix = []
+        if type_names.get(chunk.get("idchunktype")):
+            prefix.append(f"Chunk type: {type_names[chunk['idchunktype']]}")
+        section = (chunk.get("metadata") or {}).get("section_hint") or ""
+        if section:
+            prefix.append(f"Section: {section}")
+        return ("\n".join(prefix) + "\n\n" + chunk["chunk_text"]) if prefix else chunk["chunk_text"]
+
+    return text_fn
 
 
 def _embed_one(text: str):
@@ -367,6 +442,8 @@ def main() -> None:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument("--apply-schema", action="store_true", help="Create the tables in Aurora, then exit.")
+    parser.add_argument("--export", metavar="FILE", help="Export the Azure corpus to FILE (.json.gz), then exit.")
+    parser.add_argument("--from-file", metavar="FILE", help="Read the corpus from an --export file instead of Azure.")
     parser.add_argument("--dry-run", action="store_true", help="Count source rows only, no embedding/writes.")
     parser.add_argument("--limit", type=int, default=None, help="Only migrate N artifacts (+ their chunks).")
     parser.add_argument("--concurrency", type=int, default=8, help="Parallel Bedrock embedding calls.")
@@ -382,22 +459,24 @@ def main() -> None:
     parser.add_argument("--resume", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
-    dest = _dest_db()
+    if args.export:
+        export_corpus(Path(args.export))
+        return
 
     if args.apply_schema:
-        apply_schema(dest)
+        apply_schema(_dest_db())
         return
 
     if args.validate:
-        validate(dest, sample_questions=args.sample_question)
+        validate(_dest_db(), sample_questions=args.sample_question)
         return
 
-    source = _source_db()
-    print("Fetching source rows from Azure...")
-    artifact_types = fetch_artifact_types(source)
-    chunk_types = fetch_chunk_types(source)
-    artifacts = fetch_artifacts(source, args.limit)
-    chunks = fetch_chunks(source, [a["idartifact"] for a in artifacts] if args.limit else None)
+    from_file = Path(args.from_file) if args.from_file else None
+    if from_file is None and DEFAULT_EXPORT_PATH.exists():
+        from_file = DEFAULT_EXPORT_PATH
+    data = read_source(args.limit, from_file)
+    artifact_types, chunk_types = data["artifact_types"], data["chunk_types"]
+    artifacts, chunks = data["artifacts"], data["chunks"]
     print(
         f"  {len(artifact_types)} artifact types, {len(chunk_types)} chunk types, "
         f"{len(artifacts)} artifacts, {len(chunks)} chunks"
@@ -409,6 +488,7 @@ def main() -> None:
         print("Dry run: no embeddings computed, no writes made.")
         return
 
+    dest = _dest_db()
     checkpoint = {"artifact_ids_done": [], "chunk_ids_done": []} if args.restart else _load_checkpoint()
     done_artifacts = set(checkpoint["artifact_ids_done"])
     done_chunks = set(checkpoint["chunk_ids_done"])
@@ -438,7 +518,7 @@ def main() -> None:
         "Chunks",
         _topological_order(chunks, "idchunk", "idchunkparent"),
         "idchunk",
-        lambda c: c.get("chunk_text") or "",
+        _chunk_text_fn(chunk_types),
         load_chunks,
         dest,
         done_chunks,

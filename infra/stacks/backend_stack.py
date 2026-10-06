@@ -34,7 +34,7 @@ from pathlib import Path
 from typing import Optional
 
 import jsii
-from aws_cdk import BundlingOptions, Duration, Fn, ILocalBundling
+from aws_cdk import BundlingOptions, Duration, Fn, ILocalBundling, RemovalPolicy
 from aws_cdk import aws_apigatewayv2 as apigwv2
 from aws_cdk import aws_apigatewayv2_integrations as apigwv2_integrations
 from aws_cdk import aws_iam as iam
@@ -177,7 +177,7 @@ class BackendStack(Construct):
             log_group=logs.LogGroup(
                 self,
                 "AskFunctionLogs",
-                log_group_name=f"/aws/lambda/{function_name}",
+                log_group_name=f"/ciroh-docuhub/{function_name}", removal_policy=RemovalPolicy.DESTROY,
                 retention=logs.RetentionDays.ONE_MONTH,
             ),
         )

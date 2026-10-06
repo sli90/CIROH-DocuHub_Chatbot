@@ -59,6 +59,13 @@ class CirohStack(cdk.Stack):
         enable_budgets = str(self.node.try_get_context("enable_budgets")).lower() != "false"
         # Retrieval-gate cosine-distance cutoff (docs/GUARDRAILS_AND_COST.md).
         similarity_threshold = float(self.node.try_get_context("retrieval_similarity_threshold") or 0.7)
+        # Bedrock model that writes the answers. Anthropic models need a one-time
+        # AWS Marketplace subscription; Amazon Nova models (e.g.
+        # "us.amazon.nova-pro-v1:0") do not.
+        chat_model_id = (
+            self.node.try_get_context("bedrock_chat_model_id")
+            or "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+        )
         # Set once the frontend's real domain is known (either a manually
         # supplied custom domain, or the CloudFront domain from a first
         # deploy's output) - see docs/AWS_DEPLOYMENT.md, "Two-phase deploy".
@@ -103,6 +110,7 @@ class CirohStack(cdk.Stack):
             guardrail_id=guardrail.guardrail_id,
             guardrail_version=guardrail.guardrail_version,
             retrieval_similarity_threshold=similarity_threshold,
+            bedrock_chat_model_id=chat_model_id,
         )
 
         frontend = FrontendStack(

@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -71,9 +72,10 @@ RETRIEVAL_SIMILARITY_THRESHOLD = float(os.getenv("RETRIEVAL_SIMILARITY_THRESHOLD
 MAX_ANSWER_TOKENS = int(os.getenv("MAX_ANSWER_TOKENS", "500"))
 
 OFF_TOPIC_MESSAGE = (
-    "This assistant only answers questions about CIROH DocuHub content. "
-    "I couldn't find anything in the CIROH knowledge base closely related "
-    "to that question."
+    "I couldn't find anything in the CIROH knowledge base closely related to "
+    "that question. I answer questions about CIROH documentation, publications, "
+    "datasets and code repositories. Try rephrasing with a specific CIROH tool or "
+    "topic, or ask \"what can you do?\" for examples."
 )
 
 SYSTEM_MSG = (
@@ -104,7 +106,55 @@ QUESTION_TYPE_LABELS = {
     "bottom_up": "Specific Question",
     "both": "Overview Question / Specific Question",
     "rejected": "Off-topic (declined)",
+    "help": "Getting started",
+    "unavailable": "Knowledge base waking up",
 }
+
+# Greetings and "what can you do?" never match a CIROH document, so the
+# retrieval gate would refuse them as off-topic. They get a fixed intro
+# instead (no model or database call).
+HELP_MESSAGE = (
+    "Hi! I'm the CIROH DocuHub assistant. I answer questions using CIROH's own "
+    "knowledge base:\n\n"
+    "- **CIROH Hub documentation**: products, services, policies, release notes and blog posts\n"
+    "- **Research publications** from CIROH projects\n"
+    "- **HydroShare datasets** shared by CIROH\n"
+    "- **GitHub code repositories** for CIROH tools\n\n"
+    "Every answer lists the sources it came from. Try asking:\n\n"
+    "- *What is NextGen In A Box (NGIAB)?*\n"
+    "- *How do I get access to CIROH cloud computing resources?*\n"
+    "- *What data does the NextGen Research DataStream provide?*\n"
+    "- *Which CIROH tools help with flood inundation mapping?*\n\n"
+    "I only answer questions about CIROH, so general homework, essays or "
+    "unrelated coding requests are out of scope."
+)
+
+DB_WAKING_MESSAGE = (
+    "The CIROH knowledge base is waking up after being idle (this takes about "
+    "20 seconds). Please send your question again in a moment."
+)
+
+_GREETING = re.compile(
+    r"^(hi|hii+|hello|hey|hiya|howdy|greetings|yo|good (morning|afternoon|evening))"
+    r"( there| bot| ciroh( ai)?)?$"
+)
+_HELP_PHRASES = (
+    "what can you do", "what all can you do", "what do you do", "what can i ask",
+    "what should i ask", "who are you", "what are you", "how can you help",
+    "what can you help", "what do you know", "how do i use", "how does this work",
+    "what is this bot", "what is this chatbot", "help me", "what are your capabilities",
+)
+
+
+def is_help_request(question: str) -> bool:
+    """True for greetings / capability questions (short, no real topic)."""
+    q = re.sub(r"[^a-z0-9 ]+", " ", (question or "").lower())
+    q = re.sub(r"\s+", " ", q).strip()
+    if not q or q == "help":
+        return True
+    if _GREETING.match(q):
+        return True
+    return len(q) <= 60 and any(p in q for p in _HELP_PHRASES)
 
 
 class UsageMeter:
@@ -685,10 +735,62 @@ def _rejected_response(meter, reason, route_reason=""):
     }
 
 
+def _fixed_response(meter, route, answer, reason=""):
+    return {
+        "answer": answer,
+        "sources": [],
+        "links": [],
+        "route": route,
+        "question_type": QUESTION_TYPE_LABELS[route],
+        "route_reason": reason,
+        "usage": meter.summary(),
+        "success": True,
+    }
+
+
+def _start_waking_database():
+    """Kick off a resume of a scaled-to-zero Aurora cluster without waiting,
+    so it overlaps with the guardrail/embedding/router calls below."""
+    if os.getenv("DB_BACKEND", "").lower() == "rds_data_api":
+        with _db() as db:
+            db.ping(wait_seconds=0)
+
+
 def answer_question(question, mode="hybrid", model=None):
     """Public API used by FastAPI and the CLI."""
     meter = UsageMeter()
     model = model or DEFAULT_MODEL
+
+    if is_help_request(question):
+        return _fixed_response(meter, "help", HELP_MESSAGE, "greeting or capability question")
+
+    _start_waking_database()
+    _set_db_wait_budget(DB_WAIT_BUDGET_SECONDS)
+    try:
+        return _answer_question(question, mode, model, meter)
+    except Exception as e:  # noqa: BLE001 - only the DB-waking case is handled
+        if type(e).__name__ == "DatabaseUnavailableError":
+            return _fixed_response(meter, "unavailable", DB_WAKING_MESSAGE, "database resuming")
+        raise
+    finally:
+        _set_db_wait_budget(None)
+
+
+# Seconds into a question after which a still-resuming database gives up and
+# returns DB_WAKING_MESSAGE. Leaves ~10s for retrieval + the answer itself,
+# so a cold start never runs into API Gateway's fixed 29s timeout (which the
+# browser would show as an error instead of a message).
+DB_WAIT_BUDGET_SECONDS = float(os.getenv("DB_WAIT_BUDGET_SECONDS", "15"))
+
+
+def _set_db_wait_budget(seconds):
+    if os.getenv("DB_BACKEND", "").lower() == "rds_data_api":
+        from database.rds_data_client import set_request_deadline
+
+        set_request_deadline(seconds)
+
+
+def _answer_question(question, mode, model, meter):
 
     # Cheapest possible rejection: a Bedrock Guardrails denied-topics check
     # against the raw question, before the embedding call or any DB

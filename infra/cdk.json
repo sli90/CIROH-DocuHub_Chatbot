@@ -19,9 +19,10 @@
     "aurora_min_acu": 0,
     "aurora_max_acu": 4,
     "budget_monthly_usd": 60,
-    "budget_alert_email": "",
+    "budget_alert_email": "pnhalalae@ua.edu",
     "enable_budgets": true,
     "retrieval_similarity_threshold": 0.7,
+    "bedrock_chat_model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
     "enable_ingestion": false
   }
 }
