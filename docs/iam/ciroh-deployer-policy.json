@@ -1,0 +1,120 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudShell",
+      "Effect": "Allow",
+      "Action": "cloudshell:*",
+      "Resource": "*"
+    },
+    {
+      "Sid": "WhoAmI",
+      "Effect": "Allow",
+      "Action": "sts:GetCallerIdentity",
+      "Resource": "*"
+    },
+    {
+      "Sid": "CdkDeployViaBootstrapRoles",
+      "Effect": "Allow",
+      "Action": ["sts:AssumeRole", "sts:TagSession"],
+      "Resource": "arn:aws:iam::ACCOUNT_ID:role/cdk-*"
+    },
+    {
+      "Sid": "CdkBootstrapStack",
+      "Effect": "Allow",
+      "Action": "cloudformation:*",
+      "Resource": [
+        "arn:aws:cloudformation:us-east-1:ACCOUNT_ID:stack/CDKToolkit/*",
+        "arn:aws:cloudformation:us-east-1:ACCOUNT_ID:stack/CirohStack/*"
+      ]
+    },
+    {
+      "Sid": "CloudFormationRead",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
+        "cloudformation:GetTemplate",
+        "cloudformation:ValidateTemplate"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CdkBootstrapResources",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole", "iam:DeleteRole", "iam:GetRole", "iam:TagRole", "iam:UntagRole",
+        "iam:PutRolePolicy", "iam:DeleteRolePolicy", "iam:GetRolePolicy",
+        "iam:AttachRolePolicy", "iam:DetachRolePolicy", "iam:UpdateAssumeRolePolicy",
+        "iam:PassRole"
+      ],
+      "Resource": "arn:aws:iam::ACCOUNT_ID:role/cdk-*"
+    },
+    {
+      "Sid": "CdkBootstrapStorage",
+      "Effect": "Allow",
+      "Action": ["s3:*", "ecr:*", "ssm:*"],
+      "Resource": [
+        "arn:aws:s3:::cdk-*",
+        "arn:aws:s3:::cdk-*/*",
+        "arn:aws:ecr:us-east-1:ACCOUNT_ID:repository/cdk-*",
+        "arn:aws:ssm:us-east-1:ACCOUNT_ID:parameter/cdk-bootstrap/*"
+      ]
+    },
+    {
+      "Sid": "EcrAuthForBootstrap",
+      "Effect": "Allow",
+      "Action": ["ecr:GetAuthorizationToken", "ecr:CreateRepository"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "BedrockUseModelsAndGuardrail",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:ApplyGuardrail",
+        "bedrock:Get*",
+        "bedrock:List*",
+        "bedrock:PutUseCaseForModelAccess",
+        "bedrock:CreateFoundationModelAgreement"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "OneTimeAnthropicMarketplaceSubscription",
+      "Effect": "Allow",
+      "Action": [
+        "aws-marketplace:Subscribe",
+        "aws-marketplace:Unsubscribe",
+        "aws-marketplace:ViewSubscriptions"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "LoadCorpusIntoAurora",
+      "Effect": "Allow",
+      "Action": [
+        "rds-data:ExecuteStatement",
+        "rds-data:BatchExecuteStatement",
+        "rds-data:BeginTransaction",
+        "rds-data:CommitTransaction",
+        "rds-data:RollbackTransaction"
+      ],
+      "Resource": "arn:aws:rds:us-east-1:ACCOUNT_ID:cluster:ciroh-docuhub-aurora"
+    },
+    {
+      "Sid": "ReadAuroraSecret",
+      "Effect": "Allow",
+      "Action": ["secretsmanager:GetSecretValue", "secretsmanager:DescribeSecret"],
+      "Resource": "arn:aws:secretsmanager:us-east-1:ACCOUNT_ID:secret:CIROH-DocuHub/*"
+    },
+    {
+      "Sid": "RdsQueryEditorInConsole",
+      "Effect": "Allow",
+      "Action": ["dbqms:*", "secretsmanager:ListSecrets", "rds:Describe*"],
+      "Resource": "*"
+    }
+  ]
+}

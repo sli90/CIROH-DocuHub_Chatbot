@@ -5,6 +5,11 @@ just been given an AWS (sub)account. It takes you from "I can log in to the
 AWS console" to "the chatbot is live on a public URL and answering questions
 from Bedrock + Aurora".
 
+> **Can't use the AWS CLI from your laptop** (no access portal URL, no
+> access keys)? Follow **[AWS_DEPLOYMENT_CLOUDSHELL.md](./AWS_DEPLOYMENT_CLOUDSHELL.md)**
+> instead. It does the same deployment from AWS CloudShell inside the
+> console.
+
 - Architecture and design reasoning: [AWS_ARCHITECTURE.md](./AWS_ARCHITECTURE.md)
 - Guardrail and cost tuning: [GUARDRAILS_AND_COST.md](./GUARDRAILS_AND_COST.md)
 
@@ -435,7 +440,7 @@ a lot.
 
 ### 7.3 Watch it working (console)
 
-- **CloudWatch → Log groups → `/aws/lambda/ciroh-docuhub-ask`** → newest log
+- **CloudWatch → Log groups → `/ciroh-docuhub/ciroh-docuhub-ask`** → newest log
   stream. Each question is a `TELEMETRY {...}` line with route, token usage
   and estimated cost. Errors show up here too.
 - **Lambda → ciroh-docuhub-ask → Monitor** for invocations, duration, errors.
