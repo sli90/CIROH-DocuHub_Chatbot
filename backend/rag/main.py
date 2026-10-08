@@ -10,9 +10,10 @@ from typing import Any, Optional
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
-from ask import answer_question
+from ask import answer_question, answer_question_stream
 
 TELEMETRY_PATH = Path(__file__).resolve().parent / "telemetry.jsonl"
 
@@ -96,6 +97,35 @@ def ask_ai(question: Question):
         }
     )
     return result
+
+
+@app.post("/ask/stream", tags=["AI Assistant"])
+def ask_ai_stream(question: Question):
+    """Same answer as /ask, streamed as newline-delimited JSON events (see
+    ask.answer_question_stream) so the chat can show the answer as it is
+    written. Served by the streaming Lambda behind a Function URL; API
+    Gateway (which serves /ask) buffers responses and cannot stream."""
+
+    def events():
+        for event in answer_question_stream(question.text, mode=question.mode):
+            if event["type"] == "done":
+                _append_telemetry(
+                    {
+                        "event": "ask",
+                        "streamed": True,
+                        "session_id": question.session_id,
+                        "question": question.text,
+                        "route": event.get("route"),
+                        "usage": event.get("usage"),
+                    }
+                )
+            yield json.dumps(event, ensure_ascii=False) + "\n"
+
+    return StreamingResponse(
+        events(),
+        media_type="application/x-ndjson",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
 
 
 @app.post("/telemetry", tags=["Telemetry"])

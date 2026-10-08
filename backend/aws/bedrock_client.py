@@ -15,7 +15,7 @@ from __future__ import annotations
 import json
 import os
 from functools import lru_cache
-from typing import Any, Optional
+from typing import Any, Iterator, Optional
 
 import boto3
 from botocore.config import Config
@@ -94,6 +94,34 @@ def _guardrail_config() -> Optional[dict[str, str]]:
     }
 
 
+def _converse_text_kwargs(
+    user_message: str,
+    system_prompt: Optional[str],
+    max_tokens: int,
+    temperature: float,
+    model_id: Optional[str],
+    guarded_text: Optional[str],
+) -> dict[str, Any]:
+    guardrail = _guardrail_config()
+    if guarded_text is None:
+        content: list[dict[str, Any]] = [{"text": user_message}]
+    elif guardrail:
+        content = [{"text": user_message}, {"guardContent": {"text": {"text": guarded_text}}}]
+    else:
+        content = [{"text": f"{user_message}\n{guarded_text}"}]
+
+    kwargs: dict[str, Any] = {
+        "modelId": model_id or CHAT_MODEL_ID,
+        "messages": [{"role": "user", "content": content}],
+        "inferenceConfig": {"maxTokens": max_tokens, "temperature": temperature},
+    }
+    if system_prompt:
+        kwargs["system"] = [{"text": system_prompt}]
+    if guardrail:
+        kwargs["guardrailConfig"] = guardrail
+    return kwargs
+
+
 def converse_text(
     user_message: str,
     system_prompt: Optional[str] = None,
@@ -114,24 +142,9 @@ def converse_text(
     placeholder and the caller should show a generic refusal, not the
     (potentially partial) model output.
     """
-    guardrail = _guardrail_config()
-    if guarded_text is None:
-        content: list[dict[str, Any]] = [{"text": user_message}]
-    elif guardrail:
-        content = [{"text": user_message}, {"guardContent": {"text": {"text": guarded_text}}}]
-    else:
-        content = [{"text": f"{user_message}\n{guarded_text}"}]
-
-    kwargs: dict[str, Any] = {
-        "modelId": model_id or CHAT_MODEL_ID,
-        "messages": [{"role": "user", "content": content}],
-        "inferenceConfig": {"maxTokens": max_tokens, "temperature": temperature},
-    }
-    if system_prompt:
-        kwargs["system"] = [{"text": system_prompt}]
-    if guardrail:
-        kwargs["guardrailConfig"] = guardrail
-
+    kwargs = _converse_text_kwargs(
+        user_message, system_prompt, max_tokens, temperature, model_id, guarded_text
+    )
     resp = _runtime_client().converse(**kwargs)
     stop_reason = resp.get("stopReason")
     blocked = stop_reason == GUARDRAIL_INTERVENED_STOP_REASON
@@ -140,6 +153,47 @@ def converse_text(
         "text": text,
         "usage": _usage_from_response(resp),
         "blocked": blocked,
+        "stop_reason": stop_reason,
+    }
+
+
+def converse_text_stream(
+    user_message: str,
+    system_prompt: Optional[str] = None,
+    max_tokens: int = 500,
+    temperature: float = 0.2,
+    model_id: Optional[str] = None,
+    guarded_text: Optional[str] = None,
+) -> Iterator[tuple[str, Any]]:
+    """Streaming variant of converse_text, via Bedrock ConverseStream.
+
+    Yields ("delta", text) as the model generates, then exactly one
+    ("done", {"usage", "blocked", "stop_reason"}). The Guardrail runs in
+    async mode so text is not held back while it is scanned; if it
+    intervenes, "done" reports blocked=True and the caller should replace
+    whatever was already shown with a refusal.
+    """
+    kwargs = _converse_text_kwargs(
+        user_message, system_prompt, max_tokens, temperature, model_id, guarded_text
+    )
+    if "guardrailConfig" in kwargs:
+        kwargs["guardrailConfig"] = {**kwargs["guardrailConfig"], "streamProcessingMode": "async"}
+
+    resp = _runtime_client().converse_stream(**kwargs)
+    stop_reason = None
+    usage: dict[str, int] = {"input_tokens": 0, "output_tokens": 0}
+    for event in resp["stream"]:
+        if "contentBlockDelta" in event:
+            text = event["contentBlockDelta"].get("delta", {}).get("text")
+            if text:
+                yield "delta", text
+        elif "messageStop" in event:
+            stop_reason = event["messageStop"].get("stopReason")
+        elif "metadata" in event:
+            usage = _usage_from_response(event["metadata"])
+    yield "done", {
+        "usage": usage,
+        "blocked": stop_reason == GUARDRAIL_INTERVENED_STOP_REASON,
         "stop_reason": stop_reason,
     }
 

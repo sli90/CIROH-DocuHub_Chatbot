@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ChatAPI } from './api';
+import { ChatAPI, StreamUnavailableError } from './api';
 
 // Mock fetch
 (globalThis as any).fetch = vi.fn();
@@ -143,6 +143,79 @@ describe('ChatAPI', () => {
 
       expect(result.success).toBe(false);
       expect(globalThis.fetch).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('streamQuestion', () => {
+    // A fetch Response whose body yields the given strings as chunks.
+    const streamResponse = (chunks: string[]) => ({
+      ok: true,
+      status: 200,
+      body: new ReadableStream<Uint8Array>({
+        start(controller) {
+          const encoder = new TextEncoder();
+          chunks.forEach(chunk => controller.enqueue(encoder.encode(chunk)));
+          controller.close();
+        },
+      }),
+    });
+
+    it('delivers status and text as it arrives, then the full response', async () => {
+      const events = [
+        { type: 'status', message: 'Searching...' },
+        { type: 'ping' },
+        { type: 'delta', text: '# Title\n\nHello ' },
+        { type: 'delta', text: '**world**' },
+        { type: 'done', sources: ['A > B'], links: ['/a'], route: 'bottom_up', usage: { total_tokens: 7 } },
+      ].map(e => JSON.stringify(e) + '\n');
+      // Split one event across two chunks to exercise line buffering.
+      const joined = events.join('');
+      (globalThis.fetch as any).mockResolvedValueOnce(
+        streamResponse([joined.slice(0, 40), joined.slice(40)])
+      );
+
+      const statuses: string[] = [];
+      const deltas: string[] = [];
+      const result = await chatAPI.streamQuestion(
+        { text: 'q' },
+        { onStatus: s => statuses.push(s), onDelta: d => deltas.push(d) }
+      );
+
+      expect(statuses).toEqual(['Searching...']);
+      expect(deltas).toEqual(['# Title\n\nHello ', '**world**']);
+      expect(result.answer).toBe('# Title\n\nHello **world**');
+      expect(result.sources).toBe('A > B');
+      expect(result.links).toBe('/a');
+      expect(result.route).toBe('bottom_up');
+      const [url, init] = (globalThis.fetch as any).mock.calls[0];
+      expect(url).toBe('http://127.0.0.1:8000/ask/stream');
+      expect(init.headers['x-amz-content-sha256']).toMatch(/^[0-9a-f]{64}$/);
+    });
+
+    it('applies a replace event (guardrail retraction)', async () => {
+      (globalThis.fetch as any).mockResolvedValueOnce(
+        streamResponse([
+          JSON.stringify({ type: 'delta', text: 'partial' }) + '\n',
+          JSON.stringify({ type: 'replace', text: 'Refused.' }) + '\n',
+          JSON.stringify({ type: 'done', route: 'both' }) + '\n',
+        ])
+      );
+      const result = await chatAPI.streamQuestion({ text: 'q' });
+      expect(result.answer).toBe('Refused.');
+    });
+
+    it('throws StreamUnavailableError when the endpoint fails before any text', async () => {
+      (globalThis.fetch as any).mockResolvedValueOnce({ ok: false, status: 403, body: null });
+      await expect(chatAPI.streamQuestion({ text: 'q' })).rejects.toBeInstanceOf(
+        StreamUnavailableError
+      );
+    });
+
+    it('reports a cut-off answer when the stream ends without done', async () => {
+      (globalThis.fetch as any).mockResolvedValueOnce(
+        streamResponse([JSON.stringify({ type: 'delta', text: 'half an' }) + '\n'])
+      );
+      await expect(chatAPI.streamQuestion({ text: 'q' })).rejects.toThrow('cut off');
     });
   });
 });

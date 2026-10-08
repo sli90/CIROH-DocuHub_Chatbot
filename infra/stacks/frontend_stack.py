@@ -27,9 +27,10 @@ same-origin relative paths (see docs/AWS_DEPLOYMENT.md).
 
 from __future__ import annotations
 
-from aws_cdk import RemovalPolicy
+from aws_cdk import Aws, Duration, RemovalPolicy
 from aws_cdk import aws_cloudfront as cloudfront
 from aws_cdk import aws_cloudfront_origins as origins
+from aws_cdk import aws_lambda as _lambda
 from aws_cdk import aws_s3 as s3
 from aws_cdk import aws_s3_deployment as s3_deployment
 from aws_cdk import aws_wafv2 as wafv2
@@ -44,6 +45,7 @@ class FrontendStack(Construct):
         *,
         project_name: str,
         api_domain_name: str,
+        stream_function_url: _lambda.IFunctionUrl | None = None,
         frontend_dist_dir: str | None = None,
         removal_policy: RemovalPolicy = RemovalPolicy.RETAIN,
         enable_waf: bool = True,
@@ -82,6 +84,27 @@ class FrontendStack(Construct):
             origin_request_policy=cloudfront.OriginRequestPolicy.ALL_VIEWER_EXCEPT_HOST_HEADER,
         )
 
+        additional_behaviors = {
+            "/ask": api_behavior,
+            "/telemetry": api_behavior,
+        }
+        if stream_function_url is not None:
+            # Streaming answers go straight to the streaming Lambda's
+            # Function URL, signed by Origin Access Control (the URL is
+            # IAM-authenticated, so it is unreachable except through here).
+            # 60s is the most CloudFront allows between bytes without a
+            # quota increase; the backend sends a keep-alive every 10s.
+            additional_behaviors["/ask/stream"] = cloudfront.BehaviorOptions(
+                origin=origins.FunctionUrlOrigin.with_origin_access_control(
+                    stream_function_url,
+                    read_timeout=Duration.seconds(60),
+                ),
+                viewer_protocol_policy=cloudfront.ViewerProtocolPolicy.HTTPS_ONLY,
+                allowed_methods=cloudfront.AllowedMethods.ALLOW_ALL,
+                cache_policy=cloudfront.CachePolicy.CACHING_DISABLED,
+                origin_request_policy=cloudfront.OriginRequestPolicy.ALL_VIEWER_EXCEPT_HOST_HEADER,
+            )
+
         self.distribution = cloudfront.Distribution(
             self,
             "Distribution",
@@ -92,15 +115,29 @@ class FrontendStack(Construct):
                 viewer_protocol_policy=cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
                 cache_policy=cloudfront.CachePolicy.CACHING_OPTIMIZED,
             ),
-            additional_behaviors={
-                "/ask": api_behavior,
-                "/telemetry": api_behavior,
-            },
+            additional_behaviors=additional_behaviors,
             # No SPA error_responses (403/404 -> index.html): the frontend has
             # no client-side routes, and those rewrites are distribution-wide,
             # so they would also turn API/WAF errors on /ask into an HTML page.
             web_acl_id=self.web_acl.attr_arn if self.web_acl else None,
         )
+
+        if stream_function_url is not None:
+            # Function URLs created since Oct 2025 also need lambda:InvokeFunction
+            # (scoped to URL invocations); CDK's OAC origin only grants
+            # lambda:InvokeFunctionUrl.
+            _lambda.CfnPermission(
+                self,
+                "StreamInvokeFromCloudFront",
+                action="lambda:InvokeFunction",
+                function_name=stream_function_url.function_arn,
+                principal="cloudfront.amazonaws.com",
+                source_arn=(
+                    f"arn:{Aws.PARTITION}:cloudfront::{Aws.ACCOUNT_ID}:"
+                    f"distribution/{self.distribution.distribution_id}"
+                ),
+                invoked_via_function_url=True,
+            )
 
         if frontend_dist_dir:
             s3_deployment.BucketDeployment(

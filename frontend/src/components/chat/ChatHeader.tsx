@@ -111,7 +111,8 @@ export function ChatHeader({
               ? 'hover:bg-white/10 text-gray-300'
               : 'hover:bg-black/10 text-gray-600'
           }`}
-          title={expanded ? 'Dock to side panel' : 'Expand chat'}
+          title={expanded ? 'Back to pop-up' : 'Dock and enlarge'}
+          aria-label={expanded ? 'Back to pop-up' : 'Dock and enlarge'}
         >
           {expanded ? (
             <Minimize2 className="h-5 w-5 transition-transform duration-200 hover:scale-110" />

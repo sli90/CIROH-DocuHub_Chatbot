@@ -118,6 +118,7 @@ class CirohStack(cdk.Stack):
             "Frontend",
             project_name=project_name,
             api_domain_name=backend.api_domain_name,
+            stream_function_url=backend.stream_function_url,
             frontend_dist_dir=str(FRONTEND_DIST_DIR) if FRONTEND_DIST_DIR.exists() else None,
             removal_policy=RemovalPolicy.RETAIN if is_prod else RemovalPolicy.DESTROY,
             enable_waf=enable_waf,

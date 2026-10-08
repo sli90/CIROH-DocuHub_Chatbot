@@ -18,6 +18,10 @@ export interface Message {
   questionType?: string;
   routeReason?: string;
   usage?: UsageInfo;
+  /** True while the answer is still being streamed in. */
+  isStreaming?: boolean;
+  /** Progress text shown before the first words arrive ("Searching..."). */
+  status?: string;
 }
 
 export interface ChatPanelProps {

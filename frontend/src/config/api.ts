@@ -10,7 +10,13 @@ export const API_CONFIG = {
   // API endpoints
   ENDPOINTS: {
     CHAT: '/ask',
+    // Same answer, streamed as newline-delimited JSON while it is written.
+    CHAT_STREAM: '/ask/stream',
   },
+
+  // Give up on a stream that has sent nothing (not even a keep-alive, which
+  // the server sends every 10s) for this long.
+  STREAM_IDLE_TIMEOUT: 70000,
   
   // Hybrid RAG + gpt-5.x often exceeds 30s. Do not retry a timed-out ask.
   TIMEOUT: 180000,

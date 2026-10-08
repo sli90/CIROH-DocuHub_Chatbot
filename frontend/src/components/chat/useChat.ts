@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Message } from './types';
-import { chatAPI } from '../../services/api';
+import { chatAPI, ChatResponse, StreamUnavailableError } from '../../services/api';
 import { trackEvent } from '../../services/telemetry';
 
 const MESSAGES_KEY = 'ciroh_chat_messages';
@@ -10,7 +10,10 @@ function loadMessages(): Message[] {
     const raw = localStorage.getItem(MESSAGES_KEY);
     if (!raw) return [];
     const parsed = JSON.parse(raw) as Array<Omit<Message, 'timestamp'> & { timestamp: string }>;
-    return parsed.map(msg => ({ ...msg, timestamp: new Date(msg.timestamp) }));
+    return parsed
+      // Drop an answer that was still streaming when the page was closed.
+      .filter(msg => !(msg.isStreaming && !msg.text))
+      .map(msg => ({ ...msg, isStreaming: false, status: undefined, timestamp: new Date(msg.timestamp) }));
   } catch {
     return [];
   }
@@ -55,7 +58,8 @@ export function useChat() {
     const timeoutId = setTimeout(scrollToLastBotMessage, 100);
     
     return () => clearTimeout(timeoutId);
-  }, [messages, isBotResponding]);
+    // Not on every streamed word: that would yank the view while reading.
+  }, [messages.length, isBotResponding]);
 
   useEffect(() => {
     saveMessages(messages);
@@ -84,46 +88,73 @@ export function useChat() {
     setLastError(null);
     trackEvent('question_asked', { length: text.trim().length });
 
-    try {
-      // Send question to API
-      const response = await chatAPI.sendQuestion({ text: text.trim() });
-      
-      const botMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        text: response.answer,
+    const botId = (Date.now() + 1).toString();
+    const updateBot = (patch: (msg: Message) => Partial<Message>) =>
+      setMessages(prev => prev.map(msg => (msg.id === botId ? { ...msg, ...patch(msg) } : msg)));
+
+    setMessages(prev => [
+      ...prev,
+      {
+        id: botId,
+        text: '',
         isBot: true,
         timestamp: new Date(),
+        isStreaming: true,
+        status: 'Thinking...',
+      },
+    ]);
+
+    let streamed = true;
+    let response: ChatResponse;
+    try {
+      try {
+        response = await chatAPI.streamQuestion(
+          { text: text.trim() },
+          {
+            onStatus: status => updateBot(() => ({ status })),
+            onDelta: delta => updateBot(msg => ({ text: msg.text + delta, status: undefined })),
+            onReplace: replacement => updateBot(() => ({ text: replacement, status: undefined })),
+          }
+        );
+      } catch (error) {
+        if (!(error instanceof StreamUnavailableError)) throw error;
+        // Streaming endpoint unreachable: fall back to the buffered /ask.
+        console.warn('Streaming unavailable, falling back to /ask:', error.message);
+        streamed = false;
+        response = await chatAPI.sendQuestion({ text: text.trim() });
+      }
+
+      updateBot(() => ({
+        text: response.answer,
+        isStreaming: false,
+        status: undefined,
         sources: response.sources,
         links: response.links,
         route: response.route,
         questionType: response.question_type,
         routeReason: response.route_reason,
         usage: response.usage,
-      };
-      setMessages(prev => [...prev, botMessage]);
+      }));
       trackEvent('question_answered', {
         route: response.route,
         estimated_usd: response.usage?.estimated_usd,
         total_tokens: response.usage?.total_tokens,
         success: response.success,
+        streamed,
       });
-      
-      // Clear any previous errors on successful response
-      if (response.success) {
-        setLastError(null);
-      } else {
-        setLastError(response.error || 'Unknown error occurred');
-      }
+      setLastError(response.success ? null : response.error || 'Unknown error occurred');
     } catch (error) {
       console.error('Error sending message:', error);
-      const errorMessage = 'Sorry, I encountered an error while processing your question. Please try again later.';
-      const errorMsg: Message = {
-        id: (Date.now() + 1).toString(),
-        text: errorMessage,
-        isBot: true,
-        timestamp: new Date(),
-      };
-      setMessages(prev => [...prev, errorMsg]);
+      const errorMessage =
+        error instanceof Error && error.message.startsWith('The answer was cut off')
+          ? error.message
+          : 'Sorry, I encountered an error while processing your question. Please try again later.';
+      // Keep whatever was already streamed and append the error under it.
+      updateBot(msg => ({
+        text: msg.text ? `${msg.text}\n\n_${errorMessage}_` : errorMessage,
+        isStreaming: false,
+        status: undefined,
+      }));
       setLastError(error instanceof Error ? error.message : 'Unknown error');
     } finally {
       setIsBotResponding(false);

@@ -1,4 +1,5 @@
-"""Lambda (FastAPI + Mangum) behind API Gateway HTTP API.
+"""Lambda (FastAPI + Mangum) behind API Gateway HTTP API, plus a streaming
+twin of it behind a Lambda Function URL for POST /ask/stream.
 
 AWS WAF sits in front of this on the CloudFront distribution
 (frontend_stack.py), not here: WAF cannot be attached to API Gateway HTTP
@@ -18,11 +19,10 @@ already accounts for slow answers (frontend/src/config/api.ts sets a
 Claude Haiku 4.5 should comfortably answer within 29s (it is the
 plan's "fast, cheap" pick, Section 6.3), but this must be validated against
 real hybrid-route latency before cutover (see docs/AWS_DEPLOYMENT.md,
-"Known limitations"). If it is not fast enough, the documented fallback is
-a Lambda Function URL behind CloudFront + WAF instead of API Gateway,
-since Function URLs allow the full 15-minute Lambda timeout - a bigger
-change than swapping one construct here, so it is not implemented
-speculatively.
+"Known limitations"). The chat now uses the streaming path instead: a
+Lambda Function URL behind CloudFront + WAF (no 29s cap, and the answer is
+shown word by word as it is generated). /ask stays as the non-streaming
+fallback the frontend uses if streaming fails.
 """
 
 from __future__ import annotations
@@ -34,7 +34,7 @@ from pathlib import Path
 from typing import Optional
 
 import jsii
-from aws_cdk import BundlingOptions, Duration, Fn, ILocalBundling, RemovalPolicy
+from aws_cdk import BundlingOptions, Duration, Fn, ILocalBundling, RemovalPolicy, Stack
 from aws_cdk import aws_apigatewayv2 as apigwv2
 from aws_cdk import aws_apigatewayv2_integrations as apigwv2_integrations
 from aws_cdk import aws_iam as iam
@@ -67,13 +67,22 @@ _ASSET_EXCLUDE = [
     "node_modules",
 ]
 
+# Startup script for the streaming function: the Lambda Web Adapter layer
+# runs it, then forwards each invocation to uvicorn on $PORT and streams
+# the HTTP response back through the Function URL.
+_RUN_SH = """#!/bin/sh
+cd "$LAMBDA_TASK_ROOT"
+exec python3 -m uvicorn --app-dir rag --host 127.0.0.1 --port "$PORT" main:app
+"""
+
 # Docker fallback, only used if the local build below fails.
 _BUNDLE_COMMAND = [
     "bash",
     "-c",
     (
         "pip install --no-cache-dir -r requirements-lambda.txt -t /asset-output "
-        "&& for p in rag database aws; do mkdir -p /asset-output/$p && cp $p/*.py /asset-output/$p/; done"
+        "&& for p in rag database aws; do mkdir -p /asset-output/$p && cp $p/*.py /asset-output/$p/; done "
+        f"&& printf '%s' '{_RUN_SH}' > /asset-output/run.sh && chmod 755 /asset-output/run.sh"
     ),
 ]
 
@@ -113,6 +122,9 @@ class _LocalPipBundler:
             dest.mkdir(parents=True, exist_ok=True)
             for py_file in (self.source_dir / package).glob("*.py"):
                 shutil.copy2(py_file, dest / py_file.name)
+        run_sh = out / "run.sh"
+        run_sh.write_bytes(_RUN_SH.encode())
+        run_sh.chmod(0o755)
         return True
 
 
@@ -134,6 +146,7 @@ class BackendStack(Construct):
         bedrock_embed_model_id: str = "amazon.titan-embed-text-v2:0",
         bedrock_embed_dimensions: int = 1024,
         retrieval_similarity_threshold: float = 0.7,
+        web_adapter_layer_version: int = 25,
     ) -> None:
         super().__init__(scope, construct_id)
 
@@ -155,6 +168,16 @@ class BackendStack(Construct):
             environment["BEDROCK_GUARDRAIL_VERSION"] = guardrail_version or "DRAFT"
 
         runtime = _lambda.Runtime.PYTHON_3_12
+        code = _lambda.Code.from_asset(
+            backend_source_dir,
+            exclude=_ASSET_EXCLUDE,
+            bundling=BundlingOptions(
+                image=runtime.bundling_image,
+                command=_BUNDLE_COMMAND,
+                local=_LocalPipBundler(backend_source_dir),
+            ),
+        )
+
         function_name = f"{project_name}-ask".lower()
         self.function = _lambda.Function(
             self,
@@ -162,15 +185,7 @@ class BackendStack(Construct):
             function_name=function_name,
             runtime=runtime,
             handler="rag.lambda_handler.handler",
-            code=_lambda.Code.from_asset(
-                backend_source_dir,
-                exclude=_ASSET_EXCLUDE,
-                bundling=BundlingOptions(
-                    image=runtime.bundling_image,
-                    command=_BUNDLE_COMMAND,
-                    local=_LocalPipBundler(backend_source_dir),
-                ),
-            ),
+            code=code,
             timeout=Duration.seconds(28),  # stay under API Gateway's fixed 29s cap
             memory_size=1024,
             environment=environment,
@@ -182,33 +197,87 @@ class BackendStack(Construct):
             ),
         )
 
+        # Streaming answers (POST /ask/stream). API Gateway buffers whole
+        # responses, so this second function sits behind a Function URL in
+        # RESPONSE_STREAM mode (reached only through CloudFront + WAF, see
+        # frontend_stack.py). Python has no native Lambda response
+        # streaming, so the AWS Lambda Web Adapter layer runs the same
+        # FastAPI app under uvicorn (run.sh) and streams its output. No 29s
+        # cap here, so a cold database is waited out instead of refused.
+        stream_function_name = f"{project_name}-ask-stream".lower()
+        self.stream_function = _lambda.Function(
+            self,
+            "AskStreamFunction",
+            function_name=stream_function_name,
+            runtime=runtime,
+            handler="run.sh",
+            code=code,
+            timeout=Duration.seconds(120),
+            memory_size=1024,
+            environment={
+                **environment,
+                "AWS_LAMBDA_EXEC_WRAPPER": "/opt/bootstrap",
+                "AWS_LWA_INVOKE_MODE": "response_stream",
+                "AWS_LWA_READINESS_CHECK_PATH": "/",
+                "PORT": "8080",
+                "STREAM_DB_WAIT_BUDGET_SECONDS": "45",
+            },
+            layers=[
+                _lambda.LayerVersion.from_layer_version_arn(
+                    self,
+                    "WebAdapterLayer",
+                    f"arn:aws:lambda:{Stack.of(self).region}:753240598075:layer:"
+                    f"LambdaAdapterLayerX86:{web_adapter_layer_version}",
+                )
+            ],
+            log_group=logs.LogGroup(
+                self,
+                "AskStreamFunctionLogs",
+                log_group_name=f"/ciroh-docuhub/{stream_function_name}",
+                removal_policy=RemovalPolicy.DESTROY,
+                retention=logs.RetentionDays.ONE_MONTH,
+            ),
+        )
+        # IAM-authenticated: only CloudFront (via Origin Access Control) can
+        # call it, so WAF's rate limit cannot be bypassed.
+        self.stream_function_url = self.stream_function.add_function_url(
+            auth_type=_lambda.FunctionUrlAuthType.AWS_IAM,
+            invoke_mode=_lambda.InvokeMode.RESPONSE_STREAM,
+        )
+
         # Least-privilege IAM (Section 9.3). Bedrock is scoped by action, not
         # resource: Claude Haiku 4.5 runs through a cross-region inference
         # profile, which needs InvokeModel on the profile *and* on the
         # foundation model in every region it may route to. Converse is
-        # authorized by bedrock:InvokeModel (there is no separate action).
+        # authorized by bedrock:InvokeModel (there is no separate action;
+        # ConverseStream needs InvokeModelWithResponseStream).
         # Data API and Secrets Manager access is scoped to this cluster/secret.
-        self.function.add_to_role_policy(
-            iam.PolicyStatement(
-                actions=["bedrock:InvokeModel", "bedrock:ApplyGuardrail"],
-                resources=["*"],
+        for fn in (self.function, self.stream_function):
+            fn.add_to_role_policy(
+                iam.PolicyStatement(
+                    actions=[
+                        "bedrock:InvokeModel",
+                        "bedrock:InvokeModelWithResponseStream",
+                        "bedrock:ApplyGuardrail",
+                    ],
+                    resources=["*"],
+                )
             )
-        )
-        self.function.add_to_role_policy(
-            iam.PolicyStatement(
-                actions=[
-                    "rds-data:ExecuteStatement",
-                    "rds-data:BatchExecuteStatement",
-                ],
-                resources=[aurora_cluster_arn],
+            fn.add_to_role_policy(
+                iam.PolicyStatement(
+                    actions=[
+                        "rds-data:ExecuteStatement",
+                        "rds-data:BatchExecuteStatement",
+                    ],
+                    resources=[aurora_cluster_arn],
+                )
             )
-        )
-        self.function.add_to_role_policy(
-            iam.PolicyStatement(
-                actions=["secretsmanager:GetSecretValue"],
-                resources=[aurora_secret_arn],
+            fn.add_to_role_policy(
+                iam.PolicyStatement(
+                    actions=["secretsmanager:GetSecretValue"],
+                    resources=[aurora_secret_arn],
+                )
             )
-        )
 
         self.http_api = apigwv2.HttpApi(
             self,
