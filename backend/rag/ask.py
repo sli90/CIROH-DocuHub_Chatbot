@@ -18,8 +18,10 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import queue
 import re
 import sys
+import threading
 from collections import defaultdict
 from pathlib import Path
 from statistics import median
@@ -791,6 +793,32 @@ def _set_db_wait_budget(seconds):
 
 
 def _answer_question(question, mode, model, meter):
+    final, ctx = _prepare_answer(question, mode, model, meter)
+    if final is not None:
+        return final
+    answer = get_rag_answer(question, ctx["blocks"], meter=meter, model=model)
+    return _answer_response(meter, ctx, answer)
+
+
+def _answer_response(meter, ctx, answer):
+    route = ctx["route"]
+    return {
+        "answer": answer,
+        "sources": [s["title"] for s in ctx["sources"]],
+        "links": [s["url"] for s in ctx["sources"]],
+        "route": route,
+        "question_type": QUESTION_TYPE_LABELS.get(route, "Overview Question / Specific Question"),
+        "route_reason": ctx["route_info"].get("reason") or "",
+        "usage": meter.summary(),
+        "success": True,
+    }
+
+
+def _prepare_answer(question, mode, model, meter):
+    """Screening, routing and retrieval: everything before the answer is
+    generated. Returns (response, None) when the question is answered
+    without the LLM (rejected), else (None, ctx) with the retrieved
+    context for get_rag_answer / stream_rag_answer."""
 
     # Cheapest possible rejection: a Bedrock Guardrails denied-topics check
     # against the raw question, before the embedding call or any DB
@@ -801,7 +829,7 @@ def _answer_question(question, mode, model, meter):
 
         screen = apply_guardrail_text(question)
         if screen["blocked"]:
-            return _rejected_response(meter, "blocked by Bedrock Guardrails (denied topic)")
+            return _rejected_response(meter, "blocked by Bedrock Guardrails (denied topic)"), None
 
     embedding = get_embedding(question, meter=meter)
 
@@ -824,25 +852,139 @@ def _answer_question(question, mode, model, meter):
     # call entirely rather than let an off-topic question reach the LLM.
     distances = [meta.get("min_distance") for _b, _s, meta in parts if meta.get("min_distance") is not None]
     if distances and min(distances) > RETRIEVAL_SIMILARITY_THRESHOLD:
-        return _rejected_response(meter, "no corpus match above the retrieval-gate similarity threshold")
+        return _rejected_response(meter, "no corpus match above the retrieval-gate similarity threshold"), None
 
     if route == "both":
         blocks, sources = merge_retrieval(parts)
     else:
         blocks, sources, _meta = parts[0] if parts else ([], [], {})
 
-    answer = get_rag_answer(question, blocks, meter=meter, model=model)
-    usage = meter.summary()
-    return {
-        "answer": answer,
-        "sources": [s["title"] for s in sources],
-        "links": [s["url"] for s in sources],
-        "route": route,
-        "question_type": QUESTION_TYPE_LABELS.get(route, "Overview Question / Specific Question"),
-        "route_reason": route_info.get("reason") or "",
-        "usage": usage,
-        "success": True,
-    }
+    return None, {"blocks": blocks, "sources": sources, "route": route, "route_info": route_info}
+
+
+# ---------------------------------------------------------------------------
+# Streaming answers (POST /ask/stream)
+# ---------------------------------------------------------------------------
+
+# The streaming endpoint has no API Gateway 29s cap, so a cold database can
+# be waited out (with a status message) instead of answering DB_WAKING_MESSAGE.
+STREAM_DB_WAIT_BUDGET_SECONDS = float(os.getenv("STREAM_DB_WAIT_BUDGET_SECONDS", "45"))
+STREAM_KEEPALIVE_SECONDS = 10
+STREAM_ERROR_MESSAGE = "Sorry, something went wrong while answering. Please try again."
+
+
+def stream_rag_answer(question, context_blocks, meter=None, model=None):
+    """Streaming counterpart of get_rag_answer. Yields ("delta", text) as the
+    answer is generated, or ("replace", text) if the Guardrail retracts it."""
+    if not context_blocks or LLM_PROVIDER != "bedrock":
+        yield "delta", get_rag_answer(question, context_blocks, meter=meter, model=model)
+        return
+
+    from aws.bedrock_client import converse_text_stream
+
+    context_str = "\n\n==============================\n\n".join(context_blocks)
+    for kind, value in converse_text_stream(
+        f"<context>\n{context_str}\n</context>\n\nQUESTION:",
+        guarded_text=question,
+        system_prompt=SYSTEM_MSG,
+        max_tokens=MAX_ANSWER_TOKENS,
+        temperature=0.2,
+    ):
+        if kind == "delta":
+            yield "delta", value
+            continue
+        if meter is not None:
+            meter.add_llm(value["usage"], label="answer")
+        if value["blocked"]:
+            yield "replace", OFF_TOPIC_MESSAGE
+
+
+def _status(message):
+    return {"type": "status", "message": message}
+
+
+def _emit_response(emit, response):
+    emit({"type": "delta", "text": response["answer"]})
+    emit({"type": "done", **{k: v for k, v in response.items() if k != "answer"}})
+
+
+def _set_db_resume_listener(listener):
+    if os.getenv("DB_BACKEND", "").lower() == "rds_data_api":
+        from database.rds_data_client import set_resume_listener
+
+        set_resume_listener(listener)
+
+
+def _stream_answer(question, mode, model, emit):
+    meter = UsageMeter()
+    if is_help_request(question):
+        _emit_response(emit, _fixed_response(meter, "help", HELP_MESSAGE, "greeting or capability question"))
+        return
+
+    emit(_status("Searching the CIROH knowledge base..."))
+    waking_reported = []
+
+    def on_resume_wait():
+        if not waking_reported:
+            waking_reported.append(True)
+            emit(_status("Waking up the knowledge base. The first question after a quiet period takes about 20 seconds..."))
+
+    _start_waking_database()
+    _set_db_wait_budget(STREAM_DB_WAIT_BUDGET_SECONDS)
+    _set_db_resume_listener(on_resume_wait)
+    try:
+        final, ctx = _prepare_answer(question, mode, model, meter)
+    except Exception as e:  # noqa: BLE001 - only the DB-waking case is handled
+        if type(e).__name__ != "DatabaseUnavailableError":
+            raise
+        final, ctx = _fixed_response(meter, "unavailable", DB_WAKING_MESSAGE, "database resuming"), None
+    finally:
+        _set_db_wait_budget(None)
+        _set_db_resume_listener(None)
+
+    if final is not None:
+        _emit_response(emit, final)
+        return
+
+    emit(_status("Writing the answer..."))
+    for kind, text in stream_rag_answer(question, ctx["blocks"], meter=meter, model=model):
+        emit({"type": kind, "text": text})
+    response = _answer_response(meter, ctx, answer=None)
+    emit({"type": "done", **{k: v for k, v in response.items() if k != "answer"}})
+
+
+def answer_question_stream(question, mode="hybrid", model=None):
+    """Generator of event dicts for the streaming endpoint, in order:
+    {"type": "status", "message"} while searching, {"type": "delta", "text"}
+    pieces of the answer, an optional {"type": "replace", "text"} if the
+    answer was retracted, then {"type": "done", ...} with the same fields as
+    answer_question (minus "answer"), or {"type": "error", "message"}.
+
+    The pipeline runs on a worker thread so this generator can send
+    {"type": "ping"} keep-alives while it waits (e.g. for Aurora to resume);
+    CloudFront drops an origin connection that is silent for 30s.
+    """
+    events = queue.Queue()
+
+    def work():
+        try:
+            _stream_answer(question, mode, model or DEFAULT_MODEL, events.put)
+        except Exception as e:  # noqa: BLE001 - reported to the client, logged here
+            print(f"answer_question_stream failed: {e!r}")
+            events.put({"type": "error", "message": STREAM_ERROR_MESSAGE})
+        finally:
+            events.put(None)
+
+    threading.Thread(target=work, daemon=True).start()
+    while True:
+        try:
+            event = events.get(timeout=STREAM_KEEPALIVE_SECONDS)
+        except queue.Empty:
+            yield {"type": "ping"}
+            continue
+        if event is None:
+            return
+        yield event
 
 
 def main():

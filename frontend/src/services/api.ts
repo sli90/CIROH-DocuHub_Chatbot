@@ -18,6 +18,51 @@ export interface ChatResponse {
   usage?: UsageInfo;
 }
 
+export interface StreamHandlers {
+  onStatus?: (message: string) => void;
+  onDelta?: (text: string) => void;
+  onReplace?: (text: string) => void;
+}
+
+/** Thrown when streaming fails before any answer text arrived, so the
+ * caller can safely fall back to the non-streaming /ask endpoint. */
+export class StreamUnavailableError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'StreamUnavailableError';
+  }
+}
+
+interface StreamEvent {
+  type: 'status' | 'delta' | 'replace' | 'done' | 'error' | 'ping';
+  message?: string;
+  text?: string;
+  sources?: string | string[];
+  links?: string | string[];
+  route?: string;
+  question_type?: string;
+  route_reason?: string;
+  usage?: UsageInfo;
+}
+
+// The API returns sources/links as arrays (or, from older backends, a
+// quoted comma-separated string); the UI wants newline-separated text.
+function toLines(value?: string | string[]): string {
+  if (!value) return '';
+  if (Array.isArray(value)) return value.join('\n');
+  return value.replace(/",\s*"/g, '"\n"').replace(/^"|"$/g, '');
+}
+
+// CloudFront signs requests to the streaming Lambda (Origin Access
+// Control), and AWS requires the viewer to supply the SHA-256 of a POST
+// body for that signature.
+async function sha256Hex(text: string): Promise<string> {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(digest))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
 export function questionTypeLabel(route?: string, questionType?: string): string {
   if (questionType) return questionType;
   if (route === 'top_down') return 'Overview Question';
@@ -85,6 +130,112 @@ export class ChatAPI {
     throw lastError!;
   }
 
+  /**
+   * Ask a question and receive the answer as it is generated. Resolves with
+   * the complete response once the stream ends. Throws
+   * StreamUnavailableError if nothing of the answer arrived (the caller
+   * should fall back to sendQuestion).
+   */
+  async streamQuestion(request: ChatRequest, handlers: StreamHandlers = {}): Promise<ChatResponse> {
+    const body = JSON.stringify({ ...request, session_id: getSessionId(), mode: 'hybrid' });
+    const controller = new AbortController();
+    let idleTimer = setTimeout(() => controller.abort(), API_CONFIG.STREAM_IDLE_TIMEOUT);
+    const resetIdle = () => {
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(() => controller.abort(), API_CONFIG.STREAM_IDLE_TIMEOUT);
+    };
+
+    let answer = '';
+    let receivedText = false;
+    try {
+      let response: Response;
+      try {
+        response = await fetch(getApiUrl(API_CONFIG.ENDPOINTS.CHAT_STREAM), {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-amz-content-sha256': await sha256Hex(body),
+          },
+          body,
+          signal: controller.signal,
+        });
+      } catch (error) {
+        throw new StreamUnavailableError(error instanceof Error ? error.message : 'fetch failed');
+      }
+      if (!response.ok || !response.body) {
+        throw new StreamUnavailableError(`HTTP error! status: ${response.status}`);
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      let done: StreamEvent | null = null;
+
+      const handle = (event: StreamEvent) => {
+        switch (event.type) {
+          case 'status':
+            if (event.message) handlers.onStatus?.(event.message);
+            break;
+          case 'delta':
+            receivedText = true;
+            answer += event.text ?? '';
+            handlers.onDelta?.(event.text ?? '');
+            break;
+          case 'replace':
+            receivedText = true;
+            answer = event.text ?? '';
+            handlers.onReplace?.(answer);
+            break;
+          case 'error':
+            throw new Error(event.message || 'Stream error');
+          case 'done':
+            done = event;
+            break;
+        }
+      };
+
+      for (;;) {
+        let chunk: ReadableStreamReadResult<Uint8Array>;
+        try {
+          chunk = await reader.read();
+        } catch (error) {
+          if (!receivedText) {
+            throw new StreamUnavailableError(error instanceof Error ? error.message : 'stream failed');
+          }
+          throw error;
+        }
+        resetIdle();
+        if (chunk.done) break;
+        buffer += decoder.decode(chunk.value, { stream: true });
+        let newline: number;
+        while ((newline = buffer.indexOf('\n')) >= 0) {
+          const line = buffer.slice(0, newline).trim();
+          buffer = buffer.slice(newline + 1);
+          if (line) handle(JSON.parse(line) as StreamEvent);
+        }
+      }
+      if (buffer.trim()) handle(JSON.parse(buffer) as StreamEvent);
+
+      const final = done as StreamEvent | null;
+      if (!final) {
+        if (!receivedText) throw new StreamUnavailableError('stream ended without an answer');
+        throw new Error('The answer was cut off. Please try again.');
+      }
+      return {
+        answer: answer || 'No response received',
+        sources: toLines(final.sources),
+        links: toLines(final.links),
+        success: true,
+        route: final.route,
+        question_type: final.question_type,
+        route_reason: final.route_reason,
+        usage: final.usage,
+      };
+    } finally {
+      clearTimeout(idleTimer);
+    }
+  }
+
   async sendQuestion(request: ChatRequest): Promise<ChatResponse> {
     try {
       const data = await this.retryRequest(async () => {
@@ -112,30 +263,10 @@ export class ChatAPI {
         );
       });
 
-      // Handle sources as either string or array
-      let formattedSources = '';
-      if (data.sources) {
-        if (Array.isArray(data.sources)) {
-          formattedSources = data.sources.join('\n');
-        } else {
-          formattedSources = data.sources.replace(/",\s*"/g, '"\n"').replace(/^"|"$/g, '');
-        }
-      }
-
-      // Handle links as either string or array
-      let formattedLinks = '';
-      if (data.links) {
-        if (Array.isArray(data.links)) {
-          formattedLinks = data.links.join('\n');
-        } else {
-          formattedLinks = data.links.replace(/",\s*"/g, '"\n"').replace(/^"|"$/g, '');
-        }
-      }
-
       return {
         answer: data.answer || 'No response received',
-        sources: formattedSources,
-        links: formattedLinks,
+        sources: toLines(data.sources),
+        links: toLines(data.links),
         success: true,
         route: data.route,
         question_type: data.question_type,

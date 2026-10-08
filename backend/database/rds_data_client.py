@@ -31,7 +31,7 @@ import os
 import re
 import time
 from functools import lru_cache
-from typing import Any, Optional
+from typing import Any, Callable, Optional
 
 import boto3
 from botocore.config import Config
@@ -52,6 +52,16 @@ _request_deadline: Optional[float] = None
 def set_request_deadline(seconds_from_now: Optional[float]) -> None:
     global _request_deadline
     _request_deadline = None if seconds_from_now is None else time.monotonic() + seconds_from_now
+
+
+# Called (with no arguments) each time a query waits on a resuming cluster,
+# so the streaming /ask path can tell the user why the answer is slow.
+_resume_listener: Optional[Callable[[], None]] = None
+
+
+def set_resume_listener(listener: Optional[Callable[[], None]]) -> None:
+    global _resume_listener
+    _resume_listener = listener
 
 
 @lru_cache(maxsize=None)
@@ -114,6 +124,8 @@ class RdsDataApiManager:
             except Exception as e:  # noqa: BLE001 - re-raised unless it is a resume
                 if not _is_resuming(e) or time.monotonic() >= deadline:
                     raise
+                if _resume_listener is not None:
+                    _resume_listener()
                 time.sleep(2)
 
     def ping(self, wait_seconds: float = 0) -> bool:

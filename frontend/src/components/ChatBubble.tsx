@@ -41,10 +41,15 @@ export function ChatBubble() {
           sandbox="allow-same-origin allow-scripts allow-forms"
         />
 
+        {/* One element for both modes so the conversation survives toggling:
+            a floating pop-up by default, docked beside the page when expanded. */}
         {isOpen && (
           <aside
-            className="h-full flex-shrink-0"
-            style={{ width: expanded ? 'min(50vw, 720px)' : '400px' }}
+            className={
+              expanded
+                ? 'h-full flex-shrink-0 w-full sm:w-[min(55vw,760px)] shadow-xl'
+                : 'fixed z-50 inset-0 sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[400px] sm:h-[min(640px,calc(100vh-3rem))] sm:rounded-2xl overflow-hidden shadow-2xl'
+            }
             aria-label="CIROH AI chat panel"
           >
             <ChatPanel

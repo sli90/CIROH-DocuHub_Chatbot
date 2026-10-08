@@ -35,7 +35,9 @@ export function ChatPanel({
 
   return (
     <div
-      className={`h-full w-full flex flex-col overflow-hidden border-l ${
+      className={`h-full w-full flex flex-col overflow-hidden ${
+        expanded ? 'border-l' : 'border sm:rounded-2xl'
+      } ${
         isDarkMode
           ? 'bg-gray-900 border-gray-700 text-gray-100'
           : 'bg-white border-gray-200 text-gray-900'

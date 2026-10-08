@@ -2,8 +2,35 @@
 
 import { Bot, User } from 'lucide-react';
 import { MessageListProps } from './types';
-import { formatUrlsAsHtml, formatSourcesAsHtml } from '../../utils';
+import { formatSourcesAsHtml } from '../../utils';
+import { MarkdownMessage } from './MarkdownMessage';
 import { questionTypeLabel } from '../../services/api';
+
+function StreamingStatus({
+  status,
+  isDarkMode,
+}: {
+  status?: string;
+  isDarkMode: boolean;
+}) {
+  const dot = `h-1.5 w-1.5 rounded-full animate-bounce ${
+    isDarkMode ? 'bg-gray-300' : 'bg-gray-400'
+  }`;
+  return (
+    <div className="flex items-center gap-2 text-sm" role="status">
+      <div className="flex items-center space-x-1">
+        <div className={dot} />
+        <div className={dot} style={{ animationDelay: '0.1s' }} />
+        <div className={dot} style={{ animationDelay: '0.2s' }} />
+      </div>
+      {status && (
+        <span className={isDarkMode ? 'text-gray-300' : 'text-gray-500'}>
+          {status}
+        </span>
+      )}
+    </div>
+  );
+}
 
 export function MessageList({
   messages,
@@ -49,7 +76,7 @@ export function MessageList({
             {/* Message Bubble & Content */}
             {/* --- CHANGED: Reduced max-width and moved bubble "tail" to the top --- */}
             <div
-              className={`max-w-[75%] p-3 rounded-xl message-container ${
+              className={`${isUser ? 'max-w-[75%]' : 'max-w-[85%]'} p-3 rounded-xl message-container ${
                 isUser
                   ? 'bg-primary-600 text-white rounded-tr-none'
                   : isDarkMode
@@ -57,13 +84,29 @@ export function MessageList({
                     : 'bg-gray-100 text-gray-900 rounded-tl-none'
               }`}
             >
-              <div
-                className="text-sm whitespace-pre-line chat-message"
-                dangerouslySetInnerHTML={{
-                  __html: formatUrlsAsHtml(message.text),
-                }}
-              />
+              {isUser ? (
+                <div className="text-sm whitespace-pre-line chat-message">
+                  {message.text}
+                </div>
+              ) : message.isStreaming && !message.text ? (
+                <StreamingStatus
+                  status={message.status}
+                  isDarkMode={isDarkMode}
+                />
+              ) : (
+                <div
+                  className={`text-sm chat-message ${
+                    message.isStreaming ? 'chat-streaming' : ''
+                  }`}
+                >
+                  <MarkdownMessage
+                    text={message.text}
+                    isDarkMode={isDarkMode}
+                  />
+                </div>
+              )}
               {message.isBot &&
+                !message.isStreaming &&
                 (message.sources || message.route || message.usage) &&
                 !message.text
                   .toLowerCase()
@@ -126,7 +169,7 @@ export function MessageList({
         );
       })}
 
-      {isBotResponding && (
+      {isBotResponding && !messages[messages.length - 1]?.isStreaming && (
         <div className="flex items-start gap-3">
           <div
             className={`h-8 w-8 rounded-full flex items-center justify-center flex-shrink-0 ${
