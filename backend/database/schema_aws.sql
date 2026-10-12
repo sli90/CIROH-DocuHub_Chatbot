@@ -65,3 +65,19 @@ CREATE TABLE IF NOT EXISTS TBLChunks (
 CREATE INDEX IF NOT EXISTS idx_chunk_artifact ON TBLChunks(idArtifact);
 CREATE INDEX IF NOT EXISTS idx_chunk_type ON TBLChunks(idChunkType);
 CREATE INDEX IF NOT EXISTS idx_chunk_embedding ON TBLChunks USING hnsw (embedding vector_cosine_ops);
+
+-- Chat usage: per-email daily question limit and usage metrics
+-- (backend/rag/quota.py creates these on first use as well).
+CREATE TABLE IF NOT EXISTS chat_users (
+    email TEXT PRIMARY KEY,
+    first_seen TIMESTAMPTZ NOT NULL DEFAULT now(),
+    last_seen TIMESTAMPTZ NOT NULL DEFAULT now(),
+    total_questions INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS chat_usage (
+    email TEXT NOT NULL,
+    usage_date DATE NOT NULL,
+    questions INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (email, usage_date)
+);

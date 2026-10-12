@@ -1,9 +1,34 @@
 import { useState, useEffect, useRef } from 'react';
-import { Message } from './types';
+import { Message, QuotaInfo } from './types';
 import { chatAPI, ChatResponse, StreamUnavailableError } from '../../services/api';
 import { trackEvent } from '../../services/telemetry';
+import { clearEmail, getEmail, setEmail as storeEmail } from '../../services/user';
 
 const MESSAGES_KEY = 'ciroh_chat_messages';
+const QUOTA_KEY = 'ciroh_chat_quota';
+
+// Remembered so "N questions left today" survives a reload; ignored once the
+// day changes (the server resets counts at midnight US Central).
+function todayKey(): string {
+  return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
+}
+
+function loadQuota(): QuotaInfo | null {
+  try {
+    const saved = JSON.parse(localStorage.getItem(QUOTA_KEY) || 'null');
+    return saved && saved.day === todayKey() ? (saved.quota as QuotaInfo) : null;
+  } catch {
+    return null;
+  }
+}
+
+function saveQuota(quota: QuotaInfo): void {
+  try {
+    localStorage.setItem(QUOTA_KEY, JSON.stringify({ day: todayKey(), quota }));
+  } catch {
+    // Ignore.
+  }
+}
 
 function loadMessages(): Message[] {
   try {
@@ -36,6 +61,8 @@ export function useChat() {
     new Set()
   );
   const [lastError, setLastError] = useState<string | null>(null);
+  const [email, setEmailState] = useState<string | null>(() => getEmail());
+  const [quota, setQuota] = useState<QuotaInfo | null>(() => loadQuota());
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const lastBotMessageRef = useRef<HTMLDivElement>(null);
@@ -72,8 +99,21 @@ export function useChat() {
     }
   }, [messages.length]);
 
+  const handleSetEmail = (value: string) => {
+    storeEmail(value);
+    setEmailState(value);
+    setQuota(null);
+    trackEvent('email_provided');
+  };
+
+  const handleChangeEmail = () => {
+    clearEmail();
+    setEmailState(null);
+    setQuota(null);
+  };
+
   const handleSendMessage = async (text: string) => {
-    if (!text.trim()) return;
+    if (!text.trim() || !email || isBotResponding) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -109,7 +149,7 @@ export function useChat() {
     try {
       try {
         response = await chatAPI.streamQuestion(
-          { text: text.trim() },
+          { text: text.trim(), email },
           {
             onStatus: status => updateBot(() => ({ status })),
             onDelta: delta => updateBot(msg => ({ text: msg.text + delta, status: undefined })),
@@ -121,7 +161,7 @@ export function useChat() {
         // Streaming endpoint unreachable: fall back to the buffered /ask.
         console.warn('Streaming unavailable, falling back to /ask:', error.message);
         streamed = false;
-        response = await chatAPI.sendQuestion({ text: text.trim() });
+        response = await chatAPI.sendQuestion({ text: text.trim(), email });
       }
 
       updateBot(() => ({
@@ -134,7 +174,13 @@ export function useChat() {
         questionType: response.question_type,
         routeReason: response.route_reason,
         usage: response.usage,
+        sourceDetails: response.source_details,
+        followUps: response.follow_ups,
       }));
+      if (response.quota) {
+        setQuota(response.quota);
+        saveQuota(response.quota);
+      }
       trackEvent('question_answered', {
         route: response.route,
         estimated_usd: response.usage?.estimated_usd,
@@ -203,6 +249,10 @@ export function useChat() {
     showExamples,
     expandedCategories,
     lastError,
+    email,
+    quota,
+    handleSetEmail,
+    handleChangeEmail,
     messagesEndRef,
     lastBotMessageRef,
     setInputValue,

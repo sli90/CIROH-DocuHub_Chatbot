@@ -29,7 +29,7 @@ describe('ChatAPI', () => {
         json: async () => mockResponse,
       });
 
-      const result = await chatAPI.sendQuestion({ text: 'Test question' });
+      const result = await chatAPI.sendQuestion({ text: 'Test question', email: 'test@ua.edu' });
 
       expect(result.answer).toBe('Test answer');
       expect(result.sources).toBe('Source 1\nSource 2');
@@ -65,7 +65,7 @@ describe('ChatAPI', () => {
         json: async () => mockResponse,
       });
 
-      const result = await chatAPI.sendQuestion({ text: 'Test question' });
+      const result = await chatAPI.sendQuestion({ text: 'Test question', email: 'test@ua.edu' });
 
       expect(result.sources).toBe('Source 1, Source 2');
       expect(result.links).toBe('Link 1, Link 2');
@@ -79,7 +79,7 @@ describe('ChatAPI', () => {
         json: async () => mockResponse,
       });
 
-      const result = await chatAPI.sendQuestion({ text: 'Test question' });
+      const result = await chatAPI.sendQuestion({ text: 'Test question', email: 'test@ua.edu' });
 
       expect(result.answer).toBe('No response received');
       expect(result.success).toBe(true);
@@ -91,7 +91,7 @@ describe('ChatAPI', () => {
         throw new Error('Failed to fetch');
       });
 
-      const result = await chatAPI.sendQuestion({ text: 'Test question' });
+      const result = await chatAPI.sendQuestion({ text: 'Test question', email: 'test@ua.edu' });
 
       expect(result.success).toBe(false);
       expect(result.answer).toBe(
@@ -104,7 +104,7 @@ describe('ChatAPI', () => {
       abortError.name = 'AbortError';
       (globalThis.fetch as any).mockRejectedValueOnce(abortError);
 
-      const result = await chatAPI.sendQuestion({ text: 'Test question' });
+      const result = await chatAPI.sendQuestion({ text: 'Test question', email: 'test@ua.edu' });
 
       expect(result.success).toBe(false);
       expect(result.answer).toBe('Request timed out. Please try again with a shorter question.');
@@ -116,7 +116,7 @@ describe('ChatAPI', () => {
         throw new Error('HTTP error! status: 500');
       });
 
-      const result = await chatAPI.sendQuestion({ text: 'Test question' });
+      const result = await chatAPI.sendQuestion({ text: 'Test question', email: 'test@ua.edu' });
 
       expect(result.success).toBe(false);
       expect(result.answer).toBe('Server error. Please try again later.');
@@ -128,7 +128,7 @@ describe('ChatAPI', () => {
         throw new Error('HTTP error! status: 400');
       });
 
-      const result = await chatAPI.sendQuestion({ text: 'Test question' });
+      const result = await chatAPI.sendQuestion({ text: 'Test question', email: 'test@ua.edu' });
 
       expect(result.success).toBe(false);
       expect(result.answer).toBe(
@@ -139,7 +139,7 @@ describe('ChatAPI', () => {
     it('should not retry failed requests', async () => {
       (globalThis.fetch as any).mockRejectedValueOnce(new Error('Network error'));
 
-      const result = await chatAPI.sendQuestion({ text: 'Test question' });
+      const result = await chatAPI.sendQuestion({ text: 'Test question', email: 'test@ua.edu' });
 
       expect(result.success).toBe(false);
       expect(globalThis.fetch).toHaveBeenCalledTimes(1);
@@ -177,7 +177,7 @@ describe('ChatAPI', () => {
       const statuses: string[] = [];
       const deltas: string[] = [];
       const result = await chatAPI.streamQuestion(
-        { text: 'q' },
+        { text: 'q', email: 'test@ua.edu' },
         { onStatus: s => statuses.push(s), onDelta: d => deltas.push(d) }
       );
 
@@ -190,6 +190,7 @@ describe('ChatAPI', () => {
       const [url, init] = (globalThis.fetch as any).mock.calls[0];
       expect(url).toBe('http://127.0.0.1:8000/ask/stream');
       expect(init.headers['x-amz-content-sha256']).toMatch(/^[0-9a-f]{64}$/);
+      expect(JSON.parse(init.body).email).toBe('test@ua.edu');
     });
 
     it('applies a replace event (guardrail retraction)', async () => {
@@ -200,13 +201,13 @@ describe('ChatAPI', () => {
           JSON.stringify({ type: 'done', route: 'both' }) + '\n',
         ])
       );
-      const result = await chatAPI.streamQuestion({ text: 'q' });
+      const result = await chatAPI.streamQuestion({ text: 'q', email: 'test@ua.edu' });
       expect(result.answer).toBe('Refused.');
     });
 
     it('throws StreamUnavailableError when the endpoint fails before any text', async () => {
       (globalThis.fetch as any).mockResolvedValueOnce({ ok: false, status: 403, body: null });
-      await expect(chatAPI.streamQuestion({ text: 'q' })).rejects.toBeInstanceOf(
+      await expect(chatAPI.streamQuestion({ text: 'q', email: 'test@ua.edu' })).rejects.toBeInstanceOf(
         StreamUnavailableError
       );
     });
@@ -215,7 +216,7 @@ describe('ChatAPI', () => {
       (globalThis.fetch as any).mockResolvedValueOnce(
         streamResponse([JSON.stringify({ type: 'delta', text: 'half an' }) + '\n'])
       );
-      await expect(chatAPI.streamQuestion({ text: 'q' })).rejects.toThrow('cut off');
+      await expect(chatAPI.streamQuestion({ text: 'q', email: 'test@ua.edu' })).rejects.toThrow('cut off');
     });
   });
 });

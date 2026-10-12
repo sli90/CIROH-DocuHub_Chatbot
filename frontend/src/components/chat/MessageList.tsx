@@ -1,9 +1,9 @@
 // MessageList.tsx
 
-import { Bot, User } from 'lucide-react';
+import { Bot, CornerDownRight, User } from 'lucide-react';
 import { MessageListProps } from './types';
-import { formatSourcesAsHtml } from '../../utils';
 import { MarkdownMessage } from './MarkdownMessage';
+import { SourceCards, sourcesForMessage } from './SourceCards';
 import { questionTypeLabel } from '../../services/api';
 
 function StreamingStatus({
@@ -37,6 +37,7 @@ export function MessageList({
   isBotResponding,
   isDarkMode,
   lastBotMessageRef,
+  onFollowUpClick,
 }: MessageListProps) {
   return (
     <div className="space-y-6">
@@ -105,65 +106,59 @@ export function MessageList({
                   />
                 </div>
               )}
-              {message.isBot &&
-                !message.isStreaming &&
-                (message.sources || message.route || message.usage) &&
-                !message.text
-                  .toLowerCase()
-                  .includes(
-                    'i cannot answer the question with the information given'
-                  ) && (
-                  <div
-                    className={`text-xs mt-3 p-2 rounded border-l-2 w-full message-container ${
-                      isDarkMode
-                        ? 'bg-gray-800 border-gray-500 text-gray-300'
-                        : 'bg-gray-50 border-gray-300 text-gray-600'
-                    }`}
-                  >
-                    {message.sources && (
-                      <>
-                        <div className="font-medium mb-1">Sources:</div>
-                        <div
-                          className="chat-sources"
-                          dangerouslySetInnerHTML={{
-                            __html: formatSourcesAsHtml(
-                              message.sources,
-                              message.links
-                            ),
-                          }}
-                        />
-                      </>
-                    )}
-                    {(message.route || message.usage) && (
+              {message.isBot && !message.isStreaming && (
+                <>
+                  <SourceCards
+                    sources={sourcesForMessage(message)}
+                    isDarkMode={isDarkMode}
+                  />
+                  {(message.questionType || message.route || message.usage) && (
+                    <div
+                      className={`text-[11px] mt-2 ${
+                        isDarkMode ? 'text-gray-400' : 'text-gray-500'
+                      }`}
+                    >
+                      {[
+                        questionTypeLabel(message.route, message.questionType),
+                        message.usage
+                          ? `${message.usage.total_tokens ?? 0} tokens${
+                              typeof message.usage.estimated_usd === 'number'
+                                ? ` · ~$${message.usage.estimated_usd.toFixed(4)}`
+                                : ''
+                            }`
+                          : '',
+                      ]
+                        .filter(Boolean)
+                        .join(' · ')}
+                    </div>
+                  )}
+                  {isLastBotMessage && !isBotResponding && !!message.followUps?.length && (
+                    <div className="mt-3 space-y-1.5">
                       <div
-                        className={`pt-2 ${
-                          message.sources
-                            ? `mt-2 border-t ${
-                                isDarkMode ? 'border-gray-600' : 'border-gray-200'
-                              }`
-                            : ''
+                        className={`text-xs font-medium ${
+                          isDarkMode ? 'text-gray-300' : 'text-gray-600'
                         }`}
                       >
-                        {(message.questionType || message.route) && (
-                          <div>
-                            {questionTypeLabel(
-                              message.route,
-                              message.questionType
-                            )}
-                          </div>
-                        )}
-                        {message.usage && (
-                          <div>
-                            Tokens: {message.usage.total_tokens ?? 0}
-                            {typeof message.usage.estimated_usd === 'number'
-                              ? ` · ~$${message.usage.estimated_usd.toFixed(4)}`
-                              : ''}
-                          </div>
-                        )}
+                        Suggested follow-ups
                       </div>
-                    )}
-                  </div>
-                )}
+                      {message.followUps.map(question => (
+                        <button
+                          key={question}
+                          onClick={() => onFollowUpClick(question)}
+                          className={`w-full flex items-start gap-2 text-left text-xs rounded-lg border px-2.5 py-2 transition-colors ${
+                            isDarkMode
+                              ? 'border-white/10 bg-gray-800 text-gray-200 hover:bg-gray-600'
+                              : 'border-gray-200 bg-white text-gray-700 hover:border-primary-300 hover:bg-primary-50'
+                          }`}
+                        >
+                          <CornerDownRight className="h-3.5 w-3.5 mt-px flex-shrink-0 text-primary-500" />
+                          <span>{question}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
             </div>
           </div>
         );
