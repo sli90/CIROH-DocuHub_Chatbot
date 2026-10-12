@@ -1,9 +1,11 @@
 import { API_CONFIG, getApiUrl } from '../config/api';
 import { getSessionId } from './telemetry';
-import type { UsageInfo } from '../components/chat/types';
+import type { QuotaInfo, SourceDetail, UsageInfo } from '../components/chat/types';
 
 export interface ChatRequest {
   text: string;
+  /** Required by the API: questions are limited per email per day. */
+  email: string;
 }
 
 export interface ChatResponse {
@@ -16,6 +18,9 @@ export interface ChatResponse {
   question_type?: string;
   route_reason?: string;
   usage?: UsageInfo;
+  source_details?: SourceDetail[];
+  follow_ups?: string[];
+  quota?: QuotaInfo | null;
 }
 
 export interface StreamHandlers {
@@ -43,6 +48,9 @@ interface StreamEvent {
   question_type?: string;
   route_reason?: string;
   usage?: UsageInfo;
+  source_details?: SourceDetail[];
+  follow_ups?: string[];
+  quota?: QuotaInfo | null;
 }
 
 // The API returns sources/links as arrays (or, from older backends, a
@@ -195,7 +203,7 @@ export class ChatAPI {
       };
 
       for (;;) {
-        let chunk: ReadableStreamReadResult<Uint8Array>;
+        let chunk: Awaited<ReturnType<typeof reader.read>>;
         try {
           chunk = await reader.read();
         } catch (error) {
@@ -230,6 +238,9 @@ export class ChatAPI {
         question_type: final.question_type,
         route_reason: final.route_reason,
         usage: final.usage,
+        source_details: final.source_details,
+        follow_ups: final.follow_ups,
+        quota: final.quota,
       };
     } finally {
       clearTimeout(idleTimer);
@@ -247,6 +258,9 @@ export class ChatAPI {
           question_type?: string;
           route_reason?: string;
           usage?: UsageInfo;
+          source_details?: SourceDetail[];
+          follow_ups?: string[];
+          quota?: QuotaInfo | null;
         }>(
           getApiUrl(API_CONFIG.ENDPOINTS.CHAT),
           {
@@ -272,6 +286,9 @@ export class ChatAPI {
         question_type: data.question_type,
         route_reason: data.route_reason,
         usage: data.usage,
+        source_details: data.source_details,
+        follow_ups: data.follow_ups,
+        quota: data.quota,
       };
     } catch (error) {
       console.error('Chat API error:', error);

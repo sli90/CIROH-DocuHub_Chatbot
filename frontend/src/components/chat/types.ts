@@ -7,6 +7,24 @@ export interface UsageInfo {
   estimated?: boolean;
 }
 
+/** One source document behind an answer, shown as a card. */
+export interface SourceDetail {
+  title: string;
+  /** Breadcrumb above the title, e.g. "CIROH Hub > Products". */
+  path?: string;
+  url?: string;
+  /** Document kind, e.g. "Hub Page", "Publication", "Dataset". */
+  type?: string;
+}
+
+/** Today's question allowance for the signed-in email. */
+export interface QuotaInfo {
+  allowed: boolean;
+  used: number | null;
+  limit: number;
+  remaining: number | null;
+}
+
 export interface Message {
   id: string;
   text: string;
@@ -18,6 +36,9 @@ export interface Message {
   questionType?: string;
   routeReason?: string;
   usage?: UsageInfo;
+  sourceDetails?: SourceDetail[];
+  /** Suggested next questions, shown under the latest answer. */
+  followUps?: string[];
   /** True while the answer is still being streamed in. */
   isStreaming?: boolean;
   /** Progress text shown before the first words arrive ("Searching..."). */
@@ -41,10 +62,12 @@ export interface MessageListProps {
   isBotResponding: boolean;
   isDarkMode: boolean;
   lastBotMessageRef?: React.RefObject<HTMLDivElement>;
+  onFollowUpClick: (question: string) => void;
 }
 
 export interface ExampleQuestionsProps {
   questions: ExampleQuestion[];
+  starterQuestions: string[];
   expandedCategories: Set<number>;
   isBotResponding: boolean;
   onToggleCategory: (index: number) => void;
@@ -70,4 +93,8 @@ export interface ChatInputProps {
   onInputChange: (value: string) => void;
   onSendMessage: (message: string) => void;
   isDarkMode: boolean;
+  email: string;
+  quota: QuotaInfo | null;
+  onShowPrivacy: () => void;
+  onChangeEmail: () => void;
 }

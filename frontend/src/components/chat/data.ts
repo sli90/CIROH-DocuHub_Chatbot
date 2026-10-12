@@ -1,5 +1,47 @@
 import { ExampleQuestion } from './types';
 
+/** Shown as one-tap suggestions before the first question. */
+export const starterQuestions: string[] = [
+  'What is NextGen In A Box (NGIAB)?',
+  'How do I get access to CIROH cloud computing resources?',
+  'What data does the NextGen Research DataStream provide?',
+  'Which CIROH tools help with flood inundation mapping?',
+  'How do I access CIROH JupyterHub?',
+  'How do I contribute documentation to CIROH DocuHub?',
+];
+
+export const DAILY_QUESTION_LIMIT = 100;
+
+/**
+ * Privacy notice shown before first use (and from the "Privacy" link).
+ * Keep in step with what the backend actually does: emails and daily counts
+ * in Aurora (backend/rag/quota.py), question text in CloudWatch logs with
+ * 30-day retention (infra/stacks/backend_stack.py), answers from Amazon
+ * Bedrock in CIROH's own AWS account.
+ */
+export const privacyPoints: { title: string; body: string }[] = [
+  {
+    title: 'Not used to train AI models',
+    body:
+      'Questions are answered by Claude (Anthropic) through Amazon Bedrock, inside CIROH’s own AWS account. Amazon Bedrock does not use your questions or its answers to train models and does not share them with Anthropic or other model providers.',
+  },
+  {
+    title: 'What we collect',
+    body:
+      `Your email address and how many questions you ask each day, to apply the ${DAILY_QUESTION_LIMIT}-questions-a-day limit that keeps the service fair and affordable. Your questions are kept in service logs for up to 30 days to monitor quality and cost, then deleted.`,
+  },
+  {
+    title: 'How it is used',
+    body:
+      'Only to run and improve this assistant. We do not sell your data or use your email for marketing.',
+  },
+  {
+    title: 'Please do not share sensitive information',
+    body:
+      'Avoid passwords, personal, health or financial details. Answers are AI-generated from CIROH documentation and can be wrong, so check the linked sources.',
+  },
+];
+
 export const exampleQuestions: ExampleQuestion[] = [
   {
     category: 'Getting Started & Navigation',

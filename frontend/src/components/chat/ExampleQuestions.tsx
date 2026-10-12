@@ -1,10 +1,11 @@
 // ExampleQuestions.tsx
 
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 import { ExampleQuestionsProps } from './types';
 
 export function ExampleQuestions({
   questions,
+  starterQuestions,
   expandedCategories,
   isBotResponding,
   onToggleCategory,
@@ -14,12 +15,46 @@ export function ExampleQuestions({
   return (
     <div className="space-y-3">
       <p
-        className={`text-sm text-center mb-4 ${
+        className={`text-sm text-center ${
           isDarkMode ? 'text-gray-300' : 'text-gray-600'
         }`}
       >
-        Hi! I'm CIROH AI. How can I help you today?
+        Hi! I'm CIROH AI. Ask me about CIROH tools, data, services and research.
       </p>
+
+      <section aria-labelledby="starter-heading" className="space-y-1.5">
+        <h3
+          id="starter-heading"
+          className={`text-xs font-semibold uppercase tracking-wide ${
+            isDarkMode ? 'text-gray-400' : 'text-gray-500'
+          }`}
+        >
+          Try asking
+        </h3>
+        {starterQuestions.map(question => (
+          <button
+            key={question}
+            onClick={() => onQuestionClick(question)}
+            disabled={isBotResponding}
+            className={`w-full flex items-start gap-2 text-left text-sm rounded-xl border px-3 py-2.5 transition-colors ${
+              isDarkMode
+                ? 'border-white/10 bg-white/5 text-gray-200 hover:bg-white/10'
+                : 'border-gray-200 bg-white text-gray-700 hover:border-primary-300 hover:bg-primary-50'
+            }`}
+          >
+            <Sparkles className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary-500" />
+            <span>{question}</span>
+          </button>
+        ))}
+      </section>
+
+      <h3
+        className={`text-xs font-semibold uppercase tracking-wide pt-2 ${
+          isDarkMode ? 'text-gray-400' : 'text-gray-500'
+        }`}
+      >
+        Browse by topic
+      </h3>
       {questions.map((category, index) => (
         <div key={index} className="space-y-1 mb-1">
           <button

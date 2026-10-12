@@ -23,6 +23,7 @@ import re
 import sys
 import threading
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from statistics import median
 
@@ -110,6 +111,7 @@ QUESTION_TYPE_LABELS = {
     "rejected": "Off-topic (declined)",
     "help": "Getting started",
     "unavailable": "Knowledge base waking up",
+    "limit": "Daily limit reached",
 }
 
 # Greetings and "what can you do?" never match a CIROH document, so the
@@ -135,6 +137,14 @@ DB_WAKING_MESSAGE = (
     "The CIROH knowledge base is waking up after being idle (this takes about "
     "20 seconds). Please send your question again in a moment."
 )
+
+def limit_message(limit):
+    return (
+        f"You've reached today's limit of {limit} questions. The limit resets at "
+        "midnight US Central time, so please come back tomorrow. It keeps the "
+        "service fast and affordable for everyone."
+    )
+
 
 _GREETING = re.compile(
     r"^(hi|hii+|hello|hey|hiya|howdy|greetings|yo|good (morning|afternoon|evening))"
@@ -758,8 +768,12 @@ def _start_waking_database():
             db.ping(wait_seconds=0)
 
 
-def answer_question(question, mode="hybrid", model=None):
-    """Public API used by FastAPI and the CLI."""
+def answer_question(question, mode="hybrid", model=None, email=None):
+    """Public API used by FastAPI and the CLI.
+
+    `email`, when given, is charged one question against its daily limit
+    (quota.py); greetings / "what can you do?" are free. The CLI passes none.
+    """
     meter = UsageMeter()
     model = model or DEFAULT_MODEL
 
@@ -769,13 +783,27 @@ def answer_question(question, mode="hybrid", model=None):
     _start_waking_database()
     _set_db_wait_budget(DB_WAIT_BUDGET_SECONDS)
     try:
-        return _answer_question(question, mode, model, meter)
+        quota = _consume_quota(email)
+        if quota is not None and not quota["allowed"]:
+            return {**_fixed_response(meter, "limit", limit_message(quota["limit"]), "daily limit"), "quota": quota}
+        response = _answer_question(question, mode, model, meter)
+        return {**response, "quota": quota}
     except Exception as e:  # noqa: BLE001 - only the DB-waking case is handled
         if type(e).__name__ == "DatabaseUnavailableError":
             return _fixed_response(meter, "unavailable", DB_WAKING_MESSAGE, "database resuming")
         raise
     finally:
         _set_db_wait_budget(None)
+
+
+def _consume_quota(email):
+    """Charge one question to `email` (None = no limit, e.g. the CLI)."""
+    if not email:
+        return None
+    from quota import consume_question
+
+    with _db() as db:
+        return consume_question(db, email)
 
 
 # Seconds into a question after which a still-resuming database gives up and
@@ -796,16 +824,98 @@ def _answer_question(question, mode, model, meter):
     final, ctx = _prepare_answer(question, mode, model, meter)
     if final is not None:
         return final
+    follow_ups = _FOLLOW_UP_POOL.submit(suggest_follow_ups, question, ctx["sources"], meter)
     answer = get_rag_answer(question, ctx["blocks"], meter=meter, model=model)
-    return _answer_response(meter, ctx, answer)
+    ups = [] if answer == OFF_TOPIC_MESSAGE else _follow_up_result(follow_ups)
+    return _answer_response(meter, ctx, answer, ups)
 
 
-def _answer_response(meter, ctx, answer):
+# Follow-up suggestions are generated alongside the answer, not after it, so
+# they add no waiting time.
+_FOLLOW_UP_POOL = ThreadPoolExecutor(max_workers=2)
+FOLLOW_UP_TIMEOUT_SECONDS = 8
+
+_FOLLOW_UP_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "questions": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Exactly 3 short follow-up questions.",
+        }
+    },
+    "required": ["questions"],
+}
+
+
+def suggest_follow_ups(question, sources, meter=None):
+    """Three short follow-up questions grounded in the retrieved documents'
+    titles (so the knowledge base can actually answer them)."""
+    if LLM_PROVIDER != "bedrock" or not sources:
+        return []
+    from aws.bedrock_client import converse_json
+
+    titles = "\n".join(f"- {s['title']}" for s in sources[:8])
+    prompt = (
+        "A user asked the CIROH documentation assistant:\n"
+        f"<question>{question}</question>\n\n"
+        "The answer drew on these CIROH documents:\n"
+        f"{titles}\n\n"
+        "Suggest 3 short follow-up questions (each under 12 words) this user is "
+        "likely to ask next that these documents can answer. Make them specific "
+        "to CIROH tools, data or services, and do not repeat the original question."
+    )
+    try:
+        result = converse_json(
+            prompt,
+            tool_name="suggest_follow_ups",
+            json_schema=_FOLLOW_UP_SCHEMA,
+            tool_description="Return follow-up questions for the user.",
+            max_tokens=200,
+            temperature=0.3,
+        )
+    except Exception as e:  # noqa: BLE001 - suggestions are optional
+        print(f"follow-up suggestions failed: {e!r}")
+        return []
+    if meter is not None:
+        meter.add_llm(result["usage"], label="follow_ups")
+    questions = result["data"].get("questions") or []
+    cleaned = [q.strip() for q in questions if isinstance(q, str) and q.strip()]
+    return [q for q in cleaned if q.lower() != question.strip().lower()][:3]
+
+
+def _follow_up_result(future):
+    try:
+        return future.result(timeout=FOLLOW_UP_TIMEOUT_SECONDS)
+    except Exception:  # noqa: BLE001 - timeout or failure: just no suggestions
+        return []
+
+
+def _source_details(sources):
+    """Structured sources for the chat's source cards: the breadcrumb split
+    into a short title (last part) and the path above it."""
+    details = []
+    for s in sources:
+        parts = [p.strip() for p in (s["title"] or "").split(">") if p.strip()]
+        details.append(
+            {
+                "title": parts[-1] if parts else (s["url"] or "Source"),
+                "path": " > ".join(parts[:-1]),
+                "url": s["url"],
+                "type": s.get("type") or "",
+            }
+        )
+    return details
+
+
+def _answer_response(meter, ctx, answer, follow_ups=None):
     route = ctx["route"]
     return {
         "answer": answer,
         "sources": [s["title"] for s in ctx["sources"]],
         "links": [s["url"] for s in ctx["sources"]],
+        "source_details": _source_details(ctx["sources"]),
+        "follow_ups": follow_ups or [],
         "route": route,
         "question_type": QUESTION_TYPE_LABELS.get(route, "Overview Question / Specific Question"),
         "route_reason": ctx["route_info"].get("reason") or "",
@@ -915,7 +1025,7 @@ def _set_db_resume_listener(listener):
         set_resume_listener(listener)
 
 
-def _stream_answer(question, mode, model, emit):
+def _stream_answer(question, mode, model, emit, email=None):
     meter = UsageMeter()
     if is_help_request(question):
         _emit_response(emit, _fixed_response(meter, "help", HELP_MESSAGE, "greeting or capability question"))
@@ -932,8 +1042,13 @@ def _stream_answer(question, mode, model, emit):
     _start_waking_database()
     _set_db_wait_budget(STREAM_DB_WAIT_BUDGET_SECONDS)
     _set_db_resume_listener(on_resume_wait)
+    quota = None
     try:
-        final, ctx = _prepare_answer(question, mode, model, meter)
+        quota = _consume_quota(email)
+        if quota is not None and not quota["allowed"]:
+            final, ctx = _fixed_response(meter, "limit", limit_message(quota["limit"]), "daily limit"), None
+        else:
+            final, ctx = _prepare_answer(question, mode, model, meter)
     except Exception as e:  # noqa: BLE001 - only the DB-waking case is handled
         if type(e).__name__ != "DatabaseUnavailableError":
             raise
@@ -943,17 +1058,21 @@ def _stream_answer(question, mode, model, emit):
         _set_db_resume_listener(None)
 
     if final is not None:
-        _emit_response(emit, final)
+        _emit_response(emit, {**final, "quota": quota})
         return
 
     emit(_status("Writing the answer..."))
+    follow_ups = _FOLLOW_UP_POOL.submit(suggest_follow_ups, question, ctx["sources"], meter)
+    retracted = False
     for kind, text in stream_rag_answer(question, ctx["blocks"], meter=meter, model=model):
+        retracted = retracted or kind == "replace"
         emit({"type": kind, "text": text})
-    response = _answer_response(meter, ctx, answer=None)
-    emit({"type": "done", **{k: v for k, v in response.items() if k != "answer"}})
+    ups = [] if retracted else _follow_up_result(follow_ups)
+    response = _answer_response(meter, ctx, answer=None, follow_ups=ups)
+    emit({"type": "done", **{k: v for k, v in response.items() if k != "answer"}, "quota": quota})
 
 
-def answer_question_stream(question, mode="hybrid", model=None):
+def answer_question_stream(question, mode="hybrid", model=None, email=None):
     """Generator of event dicts for the streaming endpoint, in order:
     {"type": "status", "message"} while searching, {"type": "delta", "text"}
     pieces of the answer, an optional {"type": "replace", "text"} if the
@@ -968,7 +1087,7 @@ def answer_question_stream(question, mode="hybrid", model=None):
 
     def work():
         try:
-            _stream_answer(question, mode, model or DEFAULT_MODEL, events.put)
+            _stream_answer(question, mode, model or DEFAULT_MODEL, events.put, email=email)
         except Exception as e:  # noqa: BLE001 - reported to the client, logged here
             print(f"answer_question_stream failed: {e!r}")
             events.put({"type": "error", "message": STREAM_ERROR_MESSAGE})

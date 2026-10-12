@@ -8,12 +8,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
 from ask import answer_question, answer_question_stream
+from quota import normalize_email
 
 TELEMETRY_PATH = Path(__file__).resolve().parent / "telemetry.jsonl"
 
@@ -43,6 +44,15 @@ class Question(BaseModel):
     text: str = Field(..., min_length=1, max_length=2000)
     session_id: Optional[str] = None
     mode: str = "hybrid"
+    # Required: questions are rate limited per email per day (quota.py).
+    email: str = Field(..., min_length=3, max_length=254)
+
+
+def _require_email(question: Question) -> str:
+    email = normalize_email(question.email)
+    if email is None:
+        raise HTTPException(status_code=400, detail="A valid email address is required.")
+    return email
 
 
 class TelemetryEvent(BaseModel):
@@ -86,7 +96,8 @@ def read_root():
 
 @app.post("/ask", tags=["AI Assistant"])
 def ask_ai(question: Question):
-    result = answer_question(question.text, mode=question.mode)
+    email = _require_email(question)
+    result = answer_question(question.text, mode=question.mode, email=email)
     _append_telemetry(
         {
             "event": "ask",
@@ -106,8 +117,10 @@ def ask_ai_stream(question: Question):
     written. Served by the streaming Lambda behind a Function URL; API
     Gateway (which serves /ask) buffers responses and cannot stream."""
 
+    email = _require_email(question)
+
     def events():
-        for event in answer_question_stream(question.text, mode=question.mode):
+        for event in answer_question_stream(question.text, mode=question.mode, email=email):
             if event["type"] == "done":
                 _append_telemetry(
                     {
