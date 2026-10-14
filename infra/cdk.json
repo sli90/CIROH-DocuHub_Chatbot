@@ -23,6 +23,8 @@
     "enable_budgets": true,
     "retrieval_similarity_threshold": 0.7,
     "bedrock_chat_model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
-    "enable_ingestion": false
+    "enable_ingestion": false,
+    "github_repo": "sli90/CIROH-DocuHub_Chatbot",
+    "github_branch": "aws-bedrock-migration"
   }
 }

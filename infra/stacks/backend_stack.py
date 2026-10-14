@@ -221,6 +221,9 @@ class BackendStack(Construct):
                 "AWS_LWA_READINESS_CHECK_PATH": "/",
                 "PORT": "8080",
                 "STREAM_DB_WAIT_BUDGET_SECONDS": "45",
+                # uvicorn's stdout is a pipe, so print() is block-buffered:
+                # TELEMETRY lines would reach CloudWatch late or not at all.
+                "PYTHONUNBUFFERED": "1",
             },
             layers=[
                 _lambda.LayerVersion.from_layer_version_arn(

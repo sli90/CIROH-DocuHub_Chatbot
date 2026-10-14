@@ -140,14 +140,35 @@ class FrontendStack(Construct):
             )
 
         if frontend_dist_dir:
-            s3_deployment.BucketDeployment(
+            # Two uploads with different browser caching. Vite puts a content
+            # hash in every assets/ filename, so those can be cached for a
+            # year. index.html keeps its name and points at the current
+            # hashes, so it must be revalidated on every load, or browsers keep
+            # running the previous release after a deploy.
+            # prune=False on both: each would otherwise delete the other's
+            # files (old hashed assets are left behind; they are tiny).
+            assets = s3_deployment.BucketDeployment(
                 self,
                 "DeployFrontend",
-                sources=[s3_deployment.Source.asset(frontend_dist_dir)],
+                sources=[s3_deployment.Source.asset(frontend_dist_dir, exclude=["index.html"])],
                 destination_bucket=self.bucket,
+                prune=False,
+                cache_control=[
+                    s3_deployment.CacheControl.from_string("public, max-age=31536000, immutable")
+                ],
+            )
+            index = s3_deployment.BucketDeployment(
+                self,
+                "DeployIndexHtml",
+                sources=[s3_deployment.Source.asset(frontend_dist_dir, exclude=["*", "!index.html"])],
+                destination_bucket=self.bucket,
+                prune=False,
+                cache_control=[s3_deployment.CacheControl.no_cache()],
                 distribution=self.distribution,
                 distribution_paths=["/*"],
             )
+            # New index.html only after the assets it references exist.
+            index.node.add_dependency(assets)
 
         self.domain_name = self.distribution.distribution_domain_name
 

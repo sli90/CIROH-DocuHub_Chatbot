@@ -1,0 +1,143 @@
+# Test, then deploy to AWS, on every push to aws-bedrock-migration.
+#
+# AWS access is keyless: GitHub's OIDC token is exchanged for the
+# CIROH-DocuHub-github-deploy role (infra/stacks/cicd_stack.py), which may
+# only assume the CDK bootstrap roles and only for this repo + branch.
+# Setup (once): docs/CICD.md.
+
+name: Test and deploy
+
+on:
+  push:
+    branches: [aws-bedrock-migration]
+    paths-ignore:
+      - "docs/**"
+      - "**/*.md"
+  workflow_dispatch:
+
+# One deploy at a time; a newer push waits for the running one to finish
+# rather than cancelling it halfway through a CloudFormation update.
+concurrency:
+  group: deploy-aws-bedrock-migration
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  AWS_REGION: us-east-1
+  PYTHON_VERSION: "3.12"
+  NODE_VERSION: "22"
+
+jobs:
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: backend/requirements-lambda.txt
+
+      - name: Backend tests
+        run: |
+          pip install -r backend/requirements-lambda.txt pytest httpx
+          pytest backend/tests -q
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Frontend type check and tests
+        working-directory: frontend
+        run: |
+          npm ci
+          npx tsc --noEmit
+          npx vitest run
+
+      - name: Check deploy configuration
+        if: vars.AWS_DEPLOY_ROLE_ARN == ''
+        run: |
+          echo "::warning title=Deploy skipped::Repository variable AWS_DEPLOY_ROLE_ARN is not set, so nothing was deployed. See docs/CICD.md."
+
+  deploy:
+    name: Deploy to AWS
+    needs: test
+    if: vars.AWS_DEPLOY_ROLE_ARN != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    # No `environment:` here: it would change the OIDC token's subject to
+    # "environment:<name>" and no longer match the deploy role's trust policy.
+    permissions:
+      contents: read
+      id-token: write # for the OIDC token exchanged for AWS credentials
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: |
+            infra/requirements.txt
+            backend/requirements-lambda.txt
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install tools
+        run: |
+          pip install -r infra/requirements.txt
+          npm install -g aws-cdk@2
+
+      # Same-origin production build: CloudFront serves the site and routes
+      # /ask, /ask/stream and /telemetry to the backend.
+      - name: Build frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          role-session-name: github-${{ github.run_id }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Show what will change
+        working-directory: infra
+        run: |
+          set -o pipefail
+          cdk diff CirohStack 2>&1 | tee diff.txt
+          {
+            echo "## Infrastructure changes (cdk diff)"
+            echo '```'
+            grep -vE "^(npm notice|\s*$)" diff.txt | tail -n 150
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Deploy
+        working-directory: infra
+        run: cdk deploy CirohStack --require-approval never --outputs-file cdk-outputs.json
+
+      - name: Read stack outputs
+        id: outputs
+        working-directory: infra
+        run: |
+          url=$(python -c "import json; print(json.load(open('cdk-outputs.json'))['CirohStack']['FrontendUrl'])")
+          echo "frontend_url=$url" >> "$GITHUB_OUTPUT"
+          echo "Deployed: $url" >> "$GITHUB_STEP_SUMMARY"
+
+      # Exercises the live site end to end through CloudFront (asks a few
+      # questions as smoke-test@ciroh-docuhub.invalid, about 4 cents).
+      - name: Smoke test the live site
+        run: python scripts/smoke_test.py --url "${{ steps.outputs.outputs.frontend_url }}"
