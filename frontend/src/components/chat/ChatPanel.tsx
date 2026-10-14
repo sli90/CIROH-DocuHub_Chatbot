@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ArrowLeft, RefreshCw } from 'lucide-react';
 import { ChatPanelProps } from './types';
 import { WelcomeGate } from './WelcomeGate';
 import { PrivacyNotice } from './PrivacyNotice';
@@ -10,6 +10,7 @@ import { ChatInput } from './ChatInput';
 import { useChat } from './useChat';
 import { useDarkMode } from './useDarkMode';
 import { exampleQuestions, starterQuestions } from './data';
+import { isNewVersionAvailable } from '../../services/version';
 
 export function ChatPanel({
   isOpen,
@@ -39,6 +40,24 @@ export function ChatPanel({
 
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   const [showPrivacy, setShowPrivacy] = useState(false);
+  const [updateAvailable, setUpdateAvailable] = useState(false);
+
+  // A tab left open across a deploy keeps running the old release; check
+  // when the chat opens and every few minutes while it stays open.
+  useEffect(() => {
+    if (!isOpen) return;
+    let cancelled = false;
+    const check = () =>
+      isNewVersionAvailable().then(outdated => {
+        if (!cancelled && outdated) setUpdateAvailable(true);
+      });
+    check();
+    const timer = setInterval(check, 5 * 60 * 1000);
+    return () => {
+      cancelled = true;
+      clearInterval(timer);
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -63,6 +82,25 @@ export function ChatPanel({
         isDarkMode={isDarkMode}
         onToggleDarkMode={toggleDarkMode}
       />
+
+      {updateAvailable && (
+        <div
+          role="status"
+          className={`flex items-center justify-between gap-2 px-4 py-2 text-xs border-b ${
+            isDarkMode
+              ? 'bg-amber-500/10 border-amber-500/30 text-amber-200'
+              : 'bg-amber-50 border-amber-200 text-amber-800'
+          }`}
+        >
+          <span>A new version of CIROH AI is available.</span>
+          <button
+            onClick={() => window.location.reload()}
+            className="flex items-center gap-1 font-medium underline underline-offset-2"
+          >
+            <RefreshCw className="h-3 w-3" /> Refresh
+          </button>
+        </div>
+      )}
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
         {!email ? (

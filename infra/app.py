@@ -31,6 +31,7 @@ from aws_cdk import RemovalPolicy, Tags
 from constructs import Construct
 
 from stacks.backend_stack import BackendStack
+from stacks.cicd_stack import CicdStack
 from stacks.database_stack import DatabaseStack
 from stacks.frontend_stack import FrontendStack
 from stacks.guardrail_stack import GuardrailStack
@@ -172,4 +173,17 @@ env = cdk.Environment(
     region=app.node.try_get_context("region") or "us-east-1",
 )
 CirohStack(app, "CirohStack", env=env)
+
+# GitHub Actions deploy access (.github/workflows/deploy.yml). A separate
+# stack, deployed once by hand with `cdk deploy CirohCicdStack`; CI itself
+# only deploys CirohStack.
+CicdStack(
+    app,
+    "CirohCicdStack",
+    env=env,
+    project_name=app.node.try_get_context("project_name") or "CIROH-DocuHub",
+    github_repo=app.node.try_get_context("github_repo") or "sli90/CIROH-DocuHub_Chatbot",
+    github_branch=app.node.try_get_context("github_branch") or "aws-bedrock-migration",
+    github_oidc_provider_arn=app.node.try_get_context("github_oidc_provider_arn") or None,
+)
 app.synth()

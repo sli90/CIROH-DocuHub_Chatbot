@@ -2,10 +2,18 @@ import { API_CONFIG, getApiUrl } from '../config/api';
 import { getSessionId } from './telemetry';
 import type { QuotaInfo, SourceDetail, UsageInfo } from '../components/chat/types';
 
+/** One earlier message, sent so follow-up questions are understood in context. */
+export interface HistoryTurn {
+  role: 'user' | 'assistant';
+  text: string;
+}
+
 export interface ChatRequest {
   text: string;
   /** Required by the API: questions are limited per email per day. */
   email: string;
+  /** Recent conversation, oldest first (see buildHistory in useChat). */
+  history?: HistoryTurn[];
 }
 
 export interface ChatResponse {

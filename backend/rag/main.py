@@ -6,7 +6,7 @@ import json
 import os
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Literal, Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -37,6 +37,14 @@ app.add_middleware(
 )
 
 
+class Turn(BaseModel):
+    """One earlier message of the conversation, sent back by the chat so
+    follow-up questions are understood in context (not stored)."""
+
+    role: Literal["user", "assistant"]
+    text: str = Field(..., max_length=8000)
+
+
 class Question(BaseModel):
     # Guardrail: an explicit max-length check on the question field, so an
     # oversized payload can't be used to pad token costs or attempt
@@ -46,6 +54,8 @@ class Question(BaseModel):
     mode: str = "hybrid"
     # Required: questions are rate limited per email per day (quota.py).
     email: str = Field(..., min_length=3, max_length=254)
+    # Most recent turns last; ask.py keeps only the last few.
+    history: list[Turn] = Field(default_factory=list, max_length=20)
 
 
 def _require_email(question: Question) -> str:
@@ -97,7 +107,9 @@ def read_root():
 @app.post("/ask", tags=["AI Assistant"])
 def ask_ai(question: Question):
     email = _require_email(question)
-    result = answer_question(question.text, mode=question.mode, email=email)
+    result = answer_question(
+        question.text, mode=question.mode, email=email, history=[t.model_dump() for t in question.history]
+    )
     _append_telemetry(
         {
             "event": "ask",
@@ -120,7 +132,8 @@ def ask_ai_stream(question: Question):
     email = _require_email(question)
 
     def events():
-        for event in answer_question_stream(question.text, mode=question.mode, email=email):
+        history = [t.model_dump() for t in question.history]
+        for event in answer_question_stream(question.text, mode=question.mode, email=email, history=history):
             if event["type"] == "done":
                 _append_telemetry(
                     {
@@ -128,6 +141,8 @@ def ask_ai_stream(question: Question):
                         "streamed": True,
                         "session_id": question.session_id,
                         "question": question.text,
+                        "search_question": event.get("search_question"),
+                        "history_turns": len(question.history),
                         "route": event.get("route"),
                         "usage": event.get("usage"),
                     }

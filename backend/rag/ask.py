@@ -691,7 +691,92 @@ def merge_retrieval(parts):
     return blocks, sources
 
 
-def get_rag_answer(question, context_blocks, meter=None, model=None):
+# ---------------------------------------------------------------------------
+# Conversation memory
+# ---------------------------------------------------------------------------
+# The chat sends its last few turns with each question (nothing is stored
+# server-side). They are used twice: to rewrite a follow-up ("how do I
+# install it?") into a standalone question for retrieval, and as prior turns
+# when the answer is generated, so it reads as part of the conversation.
+MAX_HISTORY_MESSAGES = int(os.getenv("MAX_HISTORY_MESSAGES", "6"))  # 3 exchanges
+MAX_HISTORY_CHARS = 2000  # per message
+
+CONDENSE_MSG = (
+    "You rewrite follow-up questions for a search engine over CIROH "
+    "documentation. You never answer them."
+)
+
+_CONDENSE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "standalone_question": {
+            "type": "string",
+            "description": "The follow-up rewritten so it makes sense without the conversation.",
+        }
+    },
+    "required": ["standalone_question"],
+}
+
+
+def normalize_history(history):
+    """Last MAX_HISTORY_MESSAGES turns as [{"role", "text"}], each trimmed."""
+    turns = []
+    for turn in history or []:
+        role = turn.get("role") if isinstance(turn, dict) else getattr(turn, "role", None)
+        text = turn.get("text") if isinstance(turn, dict) else getattr(turn, "text", None)
+        text = (text or "").strip()
+        if role in ("user", "assistant") and text:
+            turns.append({"role": role, "text": text[:MAX_HISTORY_CHARS]})
+    return turns[-MAX_HISTORY_MESSAGES:]
+
+
+def condense_question(question, history, meter=None):
+    """Standalone version of a follow-up question, for guardrail screening,
+    embedding, routing and retrieval. Returns `question` unchanged when there
+    is no history or the rewrite fails."""
+    if not history or LLM_PROVIDER != "bedrock":
+        return question
+    from aws.bedrock_client import converse_json
+
+    transcript = "\n".join(
+        f"{'User' if t['role'] == 'user' else 'Assistant'}: {t['text'][:600]}" for t in history[-4:]
+    )
+    prompt = (
+        f"<conversation>\n{transcript}\n</conversation>\n\n"
+        f"<follow_up>{question}</follow_up>\n\n"
+        "Rewrite the follow-up as one standalone question that can be understood "
+        "without the conversation: replace references such as \"it\", \"that\", "
+        "\"this tool\" or \"the second one\" with what they refer to. If it is "
+        "already standalone, or unrelated to the conversation, return it unchanged."
+    )
+    try:
+        result = converse_json(
+            prompt,
+            tool_name="standalone_question",
+            json_schema=_CONDENSE_SCHEMA,
+            tool_description="Return the standalone question.",
+            system_prompt=CONDENSE_MSG,
+            max_tokens=150,
+            temperature=0.0,
+        )
+    except Exception as e:  # noqa: BLE001 - fall back to the question as asked
+        print(f"condense_question failed: {e!r}")
+        return question
+    if meter is not None:
+        meter.add_llm(result["usage"], label="condense")
+    rewritten = (result["data"].get("standalone_question") or "").strip()
+    return rewritten if 0 < len(rewritten) <= 500 else question
+
+
+def _answer_prompt(context_str, question, search_question):
+    prompt = f"<context>\n{context_str}\n</context>\n\n"
+    if search_question and search_question.strip().lower() != question.strip().lower():
+        # Helps the model resolve "it"/"that" the same way retrieval did.
+        prompt += f"(In this conversation, the question below means: {search_question})\n\n"
+    return prompt + "QUESTION:"
+
+
+def get_rag_answer(question, context_blocks, meter=None, model=None, history=None, search_question=None):
     if not context_blocks:
         return "I could not find relevant information in the CIROH knowledge base."
     context_str = "\n\n==============================\n\n".join(context_blocks)
@@ -708,11 +793,12 @@ def get_rag_answer(question, context_blocks, meter=None, model=None):
         # the user's text, not retrieved docs (which legitimately contain
         # code and would otherwise trip the "unrelated code" denied topic).
         result = converse_text(
-            f"<context>\n{context_str}\n</context>\n\nQUESTION:",
+            _answer_prompt(context_str, question, search_question),
             guarded_text=question,
             system_prompt=SYSTEM_MSG,
             max_tokens=MAX_ANSWER_TOKENS,
             temperature=0.2,
+            history=history,
         )
         if meter is not None:
             meter.add_llm(result["usage"], label="answer")
@@ -768,11 +854,12 @@ def _start_waking_database():
             db.ping(wait_seconds=0)
 
 
-def answer_question(question, mode="hybrid", model=None, email=None):
+def answer_question(question, mode="hybrid", model=None, email=None, history=None):
     """Public API used by FastAPI and the CLI.
 
     `email`, when given, is charged one question against its daily limit
     (quota.py); greetings / "what can you do?" are free. The CLI passes none.
+    `history` is the conversation so far (see normalize_history).
     """
     meter = UsageMeter()
     model = model or DEFAULT_MODEL
@@ -786,7 +873,7 @@ def answer_question(question, mode="hybrid", model=None, email=None):
         quota = _consume_quota(email)
         if quota is not None and not quota["allowed"]:
             return {**_fixed_response(meter, "limit", limit_message(quota["limit"]), "daily limit"), "quota": quota}
-        response = _answer_question(question, mode, model, meter)
+        response = _answer_question(question, mode, model, meter, history=normalize_history(history))
         return {**response, "quota": quota}
     except Exception as e:  # noqa: BLE001 - only the DB-waking case is handled
         if type(e).__name__ == "DatabaseUnavailableError":
@@ -820,12 +907,16 @@ def _set_db_wait_budget(seconds):
         set_request_deadline(seconds)
 
 
-def _answer_question(question, mode, model, meter):
-    final, ctx = _prepare_answer(question, mode, model, meter)
+def _answer_question(question, mode, model, meter, history=None):
+    search_question = condense_question(question, history, meter)
+    final, ctx = _prepare_answer(search_question, mode, model, meter)
     if final is not None:
         return final
-    follow_ups = _FOLLOW_UP_POOL.submit(suggest_follow_ups, question, ctx["sources"], meter)
-    answer = get_rag_answer(question, ctx["blocks"], meter=meter, model=model)
+    ctx["search_question"] = search_question
+    follow_ups = _FOLLOW_UP_POOL.submit(suggest_follow_ups, search_question, ctx["sources"], meter)
+    answer = get_rag_answer(
+        question, ctx["blocks"], meter=meter, model=model, history=history, search_question=search_question
+    )
     ups = [] if answer == OFF_TOPIC_MESSAGE else _follow_up_result(follow_ups)
     return _answer_response(meter, ctx, answer, ups)
 
@@ -916,6 +1007,9 @@ def _answer_response(meter, ctx, answer, follow_ups=None):
         "links": [s["url"] for s in ctx["sources"]],
         "source_details": _source_details(ctx["sources"]),
         "follow_ups": follow_ups or [],
+        # The follow-up as retrieval understood it (same as the question if
+        # it needed no conversation context).
+        "search_question": ctx.get("search_question"),
         "route": route,
         "question_type": QUESTION_TYPE_LABELS.get(route, "Overview Question / Specific Question"),
         "route_reason": ctx["route_info"].get("reason") or "",
@@ -983,22 +1077,25 @@ STREAM_KEEPALIVE_SECONDS = 10
 STREAM_ERROR_MESSAGE = "Sorry, something went wrong while answering. Please try again."
 
 
-def stream_rag_answer(question, context_blocks, meter=None, model=None):
+def stream_rag_answer(question, context_blocks, meter=None, model=None, history=None, search_question=None):
     """Streaming counterpart of get_rag_answer. Yields ("delta", text) as the
     answer is generated, or ("replace", text) if the Guardrail retracts it."""
     if not context_blocks or LLM_PROVIDER != "bedrock":
-        yield "delta", get_rag_answer(question, context_blocks, meter=meter, model=model)
+        yield "delta", get_rag_answer(
+            question, context_blocks, meter=meter, model=model, history=history, search_question=search_question
+        )
         return
 
     from aws.bedrock_client import converse_text_stream
 
     context_str = "\n\n==============================\n\n".join(context_blocks)
     for kind, value in converse_text_stream(
-        f"<context>\n{context_str}\n</context>\n\nQUESTION:",
+        _answer_prompt(context_str, question, search_question),
         guarded_text=question,
         system_prompt=SYSTEM_MSG,
         max_tokens=MAX_ANSWER_TOKENS,
         temperature=0.2,
+        history=history,
     ):
         if kind == "delta":
             yield "delta", value
@@ -1025,8 +1122,9 @@ def _set_db_resume_listener(listener):
         set_resume_listener(listener)
 
 
-def _stream_answer(question, mode, model, emit, email=None):
+def _stream_answer(question, mode, model, emit, email=None, history=None):
     meter = UsageMeter()
+    history = normalize_history(history)
     if is_help_request(question):
         _emit_response(emit, _fixed_response(meter, "help", HELP_MESSAGE, "greeting or capability question"))
         return
@@ -1048,7 +1146,10 @@ def _stream_answer(question, mode, model, emit, email=None):
         if quota is not None and not quota["allowed"]:
             final, ctx = _fixed_response(meter, "limit", limit_message(quota["limit"]), "daily limit"), None
         else:
-            final, ctx = _prepare_answer(question, mode, model, meter)
+            search_question = condense_question(question, history, meter)
+            final, ctx = _prepare_answer(search_question, mode, model, meter)
+            if ctx is not None:
+                ctx["search_question"] = search_question
     except Exception as e:  # noqa: BLE001 - only the DB-waking case is handled
         if type(e).__name__ != "DatabaseUnavailableError":
             raise
@@ -1062,9 +1163,12 @@ def _stream_answer(question, mode, model, emit, email=None):
         return
 
     emit(_status("Writing the answer..."))
-    follow_ups = _FOLLOW_UP_POOL.submit(suggest_follow_ups, question, ctx["sources"], meter)
+    search_question = ctx["search_question"]
+    follow_ups = _FOLLOW_UP_POOL.submit(suggest_follow_ups, search_question, ctx["sources"], meter)
     retracted = False
-    for kind, text in stream_rag_answer(question, ctx["blocks"], meter=meter, model=model):
+    for kind, text in stream_rag_answer(
+        question, ctx["blocks"], meter=meter, model=model, history=history, search_question=search_question
+    ):
         retracted = retracted or kind == "replace"
         emit({"type": kind, "text": text})
     ups = [] if retracted else _follow_up_result(follow_ups)
@@ -1072,7 +1176,7 @@ def _stream_answer(question, mode, model, emit, email=None):
     emit({"type": "done", **{k: v for k, v in response.items() if k != "answer"}, "quota": quota})
 
 
-def answer_question_stream(question, mode="hybrid", model=None, email=None):
+def answer_question_stream(question, mode="hybrid", model=None, email=None, history=None):
     """Generator of event dicts for the streaming endpoint, in order:
     {"type": "status", "message"} while searching, {"type": "delta", "text"}
     pieces of the answer, an optional {"type": "replace", "text"} if the
@@ -1087,7 +1191,7 @@ def answer_question_stream(question, mode="hybrid", model=None, email=None):
 
     def work():
         try:
-            _stream_answer(question, mode, model or DEFAULT_MODEL, events.put, email=email)
+            _stream_answer(question, mode, model or DEFAULT_MODEL, events.put, email=email, history=history)
         except Exception as e:  # noqa: BLE001 - reported to the client, logged here
             print(f"answer_question_stream failed: {e!r}")
             events.put({"type": "error", "message": STREAM_ERROR_MESSAGE})

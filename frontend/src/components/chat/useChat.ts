@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Message, QuotaInfo } from './types';
-import { chatAPI, ChatResponse, StreamUnavailableError } from '../../services/api';
+import { chatAPI, ChatResponse, HistoryTurn, StreamUnavailableError } from '../../services/api';
 import { trackEvent } from '../../services/telemetry';
 import { clearEmail, getEmail, setEmail as storeEmail } from '../../services/user';
 
@@ -50,6 +50,33 @@ function saveMessages(messages: Message[]): void {
   } catch {
     // Ignore quota / private-mode failures.
   }
+}
+
+// Answers that aren't about the conversation's topic (greetings, refusals,
+// limit / waking-up notices) are left out of the context sent back.
+const NON_ANSWER_ROUTES = new Set(['help', 'rejected', 'limit', 'unavailable']);
+const MAX_HISTORY_MESSAGES = 6; // the last 3 question/answer pairs
+const MAX_HISTORY_CHARS = 2000;
+
+/**
+ * The conversation so far as question/answer pairs, for the API's `history`,
+ * so a follow-up like "how do I install it?" is understood. Only completed,
+ * real answers are included (they always carry a route); error messages,
+ * greetings and refusals are skipped along with their question.
+ */
+export function buildHistory(messages: Message[]): HistoryTurn[] {
+  const turns: HistoryTurn[] = [];
+  messages.forEach((message, index) => {
+    const reply = messages[index + 1];
+    if (message.isBot || !message.text.trim() || !reply?.isBot) return;
+    if (reply.isStreaming || !reply.text.trim() || !reply.route) return;
+    if (NON_ANSWER_ROUTES.has(reply.route)) return;
+    turns.push(
+      { role: 'user', text: message.text.slice(0, MAX_HISTORY_CHARS) },
+      { role: 'assistant', text: reply.text.slice(0, MAX_HISTORY_CHARS) }
+    );
+  });
+  return turns.slice(-MAX_HISTORY_MESSAGES);
 }
 
 export function useChat() {
@@ -114,6 +141,8 @@ export function useChat() {
 
   const handleSendMessage = async (text: string) => {
     if (!text.trim() || !email || isBotResponding) return;
+    // Captured before this question is added to the conversation.
+    const history = buildHistory(messages);
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -149,7 +178,7 @@ export function useChat() {
     try {
       try {
         response = await chatAPI.streamQuestion(
-          { text: text.trim(), email },
+          { text: text.trim(), email, history },
           {
             onStatus: status => updateBot(() => ({ status })),
             onDelta: delta => updateBot(msg => ({ text: msg.text + delta, status: undefined })),
@@ -161,7 +190,7 @@ export function useChat() {
         // Streaming endpoint unreachable: fall back to the buffered /ask.
         console.warn('Streaming unavailable, falling back to /ask:', error.message);
         streamed = false;
-        response = await chatAPI.sendQuestion({ text: text.trim(), email });
+        response = await chatAPI.sendQuestion({ text: text.trim(), email, history });
       }
 
       updateBot(() => ({
@@ -187,6 +216,7 @@ export function useChat() {
         total_tokens: response.usage?.total_tokens,
         success: response.success,
         streamed,
+        follow_up: history.length > 0,
       });
       setLastError(response.success ? null : response.error || 'Unknown error occurred');
     } catch (error) {

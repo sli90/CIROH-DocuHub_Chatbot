@@ -94,6 +94,28 @@ def _guardrail_config() -> Optional[dict[str, str]]:
     }
 
 
+def history_messages(history: Optional[list[dict[str, str]]]) -> list[dict[str, Any]]:
+    """Earlier chat turns ({"role": "user"|"assistant", "text"}) as Converse
+    messages. Converse requires roles to alternate starting with "user", and
+    the new question follows as a user turn, so consecutive same-role turns
+    are merged and the list is trimmed to start with user / end with assistant.
+    """
+    merged: list[dict[str, str]] = []
+    for turn in history or []:
+        role, text = turn.get("role"), (turn.get("text") or "").strip()
+        if role not in ("user", "assistant") or not text:
+            continue
+        if merged and merged[-1]["role"] == role:
+            merged[-1]["text"] += "\n\n" + text
+        else:
+            merged.append({"role": role, "text": text})
+    while merged and merged[0]["role"] != "user":
+        merged.pop(0)
+    while merged and merged[-1]["role"] != "assistant":
+        merged.pop()
+    return [{"role": t["role"], "content": [{"text": t["text"]}]} for t in merged]
+
+
 def _converse_text_kwargs(
     user_message: str,
     system_prompt: Optional[str],
@@ -101,6 +123,7 @@ def _converse_text_kwargs(
     temperature: float,
     model_id: Optional[str],
     guarded_text: Optional[str],
+    history: Optional[list[dict[str, str]]] = None,
 ) -> dict[str, Any]:
     guardrail = _guardrail_config()
     if guarded_text is None:
@@ -112,7 +135,9 @@ def _converse_text_kwargs(
 
     kwargs: dict[str, Any] = {
         "modelId": model_id or CHAT_MODEL_ID,
-        "messages": [{"role": "user", "content": content}],
+        # Earlier turns are plain text, so with a Guardrail configured only the
+        # new question (the guardContent block) is evaluated.
+        "messages": history_messages(history) + [{"role": "user", "content": content}],
         "inferenceConfig": {"maxTokens": max_tokens, "temperature": temperature},
     }
     if system_prompt:
@@ -129,6 +154,7 @@ def converse_text(
     temperature: float = 0.2,
     model_id: Optional[str] = None,
     guarded_text: Optional[str] = None,
+    history: Optional[list[dict[str, str]]] = None,
 ) -> dict[str, Any]:
     """Plain-text answer generation via Bedrock Converse.
 
@@ -137,13 +163,16 @@ def converse_text(
     Guardrail's input policies evaluate only that text (the user's question)
     rather than the whole message (retrieved context included).
 
+    `history` (earlier chat turns, see history_messages) goes before it, so
+    follow-up questions are answered in the context of the conversation.
+
     Returns {"text", "usage", "blocked", "stop_reason"}. `blocked` is True
     when a configured Guardrail intervened, in which case `text` is a
     placeholder and the caller should show a generic refusal, not the
     (potentially partial) model output.
     """
     kwargs = _converse_text_kwargs(
-        user_message, system_prompt, max_tokens, temperature, model_id, guarded_text
+        user_message, system_prompt, max_tokens, temperature, model_id, guarded_text, history
     )
     resp = _runtime_client().converse(**kwargs)
     stop_reason = resp.get("stopReason")
@@ -164,6 +193,7 @@ def converse_text_stream(
     temperature: float = 0.2,
     model_id: Optional[str] = None,
     guarded_text: Optional[str] = None,
+    history: Optional[list[dict[str, str]]] = None,
 ) -> Iterator[tuple[str, Any]]:
     """Streaming variant of converse_text, via Bedrock ConverseStream.
 
@@ -174,7 +204,7 @@ def converse_text_stream(
     whatever was already shown with a refusal.
     """
     kwargs = _converse_text_kwargs(
-        user_message, system_prompt, max_tokens, temperature, model_id, guarded_text
+        user_message, system_prompt, max_tokens, temperature, model_id, guarded_text, history
     )
     if "guardrailConfig" in kwargs:
         kwargs["guardrailConfig"] = {**kwargs["guardrailConfig"], "streamProcessingMode": "async"}
