@@ -13,3 +13,6 @@ __pycache__/
 ciroh-cloudshell.zip
 corpus_export.json.gz
 hub_summaries_cache.json
+
+# Office documents (reports, decks) are shared privately, not via this public repo.
+*.docx
