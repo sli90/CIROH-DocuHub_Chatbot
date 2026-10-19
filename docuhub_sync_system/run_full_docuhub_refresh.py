@@ -30,6 +30,7 @@ from sync_pipeline import (
     database_step,
     generation_step,
     github_repository_generation_step,
+    hydroshare_generation_step,
     repository_sync_steps,
     run_sync_steps,
 )
@@ -42,6 +43,8 @@ GITHUB_REPOSITORY_REPORT = FORMATTED_DIR / "github_repository_generation_report.
 GITHUB_REPOSITORY_DB_REPORT = (
     FORMATTED_DIR / "github_repository_db_update_result.json"
 )
+HYDROSHARE_REPORT = FORMATTED_DIR / "hydroshare_generation_report.json"
+HYDROSHARE_DB_REPORT = FORMATTED_DIR / "hydroshare_db_update_result.json"
 REFRESH_ROOT = ROOT / "local_change_dashboard" / "full_docuhub_refresh"
 
 DOCUHUB_ARTIFACT_TYPE_ID = 1
@@ -201,6 +204,7 @@ def write_completed_sync_report(
     started_at: str,
     include_db: bool,
     include_github_repositories: bool,
+    include_hydroshare_resources: bool,
     metadata: dict,
 ) -> Path:
     generation_report = load_json(FORMATTED_DIR / "generation_report.json")
@@ -220,6 +224,19 @@ def write_completed_sync_report(
             github_db_report
             and github_db_report.get("status") == "completed"
         )
+    hydroshare_report = None
+    hydroshare_db_report = None
+    if include_hydroshare_resources:
+        hydroshare_report = load_json(HYDROSHARE_REPORT)
+        if include_db:
+            hydroshare_db_report = load_json(HYDROSHARE_DB_REPORT)
+        metadata["hydroshare_resources"] = hydroshare_report_summary(
+            hydroshare_report, hydroshare_db_report
+        )
+        metadata["hydroshare_database_update_performed"] = bool(
+            hydroshare_db_report
+            and hydroshare_db_report.get("status") == "completed"
+        )
     report = build_synchronization_report(
         sync_id=sync_id,
         mode="full_docuhub_refresh",
@@ -231,6 +248,12 @@ def write_completed_sync_report(
         additional_usage_reports=[
             github_report.get("openai_usage") if github_report else None,
             github_db_report.get("openai_usage") if github_db_report else None,
+            hydroshare_report.get("openai_usage") if hydroshare_report else None,
+            (
+                hydroshare_db_report.get("openai_usage")
+                if hydroshare_db_report
+                else None
+            ),
         ],
         metadata=metadata,
     )
@@ -290,6 +313,35 @@ def github_repository_report_summary(
     }
 
 
+def hydroshare_report_summary(report: dict, db_report: dict | None = None) -> dict:
+    db_report = db_report or {}
+    return {
+        "requested": True,
+        "status": report.get("status"),
+        "total_artifacts": report.get("total_artifacts", 0),
+        "total_chunks": report.get("total_chunks", 0),
+        "new_count": report.get("new_count", 0),
+        "updated_count": report.get("updated_count", 0),
+        "removed_count": report.get(
+            "removed_count", report.get("deleted_count", 0)
+        ),
+        "unchanged_count": report.get("unchanged_count", 0),
+        "portal_membership_count": report.get("portal_membership_count", 0),
+        "database_update_performed": db_report.get("status") == "completed",
+        "database": {
+            "status": db_report.get("status"),
+            "upserted_artifacts": db_report.get("upserted_artifacts", 0),
+            "deactivated_artifacts": db_report.get("deactivated_artifacts", 0),
+            "chunks_inserted": db_report.get("chunks_inserted", 0),
+            "unchanged_artifacts": (
+                (db_report.get("reconciliation") or {}).get(
+                    "unchanged_artifacts", 0
+                )
+            ),
+        },
+    }
+
+
 def write_failed_sync_report(error: BaseException) -> Path | None:
     """Write partial usage only from reports changed by the current run."""
     if not _SYNC_CONTEXT:
@@ -299,10 +351,14 @@ def write_failed_sync_report(error: BaseException) -> Path | None:
     db_report = None
     github_report = None
     github_db_report = None
+    hydroshare_report = None
+    hydroshare_db_report = None
     generation_path = FORMATTED_DIR / "generation_report.json"
     db_path = FORMATTED_DIR / "db_update_result.json"
     github_path = GITHUB_REPOSITORY_REPORT
     github_db_path = GITHUB_REPOSITORY_DB_REPORT
+    hydroshare_path = HYDROSHARE_REPORT
+    hydroshare_db_path = HYDROSHARE_DB_REPORT
     if _mtime_ns(generation_path) != _SYNC_CONTEXT.get("generation_mtime_ns"):
         try:
             generation_report = load_json(generation_path)
@@ -314,6 +370,25 @@ def write_failed_sync_report(error: BaseException) -> Path | None:
     ):
         try:
             db_report = load_json(db_path)
+        except (OSError, json.JSONDecodeError):
+            pass
+    if (
+        _SYNC_CONTEXT.get("include_hydroshare_resources")
+        and _mtime_ns(hydroshare_path)
+        != _SYNC_CONTEXT.get("hydroshare_report_mtime_ns")
+    ):
+        try:
+            hydroshare_report = load_json(hydroshare_path)
+        except (OSError, json.JSONDecodeError):
+            pass
+    if (
+        _SYNC_CONTEXT.get("include_db")
+        and _SYNC_CONTEXT.get("include_hydroshare_resources")
+        and _mtime_ns(hydroshare_db_path)
+        != _SYNC_CONTEXT.get("hydroshare_db_report_mtime_ns")
+    ):
+        try:
+            hydroshare_db_report = load_json(hydroshare_db_path)
         except (OSError, json.JSONDecodeError):
             pass
     if (
@@ -344,11 +419,22 @@ def write_failed_sync_report(error: BaseException) -> Path | None:
             github_db_report
             and github_db_report.get("status") == "completed"
         ),
+        "hydroshare_resources_requested": _SYNC_CONTEXT.get(
+            "include_hydroshare_resources", False
+        ),
+        "hydroshare_database_update_performed": bool(
+            hydroshare_db_report
+            and hydroshare_db_report.get("status") == "completed"
+        ),
         "prepared_bundle": _SYNC_CONTEXT.get("prepared_bundle"),
     }
     if github_report:
         failure_metadata["github_repositories"] = github_repository_report_summary(
             github_report, github_db_report
+        )
+    if hydroshare_report:
+        failure_metadata["hydroshare_resources"] = hydroshare_report_summary(
+            hydroshare_report, hydroshare_db_report
         )
 
     report = build_synchronization_report(
@@ -362,6 +448,12 @@ def write_failed_sync_report(error: BaseException) -> Path | None:
         additional_usage_reports=[
             github_report.get("openai_usage") if github_report else None,
             github_db_report.get("openai_usage") if github_db_report else None,
+            hydroshare_report.get("openai_usage") if hydroshare_report else None,
+            (
+                hydroshare_db_report.get("openai_usage")
+                if hydroshare_db_report
+                else None
+            ),
         ],
         error=str(error),
         metadata=failure_metadata,
@@ -382,6 +474,22 @@ def main() -> int:
         help=(
             "Also generate type-4 GitHub repository artifacts and LLM descriptions. "
             "With --update-db, also reconcile them into the database."
+        ),
+    )
+    parser.add_argument(
+        "--include-hydroshare-resources",
+        action="store_true",
+        help=(
+            "Also generate type-3 HydroShare Research Portal artifacts and chunks. "
+            "With --update-db, reconcile their rows and portal memberships."
+        ),
+    )
+    parser.add_argument(
+        "--allow-large-hydroshare-removals",
+        action="store_true",
+        help=(
+            "Allow a severely reduced, non-empty HydroShare discovery result. "
+            "Use only after verifying that the removals are intentional."
         ),
     )
     parser.add_argument(
@@ -410,6 +518,14 @@ def main() -> int:
         help="Allow --update-db even when generation_report has pending summaries.",
     )
     args = parser.parse_args()
+    if (
+        args.allow_large_hydroshare_removals
+        and not args.include_hydroshare_resources
+    ):
+        parser.error(
+            "--allow-large-hydroshare-removals requires "
+            "--include-hydroshare-resources"
+        )
     sync_id = new_sync_id()
     started_at = utc_now_iso()
     _SYNC_CONTEXT = {
@@ -417,10 +533,13 @@ def main() -> int:
         "started_at": started_at,
         "include_db": args.update_db,
         "include_github_repositories": args.include_github_repositories,
+        "include_hydroshare_resources": args.include_hydroshare_resources,
         "generation_mtime_ns": _mtime_ns(FORMATTED_DIR / "generation_report.json"),
         "db_mtime_ns": _mtime_ns(FORMATTED_DIR / "db_update_result.json"),
         "github_report_mtime_ns": _mtime_ns(GITHUB_REPOSITORY_REPORT),
         "github_db_report_mtime_ns": _mtime_ns(GITHUB_REPOSITORY_DB_REPORT),
+        "hydroshare_report_mtime_ns": _mtime_ns(HYDROSHARE_REPORT),
+        "hydroshare_db_report_mtime_ns": _mtime_ns(HYDROSHARE_DB_REPORT),
         "prepared_bundle": None,
     }
 
@@ -430,6 +549,8 @@ def main() -> int:
         os.environ["CIROH_IGNORE_GITHUB_TOKEN"] = "1"
         os.environ["GITHUB_TOKEN"] = ""
     else:
+        load_dotenv_into_environment(ROOT / ".env")
+    if args.include_hydroshare_resources:
         load_dotenv_into_environment(ROOT / ".env")
 
     # Let child git commands operate on the local synced checkout without
@@ -486,6 +607,7 @@ def main() -> int:
             ROOT,
             sync_id=sync_id,
             include_github_repositories=args.include_github_repositories,
+            include_hydroshare_resources=args.include_hydroshare_resources,
             allow_pending_summaries=args.allow_pending_summaries,
         )
         state["prepared_bundle"] = bundle
@@ -500,6 +622,17 @@ def main() -> int:
             github_repository_generation_step(
                 next_step,
                 summarize=not args.skip_summarize,
+                root=ROOT,
+            )
+        )
+        next_step += 1
+    if args.include_hydroshare_resources:
+        steps.append(
+            hydroshare_generation_step(
+                next_step,
+                allow_large_removals=(
+                    args.allow_large_hydroshare_removals
+                ),
                 root=ROOT,
             )
         )
@@ -531,9 +664,10 @@ def main() -> int:
         ]
     )
     if args.update_db:
+        database_step_number = next_step + 4
         steps.append(
             database_step(
-                next_step + 4,
+                database_step_number,
                 artifacts=prepared_bundle_path / "docuhub_artifacts.json",
                 chunks=prepared_bundle_path / "docuhub_chunks.json",
                 expected_artifact_type=DOCUHUB_ARTIFACT_TYPE_ID,
@@ -543,10 +677,11 @@ def main() -> int:
                 root=ROOT,
             )
         )
+        database_step_number += 1
         if args.include_github_repositories:
             steps.append(
                 database_step(
-                    next_step + 5,
+                    database_step_number,
                     artifacts=prepared_bundle_path / "github_artifacts.json",
                     chunks=prepared_bundle_path / "github_chunks.json",
                     expected_artifact_type=4,
@@ -557,6 +692,29 @@ def main() -> int:
                     result_file="github_repository_db_update_result.json",
                     key="update_github_repository_database",
                     label="Updating GitHub repository database rows & embeddings...",
+                    root=ROOT,
+                )
+            )
+            database_step_number += 1
+        if args.include_hydroshare_resources:
+            steps.append(
+                database_step(
+                    database_step_number,
+                    artifacts=prepared_bundle_path / "hydroshare_artifacts.json",
+                    chunks=prepared_bundle_path / "hydroshare_chunks.json",
+                    expected_artifact_type=3,
+                    reconcile_hydroshare_snapshot=True,
+                    allow_large_hydroshare_removals=(
+                        args.allow_large_hydroshare_removals
+                    ),
+                    skip_embeddings=args.skip_embeddings,
+                    require_summaries=False,
+                    result_file="hydroshare_db_update_result.json",
+                    key="update_hydroshare_database",
+                    label=(
+                        "Updating HydroShare database rows, portal types & "
+                        "embeddings..."
+                    ),
                     root=ROOT,
                 )
             )
@@ -575,11 +733,16 @@ def main() -> int:
         started_at=started_at,
         include_db=args.update_db,
         include_github_repositories=args.include_github_repositories,
+        include_hydroshare_resources=args.include_hydroshare_resources,
         metadata={
             "database_update_requested": args.update_db,
             "github_repository_artifacts_requested": args.include_github_repositories,
             "github_repository_database_update_performed": (
                 args.update_db and args.include_github_repositories
+            ),
+            "hydroshare_resources_requested": args.include_hydroshare_resources,
+            "hydroshare_database_update_performed": (
+                args.update_db and args.include_hydroshare_resources
             ),
             "summarization_requested": not args.skip_summarize,
             "embeddings_requested": args.update_db and not args.skip_embeddings,

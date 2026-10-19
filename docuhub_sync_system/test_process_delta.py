@@ -6,17 +6,31 @@ from Andres_implementation.process_delta import (
     _repository_snapshot_fingerprint,
     build_metadata,
     deactivate_artifacts_by_urls,
+    ensure_hydroshare_chunk_types,
+    ensure_hydroshare_snapshot_portal_mappings,
+    get_hydroshare_portal_types,
+    insert_hydroshare_portal_mappings,
     insert_chunks,
+    parse_date,
     reconcile_artifact_snapshot,
     validate_version_history_schema,
 )
 
 
 class FakeDatabase:
-    def __init__(self, active_rows=None, chunk_types=None, schema_indexes=None):
+    def __init__(
+        self,
+        active_rows=None,
+        chunk_types=None,
+        schema_indexes=None,
+        portal_types=None,
+        active_artifact_ids=None,
+    ):
         self.active_rows = active_rows or []
         self.chunk_types = chunk_types or []
         self.schema_indexes = schema_indexes or []
+        self.portal_types = portal_types or []
+        self.active_artifact_ids = active_artifact_ids or []
         self.queries = []
         self.batches = []
 
@@ -26,6 +40,10 @@ class FakeDatabase:
             return self.active_rows
         if "SELECT idchunktype, typename FROM tblchunktypes" in query:
             return self.chunk_types
+        if "SELECT idartifact, url FROM tblartifacts" in query:
+            return self.active_artifact_ids
+        if "FROM tblhsresearchportaltypes;" in query:
+            return self.portal_types
         if "FROM pg_index ind" in query:
             return self.schema_indexes
         if "UPDATE tblartifacts SET" in query and "RETURNING idartifact" in query:
@@ -61,6 +79,52 @@ def repository_chunk(source_id, chunk_id, text="overview"):
         "section_hint": "Overview",
         "type_specific": {"source_file": "README.md"},
     }
+
+
+def hydroshare_artifact(source_id=1, portal_types=None):
+    return {
+        "idArtifact": source_id,
+        "idArtifactType": 3,
+        "Title": "HydroShare resource",
+        "URL": (
+            "https://www.hydroshare.org/resource/"
+            "0123456789abcdef0123456789abcdef/"
+        ),
+        "artifact_role": "hydroshare_resource",
+        "resource_id": "0123456789abcdef0123456789abcdef",
+        "resource_type": "CompositeResource",
+        "date_last_updated": "2026-10-15T12:30:45.123456Z",
+        "abstract": "Example resource",
+        "hs_research_portal_types": portal_types or ["Datasets"],
+        "summary_data": {
+            "summary_text": "HydroShare resource",
+            "keywords": ["HydroShare"],
+        },
+    }
+
+
+def hydroshare_reconciliation_fixture(active_count=20, removal_count=5):
+    artifacts = []
+    active_rows = []
+    retained_count = active_count - removal_count
+    for index in range(retained_count):
+        resource_id = f"{index + 1:032x}"
+        artifact = hydroshare_artifact(source_id=index + 1)
+        artifact["resource_id"] = resource_id
+        artifact["URL"] = f"https://www.hydroshare.org/resource/{resource_id}/"
+        fingerprint = _repository_snapshot_fingerprint(artifact, [])
+        artifacts.append(artifact)
+        active_rows.append({
+            "url": artifact["URL"],
+            "metadata": {"sync": {"content_fingerprint": fingerprint}},
+        })
+    for index in range(removal_count):
+        resource_id = f"{active_count + index + 1:032x}"
+        active_rows.append({
+            "url": f"https://www.hydroshare.org/resource/{resource_id}/",
+            "metadata": {"sync": {"content_fingerprint": "old"}},
+        })
+    return artifacts, active_rows
 
 
 class ProcessDeltaTests(unittest.TestCase):
@@ -139,6 +203,243 @@ class ProcessDeltaTests(unittest.TestCase):
         self.assertEqual(
             "CIROH-UA/sample", metadata["github_repository"]["full_name"]
         )
+
+    def test_hydroshare_metadata_date_and_portal_types_are_preserved(self):
+        artifact = hydroshare_artifact(
+            portal_types=["datasets", "Apps", "Datasets"]
+        )
+        artifact["_sync_content_fingerprint"] = "hs-fingerprint"
+
+        metadata = build_metadata(artifact)
+
+        self.assertEqual(
+            "0123456789abcdef0123456789abcdef",
+            metadata["hydroshare"]["resource_id"],
+        )
+        self.assertEqual(
+            ["Apps", "Datasets"],
+            metadata["hydroshare"]["hs_research_portal_types"],
+        )
+        self.assertEqual(
+            "2026-10-15T12:30:45.123456Z",
+            metadata["sync"]["source_version"],
+        )
+        self.assertEqual(
+            "hs-fingerprint", metadata["sync"]["content_fingerprint"]
+        )
+        self.assertIsNotNone(parse_date(artifact["date_last_updated"]))
+
+    def test_hydroshare_portal_types_are_stable_in_fingerprint(self):
+        first = hydroshare_artifact(portal_types=["Datasets", "Apps"])
+        reordered = hydroshare_artifact(portal_types=["apps", "datasets"])
+        changed = hydroshare_artifact(
+            portal_types=["Apps", "Datasets", "Notebooks"]
+        )
+
+        self.assertEqual(
+            ["Apps", "Datasets"], get_hydroshare_portal_types(first)
+        )
+        self.assertEqual(
+            _repository_snapshot_fingerprint(first, []),
+            _repository_snapshot_fingerprint(reordered, []),
+        )
+        self.assertNotEqual(
+            _repository_snapshot_fingerprint(first, []),
+            _repository_snapshot_fingerprint(changed, []),
+        )
+
+    def test_hydroshare_snapshot_query_is_scoped_within_type_three(self):
+        artifact = hydroshare_artifact()
+        db = FakeDatabase(active_rows=[{
+            "url": "https://www.hydroshare.org/resource/removed/",
+            "metadata": {
+                "hydroshare": {
+                    "artifact_role": "hydroshare_resource",
+                    "resource_id": "removed",
+                },
+                "sync": {"content_fingerprint": "old"},
+            },
+        }])
+
+        upserts, deletes, stats = reconcile_artifact_snapshot(
+            db, [artifact], [], 3, hydroshare_only=True
+        )
+
+        self.assertEqual([artifact["URL"]], [item["URL"] for item in upserts])
+        self.assertEqual(
+            [{"URL": "https://www.hydroshare.org/resource/removed/"}],
+            deletes,
+        )
+        query, params, _ = db.queries[0]
+        self.assertIn("metadata->'hydroshare'", query)
+        self.assertIn("ILIKE '%%hydroshare.org/resource/%%'", query)
+        self.assertEqual((3,), params)
+        self.assertEqual("hydroshare", stats["scope"])
+
+    def test_hydroshare_snapshot_rejects_unmarked_type_three_artifact(self):
+        artifact = hydroshare_artifact()
+        artifact.pop("artifact_role")
+
+        with self.assertRaisesRegex(RuntimeError, "not marked"):
+            reconcile_artifact_snapshot(
+                FakeDatabase(), [artifact], [], 3, hydroshare_only=True
+            )
+
+    def test_hydroshare_snapshot_rejects_empty_discovery(self):
+        with self.assertRaisesRegex(RuntimeError, "snapshot is empty"):
+            reconcile_artifact_snapshot(
+                FakeDatabase(), [], [], 3, hydroshare_only=True
+            )
+
+    def test_hydroshare_snapshot_rejects_large_removal_by_default(self):
+        artifacts, active_rows = hydroshare_reconciliation_fixture(
+            active_count=20, removal_count=5
+        )
+
+        with self.assertRaisesRegex(
+            RuntimeError,
+            "deactivate 5 of 20.*allow-large-hydroshare-removals",
+        ):
+            reconcile_artifact_snapshot(
+                FakeDatabase(active_rows=active_rows),
+                artifacts,
+                [],
+                3,
+                hydroshare_only=True,
+            )
+
+    def test_hydroshare_snapshot_allows_large_removal_with_override(self):
+        artifacts, active_rows = hydroshare_reconciliation_fixture(
+            active_count=20, removal_count=5
+        )
+
+        upserts, deletes, stats = reconcile_artifact_snapshot(
+            FakeDatabase(active_rows=active_rows),
+            artifacts,
+            [],
+            3,
+            hydroshare_only=True,
+            allow_large_hydroshare_removals=True,
+        )
+
+        self.assertEqual([], upserts)
+        self.assertEqual(5, len(deletes))
+        self.assertEqual(5, stats["removed_artifacts"])
+
+    def test_hydroshare_large_removal_guard_requires_both_thresholds(self):
+        for active_count, removal_count in ((5, 4), (21, 5)):
+            with self.subTest(
+                active_count=active_count, removal_count=removal_count
+            ):
+                artifacts, active_rows = hydroshare_reconciliation_fixture(
+                    active_count=active_count,
+                    removal_count=removal_count,
+                )
+                _, deletes, _ = reconcile_artifact_snapshot(
+                    FakeDatabase(active_rows=active_rows),
+                    artifacts,
+                    [],
+                    3,
+                    hydroshare_only=True,
+                )
+                self.assertEqual(removal_count, len(deletes))
+
+    def test_hydroshare_snapshot_requires_a_portal_type(self):
+        artifact = hydroshare_artifact()
+        artifact["hs_research_portal_types"] = []
+
+        with self.assertRaisesRegex(RuntimeError, "no research-portal type"):
+            reconcile_artifact_snapshot(
+                FakeDatabase(), [artifact], [], 3, hydroshare_only=True
+            )
+
+    def test_hydroshare_portal_mappings_use_validated_lookup_ids(self):
+        artifact = hydroshare_artifact(
+            portal_types=["Datasets", "Notebooks", "Datasets"]
+        )
+        db = FakeDatabase(portal_types=[
+            {"idhsresearchportaltype": 2, "hsresearchportaltype": "Datasets"},
+            {"idhsresearchportaltype": 6, "hsresearchportaltype": "Notebooks"},
+        ])
+
+        inserted = insert_hydroshare_portal_mappings(
+            db, [artifact], {artifact["URL"]: 101}
+        )
+
+        self.assertEqual(2, inserted)
+        self.assertTrue(any(
+            "FROM tblhsresearchportaltypes;" in query
+            for query, _, _ in db.queries
+        ))
+        query, rows, _ = db.batches[0]
+        self.assertIn("INSERT INTO trlartifactshsresearchportaltypes", query)
+        self.assertIn("ON CONFLICT", query)
+        self.assertEqual([(101, 2), (101, 6)], rows)
+
+    def test_hydroshare_portal_mapping_rejects_unknown_lookup_name(self):
+        artifact = hydroshare_artifact(portal_types=["Unknown"])
+
+        with self.assertRaisesRegex(RuntimeError, "unknown HydroShare"):
+            insert_hydroshare_portal_mappings(
+                FakeDatabase(), [artifact], {artifact["URL"]: 101}
+            )
+
+    def test_unchanged_hydroshare_snapshot_backfills_empty_bridge(self):
+        artifact = hydroshare_artifact(portal_types=["Datasets"])
+        db = FakeDatabase(
+            active_artifact_ids=[{
+                "idartifact": 101,
+                "url": artifact["URL"],
+            }],
+            portal_types=[{
+                "idhsresearchportaltype": 2,
+                "hsresearchportaltype": "Datasets",
+            }],
+        )
+
+        # There are no artifacts to upsert in this scenario. The complete
+        # incoming snapshot is enough to restore a missing bridge row.
+        ensured = ensure_hydroshare_snapshot_portal_mappings(db, [artifact])
+
+        self.assertEqual(1, ensured)
+        active_query, params, fetch = db.queries[0]
+        self.assertIn("idartifacttype = %s", active_query)
+        self.assertIn("isactive = TRUE", active_query)
+        self.assertEqual(([artifact["URL"]], 3), params)
+        self.assertTrue(fetch)
+        bridge_query, rows, _ = db.batches[0]
+        self.assertIn("ON CONFLICT", bridge_query)
+        self.assertEqual([(101, 2)], rows)
+
+    def test_hydroshare_chunk_types_are_seeded_idempotently(self):
+        db = FakeDatabase()
+
+        ensure_hydroshare_chunk_types(db)
+
+        query, rows, page_size = db.batches[0]
+        self.assertIn("ON CONFLICT", query)
+        self.assertEqual(15, len(rows))
+        self.assertIn((3, "Readme File"), rows)
+        self.assertEqual(15, page_size)
+
+    def test_hydroshare_symbolic_chunk_type_is_resolved_by_name(self):
+        db = FakeDatabase(
+            chunk_types=[{"idchunktype": 31, "typename": "Abstract"}]
+        )
+        chunk = repository_chunk(1, 10)
+        chunk["chunk_type_name"] = "Abstract"
+        artifact = hydroshare_artifact()
+
+        inserted = insert_chunks(
+            db,
+            [chunk],
+            {1: artifact["URL"]},
+            {artifact["URL"]: 99},
+            3,
+        )
+
+        self.assertEqual(1, inserted)
+        self.assertEqual(31, db.batches[0][1][0][1])
 
     def test_docuhub_metadata_retains_retry_fingerprint(self):
         artifact = {

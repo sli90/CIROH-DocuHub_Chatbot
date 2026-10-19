@@ -91,7 +91,7 @@ class LocalContentPipelineTests(unittest.TestCase):
             "src/pages/impact.mdx": "Community impact data",
             "src/pages/working-groups/index.js": "Flood Inundation Mapping Working Group",
             "src/pages/news.mdx": "June 2026 Update",
-            "docs/products/intro.mdx": "NextGen In A Box",
+            "docs/products/intro.mdx": "Community NextGen Ecosystem",
             "src/pages/index.js": "Explore CIROH resources",
         }
         for target, expected in targets.items():

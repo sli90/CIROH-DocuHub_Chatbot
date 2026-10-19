@@ -176,6 +176,43 @@ def github_repository_generation_step(
     )
 
 
+def hydroshare_generation_step(
+    number: int = 4,
+    *,
+    allow_large_removals: bool = False,
+    root: Path | str = ROOT,
+) -> SyncStep:
+    """Build the type-3 HydroShare Research Portal snapshot locally."""
+    root_path = Path(root)
+
+    def action() -> Any:
+        # Import lazily so the default DocuHub-only workflow does not require
+        # the optional HydroShare client until the operator selects this source.
+        from dotenv import load_dotenv
+        from hydroshare_sync import synchronize_hydroshare_resources
+
+        load_dotenv(root_path / ".env")
+        report = synchronize_hydroshare_resources(
+            root=root_path,
+            allow_large_removals=allow_large_removals,
+        )
+        if report.get("status") != "completed":
+            raise RuntimeError("HydroShare generation did not complete")
+        if int(report.get("total_artifacts") or 0) <= 0:
+            raise RuntimeError(
+                "HydroShare discovery returned no artifacts; refusing snapshot "
+                "reconciliation to protect existing active rows"
+            )
+        return report
+
+    return callback_step(
+        number,
+        "generate_hydroshare_resources",
+        "Generating HydroShare Research Portal artifacts & chunks...",
+        action,
+    )
+
+
 def database_step(
     number: int = 6,
     *,
@@ -184,6 +221,8 @@ def database_step(
     deactivate_active_artifact_type: int | None = None,
     expected_artifact_type: int | None = None,
     reconcile_snapshot_artifact_type: int | None = None,
+    reconcile_hydroshare_snapshot: bool = False,
+    allow_large_hydroshare_removals: bool = False,
     ensure_repository_chunk_types: bool = False,
     require_summaries: bool = False,
     result_file: Path | str = "db_update_result.json",
@@ -211,6 +250,10 @@ def database_step(
                 str(reconcile_snapshot_artifact_type),
             ]
         )
+    if reconcile_hydroshare_snapshot:
+        command.append("--reconcile-hydroshare-snapshot")
+    if allow_large_hydroshare_removals:
+        command.append("--allow-large-hydroshare-removals")
     if ensure_repository_chunk_types:
         command.append("--ensure-repository-chunk-types")
     if require_summaries:
@@ -249,6 +292,35 @@ def github_repository_database_step(
         result_file="github_repository_db_update_result.json",
         key="update_github_repository_database",
         label="Updating GitHub repository database rows & embeddings...",
+        skip_embeddings=skip_embeddings,
+        root=root_path,
+        python_executable=python_executable,
+    )
+
+
+def hydroshare_database_step(
+    number: int,
+    *,
+    root: Path | str = ROOT,
+    python_executable: str = sys.executable,
+    skip_embeddings: bool = False,
+    require_summaries: bool = False,
+    allow_large_removals: bool = False,
+) -> SyncStep:
+    """Reconcile type-3 HydroShare rows and their portal memberships."""
+    root_path = Path(root)
+    formatted = root_path / "dashboard" / "formated_files"
+    return database_step(
+        number,
+        artifacts=formatted / "hydroshare_artifacts.json",
+        chunks=formatted / "hydroshare_chunks.json",
+        expected_artifact_type=3,
+        reconcile_hydroshare_snapshot=True,
+        allow_large_hydroshare_removals=allow_large_removals,
+        require_summaries=require_summaries,
+        result_file="hydroshare_db_update_result.json",
+        key="update_hydroshare_database",
+        label="Updating HydroShare database rows, portal types & embeddings...",
         skip_embeddings=skip_embeddings,
         root=root_path,
         python_executable=python_executable,

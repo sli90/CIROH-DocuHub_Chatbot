@@ -1,3 +1,7 @@
+-- Keep fresh installations out of the default public schema.
+CREATE SCHEMA IF NOT EXISTS "CIROH_AIBot";
+SET search_path TO "CIROH_AIBot", public;
+
 -- Extension for embeddings
 CREATE EXTENSION IF NOT EXISTS vector;
 
@@ -32,6 +36,30 @@ CREATE INDEX idx_artifact_active ON TBLArtifacts(isActive);
 
 -- HNSW index for vector search (only active artifacts)
 CREATE INDEX ON TBLArtifacts USING hnsw (embedding vector_cosine_ops);
+
+-- HydroShare research-portal classifications are deliberately separate from
+-- artifact types. One HydroShare resource may appear in several portal areas.
+CREATE TABLE TBLHSResearchPortalTypes (
+    idHSResearchPortalType SERIAL PRIMARY KEY,
+    HSResearchPortalType TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE TRLArtifactsHSResearchPortalTypes (
+    idArtifact INTEGER NOT NULL
+        REFERENCES TBLArtifacts(idArtifact) ON DELETE CASCADE,
+    idHSResearchPortalType INTEGER NOT NULL
+        REFERENCES TBLHSResearchPortalTypes(idHSResearchPortalType)
+        ON DELETE RESTRICT,
+    PRIMARY KEY (idArtifact, idHSResearchPortalType)
+);
+
+-- The bridge primary key supports artifact -> category lookups. This reverse
+-- index supports category -> artifact lookups used by the research portal.
+CREATE INDEX idx_artifacts_hs_research_portal_type
+    ON TRLArtifactsHSResearchPortalTypes(
+        idHSResearchPortalType,
+        idArtifact
+    );
 
 -- 3. Chunk Types Table
 CREATE TABLE TBLChunkTypes (
@@ -90,5 +118,30 @@ VALUES
     (4, 'Documentation Section'),
     (4, 'Notebook Section'),
     (4, 'Configuration / Deployment'),
-    (4, 'Change Log / Release Notes')
+    (4, 'Change Log / Release Notes'),
+    (3, 'Abstract'),
+    (3, 'Spatial Coverage'),
+    (3, 'Temporal Coverage'),
+    (3, 'Variable Metadata'),
+    (3, 'Data Services Info'),
+    (3, 'File Description'),
+    (3, 'Collection Contents'),
+    (3, 'Subject Keywords'),
+    (3, 'Related Resources Context'),
+    (3, 'Citation'),
+    (3, 'Creator'),
+    (3, 'Contributor'),
+    (3, 'Funding Agency'),
+    (3, 'Additional Metadata'),
+    (3, 'Readme File')
 ON CONFLICT DO NOTHING;
+
+INSERT INTO TBLHSResearchPortalTypes (HSResearchPortalType)
+VALUES
+    ('Apps'),
+    ('Datasets'),
+    ('Courses'),
+    ('Presentations'),
+    ('Events'),
+    ('Notebooks')
+ON CONFLICT (HSResearchPortalType) DO NOTHING;

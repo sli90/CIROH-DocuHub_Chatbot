@@ -38,6 +38,8 @@ from sync_pipeline import (  # noqa: E402
     generation_step,
     github_repository_database_step,
     github_repository_generation_step,
+    hydroshare_database_step,
+    hydroshare_generation_step,
     repository_sync_steps,
     run_sync_steps,
 )
@@ -1906,7 +1908,10 @@ _pipeline_state: dict = {
     "completed_at": None,
     "failed_step": None,
     "failed_label": None,
-    "options": {"include_github_repositories": False},
+    "options": {
+        "include_github_repositories": False,
+        "include_hydroshare_resources": False,
+    },
 }
 _pipeline_lock = threading.Lock()
 
@@ -1927,11 +1932,16 @@ def _merge_dashboard_documents():
     )
 
 
-def _dashboard_pipeline_steps(include_github_repositories=False):
+def _dashboard_pipeline_steps(
+    include_github_repositories=False, include_hydroshare_resources=False
+):
     steps = [*repository_sync_steps(root=ROOT)]
     next_step = 4
     if include_github_repositories:
         steps.append(github_repository_generation_step(next_step, root=ROOT))
+        next_step += 1
+    if include_hydroshare_resources:
+        steps.append(hydroshare_generation_step(next_step, root=ROOT))
         next_step += 1
     steps.extend([
         callback_step(
@@ -1945,10 +1955,14 @@ def _dashboard_pipeline_steps(include_github_repositories=False):
             next_step + 2, expected_artifact_type=1, root=ROOT
         ),
     ])
+    database_step_number = next_step + 3
     if include_github_repositories:
         steps.append(
-            github_repository_database_step(next_step + 3, root=ROOT)
+            github_repository_database_step(database_step_number, root=ROOT)
         )
+        database_step_number += 1
+    if include_hydroshare_resources:
+        steps.append(hydroshare_database_step(database_step_number, root=ROOT))
     return steps
 
 
@@ -1975,6 +1989,34 @@ def _synchronization_summary(report):
     database = report.get("database") or {}
     metadata = report.get("metadata") or {}
     github_repositories = metadata.get("github_repositories") or {}
+    hydroshare_resources = metadata.get("hydroshare_resources") or {}
+    total_artifacts = sum(
+        int(source.get("total_artifacts", 0) or 0)
+        for source in (content, github_repositories, hydroshare_resources)
+    )
+    total_chunks = sum(
+        int(source.get("total_chunks", 0) or 0)
+        for source in (content, github_repositories, hydroshare_resources)
+    )
+    new_count = sum(
+        int(source.get("new_count", 0) or 0)
+        for source in (content, github_repositories, hydroshare_resources)
+    )
+    updated_count = sum(
+        int(source.get("updated_count", 0) or 0)
+        for source in (content, github_repositories, hydroshare_resources)
+    )
+    deleted_count = (
+        int(content.get("deleted_count", 0) or 0)
+        + int(github_repositories.get("deleted_count", 0) or 0)
+        + int(
+            hydroshare_resources.get(
+                "removed_count",
+                hydroshare_resources.get("deleted_count", 0),
+            )
+            or 0
+        )
+    )
     duration_seconds = report.get("duration_seconds")
     if duration_seconds is None:
         try:
@@ -1990,11 +2032,11 @@ def _synchronization_summary(report):
         "started_at": report.get("started_at"),
         "completed_at": report.get("completed_at"),
         "duration_seconds": duration_seconds,
-        "total_artifacts": content.get("total_artifacts", 0),
-        "new_count": content.get("new_count", 0),
-        "updated_count": content.get("updated_count", 0),
-        "deleted_count": content.get("deleted_count", 0),
-        "total_chunks": content.get("total_chunks", 0),
+        "total_artifacts": total_artifacts,
+        "new_count": new_count,
+        "updated_count": updated_count,
+        "deleted_count": deleted_count,
+        "total_chunks": total_chunks,
         "summary_error_count": content.get("summary_error_count", 0),
         "openai_tokens": usage.get("total_tokens", 0),
         "estimated_cost_usd": usage.get("estimated_cost_usd"),
@@ -2007,6 +2049,10 @@ def _synchronization_summary(report):
         "github_artifacts": github_repositories.get("total_artifacts", 0),
         "github_repositories_requested": metadata.get(
             "github_repository_artifacts_requested", False
+        ),
+        "hydroshare_artifacts": hydroshare_resources.get("total_artifacts", 0),
+        "hydroshare_resources_requested": metadata.get(
+            "hydroshare_resources_requested", False
         ),
         "error": report.get("error"),
     }
@@ -2066,6 +2112,245 @@ def _load_synchronization_detail(sync_id):
     return None
 
 
+_SOURCE_STATUS_DEFINITIONS = (
+    {
+        "key": "ciroh_hub",
+        "label": "CIROH Hub documentation",
+        "artifact_type_id": 1,
+        "optional": False,
+        "generation_report": "generation_report.json",
+        "database_report": "db_update_result.json",
+        "history_key": "content",
+    },
+    {
+        "key": "github_repositories",
+        "label": "GitHub repositories",
+        "artifact_type_id": 4,
+        "optional": True,
+        "generation_report": "github_repository_generation_report.json",
+        "database_report": "github_repository_db_update_result.json",
+        "history_key": "github_repositories",
+    },
+    {
+        "key": "hydroshare",
+        "label": "HydroShare Research Portal",
+        "artifact_type_id": 3,
+        "optional": True,
+        "generation_report": "hydroshare_generation_report.json",
+        "database_report": "hydroshare_db_update_result.json",
+        "history_key": "hydroshare_resources",
+    },
+)
+
+
+def _source_status_count(value):
+    try:
+        return max(0, int(value or 0))
+    except (TypeError, ValueError):
+        return 0
+
+
+def _report_timestamp(report, path=None):
+    """Return a validated report timestamp, falling back to the file mtime."""
+    for key in ("completed_at", "generated_at"):
+        value = report.get(key) if isinstance(report, dict) else None
+        if _parse_iso(value) is not None:
+            return value
+    if path:
+        try:
+            return datetime.fromtimestamp(
+                os.path.getmtime(path), timezone.utc
+            ).isoformat()
+        except OSError:
+            pass
+    return None
+
+
+def _load_status_report(filename):
+    path = os.path.join(SYNCHRONIZATION_OUTPUT_DIR, filename)
+    try:
+        with open(path, "r", encoding="utf-8") as handle:
+            payload = json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return {}, None, path
+    if not isinstance(payload, dict):
+        return {}, None, path
+    return payload, _report_timestamp(payload, path), path
+
+
+def _empty_source_status(definition):
+    return {
+        "key": definition["key"],
+        "label": definition["label"],
+        "artifact_type_id": definition["artifact_type_id"],
+        "optional": definition["optional"],
+        "status": "not_synced",
+        "last_synced_at": None,
+        "artifacts": 0,
+        "chunks": 0,
+        "new_count": 0,
+        "updated_count": 0,
+        "removed_count": 0,
+        "db_upserted": 0,
+        "db_deactivated": 0,
+        "db_unchanged": 0,
+    }
+
+
+def _database_status_counts(report):
+    reconciliation = report.get("reconciliation") or {}
+    return {
+        "db_upserted": _source_status_count(
+            report.get("upserted_artifacts", report.get("db_upserted", 0))
+        ),
+        "db_deactivated": _source_status_count(
+            report.get(
+                "deactivated_artifacts", report.get("db_deactivated", 0)
+            )
+        ),
+        "db_unchanged": _source_status_count(
+            reconciliation.get(
+                "unchanged_artifacts", report.get("db_unchanged", 0)
+            )
+        ),
+    }
+
+
+def _status_from_reports(definition, generation, database, timestamps):
+    item = _empty_source_status(definition)
+    if not generation and not database:
+        return item
+
+    generation_time, database_time = timestamps
+    timestamped_reports = [
+        (timestamp, report)
+        for timestamp, report in (
+            (generation_time, generation),
+            (database_time, database),
+        )
+        if report
+    ]
+    timestamped_reports.sort(
+        key=lambda pair: _parse_iso(pair[0])
+        or datetime.min.replace(tzinfo=timezone.utc)
+    )
+    latest_report = timestamped_reports[-1][1]
+    item["last_synced_at"] = timestamped_reports[-1][0]
+    item["status"] = (
+        latest_report.get("status")
+        or generation.get("status")
+        or database.get("status")
+        or "completed"
+    )
+
+    reconciliation = database.get("reconciliation") or {}
+    if "total_artifacts" in generation:
+        item["artifacts"] = _source_status_count(
+            generation.get("total_artifacts")
+        )
+    else:
+        item["artifacts"] = _source_status_count(
+            reconciliation.get("snapshot_artifacts")
+        )
+    if "total_chunks" in generation:
+        item["chunks"] = _source_status_count(generation.get("total_chunks"))
+    else:
+        item["chunks"] = _source_status_count(database.get("chunks_inserted"))
+    item["new_count"] = _source_status_count(generation.get("new_count"))
+    item["updated_count"] = _source_status_count(
+        generation.get("updated_count")
+    )
+    item["removed_count"] = _source_status_count(
+        generation.get("removed_count", generation.get("deleted_count", 0))
+    )
+    item.update(_database_status_counts(database))
+    return item
+
+
+def _iter_synchronization_report_files():
+    # Runtime history wins over the bundled seed when both contain a sync ID.
+    reports_by_id = {}
+    for history_dir in (
+        BOOTSTRAP_SYNCHRONIZATION_HISTORY_DIR,
+        SYNCHRONIZATION_HISTORY_DIR,
+    ):
+        try:
+            filenames = [
+                name
+                for name in os.listdir(history_dir)
+                if name.startswith("sync_") and name.endswith(".json")
+            ]
+        except OSError:
+            continue
+        for filename in filenames:
+            path = os.path.join(history_dir, filename)
+            try:
+                with open(path, "r", encoding="utf-8") as handle:
+                    report = json.load(handle)
+            except (OSError, json.JSONDecodeError):
+                continue
+            if isinstance(report, dict):
+                reports_by_id[report.get("sync_id") or filename] = (report, path)
+    return reports_by_id.values()
+
+
+def _history_source_status(definition):
+    latest = None
+    latest_dt = None
+    for report, path in _iter_synchronization_report_files():
+        if definition["history_key"] == "content":
+            source_report = report.get("content")
+            database = report.get("database") or {}
+        else:
+            source_report = (report.get("metadata") or {}).get(
+                definition["history_key"]
+            )
+            database = (
+                source_report.get("database")
+                if isinstance(source_report, dict)
+                else {}
+            ) or {}
+        if not isinstance(source_report, dict) or not source_report:
+            continue
+        timestamp = _report_timestamp(report, path)
+        parsed = _parse_iso(timestamp)
+        if latest is not None and (parsed is None or parsed <= latest_dt):
+            continue
+        status = _status_from_reports(
+            definition, source_report, database, (timestamp, timestamp)
+        )
+        status["status"] = source_report.get("status") or report.get(
+            "status", status["status"]
+        )
+        latest = status
+        latest_dt = parsed
+    return latest
+
+
+def _load_source_statuses():
+    statuses = []
+    for definition in _SOURCE_STATUS_DEFINITIONS:
+        generation, generation_time, _ = _load_status_report(
+            definition["generation_report"]
+        )
+        database, database_time, _ = _load_status_report(
+            definition["database_report"]
+        )
+        if generation or database:
+            status = _status_from_reports(
+                definition,
+                generation,
+                database,
+                (generation_time, database_time),
+            )
+        else:
+            status = _history_source_status(definition)
+            if status is None:
+                status = _empty_source_status(definition)
+        statuses.append(status)
+    return statuses
+
+
 def _github_repository_report_summary(report, db_report=None):
     db_report = db_report or {}
     database_completed = db_report.get("status") == "completed"
@@ -2103,8 +2388,42 @@ def _github_repository_report_summary(report, db_report=None):
     }
 
 
+def _hydroshare_report_summary(report, db_report=None):
+    db_report = db_report or {}
+    database_completed = db_report.get("status") == "completed"
+    return {
+        "requested": True,
+        "status": report.get("status"),
+        "total_artifacts": report.get("total_artifacts", 0),
+        "total_chunks": report.get("total_chunks", 0),
+        "new_count": report.get("new_count", 0),
+        "updated_count": report.get("updated_count", 0),
+        "removed_count": report.get(
+            "removed_count", report.get("deleted_count", 0)
+        ),
+        "unchanged_count": report.get("unchanged_count", 0),
+        "portal_membership_count": report.get("portal_membership_count", 0),
+        "database_update_performed": database_completed,
+        "database": {
+            "status": db_report.get("status"),
+            "upserted_artifacts": db_report.get("upserted_artifacts", 0),
+            "deactivated_artifacts": db_report.get("deactivated_artifacts", 0),
+            "chunks_inserted": db_report.get("chunks_inserted", 0),
+            "unchanged_artifacts": (
+                (db_report.get("reconciliation") or {}).get(
+                    "unchanged_artifacts", 0
+                )
+            ),
+        },
+    }
+
+
 def _finalize_dashboard_pipeline(
-    sync_id, started_at, completed_steps, include_github_repositories=False
+    sync_id,
+    started_at,
+    completed_steps,
+    include_github_repositories=False,
+    include_hydroshare_resources=False,
 ):
     generation_report = _load_pipeline_report("generation_report.json")
     db_report = _load_pipeline_report("db_update_result.json")
@@ -2118,16 +2437,34 @@ def _finalize_dashboard_pipeline(
         if include_github_repositories
         else {}
     )
+    hydroshare_db_report = (
+        _load_pipeline_report("hydroshare_db_update_result.json")
+        if include_hydroshare_resources
+        else {}
+    )
+    hydroshare_report = (
+        _load_pipeline_report("hydroshare_generation_report.json")
+        if include_hydroshare_resources
+        else {}
+    )
     metadata = {
         "completed_steps": sorted(completed_steps),
         "github_repository_artifacts_requested": include_github_repositories,
         "github_repository_database_update_performed": (
             github_db_report.get("status") == "completed"
         ),
+        "hydroshare_resources_requested": include_hydroshare_resources,
+        "hydroshare_database_update_performed": (
+            hydroshare_db_report.get("status") == "completed"
+        ),
     }
     if github_report:
         metadata["github_repositories"] = _github_repository_report_summary(
             github_report, github_db_report
+        )
+    if hydroshare_report:
+        metadata["hydroshare_resources"] = _hydroshare_report_summary(
+            hydroshare_report, hydroshare_db_report
         )
     completed_at = utc_now_iso()
     sync_report = build_synchronization_report(
@@ -2141,6 +2478,8 @@ def _finalize_dashboard_pipeline(
         additional_usage_reports=[
             github_report.get("openai_usage"),
             github_db_report.get("openai_usage"),
+            hydroshare_report.get("openai_usage"),
+            hydroshare_db_report.get("openai_usage"),
         ],
         metadata=metadata,
     )
@@ -2152,7 +2491,9 @@ def _finalize_dashboard_pipeline(
     return result
 
 
-def _run_pipeline(include_github_repositories=False):
+def _run_pipeline(
+    include_github_repositories=False, include_hydroshare_resources=False
+):
     sync_id = new_sync_id()
     started_at = utc_now_iso()
     completed_steps = set()
@@ -2162,7 +2503,17 @@ def _run_pipeline(include_github_repositories=False):
     github_db_report_mtime_ns = _pipeline_report_mtime_ns(
         github_db_report_filename
     )
-    steps = _dashboard_pipeline_steps(include_github_repositories)
+    hydroshare_report_filename = "hydroshare_generation_report.json"
+    hydroshare_report_mtime_ns = _pipeline_report_mtime_ns(
+        hydroshare_report_filename
+    )
+    hydroshare_db_report_filename = "hydroshare_db_update_result.json"
+    hydroshare_db_report_mtime_ns = _pipeline_report_mtime_ns(
+        hydroshare_db_report_filename
+    )
+    steps = _dashboard_pipeline_steps(
+        include_github_repositories, include_hydroshare_resources
+    )
     _pipeline_state.update(
         sync_id=sync_id,
         started_at=started_at,
@@ -2170,7 +2521,10 @@ def _run_pipeline(include_github_repositories=False):
         failed_step=None,
         failed_label=None,
         total=len(steps),
-        options={"include_github_repositories": include_github_repositories},
+        options={
+            "include_github_repositories": include_github_repositories,
+            "include_hydroshare_resources": include_hydroshare_resources,
+        },
     )
 
     def on_step_start(step):
@@ -2231,6 +2585,32 @@ def _run_pipeline(include_github_repositories=False):
             )
             else {}
         )
+        hydroshare_report = (
+            _load_pipeline_report(hydroshare_report_filename)
+            if include_hydroshare_resources
+            and (
+                "generate_hydroshare_resources" in completed_steps
+                or (
+                    exc.step.key == "generate_hydroshare_resources"
+                    and _pipeline_report_mtime_ns(hydroshare_report_filename)
+                    != hydroshare_report_mtime_ns
+                )
+            )
+            else {}
+        )
+        hydroshare_db_report = (
+            _load_pipeline_report(hydroshare_db_report_filename)
+            if include_hydroshare_resources
+            and (
+                "update_hydroshare_database" in completed_steps
+                or (
+                    exc.step.key == "update_hydroshare_database"
+                    and _pipeline_report_mtime_ns(hydroshare_db_report_filename)
+                    != hydroshare_db_report_mtime_ns
+                )
+            )
+            else {}
+        )
         failure_metadata = {
             "completed_steps": sorted(completed_steps),
             "failed_step": exc.step.key,
@@ -2239,11 +2619,21 @@ def _run_pipeline(include_github_repositories=False):
             "github_repository_database_update_performed": (
                 github_db_report.get("status") == "completed"
             ),
+            "hydroshare_resources_requested": include_hydroshare_resources,
+            "hydroshare_database_update_performed": (
+                hydroshare_db_report.get("status") == "completed"
+            ),
         }
         if github_report:
             failure_metadata["github_repositories"] = (
                 _github_repository_report_summary(
                     github_report, github_db_report
+                )
+            )
+        if hydroshare_report:
+            failure_metadata["hydroshare_resources"] = (
+                _hydroshare_report_summary(
+                    hydroshare_report, hydroshare_db_report
                 )
             )
         failed_report = build_synchronization_report(
@@ -2257,6 +2647,8 @@ def _run_pipeline(include_github_repositories=False):
             additional_usage_reports=[
                 github_report.get("openai_usage"),
                 github_db_report.get("openai_usage"),
+                hydroshare_report.get("openai_usage"),
+                hydroshare_db_report.get("openai_usage"),
             ],
             error=error,
             metadata=failure_metadata,
@@ -2284,6 +2676,18 @@ def _run_pipeline(include_github_repositories=False):
             and "update_github_repository_database" in completed_steps
             else {}
         )
+        hydroshare_report = (
+            _load_pipeline_report(hydroshare_report_filename)
+            if include_hydroshare_resources
+            and "generate_hydroshare_resources" in completed_steps
+            else {}
+        )
+        hydroshare_db_report = (
+            _load_pipeline_report(hydroshare_db_report_filename)
+            if include_hydroshare_resources
+            and "update_hydroshare_database" in completed_steps
+            else {}
+        )
         failure_metadata = {
             "completed_steps": sorted(completed_steps),
             "failed_step": "unexpected_error",
@@ -2292,11 +2696,21 @@ def _run_pipeline(include_github_repositories=False):
             "github_repository_database_update_performed": (
                 github_db_report.get("status") == "completed"
             ),
+            "hydroshare_resources_requested": include_hydroshare_resources,
+            "hydroshare_database_update_performed": (
+                hydroshare_db_report.get("status") == "completed"
+            ),
         }
         if github_report:
             failure_metadata["github_repositories"] = (
                 _github_repository_report_summary(
                     github_report, github_db_report
+                )
+            )
+        if hydroshare_report:
+            failure_metadata["hydroshare_resources"] = (
+                _hydroshare_report_summary(
+                    hydroshare_report, hydroshare_db_report
                 )
             )
         failed_report = build_synchronization_report(
@@ -2308,6 +2722,8 @@ def _run_pipeline(include_github_repositories=False):
             additional_usage_reports=[
                 github_report.get("openai_usage"),
                 github_db_report.get("openai_usage"),
+                hydroshare_report.get("openai_usage"),
+                hydroshare_db_report.get("openai_usage"),
             ],
             error=error,
             metadata=failure_metadata,
@@ -2331,6 +2747,7 @@ def _run_pipeline(include_github_repositories=False):
             started_at,
             completed_steps,
             include_github_repositories,
+            include_hydroshare_resources,
         )
         _pipeline_state["completed_at"] = _pipeline_state["result"].get("completed_at")
         _pipeline_state["label"] = "Done"
@@ -2341,7 +2758,11 @@ def _run_pipeline(include_github_repositories=False):
 
 
 @app.post("/api/run-pipeline")
-def run_pipeline(request: Request, include_github_repositories: bool = False):
+def run_pipeline(
+    request: Request,
+    include_github_repositories: bool = False,
+    include_hydroshare_resources: bool = False,
+):
     _require_operator(request)
     with _pipeline_lock:
         if _pipeline_state["running"]:
@@ -2351,17 +2772,22 @@ def run_pipeline(request: Request, include_github_repositories: bool = False):
                          "label": _pipeline_state["label"]},
             )
         pipeline_total = len(
-            _dashboard_pipeline_steps(include_github_repositories)
+            _dashboard_pipeline_steps(
+                include_github_repositories, include_hydroshare_resources
+            )
         )
         _pipeline_state.update(
             running=True, step=0, total=pipeline_total, label="Starting...",
             error=None, result=None, sync_id=None, started_at=None,
             completed_at=None, failed_step=None, failed_label=None,
-            options={"include_github_repositories": include_github_repositories},
+            options={
+                "include_github_repositories": include_github_repositories,
+                "include_hydroshare_resources": include_hydroshare_resources,
+            },
         )
     t = threading.Thread(
         target=_run_pipeline,
-        args=(include_github_repositories,),
+        args=(include_github_repositories, include_hydroshare_resources),
         daemon=True,
     )
     t.start()
@@ -2371,6 +2797,12 @@ def run_pipeline(request: Request, include_github_repositories: bool = False):
 @app.get("/api/pipeline-status")
 def pipeline_status():
     return dict(_pipeline_state)
+
+
+@app.get("/api/source-status")
+def source_status():
+    items = _load_source_statuses()
+    return {"items": items, "count": len(items)}
 
 
 @app.get("/api/synchronizations")

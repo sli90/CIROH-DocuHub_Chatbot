@@ -5,6 +5,7 @@ import { Icon } from "./Common.jsx";
 export function SyncConfirmationDialog({ open, operatorMode, onCancel, onConfirm }) {
   const [operatorKey, setOperatorKey] = useState("");
   const [includeGitHubRepositories, setIncludeGitHubRepositories] = useState(false);
+  const [includeHydroShareResources, setIncludeHydroShareResources] = useState(false);
   const cancelRef = useRef(null);
 
   useEffect(() => {
@@ -17,31 +18,46 @@ export function SyncConfirmationDialog({ open, operatorMode, onCancel, onConfirm
 
   if (!open) return null;
   const tokenRequired = operatorMode === "token";
+  const selectedSourceCount = 1
+    + (includeGitHubRepositories ? 1 : 0)
+    + (includeHydroShareResources ? 1 : 0);
+  const selectedStepCount = 6
+    + (includeGitHubRepositories ? 2 : 0)
+    + (includeHydroShareResources ? 2 : 0);
 
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onCancel(); }}>
       <section className="modal-card confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="confirm-sync-title">
         <button className="modal-close" type="button" aria-label="Close confirmation" onClick={onCancel}><Icon name="close" /></button>
         <div className="modal-icon warning"><Icon name="alert" size={22} /></div>
-        <div className="eyebrow">Confirm operation</div>
-        <h2 id="confirm-sync-title">Run the complete synchronization?</h2>
-        <p>This will pull repository changes, download external content, regenerate artifacts, call OpenAI when required, and update the database.</p>
+        <div className="eyebrow">Configure operation</div>
+        <h2 id="confirm-sync-title">Choose data sources to synchronize</h2>
+        <p>CIROH Hub is always included. Add either optional source when you want its artifacts, chunks, embeddings, and database records refreshed too.</p>
         <ul className="confirmation-list">
           <li>The operation may take several minutes.</li>
           <li>Token usage and estimated cost will be recorded in the run report.</li>
           <li>A failed prerequisite will stop its dependent steps.</li>
         </ul>
+        <div className="sync-option sync-option-locked" aria-label="CIROH Hub documentation is always included">
+          <input type="checkbox" checked disabled readOnly />
+          <span><strong>CIROH Hub documentation <em>Always included</em></strong><small>Synchronizes <code>CIROH-UA/ciroh_hub</code>, generates its artifacts and chunks, and reconciles its active database records.</small></span>
+        </div>
         <label className="sync-option">
           <input type="checkbox" checked={includeGitHubRepositories} onChange={(event) => setIncludeGitHubRepositories(event.target.checked)} />
-          <span><strong>Synchronize GitHub repository artifacts &amp; chunks</strong><small>For public CIROH-UA repositories, refreshes selected files, creates repository descriptions and chunks, then incrementally updates type-4 database rows and embeddings. Unchanged rows are kept as-is; replaced or removed rows are deactivated, never deleted.</small></span>
+          <span><strong>GitHub repository artifacts &amp; chunks <em>Optional · +2 steps</em></strong><small>For public CIROH-UA repositories, refreshes selected files, creates repository descriptions and chunks, then incrementally updates type-4 database rows and embeddings. Unchanged rows are kept as-is; replaced or removed rows are deactivated, never deleted.</small></span>
         </label>
+        <label className="sync-option">
+          <input type="checkbox" checked={includeHydroShareResources} onChange={(event) => setIncludeHydroShareResources(event.target.checked)} />
+          <span><strong>HydroShare Research Portal resources <em>Optional · +2 steps</em></strong><small>Discovers the public CIROH portal collections, creates type-3 resource artifacts and chunks, records every portal category through the dedicated mapping tables, and incrementally updates embeddings. Unchanged resources are reused; replaced or removed versions are deactivated, never deleted.</small></span>
+        </label>
+        <div className="sync-selection-summary" aria-live="polite"><span><strong>{selectedSourceCount}</strong> of 3 sources selected</span><span><strong>{selectedStepCount}</strong> pipeline steps</span></div>
         <label className="field-label" htmlFor="operator-key">
           Operator key {tokenRequired ? <strong>Required</strong> : <span>Not required for local use</span>}
         </label>
         <input id="operator-key" className="text-input" type="password" autoComplete="off" value={operatorKey} onChange={(event) => setOperatorKey(event.target.value)} placeholder={tokenRequired ? "Enter the configured operator key" : "Optional"} />
         <div className="modal-actions">
           <button ref={cancelRef} className="button button-secondary" type="button" onClick={onCancel}>Cancel</button>
-          <button className="button button-primary" type="button" onClick={() => onConfirm(operatorKey, { includeGitHubRepositories })} disabled={tokenRequired && !operatorKey.trim()}><Icon name="play" /> Run synchronization</button>
+          <button className="button button-primary" type="button" onClick={() => onConfirm(operatorKey, { includeGitHubRepositories, includeHydroShareResources })} disabled={tokenRequired && !operatorKey.trim()}><Icon name="play" /> Run {selectedStepCount}-step synchronization</button>
         </div>
       </section>
     </div>
@@ -63,6 +79,8 @@ export function SyncDetailDialog({ run, detail, loading, error, onClose }) {
   const metadata = detail?.metadata || {};
   const githubRepositories = metadata.github_repositories || {};
   const githubDatabase = githubRepositories.database || {};
+  const hydroshareResources = metadata.hydroshare_resources || {};
+  const hydroshareDatabase = hydroshareResources.database || {};
 
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
@@ -81,9 +99,10 @@ export function SyncDetailDialog({ run, detail, loading, error, onClose }) {
               <div><dt>Mode</dt><dd>{detail.mode || "Not available"}</dd></div>
             </dl>
             {detail.error && <div className="run-error-detail"><strong>{metadata.failed_label || "Synchronization failed"}</strong><span>{detail.error}</span></div>}
-            <div className="detail-section"><h3>Content</h3><dl className="detail-metrics"><div><dt>Artifacts</dt><dd>{formatNumber(content.total_artifacts)}</dd></div><div><dt>New</dt><dd>{formatNumber(content.new_count)}</dd></div><div><dt>Updated</dt><dd>{formatNumber(content.updated_count)}</dd></div><div><dt>Deleted</dt><dd>{formatNumber(content.deleted_count)}</dd></div><div><dt>Chunks</dt><dd>{formatNumber(content.total_chunks)}</dd></div></dl></div>
+            <div className="detail-section"><h3>CIROH Hub documentation</h3><dl className="detail-metrics"><div><dt>Artifacts</dt><dd>{formatNumber(content.total_artifacts)}</dd></div><div><dt>New</dt><dd>{formatNumber(content.new_count)}</dd></div><div><dt>Updated</dt><dd>{formatNumber(content.updated_count)}</dd></div><div><dt>Deleted</dt><dd>{formatNumber(content.deleted_count)}</dd></div><div><dt>Chunks</dt><dd>{formatNumber(content.total_chunks)}</dd></div></dl></div>
             <div className="detail-section"><h3>OpenAI usage</h3><dl className="detail-metrics"><div><dt>Input</dt><dd>{formatNumber(usage.input_tokens)}</dd></div><div><dt>Cached input</dt><dd>{formatNumber(usage.cached_input_tokens)}</dd></div><div><dt>Output</dt><dd>{formatNumber(usage.output_tokens)}</dd></div><div><dt>Total tokens</dt><dd>{formatNumber(usage.total_tokens)}</dd></div><div><dt>Estimated cost</dt><dd>{usage.estimated_cost_usd == null ? "Unavailable" : `$${Number(usage.estimated_cost_usd).toFixed(4)}`}</dd></div></dl></div>
             {metadata.github_repository_artifacts_requested && <div className="detail-section"><h3>GitHub repository artifacts &amp; chunks</h3>{Object.keys(githubRepositories).length > 0 ? <><dl className="detail-metrics"><div><dt>Artifacts</dt><dd>{formatNumber(githubRepositories.total_artifacts)}</dd></div><div><dt>Chunks</dt><dd>{formatNumber(githubRepositories.total_chunks)}</dd></div><div><dt>Summarized</dt><dd>{formatNumber(githubRepositories.summarized_count)}</dd></div><div><dt>Repos re-chunked</dt><dd>{formatNumber(githubRepositories.chunked_repository_count)}</dd></div><div><dt>Repos reused</dt><dd>{formatNumber(githubRepositories.reused_chunk_repository_count)}</dd></div><div><dt>DB upserted</dt><dd>{formatNumber(githubDatabase.upserted_artifacts)}</dd></div><div><dt>DB deactivated</dt><dd>{formatNumber(githubDatabase.deactivated_artifacts)}</dd></div><div><dt>DB unchanged</dt><dd>{formatNumber(githubDatabase.unchanged_artifacts)}</dd></div><div><dt>DB chunks</dt><dd>{formatNumber(githubDatabase.chunks_inserted)}</dd></div><div><dt>Pending summaries</dt><dd>{formatNumber(githubRepositories.pending_summary_count)}</dd></div><div><dt>Classification errors</dt><dd>{formatNumber(githubRepositories.chunk_classification_error_count)}</dd></div></dl><p className="detail-note">{githubRepositories.database_update_performed ? "The type-4 snapshot was reconciled with the database. Historical artifacts and their chunks were preserved." : "The repository database stage was not completed."}</p></> : <p className="detail-note">The repository artifact/chunk stage was requested but did not produce a report.</p>}</div>}
+            {metadata.hydroshare_resources_requested && <div className="detail-section"><h3>HydroShare Research Portal resources</h3>{Object.keys(hydroshareResources).length > 0 ? <><dl className="detail-metrics"><div><dt>Artifacts</dt><dd>{formatNumber(hydroshareResources.total_artifacts)}</dd></div><div><dt>Chunks</dt><dd>{formatNumber(hydroshareResources.total_chunks)}</dd></div><div><dt>New</dt><dd>{formatNumber(hydroshareResources.new_count)}</dd></div><div><dt>Updated</dt><dd>{formatNumber(hydroshareResources.updated_count)}</dd></div><div><dt>Removed</dt><dd>{formatNumber(hydroshareResources.removed_count)}</dd></div><div><dt>Unchanged</dt><dd>{formatNumber(hydroshareResources.unchanged_count)}</dd></div><div><dt>Portal memberships</dt><dd>{formatNumber(hydroshareResources.portal_membership_count)}</dd></div><div><dt>DB upserted</dt><dd>{formatNumber(hydroshareDatabase.upserted_artifacts)}</dd></div><div><dt>DB deactivated</dt><dd>{formatNumber(hydroshareDatabase.deactivated_artifacts)}</dd></div><div><dt>DB unchanged</dt><dd>{formatNumber(hydroshareDatabase.unchanged_artifacts)}</dd></div><div><dt>DB chunks</dt><dd>{formatNumber(hydroshareDatabase.chunks_inserted)}</dd></div></dl><p className="detail-note">{hydroshareResources.database_update_performed ? "The type-3 HydroShare snapshot and portal memberships were reconciled with the database. Historical artifacts and chunks were preserved." : "The HydroShare database stage was not completed."}</p></> : <p className="detail-note">The HydroShare stage was requested but did not produce a report.</p>}</div>}
             {Object.keys(database).length > 0 && <div className="detail-section"><h3>Database</h3><dl className="detail-metrics"><div><dt>Upserted</dt><dd>{formatNumber(database.upserted_artifacts)}</dd></div><div><dt>Deactivated</dt><dd>{formatNumber(database.deactivated_artifacts)}</dd></div><div><dt>Chunks inserted</dt><dd>{formatNumber(database.chunks_inserted)}</dd></div></dl></div>}
             <div className="detail-section"><h3>Completed steps</h3><div className="step-list">{(metadata.completed_steps || []).length ? metadata.completed_steps.map((step) => <code key={step}>{step}</code>) : <span className="muted-text">No completed steps recorded.</span>}</div></div>
           </>

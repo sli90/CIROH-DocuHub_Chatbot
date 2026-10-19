@@ -56,7 +56,7 @@ export default function RepositoryChanges({ summary, selectedType, selectedRow, 
   return (
     <section id="changes" className="panel" aria-labelledby="change-overview-title">
       <div className="section-header">
-        <div><div className="eyebrow">Repository inventory</div><h2 id="change-overview-title">Change overview</h2><p>Compare the current file inventory with daily and weekly change windows.</p></div>
+        <div><div className="eyebrow">CIROH Hub repository</div><h2 id="change-overview-title">CIROH Hub changes</h2><p>Compare the CIROH Hub file inventory with daily and weekly change windows.</p></div>
         <div className="date-stack"><span>Daily from <strong>{formatDateShort(statsWindows.daily_start)}</strong></span><span>Weekly from <strong>{formatDateShort(statsWindows.weekly_start)}</strong></span></div>
       </div>
 

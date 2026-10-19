@@ -3,11 +3,13 @@ import AttentionPanel from "./components/AttentionPanel.jsx";
 import { Icon, MetricCard } from "./components/Common.jsx";
 import ExternalSources from "./components/ExternalSources.jsx";
 import RepositoryChanges from "./components/RepositoryChanges.jsx";
+import SourceStatus from "./components/SourceStatus.jsx";
 import { SyncConfirmationDialog, SyncDetailDialog } from "./components/SyncDialog.jsx";
 import SyncHistory from "./components/SyncHistory.jsx";
 import {
-  API_BASE, emptyExternal, emptySummary, formatDate, formatDateShort,
-  formatDuration, formatNumber, formatSeconds, freshnessLabel, shortSha, signalLabel
+  API_BASE, emptyExternal, emptySourceStatus, emptySummary, formatDate, formatDateShort,
+  formatDuration, formatNumber, formatSeconds, freshnessLabel, normalizeSourceStatus,
+  shortSha, signalLabel
 } from "./lib/dashboard.js";
 
 export default function DashboardApp() {
@@ -18,6 +20,10 @@ export default function DashboardApp() {
   const [loadError, setLoadError] = useState("");
   const [lastLoadedAt, setLastLoadedAt] = useState(null);
   const [operatorMode, setOperatorMode] = useState("local_only");
+  const [sourceStatus, setSourceStatus] = useState(emptySourceStatus);
+  const [sourceStatusLoading, setSourceStatusLoading] = useState(true);
+  const [sourceStatusError, setSourceStatusError] = useState("");
+  const [sourceStatusAvailable, setSourceStatusAvailable] = useState(false);
 
   const [selectedType, setSelectedType] = useState(null);
   const [typeFiles, setTypeFiles] = useState({});
@@ -61,12 +67,23 @@ export default function DashboardApp() {
     if (initial) setIsLoading(true);
     if (!initial && !silent) setIsRefreshing(true);
     if (!silent) setLoadError("");
+    setSourceStatusLoading(true);
+    if (!silent) setSourceStatusError("");
     try {
-      const [summaryResult, externalResult, healthResult] = await Promise.allSettled([
+      const [summaryResult, externalResult, healthResult, sourceStatusResult] = await Promise.allSettled([
         fetch(`${API_BASE}/api/summary`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error(); return response.json(); }),
         fetch(`${API_BASE}/api/external`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error(); return response.json(); }),
-        fetch(`${API_BASE}/api/health`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error(); return response.json(); })
+        fetch(`${API_BASE}/api/health`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error(); return response.json(); }),
+        fetch(`${API_BASE}/api/source-status`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error(); return response.json(); })
       ]);
+      if (sourceStatusResult.status === "fulfilled") {
+        setSourceStatus(normalizeSourceStatus(sourceStatusResult.value));
+        setSourceStatusAvailable(true);
+        setSourceStatusError("");
+      } else {
+        setSourceStatusAvailable(false);
+        setSourceStatusError("Source-level status could not be loaded.");
+      }
       if (summaryResult.status === "rejected") throw summaryResult.reason;
       setSummary(summaryResult.value);
       if (externalResult.status === "fulfilled") setExternalInfo(externalResult.value);
@@ -78,6 +95,7 @@ export default function DashboardApp() {
     } finally {
       setIsLoading(false);
       setIsRefreshing(false);
+      setSourceStatusLoading(false);
     }
   }, []);
 
@@ -142,6 +160,14 @@ export default function DashboardApp() {
   const pipelineActive = pipelineStarting || pipelineRunning;
   const pipelinePercent = pipelineStarting ? 4 : Math.min(100, Math.round((pipelineStep / Math.max(1, pipelineTotal)) * 100));
   const topPath = summary.top_paths?.[0];
+  const synchronizedSourceCount = sourceStatus.filter((source) =>
+    ["completed", "success", "synced", "current"].includes(String(source.status || "").toLowerCase()),
+  ).length;
+  const sourceCoverageLabel = sourceStatusLoading
+    ? "Checking source coverage"
+    : sourceStatusAvailable
+      ? `${synchronizedSourceCount} of ${sourceStatus.length} synchronized`
+      : "Synchronization status unavailable";
 
   const attentionItems = useMemo(() => {
     const items = [];
@@ -174,17 +200,23 @@ export default function DashboardApp() {
 
   const startSynchronization = async (operatorKey, options = {}) => {
     const includeGitHubRepositories = Boolean(options.includeGitHubRepositories);
+    const includeHydroShareResources = Boolean(options.includeHydroShareResources);
     setConfirmationOpen(false);
     setPipelineStarting(true);
     setPipelineError("");
     setPipelineResult(null);
     setPipelineStep(0);
-    setPipelineTotal(includeGitHubRepositories ? 8 : 6);
+    setPipelineTotal(
+      6 + (includeGitHubRepositories ? 2 : 0) + (includeHydroShareResources ? 2 : 0),
+    );
     setPipelineLabel("Starting synchronization");
     try {
       const headers = operatorKey?.trim() ? { "X-CIROH-Operator-Key": operatorKey.trim() } : {};
-      const query = includeGitHubRepositories ? "?include_github_repositories=true" : "";
-      const response = await fetch(`${API_BASE}/api/run-pipeline${query}`, { method: "POST", cache: "no-store", headers });
+      const query = new URLSearchParams();
+      if (includeGitHubRepositories) query.set("include_github_repositories", "true");
+      if (includeHydroShareResources) query.set("include_hydroshare_resources", "true");
+      const queryString = query.size ? `?${query.toString()}` : "";
+      const response = await fetch(`${API_BASE}/api/run-pipeline${queryString}`, { method: "POST", cache: "no-store", headers });
       const payload = await response.json().catch(() => ({}));
       if (response.status !== 409 && !response.ok) throw new Error(payload.detail || "Start request failed");
       setPipelineRunning(true);
@@ -213,7 +245,7 @@ export default function DashboardApp() {
     <div className="app-shell">
       <header className="topbar">
         <a className="brand" href="#top" aria-label="CIROH Sync Console home"><span className="brand-mark" aria-hidden="true"><span /></span><span><strong>CIROH</strong><small>Sync Console</small></span></a>
-        <nav className="section-nav" aria-label="Dashboard sections"><a href="#changes">Changes</a><a href="#history">History</a><a href="#external-sources">External sources</a></nav>
+        <nav className="section-nav" aria-label="Dashboard sections"><a href="#source-status">Sources</a><a href="#changes">Changes</a><a href="#history">History</a><a href="#external-sources">External sources</a></nav>
         <div className="topbar-actions"><span className={`freshness-badge ${freshnessLabel(freshness).toLowerCase()}`}><span className="status-dot" />{freshnessLabel(freshness)}</span><button className="button button-secondary" type="button" onClick={() => { load(); loadHistory(); }} disabled={isRefreshing}><span className={isRefreshing ? "spin" : ""}><Icon name="refresh" /></span>{isRefreshing ? "Refreshing" : "Refresh data"}</button></div>
       </header>
 
@@ -221,13 +253,14 @@ export default function DashboardApp() {
         {loadError && <div className="notice notice-warning" role="alert"><div><strong>Some dashboard data could not be loaded.</strong><span>{loadError}</span></div><button className="text-button" type="button" onClick={() => load()}>Try again</button></div>}
 
         <section className="command-card" aria-labelledby="page-title">
-          <div className="command-copy"><div className="eyebrow">Repository operations</div><h1 id="page-title">Documentation sync, at a glance.</h1><p>Review repository changes, inspect external README sources, and run the complete DocuHub synchronization from one place.</p><div className="repository-meta"><span><Icon name="branch" size={16} /> <code>{summary.changes?.repo || "Repository unavailable"}</code></span><span><Icon name="clock" size={16} /> Checked {formatDate(summary.changes?.last_checked)}</span></div><div className="command-actions"><button className="button button-primary" type="button" onClick={() => setConfirmationOpen(true)} disabled={pipelineActive}><Icon name="play" />{pipelineStarting ? "Starting…" : pipelineRunning ? "Synchronization running" : "Run synchronization"}</button><span className="command-hint">{operatorMode === "token" ? "Operator key protected" : "Local-only execution"} · {pipelineTotal || 6} steps</span></div></div>
-          <div className="activity-card"><div className="activity-header"><span>Change activity <button className="info-tip" type="button" title="Derived from change volume and commit freshness. This is not a quality score." aria-label="About the change activity score">?</button></span><strong>{signalLabel(score)}</strong></div><div className="activity-score-row"><div className="score-ring" style={{ "--score": Math.min(100, Math.max(0, score)) }}><span>{score}</span></div><div className="activity-summary"><strong>{formatNumber(changedCount)} files changed</strong><span>{formatDuration(freshness)} since the latest commit</span></div></div><div className="commit-message"><span>Latest commit</span><p>{summary.changes?.latest_commit_message || "No commit message available."}</p></div></div>
+          <div className="command-copy"><div className="eyebrow">Data source synchronization</div><h1 id="page-title">Keep every CIROH data source current.</h1><p>Review synchronization coverage, choose which optional sources to include, and run the complete DocuHub pipeline from one place.</p><div className="repository-meta source-summary"><span><Icon name="database" size={16} /> {sourceStatus.length} sources configured</span><span><Icon name="check" size={16} /> {sourceCoverageLabel}</span></div><div className="command-actions"><button className="button button-primary" type="button" onClick={() => setConfirmationOpen(true)} disabled={pipelineActive}><Icon name="settings" />{pipelineStarting ? "Starting…" : pipelineRunning ? "Synchronization running" : "Configure synchronization"}</button><span className="command-hint">{operatorMode === "token" ? "Operator key protected" : "Local-only execution"} · choose sources before running</span></div></div>
+          <div className="activity-card"><div className="activity-header"><span>CIROH Hub activity <button className="info-tip" type="button" title="Derived from CIROH Hub change volume and commit freshness. This is not a quality score." aria-label="About the CIROH Hub change activity score">?</button></span><strong>{signalLabel(score)}</strong></div><div className="activity-score-row"><div className="score-ring" style={{ "--score": Math.min(100, Math.max(0, score)) }}><span>{score}</span></div><div className="activity-summary"><strong>{formatNumber(changedCount)} files changed</strong><span>{formatDuration(freshness)} since the latest commit</span></div></div><div className="commit-message"><span>Latest CIROH Hub commit</span><p>{summary.changes?.latest_commit_message || "No commit message available."}</p></div></div>
           {(pipelineActive || pipelineError || pipelineResult) && <div className="sync-status" aria-live="polite">{pipelineActive && <><div className="sync-status-head"><div><strong>{pipelineStarting ? "Starting synchronization" : pipelineLabel || "Synchronization running"}</strong><span>{pipelineStarting ? "Preparing the pipeline" : `Step ${pipelineStep} of ${pipelineTotal}`}</span></div><strong>{pipelinePercent}%</strong></div><div className="progress-track" role="progressbar" aria-label="Synchronization progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow={pipelinePercent}><span style={{ width: `${pipelinePercent}%` }} /></div></>}{pipelineError && <div className="sync-message error-message"><div><strong>Synchronization failed</strong><span>{pipelineResult?.failed_label || pipelineError}</span></div><div className="inline-actions"><button className="text-button" type="button" onClick={() => setConfirmationOpen(true)}>Retry</button>{pipelineResult?.sync_id && <button className="text-button" type="button" onClick={() => openRunDetail({ ...pipelineResult, duration_label: formatSeconds(pipelineResult.duration_seconds) })}>View details</button>}</div></div>}{pipelineResult && !pipelineActive && !pipelineError && <div className="sync-result"><div><strong>Synchronization complete</strong><span>{pipelineResult.sync_id} · {formatSeconds(pipelineResult.duration_seconds)}</span></div><dl><div><dt>Artifacts</dt><dd>{formatNumber(pipelineResult.total_artifacts)}</dd></div><div><dt>New</dt><dd>{formatNumber(pipelineResult.new_count)}</dd></div><div><dt>Updated</dt><dd>{formatNumber(pipelineResult.updated_count)}</dd></div><div><dt>Tokens</dt><dd>{formatNumber(pipelineResult.openai_tokens)}</dd></div><div><dt>Est. cost</dt><dd>{pipelineResult.estimated_cost_usd == null ? "—" : `$${Number(pipelineResult.estimated_cost_usd).toFixed(4)}`}</dd></div></dl>{pipelineResult.sync_id && <button className="table-action" type="button" onClick={() => openRunDetail({ ...pipelineResult, duration_label: formatSeconds(pipelineResult.duration_seconds) })}>View report</button>}</div>}</div>}
         </section>
 
-        <section className="metric-grid" aria-label="Repository summary"><MetricCard icon="chart" label="Changed files" value={formatNumber(changedCount)} detail={`${summary.status_counts?.added ?? 0} added · ${summary.status_counts?.removed ?? 0} removed`} tone="blue" /><MetricCard icon="branch" label="Latest commit" value={shortSha(summary.changes?.latest_sha)} detail={formatDateShort(summary.changes?.latest_commit_date)} tone="purple" /><MetricCard icon="external" label="External sources" value={formatNumber(externalInfo.total_repos ?? Object.keys(externalInfo.repos || {}).length)} detail={`${formatNumber(externalFiles.length)} tracked README files`} tone="green" /><MetricCard icon="folder" label="Most active area" value={topPath?.path || "No changes"} detail={topPath ? `${formatNumber(topPath.count)} changed files` : `${summary.metrics?.cadence || "Weekly"} reporting cadence`} tone="amber" /></section>
+        <SourceStatus items={sourceStatus} loading={sourceStatusLoading} error={sourceStatusError} unavailable={!sourceStatusAvailable} hubRepository={summary.changes?.repo} onRetry={() => load()} />
 
+        <section className="metric-grid" aria-label="CIROH Hub repository summary"><MetricCard icon="chart" label="Changed files" value={formatNumber(changedCount)} detail={`${summary.status_counts?.added ?? 0} added · ${summary.status_counts?.removed ?? 0} removed`} tone="blue" /><MetricCard icon="branch" label="Latest commit" value={shortSha(summary.changes?.latest_sha)} detail={formatDateShort(summary.changes?.latest_commit_date)} tone="purple" /><MetricCard icon="external" label="External sources" value={formatNumber(externalInfo.total_repos ?? Object.keys(externalInfo.repos || {}).length)} detail={`${formatNumber(externalFiles.length)} tracked README files`} tone="green" /><MetricCard icon="folder" label="Most active area" value={topPath?.path || "No changes"} detail={topPath ? `${formatNumber(topPath.count)} changed files` : `${summary.metrics?.cadence || "Weekly"} reporting cadence`} tone="amber" /></section>
         <AttentionPanel items={attentionItems} />
         <RepositoryChanges summary={summary} selectedType={selectedType} selectedRow={selectedRow} selectedFiles={selectedFiles} typeFilesLoading={typeFilesLoading} typeFilesError={typeFilesError} filesPage={filesPage} onFilesPage={setFilesPage} onTypeClick={handleTypeClick} onCloseType={() => setSelectedType(null)} />
         <SyncHistory items={history} loading={historyLoading} error={historyError} onRefresh={loadHistory} onSelect={openRunDetail} />

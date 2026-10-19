@@ -29,6 +29,15 @@ description plus RAG chunks per new or changed repository. Obvious chunk types
 are classified deterministically; ambiguous documentation sections use the LLM.
 This option is off by default.
 
+The opt-in **Synchronize HydroShare Research Portal resources** workflow
+discovers the public CIROH HydroShare portal collections, normalizes resource
+metadata into type-3 artifacts and chunks, and records all portal memberships
+through `TRLArtifactsHSResearchPortalTypes`. A resource can therefore belong to
+multiple portal types without duplicating names in `TBLArtifactTypes`. Public
+resources do not require an API key. `HYDROSHARE_USERNAME` and
+`HYDROSHARE_PASSWORD` are optional and are used only when authenticated
+HydroShare access is needed. This option is also off by default.
+
 Repository artifacts and chunks are first written as deterministic JSON
 snapshots, then reconciled with active `idArtifactType = 4` rows. The loader
 resolves each symbolic `chunk_type_name` against `tblChunkTypes` by name and
@@ -59,6 +68,11 @@ Other entry points intentionally behave differently:
   freezes the generated data before reconciling and embedding both the type-1
   DocuHub and type-4 repository snapshots. For production, prefer the separate
   prepare/apply commands below so the bundle can be reviewed first.
+- `python run_full_docuhub_refresh.py --include-hydroshare-resources` adds the
+  HydroShare type-3 artifact/chunk snapshot and portal memberships to the
+  prepared bundle without updating PostgreSQL.
+- Add `--update-db` only when the reviewed prepared snapshot should be applied.
+  Both opt-in source flags can be supplied together.
 
 ## Safe two-phase full synchronization
 
@@ -67,6 +81,12 @@ touching PostgreSQL:
 
 ```bash
 python run_full_docuhub_refresh.py --include-github-repositories --use-github-token
+```
+
+Include HydroShare in the same reviewable bundle:
+
+```bash
+python run_full_docuhub_refresh.py --include-github-repositories --include-hydroshare-resources --use-github-token
 ```
 
 Repository work is checkpointed after every completed repository. If the
@@ -96,15 +116,67 @@ Apply a specific prepared bundle only after it has been reviewed:
 python apply_prepared_sync.py --bundle <sync-id> --execute
 ```
 
-The apply command performs no GitHub downloads and no summary/classification
+If a reviewed target database contains legacy HydroShare URLs that will be
+replaced by the prepared snapshot, the large-removal guard can be overridden
+for that application only. A reason is mandatory and is saved in the
+application report:
+
+```bash
+python apply_prepared_sync.py --bundle <sync-id> --execute \
+  --allow-large-hydroshare-removals \
+  --large-hydroshare-removal-reason "Reviewed legacy URL canonicalization"
+```
+
+The apply command performs no GitHub or HydroShare downloads and no summary/classification
 calls. It validates every saved hash before connecting, then reconciles type 1
-and type 4 by active URL/content fingerprint. Existing versions are
+and type 4 by active URL/content fingerprint and type 3 by HydroShare resource
+identity and content fingerprint. HydroShare portal memberships are reconciled
+with the dedicated lookup and junction tables. Existing versions are
 soft-deactivated and replacements are inserted; unchanged versions are left
-alone. Each database stage is transactional. If an apply attempt fails, fix the
+alone. The junction rows are idempotently ensured for the complete active
+HydroShare snapshot, so a new or empty junction table is backfilled even when
+the artifacts themselves are unchanged. Each database stage is transactional.
+If an apply attempt fails, fix the
 database or connection issue and run the same command with the same sync ID;
 the generation phase does not have to be repeated, and a successfully applied
 earlier stage is recognized as unchanged. Attempt reports are retained under
-the bundle's `applications/` directory.
+the bundle's `applications/` directory. The bundle is not one cross-source
+database transaction: a later source can fail after an earlier source commits,
+so the report records and retries each source separately.
+
+### Reuse embeddings from a synchronized database
+
+When the same prepared bundle has already been applied to a trusted local
+database, its embeddings can be copied to another target instead of paying for
+and waiting on duplicate embedding requests. First apply the bundle to the
+target with embedding generation disabled:
+
+```bash
+python apply_prepared_sync.py --bundle <sync-id> --execute --skip-embeddings
+```
+
+Then validate the local-to-target mapping. This command is a dry run unless
+`--execute` is present:
+
+```bash
+python reuse_local_embeddings.py --bundle <sync-id> \
+  --source-env .env --target-env /path/to/target.env
+```
+
+After the dry run succeeds, copy and verify the vectors atomically:
+
+```bash
+python reuse_local_embeddings.py --bundle <sync-id> \
+  --source-env .env --target-env /path/to/target.env --execute
+```
+
+The utility validates bundle hashes first and never matches on generated
+database IDs. It requires exact artifact URL/type/title/summary matches and
+exact chunk source ID/order/type/section/text matches. It also verifies vector
+dimensions and digests before committing the target transaction. Existing
+conflicting target vectors fail closed by default. Do not leave a production
+target between the `--skip-embeddings` apply and the verified copy longer than
+necessary.
 
 ## Prerequisites
 
@@ -116,6 +188,10 @@ the bundle's `applications/` directory.
 
 A GitHub token is optional for this public-source workflow, but it increases
 the GitHub API rate limit.
+
+HydroShare's public API requires no API key. Optional username/password
+credentials can be configured in `.env` for resources that require an
+authenticated HydroShare session.
 
 ## 1. Clone and select the branch
 
@@ -170,6 +246,36 @@ The included schema seeds the required names. During a repository DB run, the
 loader also adds any missing approved type-4 chunk names without relying on
 environment-specific numeric chunk IDs. The embedding columns must be
 `vector(1792)` to match the current processor.
+
+The HydroShare option additionally expects type 3 and these tables in the
+configured PostgreSQL schema:
+
+- `TBLHSResearchPortalTypes(idHSResearchPortalType, HSResearchPortalType)`
+- `TRLArtifactsHSResearchPortalTypes(idArtifact, idHSResearchPortalType)`
+
+For a database that does not already contain the earlier table names, the
+included migration is idempotent: it creates either missing table and seeds
+the six portal names plus the 15 type-3 chunk types used by the generator:
+
+```bash
+psql -d ciroh -f "Andres_implementation/migrations/002_hydroshare_research_portal_types.sql"
+```
+
+Environments that previously created the singular/`TBL` bridge names must run
+the rename migration first. It preserves rows, indexes, constraints, and
+relationships and is a no-op after the rename has already happened:
+
+```bash
+psql -d ciroh -f "Andres_implementation/migrations/003_rename_hydroshare_research_portal_tables.sql"
+```
+
+After that rename, migration `002` can be run safely to seed any missing lookup
+or chunk-type values.
+
+Use schema-qualified SQL (for example, `"CIROH_AIBot".<table>`) when creating
+them; otherwise PostgreSQL may place them in `public` according to
+`search_path`. Set `POSTGRES_SCHEMA=CIROH_AIBot` in `.env` before applying a
+snapshot.
 
 ### Azure active-URL migration
 
@@ -228,6 +334,13 @@ one OpenAI summary request per new or changed repository plus classification
 requests for ambiguous regenerated chunks. Unchanged repository chunks and
 descriptions are reused without another OpenAI call.
 
+Select **Synchronize HydroShare Research Portal resources** to add HydroShare
+generation and database reconciliation. Selecting only HydroShare adds two
+stages; selecting both optional sources adds four. Resources that have not
+changed reuse their prior snapshot state. Changed resources create a new active
+artifact version, while the old artifact, chunks, and portal mappings remain
+historical through the inactive parent artifact.
+
 The repository-only stage can also be invoked directly, but requires an
 explicit safety flag:
 
@@ -237,6 +350,24 @@ python run_github_repository_sync.py --execute
 
 Without `--execute`, it exits before making GitHub or OpenAI calls. The direct
 command never updates PostgreSQL.
+
+HydroShare generation can likewise be run without touching PostgreSQL:
+
+```bash
+python run_hydroshare_sync.py
+```
+
+It uses anonymous access unless both optional HydroShare credentials are set.
+Empty discovery is always rejected. After a baseline exists, the generator
+also stops when a non-empty result would remove at least five resources and at
+least 25% of the prior snapshot; this protects the database from a silently
+truncated API response. If a large portal cleanup is intentional and has been
+reviewed, override only that reduction with
+`python run_hydroshare_sync.py --allow-large-removals`, or add
+`--allow-large-hydroshare-removals` to the full refresh command. The database
+loader independently checks the same reduction threshold, and a prepared
+bundle records the reviewed override. The database loader always refuses an
+empty snapshot.
 
 ## Generated files and persistence
 
@@ -251,6 +382,8 @@ durable storage for the following state:
 - `local_change_dashboard/mixed_docs_manifest.json`
 - `local_change_dashboard/github_repository_sync.json`
 - `local_change_dashboard/github_repository_corpus/`
+- `local_change_dashboard/hydroshare_sync.json`
+- `local_change_dashboard/hydroshare_corpus/`
 - `dashboard/formated_files/_hashes.json`
 - `dashboard/formated_files/artifacts.json`
 - `dashboard/formated_files/content_chunks.json`
@@ -258,6 +391,10 @@ durable storage for the following state:
 - `dashboard/formated_files/coderepo_chunks.json`
 - `dashboard/formated_files/github_repository_generation_report.json`
 - `dashboard/formated_files/github_repository_db_update_result.json`
+- `dashboard/formated_files/hydroshare_artifacts.json`
+- `dashboard/formated_files/hydroshare_chunks.json`
+- `dashboard/formated_files/hydroshare_generation_report.json`
+- `dashboard/formated_files/hydroshare_db_update_result.json`
 - `dashboard/formated_files/synchronization_reports/`
 
 `_hashes.json` is required to detect updates and deletions. The previous
@@ -266,6 +403,9 @@ Likewise, `github_repository_sync.json`, `coderepo_artifacts.json`,
 `coderepo_chunks.json`, and the repository corpus preserve stable repository
 and chunk IDs and allow unchanged descriptions/chunks to be reused without
 another OpenAI call.
+The HydroShare state file preserves resource fingerprints and stable IDs; its
+corpus directory retains immutable metadata/file snapshots used for audit and
+change comparison.
 If this state is discarded on every run, the system can classify the corpus as
 new, repeat OpenAI work, and fail to identify documents deleted since the last
 run.

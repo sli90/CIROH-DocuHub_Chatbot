@@ -1,3 +1,4 @@
+import sys
 import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
@@ -8,6 +9,8 @@ from sync_pipeline import (
     generation_step,
     github_repository_database_step,
     github_repository_generation_step,
+    hydroshare_database_step,
+    hydroshare_generation_step,
     repository_sync_steps,
     run_sync_steps,
 )
@@ -113,6 +116,41 @@ class SyncPipelineTests(unittest.TestCase):
         self.assertIn("--ensure-repository-chunk-types", command)
         self.assertIn("--require-summaries", command)
         self.assertIn("github_repository_db_update_result.json", command)
+
+    def test_hydroshare_generation_step_calls_local_synchronizer(self):
+        calls = []
+        module = SimpleNamespace(
+            synchronize_hydroshare_resources=lambda **kwargs: calls.append(kwargs)
+            or {"status": "completed", "total_artifacts": 1}
+        )
+        with patch.dict(sys.modules, {"hydroshare_sync": module}):
+            result = run_sync_steps([
+                hydroshare_generation_step(
+                    root="system", allow_large_removals=True
+                )
+            ])
+
+        self.assertEqual("completed", result[0].data["status"])
+        self.assertEqual("system", str(calls[0]["root"]))
+        self.assertTrue(calls[0]["allow_large_removals"])
+
+    @patch("sync_pipeline.subprocess.run")
+    def test_hydroshare_database_step_uses_specialized_reconciliation(self, run):
+        run.return_value = SimpleNamespace(returncode=0)
+        step = hydroshare_database_step(
+            8,
+            root="system",
+            python_executable="python",
+            allow_large_removals=True,
+        )
+        run_sync_steps([step])
+        command = run.call_args.args[0]
+
+        self.assertIn("--expected-artifact-type", command)
+        self.assertIn("--reconcile-hydroshare-snapshot", command)
+        self.assertIn("--allow-large-hydroshare-removals", command)
+        self.assertNotIn("--reconcile-snapshot-artifact-type", command)
+        self.assertIn("hydroshare_db_update_result.json", command)
 
 
 if __name__ == "__main__":

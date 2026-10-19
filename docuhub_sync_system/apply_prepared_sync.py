@@ -37,6 +37,42 @@ def _load_result(path: Path) -> dict | None:
     return payload if isinstance(payload, dict) else None
 
 
+def _resolve_hydroshare_removal_policy(
+    manifest: dict[str, Any],
+    *,
+    apply_override: bool,
+    override_reason: str | None,
+) -> dict[str, Any]:
+    """Resolve a target-specific large-removal override with provenance."""
+    allowed_by_bundle = bool(
+        manifest.get("allow_large_hydroshare_removals")
+    )
+    reason = (override_reason or "").strip()
+
+    if apply_override and not manifest.get("include_hydroshare_resources"):
+        raise PreparedSyncError(
+            "A HydroShare removal override requires a bundle that includes "
+            "HydroShare resources"
+        )
+    if apply_override and not allowed_by_bundle and not reason:
+        raise PreparedSyncError(
+            "--large-hydroshare-removal-reason is required when overriding "
+            "the prepared bundle's HydroShare removal guard"
+        )
+
+    if allowed_by_bundle:
+        source = "prepared_generation"
+    elif apply_override:
+        source = "apply_override"
+    else:
+        source = "blocked"
+    return {
+        "allowed": allowed_by_bundle or apply_override,
+        "source": source,
+        "reason": reason or None,
+    }
+
+
 def _database_command(
     *,
     artifacts: Path,
@@ -45,6 +81,8 @@ def _database_command(
     result_file: Path,
     require_summaries: bool,
     skip_embeddings: bool,
+    reconcile_hydroshare_snapshot: bool = False,
+    allow_large_hydroshare_removals: bool = False,
 ) -> list[str]:
     command = [
         sys.executable,
@@ -55,11 +93,17 @@ def _database_command(
         str(chunks),
         "--expected-artifact-type",
         str(artifact_type),
-        "--reconcile-snapshot-artifact-type",
-        str(artifact_type),
         "--result-file",
         str(result_file),
     ]
+    if reconcile_hydroshare_snapshot:
+        command.append("--reconcile-hydroshare-snapshot")
+    else:
+        command.extend(
+            ["--reconcile-snapshot-artifact-type", str(artifact_type)]
+        )
+    if allow_large_hydroshare_removals:
+        command.append("--allow-large-hydroshare-removals")
     if artifact_type == 4:
         command.append("--ensure-repository-chunk-types")
     if require_summaries:
@@ -73,7 +117,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
             "Validate and apply a frozen synchronization bundle without "
-            "re-running GitHub downloads or OpenAI summarization."
+            "re-running source downloads or OpenAI summarization."
         )
     )
     parser.add_argument(
@@ -95,6 +139,19 @@ def main() -> int:
         action="store_true",
         help="Allow a bundle that was prepared with missing summaries.",
     )
+    parser.add_argument(
+        "--allow-large-hydroshare-removals",
+        action="store_true",
+        help=(
+            "Override the bundle guard for a reviewed target-specific "
+            "HydroShare removal. Requires a recorded reason when the "
+            "prepared generation did not already allow large removals."
+        ),
+    )
+    parser.add_argument(
+        "--large-hydroshare-removal-reason",
+        help="Reason recorded when using the target-specific removal override.",
+    )
     args = parser.parse_args()
 
     bundle_dir = resolve_prepared_bundle(ROOT, args.bundle)
@@ -106,6 +163,11 @@ def main() -> int:
             "Bundle permits pending summaries; explicitly pass "
             "--allow-pending-summaries to apply it"
         )
+    hydroshare_removal_policy = _resolve_hydroshare_removal_policy(
+        manifest,
+        apply_override=args.allow_large_hydroshare_removals,
+        override_reason=args.large_hydroshare_removal_reason,
+    )
 
     print(f"Prepared bundle: {bundle_dir}")
     print(f"Source sync ID:  {manifest.get('sync_id')}")
@@ -114,6 +176,24 @@ def main() -> int:
         "GitHub repositories: "
         f"{'included' if manifest.get('include_github_repositories') else 'not included'}"
     )
+    print(
+        "HydroShare resources: "
+        f"{'included' if manifest.get('include_hydroshare_resources') else 'not included'}"
+    )
+    if manifest.get("include_hydroshare_resources"):
+        print(
+            "Large HydroShare removals: "
+            + (
+                f"allowed ({hydroshare_removal_policy['source']})"
+                if hydroshare_removal_policy["allowed"]
+                else "blocked"
+            )
+        )
+        if hydroshare_removal_policy["reason"]:
+            print(
+                "HydroShare removal reason: "
+                f"{hydroshare_removal_policy['reason']}"
+            )
     if not args.execute:
         print("Database update: preview only; pass --execute to apply this bundle.")
         return 0
@@ -129,6 +209,10 @@ def main() -> int:
         "status": "running",
         "started_at": utc_now_iso(),
         "skip_embeddings": args.skip_embeddings,
+        "hydroshare_removal_policy": hydroshare_removal_policy,
+        "allow_large_hydroshare_removals": hydroshare_removal_policy[
+            "allowed"
+        ],
         "steps": [],
     }
     _write_json_atomic(report_path, report)
@@ -160,6 +244,25 @@ def main() -> int:
                     skip_embeddings=args.skip_embeddings,
                 ),
                 application_dir / "github_db_result.json",
+            )
+        )
+    if manifest.get("include_hydroshare_resources"):
+        steps.append(
+            (
+                "hydroshare_resources",
+                _database_command(
+                    artifacts=files["hydroshare_artifacts"],
+                    chunks=files["hydroshare_chunks"],
+                    artifact_type=3,
+                    result_file=application_dir / "hydroshare_db_result.json",
+                    require_summaries=False,
+                    skip_embeddings=args.skip_embeddings,
+                    reconcile_hydroshare_snapshot=True,
+                    allow_large_hydroshare_removals=(
+                        hydroshare_removal_policy["allowed"]
+                    ),
+                ),
+                application_dir / "hydroshare_db_result.json",
             )
         )
 

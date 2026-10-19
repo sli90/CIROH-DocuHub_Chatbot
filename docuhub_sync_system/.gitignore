@@ -35,6 +35,8 @@ local_change_dashboard/docuhub_refresh_*/
 local_change_dashboard/github_repository_corpus/
 local_change_dashboard/github_repository_sync.json
 local_change_dashboard/github_repository_generation_checkpoint.json
+local_change_dashboard/hydroshare_corpus/
+local_change_dashboard/hydroshare_sync.json
 local_change_dashboard/prepared_syncs/
 
 # Generated RAG/DB payloads and synchronization reports

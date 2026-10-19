@@ -7,6 +7,7 @@ import shutil
 from pathlib import Path
 from typing import Any
 
+from hydroshare_sync import HYDROSHARE_CHUNK_TYPES, PORTAL_CATEGORY_SUBJECTS
 from sync_accounting import utc_now_iso
 
 
@@ -116,11 +117,67 @@ def _validate_snapshot(
     }
 
 
+def _validate_hydroshare_snapshot(
+    artifacts_payload: Any,
+    chunks_payload: Any,
+) -> dict[str, int]:
+    validation = _validate_snapshot(
+        artifacts_payload,
+        chunks_payload,
+        expected_type=3,
+        require_summaries=False,
+    )
+    chunks = _normalize_chunks(chunks_payload)
+    allowed_portal_types = set(PORTAL_CATEGORY_SUBJECTS)
+    allowed_chunk_types = set(HYDROSHARE_CHUNK_TYPES)
+    if not artifacts_payload:
+        raise PreparedSyncError(
+            "HydroShare snapshot is empty; refusing a bundle that could "
+            "deactivate every active HydroShare resource"
+        )
+    portal_memberships = 0
+    for artifact in artifacts_payload:
+        if artifact.get("artifact_role") != "hydroshare_resource":
+            raise PreparedSyncError(
+                "HydroShare snapshot contains an artifact without "
+                "artifact_role='hydroshare_resource'"
+            )
+        portal_types = artifact.get("hs_research_portal_types")
+        if not isinstance(portal_types, list) or not portal_types or not all(
+            isinstance(value, str) and value.strip() for value in portal_types
+        ):
+            raise PreparedSyncError(
+                "HydroShare artifact has no valid hs_research_portal_types"
+            )
+        unknown_portal_types = sorted(set(portal_types) - allowed_portal_types)
+        if unknown_portal_types:
+            raise PreparedSyncError(
+                "HydroShare artifact has unknown research-portal types: "
+                f"{unknown_portal_types}"
+            )
+        portal_memberships += len(set(portal_types))
+    unknown_chunk_types = sorted(
+        {
+            str(chunk.get("chunk_type_name") or "").strip()
+            for chunk in chunks
+        }
+        - allowed_chunk_types
+    )
+    if unknown_chunk_types:
+        raise PreparedSyncError(
+            "HydroShare snapshot has unknown or missing chunk types: "
+            f"{unknown_chunk_types}"
+        )
+    validation["portal_memberships"] = portal_memberships
+    return validation
+
+
 def create_prepared_bundle(
     root: Path | str,
     *,
     sync_id: str,
     include_github_repositories: bool,
+    include_hydroshare_resources: bool = False,
     allow_pending_summaries: bool = False,
 ) -> Path:
     """Freeze generated JSON files before any database update begins."""
@@ -157,6 +214,23 @@ def create_prepared_bundle(
                 "github_generation_report": "github_generation_report.json",
             }
         )
+    if include_hydroshare_resources:
+        source_files.update(
+            {
+                "hydroshare_artifacts": formatted / "hydroshare_artifacts.json",
+                "hydroshare_chunks": formatted / "hydroshare_chunks.json",
+                "hydroshare_generation_report": (
+                    formatted / "hydroshare_generation_report.json"
+                ),
+            }
+        )
+        target_names.update(
+            {
+                "hydroshare_artifacts": "hydroshare_artifacts.json",
+                "hydroshare_chunks": "hydroshare_chunks.json",
+                "hydroshare_generation_report": "hydroshare_generation_report.json",
+            }
+        )
 
     missing = [str(path) for path in source_files.values() if not path.is_file()]
     if missing:
@@ -179,6 +253,23 @@ def create_prepared_bundle(
             expected_type=4,
             require_summaries=not allow_pending_summaries,
         )
+    hydroshare_validation = None
+    hydroshare_allow_large_removals = False
+    if include_hydroshare_resources:
+        hydroshare_report = _load_json(source_files["hydroshare_generation_report"])
+        if (
+            not isinstance(hydroshare_report, dict)
+            or hydroshare_report.get("status") != "completed"
+        ):
+            raise PreparedSyncError("HydroShare generation did not complete")
+        discovery_guard = hydroshare_report.get("discovery_shrink_guard") or {}
+        hydroshare_allow_large_removals = bool(
+            discovery_guard.get("allow_large_removals", False)
+        )
+        hydroshare_validation = _validate_hydroshare_snapshot(
+            _load_json(source_files["hydroshare_artifacts"]),
+            _load_json(source_files["hydroshare_chunks"]),
+        )
 
     bundle_dir.mkdir(parents=True)
     file_manifest: dict[str, dict[str, Any]] = {}
@@ -197,10 +288,15 @@ def create_prepared_bundle(
         "sync_id": sync_id,
         "created_at": utc_now_iso(),
         "include_github_repositories": include_github_repositories,
+        "include_hydroshare_resources": include_hydroshare_resources,
+        "allow_large_hydroshare_removals": (
+            hydroshare_allow_large_removals
+        ),
         "allow_pending_summaries": allow_pending_summaries,
         "validation": {
             "docuhub": docuhub_validation,
             "github_repositories": github_validation,
+            "hydroshare_resources": hydroshare_validation,
         },
         "files": file_manifest,
     }
@@ -273,6 +369,14 @@ def validate_prepared_bundle(bundle_dir: Path | str) -> dict[str, Any]:
         required.update(
             {"github_artifacts", "github_chunks", "github_generation_report"}
         )
+    if manifest.get("include_hydroshare_resources"):
+        required.update(
+            {
+                "hydroshare_artifacts",
+                "hydroshare_chunks",
+                "hydroshare_generation_report",
+            }
+        )
     missing_roles = sorted(required - set(resolved_files))
     if missing_roles:
         raise PreparedSyncError(f"Prepared file roles are missing: {missing_roles}")
@@ -292,6 +396,17 @@ def validate_prepared_bundle(bundle_dir: Path | str) -> dict[str, Any]:
             _load_json(resolved_files["github_chunks"]),
             expected_type=4,
             require_summaries=require_summaries,
+        )
+    if manifest.get("include_hydroshare_resources"):
+        hydroshare_report = _load_json(resolved_files["hydroshare_generation_report"])
+        if (
+            not isinstance(hydroshare_report, dict)
+            or hydroshare_report.get("status") != "completed"
+        ):
+            raise PreparedSyncError("HydroShare generation did not complete")
+        validations["hydroshare_resources"] = _validate_hydroshare_snapshot(
+            _load_json(resolved_files["hydroshare_artifacts"]),
+            _load_json(resolved_files["hydroshare_chunks"]),
         )
     return {
         "bundle_dir": bundle_dir,

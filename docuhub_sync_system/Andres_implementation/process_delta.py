@@ -54,6 +54,38 @@ REPOSITORY_CHUNK_TYPES = (
     "Configuration / Deployment",
     "Change Log / Release Notes",
 )
+HYDROSHARE_ARTIFACT_TYPE_ID = 3
+HYDROSHARE_ARTIFACT_ROLE = "hydroshare_resource"
+HYDROSHARE_PORTAL_TYPES = (
+    "Apps",
+    "Datasets",
+    "Courses",
+    "Presentations",
+    "Events",
+    "Notebooks",
+)
+HYDROSHARE_CHUNK_TYPES = (
+    "Abstract",
+    "Spatial Coverage",
+    "Temporal Coverage",
+    "Variable Metadata",
+    "Data Services Info",
+    "File Description",
+    "Collection Contents",
+    "Subject Keywords",
+    "Related Resources Context",
+    "Citation",
+    "Creator",
+    "Contributor",
+    "Funding Agency",
+    "Additional Metadata",
+    "Readme File",
+)
+HYDROSHARE_PORTAL_TYPE_FIELDS = (
+    "hs_research_portal_types",
+    "research_portal_types",
+    "portal_types",
+)
 
 db_manager = DatabaseManager()
 client = None
@@ -104,15 +136,82 @@ def load_chunks(chunks_path: Path):
     return data
 
 
-def _repository_snapshot_fingerprint(
-    artifact: dict, repository_chunks: list[dict]
-) -> str:
-    """Return a stable fingerprint for one artifact and its chunks."""
-    artifact_payload = {
+def _is_hydroshare_artifact(artifact: dict) -> bool:
+    """Return whether an input record explicitly identifies HydroShare."""
+    if artifact.get("artifact_role") == HYDROSHARE_ARTIFACT_ROLE:
+        return True
+    metadata = artifact.get("metadata")
+    if not isinstance(metadata, dict):
+        return False
+    hydroshare = metadata.get("hydroshare")
+    return (
+        isinstance(hydroshare, dict)
+        and hydroshare.get("artifact_role") == HYDROSHARE_ARTIFACT_ROLE
+    )
+
+
+def get_hydroshare_portal_types(artifact: dict) -> list[str]:
+    """Return a stable, de-duplicated portal-type list from accepted fields."""
+    raw_types = None
+    for field in HYDROSHARE_PORTAL_TYPE_FIELDS:
+        if field in artifact:
+            raw_types = artifact.get(field)
+            break
+
+    if raw_types is None:
+        metadata = artifact.get("metadata")
+        hydroshare = (
+            metadata.get("hydroshare")
+            if isinstance(metadata, dict)
+            else None
+        )
+        if isinstance(hydroshare, dict):
+            for field in HYDROSHARE_PORTAL_TYPE_FIELDS:
+                if field in hydroshare:
+                    raw_types = hydroshare.get(field)
+                    break
+
+    if raw_types is None:
+        return []
+    if isinstance(raw_types, str):
+        raw_types = [raw_types]
+    if not isinstance(raw_types, (list, tuple, set)):
+        raise RuntimeError(
+            "HydroShare research portal types must be a list of names"
+        )
+
+    canonical_by_case = {
+        name.casefold(): name for name in HYDROSHARE_PORTAL_TYPES
+    }
+    normalized = set()
+    for value in raw_types:
+        name = str(value).strip()
+        if name:
+            normalized.add(canonical_by_case.get(name.casefold(), name))
+    return sorted(normalized)
+
+
+def _fingerprint_artifact_payload(artifact: dict) -> dict:
+    """Normalize volatile/aliased fields before content fingerprinting."""
+    payload = {
         key: value
         for key, value in artifact.items()
         if key not in {"idArtifact", "_sync_content_fingerprint"}
     }
+    if _is_hydroshare_artifact(artifact):
+        for field in HYDROSHARE_PORTAL_TYPE_FIELDS:
+            payload.pop(field, None)
+        payload["hs_research_portal_types"] = get_hydroshare_portal_types(
+            artifact
+        )
+    return payload
+
+
+def _repository_snapshot_fingerprint(
+    artifact: dict, repository_chunks: list[dict]
+) -> str:
+    """Return a stable fingerprint for one artifact and its chunks."""
+    artifact_payload = _fingerprint_artifact_payload(artifact)
     chunk_payload = []
     for chunk in sorted(
         repository_chunks,
@@ -192,6 +291,9 @@ def reconcile_artifact_snapshot(
     artifacts: list[dict],
     chunks: list[dict],
     artifact_type_id: int,
+    *,
+    hydroshare_only: bool = False,
+    allow_large_hydroshare_removals: bool = False,
 ):
     """Compare a full snapshot with active DB rows and return a true delta.
 
@@ -199,6 +301,21 @@ def reconcile_artifact_snapshot(
     snapshot are soft-deactivated. Matching rows remain untouched, so an
     unchanged repository does not receive duplicate artifacts or embeddings.
     """
+    if hydroshare_only and artifact_type_id != HYDROSHARE_ARTIFACT_TYPE_ID:
+        raise RuntimeError(
+            "HydroShare snapshot reconciliation requires artifact type 3"
+        )
+    if allow_large_hydroshare_removals and not hydroshare_only:
+        raise RuntimeError(
+            "Large HydroShare removal override requires HydroShare snapshot "
+            "reconciliation"
+        )
+    if hydroshare_only and not artifacts:
+        raise RuntimeError(
+            "HydroShare snapshot is empty; refusing to deactivate every "
+            "active HydroShare resource"
+        )
+
     source_ids: set[int] = set()
     urls: set[str] = set()
     chunks_by_artifact: dict[int, list[dict]] = {}
@@ -218,6 +335,16 @@ def reconcile_artifact_snapshot(
             raise RuntimeError(
                 "Snapshot contains artifact type "
                 f"{actual_type}; expected {artifact_type_id}"
+            )
+        if hydroshare_only and not _is_hydroshare_artifact(artifact):
+            raise RuntimeError(
+                "HydroShare snapshot contains an artifact not marked "
+                f"artifact_role={HYDROSHARE_ARTIFACT_ROLE!r}: {url}"
+            )
+        if hydroshare_only and not get_hydroshare_portal_types(artifact):
+            raise RuntimeError(
+                "HydroShare snapshot artifact has no research-portal type: "
+                f"{url}"
             )
         source_id = int(source_id)
         if source_id in source_ids:
@@ -248,9 +375,22 @@ def reconcile_artifact_snapshot(
         prepared.append(record)
         current_fingerprints[url] = fingerprint
 
+    active_scope = ""
+    if hydroshare_only:
+        active_scope = (
+            " AND ("
+            "metadata->'hydroshare'->>'artifact_role' = "
+            "'hydroshare_resource' "
+            "OR metadata->'hydroshare'->>'resource_id' IS NOT NULL "
+            # psycopg2 uses percent-style parameter binding, so literal SQL
+            # wildcards must be doubled whenever the query also has params.
+            "OR url ILIKE '%%hydroshare.org/resource/%%'"
+            ")"
+        )
     active_rows = db.execute_query(
         "SELECT url, metadata FROM tblartifacts "
-        "WHERE idartifacttype = %s AND isactive = TRUE;",
+        "WHERE idartifacttype = %s AND isactive = TRUE"
+        f"{active_scope};",
         (artifact_type_id,),
         fetch=True,
     ) or []
@@ -273,12 +413,33 @@ def reconcile_artifact_snapshot(
         {"URL": url}
         for url in sorted(set(active_fingerprints) - set(current_fingerprints))
     ]
-    return upserts, deletes, {
+    active_count = len(active_fingerprints)
+    removed_count = len(deletes)
+    if (
+        hydroshare_only
+        and not allow_large_hydroshare_removals
+        and removed_count >= 5
+        and removed_count * 4 >= active_count
+    ):
+        removal_percentage = (removed_count / active_count) * 100
+        raise RuntimeError(
+            "HydroShare snapshot would deactivate "
+            f"{removed_count} of {active_count} active HydroShare resources "
+            f"({removal_percentage:.1f}%); refusing a large removal without "
+            "--allow-large-hydroshare-removals"
+        )
+    stats = {
         "snapshot_artifacts": len(prepared),
         "unchanged_artifacts": len(prepared) - len(upserts),
         "missing_or_changed_artifacts": len(upserts),
         "removed_artifacts": len(deletes),
     }
+    if hydroshare_only:
+        stats["scope"] = "hydroshare"
+        stats["large_removals_allowed"] = bool(
+            allow_large_hydroshare_removals
+        )
+    return upserts, deletes, stats
 
 
 def validate_version_history_schema(db):
@@ -407,7 +568,49 @@ def parse_date(s):
 def build_metadata(rec: dict) -> dict:
     existing = rec.get("metadata")
     metadata = dict(existing) if isinstance(existing, dict) else {}
-    if rec.get("idArtifactType") == 4 or rec.get("artifact_role") == "repository":
+    if _is_hydroshare_artifact(rec):
+        hydroshare_fields = (
+            "artifact_role",
+            "resource_id",
+            "resource_type",
+            "abstract",
+            "keywords",
+            "document_type",
+            "identifier",
+            "language",
+            "doi",
+            "date_created",
+            "date_last_updated",
+            "published",
+            "immutable",
+            "public",
+            "discoverable",
+            "shareable",
+            "authors",
+            "creators",
+            "coverages",
+        )
+        hydroshare_metadata = dict(metadata.get("hydroshare") or {})
+        hydroshare_metadata.update({
+            key: rec.get(key)
+            for key in hydroshare_fields
+            if rec.get(key) is not None
+        })
+        hydroshare_metadata["artifact_role"] = HYDROSHARE_ARTIFACT_ROLE
+        hydroshare_metadata["hs_research_portal_types"] = (
+            get_hydroshare_portal_types(rec)
+        )
+        metadata["hydroshare"] = hydroshare_metadata
+
+        source_version = rec.get("date_last_updated")
+        if source_version:
+            sync_metadata = dict(metadata.get("sync") or {})
+            sync_metadata["source_version"] = source_version
+            metadata["sync"] = sync_metadata
+    elif (
+        rec.get("idArtifactType") == 4
+        or rec.get("artifact_role") == "repository"
+    ):
         repository_fields = (
             "description",
             "topics",
@@ -491,7 +694,8 @@ def insert_artifacts(db, artifacts: list[dict]):
         summary = rec.get("summary_data")
         md = build_metadata(rec)
         dt = parse_date(
-            rec.get("Last updated date")
+            rec.get("date_last_updated")
+            or rec.get("Last updated date")
             or rec.get("pushed_at")
             or rec.get("updated_at")
         )
@@ -561,6 +765,127 @@ def insert_artifacts(db, artifacts: list[dict]):
     return url_to_db_id, source_to_url
 
 
+def insert_hydroshare_portal_mappings(
+    db,
+    artifacts: list[dict],
+    url_to_db_id: dict[str, int],
+) -> int:
+    """Attach active HydroShare artifact versions to portal lookup values.
+
+    Inserts are idempotent. Mappings on inactive historical artifact versions
+    remain untouched.
+    """
+    hydroshare_artifacts = [
+        artifact
+        for artifact in artifacts
+        if _is_hydroshare_artifact(artifact)
+    ]
+    if not hydroshare_artifacts:
+        return 0
+
+    wrong_types = [
+        artifact.get("URL") or artifact.get("idArtifact")
+        for artifact in hydroshare_artifacts
+        if artifact.get("idArtifactType") != HYDROSHARE_ARTIFACT_TYPE_ID
+    ]
+    if wrong_types:
+        raise RuntimeError(
+            "HydroShare resources must use idArtifactType=3. Sample: "
+            f"{wrong_types[:5]}"
+        )
+
+    lookup_rows = db.execute_query(
+        "SELECT idhsresearchportaltype, hsresearchportaltype "
+        "FROM tblhsresearchportaltypes;",
+        fetch=True,
+    ) or []
+    type_ids = {
+        row["hsresearchportaltype"]: row["idhsresearchportaltype"]
+        for row in lookup_rows
+    }
+
+    rows = []
+    errors = []
+    for artifact in hydroshare_artifacts:
+        url = artifact.get("URL")
+        db_artifact_id = url_to_db_id.get(url)
+        if db_artifact_id is None:
+            errors.append(f"no active database artifact for {url!r}")
+            continue
+        portal_types = get_hydroshare_portal_types(artifact)
+        if not portal_types:
+            errors.append(f"no HydroShare portal types for {url!r}")
+            continue
+        for portal_type in portal_types:
+            portal_type_id = type_ids.get(portal_type)
+            if portal_type_id is None:
+                errors.append(
+                    f"unknown HydroShare portal type {portal_type!r} "
+                    f"for {url!r}"
+                )
+                continue
+            rows.append((db_artifact_id, portal_type_id))
+
+    if errors:
+        raise RuntimeError(
+            "Cannot insert HydroShare research-portal mappings. Sample: "
+            f"{errors[:5]}"
+        )
+
+    if rows:
+        db.execute_batch(
+            "INSERT INTO trlartifactshsresearchportaltypes "
+            "(idartifact, idhsresearchportaltype) VALUES %s "
+            "ON CONFLICT (idartifact, idhsresearchportaltype) DO NOTHING;",
+            sorted(set(rows)),
+            page_size=500,
+        )
+    print(f"  Ensured {len(set(rows))} HydroShare portal mappings.")
+    return len(set(rows))
+
+
+def ensure_hydroshare_snapshot_portal_mappings(
+    db,
+    snapshot_artifacts: list[dict],
+) -> int:
+    """Ensure mappings for every active HydroShare artifact in a snapshot.
+
+    Snapshot reconciliation may decide that every artifact is unchanged. The
+    bridge table still needs to be backfilled when it is new or empty, so IDs
+    are resolved from the active database rows instead of only from records
+    inserted during this apply.
+    """
+    hydroshare_artifacts = [
+        artifact
+        for artifact in snapshot_artifacts
+        if _is_hydroshare_artifact(artifact)
+    ]
+    if not hydroshare_artifacts:
+        return 0
+
+    urls = sorted({
+        artifact.get("URL")
+        for artifact in hydroshare_artifacts
+        if artifact.get("URL")
+    })
+    active_rows = db.execute_query(
+        "SELECT idartifact, url FROM tblartifacts "
+        "WHERE url = ANY(%s) AND idartifacttype = %s "
+        "AND isactive = TRUE;",
+        (urls, HYDROSHARE_ARTIFACT_TYPE_ID),
+        fetch=True,
+    ) or []
+    url_to_db_id = {
+        row["url"]: row["idartifact"]
+        for row in active_rows
+    }
+    return insert_hydroshare_portal_mappings(
+        db,
+        hydroshare_artifacts,
+        url_to_db_id,
+    )
+
+
 # ─── Phase 3: Insert chunks ──────────────────────────────────────
 
 def resolve_chunk_type_map(db, artifact_type_id: int) -> dict:
@@ -583,6 +908,19 @@ def ensure_repository_chunk_types(db, artifact_type_id: int):
         "ON CONFLICT (idartifacttype, typename) DO NOTHING;",
         [(artifact_type_id, name) for name in REPOSITORY_CHUNK_TYPES],
         page_size=len(REPOSITORY_CHUNK_TYPES),
+    )
+
+
+def ensure_hydroshare_chunk_types(db):
+    """Idempotently register symbolic chunk types used by HydroShare data."""
+    db.execute_batch(
+        "INSERT INTO tblchunktypes (idartifacttype, typename) VALUES %s "
+        "ON CONFLICT (idartifacttype, typename) DO NOTHING;",
+        [
+            (HYDROSHARE_ARTIFACT_TYPE_ID, name)
+            for name in HYDROSHARE_CHUNK_TYPES
+        ],
+        page_size=len(HYDROSHARE_CHUNK_TYPES),
     )
 
 
@@ -954,6 +1292,24 @@ def main():
         ),
     )
     parser.add_argument(
+        "--reconcile-hydroshare-snapshot",
+        action="store_true",
+        help=(
+            "Treat the explicit files as the complete HydroShare snapshot. "
+            "Only active type-3 HydroShare resources are reconciled; other "
+            "type-3 datasets remain untouched."
+        ),
+    )
+    parser.add_argument(
+        "--allow-large-hydroshare-removals",
+        action="store_true",
+        help=(
+            "Allow a HydroShare snapshot to remove at least five and at "
+            "least 25%% of active scoped resources. Valid only with "
+            "--reconcile-hydroshare-snapshot."
+        ),
+    )
+    parser.add_argument(
         "--ensure-repository-chunk-types",
         action="store_true",
         help="Idempotently register the type-4 symbolic chunk type names.",
@@ -992,6 +1348,37 @@ def main():
     if args.reconcile_snapshot_artifact_type is not None and is_delta:
         raise RuntimeError("Snapshot reconciliation requires explicit full files")
     if (
+        args.allow_large_hydroshare_removals
+        and not args.reconcile_hydroshare_snapshot
+    ):
+        raise RuntimeError(
+            "--allow-large-hydroshare-removals is valid only with "
+            "--reconcile-hydroshare-snapshot"
+        )
+    if args.reconcile_hydroshare_snapshot:
+        if not (args.artifacts and args.chunks):
+            raise RuntimeError(
+                "HydroShare snapshot reconciliation requires explicit "
+                "--artifacts and --chunks files"
+            )
+        if args.reconcile_snapshot_artifact_type is not None:
+            raise RuntimeError(
+                "Use either --reconcile-hydroshare-snapshot or "
+                "--reconcile-snapshot-artifact-type, not both"
+            )
+        if args.deactivate_active_artifact_type is not None:
+            raise RuntimeError(
+                "--deactivate-active-artifact-type is unsafe with a "
+                "HydroShare-scoped snapshot"
+            )
+        if (
+            args.expected_artifact_type is not None
+            and args.expected_artifact_type != HYDROSHARE_ARTIFACT_TYPE_ID
+        ):
+            raise RuntimeError(
+                "HydroShare snapshot reconciliation requires artifact type 3"
+            )
+    if (
         args.expected_artifact_type is not None
         and args.reconcile_snapshot_artifact_type is not None
         and args.expected_artifact_type != args.reconcile_snapshot_artifact_type
@@ -1019,8 +1406,17 @@ def main():
         )
 
     chunks = load_chunks(chunks_path)
+    hydroshare_snapshot_artifacts = (
+        list(artifacts_to_upsert)
+        if args.reconcile_hydroshare_snapshot
+        else []
+    )
 
-    expected_type = args.expected_artifact_type
+    expected_type = (
+        HYDROSHARE_ARTIFACT_TYPE_ID
+        if args.reconcile_hydroshare_snapshot
+        else args.expected_artifact_type
+    )
     if expected_type is not None:
         wrong_types = sorted({
             artifact.get("idArtifactType")
@@ -1047,6 +1443,7 @@ def main():
     t_total = time.perf_counter()
     reconciliation = None
     chunks_inserted = 0
+    portal_mappings_inserted = 0
 
     with db_manager as db:
         validate_version_history_schema(db)
@@ -1060,6 +1457,21 @@ def main():
                 artifacts_to_upsert,
                 chunks,
                 args.reconcile_snapshot_artifact_type,
+            )
+        elif args.reconcile_hydroshare_snapshot:
+            (
+                artifacts_to_upsert,
+                artifacts_to_delete,
+                reconciliation,
+            ) = reconcile_artifact_snapshot(
+                db,
+                artifacts_to_upsert,
+                chunks,
+                HYDROSHARE_ARTIFACT_TYPE_ID,
+                hydroshare_only=True,
+                allow_large_hydroshare_removals=(
+                    args.allow_large_hydroshare_removals
+                ),
             )
 
         upsert_source_ids = {
@@ -1082,6 +1494,11 @@ def main():
             ensure_repository_chunk_types(
                 db, args.reconcile_snapshot_artifact_type or expected_type or 4
             )
+        if args.reconcile_hydroshare_snapshot or any(
+            _is_hydroshare_artifact(artifact)
+            for artifact in artifacts_to_upsert
+        ):
+            ensure_hydroshare_chunk_types(db)
 
         # PHASE 1: Deactivate
         print("=" * 60)
@@ -1116,6 +1533,13 @@ def main():
 
         if not artifacts_to_upsert:
             print("No artifacts to insert; unchanged rows were left untouched.")
+            if args.reconcile_hydroshare_snapshot:
+                portal_mappings_inserted = (
+                    ensure_hydroshare_snapshot_portal_mappings(
+                        db,
+                        hydroshare_snapshot_artifacts,
+                    )
+                )
             print()
         else:
             # PHASE 2: Insert artifacts
@@ -1126,6 +1550,17 @@ def main():
             url_to_db_id, source_to_url = insert_artifacts(
                 db, artifacts_to_upsert
             )
+            if args.reconcile_hydroshare_snapshot:
+                portal_mappings_inserted = (
+                    ensure_hydroshare_snapshot_portal_mappings(
+                        db,
+                        hydroshare_snapshot_artifacts,
+                    )
+                )
+            else:
+                portal_mappings_inserted = insert_hydroshare_portal_mappings(
+                    db, artifacts_to_upsert, url_to_db_id
+                )
             print()
 
             # PHASE 3: Insert chunks
@@ -1186,6 +1621,9 @@ def main():
             "upserted_artifacts": len(artifacts_to_upsert),
             "deactivated_artifacts": deactivated,
             "chunks_inserted": chunks_inserted,
+            "hydroshare_portal_mappings_inserted": (
+                portal_mappings_inserted
+            ),
             "elapsed_seconds": round(elapsed, 1),
             "openai_usage": embedding_usage.report(),
         }
@@ -1208,6 +1646,7 @@ if __name__ == "__main__":
             "upserted_artifacts": 0,
             "deactivated_artifacts": 0,
             "chunks_inserted": 0,
+            "hydroshare_portal_mappings_inserted": 0,
             "elapsed_seconds": 0,
             "openai_usage": embedding_usage.report(),
         }

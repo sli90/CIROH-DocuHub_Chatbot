@@ -23,6 +23,33 @@ export const emptyExternal = {
   repo_root: null, download_root: null
 };
 
+export const emptySourceStatus = [
+  {
+    key: "ciroh_hub", label: "CIROH Hub documentation", artifact_type_id: 1,
+    optional: false, status: "not_synced", last_synced_at: null,
+    artifacts: 0, chunks: 0, new_count: 0, updated_count: 0, removed_count: 0,
+    db_upserted: 0, db_deactivated: 0, db_unchanged: 0
+  },
+  {
+    key: "github_repositories", label: "GitHub repositories", artifact_type_id: 4,
+    optional: true, status: "not_synced", last_synced_at: null,
+    artifacts: 0, chunks: 0, new_count: 0, updated_count: 0, removed_count: 0,
+    db_upserted: 0, db_deactivated: 0, db_unchanged: 0
+  },
+  {
+    key: "hydroshare", label: "HydroShare Research Portal", artifact_type_id: 3,
+    optional: true, status: "not_synced", last_synced_at: null,
+    artifacts: 0, chunks: 0, new_count: 0, updated_count: 0, removed_count: 0,
+    db_upserted: 0, db_deactivated: 0, db_unchanged: 0
+  }
+];
+
+export const normalizeSourceStatus = (payload) => {
+  const items = Array.isArray(payload?.items) ? payload.items : [];
+  const incoming = new Map(items.map((item) => [item.key, item]));
+  return emptySourceStatus.map((fallback) => ({ ...fallback, ...(incoming.get(fallback.key) || {}) }));
+};
+
 export const formatNumber = (value) => new Intl.NumberFormat().format(Number(value) || 0);
 
 export const formatDate = (value) => {
