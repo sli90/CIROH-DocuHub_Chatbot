@@ -1,4 +1,4 @@
-# CIROH DocuHub Chatbot
+# CIROH DocuHub Chatbot V1
 The CIROH DocuHub Chatbot is a joint initiative between CIROH and the Alabama Center for the Advancement of Artificial Intelligence (ALAAI), established to lay the foundations for reproducible hydrological research through the development of a lightweight retrieval-augmented generation (RAG) chatbot prototype that connects documentation, workflows, and datasets across CIROH platforms.
 
 Contributors: 
