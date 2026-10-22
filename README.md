@@ -59,16 +59,39 @@ The command prints a synchronization ID and saves the validated snapshot under
 
 ## 3. Update the database
 
+### Easiest option: use the dashboard
+
+First verify that `.env` points to the intended database, uses
+`POSTGRES_SCHEMA=CIROH_AIBot`, and that a fresh database backup is available.
+Then start the application from `docuhub_sync_system`:
+
+```bash
+# Terminal 1: backend
+python -m uvicorn dashboard.backend.app:app --host 127.0.0.1 --port 8001 --reload
+
+# Terminal 2: frontend
+cd dashboard/frontend
+npm run dev -- --host 127.0.0.1
+```
+
+Open <http://127.0.0.1:5173>, select **Run synchronization**, choose whether to
+include GitHub repositories and HydroShare, and confirm the run. CIROH Hub is
+always included. The dashboard generates the selected snapshots and updates
+the configured database as part of the same workflow.
+
+### Reviewable command-line option
+
+For an important Azure/production update, the prepared-bundle workflow lets
+you inspect the exact data before applying it:
+
 1. Review and validate the prepared bundle without connecting to PostgreSQL:
 
    ```bash
    python apply_prepared_sync.py --bundle <sync-id>
    ```
 
-2. Verify that `.env` points to the intended database and uses
-   `POSTGRES_SCHEMA=CIROH_AIBot`.
-3. Take and verify a fresh backup of the target database.
-4. Apply the reviewed bundle:
+2. Verify `.env` again and take a fresh backup of the target database.
+3. Apply the reviewed bundle:
 
    ```bash
    python apply_prepared_sync.py --bundle <sync-id> --execute
