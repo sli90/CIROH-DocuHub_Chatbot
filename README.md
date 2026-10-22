@@ -13,10 +13,31 @@ previous artifact is marked inactive and its historical chunks are preserved.
 
 ## 2. Synchronize the three sources
 
-Configure `docuhub_sync_system/.env`, activate the Python environment, and run
-these commands from `docuhub_sync_system`.
+Configure `docuhub_sync_system/.env` and activate the Python environment.
 
-### CIROH Hub
+### Option 1: Dashboard (recommended)
+
+Start the application from `docuhub_sync_system`:
+
+```bash
+# Terminal 1: backend
+python -m uvicorn dashboard.backend.app:app --host 127.0.0.1 --port 8001 --reload
+
+# Terminal 2: frontend
+cd dashboard/frontend
+npm run dev -- --host 127.0.0.1
+```
+
+Open <http://127.0.0.1:5173> and select **Run synchronization**. CIROH Hub is
+always included; select GitHub repositories and HydroShare when you want to
+synchronize those sources too. The dashboard runs the selected synchronization
+and updates the configured database in the same workflow.
+
+### Option 2: Command line
+
+Run the appropriate command from `docuhub_sync_system`.
+
+#### CIROH Hub
 
 ```bash
 python run_full_docuhub_refresh.py
@@ -26,7 +47,7 @@ This synchronizes CIROH Hub documentation and linked external content, then
 creates a reviewable prepared bundle. It does not update the database unless
 `--update-db` is explicitly supplied.
 
-### GitHub repositories
+#### GitHub repositories
 
 ```bash
 python run_github_repository_sync.py --execute
@@ -35,7 +56,7 @@ python run_github_repository_sync.py --execute
 This creates or updates the GitHub repository artifacts, descriptions, and
 chunks. It does not update the database.
 
-### HydroShare
+#### HydroShare
 
 ```bash
 python run_hydroshare_sync.py
@@ -45,7 +66,7 @@ This creates or updates HydroShare artifacts, chunks, and Research Portal
 memberships. Public HydroShare resources do not require an API key. This
 command does not update the database.
 
-### Prepare all three sources together
+#### Prepare all three sources together
 
 ```bash
 python run_full_docuhub_refresh.py \
@@ -59,27 +80,16 @@ The command prints a synchronization ID and saves the validated snapshot under
 
 ## 3. Update the database
 
-### Easiest option: use the dashboard
+### Option 1: Dashboard (recommended)
 
 First verify that `.env` points to the intended database, uses
 `POSTGRES_SCHEMA=CIROH_AIBot`, and that a fresh database backup is available.
-Then start the application from `docuhub_sync_system`:
+In the dashboard, select the sources you want and run the synchronization. The
+dashboard generates the selected snapshots and updates the database
+automatically. Previous artifact versions are marked inactive rather than
+deleted.
 
-```bash
-# Terminal 1: backend
-python -m uvicorn dashboard.backend.app:app --host 127.0.0.1 --port 8001 --reload
-
-# Terminal 2: frontend
-cd dashboard/frontend
-npm run dev -- --host 127.0.0.1
-```
-
-Open <http://127.0.0.1:5173>, select **Run synchronization**, choose whether to
-include GitHub repositories and HydroShare, and confirm the run. CIROH Hub is
-always included. The dashboard generates the selected snapshots and updates
-the configured database as part of the same workflow.
-
-### Reviewable command-line option
+### Option 2: Reviewable command line
 
 For an important Azure/production update, the prepared-bundle workflow lets
 you inspect the exact data before applying it:
